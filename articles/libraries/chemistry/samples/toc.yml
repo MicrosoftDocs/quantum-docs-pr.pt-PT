@@ -1,0 +1,8 @@
+- name: Obter estimativas do nível de energia
+  href: molecular-hydrogen.md
+- name: Carregar um Hamiltoniano do ficheiro
+  href: loading-from-file.md
+- name: Obter contagens de recursos
+  href: resource-counts.md
+- name: Ponto a ponto com NWChem
+  href: end-to-end.md

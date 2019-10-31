@@ -1,0 +1,10 @@
+- name: Reportar Erros
+  href: reporting-bugs.md
+- name: Contribuir na Documentação
+  href: docs.md
+- name: Abrir Pedidos Pull
+  href: pull-requests.md
+- name: Contribuir no Código
+  href: code.md
+- name: Guia de Estilo
+  href: style-guide.md
