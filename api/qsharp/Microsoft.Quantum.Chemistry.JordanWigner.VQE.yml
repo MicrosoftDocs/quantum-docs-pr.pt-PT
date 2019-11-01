@@ -1,0 +1,19 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.chemistry.jordanwigner.vqe
+name: Microsoft. Quantum. química. JordanWigner. VQE
+functions:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
+  summary: Expande a representação compacta dos coeficientes da Jordânia-Wigner para obter um mapeamento um-para-um entre esses e Pauli termos.
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
+  summary: Computa todos os operadores de medida necessários para computar a expectativa de um termo Wigner da Jordânia.
+operations:
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
+  summary: Estima a energia do molécula somando a energia contribuída pelos termos individuais da Jordânia-Wigner.
+- uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+  summary: Computa a energia associada a um determinado termo da Jordânia-Wigner Hamiltonian
+ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057225"

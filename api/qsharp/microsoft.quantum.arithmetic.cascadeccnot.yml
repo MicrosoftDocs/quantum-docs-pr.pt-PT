@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.cascadeccnot
+name: CascadeCCNOT
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Implementa uma cascata de CCNOT Gates controladas em bits correspondentes de dois registros qubit, agindo na próxima qubit de um dos registros.
+
+  A partir do qubits na posição 0 em ambos os registros como controles, CCNOT é aplicado ao qubit na posição 1 do registro de destino, então controlado pelo qubits na posição 1 atuando na qubit na posição 2 no registro de destino, etc., terminando com uma ação no qubit de destino na posição `Length(nQubits)-1`.
+remarks: O registro qubit de destino deve ter um qubit mais do que o outro registro.
+syntax: 'operation CascadeCCNOT (register : Qubit[], targets : Qubit[]) : Unit'
+input:
+  content: '(register : Qubit[], targets : Qubit[])'
+  types:
+  - name: register
+    summary: Registro de qubit, usado somente para controles.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 02ef9028070a0922b6644bf4cd20ef2f6ec9d04e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221325"

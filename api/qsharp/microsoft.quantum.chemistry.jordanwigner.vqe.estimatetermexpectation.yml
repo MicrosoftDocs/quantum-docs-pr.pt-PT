@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
+name: EstimateTermExpectation
+type: operation
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: >-
+  Computa a energia associada a um determinado termo da Jordânia-Wigner Hamiltonian
+
+
+  Esta operação estima o valor de expectativa associado a cada operador de medida e o multiplica pelo coeficiente correspondente, usando a amostragem.
+
+  Os resultados são agregados em uma variável que contém a energia do termo Jordânia-Wigner.
+syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
+input:
+  content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
+  types:
+  - name: inputStateUnitary
+    summary: O unitário usado para preparação do estado.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ops
+    summary: Os operadores de medição do termo Jordânia-Wigner.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: coeffs
+    summary: Os coeficientes do termo Jordânia-Wigner.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: nQubits
+    summary: O número de qubits necessárias para simular o sistema molecular.
+    isPrimitive: true
+    uid: Int
+  - name: nSamples
+    summary: O número de amostras a serem usadas para a estimativa da expectativa de termo.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: A energia associada ao termo Jordânia-Wigner.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228448"

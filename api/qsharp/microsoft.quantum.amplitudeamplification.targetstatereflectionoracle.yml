@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.targetstatereflectionoracle
+name: TargetStateReflectionOracle
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: >-
+  Constrói um `ReflectionOracle` sobre o estado de destino exclusivamente marcado pelo sinalizador qubit.
+
+
+  O estado de destino tem um único qubit definido como 1 e todos os outros 0: $ \ket{1}_F $.
+syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
+input:
+  content: '(idxFlagQubit : Int)'
+  types:
+  - name: idxFlagQubit
+    summary: Index para sinalizar qubit $f $ do Oracle.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Oracles.ReflectionOracle
+  types:
+  - summary: Um `ReflectionOracle` que reflete o estado marcado por $ \ket{1}_F $.
+    uid: microsoft.quantum.oracles.reflectionoracle
+seeAlso:
+- microsoft.quantum.canon.reflectionoracle
+ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215443"

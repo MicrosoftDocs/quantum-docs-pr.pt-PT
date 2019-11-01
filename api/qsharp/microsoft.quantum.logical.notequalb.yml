@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.notequalb
+name: NotEqualB
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retorna true se e somente se duas entradas não forem iguais.
+remarks: >-
+  Os itens a seguir são equivalentes:
+
+
+  ```Q#
+
+  let cond = a != b;
+
+  let cond = NotEqualB(a, b);
+
+  ```
+syntax: 'function NotEqualB (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: O primeiro valor a ser comparado.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: O segundo valor a ser comparado.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`true` se `a` não for igual a `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 644d63676a7b472358c5cc5c0dd1fe6607fd3f67
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235384"

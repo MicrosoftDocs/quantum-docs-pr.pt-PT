@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampbyreflectionsphases
+name: AmpAmpByReflectionsPhases
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Amplificação de amplitude por reflexos parciais.
+remarks: >-
+  A amplificação de amplitude é um caso especial de amplificação de amplitude de alheios em que não há qubits de sistema e o alheios Oracle está definido como identidade.
+
+  Na maioria dos casos, `startQubits` é inicializada no estado $ \ket{\Text{Start}}\_$1, que é o eigenstate $-$1 de `startStateReflection`.
+syntax: 'function AmpAmpByReflectionsPhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle)'
+  types:
+  - name: phases
+    summary: Fases de reflexos parciais
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+  - name: startStateReflection
+    summary: Operador de reflexo sobre o estado inicial
+    uid: microsoft.quantum.oracles.reflectionoracle
+  - name: targetStateReflection
+    summary: Operador de reflexão sobre o estado de destino
+    uid: microsoft.quantum.oracles.reflectionoracle
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - summary: Uma operação que implementa amplificação de amplitude por reflexos parciais.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 90305f330669aa4e9570e56b26744cdb7efd98bc
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215817"

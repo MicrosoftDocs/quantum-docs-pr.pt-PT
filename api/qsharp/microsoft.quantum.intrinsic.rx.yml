@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.rx
+name: Rx
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica uma rotação sobre o eixo $ $x por um determinado ângulo.
+
+
+  \begin{align} R_x (\theta) \mathrel{: =} e ^ {-i \theta \sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
+
+  \end{align}
+remarks: >-
+  Equivalente a:
+
+
+  ```qsharp
+
+  R(PauliX, theta, qubit);
+
+  ```
+syntax: 'operation Rx (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: theta
+    summary: Ângulo sobre o qual o qubit deve ser girado.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Qubit ao qual a portão deve ser aplicada.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: f34879cef60d33bbf260031c1b39572081027f2f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216446"

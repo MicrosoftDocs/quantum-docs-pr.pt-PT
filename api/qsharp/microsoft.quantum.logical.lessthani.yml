@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.lessthani
+name: LessThanI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retorna true se e somente se um número for menor que outro número.
+remarks: >-
+  Os itens a seguir são equivalentes:
+
+
+  ```Q#
+
+  let cond = a < b;
+
+  let cond = LessThanI(a, b);
+
+  ```
+syntax: 'function LessThanI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: O primeiro valor a ser comparado.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: O segundo valor a ser comparado.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: '`true` se `a` é estritamente menor que `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: a38ab42df81e06ccfb08b6ce180ec918ae1209a8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235605"

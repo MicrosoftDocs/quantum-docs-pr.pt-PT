@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equalb
+name: EqualB
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retorna true se e somente se duas entradas forem iguais.
+remarks: >-
+  Os itens a seguir são equivalentes:
+
+
+  ```Q#
+
+  let cond = a == b;
+
+  let cond = EqualB(a, b);
+
+  ```
+syntax: 'function EqualB (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: O primeiro valor a ser comparado.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: O segundo valor a ser comparado.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`true` se `a` for igual a `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: f1ce08483e038f483985a65a8c150c57aa67ea57
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233310"

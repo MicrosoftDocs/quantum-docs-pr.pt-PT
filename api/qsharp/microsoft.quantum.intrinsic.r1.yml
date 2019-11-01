@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1
+name: R1
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica uma rotação sobre o estado de $ \ket{1}$ por um determinado ângulo.
+
+
+  \begin{align} R_1 (\theta) \mathrel{: =} \operatorname{diag} (1, e ^ {i\theta}).
+
+  \end{align}
+remarks: >-
+  Equivalente a:
+
+
+  ```qsharp
+
+  R(PauliZ, theta, qubit);
+
+  R(PauliI, -theta, qubit);
+
+  ```
+syntax: 'operation R1 (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(theta : Double, qubit : Qubit)'
+  types:
+  - name: theta
+    summary: Ângulo sobre o qual o qubit deve ser girado.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Qubit ao qual a portão deve ser aplicada.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: ec15deeef7a097927221be19c35917be6aedcdd4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234007"

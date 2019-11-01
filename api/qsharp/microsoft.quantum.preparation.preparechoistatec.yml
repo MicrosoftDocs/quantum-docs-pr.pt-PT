@@ -1,0 +1,46 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparechoistatec
+name: PrepareChoiStateC
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: Prepara o estado Choi – Jamiłkowski para uma determinada operação com uma variante controlada na referência e nos registros de destino fornecidos.
+syntax: 'operation PrepareChoiStateC (op : (Qubit[] => Unit is Ctl), reference : Qubit[], target : Qubit[]) : Unit'
+input:
+  content: '(op: (qubit [] = > unidade é CTL), Reference: qubit [], target: qubit [])'
+  types:
+  - name: parar
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: Referência
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: alvo
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unidade
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- preparechoistate
+ms.openlocfilehash: 79579ec18d7b5a6ff0443f26271106af37af1c65
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067191"

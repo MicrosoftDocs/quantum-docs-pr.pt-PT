@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.environment.getqubitsavailabletouse
+name: GetQubitsAvailableToUse
+type: operation
+namespace: Microsoft.Quantum.Environment
+summary: Retorna o número de qubits disponíveis no momento para uso.
+syntax: 'operation GetQubitsAvailableToUse () : Int'
+input:
+  content: ()
+  types: []
+output:
+  content: Int
+  types:
+  - summary: >-
+      O número de qubits que podem ser alocados em uma instrução `using`.
+
+      Se o computador de destino que está sendo usado não fornecer essas informações, `-1` será retornado.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- getqubitsavailabletoborrow
+ms.openlocfilehash: 1cb1331aa26ec9755a9e379336f46387b61bb0ae
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230471"

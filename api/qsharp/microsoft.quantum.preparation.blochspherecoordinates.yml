@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.blochspherecoordinates
+name: BlochSphereCoordinates
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Computa as coordenadas de esfera de Bloch para um estado de qubit único.
+
+
+  Considerando-se dois números complexos $a 0, a1 $ que representam o estado qubit, o computa as coordenadas na esfera Bloch de forma que $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ teta/2)} \ket{0}+ e ^ {i \phi/2}\sin{(\ teta/2)} \ket{1}) $.
+syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
+input:
+  content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
+  types:
+  - name: a0
+    summary: Coeficiente complexo do estado $ \ket{0}$.
+    uid: microsoft.quantum.math.complexpolar
+  - name: a1
+    summary: Coeficiente complexo do estado $ \ket{1}$.
+    uid: microsoft.quantum.math.complexpolar
+output:
+  content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
+  types:
+  - summary: Uma tupla que contém `(ComplexPolar(r, t), phi, theta)`.
+    types:
+    - uid: microsoft.quantum.math.complexpolar
+    - isPrimitive: true
+      uid: Double
+    - isPrimitive: true
+      uid: Double
+ms.openlocfilehash: fc9dbef764c9d95de2183b9b093e00f20dfb0697
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228142"

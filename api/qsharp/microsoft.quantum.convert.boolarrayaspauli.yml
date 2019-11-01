@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.boolarrayaspauli
+name: BoolArrayAsPauli
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Dada uma cadeia de caracteres de bits, retorna um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único.
+remarks: A matriz booliana e o registro do Quantum devem ser de comprimento igual.
+syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
+input:
+  content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
+  types:
+  - name: pauli
+    summary: Operador Pauli a ser aplicado a qubits onde `bitsApply == bits[idx]`.
+    isPrimitive: true
+    uid: Pauli
+  - name: bitApply
+    summary: Aplique Pauli se bit for esse valor.
+    isPrimitive: true
+    uid: Bool
+  - name: bits
+    summary: Matriz booliana.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 3d251215e7f7bc136092caf7bafd677ecb1c05bd
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227190"

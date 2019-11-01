@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.qubitizationoracle
+name: QubitizationOracle
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Retorna a operação Qubitization e os parâmetros necessários para executá-la.
+syntax: 'function QubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+input:
+  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData)'
+  types:
+  - name: qSharpData
+    summary: Hamiltonian descrito por `JordanWignerEncodingData` formato.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+output:
+  content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
+  types:
+  - summary: 'Uma tupla em que: `Int` é o número de qubits alocados, `Double` é a norma de coeficientes de Hamiltonian e a operação é a Walk do Quantum criada pelo Qubitization.'
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Double
+      - isOperation: true
+        input:
+          types:
+          - isArray: true
+            isPrimitive: true
+            uid: Qubit
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Adjoint
+        - Controlled
+ms.openlocfilehash: 4890f95631a5d99720fc5da307707ad040f0b391
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233514"

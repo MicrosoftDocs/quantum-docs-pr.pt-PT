@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.qftle
+name: QFTLE
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Executa a transformação de Fourier do Quantum em um registro do Quantum contendo um inteiro na representação little-endian.
+remarks: Presume-se que a entrada e a saída estejam em little endian codificação.
+syntax: 'operation QFTLE (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(qs : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: qs
+    summary: Quantum registrado para o qual a transformação de Fourier do Quantum é aplicada
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.qft
+ms.openlocfilehash: 2c4144335c5b200b40da2163df5d7f635c59a6df
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228380"

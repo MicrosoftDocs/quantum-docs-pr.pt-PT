@@ -1,0 +1,65 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applywithinputtransformationa
+name: ApplyWithInputTransformationA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Dada uma operação que aceita alguma entrada, uma função que retorna uma saída compatível com essa operação e uma entrada para essa função, aplica a operação usando a função para transformar a entrada em um formato esperado pela operação.
+examples: >-
+  A chamada a seguir usa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" para aplicar uma operação projetada para @"Microsoft.Quantum.Arithmetic.BigEndian" entradas a uma entrada do tipo @"Microsoft.Quantum.Arithmetic.LittleEndian":
+
+
+  ```qsharp
+
+  ApplyWithInputTransformation(LittleEndianAsBigEndian, ApplyXorInPlaceBE, LittleEndian(qubits));
+
+  ```
+syntax: "operation ApplyWithInputTransformationA (fn : ('U -> 'T), op : ('T => Unit is Adj), input : 'U) : Unit"
+input:
+  content: "(fn : ('U -> 'T), op : ('T => Unit is Adj), input : 'U)"
+  types:
+  - name: fn
+    summary: Uma função que transforma a entrada fornecida em um formulário esperado pela operação.
+    isFunction: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - uid: "'T"
+        isLocal: true
+  - name: op
+    summary: A operação a ser aplicada.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: input
+    summary: Uma entrada para a função.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- applywithinputtransformation
+- applywithinputtransformationc
+- applywithinputtransformationca
+- transformedoperation
+ms.openlocfilehash: 29b22fdff94be068341e94ad4c5f67303011a298
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73212672"

@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpop
+name: StackPop
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Remove o elemento superior de um <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackPop (stack : Microsoft.Quantum.Canon.ResultStack) : Microsoft.Quantum.Canon.ResultStack'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
+  types:
+  - name: stack
+    summary: A pilha a ser exibida.
+    uid: microsoft.quantum.canon.resultstack
+output:
+  content: Microsoft.Quantum.Canon.ResultStack
+  types:
+  - summary: O `stack` com o elemento superior removido. A nova pilha tem a mesma capacidade que a antiga, mas seu comprimento é reduzido em um.
+    uid: microsoft.quantum.canon.resultstack
+ms.openlocfilehash: 371952e68e9c06fc11d9e8c309a4d388b80a9556
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219370"

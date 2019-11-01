@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelsera
+name: ApplyIfElseRA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma das duas operações de adjointable, dependendo do valor de um resultado clássico.
+
+
+  Dado um resultado `result`, o aplica a operação `zeroOp` com `zeroInput` como sua entrada quando `result` é igual a `Zero`e aplica `oneOp(oneInput)` quando `result == One`.
+syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
+input:
+  content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U))"
+  types:
+  - name: result
+    summary: O resultado da medida usado para determinar se `zeroOp` ou `oneOp` é aplicado.
+    isPrimitive: true
+    uid: Result
+  - name: zeroOp
+    summary: A operação de adjointable a ser aplicada quando `result == Zero`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: zeroInput
+    summary: A entrada a ser fornecida para `zeroOp` quando `result == Zero`.
+    uid: "'T"
+    isLocal: true
+  - name: oneOp
+    summary: A operação de adjointable a ser aplicada quando `result == One`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: oneInput
+    summary: A entrada a ser fornecida para `oneOp` quando `result == One`.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo de entrada da operação `zeroOp` ser aplicado condicionalmente.
+- uid: "'U"
+  summary: O tipo de entrada da operação `oneOp` ser aplicado condicionalmente.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: df838f6eda12db4710ee19cd3c0aeb334935cd22
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213913"

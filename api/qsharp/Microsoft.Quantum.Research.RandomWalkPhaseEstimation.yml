@@ -1,0 +1,16 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.randomwalkphaseestimation
+name: Microsoft.Quantum.Research.RandomWalkPhaseEstimation
+operations:
+- uid: microsoft.quantum.research.randomwalkphaseestimation.exporacle
+  summary: ''
+- uid: microsoft.quantum.research.randomwalkphaseestimation.phaseestimationsample
+  summary: ''
+- uid: microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation
+  summary: Executa estimativa de fase iterativa usando uma passagem aleatória para a inferência de Bayesiana aproximada nos resultados da medição clássica de um determinado Oracle e eigenstate.
+ms.openlocfilehash: 3512f53bc5f29a634ea61e3a2d0c8a9f3fcc01f5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215919"

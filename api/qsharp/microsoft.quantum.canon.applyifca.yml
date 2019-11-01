@@ -1,0 +1,74 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifca
+name: ApplyIfCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma operação unitário com condição em um bit clássico.
+
+
+  Dada uma operação `op` e um valor de bit `bit`, o aplica `op` à `target` se `bit` for `true`. Se `false`, nada acontecerá com o `target`.
+
+  O sufixo `CA` indica que a operação a ser aplicada é unitário (controlável e adjacenttable).
+examples: >-
+  O seguinte prepara um registro de qubits para um estado de base computacional representado por uma cadeia de caracteres de bits clássicas fornecida como uma matriz de valores de `Bool`:
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfCA (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: Uma operação a ser aplicada condicionalmente.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: bit
+    summary: um booliano que controla se op é aplicado ou não.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: A entrada à qual a operação é aplicada.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: c78136688111a71e6a9a58972c9b9bb71603e0cf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213760"

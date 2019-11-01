@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.dumpregister
+name: DumpRegister
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Despeja o status atual da máquina de destino associada ao qubits fornecido.
+remarks: >-
+  Esse método permite que você despeje as informações associadas ao estado do determinado qubits em um arquivo ou em algum outro local.
+
+  As informações reais geradas e a semântica de `location` são específicas para cada computador de destino. No entanto, fornecer uma tupla vazia como um local (`()`) normalmente significa gerar a saída para o console.
+
+
+  Para o simulador de estado completo local distribuído como parte do kit de desenvolvimento Quantum, esse método espera uma cadeia de caracteres com o caminho para um arquivo no qual ele gravará o estado de determinado qubits (ou seja, a função Wave do subsistema correspondente) como um ar unidimensional raio de números complexos, em que cada elemento representa as amplitudes da probabilidade de medir o estado correspondente.
+
+  Se o qubits fornecido for confusas com algum outro qubit e seu estado não puder ser separado, ele apenas relatará que o qubits é confusas.
+syntax: "function DumpRegister (location : 'T, qubits : Qubit[]) : Unit"
+input:
+  content: "(location : 'T, qubits : Qubit[])"
+  types:
+  - name: location
+    summary: Fornece informações sobre onde gerar o despejo do estado.
+    uid: "'T"
+    isLocal: true
+  - name: qubits
+    summary: A lista de qubits a ser reportada.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - summary: Nenhum.
+    isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: 6d553a95bfa619d142b681e2830fc0375c6bcae5
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227037"

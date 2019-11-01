@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stackpush
+name: StackPush
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Envia um novo elemento para um <xref:microsoft.quantum.canon.resultstack>.
+syntax: 'function StackPush (stack : Microsoft.Quantum.Canon.ResultStack, datum : Result) : Microsoft.Quantum.Canon.ResultStack'
+input:
+  content: '(stack : Microsoft.Quantum.Canon.ResultStack, datum : Result)'
+  types:
+  - name: stack
+    summary: A pilha a ser expandida.
+    uid: microsoft.quantum.canon.resultstack
+  - name: datum
+    summary: O valor de `Result` a ser enviado para `stack`.
+    isPrimitive: true
+    uid: Result
+output:
+  content: Microsoft.Quantum.Canon.ResultStack
+  types:
+  - summary: O `stack` com `datum` adicionado como seu novo elemento superior. O comprimento da nova pilha é aumentado em uma.
+    uid: microsoft.quantum.canon.resultstack
+ms.openlocfilehash: 63191d8f9a7649f8b229d1288cb244dfe4fd7293
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219353"

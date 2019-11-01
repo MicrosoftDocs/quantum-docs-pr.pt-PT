@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.pauliblockencoding
+name: PauliBlockEncoding
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Cria um unitário de codificação de bloco para um Hamiltonian.
+
+
+  O Hamiltonian $H = \sum_{j}\alpha_j P_j $ é descrito por uma soma de Pauli termos $P _J $, cada um com o coeficiente real $ \alpha_j $.
+remarks: Isso é obtido preparando e despreparando o estado $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ ket {j} $ e construindo um <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> unitário controlado por multiplicação e <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
+syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
+input:
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
+  types:
+  - name: generatorSystem
+    summary: Um `GeneratorSystem` que descreve $H $ como uma soma dos termos do Pauli
+    uid: microsoft.quantum.simulation.generatorsystem
+output:
+  content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
+  types:
+  - summary: >-
+      ## <a name="first-parameter"></a>Primeiro parâmetro
+
+
+      A uma norma de coeficientes $ \alpha = \sum_{j} | \alpha_j | $.
+
+
+      ## <a name="second-parameter"></a>Segundo parâmetro
+
+
+      Um `BlockEncodingReflection` unitário $U $ do Hamiltonian $H $. Como esse unitário satisfaz $U ^ 2 = I $, também é uma reflexão.
+    types:
+    - isPrimitive: true
+      uid: Double
+    - uid: microsoft.quantum.simulation.blockencodingreflection
+ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216140"

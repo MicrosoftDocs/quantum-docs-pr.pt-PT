@@ -1,0 +1,23 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.research.chemistry
+name: Microsoft.Quantum.Research.Chemistry
+functions:
+- uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
+  summary: Representa um gerador dinâmico como um conjunto de Gates e uma expansão na base Pauli.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
+  summary: Representa um gerador dinâmico como um conjunto de Gates e uma expansão na base JWOptimized.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
+  summary: Converte um Hamiltonian descrito por `JWOptimizedHTerms` em uma `GeneratorSystem` expressa em termos da Convenção de `GeneratorIndex` definida neste arquivo.
+- uid: microsoft.quantum.research.chemistry.optimizedtrottersteporacle
+  summary: Retorna a operação de etapa Trotter otimizada e os parâmetros necessários para executá-la.
+operations:
+- uid: microsoft.quantum.research.chemistry.applydeltaparity
+  summary: Calcula a diferença na paridade entre um PQRS anterior... termos e o próximo PQRS... prazo. Essa diferença é calculada em um qubit auxiliar.
+- uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
+  summary: Preparação de estado simples do estado de avaliação ocupando giros de rotação
+ms.openlocfilehash: 8737229d1362a444f54d1a8d0791da9312923224
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215953"

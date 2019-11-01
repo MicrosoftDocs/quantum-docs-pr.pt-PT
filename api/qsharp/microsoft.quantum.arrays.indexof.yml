@@ -1,0 +1,49 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.indexof
+name: IndexOf
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Retorna o primeiro índice do primeiro elemento em uma matriz que atende a um determinado predicado. Se nenhum elemento desse tipo existir, retornará-1.
+examples: >-
+  Suponha que `IsEven : Int -> Bool` é uma função que retorna `true` se e somente se sua entrada for par. Em seguida, isso pode ser usado com `IndexOf` para localizar o primeiro elemento par em uma matriz:
+
+
+  ```Q#
+
+  let items = [1, 3, 17, 2, 21];
+
+  let idx = IndexOf(IsEven, items); // returns 3
+
+  ```
+syntax: "function IndexOf (predicate : ('T -> Bool), arr : 'T[]) : Int"
+input:
+  content: "(predicate : ('T -> Bool), arr : 'T[])"
+  types:
+  - name: predicate
+    summary: Uma função de predicado agindo em elementos da matriz.
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: arr
+    summary: Uma matriz a ser pesquisada usando o predicado fornecido.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Int
+  types:
+  - summary: O menor índice `idx` de modo que `predicate(arr[idx])` seja true ou-1 se nenhum elemento desse tipo existir.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 6f7fee40a558e7bb17b94c9dd58656c6f34ceac8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218197"

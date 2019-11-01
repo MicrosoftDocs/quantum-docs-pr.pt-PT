@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.dividedbyi
+name: DividedByI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retorna o quociente de duas entradas.
+syntax: 'function DividedByI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: A primeira entrada $a $ a ser dividida.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: A segunda entrada $b $ a ser dividida.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: O quociente $a/b $.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 7ca78817169fc56a42bfcd662c112d9d8c902635
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229723"

@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.fraction
+name: Fraction
+type: newtype
+namespace: Microsoft.Quantum.Math
+summary: Representa um número racional do formulário `p/q`. O inteiro `p` é o primeiro elemento da tupla e `q` é o segundo elemento da tupla.
+syntax: newtype Fraction = (Int, Int);
+ms.openlocfilehash: 5eee4a315cde3e04c93cc7b2a1d558ab9323273c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232953"

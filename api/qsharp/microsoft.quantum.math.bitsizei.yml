@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bitsizei
+name: BitSizeI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Para um `a`inteiro não negativo, retorna o número de bits necessários para representar `a`.
+
+
+  Ou seja, retorna o menor $n $, que $a < 2 ^ n $.
+syntax: 'function BitSizeI (a : Int) : Int'
+input:
+  content: '(a : Int)'
+  types:
+  - name: a
+    summary: O inteiro cujo tamanho de bit deve ser calculado.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: O tamanho de bits de `a`.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 5faf7961011c666b333cc9befc3da9af4872330d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230182"

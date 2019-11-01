@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
+name: TrotterStepOracle
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner
+summary: Retorna a operação de etapa Trotter e os parâmetros necessários para executá-lo.
+syntax: 'function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
+input:
+  content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
+  types:
+  - name: qSharpData
+    summary: Hamiltonian descrito por `JordanWignerEncodingData` formato.
+    uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
+  - name: trotterStepSize
+    summary: Tamanho da etapa do integrador Trotter.
+    isPrimitive: true
+    uid: Double
+  - name: trotterOrder
+    summary: Ordem do integrador Trotter.
+    isPrimitive: true
+    uid: Int
+output:
+  content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
+  types:
+  - summary: 'Uma tupla em que: `Int` é o número de qubits alocados, `Double` é `1.0/trotterStepSize`e a operação é a etapa Trotter.'
+    types:
+    - isPrimitive: true
+      uid: Int
+    - types:
+      - isPrimitive: true
+        uid: Double
+      - isOperation: true
+        input:
+          types:
+          - isArray: true
+            isPrimitive: true
+            uid: Qubit
+        output:
+          types:
+          - isPrimitive: true
+            uid: Unit
+        functors:
+        - Adjoint
+        - Controlled
+ms.openlocfilehash: 168203ef7e62522cf2df3c746ca75ffaf4ab3252
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227598"

@@ -1,0 +1,19 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.simulationalgorithm
+name: SimulationAlgorithm
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Representa um algoritmo de simulação independente de tempo.
+
+
+  Uma técnica de simulação independente de tempo converte um <xref:microsoft.quantum.simulation.evolutiongenerator>
+
+  para a evolução de tempo unitário para um intervalo de tempo.
+syntax: newtype SimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 0d70a6f73c49f4759473981cd2f34254f7d721f7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221631"

@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.measurement.measurepaulis
+name: MeasurePaulis
+type: operation
+namespace: Microsoft.Quantum.Measurement
+summary: Dada uma matriz de operadores qubit Pauli, mede cada um deles usando um gadget de medida especificado e, em seguida, retorna a matriz de resultados.
+syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
+input:
+  content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
+  types:
+  - name: paulis
+    summary: Matriz de operadores qubit Pauli para medir.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+  - name: target
+    summary: Registre-se para medir os operadores fornecidos.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: gadget
+    summary: Operação que executa a medição de um determinado operador qubit.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Pauli
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+output:
+  content: Result[]
+  types:
+  - summary: A matriz de resultados obtidos na medição de cada elemento de `paulis` em `target`.
+    isArray: true
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 97ad0beb222a6a6d11394499e0039c405a3be9e8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231406"

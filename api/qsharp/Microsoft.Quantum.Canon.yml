@@ -1,0 +1,944 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.canon
+name: Microsoft. Quantum. Canon
+functions:
+- uid: microsoft.quantum.canon.asqubitarray
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta função foi removida.
+- uid: microsoft.quantum.canon.assertalmostequal
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" em vez disso.
+- uid: microsoft.quantum.canon.assertalmostequaltol
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact" em vez disso.
+- uid: microsoft.quantum.canon.assertboolarrayequal
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Diagnostics.AllEqualityFactB" em vez disso.
+- uid: microsoft.quantum.canon.assertboolequal
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Diagnostics.EqualityFactB" em vez disso.
+- uid: microsoft.quantum.canon.assertintequal
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Diagnostics.EqualityFactI" em vez disso.
+- uid: microsoft.quantum.canon.assertresultequal
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Diagnostics.EqualityFactR" em vez disso.
+- uid: microsoft.quantum.canon.bigendiantolittleendian
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian".
+- uid: microsoft.quantum.canon.bind
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.bound".
+- uid: microsoft.quantum.canon.binda
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.bounda".
+- uid: microsoft.quantum.canon.bindc
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.boundc".
+- uid: microsoft.quantum.canon.bindca
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.boundca".
+- uid: microsoft.quantum.canon.bitsize
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.bitsizei".
+- uid: microsoft.quantum.canon.boolarrfrompositiveint
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.intasboolarray".
+- uid: microsoft.quantum.canon.boolarrfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.resultarrayasboolarray".
+- uid: microsoft.quantum.canon.boolfromresult
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.resultasbool".
+- uid: microsoft.quantum.canon.bound
+  summary: Dada uma matriz de operações que atuam em uma única entrada, o produz uma nova operação que executa cada operação específica em sequência.
+- uid: microsoft.quantum.canon.bounda
+  summary: >-
+    Dada uma matriz de operações que atuam em uma única entrada, o produz uma nova operação que executa cada operação específica em sequência.
+
+    O modificador `A` indica que todas as operações na matriz são adjointable.
+- uid: microsoft.quantum.canon.boundc
+  summary: >-
+    Dada uma matriz de operações que atuam em uma única entrada, o produz uma nova operação que executa cada operação específica em sequência.
+
+    O modificador `C` indica que todas as operações na matriz são controláveis.
+- uid: microsoft.quantum.canon.boundca
+  summary: >-
+    Dada uma matriz de operações que atuam em uma única entrada, o produz uma nova operação que executa cada operação específica em sequência.
+
+    O modificador `CA` indica que todas as operações na matriz são de adjointable e controláveis.
+- uid: microsoft.quantum.canon.ccontrolled
+  summary: Dada uma operação op, retorna uma nova operação que aplica a op se um bit de controle clássico for true. Se `false`, nada acontecerá.
+- uid: microsoft.quantum.canon.ccontrolleda
+  summary: >-
+    Dada uma operação op, retorna uma nova operação que aplica a op se um bit de controle clássico for true. Se `false`, nada acontecerá.
+
+    O modificador `A` indica que a operação é de adjointable.
+- uid: microsoft.quantum.canon.ccontrolledc
+  summary: >-
+    Dada uma operação op, retorna uma nova operação que aplica a op se um bit de controle clássico for true. Se `false`, nada acontecerá.
+
+    O modificador `C` indica que a operação é controlável.
+- uid: microsoft.quantum.canon.ccontrolledca
+  summary: >-
+    Dada uma operação op, retorna uma nova operação que aplica a op se um bit de controle clássico for true. Se `false`, nada acontecerá.
+
+    O modificador `CA` indica que a operação é controlável e de adjointable.
+- uid: microsoft.quantum.canon.compose
+  summary: >-
+    Gera a composição de duas funções.
+
+
+    Ou seja, dadas duas funções $f $ e $g $, retorna uma nova função representando $f \circ g $.
+- uid: microsoft.quantum.canon.conjugatedby
+  summary: Dadas as operações externas e internas, retorna uma nova operação que conjuga a operação interna pela operação externa.
+- uid: microsoft.quantum.canon.conjugatedbya
+  summary: Dadas as operações externas e internas, retorna uma nova operação que conjuga a operação interna pela operação externa.
+- uid: microsoft.quantum.canon.conjugatedbyc
+  summary: Dadas as operações externas e internas, retorna uma nova operação que conjuga a operação interna pela operação externa.
+- uid: microsoft.quantum.canon.conjugatedbyca
+  summary: Dadas as operações externas e internas, retorna uma nova operação que conjuga a operação interna pela operação externa.
+- uid: microsoft.quantum.canon.continuedfractionconvergent
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.continuedfractionconvergenti".
+- uid: microsoft.quantum.canon.controlledonbitstring
+  summary: Retorna um operador unitário que aplica um Oracle no registro de destino se o estado de registro de controle corresponder a uma máscara de bits especificada.
+- uid: microsoft.quantum.canon.controlledonint
+  summary: Retorna um operador unitário que aplica um Oracle no registro de destino se o estado de registro de controle corresponder a um número inteiro positivo especificado.
+- uid: microsoft.quantum.canon.curriedop
+  summary: >-
+    Retorna uma versão na forma curried de uma operação em duas entradas.
+
+
+    Ou seja, dada uma operação com duas entradas, essa função aplica curry isomorphism $f (x, y) \equiv f (x) (y) $ para retornar uma operação de uma entrada que retorna uma operação de uma entrada.
+- uid: microsoft.quantum.canon.curryop
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.curriedop".
+- uid: microsoft.quantum.canon.decomposeintotimestepsca
+  summary: Retorna uma operação que implementa o integrador Trotter – Suzuki para uma determinada operação.
+- uid: microsoft.quantum.canon.delayed
+  summary: Retorna uma operação que aplica a operação especificada com o argumento fornecido.
+- uid: microsoft.quantum.canon.delayeda
+  summary: Retorna uma operação que aplica a operação especificada com o argumento fornecido.
+- uid: microsoft.quantum.canon.delayedc
+  summary: Retorna uma operação que aplica a operação especificada com o argumento fornecido.
+- uid: microsoft.quantum.canon.delayedca
+  summary: Retorna uma operação que aplica a operação especificada com o argumento fornecido.
+- uid: microsoft.quantum.canon.embedpauli
+  summary: Dado um operador Pauli de qubit único e o índice de um qubit, retorna um operador Pauli de vários qubit com o operador Single-qubit fornecido nesse índice e `PauliI` em todos os outros índices.
+- uid: microsoft.quantum.canon.expmod
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.expmodi".
+- uid: microsoft.quantum.canon.extendedgcd
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.extendedgreatestcommondivisori".
+- uid: microsoft.quantum.canon.filter
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.Filtered" em vez disso.
+- uid: microsoft.quantum.canon.forall
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.All" em vez disso.
+- uid: microsoft.quantum.canon.forany
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.Any" em vez disso.
+- uid: microsoft.quantum.canon.fst
+  summary: Dado um par, retorna seu primeiro elemento.
+- uid: microsoft.quantum.canon.gcd
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.greatestcommondivisori".
+- uid: microsoft.quantum.canon.ignore
+  summary: Ignora a saída de uma operação ou função.
+- uid: microsoft.quantum.canon.intabs
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta função foi removida.
+- uid: microsoft.quantum.canon.intarrayfromrange
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.rangeasintarray".
+- uid: microsoft.quantum.canon.intmax
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta função foi removida.
+- uid: microsoft.quantum.canon.inversemod
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.inversemodi".
+- uid: microsoft.quantum.canon.iscoprime
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.greatestcommondivisori".
+- uid: microsoft.quantum.canon.isresultone
+  summary: Testa se um determinado valor de resultado é igual a `One`.
+- uid: microsoft.quantum.canon.isresultzero
+  summary: Testa se um determinado valor de resultado é igual a `Zero`.
+- uid: microsoft.quantum.canon.littleendiantobigendian
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian".
+- uid: microsoft.quantum.canon.map
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.Mapped" em vez disso.
+- uid: microsoft.quantum.canon.mapindex
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.MappedByIndex" em vez disso.
+- uid: microsoft.quantum.canon.modulus
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.modulusi".
+- uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
+  summary: >-
+    Retorna uma operação unitário com controle de multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado de número n-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexerfromgenerator
+  summary: >-
+    Retorna uma operação unitário com controle de multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado de número n-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.nearequalityfact
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Diagnostics.NearEqualityFactD" em vez disso.
+- uid: microsoft.quantum.canon.operationpow
+  summary: >-
+    Gera uma operação para uma potência.
+
+
+    Ou seja, dada uma operação que representa um portão $U $, retorna uma nova operação $U ^ m $ para um Power $m $.
+- uid: microsoft.quantum.canon.operationpowa
+  summary: >-
+    Gera uma operação para uma potência.
+
+    O modificador `A` indica que a operação é de adjointable.
+
+
+    Ou seja, dada uma operação que representa um portão $U $, retorna uma nova operação $U ^ m $ para um Power $m $.
+- uid: microsoft.quantum.canon.operationpowc
+  summary: >-
+    Gera uma operação para uma potência.
+
+    O modificador `C` indica que a operação é controlável.
+
+
+    Ou seja, dada uma operação que representa um portão $U $, retorna uma nova operação $U ^ m $ para um Power $m $.
+- uid: microsoft.quantum.canon.operationpowca
+  summary: >-
+    Gera uma operação para uma potência.
+
+    O modificador `A` indica que a operação é controlável e de adjointable.
+
+
+    Ou seja, dada uma operação que representa um portão $U $, retorna uma nova operação $U ^ m $ para um Power $m $.
+- uid: microsoft.quantum.canon.pad
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.Padded" em vez disso.
+- uid: microsoft.quantum.canon.paulifrombitstring
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.boolarrayaspauli".
+- uid: microsoft.quantum.canon.pnormalize
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.math.pnormalized".
+- uid: microsoft.quantum.canon.positiveintfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.boolarrayasint".
+- uid: microsoft.quantum.canon.positiveintfromresultarr
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.resultarrayasint".
+- uid: microsoft.quantum.canon.restrictedtosubregister
+  summary: Restringe uma operação a uma matriz de índices de um registro, ou seja, um subregistro.
+- uid: microsoft.quantum.canon.restrictedtosubregistera
+  summary: >-
+    Restringe uma operação a uma matriz de índices de um registro, ou seja, um subregistro.
+
+    O modificador `A` indica que a operação é de adjointable.
+- uid: microsoft.quantum.canon.restrictedtosubregisterc
+  summary: >-
+    Restringe uma operação a uma matriz de índices de um registro, ou seja, um subregistro.
+
+    O modificador `C` indica que a operação é controlável.
+- uid: microsoft.quantum.canon.restrictedtosubregisterca
+  summary: >-
+    Restringe uma operação a uma matriz de índices de um registro, ou seja, um subregistro.
+
+    O modificador `CA` indica que a operação é controlável e de adjointable.
+- uid: microsoft.quantum.canon.restricttosubregister
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.restrictedtosubregister".
+- uid: microsoft.quantum.canon.restricttosubregistera
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.restrictedtosubregistera".
+- uid: microsoft.quantum.canon.restricttosubregisterc
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.restrictedtosubregisterc".
+- uid: microsoft.quantum.canon.restricttosubregisterca
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.restrictedtosubregisterca".
+- uid: microsoft.quantum.canon.resultarrfromboolarr
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.resultarrayasboolarray".
+- uid: microsoft.quantum.canon.resultasint
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.resultarrayasint".
+- uid: microsoft.quantum.canon.resultfrombool
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.boolasresult".
+- uid: microsoft.quantum.canon.reverse
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.Reversed" em vez disso.
+- uid: microsoft.quantum.canon.snd
+  summary: Dado um par, retorna seu segundo elemento.
+- uid: microsoft.quantum.canon.splitarray
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arrays.Partitioned" em vez disso.
+- uid: microsoft.quantum.canon.stackcapacity
+  summary: Recupera a capacidade de um <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stacklength
+  summary: Recupera o número de elementos armazenados em um <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stacknew
+  summary: Cria um novo <xref:microsoft.quantum.canon.resultstack> vazio com a capacidade especificada.
+- uid: microsoft.quantum.canon.stackpeek
+  summary: Recupera o elemento superior de um <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stackpop
+  summary: Remove o elemento superior de um <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.stackpush
+  summary: Envia um novo elemento para um <xref:microsoft.quantum.canon.resultstack>.
+- uid: microsoft.quantum.canon.tooperation
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.functionasoperation".
+- uid: microsoft.quantum.canon.transformedoperation
+  summary: Dada uma função e uma operação, retorna uma nova operação cuja entrada é transformada pela função fornecida.
+- uid: microsoft.quantum.canon.transformedoperationa
+  summary: Dada uma função e uma operação, retorna uma nova operação cuja entrada é transformada pela função fornecida.
+- uid: microsoft.quantum.canon.transformedoperationc
+  summary: Dada uma função e uma operação, retorna uma nova operação cuja entrada é transformada pela função fornecida.
+- uid: microsoft.quantum.canon.transformedoperationca
+  summary: Dada uma função e uma operação, retorna uma nova operação cuja entrada é transformada pela função fornecida.
+- uid: microsoft.quantum.canon.uncurriedop
+  summary: Dada uma função que retorna operações, retorna uma nova operação que usa as duas entradas como uma tupla.
+- uid: microsoft.quantum.canon.uncurriedopa
+  summary: >-
+    Dada uma função que retorna operações, retorna uma nova operação que usa as duas entradas como uma tupla.
+
+    O modificador `A` indica que as operações são adjointable.
+- uid: microsoft.quantum.canon.uncurriedopc
+  summary: >-
+    Dada uma função que retorna operações, retorna uma nova operação que usa as duas entradas como uma tupla.
+
+    O modificador `C` indica que as operações são controláveis.
+- uid: microsoft.quantum.canon.uncurriedopca
+  summary: >-
+    Dada uma função que retorna operações, retorna uma nova operação que usa as duas entradas como uma tupla.
+
+    O modificador `CA` indica que as operações são controláveis e adjointable.
+- uid: microsoft.quantum.canon.uncurryop
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.uncurriedop".
+- uid: microsoft.quantum.canon.uncurryopa
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.uncurriedopa".
+- uid: microsoft.quantum.canon.uncurryopc
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.uncurriedopc".
+- uid: microsoft.quantum.canon.uncurryopca
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.canon.uncurriedopca".
+- uid: microsoft.quantum.canon.weightonepaulis
+  summary: Retorna uma matriz de todos os operadores de Pauli peso-1 em um determinado número de qubits.
+- uid: microsoft.quantum.canon.xor
+  summary: Isso computa o exclusivo ou de dois bits.
+operations:
+- uid: microsoft.quantum.canon.adiabaticstateenergyunitary
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.simuilation.pnormalized".
+- uid: microsoft.quantum.canon.andladder
+  summary: >-
+    Executa um ' e uma escada ' controlados no qubits de destino.
+
+
+    Isso aplica uma unitário fornecida pelo seguinte mapa em vetores de base computacional: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e em que $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
+- uid: microsoft.quantum.canon.applydiagonalunitary
+  summary: >-
+    Aplica uma matriz de fases complexas a Estados de base numéricos de um registro de qubits.
+
+
+    Ou seja, isso implementa a operação de controle diagonal $U $ que aplica uma fase complexa $e ^ {i \theta_j} $ no estado de número $n $-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ ket {j} \ Bra {j} $.
+- uid: microsoft.quantum.canon.applyfermionicswap
+  summary: Aplica a permuta Fermionic.
+- uid: microsoft.quantum.canon.applyif
+  summary: Aplica uma operação com condição em um bit clássico.
+- uid: microsoft.quantum.canon.applyifa
+  summary: Aplica uma operação de adjointable condicionalmente em um bit clássico.
+- uid: microsoft.quantum.canon.applyifc
+  summary: Aplica uma operação controlável condicionalmente em um bit clássico.
+- uid: microsoft.quantum.canon.applyifca
+  summary: Aplica uma operação unitário com condição em um bit clássico.
+- uid: microsoft.quantum.canon.applyifelseb
+  summary: Aplica uma das duas operações, dependendo do valor de um bit clássico.
+- uid: microsoft.quantum.canon.applyifelseba
+  summary: Aplica uma das duas operações de adjointable, dependendo do valor de um bit clássico.
+- uid: microsoft.quantum.canon.applyifelsebc
+  summary: Aplica uma das duas operações controláveis, dependendo do valor de um bit clássico.
+- uid: microsoft.quantum.canon.applyifelsebca
+  summary: Aplica uma das duas operações de unitário, dependendo do valor de um bit clássico.
+- uid: microsoft.quantum.canon.applyifelser
+  summary: Aplica uma das duas operações, dependendo do valor de um resultado clássico.
+- uid: microsoft.quantum.canon.applyifelsera
+  summary: Aplica uma das duas operações de adjointable, dependendo do valor de um resultado clássico.
+- uid: microsoft.quantum.canon.applyifelserc
+  summary: Aplica uma das duas operações controláveis, dependendo do valor de um resultado clássico.
+- uid: microsoft.quantum.canon.applyifelserca
+  summary: Aplica uma das duas operações de unitário, dependendo do valor de um resultado clássico.
+- uid: microsoft.quantum.canon.applyifone
+  summary: Aplica uma operação com condição em um valor de resultado clássico sendo um.
+- uid: microsoft.quantum.canon.applyifonea
+  summary: Aplica uma operação de modo adjacente condição em um valor de resultado clássico sendo um.
+- uid: microsoft.quantum.canon.applyifonec
+  summary: Aplica uma operação controlável com condição em um valor de resultado clássico sendo um.
+- uid: microsoft.quantum.canon.applyifoneca
+  summary: Aplica uma operação unitário com condição em um valor de resultado clássico sendo um.
+- uid: microsoft.quantum.canon.applyifzero
+  summary: Aplica uma operação com condição em um valor de resultado clássico igual a zero.
+- uid: microsoft.quantum.canon.applyifzeroa
+  summary: Aplica uma operação de modo adjacente condicional em um valor de resultado clássico como zero.
+- uid: microsoft.quantum.canon.applyifzeroc
+  summary: Aplica uma operação controlável com condição em um valor de resultado clássico igual a zero.
+- uid: microsoft.quantum.canon.applyifzeroca
+  summary: Aplica uma operação unitário com condição em um valor de resultado clássico igual a zero.
+- uid: microsoft.quantum.canon.applymulticontrolledc
+  summary: >-
+    Aplica uma versão controlada de multiplicação de uma operação controlada individualmente.
+
+    O modificador `C` indica que a operação de qubit única é controlável.
+- uid: microsoft.quantum.canon.applymulticontrolledca
+  summary: >-
+    Aplica uma versão controlada de multiplicação de uma operação controlada individualmente.
+
+    O modificador `CA` indica que a operação de qubit única é controlável e de adjointable.
+- uid: microsoft.quantum.canon.applypauli
+  summary: Dado um operador qubit Pauli, o aplica a operação correspondente a um registro.
+- uid: microsoft.quantum.canon.applypaulifrombitstring
+  summary: Aplica um operador Pauli em cada qubit em uma matriz se o bit correspondente de uma matriz booliana corresponde a uma determinada entrada.
+- uid: microsoft.quantum.canon.applyquantumfouriertransform
+  summary: Executa a transformação de Fourier do Quantum em um registro do Quantum contendo um inteiro na representação little-endian.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformbe
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta operação foi removida.
+- uid: microsoft.quantum.canon.applyquantumfouriertransformle
+  summary: ''
+- uid: microsoft.quantum.canon.applyreversedopbigendian
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE".
+- uid: microsoft.quantum.canon.applyreversedopbigendiana
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA".
+- uid: microsoft.quantum.canon.applyreversedopbigendianc
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+- uid: microsoft.quantum.canon.applyreversedopbigendianca
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC".
+- uid: microsoft.quantum.canon.applyreversedoplittleendian
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE".
+- uid: microsoft.quantum.canon.applyreversedoplittleendiana
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA".
+- uid: microsoft.quantum.canon.applyreversedoplittleendianc
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+- uid: microsoft.quantum.canon.applyreversedoplittleendianca
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC".
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta operação foi removida.
+- uid: microsoft.quantum.canon.applyripplecarrycomparatorle
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry".
+- uid: microsoft.quantum.canon.applytoeach
+  summary: Aplica uma operação de qubit único a cada elemento em um registro.
+- uid: microsoft.quantum.canon.applytoeacha
+  summary: >-
+    Aplica uma operação de qubit único a cada elemento em um registro.
+
+    O modificador `A` indica que a operação de qubit única é de adjointable.
+- uid: microsoft.quantum.canon.applytoeachc
+  summary: >-
+    Aplica uma operação de qubit único a cada elemento em um registro.
+
+    O modificador `C` indica que a operação de qubit única é controlável.
+- uid: microsoft.quantum.canon.applytoeachca
+  summary: >-
+    Aplica uma operação de qubit único a cada elemento em um registro.
+
+    O modificador `CA` indica que a operação de qubit única é controlável e de adjointable.
+- uid: microsoft.quantum.canon.applytoeachindex
+  summary: Aplica uma operação single-qubit para cada elemento indexado em um registro.
+- uid: microsoft.quantum.canon.applytoeachindexa
+  summary: >-
+    Aplica uma operação single-qubit para cada elemento indexado em um registro.
+
+    O modificador `A` indica que a operação de qubit única é de adjointable.
+- uid: microsoft.quantum.canon.applytoeachindexc
+  summary: >-
+    Aplica uma operação single-qubit para cada elemento indexado em um registro.
+
+    O modificador `C` indica que a operação de qubit única é controlável.
+- uid: microsoft.quantum.canon.applytoeachindexca
+  summary: >-
+    Aplica uma operação single-qubit para cada elemento indexado em um registro.
+
+    O modificador `CA` indica que a operação single-qubit é jointable e controlável.
+- uid: microsoft.quantum.canon.applytofirstqubit
+  summary: Aplica uma operação ao primeiro qubit no registro.
+- uid: microsoft.quantum.canon.applytofirstqubita
+  summary: >-
+    Aplica uma operação ao primeiro qubit no registro.
+
+    O modificador `A` indica que a operação é de adjointable.
+- uid: microsoft.quantum.canon.applytofirstqubitc
+  summary: >-
+    Aplica a operação op para o primeiro qubit no registro.
+
+    O modificador `C` indica que a operação é controlável.
+- uid: microsoft.quantum.canon.applytofirstqubitca
+  summary: >-
+    Aplica a operação op para o primeiro qubit no registro.
+
+    O modificador `CA` indica que a operação é controlável e de adjointable.
+- uid: microsoft.quantum.canon.applytofirstthreequbits
+  summary: Aplica uma operação às três primeiras qubits no registro.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsa
+  summary: >-
+    Aplica uma operação às três primeiras qubits no registro.
+
+    O modificador `A` indica que a operação é de adjointable.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsc
+  summary: >-
+    Aplica uma operação às três primeiras qubits no registro.
+
+    O modificador `C` indica que a operação é controlável.
+- uid: microsoft.quantum.canon.applytofirstthreequbitsca
+  summary: >-
+    Aplica uma operação às três primeiras qubits no registro.
+
+    O modificador `CA` indica que a operação é controlável e de adjointable.
+- uid: microsoft.quantum.canon.applytofirsttwoqubits
+  summary: Aplica uma operação às duas primeiras qubits no registro.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsa
+  summary: >-
+    Aplica uma operação às duas primeiras qubits no registro.
+
+    O modificador `A` indica que a operação é de adjointable.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsc
+  summary: >-
+    Aplica uma operação às duas primeiras qubits no registro.
+
+    O modificador `C` indica que a operação é controlável.
+- uid: microsoft.quantum.canon.applytofirsttwoqubitsca
+  summary: >-
+    Aplica uma operação às duas primeiras qubits no registro.
+
+    O modificador `CA` indica que a operação é controlável e de adjointable.
+- uid: microsoft.quantum.canon.applytopartition
+  summary: Aplica um par de operações a uma determinada partição de um registro em duas partes.
+- uid: microsoft.quantum.canon.applytopartitiona
+  summary: >-
+    Aplica um par de operações a uma determinada partição de um registro em duas partes.
+
+    O modificador `A` indica que a operação é de adjointable.
+- uid: microsoft.quantum.canon.applytopartitionc
+  summary: >-
+    Aplica um par de operações a uma determinada partição de um registro em duas partes.
+
+    O modificador `C` indica que a operação é controlável.
+- uid: microsoft.quantum.canon.applytopartitionca
+  summary: >-
+    Aplica um par de operações a uma determinada partição de um registro em duas partes.
+
+    O modificador `CA` indica que a operação é controlável e de adjointable.
+- uid: microsoft.quantum.canon.applytosubregister
+  summary: Aplica uma operação a um subregistro de um registro, com qubits especificado por uma matriz de seus índices.
+- uid: microsoft.quantum.canon.applytosubregistera
+  summary: >-
+    Aplica uma operação a um subregistro de um registro, com qubits especificado por uma matriz de seus índices.
+
+    O modificador `A` indica que a operação é de adjointable.
+- uid: microsoft.quantum.canon.applytosubregisterc
+  summary: >-
+    Aplica uma operação a um subregistro de um registro, com qubits especificado por uma matriz de seus índices.
+
+    O modificador `C` indica que a operação é controlável.
+- uid: microsoft.quantum.canon.applytosubregisterca
+  summary: >-
+    Aplica uma operação a um subregistro de um registro, com qubits especificado por uma matriz de seus índices.
+
+    O modificador `CA` indica que a operação é controlável e de adjointable.
+- uid: microsoft.quantum.canon.applywith
+  summary: Dadas duas operações, o aplica-se uma como conjugado com a outra.
+- uid: microsoft.quantum.canon.applywitha
+  summary: Dadas duas operações, o aplica-se uma como conjugado com a outra.
+- uid: microsoft.quantum.canon.applywithc
+  summary: ''
+- uid: microsoft.quantum.canon.applywithca
+  summary: Dadas duas operações, o aplica-se uma como conjugado com a outra.
+- uid: microsoft.quantum.canon.applywithinputtransformation
+  summary: Dada uma operação que aceita alguma entrada, uma função que retorna uma saída compatível com essa operação e uma entrada para essa função, aplica a operação usando a função para transformar a entrada em um formato esperado pela operação.
+- uid: microsoft.quantum.canon.applywithinputtransformationa
+  summary: Dada uma operação que aceita alguma entrada, uma função que retorna uma saída compatível com essa operação e uma entrada para essa função, aplica a operação usando a função para transformar a entrada em um formato esperado pela operação.
+- uid: microsoft.quantum.canon.applywithinputtransformationc
+  summary: Dada uma operação que aceita alguma entrada, uma função que retorna uma saída compatível com essa operação e uma entrada para essa função, aplica a operação usando a função para transformar a entrada em um formato esperado pela operação.
+- uid: microsoft.quantum.canon.applywithinputtransformationca
+  summary: Dada uma operação que aceita alguma entrada, uma função que retorna uma saída compatível com essa operação e uma entrada para essa função, aplica a operação usando a função para transformar a entrada em um formato esperado pela operação.
+- uid: microsoft.quantum.canon.approximateqft
+  summary: Aplique a transformação de Fourier de Quantum aproximada (AQFT) a um registro do Quantum.
+- uid: microsoft.quantum.canon.asserthighestbit
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit".
+- uid: microsoft.quantum.canon.assertlessthanphasele
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan".
+- uid: microsoft.quantum.canon.assertphase
+  summary: >-
+    Declara que a fase de um estado de superposição igual tem o valor esperado.
+
+
+    Especificamente, o declara que a fase $ \phi $ de um estado Quantum que pode ser expressa como $ \frac{e ^ {i t}} {\sqrt{2}} (e ^ {i\phi} \ ket{0} + e ^ {-i\phi} \ ket{1}) $ para algum verdadeiro t arbitrário tem o valor esperado.
+- uid: microsoft.quantum.canon.assertprobintbe
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta operação foi removida.
+- uid: microsoft.quantum.canon.cnotchain
+  summary: >-
+    Computa a paridade de uma matriz de qubits in-loco.
+
+
+    Ele segue o padrão $ \ket{q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots $.
+- uid: microsoft.quantum.canon.cnotchaintarget
+  summary: >-
+    Computa a paridade de uma matriz de qubits em um qubit de destino.
+
+
+    Se a matriz estiver inicialmente no estado $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{Target}}} $, o estado final será fornecido por $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
+- uid: microsoft.quantum.canon.copymostsignificantbitle
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit".
+- uid: microsoft.quantum.canon.cx
+  summary: >-
+    Aplica o portão X (CX) controlado a um par de qubits.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $, em que linhas e colunas são organizadas como no guia de conceitos do Quantum.
+- uid: microsoft.quantum.canon.cy
+  summary: >-
+    Aplica a porta x (CY) controlada a um par de qubits.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align} , $ $, em que linhas e colunas são organizadas como no guia de conceitos do Quantum.
+- uid: microsoft.quantum.canon.cz
+  summary: >-
+    Aplica o portão-Z (CZ) controlado a um par de qubits.
+
+
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $, em que linhas e colunas são organizadas como no guia de conceitos do Quantum.
+- uid: microsoft.quantum.canon.delay
+  summary: Aplica uma determinada operação com um atraso.
+- uid: microsoft.quantum.canon.delaya
+  summary: Aplica uma determinada operação com um atraso.
+- uid: microsoft.quantum.canon.delayc
+  summary: Aplica uma determinada operação com um atraso.
+- uid: microsoft.quantum.canon.delayca
+  summary: Aplica uma determinada operação com um atraso.
+- uid: microsoft.quantum.canon.hy
+  summary: >-
+    Aplica o analógico Y à transformação Hadamard que troca os eixos Z e Y.
+
+
+    A transformação Y Hadamard $H _Y = S H $ em um único qubit é:
+
+
+    \begin{align} H_Y \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i &-i \end{bmatrix}.
+
+    \end{align}
+- uid: microsoft.quantum.canon.inplacexorbe
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta operação foi removida.
+- uid: microsoft.quantum.canon.inplacexorle
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Measurement.ApplyXorInPlace".
+- uid: microsoft.quantum.canon.integerincrementle
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.IncrementByInteger".
+- uid: microsoft.quantum.canon.integerincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger".
+- uid: microsoft.quantum.canon.iteratethroughcartesianpower
+  summary: Itera uma variável, digamos arr, por meio do produto cartesiano [0, Bound-1] × [0, Bound-1] × [0, Bound-1] e chama op (ARR) para cada elemento do produto cartesiano
+- uid: microsoft.quantum.canon.iteratethroughcartesianproduct
+  summary: Itera uma variável, digamos `arr`, por meio de um produto cartesiano [0, limites [0]-1] × [0, limites [1]-1] × [0, limites [comprimento (limites)-1]-1] e chamadas op (ARR) para cada elemento do produto cartesiano
+- uid: microsoft.quantum.canon.measureintegerbe
+  summary: >-
+    > [!WARNING]
+
+    > Preterido esta operação foi removida.
+- uid: microsoft.quantum.canon.modularaddproductle
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger".
+- uid: microsoft.quantum.canon.modularaddproductphasele
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger".
+- uid: microsoft.quantum.canon.modularincrementle
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger".
+- uid: microsoft.quantum.canon.modularincrementphasele
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger".
+- uid: microsoft.quantum.canon.modularmultiplybyconstantle
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger".
+- uid: microsoft.quantum.canon.multiplexoperations
+  summary: >-
+    Aplica uma matriz de operações controladas por uma matriz de Estados de número.
+
+
+    Ou seja, aplica a operação unitário controlada por multiplicação $U $ que aplica um _J unitário $V $ quando controlado pelo estado de número $n $-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
+  summary: >-
+    Aplica a operação unitário controlada por multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado do número n-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
+  summary: >-
+    Aplica uma operação unitário com controle de multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado de número n-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
+- uid: microsoft.quantum.canon.multiplexpauli
+  summary: >-
+    Aplica uma rotação Pauli condição em uma matriz de qubits.
+
+
+    Isso aplica a operação unitário com controle de multiplicação $U $ que executa rotações por ângulo $ \theta_j $ sobre o operador Single-qubit Pauli $P $ quando controlado pelo estado do número $n $-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+- uid: microsoft.quantum.canon.multiplexz
+  summary: >-
+    Aplica uma rotação de Pauli Z condicional em uma matriz de qubits.
+
+
+    Isso aplica a operação unitário com controle de multiplicação $U $ que executa rotações por ângulo $ \theta_j $ sobre o operador Single-qubit Pauli $Z $ quando controlado pelo estado do número $n $-qubit $ \ket{j} $.
+
+
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+- uid: microsoft.quantum.canon.noop
+  summary: Executa a operação de identidade (não op) em um argumento.
+- uid: microsoft.quantum.canon.qft
+  summary: Executa a transformação de Fourier do Quantum em um registro do Quantum contendo um número inteiro na representação big-endian.
+- uid: microsoft.quantum.canon.qftle
+  summary: Executa a transformação de Fourier do Quantum em um registro do Quantum contendo um inteiro na representação little-endian.
+- uid: microsoft.quantum.canon.rall0
+  summary: >-
+    Executa uma operação de alternância de fase.
+
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{0\cdots 0} \bra{0\cdots 0} $.
+- uid: microsoft.quantum.canon.rall1
+  summary: >-
+    Executa uma operação de alternância de fase.
+
+
+    $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+- uid: microsoft.quantum.canon.swapreverseregister
+  summary: Usa Gates de permuta para reverter a ordem de qubits em um registro.
+- uid: microsoft.quantum.canon.with
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Canon.ApplyWith".
+- uid: microsoft.quantum.canon.witha
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Canon.ApplyWithA".
+- uid: microsoft.quantum.canon.withc
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Canon.ApplyWithC".
+- uid: microsoft.quantum.canon.withca
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"Microsoft.Quantum.Canon.ApplyWithCA".
+newtypes:
+- uid: microsoft.quantum.canon.ccnotop
+  summary: O tipo de assinatura do portão CCNOT.
+- uid: microsoft.quantum.canon.resultstack
+  summary: >-
+    Uma pilha último a entrar, primeiro a sair de variáveis de `Result`.
+
+    A pilha consiste em uma capacidade de inteiro, um ponteiro de pilha e uma `Result` matriz.
+ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065168"

@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestart
+name: RangeStart
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Retorna o valor inicial definido do intervalo especificado.
+remarks: >-
+  O primeiro elemento de uma expressão de intervalo é `start`, seu segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `end` seja passado.
+
+
+  Observe que o valor inicial definido de um intervalo é o mesmo que o primeiro elemento da sequência, a menos que o intervalo especifique uma sequência vazia (por exemplo, 2... 1).
+syntax: 'function RangeStart (range : Range) : Int'
+input:
+  content: '(range : Range)'
+  types:
+  - name: range
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int
+  types:
+  - summary: O valor inicial definido do intervalo especificado.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231763"

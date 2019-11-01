@@ -1,0 +1,82 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.diagnostics
+name: Microsoft. Quantum. Diagnostics
+functions:
+- uid: microsoft.quantum.diagnostics.allequalityfactb
+  summary: Declara que duas matrizes de valores Boolianos são iguais.
+- uid: microsoft.quantum.diagnostics.dumpmachine
+  summary: Despeja o status do computador de destino atual.
+- uid: microsoft.quantum.diagnostics.dumpregister
+  summary: Despeja o status atual da máquina de destino associada ao qubits fornecido.
+- uid: microsoft.quantum.diagnostics.equalityfactb
+  summary: Declara que uma variável bool clássica tem o valor esperado.
+- uid: microsoft.quantum.diagnostics.equalityfactc
+  summary: Declara que um número complexo tem o valor esperado.
+- uid: microsoft.quantum.diagnostics.equalityfactcp
+  summary: Declara que um número complexo tem o valor esperado.
+- uid: microsoft.quantum.diagnostics.equalityfacti
+  summary: Declara que uma variável int clássica tem o valor esperado.
+- uid: microsoft.quantum.diagnostics.equalityfactl
+  summary: Declara que uma variável BigInt clássica tem o valor esperado.
+- uid: microsoft.quantum.diagnostics.equalityfactr
+  summary: Declara que uma variável de resultado clássico tem o valor esperado.
+- uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
+  summary: Representa a declaração de que um valor de ponto flutuante clássico tem o valor esperado até uma determinada tolerância absoluta.
+- uid: microsoft.quantum.diagnostics.fact
+  summary: Declara que uma condição clássica é verdadeira.
+- uid: microsoft.quantum.diagnostics.nearequalityfactc
+  summary: Declara que um número complexo clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactcp
+  summary: Declara que um número complexo clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+- uid: microsoft.quantum.diagnostics.nearequalityfactd
+  summary: Declara que um valor de ponto flutuante clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+operations:
+- uid: microsoft.quantum.diagnostics.assertallzero
+  summary: Assert que determinados qubits estão todos em $ \ket{0}$ State.
+- uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
+  summary: Assert que determinados qubits estão todos em $ \ket{0}$ State até uma determinada tolerância.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
+  summary: >-
+    Dadas duas operações, afirma que elas agem de forma idêntica para todos os Estados de entrada.
+
+
+    Essa asserção é implementada verificando a ação das operações em todos os Estados do formulário $V _0 \otimes... \otimes V_ {n-1} $, em que $V _K $ é um dos Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ e $ \ket{i} $ (+ 1 eigenstate do operador Pauli Y).
+
+
+    Essa declaração usa $n $ qubits e requer que várias chamadas das operações sejam comparadas.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
+  summary: >-
+    Verifica se a operação `givenU` é igual à operação `expectedU` no tamanho de entrada fornecido, verificando a ação das operações somente nos vetores da base computacional.
+
+    Essa é uma condição necessária, mas não suficiente, para a igualdade de duas unidades.
+- uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
+  summary: >-
+    Dadas duas operações, afirma que elas agem de forma idêntica para todos os Estados de entrada.
+
+
+    Essa declaração é implementada usando o Choi – Jamiłkowski isomorphism para reduzir a asserção para uma de uma declaração de estado qubit em dois registros de confusas.
+
+    Portanto, essa operação precisa apenas de uma única chamada para cada operação que está sendo testada, mas requer duas vezes mais qubits a ser alocada.
+
+    Essa declaração pode ser usada para garantir, por exemplo, que uma versão otimizada de uma operação atue de forma idêntica à sua implementação ingênua ou que uma operação que atue em uma variedade de entradas não Quantum concorde com casos conhecidos.
+- uid: microsoft.quantum.diagnostics.assertqubit
+  summary: Declara que o `q` qubit está no eigenstate esperado do operador Z Pauli.
+- uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
+  summary: >-
+    Declara que um qubit no estado esperado.
+
+
+    `expected` representa um vetor complexo, $ \ket{\psi} = \begin{bmatrix}a & b\end {bmatrix} ^ {\mathrm{T}} $.
+
+    O primeiro elemento das tuplas que representa cada $a $, $b $ é a parte real do número complexo, enquanto o segundo é a parte imaginária.
+
+    O último argumento define a tolerância com a qual a declaração é feita.
+- uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
+  summary: Declara que o `q` qubit está no eigenstate esperado do operador Z Pauli até uma determinada tolerância.
+summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções e operações úteis para fins de diagnóstico, incluindo operações Assert e funções de declaração."
+ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056860"

@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.embedpauli
+name: EmbedPauli
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Dado um operador Pauli de qubit único e o índice de um qubit, retorna um operador Pauli de vários qubit com o operador Single-qubit fornecido nesse índice e `PauliI` em todos os outros índices.
+examples: >-
+  Para obter a `[PauliI, PauliI, PauliX, PauliI]`de matriz:
+
+
+  ```qsharp
+
+  EmbedPauli(PauliX, 2, 3);
+
+  ```
+syntax: 'function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]'
+input:
+  content: '(pauli : Pauli, location : Int, n : Int)'
+  types:
+  - name: pauli
+    summary: Um operador de Pauli de qubit único a ser colocado no local especificado.
+    isPrimitive: true
+    uid: Pauli
+  - name: location
+    summary: Um índice que `output[location] == pauli`, em que `output` é a saída dessa função.
+    isPrimitive: true
+    uid: Int
+  - name: n
+    summary: Comprimento da matriz a ser retornada.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[]
+  types:
+  - isArray: true
+    isPrimitive: true
+    uid: Pauli
+ms.openlocfilehash: 1e852781f6dd85e5432f5613184f028db0e84b87
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219387"

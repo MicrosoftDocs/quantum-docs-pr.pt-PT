@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangeend
+name: RangeEnd
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Retorna o valor final definido do intervalo especificado, que não é necessariamente o último elemento na sequência.
+remarks: >-
+  O primeiro elemento de uma expressão de intervalo é `start`, seu segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `end` seja passado.
+
+
+  Observe que o valor final definido de um intervalo pode ser diferente do último elemento na sequência especificada pelo intervalo; por exemplo, em um intervalo de 0.. 2.. 5 o último elemento é 4, mas o valor final é 5.
+syntax: 'function RangeEnd (range : Range) : Int'
+input:
+  content: '(intervalo: intervalo)'
+  types:
+  - name: amplitude
+    isPrimitive: true
+    uid: Range
+output:
+  content: inteiro
+  types:
+  - summary: O valor final definido do intervalo especificado.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066647"

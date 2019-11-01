@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytofirstthreequbitsc
+name: ApplyToFirstThreeQubitsC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma operação às três primeiras qubits no registro.
+
+  O modificador `C` indica que a operação é controlável.
+remarks: >-
+  Isso é equivalente a:
+
+
+  ```qsharp
+
+  op(register[0], register[1], register[2]);
+
+  ```
+syntax: 'operation ApplyToFirstThreeQubitsC (op : ((Qubit, Qubit, Qubit) => Unit is Ctl), register : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit, Qubit, Qubit) => Unit is Ctl), register : Qubit[])'
+  types:
+  - name: op
+    summary: Uma operação a ser aplicada aos três primeiros qubits
+    isOperation: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+      - isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: register
+    summary: Matriz qubit para os três primeiros qubits dos quais a operação é aplicada.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytofirstthreequbits
+ms.openlocfilehash: f71af17fefb874c14b4ae7a068c0bea5a9e49e60
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213352"

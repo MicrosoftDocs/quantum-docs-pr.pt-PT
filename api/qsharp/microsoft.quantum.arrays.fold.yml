@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.fold
+name: Fold
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Itera uma função `f` por meio de uma `array`de matriz, retornando `f(f(f(initialState, array[0]), array[1]), ...)`.
+examples: >-
+  ```qsharp
+
+  function Plus(a : Double, b : Double) {
+      return a + b;
+  }
+
+  function Sum(xs : Double[]) {
+      return Fold(Plus, 0.0, xs);
+  }
+
+  ```
+syntax: "function Fold (folder : (('State, 'T) -> 'State), state : 'State, array : 'T[]) : 'State"
+input:
+  content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
+  types:
+  - name: folder
+    summary: Uma função a ser dobrada sobre a matriz.
+    isFunction: true
+    input:
+      types:
+      - uid: "'State"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'State"
+        isLocal: true
+  - name: state
+    summary: O estado inicial da pasta.
+    uid: "'State"
+    isLocal: true
+  - name: array
+    summary: Uma matriz de valores a serem dobrados.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'State"
+  types:
+  - summary: O estado final retornado pela pasta após a iteração em todos os elementos de `array`.
+    uid: "'State"
+    isLocal: true
+typeParameters:
+- uid: "'State"
+  summary: O tipo de Estados no qual a função `folder` Opera, ou seja, aceita como seu primeiro argumento e retorna.
+- uid: "'T"
+  summary: O tipo de elementos de `array`.
+ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214355"

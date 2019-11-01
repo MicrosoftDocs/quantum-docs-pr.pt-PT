@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.complex
+name: Complex
+type: newtype
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Representa um número complexo por seus componentes reais e imaginários.
+
+  O primeiro elemento da tupla é o componente real, o segundo componente imaginário.
+syntax: newtype Complex = (Double, Double);
+ms.openlocfilehash: c8e60a824b10d21d793898bdeb3bc6c4dfa843cb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230114"

@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.rangeasintarray
+name: RangeAsIntArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Cria uma matriz `arr` de inteiros enumerados por início.. etapa.. completo.
+examples: >-
+  ```qsharp
+
+  // The following returns [1,3,5,7];
+
+  let array = RangeAsIntArray(1..2..8);
+
+  ```
+syntax: 'function RangeAsIntArray (range : Range) : Int[]'
+input:
+  content: '(range : Range)'
+  types:
+  - name: range
+    summary: Uma `Range` de valores `start..step..end` a ser convertida em uma matriz.
+    isPrimitive: true
+    uid: Range
+output:
+  content: Int[]
+  types:
+  - summary: Uma nova matriz de inteiros correspondentes a valores iterados por `range`.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: a6765698daf8838312c1501e8bbf1e43f609b068
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232341"

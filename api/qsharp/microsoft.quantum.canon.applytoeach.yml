@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoeach
+name: ApplyToEach
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Aplica uma operação de qubit único a cada elemento em um registro.
+examples: >-
+  Preparar um estado de três qubit $ \ket{+} $:
+
+
+  ```qsharp
+
+  using (register = Qubit[3]) {
+      ApplyToEach(H, register);
+  }
+
+  ```
+syntax: "operation ApplyToEach (singleElementOperation : ('T => Unit), register : 'T[]) : Unit"
+input:
+  content: "(singleElementOperation : ('T => Unit), register : 'T[])"
+  types:
+  - name: singleElementOperation
+    summary: Operação a ser aplicada a cada qubit.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: register
+    summary: Matriz de qubits na qual aplicar a operação especificada.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O destino no qual a operação atua.
+seeAlso:
+- microsoft.quantum.canon.applytoeachc
+- microsoft.quantum.canon.applytoeacha
+- microsoft.quantum.canon.applytoeachca
+ms.openlocfilehash: a8f58bc8f3bf1d460a5b1f4ffbeba95185d09a1a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73210537"

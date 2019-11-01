@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r
+name: R
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica uma rotação sobre o eixo de Pauli fornecido.
+
+
+  \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \sigma_{\mu}/2}, \end{Align}, em que $ \mu na \{I, X, Y, Z\}$.
+remarks: Quando chamado com `pauli = PauliI`, essa operação aplica uma *fase global*. Essa fase pode ser significativa quando usada com o `Controlled` functor.
+syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(pauli : Pauli, theta : Double, qubit : Qubit)'
+  types:
+  - name: pauli
+    summary: Operador Pauli ($ \mu $) a ser exponenciação para formar a rotação.
+    isPrimitive: true
+    uid: Pauli
+  - name: theta
+    summary: Ângulo sobre o qual o qubit deve ser girado.
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    summary: Qubit ao qual a portão deve ser aplicada.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: cb7cf0c4c2a758b1abaa80d6fe3c265fc9feabb2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234024"

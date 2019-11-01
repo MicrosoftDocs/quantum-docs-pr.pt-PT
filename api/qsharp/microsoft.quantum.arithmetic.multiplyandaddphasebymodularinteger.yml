@@ -1,0 +1,40 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
+name: MultiplyAndAddPhaseByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: O mesmo que ModularAddProductLE, mas pressupõe que o soma codifica inteiros na base de QFT
+remarks: >-
+  Pressupõe que `phaseSummand` tem o bit mais alto definido como 0.
+
+  Também pressupõe que o valor de `phaseSummand` seja menor que N.
+syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
+  types:
+  - name: constMultiplier
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: phaseSummand
+    uid: microsoft.quantum.arithmetic.phaselittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.modularaddproductle
+ms.openlocfilehash: f4dab26f55a61d0f3cbaf0b9b17fe4615f74356a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214848"

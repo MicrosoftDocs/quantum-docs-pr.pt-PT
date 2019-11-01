@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.tail
+name: Tail
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Retorna o último elemento da matriz.
+syntax: "function Tail (array : 'A[]) : 'A"
+input:
+  content: "(array : 'A[])"
+  types:
+  - name: array
+    summary: Matriz da qual o último elemento é tirado. A matriz deve ter comprimento pelo menos 1.
+    isArray: true
+    uid: "'A"
+    isLocal: true
+output:
+  content: "'A"
+  types:
+  - summary: O último elemento da matriz.
+    uid: "'A"
+    isLocal: true
+typeParameters:
+- uid: "'A"
+  summary: O tipo dos elementos da matriz.
+ms.openlocfilehash: 718c4357ccac0cba69250ec86bf2fe2cdd74230a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214202"
