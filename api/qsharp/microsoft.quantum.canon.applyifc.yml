@@ -1,0 +1,72 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifc
+name: ApplyIfC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma operação controlável condicionalmente em um bit clássico.
+
+
+  Dada uma operação `op` e um valor de bit `bit`, o aplica `op` à `target` se `bit` for `true`. Se `false`, nada acontecerá com o `target`.
+
+  O sufixo `C` indica que a operação a ser aplicada é controlável.
+examples: >-
+  O seguinte prepara um registro de qubits para um estado de base computacional representado por uma cadeia de caracteres de bits clássicas fornecida como uma matriz de valores de `Bool`:
+
+
+  ```Q#
+
+  let bitstring = [true, false, true];
+
+  using (register = Qubit(3)) {
+      ApplyToEach(ApplyIf(X, _, _), Zip(bitstring, register));
+      // register should now be in the state |101⟩.
+      ...
+  }
+
+  ```
+syntax: "operation ApplyIfC (op : ('T => Unit is Ctl), bit : Bool, target : 'T) : Unit"
+input:
+  content: "(op : ('T => Unit is Ctl), bit : Bool, target : 'T)"
+  types:
+  - name: op
+    summary: Uma operação a ser aplicada condicionalmente.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: bit
+    summary: um booliano que controla se op é aplicado ou não.
+    isPrimitive: true
+    uid: Bool
+  - name: target
+    summary: A entrada à qual a operação é aplicada.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applyifc
+- microsoft.quantum.canon.applyifa
+- microsoft.quantum.canon.applyifca
+ms.openlocfilehash: 166f61f877a282578a71419a74fea6361cc2cac3
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217585"

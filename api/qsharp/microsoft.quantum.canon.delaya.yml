@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.delaya
+name: Atraso
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma determinada operação com um atraso.
+
+
+  Dada uma operação e uma entrada para essa operação, o aplica a operação quando uma entrada adicional é fornecida.
+
+  Em particular, a expressão `Delay(op, arg, _)` é uma operação que se aplica `op` ao `arg` quando chamado.
+
+  A expressão `Delay(op,arg,_)` permite atrasar a aplicação de `op`.
+syntax: "operation DelayA (op : ('T => Unit is Adj), arg : 'T, aux : Unit) : Unit"
+input:
+  content: "(op: (t = > unidade é adj), arg: ' t, AUX: Unit)"
+  types:
+  - name: parar
+    summary: Uma operação a ser aplicada.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: ARG
+    summary: A entrada à qual a operação é aplicada.
+    uid: "'T"
+    isLocal: true
+  - name: indicação
+    summary: Argumento usado para atrasar a aplicação de operação usando o aplicativo parcial.
+    isPrimitive: true
+    uid: Unit
+output:
+  content: Unidade
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo de entrada da operação a ser atrasada.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.delay
+- microsoft.quantum.canon.delayed
+ms.openlocfilehash: f36930faacf0aa4a1ea87a09fc3018e06e62d7ac
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067803"

@@ -1,0 +1,62 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
+name: StatePreparationPositiveCoefficients
+type: function
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Retorna uma operação que prepara o estado de Quantum fornecido.
+
+
+  A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes positivos $ \alpha_j\ge $0 do estado de base computacional $n $-qubit $ \ket{0...0} $.
+
+
+  A ação de U em um registro recém-alocado é fornecida por $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}.
+
+  \end{align} $ $
+remarks: Coeficientes de entrada negativas $ \alpha_j < $0 serão tratados como se positivo com o valor $ | \alpha_j | $. `coefficients` será preenchido com os elementos $ \alpha_j = $0 se menos de $2 ^ n $ forem especificados.
+examples: >-
+  O trecho a seguir prepara o estado Quantum $ \ket{\psi} = \ sqrt {1/8} \ ket{0}+ \ sqrt {7/8} \ ket{2}$ no `qubitsLE`de registro qubit.
+
+
+  ```qsharp
+
+  let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+
+  let op = StatePreparationPositiveCoefficients(amplitudes);
+
+  using (qubits = Qubit[2]) {
+      let qubitsLE = LittleEndian(qubits);
+      op(qubitsLE);
+  }
+
+  ```
+syntax: 'function StatePreparationPositiveCoefficients (coefficients : Double[]) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)'
+input:
+  content: '(coefficients : Double[])'
+  types:
+  - name: coefficients
+    summary: Matriz de até $2 ^ n $ coeficientes $ \alpha_j $. O coeficiente $j $ th indexa o estado de número $ \ket{j} $ codificado em um formato little-endian.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)
+  types:
+  - summary: Uma operação unitário de preparação de estado $U $.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: 2a31449781d4b3bab1f2af40083df78bf6cc2083
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226374"

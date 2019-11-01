@@ -1,0 +1,26 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.rangestep
+name: RangeStep
+type: function
+namespace: Microsoft.Quantum.Core
+summary: Retorna o inteiro que especifica como o próximo valor de um intervalo é calculado.
+remarks: O primeiro elemento de uma expressão de intervalo é `start`, seu segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `end` seja passado.
+syntax: 'function RangeStep (range : Range) : Int'
+input:
+  content: '(intervalo: intervalo)'
+  types:
+  - name: amplitude
+    isPrimitive: true
+    uid: Range
+output:
+  content: inteiro
+  types:
+  - summary: O valor de etapa definido do intervalo especificado.
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066613"

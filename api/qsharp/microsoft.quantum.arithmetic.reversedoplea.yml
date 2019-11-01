@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reversedoplea
+name: ReversedOpLEA
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Dada uma operação que usa uma entrada little-endian, retorna uma nova operação que usa uma entrada big endian.
+syntax: 'function ReversedOpLEA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj)'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj))'
+  types:
+  - name: op
+    summary: A operação cuja entrada deve ser revertida.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+output:
+  content: (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj)
+  types:
+  - summary: Uma nova operação que aceita sua entrada como um registro big endian.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+seeAlso:
+- applyreversedoplea
+- reversedople
+- reversedoplec
+- reversedopleca
+ms.openlocfilehash: f7d48bfcb6e1f72c5942c8f19029a90beb034b8d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214610"

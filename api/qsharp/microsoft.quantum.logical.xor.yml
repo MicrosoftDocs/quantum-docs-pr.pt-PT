@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.xor
+name: Xor
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retorna a disjunção exclusiva booliana de dois valores.
+syntax: 'function Xor (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: O primeiro valor a ser considerado.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: O segundo valor a ser considerado.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`true` se e somente se exatamente um dos `a` e `b` for `true`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: a876025d8b3a928e91d686b90f8ceccd65cc1e7c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235146"

@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.continuousoracle
+name: ContinuousOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Representa um Oracle de tempo contínuo.
+
+
+  Esse é um Oracle que implementa $U (\delta t): \ket{\psi (t)} \mapsto \ket{\psi (t + \delta t)} $ para todos os horários $t $, em que $U $ é uma operação fixa e em que $ \delta t $ é um número real não negativo.
+syntax: newtype ContinuousOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: b412c93583a68f71c232d2f7e11fd3d506e5f817
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231168"

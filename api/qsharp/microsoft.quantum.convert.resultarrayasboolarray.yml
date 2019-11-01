@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.resultarrayasboolarray
+name: ResultArrayAsBoolArray
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: Converte um tipo de `Result[]` em um tipo de `Bool[]`, em que `One` é mapeado para `true` e `Zero` é mapeado para `false`.
+syntax: 'function ResultArrayAsBoolArray (input : Result[]) : Bool[]'
+input:
+  content: '(input : Result[])'
+  types:
+  - name: input
+    summary: '`Result[]` a ser convertido.'
+    isArray: true
+    isPrimitive: true
+    uid: Result
+output:
+  content: Bool[]
+  types:
+  - summary: Um `Bool[]` que representa o `input`.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: d2ccd4c2b8f1b3e67050f7ebb0756def5bea3b07
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230743"

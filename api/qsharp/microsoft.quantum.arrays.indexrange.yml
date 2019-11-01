@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.indexrange
+name: IndexRange
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Dada uma matriz, retorna um intervalo sobre os índices dessa matriz, adequado para uso em um loop for.
+examples: >-
+  Os seguintes loops de `for` são equivalentes:
+
+
+  ```Q#
+
+  for (idx in IndexRange(array)) { ... }
+
+  for (idx in IndexRange(array)) { ... }
+
+  ```
+syntax: "function IndexRange (array : 'TElement[]) : Range"
+input:
+  content: "(array : 'TElement[])"
+  types:
+  - name: array
+    summary: Uma matriz para a qual um intervalo de índices deve ser retornado.
+    isArray: true
+    uid: "'TElement"
+    isLocal: true
+output:
+  content: Range
+  types:
+  - summary: Um intervalo em todos os índices da matriz.
+    isPrimitive: true
+    uid: Range
+typeParameters:
+- uid: "'TElement"
+  summary: O tipo de elementos da matriz.
+ms.openlocfilehash: a70935980fc49a3f8c155fe1901b13da923caaee
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218163"

@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.paulicoefficientfromgenidx
+name: PauliCoefficientFromGenIdx
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Extrai o coeficiente de um termo Pauli descrito por um `GeneratorIndex`.
+syntax: 'function PauliCoefficientFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Double'
+input:
+  content: '(generatorIndex: Microsoft. Quantum. Simulation. GeneratorIndex)'
+  types:
+  - name: generatorIndex
+    summary: '`GeneratorIndex` tipo que codifica um termo de Pauli.'
+    uid: microsoft.quantum.simulation.generatorindex
+output:
+  content: Clique
+  types:
+  - summary: O coeficiente do termo descrito por um `GeneratorIndex`.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: f4e3412028f11758e5e4dbf50616ede1ed6f294a
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73065423"

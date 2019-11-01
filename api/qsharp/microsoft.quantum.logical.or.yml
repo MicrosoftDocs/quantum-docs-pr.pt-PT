@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.or
+name: Or
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retorna a disjunção booliana de dois valores.
+remarks: >-
+  Ao contrário do operador de `or`, essa função não é de curto circuito, de modo que ambas as entradas são totalmente avaliadas.
+
+
+  Até o comportamento de curto-circuito, os seguintes são equivalentes:
+
+
+  ```Q#
+
+  let x = a or b;
+
+  let x = Or(a, b);
+
+  ```
+syntax: 'function Or (a : Bool, b : Bool) : Bool'
+input:
+  content: '(a : Bool, b : Bool)'
+  types:
+  - name: a
+    summary: O primeiro valor a ser considerado.
+    isPrimitive: true
+    uid: Bool
+  - name: b
+    summary: O segundo valor a ser considerado.
+    isPrimitive: true
+    uid: Bool
+output:
+  content: Bool
+  types:
+  - summary: '`true` se e somente se `a` ou `b` forem `true`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235163"

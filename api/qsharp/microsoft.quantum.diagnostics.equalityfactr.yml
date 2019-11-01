@@ -1,0 +1,33 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.diagnostics.equalityfactr
+name: EqualityFactR
+type: function
+namespace: Microsoft.Quantum.Diagnostics
+summary: Declara que uma variável de resultado clássico tem o valor esperado.
+syntax: 'function EqualityFactR (actual : Result, expected : Result, message : String) : Unit'
+input:
+  content: '(actual : Result, expected : Result, message : String)'
+  types:
+  - name: actual
+    summary: A variável a ser verificada.
+    isPrimitive: true
+    uid: Result
+  - name: expected
+    summary: O valor esperado.
+    isPrimitive: true
+    uid: Result
+  - name: message
+    summary: Cadeia de caracteres de mensagem de falha a ser usada quando a asserção é disparada.
+    isPrimitive: true
+    uid: String
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+ms.openlocfilehash: fa2914770e2b2963b4f180a3fb6376a7c42fa4e8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226816"

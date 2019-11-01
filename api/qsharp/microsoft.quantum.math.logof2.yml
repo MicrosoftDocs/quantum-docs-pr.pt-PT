@@ -1,0 +1,22 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.logof2
+name: LogOf2
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retorna o logaritmo natural de 2.
+syntax: 'function LogOf2 () : Double'
+input:
+  content: ()
+  types: []
+output:
+  content: Double
+  types:
+  - summary: Retorna um `Double` igual a $0.6931471805599453 $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 4a2bbd6adff643a5240fd280a020be076190eed1
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232511"

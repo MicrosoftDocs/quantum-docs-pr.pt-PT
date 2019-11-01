@@ -1,0 +1,61 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.extensions.convert
+name: Microsoft. Quantum. Extensions. Convert
+summary: " # <a name=\"summary\"></a>Resumo\n Essas são algumas das funções do namespace System. Convert do .NET CLR que são relevantes no sistema do tipo Q #.\n\n # <a name=\"remarks\"></a>Observações\n Se houver várias versões da função para tipos bool, int e Double, as funções correspondentes terão o sufixo B, I e D."
+functions:
+- uid: microsoft.quantum.extensions.convert.biginttobools
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.bigintasboolarray".
+- uid: microsoft.quantum.extensions.convert.boolstobigint
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.boolarrayasbigint".
+- uid: microsoft.quantum.extensions.convert.pauliarraytoint
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.pauliarrayasint".
+- uid: microsoft.quantum.extensions.convert.tobigint
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.intasbigint".
+- uid: microsoft.quantum.extensions.convert.todouble
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.intasdouble".
+- uid: microsoft.quantum.extensions.convert.tostringb
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.boolasstring".
+- uid: microsoft.quantum.extensions.convert.tostringd
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.doubleasstring".
+- uid: microsoft.quantum.extensions.convert.tostringdformat
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.doubleasstringwithformat".
+- uid: microsoft.quantum.extensions.convert.tostringi
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.intasstring".
+- uid: microsoft.quantum.extensions.convert.tostringiformat
+  summary: >-
+    > [!WARNING]
+
+    > Preterido, use @"microsoft.quantum.convert.intasstringwithformat".
+ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73056491"

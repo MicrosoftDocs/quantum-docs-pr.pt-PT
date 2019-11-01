@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.discreteoracle
+name: DiscreteOracle
+type: newtype
+namespace: Microsoft.Quantum.Oracles
+summary: >-
+  Representa um Oracle em tempo discreto.
+
+
+  Este é um Oracle que implementa $U ^ m $ para uma operação fixa $U $ e um inteiro não negativo $m $.
+syntax: newtype DiscreteOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 82ed7bf79d67411c03a89c9ddcb4aa311d8c04b2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73231083"

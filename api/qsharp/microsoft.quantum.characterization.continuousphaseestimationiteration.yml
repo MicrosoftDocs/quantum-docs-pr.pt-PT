@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.continuousphaseestimationiteration
+name: ContinuousPhaseEstimationIteration
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativa (controlado de forma clássica) usando potências reais arbitrárias de um Oracle unitário.
+syntax: 'operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
+input:
+  content: '(oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
+  types:
+  - name: oracle
+    summary: Operação agindo em um Double $t $ e um registro, de modo que $U ^ t $ seja aplicado ao registro fornecido, em que $U $ é o unitário cuja fase deve ser estimada e onde $t $ é o número inteiro de energia concedido ao Oracle
+    uid: microsoft.quantum.oracles.continuousoracle
+  - name: time
+    summary: Número de vezes para aplicar o Oracle unitário fornecido.
+    isPrimitive: true
+    uid: Double
+  - name: theta
+    summary: Ângulo pelo qual inverter a fase no qubit de controle antes de agir no estado de destino.
+    isPrimitive: true
+    uid: Double
+  - name: targetState
+    summary: Registro de estado acionado pelo Oracle unitário determinado.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: controlQubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 21fcfda2373e145d9565a73af5a89b7fe061d4f8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229247"

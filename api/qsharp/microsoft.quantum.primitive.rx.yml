@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.primitive.rx
+name: RX
+type: operation
+namespace: Microsoft.Quantum.Primitive
+summary: >-
+  > [!WARNING]
+
+  > Preterido
+
+
+  Use @"microsoft.quantum.intrinsic.rx".
+syntax: 'operation Rx (theta : Double, qubit : Qubit) : Unit'
+input:
+  content: '(teta: Double, qubit: qubit)'
+  types:
+  - name: teta
+    isPrimitive: true
+    uid: Double
+  - name: qubit
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unidade
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 45e8506eaee901409fdc8c5858e474e7482e8165
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066375"

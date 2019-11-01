@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.pnormalized
+name: PNormalized
+type: function
+namespace: Microsoft.Quantum.Math
+summary: >-
+  Normaliza um vetor de `Double`s no `L(p)` normal.
+
+
+  Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna uma matriz em que todos os elementos são divididos pelo $p $-norma $\|x\|_p $.
+syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
+input:
+  content: '(p: Double, matriz: Double [])'
+  types:
+  - name: DTI
+    summary: O expoente $p $ no $p $-normal.
+    isPrimitive: true
+    uid: Double
+  - name: array
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Double []
+  types:
+  - summary: A matriz $x $ normalizada pelo $p $-normal $\|x\|_p $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+seeAlso:
+- pnorm
+ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067293"

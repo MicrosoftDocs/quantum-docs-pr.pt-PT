@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+name: StateOracleFromDeterministicStateOracle
+type: function
+namespace: Microsoft.Quantum.Oracles
+summary: Converte um Oracle do tipo `DeterministicStateOracle` em `StateOracle`.
+syntax: 'function StateOracleFromDeterministicStateOracle (deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle) : Microsoft.Quantum.Oracles.StateOracle'
+input:
+  content: '(deterministicStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle)'
+  types:
+  - name: deterministicStateOracle
+    summary: Uma preparação de estado Oracle $A $ do tipo `DeterministicStateOracle`.
+    uid: microsoft.quantum.oracles.deterministicstateoracle
+output:
+  content: Microsoft.Quantum.Oracles.StateOracle
+  types:
+  - summary: A mesma preparação de estado Oracle $A $, mas agora do tipo `StateOracle`. Observe que o índice de sinalizador nesse `StateOracle` é uma variável fictícia e não tem nenhum efeito.
+    uid: microsoft.quantum.oracles.stateoracle
+seeAlso:
+- microsoft.quantum.canon.deterministicstateoracle
+- microsoft.quantum.canon.stateoracle
+ms.openlocfilehash: 681d5a8a132819fa1b0c1af049418123d21ecec4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228210"

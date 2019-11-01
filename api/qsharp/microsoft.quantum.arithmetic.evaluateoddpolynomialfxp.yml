@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
+name: EvaluateOddPolynomialFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Avalia um polinomial ímpar em uma representação de ponto fixo.
+syntax: 'operation EvaluateOddPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: coefficients
+    summary: Coeficientes do polinomial estranho como uma matriz dupla, ou seja, a matriz $ [a_0, a_1,..., a_k] $ para o $P polinomial ímpar (x) = a_0 x + a_1 x ^ 3 + \cdots + a_k x ^ {2K + 1} $.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+  - name: fpx
+    summary: Número de ponto fixo de entrada para o qual avaliar o polinomial.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+  - name: result
+    summary: O número de ponto fixo de saída que manterá P (x). Deve estar no estado $ \ket{0}$ inicialmente.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 3ae6ab137b2c257a98b0ec777c19212d8732f619
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73219115"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytopartitiona
+name: ApplyToPartitionA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Applies a pair of operations to a given partition of a register into two parts.
+
+  The modifier `A` indicates that the operation is adjointable.
+syntax: 'operation ApplyToPartitionA (op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
+input:
+  content: '(op : ((Qubit[], Qubit[]) => Unit is Adj), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
+  types:
+  - name: op
+    summary: The pair of operations to be applied to the given partition.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: numberOfQubitsToFirstArgument
+    summary: >-
+      Number of qubits from target to put into the first part of the partition.
+
+      O qubits restante constitui a segunda parte da partição.
+    isPrimitive: true
+    uid: Int
+  - name: target
+    summary: Um registro de qubits que estão sendo particionados e operados pela determinada operação.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytopartition
+ms.openlocfilehash: 3f61db3a56581f7fbabe245deac7a7b47f510c09
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73213046"

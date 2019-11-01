@@ -1,0 +1,27 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.invert2ssi
+name: Invert2sSI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Inverte um complemento de módulo de inteiro 2 específico.
+syntax: 'operation Invert2sSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
+  types:
+  - name: xs
+    summary: o número inteiro com sinal de n-bit (SignedLittleEndian) será invertido no complemento do módulo 2.
+    uid: microsoft.quantum.arithmetic.signedlittleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: a850f62055280d43b691d12ef5ab7ef6491d5efb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218860"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.equali
+name: EqualI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retorna true se e somente se duas entradas forem iguais.
+remarks: >-
+  Os itens a seguir são equivalentes:
+
+
+  ```Q#
+
+  let cond = a == b;
+
+  let cond = EqualI(a, b);
+
+  ```
+syntax: 'function EqualI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: O primeiro valor a ser comparado.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: O segundo valor a ser comparado.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: '`true` se `a` for igual a `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: 34e1207e0bf4da6168d1f21b41573b3414063dc6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233140"

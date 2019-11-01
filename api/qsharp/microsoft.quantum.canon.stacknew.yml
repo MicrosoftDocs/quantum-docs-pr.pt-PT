@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.stacknew
+name: StackNew
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: Cria um novo <xref:microsoft.quantum.canon.resultstack> vazio com a capacidade especificada.
+syntax: 'function StackNew (size : Int) : Microsoft.Quantum.Canon.ResultStack'
+input:
+  content: '(size : Int)'
+  types:
+  - name: size
+    summary: A capacidade da nova pilha.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Canon.ResultStack
+  types:
+  - summary: Um novo `ResultStack` com capacidade `size` e comprimento 0.
+    uid: microsoft.quantum.canon.resultstack
+ms.openlocfilehash: 4ce9db8cdae4d6c7813a4d5cfbd04e1b8d25cfaf
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222192"

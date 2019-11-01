@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.greaterthanorequali
+name: GreaterThanOrEqualI
+type: function
+namespace: Microsoft.Quantum.Logical
+summary: Retorna true se e somente se um número for maior ou igual a outro número.
+remarks: >-
+  Os itens a seguir são equivalentes:
+
+
+  ```Q#
+
+  let cond = a >= b;
+
+  let cond = GreaterThanOrEqualI(a, b);
+
+  ```
+syntax: 'function GreaterThanOrEqualI (a : Int, b : Int) : Bool'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: O primeiro valor a ser comparado.
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: O segundo valor a ser comparado.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - summary: '`true` se `a` for maior ou igual a `b`.'
+    isPrimitive: true
+    uid: Bool
+ms.openlocfilehash: d98611131760ce02eb9f5a6cffe3b6ca5617b7f2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73225592"

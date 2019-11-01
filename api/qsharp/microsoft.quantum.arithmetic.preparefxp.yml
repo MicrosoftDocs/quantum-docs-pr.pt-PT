@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.preparefxp
+name: PrepareFxP
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Inicializar um número de ponto fixo Quantum para uma constante clássica.
+syntax: 'operation PrepareFxP (constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
+input:
+  content: '(constant : Double, fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
+  types:
+  - name: constant
+    summary: Constante na qual inicializar o número de ponto fixo Quantum.
+    isPrimitive: true
+    uid: Double
+  - name: fp
+    summary: Número de ponto fixo (do tipo FixedPoint) a ser inicializado.
+    uid: microsoft.quantum.arithmetic.fixedpoint
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 523b4d8a40d5d1625be41a9dd10db56ef45b539d
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214780"

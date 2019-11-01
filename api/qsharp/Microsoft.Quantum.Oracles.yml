@@ -1,0 +1,80 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.oracles
+name: Microsoft.Quantum.Oracles
+summary: " # <a name=\"summary\"></a>Resumo\n Esses namespaces fornecem tipos definidos pelo usuário para decorar vários tipos de Oracle por seu uso pretendido em algoritmos Quantum, como estimativa de fase e amplificação de amplitude."
+functions:
+- uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
+  summary: Converte um Oracle do tipo `StateOracle` em `DeterministicStateOracle`.
+- uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
+  summary: Combina os Oracle `DeterministicStateOracle` e `ObliviousOracle`.
+- uid: microsoft.quantum.oracles.oracletodiscrete
+  summary: Dada uma operação que representa uma "caixa preta" da Oracle, retorna um Oracle de tempo discreto que representa a "caixa preta" da Oracle repetida várias vezes.
+- uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
+  summary: >-
+    Constrói a reflexão sobre um determinado estado de um Oracle.
+
+
+    Considerando o Oracle $O $ do tipo <xref:microsoft.quantum.oracles.deterministicstateoracle>, o resultado dessa função é uma reflexão em relação ao estado $ \ket{\psi} $ em que $O \ket{0} = \ket{\psi} $.
+- uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
+  summary: Converte um Oracle do tipo `DeterministicStateOracle` em `StateOracle`.
+newtypes:
+- uid: microsoft.quantum.oracles.continuousoracle
+  summary: >-
+    Representa um Oracle de tempo contínuo.
+
+
+    Esse é um Oracle que implementa $U (\delta t): \ket{\psi (t)} \mapsto \ket{\psi (t + \delta t)} $ para todos os horários $t $, em que $U $ é uma operação fixa e em que $ \delta t $ é um número real não negativo.
+- uid: microsoft.quantum.oracles.deterministicstateoracle
+  summary: >-
+    Representa um Oracle para preparação de estado determinística.
+
+
+    A entrada para o Oracle $O $ é:
+
+
+    - O registro que armazenará o estado de Quantum desejado $ \ket{\psi}\_s $.
+- uid: microsoft.quantum.oracles.discreteoracle
+  summary: >-
+    Representa um Oracle em tempo discreto.
+
+
+    Este é um Oracle que implementa $U ^ m $ para uma operação fixa $U $ e um inteiro não negativo $m $.
+- uid: microsoft.quantum.oracles.obliviousoracle
+  summary: >-
+    Representa um Oracle para amplificação de amplitude de alheios.
+
+
+    As entradas para o Oracle $O $ são:
+
+
+    - O ancilla registra $a $ que $O $ age.
+
+    - O sistema registra $s $ em que o unitário desejado $U $ é aplicado, post-Selected no registro $a $ estando no estado $ \ket{t}\_$.
+- uid: microsoft.quantum.oracles.reflectionoracle
+  summary: >-
+    Representa uma reflexão do Oracle.
+
+
+    Uma reflexão do Oracle, $O $, tem entradas:
+
+
+    - A fase $ \phi $ pela qual girar o subespaço refletido.
+
+    - O qubit se registra no qual executar a reflexão determinada.
+- uid: microsoft.quantum.oracles.stateoracle
+  summary: >-
+    Representa um Oracle para preparação de estado.
+
+
+    As entradas para o Oracle $O $ são:
+
+
+    - Um inteiro que indexa o sinalizador qubit $f $.
+
+    - O registro do sistema $s $, que armazenará o estado de Quantum desejado $ \ket{\psi}\_s $.
+ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216106"

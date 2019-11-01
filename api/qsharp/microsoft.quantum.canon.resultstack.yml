@@ -1,0 +1,16 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.resultstack
+name: ResultStack
+type: newtype
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Uma pilha último a entrar, primeiro a sair de variáveis de `Result`.
+
+  A pilha consiste em uma capacidade de inteiro, um ponteiro de pilha e uma `Result` matriz.
+syntax: newtype ResultStack = (Int, Int, Result[]);
+ms.openlocfilehash: 4a0ba6c9e5e4489fd7a28d33df7d179268d46efe
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222379"

@@ -1,0 +1,67 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applymulticontrolledc
+name: ApplyMultiControlledC
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma versão controlada de multiplicação de uma operação controlada individualmente.
+
+  O modificador `C` indica que a operação de qubit única é controlável.
+remarks: >-
+  Esta operação usa apenas qubits limpo ancilla.
+
+
+  Para obter a explicação e o diagrama de circuito, consulte a Figura 4,10, seção 4,3 em Nielsen & Chuang
+syntax: 'operation ApplyMultiControlledC (singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
+references: '- [*Michael A. Nielsen, Julio L. Chuang*, computação Quantum e informações de Quantum](http://doi.org/10.1017/CBO9780511976667)'
+input:
+  content: '(singlyControlledOp : (Qubit[] => Unit), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
+  types:
+  - name: singlyControlledOp
+    summary: >-
+      Uma operação controlada em um único qubit.
+
+      Supõe-se que o primeiro qubit no argumento da operação seja um controle e que o resto seja de destino qubits.
+
+      `ApplyMultiControlled` sempre chama `singlyControlledOp` com um argumento de comprimento pelo menos 1.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: ccnot
+    summary: A porta controlada por controlado não usada para a construção.
+    uid: microsoft.quantum.canon.ccnotop
+  - name: controls
+    summary: >-
+      O qubits que `singlyControlledOp` deve ser controlado.
+
+      O comprimento de `controls` deve ser pelo menos 1.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targets
+    summary: O qubits de destino com o qual `singlyControlledOp` atua.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applymulticontrolledca
+ms.openlocfilehash: 0c6f30505081f3b5f449a72a10bac89815c3bf14
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217347"

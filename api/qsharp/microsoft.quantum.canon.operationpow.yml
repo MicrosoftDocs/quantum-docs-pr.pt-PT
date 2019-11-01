@@ -1,0 +1,55 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.operationpow
+name: OperationPow
+type: function
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Gera uma operação para uma potência.
+
+
+  Ou seja, dada uma operação que representa um portão $U $, retorna uma nova operação $U ^ m $ para um Power $m $.
+syntax: "function OperationPow (oracle : ('T => Unit), power : Int) : ('T => Unit)"
+input:
+  content: "(oracle : ('T => Unit), power : Int)"
+  types:
+  - name: oracle
+    summary: Uma operação $U $ que representa o portão a ser repetido.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: power
+    summary: O número de vezes que $U $ será repetido.
+    isPrimitive: true
+    uid: Int
+output:
+  content: ('T => Unit)
+  types:
+  - summary: Uma nova operação representando $U ^ m $, em que $m = \texttt{Power} $.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo da operação a ser alimentada.
+seeAlso:
+- microsoft.quantum.canon.operationpowc
+- microsoft.quantum.canon.operationpowa
+- microsoft.quantum.canon.operationpowca
+ms.openlocfilehash: 01b62197b0da18169a3a8d7a5e3c24e3169cfeff
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73222668"

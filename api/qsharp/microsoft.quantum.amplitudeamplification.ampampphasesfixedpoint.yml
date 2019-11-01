@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.ampampphasesfixedpoint
+name: AmpAmpPhasesFixedPoint
+type: function
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Computa fases de reflexo parcial para amplificação de amplitude de ponto fixo.
+syntax: 'function AmpAmpPhasesFixedPoint (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
+references: >-
+  Usamos as fases em "amplificação de amplitude de ponto fixo com um número ideal de consultas"
+
+
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) Consulte também "metodologia de Gates de Quantum de composição"
+
+  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) para fases no formato de `RotationPhases`.
+input:
+  content: '(nQueries : Int, successMin : Double)'
+  types:
+  - name: nQueries
+    summary: Número de consultas à preparação do estado Oracle. Deve ser um inteiro ímpar.
+    isPrimitive: true
+    uid: Int
+  - name: successMin
+    summary: Probabilidade de êxito mínima de destino.
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
+  types:
+  - summary: Matriz de fases que pode ser usada na implementação do algoritmo Quantum da amplitude de ponto fixo.
+    uid: microsoft.quantum.amplitudeamplification.reflectionphases
+ms.openlocfilehash: 0dc2c9b18998bac65cd746b5c4065a09a990ef13
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215698"

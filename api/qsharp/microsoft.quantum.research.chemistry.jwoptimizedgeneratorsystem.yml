@@ -1,0 +1,24 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.jwoptimizedgeneratorsystem
+name: JWOptimizedGeneratorSystem
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Converte um Hamiltonian descrito por `JWOptimizedHTerms` em uma `GeneratorSystem` expressa em termos da Convenção de `GeneratorIndex` definida neste arquivo.
+syntax: 'function JWOptimizedGeneratorSystem (data : Microsoft.Quantum.Chemistry.JordanWigner.JWOptimizedHTerms) : Microsoft.Quantum.Simulation.GeneratorSystem'
+input:
+  content: '(data: Microsoft. Quantum. química. JordanWigner. JWOptimizedHTerms)'
+  types:
+  - name: dado
+    summary: Descrição de Hamiltonian no formato `JWOptimizedHTerms`.
+    uid: microsoft.quantum.chemistry.jordanwigner.jwoptimizedhterms
+output:
+  content: Microsoft. Quantum. Simulation. GeneratorSystem
+  types:
+  - summary: Representação de Hamiltonian como `GeneratorSystem`.
+    uid: microsoft.quantum.simulation.generatorsystem
+ms.openlocfilehash: 5f5037767f9737391f3fd07d3dd0e330f8995f56
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066171"

@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.m
+name: M
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Executa uma medida de um único qubit na base do Pauli $Z $.
+
+
+  O resultado da saída é fornecido pela distribuição \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}.
+
+  \end{align}
+remarks: >-
+  Equivalente a:
+
+
+  ```qsharp
+
+  Measure([PauliZ], [qubit]);
+
+  ```
+syntax: 'operation M (qubit : Qubit) : Result'
+input:
+  content: '(qubit : Qubit)'
+  types:
+  - name: qubit
+    summary: Qubit a ser medido.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Result
+  types:
+  - summary: '`Zero` se $ + $1 eigenvalue for observado e `One` se o eigenvalue $-$1 for observado.'
+    isPrimitive: true
+    uid: Result
+ms.openlocfilehash: 842035790ecd03df97f9ad583b049121681b4f2b
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73234143"

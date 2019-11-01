@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.errorcorrection.recovercss
+name: RecoverCSS
+type: operation
+namespace: Microsoft.Quantum.ErrorCorrection
+summary: Executa uma única rodada de correção de erro por um código Quantum descrito por um tipo de `CSS`.
+syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
+input:
+  content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
+  types:
+  - name: code
+    summary: Um código do quantum de erro de CSS-corrigindo o pacote de códigos como um `CSS` tipo descreve a codificação e a decodificação de dados Quantum e como os síndromes de erro devem ser medidos.
+    uid: microsoft.quantum.errorcorrection.css
+  - name: fnX
+    summary: Um `RecoveryFn` que mapeia cada síndrome de $X $ Error para as operações de `Pauli[]` que corrigem o erro detectado.
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+  - name: fnZ
+    summary: Um `RecoveryFn` que mapeia cada síndrome de $Z $ Error para as operações de `Pauli[]` que corrigem o erro detectado.
+    uid: microsoft.quantum.errorcorrection.recoveryfn
+  - name: logicalRegister
+    summary: Uma matriz de qubits onde o código de estabilizador é definido.
+    uid: microsoft.quantum.errorcorrection.logicalregister
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- microsoft.quantum.canon.css
+- microsoft.quantum.canon.recoveryfn
+- microsoft.quantum.canon.logicalregister
+ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220271"

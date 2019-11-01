@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.foreach
+name: ForEach
+type: operation
+namespace: Microsoft.Quantum.Arrays
+summary: Dada uma matriz e uma operação que é definida para os elementos da matriz, retorna uma nova matriz que consiste nas imagens da matriz original sob a operação.
+remarks: "A operação é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma operação `action : 'T -> 'U` podemos mapear os elementos da matriz e produzir uma nova matriz do tipo `'U[]`."
+syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
+input:
+  content: "(action : ('T => 'U), array : 'T[])"
+  types:
+  - name: action
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - uid: "'U"
+        isLocal: true
+  - name: array
+    summary: Uma matriz de elementos em `'T`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'U[]"
+  types:
+  - summary: Uma matriz `'U[]` de elementos que são mapeados pela operação `action`.
+    isArray: true
+    uid: "'U"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: O tipo de elementos de `array`.
+- uid: "'U"
+  summary: O tipo de resultado da operação de `action`.
+ms.openlocfilehash: f97e01504142681f34772cc84d6e598507d7d734
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218333"

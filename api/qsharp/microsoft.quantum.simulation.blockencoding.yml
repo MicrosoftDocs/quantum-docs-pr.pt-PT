@@ -1,0 +1,20 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.blockencoding
+name: blockEncoding
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Representa um unitário em que um operador arbitrário de interesse é codificado no bloco superior esquerdo.
+
+
+  Ou seja, um `BlockEncoding` é um $U unitário $ em que um operador arbitrário $H $ de interesse que age no registro do sistema `s` é codificado no bloco superior esquerdo correspondente ao estado auxiliar $ \ket{0}_A $. Isto é
+
+
+  $ $ \begin{align} (\bra{0}_A \ OTimes I_s) U (\ket{0}_A \ OTimes I_s) = H \end{align} $ $.
+syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
+ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066035"

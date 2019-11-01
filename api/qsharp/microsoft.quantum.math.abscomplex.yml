@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.abscomplex
+name: AbsComplex
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retorna o valor absoluto de um número complexo de `Complex`de tipos.
+syntax: 'function AbsComplex (input : Microsoft.Quantum.Math.Complex) : Double'
+input:
+  content: '(input : Microsoft.Quantum.Math.Complex)'
+  types:
+  - name: input
+    summary: Número complexo $c = x + i y $.
+    uid: microsoft.quantum.math.complex
+output:
+  content: Double
+  types:
+  - summary: Valor absoluto $ | c | = \sqrt{x ^ 2 + y ^ 2} $.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 75592bd683679e49ca453ab3c93954c963d536b9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73235078"

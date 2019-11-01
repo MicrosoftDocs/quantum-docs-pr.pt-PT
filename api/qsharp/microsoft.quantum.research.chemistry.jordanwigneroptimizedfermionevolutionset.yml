@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
+name: JordanWignerOptimizedFermionEvolutionSet
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Representa um gerador dinâmico como um conjunto de Gates e uma expansão na base Pauli.
+syntax: 'function JordanWignerOptimizedFermionEvolutionSet (parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionSet'
+input:
+  content: '(parityQubit : Qubit)'
+  types:
+  - name: parityQubit
+    summary: Qubit que determina o sinal de tempo de evolução.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft. Quantum. Simulation. Evolucionárioset
+  types:
+  - summary: Um `EvolutionSet` que mapeia um `GeneratorIndex` para a base JWOptimized para um ' EvolutionUnitary.
+    uid: microsoft.quantum.simulation.evolutionset
+ms.openlocfilehash: 7d39228c91995e38423e2b3b5894952ab3bfa533
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73066205"

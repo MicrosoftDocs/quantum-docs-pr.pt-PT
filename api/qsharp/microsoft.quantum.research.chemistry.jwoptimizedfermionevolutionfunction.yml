@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
+name: JWOptimizedFermionEvolutionFunction
+type: function
+namespace: Microsoft.Quantum.Research.Chemistry
+summary: Representa um gerador dinâmico como um conjunto de Gates e uma expansão na base JWOptimized.
+syntax: 'function JWOptimizedFermionEvolutionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionUnitary'
+input:
+  content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, parityQubit : Qubit)'
+  types:
+  - name: generatorIndex
+    summary: Um índice de gerador a ser representado como uma evolução unitário na base JWOptimized.
+    uid: microsoft.quantum.simulation.generatorindex
+  - name: parityQubit
+    summary: Qubit que determina o sinal de tempo de evolução.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Microsoft.Quantum.Simulation.EvolutionUnitary
+  types:
+  - summary: Um `EvolutionUnitary` representando a evolução de tempo pelo termo referenciado em ' generatorIndex.
+    uid: microsoft.quantum.simulation.evolutionunitary
+ms.openlocfilehash: 0e85f9be6001d71980a442ebbc04b88ba4240166
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228023"

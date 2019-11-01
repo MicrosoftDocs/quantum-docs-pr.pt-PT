@@ -1,0 +1,38 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
+name: MeasurementOperators
+type: function
+namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+summary: Computa todos os operadores de medida necessários para computar a expectativa de um termo Wigner da Jordânia.
+syntax: 'function MeasurementOperators (nQubits : Int, indices : Int[], termType : Int) : Pauli[][]'
+input:
+  content: '(nQubits : Int, indices : Int[], termType : Int)'
+  types:
+  - name: nQubits
+    summary: O número de qubits necessárias para simular o sistema molecular.
+    isPrimitive: true
+    uid: Int
+  - name: indices
+    summary: Uma matriz que contém os índices do qubit cada operador Pauli é aplicado a.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: termType
+    summary: O tipo do termo Jordânia-Wigner.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Pauli[][]
+  types:
+  - summary: Uma matriz de operadores de medida (cada um sendo uma matriz de Pauli).
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Pauli
+ms.openlocfilehash: e22af035b43d8b3ebeea22c8c4bfa0f7289ab82c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73227530"

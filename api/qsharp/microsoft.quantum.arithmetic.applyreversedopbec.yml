@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.applyreversedopbec
+name: ApplyReversedOpBEC
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: Aplica uma operação que usa a entrada big-endian em uma codificação de registro de um inteiro sem sinal usando o formato little-endian.
+syntax: 'operation ApplyReversedOpBEC (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(op: (Microsoft. Quantum. aritmético. BigEndian = > unidade é CTL), Register: Microsoft. Quantum. aritmético. LittleEndian)'
+  types:
+  - name: parar
+    summary: Operação que atua em um registro big-endian.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Controlled
+  - name: Registr
+    summary: Um registro little-endian a ser transformado.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unidade
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Controlled
+seeAlso:
+- applyreversedopbe
+- applyreversedopbea
+- applyreversedopbeca
+ms.openlocfilehash: fcf4110845e43426b7f2e1ec882bce75159ef789
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057064"

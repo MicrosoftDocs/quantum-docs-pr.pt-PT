@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
+name: MultiplyAndAddByModularInteger
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Executa uma multiplicação modular e adicionar por constantes de inteiro em um registro de qubit.
+
+
+  Implementa o MAP $ $ \begin{align} \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N} \end{align} $ $ para um determinado módulo $N $, o multiplicador constante $a $ e soma $y $.
+remarks: >-
+  - Para o diagrama de circuito e a explicação, consulte a Figura 6 na [página 7 de arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
+
+  - Esta operação corresponde a CMULT (a) MOD (N) em [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+syntax: 'operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: constMultiplier
+    isPrimitive: true
+    uid: Int
+  - name: modulus
+    summary: O módulo $N $ que adição e multiplicação são tomadas em relação a.
+    isPrimitive: true
+    uid: Int
+  - name: multiplier
+    summary: Um registro Quantum que representa um inteiro sem sinal cujo valor deve ser adicionado a cada rótulo de estado base de `summand`.
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: summand
+    summary: Um registro Quantum que representa um inteiro não assinado para usar como o destino para esta operação.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 6f445f584af1c05266be8e68a4298d73376cda27
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218775"

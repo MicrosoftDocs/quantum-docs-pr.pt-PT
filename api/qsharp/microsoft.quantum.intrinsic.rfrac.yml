@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.rfrac
+name: RFrac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica uma rotação sobre o eixo Pauli fornecido por um ângulo especificado como uma fração dyadic.
+
+
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} em que $ \mu na \{I, X, Y, Z\}$.
+
+
+  > [!WARNING]
+
+  > Esta operação usa a Convenção de sinal **oposta** da @"microsoft.quantum.intrinsic.r".
+remarks: >-
+  Equivalente a:
+
+
+  ```qsharp
+
+  // PI() is a Q# function that returns an approximation of π.
+
+  R(pauli, -PI() * IntAsDouble(numerator) / IntAsDouble(2 ^ (power - 1)), qubit);
+
+  ```
+syntax: 'operation RFrac (pauli : Pauli, numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: pauli
+    summary: O operador Pauli deve ser exponenciação para formar a rotação.
+    isPrimitive: true
+    uid: Pauli
+  - name: numerator
+    summary: O numerador na representação de fração dyadic do ângulo pelo qual o qubit deve ser girado.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Potência de dois especificando o denominador do ângulo pelo qual o qubit deve ser girado.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: Qubit ao qual a portão deve ser aplicada.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 10795932b7057ccf58d2219208af2750eff0e363
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73216497"

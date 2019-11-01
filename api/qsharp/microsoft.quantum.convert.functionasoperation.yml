@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.convert.functionasoperation
+name: FunctionAsOperation
+type: function
+namespace: Microsoft.Quantum.Convert
+summary: >-
+  Converte funções em operações.
+
+
+  Dada uma função, retorna uma operação que chama essa função e que não faz mais nada.
+remarks: Isso é útil principalmente para passar funções a funções ou operações que esperam uma operação como entrada.
+syntax: "function FunctionAsOperation (fn : ('Input -> 'Output)) : ('Input => 'Output)"
+input:
+  content: "(fn : ('Input -> 'Output))"
+  types:
+  - name: fn
+    summary: Uma função a ser convertida em uma operação.
+    isFunction: true
+    input:
+      types:
+      - uid: "'Input"
+        isLocal: true
+    output:
+      types:
+      - uid: "'Output"
+        isLocal: true
+output:
+  content: ('Input => 'Output)
+  types:
+  - summary: Uma operação `op` de modo que `op(input)` seja idêntica à `fn(input)` para todas as `input`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'Input"
+        isLocal: true
+    output:
+      types:
+      - uid: "'Output"
+        isLocal: true
+typeParameters:
+- uid: "'Input"
+  summary: Tipo de entrada da função a ser convertida.
+- uid: "'Output"
+  summary: Tipo de saída da função a ser convertida.
+ms.openlocfilehash: a58e2fc4f9c8f931b4020cb06abebdd94c642bd9
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73220390"

@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.estimatefrequencya
+name: EstimateFrequencyA
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Devido a uma preparação que é de adjointable e de medição, o estima a frequência com a qual essa medida é realizada com sucesso (retorna `Zero`) executando um determinado número de avaliações.
+remarks: Para operações de adjointable, algumas suposições podem ser feitas, como chamar a operação, preparará o qubits para exatamente o mesmo estado, que permite que os computadores de destino façam algumas otimizações de desempenho.
+syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
+input:
+  content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
+  types:
+  - name: preparation
+    summary: Uma operação de adjointable $P $ que prepara um determinado estado $ \rho $ em seu registro de entrada.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: measurement
+    summary: Uma operação $M $ representa a medida de interesse.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Result
+  - name: nQubits
+    summary: O número de qubits em que cada ação de preparação e medição atua.
+    isPrimitive: true
+    uid: Int
+  - name: nMeasurements
+    summary: O número de vezes que a medida deve ser executada para estimar a frequência de interesse.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double
+  types:
+  - summary: Uma estimativa de $ \hat{p} $ da frequência com a qual $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retorna `Zero`, obtida usando o estimador binomial não polarizado $ \hat{p} = n\_{\uparrow}/n\_{\Text{Measurements}} $, em que $n\_{\ upseta} $ é o número de `Zero` resultados observados.
+    isPrimitive: true
+    uid: Double
+ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229179"

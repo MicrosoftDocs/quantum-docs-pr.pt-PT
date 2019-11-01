@@ -1,0 +1,48 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.preparechoistate
+name: PrepareChoiState
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: Prepara o estado Choi – Jamiłkowski para uma determinada operação em determinados registros de referência e destino.
+remarks: 'O \Lambda (Choi-Jamiłkowski State $J) $ de um processo Quantum é definido como $ $ \begin{align} J (\Lambda) \mathrel{: =} (\boldone \otimes \Lambda) (| \boldone\rangle\!\rangle\langle\!\langle\boldone |), \end{Align} $ $, em que $ | X\rangle\!\rangle $ é a *vetorização* de uma matriz $X $ na Convenção de empilhamento de coluna. Aprender uma descrição clássica desse Estado fornece informações completas sobre o efeito de $ \Lambda $ agindo em Estados de entrada arbitrários e forma a base do *processo Quantum tomography*.'
+syntax: 'operation PrepareChoiState (op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[]) : Unit'
+input:
+  content: '(op : (Qubit[] => Unit), reference : Qubit[], target : Qubit[])'
+  types:
+  - name: op
+    summary: A operação $ \Lambda $ cujo Choi de estado $J (\Lambda)/2 ^ N $ deve ser preparada, em que $N $ é o número de qubits em que `op` atua.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: reference
+    summary: Um registro de qubits a partir do estado $ \ket{00\cdots 0} $ a ser usado como uma referência para a ação de `op`.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Um registro de qubits inicialmente no estado $ \ket{00\cdots 0} $ no qual `op` deve ser aplicado.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+seeAlso:
+- preparechoistatea
+- preparechoistatec
+- preparechoistateca
+ms.openlocfilehash: f1f0ea6233d13ce1850b3b8dfb210ab6b0e378f8
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73228125"

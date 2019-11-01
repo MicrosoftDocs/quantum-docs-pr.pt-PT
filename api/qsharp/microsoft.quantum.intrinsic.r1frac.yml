@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.intrinsic.r1frac
+name: R1Frac
+type: operation
+namespace: Microsoft.Quantum.Intrinsic
+summary: >-
+  Aplica uma rotação sobre o estado $ \ket{1}$ por um ângulo especificado como uma fração dyadic.
+
+
+  \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
+
+  \end{align}
+
+
+  > [!WARNING]
+
+  > Esta operação usa a Convenção de sinal **oposta** da @"microsoft.quantum.intrinsic.r"e não inclui o fator de $1/2 $ incluído por @"microsoft.quantum.intrinsic.r1".
+remarks: >-
+  Equivalente a:
+
+
+  ```qsharp
+
+  RFrac(PauliZ, -numerator, denominator + 1, qubit);
+
+  RFrac(PauliI, numerator, denominator + 1, qubit);
+
+  ```
+syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
+input:
+  content: '(numerator : Int, power : Int, qubit : Qubit)'
+  types:
+  - name: numerator
+    summary: O numerador na representação de fração dyadic do ângulo pelo qual o qubit deve ser girado.
+    isPrimitive: true
+    uid: Int
+  - name: power
+    summary: Potência de dois especificando o denominador do ângulo pelo qual o qubit deve ser girado.
+    isPrimitive: true
+    uid: Int
+  - name: qubit
+    summary: Qubit ao qual a portão deve ser aplicada.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73233990"

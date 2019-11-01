@@ -1,0 +1,69 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyifelseb
+name: ApplyIfElseB
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma das duas operações, dependendo do valor de um bit clássico.
+
+
+  Dado um `bit`de bits, o aplica a operação `trueOp` com `trueInput` como sua entrada quando `bit` é `true`e aplica `falseOp(falseInput)` quando `bit` é `false`.
+syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
+input:
+  content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
+  types:
+  - name: bit
+    isPrimitive: true
+    uid: Bool
+  - name: trueOp
+    summary: A operação a ser aplicada quando `bit` for `true`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: trueInput
+    summary: A entrada a ser fornecida para `trueOp` quando `bit` é `true`.
+    uid: "'T"
+    isLocal: true
+  - name: falseOp
+    summary: A operação a ser aplicada quando `bit` for `false`.
+    isOperation: true
+    input:
+      types:
+      - uid: "'U"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: falseInput
+    summary: A entrada a ser fornecida para `falseOp` quando `bit` é `false`.
+    uid: "'U"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo de entrada da operação `trueOp` ser aplicado condicionalmente.
+- uid: "'U"
+  summary: O tipo de entrada da operação `falseOp` ser aplicado condicionalmente.
+seeAlso:
+- microsoft.quantum.canon.applyifzero
+- microsoft.quantum.canon.applyifone
+- microsoft.quantum.canon.applyifelserc
+- microsoft.quantum.canon.applyifelsera
+- microsoft.quantum.canon.applyifelserca
+ms.openlocfilehash: 023608bfe390acff37363fde3dac71ab03eb3bb2
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217483"

@@ -1,0 +1,35 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.characterization.robustphaseestimation
+name: RobustPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Characterization
+summary: Executa o algoritmo de estimativa de fase de Quantum não iterativo robusto para um determinado `U` e eigenstate da Oracle e fornece uma única estimativa de valor real da fase com dimensionamento de variação no limite de Heisenberg.
+remarks: No limite de um grande número de consultas, os limites inferiores de Cramer-Rao para o desvio padrão da estimativa de $ \phi $ satisfazem $ \sigma \ge 2 \pi/\Text{# de consultas} $.
+syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
+references: '- Calibragem robusta de um conjunto de portais single-qubit universal por meio da estimativa de fase robusta Shelby Kimmel, Guang Hao Low, Theodore J. Yoder https://arxiv.org/abs/1502.02677'
+input:
+  content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
+  types:
+  - name: bitsPrecision
+    summary: Isso fornece uma estimativa de $ \phi $ com o desvio padrão $ \sigma \le 2 \ pi/2 ^ \text{bitsPrecision} $ usando várias consultas dimensionando como $ \sigma \le 10,7 \pi/\Text{# de consultas} $.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: Uma operação que implementa $U ^ m $ para potências de inteiros fornecidas $m $.
+    uid: microsoft.quantum.oracles.discreteoracle
+  - name: targetState
+    summary: Uma Quantum registra que $U $ age. Se ele armazenar um eigenstate $ \ket{\phi} $ de $U $, $U \ket{\phi} = e ^ {i\phi} \ket{\phi} $ para $ \phi\in (-\pi, \pi] $ uma fase desconhecida.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - isPrimitive: true
+    uid: Double
+ms.openlocfilehash: 169a828036fbe84f49e5d87399319d14a9584051
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73229060"

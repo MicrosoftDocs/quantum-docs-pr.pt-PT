@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.generatorindex
+name: generatorIndex
+type: newtype
+namespace: Microsoft.Quantum.Simulation
+summary: >-
+  Representa um único termo primitivo no conjunto de todos os geradores dinâmicos, por exemplo, operadores Hermitian, para os quais existe um mapa desse gerador para a evolução do tempo por esse gerador, por meio de `EvolutionSet`.
+
+
+  O primeiro elemento (int [], Double []) é o índice de um único termo, por exemplo, a cadeia de caracteres Pauli XXY com o coeficiente 0,5 seria indexada por ([1, 1, 2], [0,5]). Como alternativa, o Hamiltonians parametrizado por uma variável contínua, como X cos φ + Y Sin φ, pode, por exemplo, ser representado por ([], [φ]). O segundo elemento indexa o subsistema no qual o gerador atua.
+remarks: >-
+  > [!WARNING]
+
+  > A interpretação de um `GeneratorIndex` não é definida, exceto com referência a um conjunto específico de geradores.
+
+
+  ### <a name="examples"></a>Exemplos
+
+  Usando <xref:microsoft.quantum.simulation.paulievolutionset>, o operador $ \pi X_2 X_5 Y_9 $ é representado como:
+
+
+  ```qsharp
+
+  let index = GeneratorIndex(([1, 1, 2], [PI()]), [2, 5, 9]);
+
+  ```
+syntax: newtype GeneratorIndex = ((Int[], Double[]), Int[]);
+seeAlso:
+- evolutionset
+- paulievolutionset
+ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73067055"

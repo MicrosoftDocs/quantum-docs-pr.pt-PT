@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.reversedopbe
+name: ReversedOpBE
+type: function
+namespace: Microsoft.Quantum.Arithmetic
+summary: Dada uma operação que usa uma entrada big-endian, retorna uma nova operação que usa uma entrada little-endian.
+syntax: 'function ReversedOpBE (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit)'
+input:
+  content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit))'
+  types:
+  - name: op
+    summary: A operação cuja entrada deve ser revertida.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.bigendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+output:
+  content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit)
+  types:
+  - summary: Uma nova operação que aceita sua entrada como um registro little-endian.
+    isOperation: true
+    input:
+      types:
+      - uid: microsoft.quantum.arithmetic.littleendian
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+seeAlso:
+- applyreversedopbe
+- reversedopbea
+- reversedopbec
+- reversedopbeca
+ms.openlocfilehash: 7d361b43aa60526394c75dc769b78c6d0053e409
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218707"

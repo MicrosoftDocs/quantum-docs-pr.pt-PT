@@ -1,0 +1,25 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.ceiling
+name: Ceiling
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Retorna o menor inteiro maior ou igual ao número especificado.
+remarks: Consulte [System. Math. teto](https://docs.microsoft.com/dotnet/api/system.math.ceiling) para obter mais detalhes.
+syntax: 'function Ceiling (value : Double) : Int'
+input:
+  content: '(value : Double)'
+  types:
+  - name: value
+    isPrimitive: true
+    uid: Double
+output:
+  content: Int
+  types:
+  - isPrimitive: true
+    uid: Int
+ms.openlocfilehash: d27a634183d82c5ef18ee82b8553fe9299c64a37
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230148"

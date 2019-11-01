@@ -1,0 +1,37 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.inplacemajority
+name: InPlaceMajority
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: >-
+  Isso computa a função principal in-loco em 3 qubits.
+
+
+  Se denotarmos qubit de saída como $z $ e qubits de entrada como $x $ e $y $, a operação executará a seguinte transformação: $ \ket{XYZ} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)} $.
+syntax: 'operation InPlaceMajority (output : Qubit, input : Qubit[]) : Unit'
+input:
+  content: '(output : Qubit, input : Qubit[])'
+  types:
+  - name: output
+    summary: Primeiro qubit de entrada. Observe que a saída é calculada in-loco e armazenada neste qubit.
+    isPrimitive: true
+    uid: Qubit
+  - name: input
+    summary: Segundo e terceiro qubits de entrada.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 0f02f9820fd1f4bc71fd4cf584a915f3b9682c9c
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214984"

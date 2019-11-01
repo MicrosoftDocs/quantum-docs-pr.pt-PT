@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.simulation.interpolatedevolution
+name: InterpolatedEvolution
+type: function
+namespace: Microsoft.Quantum.Simulation
+summary: Interpola entre dois geradores com um agendamento uniforme, retornando uma operação que aplica a evolução simulada sob o gerador dependente de tempo resultante a um registro de qubit.
+remarks: Se o tempo de interpolação for escolhido para atender às condições adiabatic, essa função retornará uma operação que executa a preparação do estado adiabatic para o gerador dinâmico final.
+syntax: 'function InterpolatedEvolution (inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm) : (Qubit[] => Unit is Adj + Ctl)'
+input:
+  content: '(inerpolationTime : Double, evolutionGeneratorStart : Microsoft.Quantum.Simulation.EvolutionGenerator, evolutionGeneratorEnd : Microsoft.Quantum.Simulation.EvolutionGenerator, timeDependentSimulationAlgorithm : Microsoft.Quantum.Simulation.TimeDependentSimulationAlgorithm)'
+  types:
+  - name: inerpolationTime
+    isPrimitive: true
+    uid: Double
+  - name: evolutionGeneratorStart
+    summary: Gerador inicial para simular a evolução.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: evolutionGeneratorEnd
+    summary: O gerador final para simular a evolução.
+    uid: microsoft.quantum.simulation.evolutiongenerator
+  - name: timeDependentSimulationAlgorithm
+    summary: Um algoritmo de simulação dependente de tempo que será usado para simular a evolução durante o agendamento de interpolação uniforme.
+    uid: microsoft.quantum.simulation.timedependentsimulationalgorithm
+output:
+  content: (Qubit[] => Unit is Adj + Ctl)
+  types:
+  - isOperation: true
+    input:
+      types:
+      - isArray: true
+        isPrimitive: true
+        uid: Qubit
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+ms.openlocfilehash: c457417e28d9de392af5efdee101fc107f37a913
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73211057"

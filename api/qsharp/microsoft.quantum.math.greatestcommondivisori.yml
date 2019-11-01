@@ -1,0 +1,30 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.greatestcommondivisori
+name: GreatestCommonDivisorI
+type: function
+namespace: Microsoft.Quantum.Math
+summary: Computa o maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+syntax: 'function GreatestCommonDivisorI (a : Int, b : Int) : Int'
+input:
+  content: '(a : Int, b : Int)'
+  types:
+  - name: a
+    summary: o primeiro número do qual o maior divisor comum estendido está sendo computado
+    isPrimitive: true
+    uid: Int
+  - name: b
+    summary: o segundo número do qual o maior divisor comum estendido está sendo computado
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Maior divisor comum de $a $ e $b $
+    isPrimitive: true
+    uid: Int
+ms.openlocfilehash: 24f187968a2b628ebe8e18d84b762def91e3bb95
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73232851"

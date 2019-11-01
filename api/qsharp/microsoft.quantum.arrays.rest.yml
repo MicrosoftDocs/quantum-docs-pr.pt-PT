@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.rest
+name: Rest
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Cria uma matriz que é igual a uma matriz de entrada, exceto que o primeiro elemento da matriz é Descartado.
+syntax: "function Rest (array : 'T[]) : 'T[]"
+input:
+  content: "(array : 'T[])"
+  types:
+  - name: array
+    summary: Uma matriz cujo segundo para o último elementos é formar a matriz de saída.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Uma matriz que contém os elementos `array[1..Length(array) - 1]`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: O tipo dos elementos da matriz.
+ms.openlocfilehash: 96779f32f93d2d045502b5e7264de1af39affd9f
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73218044"

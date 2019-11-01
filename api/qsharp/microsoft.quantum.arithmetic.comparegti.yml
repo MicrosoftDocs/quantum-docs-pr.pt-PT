@@ -1,0 +1,34 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arithmetic.comparegti
+name: CompareGTI
+type: operation
+namespace: Microsoft.Quantum.Arithmetic
+summary: 'Wrapper para comparação de inteiros: `result = x > y`.'
+syntax: 'operation CompareGTI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
+input:
+  content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
+  types:
+  - name: xs
+    summary: Primeiro $n número de $-bit
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: ys
+    summary: Segundo $n número de $-bit
+    uid: microsoft.quantum.arithmetic.littleendian
+  - name: result
+    summary: Será invertido se $x > y $
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 90145423307847470212f593c83a6aaadb01a326
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73221274"

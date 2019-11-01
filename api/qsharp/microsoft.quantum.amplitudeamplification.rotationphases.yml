@@ -1,0 +1,17 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.amplitudeamplification.rotationphases
+name: RotationPhases
+type: newtype
+namespace: Microsoft.Quantum.AmplitudeAmplification
+summary: Fases para uma sequência de rotações de qubit única na amplificação de amplitude.
+remarks: >-
+  O primeiro parâmetro é uma matriz de fases para reflexões, expressa como um produto de rotações de qubit único.
+
+  [ G.H. Baixa, I. L Chuang, https://arxiv.org/abs/1707.05391].
+syntax: newtype RotationPhases = Double[];
+ms.openlocfilehash: 1ad6a80a10cc3880122303a7bbd708087976f906
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73215460"

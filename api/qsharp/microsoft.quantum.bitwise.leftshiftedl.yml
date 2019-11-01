@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.bitwise.leftshiftedl
+name: LeftShiftedL
+type: function
+namespace: Microsoft.Quantum.Bitwise
+summary: Desloca a representação bit a bit de um número à esquerda por um determinado número de bits.
+remarks: >-
+  Os itens a seguir são equivalentes:
+
+
+  ```Q#
+
+  let c = a <<< b;
+
+  let c = LeftShiftedL(a, b);
+
+  ```
+syntax: 'function LeftShiftedL (value : BigInt, amount : Int) : BigInt'
+input:
+  content: '(value : BigInt, amount : Int)'
+  types:
+  - name: value
+    summary: O número cuja representação em bits bit a lado deve ser deslocada para a esquerda (mais significativa).
+    isPrimitive: true
+    uid: BigInt
+  - name: amount
+    summary: O número de bits pelos quais `value` deve ser deslocado para a esquerda.
+    isPrimitive: true
+    uid: Int
+output:
+  content: BigInt
+  types:
+  - summary: O valor de `value`, deslocado para a esquerda por `amount` bits.
+    isPrimitive: true
+    uid: BigInt
+ms.openlocfilehash: cffab4695cc4bef50975206d2f1eb81554e14ffb
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73217806"

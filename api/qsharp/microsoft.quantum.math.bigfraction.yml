@@ -1,0 +1,13 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.math.bigfraction
+name: BigFraction
+type: newtype
+namespace: Microsoft.Quantum.Math
+summary: Representa um número racional do formulário `p/q`. O inteiro `p` é o primeiro elemento da tupla e `q` é o segundo elemento da tupla.
+syntax: newtype BigFraction = (BigInt, BigInt);
+ms.openlocfilehash: 641939304a0846c6de4b200f87c28546278005e6
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73230216"

@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.constantarray
+name: ConstantArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Cria uma matriz de comprimento determinado com todos os elementos iguais ao valor fornecido.
+syntax: "function ConstantArray (length : Int, value : 'T) : 'T[]"
+input:
+  content: "(length : Int, value : 'T)"
+  types:
+  - name: length
+    summary: Comprimento da nova matriz.
+    isPrimitive: true
+    uid: Int
+  - name: value
+    summary: Um valor que será contido em cada índice da nova matriz.
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Uma nova matriz de comprimento `length`, de modo que cada elemento é `value`.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+ms.openlocfilehash: 7b641f4e037b760ac036abfc23ac197d7008bc0e
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73214440"

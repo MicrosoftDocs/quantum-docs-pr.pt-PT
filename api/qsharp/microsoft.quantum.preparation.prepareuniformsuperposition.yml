@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.preparation.prepareuniformsuperposition
+name: PrepareUniformSuperposition
+type: operation
+namespace: Microsoft.Quantum.Preparation
+summary: >-
+  Cria uma superposição uniforme em Estados que codificam 0 a `nIndices`.
+
+
+  Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+
+  \end{align} $ $.
+examples: >-
+  O exemplo a seguir prepara o estado $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ em $3 $ qubits.
+
+
+  ```Q#
+
+  let nIndices = 6;
+
+  using(indexRegister = Qubit[3]) {
+      PrepareUniformSuperposition(nIndices, LittleEndian(indexRegister));
+  }
+
+  ```
+syntax: 'operation PrepareUniformSuperposition (nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+input:
+  content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: nIndices
+    summary: O número desejado de Estados $M $ na superposição uniforme.
+    isPrimitive: true
+    uid: Int
+  - name: indexRegister
+    summary: >-
+      O registro qubit que armazena os Estados de número no formato `LittleEndian`.
+
+      Esse registro deve ser capaz de armazenar o número $M-$1 e presume-se que seja inicializado no estado $ \ket{0\cdots 0} $.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
+ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73226493"
