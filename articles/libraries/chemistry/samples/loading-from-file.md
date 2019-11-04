@@ -6,14 +6,14 @@ ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 9902e95b09d38323b4b91c29ab897a4f0124b6cd
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 18f257efe8d53d2a22af4840bd8d17ab6b80a503
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184190"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442340"
 ---
-## <a name="loading-a-hamiltonian-from-file"></a>Carregando um Hamiltonian do arquivo
+# <a name="loading-a-hamiltonian-from-file"></a>Carregar um Hamiltoniano do ficheiro
 Anteriormente, construímos o Hamiltonians adicionando termos individuais a ele. Embora isso seja bom para exemplos pequenos, o quantum química em escala exige Hamiltonians com milhões ou bilhões de termos. Tais Hamiltonians, gerados por pacotes de química, como NWChem, são muito grandes para serem importados manualmente. Neste exemplo, ilustramos como uma instância de `FermionHamiltonian` pode ser gerada automaticamente de um molécula representado pelo [esquema Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Para referência, é possível inspecionar o exemplo de `LithiumHydrideGUI` fornecido ou o `RunSimulation` exemplo. O suporte limitado também está disponível para importação a partir do formato consumido por [LIQUi | >](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
 
 Vamos considerar o exemplo do nitrogen molécula, que é fornecido na pasta `IntegralData/YAML` do repositório de exemplos. O método para carregar o esquema de `Broombridge` é simples.

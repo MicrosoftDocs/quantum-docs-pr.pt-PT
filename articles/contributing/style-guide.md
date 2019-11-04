@@ -6,27 +6,23 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 56455e9d5cd452b8620ee794f40563d1d3040193
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: 4050e2ee9e516aed7a8ba1398792562926808ee0
+ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183850"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73463319"
 ---
 # <a name="q-style-guide"></a>Guia de estilo de Q # #
 ## <a name="general-conventions"></a>Convenções gerais ##
 
 As convenções sugeridas neste guia destinam-se a ajudar a tornar os programas e bibliotecas escritos em Q # mais fáceis de ler e entender.
 
-# <a name="guidancetabguidance"></a>[Orientação](#tab/guidance)
+## <a name="guidance"></a>Orientações
 
 Sugerimos:
 
 - Nunca desconsidere uma convenção, a menos que você esteja fazendo isso intencionalmente para fornecer código mais legível e compreensível para seus usuários.
-
-# <a name="examplestabexamples"></a>[Exemplos](#tab/examples)
-
-***
 
 ## <a name="naming-conventions"></a>Convenções de nomenclatura ##
 
@@ -69,7 +65,7 @@ Outros verbos também podem ser úteis nesse caso, como em `IterateThroughCartes
 | Registe-se | Uma operação fornecida como entrada é chamada |
 | Declarar | Uma hipótese sobre o resultado de uma possível medição de Quantum é verificada por um simulador |
 | Estimativa | Um valor clássico é retornado, representando uma estimativa desenhada de uma ou mais medições |
-| Mensura | Uma medida do Quantum é executada e seu resultado é retornado para o usuário |
+| Medir | Uma medida do Quantum é executada e seu resultado é retornado para o usuário |
 | Preparar | Um determinado registro de qubits é inicializado em um estado específico |
 | Exemplo | Um valor clássico é retornado aleatoriamente de alguma distribuição |
 

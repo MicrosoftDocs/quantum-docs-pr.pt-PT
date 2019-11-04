@@ -1,18 +1,20 @@
 ---
-title: Glossário | Microsoft Docs
+title: Glossário da computação Quantum | Microsoft Docs
 description: Glossário de termos do Quantum
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.glossary
-ms.openlocfilehash: bfa275b3330ea2c2a541b08f137893b63b6213aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: HT
+ms.openlocfilehash: ce15fee2be68d41f0b806be50320b562a749c3b7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183629"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442551"
 ---
+# <a name="quantum-computing-glossary"></a>Glossário da computação Quantum
+
 |Termo|Definição|
 |-------------|----------|
 |Adjacente|A transpoção conjugada complexa da operação. Para operações que implementam um operador unitário, o adjacente é o inverso da operação.|
@@ -29,7 +31,7 @@ ms.locfileid: "73183629"
 |Medida|Obtendo um bit clássico de um qubit (ou conjunto de qubits). Consulte a seção [conceitos do qubit](xref:microsoft.quantum.concepts.qubit) para obter mais detalhes.|
 |Mutável|Uma variável cujo valor pode ser alterado após ser criada.|
 |Namespace|Um rótulo para uma coleção de nomes relacionados (normalmente, operações, funções e tipos). Por exemplo, o namespace [`Microsoft.Quantum.Preparation`](xref:microsoft.quantum.preparation) rotula todos os símbolos definidos na biblioteca padrão que ajudam na preparação de Estados iniciais.|
-|Operação|A unidade básica de execução Quantum em Q #. É quase equivalente a uma função em C ou C++ ou Python, ou um método estático em C# ou Java.|
+|Operação|A unidade básica de execução Quantum em Q #. É aproximadamente equivalente à função C, C++ ou Python ou a um método estático em C# ou Java.|
 |Aplicativo do operador|Executando uma operação Quantum. Isso normalmente aplica uma matriz unitário ao vetor de estado atual. Consulte [introdução aos conceitos do Quantum](xref:microsoft.quantum.concepts.intro) para obter mais detalhes.|
 |Oracle|Uma sub-rotina que fornece informações dependentes de dados para um algoritmo Quantum em tempo de execução. Normalmente, o objetivo é fornecer uma superposição de saídas correspondentes às entradas que estão em superposição.   |
 |Aplicativo parcial|Chamar uma função ou operação sem todos os parâmetros necessários. O retorna um novo callable que precisa apenas dos parâmetros ausentes fornecidos durante um aplicativo futuro.|
