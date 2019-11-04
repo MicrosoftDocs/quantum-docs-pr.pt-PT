@@ -1,0 +1,4 @@
+name: Notas de versão
+items:
+  - name: Guia de migração 0.3
+    href: 0.3-migration.md
