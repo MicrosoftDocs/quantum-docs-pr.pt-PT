@@ -1,0 +1,12 @@
+- name: Referência
+  items:
+    - name: 'Bibliotecas Q#'
+      href: qsharp/toc.yml
+    - name: Bibliotecas .NET
+      items:
+        - name: Simulador de rastreio
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators'
+        - name: Química quântica
+          href: 'https://docs.microsoft.com/dotnet/api/microsoft.quantum.chemistry'
+    - name: Bibliotecas do Python
+      href: 'https://docs.microsoft.com/python/qsharp'
