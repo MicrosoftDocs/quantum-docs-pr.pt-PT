@@ -6,14 +6,14 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: 0bffe0c2adeacce514fd9985c9206f6f9c3157be
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
+ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056437"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73442438"
 ---
-# <a name="introduction"></a>Introdução
+# <a name="introduction-to-the-quantum-numerics-library"></a>Introdução à Biblioteca Numérica Quântica
 
 Muitos algoritmos quânticos dependem de [oráculos](xref:microsoft.quantum.concepts.oracles) que avaliam as funções matemáticas numa sobreposição de entradas.
 O componente principal do algoritmo de Shor, por exemplo, avalia $f(x) = a^x\operatorname{mod} N$ para um $a$ fixo, o número do fator $N$ e $x$ num número inteiro $2n$-qubit numa sobreposição uniforme em todas as cadeias $2n$-bit.
