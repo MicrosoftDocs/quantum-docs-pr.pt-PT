@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 090cf98612c6c549c733e54f9dcbf74442b30fbd
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 2a098d89f13278d7137bf182a184a74afb9393be
+ms.sourcegitcommit: 2ca4755d1a63431e3cb2d2918a10ad477ec2e368
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442258"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73462865"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Instalar o Microsoft Quantum Development Kit (QDK)
 
@@ -177,8 +177,6 @@ O Visual Studio oferece um ambiente avançado para o desenvolvimento de programa
 > * Se tiver vários projetos numa solução do Visual Studio, todos os projetos contidos na solução têm de estar na mesma pasta que a solução ou numa das suas subpastas.  
 
 ## <a name="develop-with-c-using-visual-studio-code"></a>Desenvolver com C# com o Visual Studio Code
-
-O Visual Studio Code (VS Code) oferece um ambiente avançado para o desenvolvimento de programas Q# em vários ambientes de computação, incluindo Windows, Linux e Mac, além de disponibilizar ótimas funcionalidades como conclusão de código e realce de sintaxe que orienta o programador no percurso de criação de aplicações.  A extensão Q# do VS Code contém realce de sintaxe e fragmentos de código Q#.
 
 O Visual Studio Code (VS Code) oferece um ambiente avançado para o desenvolvimento de programas Q# em vários ambientes de computação, incluindo Windows, Linux e Mac, além de disponibilizar ótimas funcionalidades como conclusão de código e realce de sintaxe que orienta o programador no percurso de criação de aplicações.  A extensão Q# do VS Code contém realce de sintaxe e fragmentos de código Q#.
 
