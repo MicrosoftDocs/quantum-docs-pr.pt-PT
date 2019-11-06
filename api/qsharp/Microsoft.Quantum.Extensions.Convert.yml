@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
-name: Microsoft. Quantum. Extensions. Convert
+name: Microsoft.Quantum.Extensions.Convert
 summary: " # <a name=\"summary\"></a>Resumo\n Essas são algumas das funções do namespace System. Convert do .NET CLR que são relevantes no sistema do tipo Q #.\n\n # <a name=\"remarks\"></a>Observações\n Se houver várias versões da função para tipos bool, int e Double, as funções correspondentes terão o sufixo B, I e D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
@@ -53,9 +53,10 @@ functions:
     > [!WARNING]
 
     > Preterido, use @"microsoft.quantum.convert.intasstringwithformat".
-ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056491"
+metadata:
+  ms.openlocfilehash: 57f341ec6e8f82cfa9fc4bb958a580743a350218
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056491"

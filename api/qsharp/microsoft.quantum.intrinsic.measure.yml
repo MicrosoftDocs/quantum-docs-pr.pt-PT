@@ -31,9 +31,10 @@ output:
   - summary: '`Zero` se $ + $1 eigenvalue for observado e `One` se o eigenvalue $-$1 for observado.'
     isPrimitive: true
     uid: Result
-ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73234109"
+metadata:
+  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73234109"

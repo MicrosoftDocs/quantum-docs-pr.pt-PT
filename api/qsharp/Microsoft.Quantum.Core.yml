@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.core
-name: Microsoft. Quantum. Core
+name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace inclui funções e operações do p # Core.\n\n # <a name=\"remarks\"></a>Observações\n Esse namespace é aberto automaticamente pelo compilador Q #, de modo que todos os elementos desse namespace estejam sempre disponíveis."
 functions:
 - uid: microsoft.quantum.core.length
@@ -13,9 +13,10 @@ functions:
   summary: Retorna o valor inicial definido do intervalo especificado.
 - uid: microsoft.quantum.core.rangestep
   summary: Retorna o inteiro que especifica como o próximo valor de um intervalo é calculado.
-ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73056897"
+metadata:
+  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056897"

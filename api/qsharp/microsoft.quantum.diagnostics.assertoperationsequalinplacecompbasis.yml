@@ -9,13 +9,13 @@ summary: >-
   Essa é uma condição necessária, mas não suficiente, para a igualdade de duas unidades.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
-  content: '(nQubits: int, excerto: (qubit [] = unidade de >), expectedu: (qubit [] = unidade de > é adj))'
+  content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
     summary: O número de qubits $n $ em que as operações `givenU` e `expectedU` operam.
     isPrimitive: true
     uid: Int
-  - name: especificado
+  - name: givenU
     summary: Operação em $n $ qubits a ser verificada.
     isOperation: true
     input:
@@ -27,7 +27,7 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: esperado
+  - name: expectedU
     summary: Operação de referência em $n $ qubits em que `givenU` deve ser comparada.
     isOperation: true
     input:
@@ -42,13 +42,14 @@ input:
     functors:
     - Adjoint
 output:
-  content: Unidade
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
-ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066562"
+metadata:
+  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066562"

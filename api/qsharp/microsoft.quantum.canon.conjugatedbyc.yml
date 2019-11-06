@@ -7,7 +7,7 @@ summary: Dadas as operações externas e internas, retorna uma nova operação q
 remarks: A operação externa sempre é presumida como adjointable, mas não precisa ser controlável para que a operação combinada seja controlável.
 syntax: "function ConjugatedByC (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl)) : ('T => Unit is Ctl)"
 input:
-  content: '(outerOperation: (t = > unidade é adj), innerOperation: (t = a unidade de > é CTL))'
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Ctl))"
   types:
   - name: outerOperation
     summary: A operação $U $ que deve ser usada para conjugar $V $. Observe que a operação externa $U $ precisa ser adjointable, mas não precisa ser controlável.
@@ -36,7 +36,7 @@ input:
     functors:
     - Controlled
 output:
-  content: (T = unidade de > é CTL)
+  content: ('T => Unit is Ctl)
   types:
   - summary: Uma nova operação cuja ação é representada pelo unitário $U ^ {\dagger} V U $.
     isOperation: true
@@ -58,9 +58,10 @@ seeAlso:
 - conjugatedbya
 - conjugatedbyca
 - applywith
-ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067973"
+metadata:
+  ms.openlocfilehash: 64b754d98164ea9d7ef5fcdc17141a5b1ef008d4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067973"

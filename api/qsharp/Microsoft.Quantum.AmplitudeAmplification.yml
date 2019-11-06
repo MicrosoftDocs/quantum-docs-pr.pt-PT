@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.amplitudeamplification
-name: Microsoft. Quantum. AmplitudeAmplification
+name: Microsoft.Quantum.AmplitudeAmplification
 summary: " # <a name=\"summary\"></a>Resumo\n Este namespace contém funções e operações para executar amplificação de amplitude.\n\n # <a name=\"description\"></a>Descrição\n A amplificação de amplitude alheios com reflexos parciais é a forma mais geral de amplificação de amplitude implementada aqui.\n\n Isso é chamado por meio da operação AmpAmpObliviousByReflectionPhases.\n\n Isso tem dois registros: `ancillaRegister` e `systemRegister`.\n\n Isso aceita dois Oracle para esses reflexos do tipo `ReflectionOracle` que atuam apenas no registro de `ancillaRegister`.\n\n Isso aceita um Oracle Special para amplificação de amplitude de alheios do tipo `ObliviousOracle` que atua em conjunto em ambos os registros.\n\n O estado de entrada para `ancillaRegister` é considerado o eigenstate exclusivo de $-$1 do primeiro operador de reflexão $I-2 \\ ket {s} \\ Bra {s} $.\n\n Os reflexos sobre um estado de Quantum de destino geralmente são implementados supondo-se o acesso a um Oracle que prepare esse estado da base computacional $ \\ket{0\\cdots 0} $.\n\n Nossa Convenção para esses Oracle requer dois registros: um único qubit `flagQubit` registro e um registro para todo o restante no registro de ancillaRegister.\n\n O Oracle do tipo `StateOracle` atua em conjunto em ambos os registros para criar o estado de destino sinalizado por $ \\ket{1}$ no registro de `flagQubit` com alguma amplitude real.\n\n O `ReflectionOracle` de reflexão sobre o estado desse sinalizador é gerado pela operação `TargetStateReflectionOracle`.\n\n A reflexão `ReflectionOracle` sobre o estado de entrada para `ancillaRegister` é gerada pelo inverso de StateOracle e, em seguida, pela reflexão de $ \\ket{0\\cdots 0} $ com ReflectionStart ().\n\n O Oracle do tipo `DeterministicStateOracle` atua nos registros de `qubitState` para criar o estado de destino exatamente sem sinalizador.\n\n `AmpAmpObliviousByOraclePhases` é uma versão da amplificação de amplitude alheios que aceita Oracle `StateOracle` e `ObliviousOracle` em vez de reflexos.\n\n Observe que a amplificação de amplitude é um caso especial de amplificação de amplitude alheios em que `ObliviousOracle` é o operador Identity, e não há nenhum qubits de sistema, ou seja, `systemRegister` está vazio.\n\n Isso é chamado por meio da operação `AmpAmByReflectionPhases` e `AmpAmpByOraclePhases`.\n\n As fases para reflexões parciais no caso padrão da pesquisa Grover são fornecidas pela função AmpAmpPhasesStandard.\n\n Por exemplo, temos as seguintes dependências: AmpAmpByOracle-> AmpAmpByOraclePhases-> AmpAmpObliviousByOraclePhases-> AmpAmpObliviousByReflectionPhases."
 functions:
 - uid: microsoft.quantum.amplitudeamplification.ampampbyoracle
@@ -35,9 +35,10 @@ newtypes:
   summary: Fases para uma sequência de reflexos parciais na amplificação de amplitude.
 - uid: microsoft.quantum.amplitudeamplification.rotationphases
   summary: Fases para uma sequência de rotações de qubit única na amplificação de amplitude.
-ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057137"
+metadata:
+  ms.openlocfilehash: acec4d085e42811618228c8e120842dc400c50b4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73057137"

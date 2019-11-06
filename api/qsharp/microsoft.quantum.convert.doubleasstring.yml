@@ -7,7 +7,7 @@ summary: Converte um determinado número de ponto flutuante de precisão dupla e
 remarks: Consulte [ C# Convert. ToString](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Double_) para obter mais detalhes.
 syntax: 'function DoubleAsString (a : Double) : String'
 input:
-  content: '(a: duplo)'
+  content: '(a : Double)'
   types:
   - name: a
     isPrimitive: true
@@ -17,9 +17,10 @@ output:
   types:
   - isPrimitive: true
     uid: String
-ms.openlocfilehash: f946d55fe15879763df03b0a281d0ec1b3dc05d2
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066851"
+metadata:
+  ms.openlocfilehash: f946d55fe15879763df03b0a281d0ec1b3dc05d2
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066851"

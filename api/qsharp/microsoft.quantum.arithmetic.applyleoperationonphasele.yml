@@ -7,9 +7,9 @@ summary: Aplica uma operação que usa um <xref:microsoft.quantum.arithmetic.pha
 remarks: O registro é transformado para `LittleEndian` pelo uso de <xref:microsoft.quantum.canon.qftle> e, em seguida, é retornado para sua representação original após a aplicação de `op`.
 syntax: 'operation ApplyLEOperationOnPhaseLE (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
-  content: '(op: (Microsoft. Quantum. aritmético. LittleEndian = unidade >), target: Microsoft. Quantum. aritmético. PhaseLittleEndian)'
+  content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
-  - name: parar
+  - name: op
     summary: A operação a ser aplicada.
     isOperation: true
     input:
@@ -19,11 +19,11 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: alvo
+  - name: target
     summary: O registro ao qual a operação é aplicada.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
-  content: Unidade
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
@@ -31,9 +31,10 @@ seeAlso:
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaselea
 - microsoft.quantum.canon.applyleoperationonphaseleca
-ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056704"
+metadata:
+  ms.openlocfilehash: 9364435896dc43710eb37238b00f8139f9e6b62d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056704"

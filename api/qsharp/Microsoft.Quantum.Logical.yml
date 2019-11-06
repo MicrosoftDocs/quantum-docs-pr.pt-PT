@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
-name: Microsoft. Quantum. Logical
+name: Microsoft.Quantum.Logical
 summary: " # <a name=\"summary\"></a>Resumo\n Contém funções para trabalhar com expressões lógicas e a lógica booliana."
 functions:
 - uid: microsoft.quantum.logical.and
@@ -65,9 +65,10 @@ functions:
   summary: Retorna a disjunção booliana de dois valores.
 - uid: microsoft.quantum.logical.xor
   summary: Retorna a disjunção exclusiva booliana de dois valores.
-ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73056285"
+metadata:
+  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73056285"

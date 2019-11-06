@@ -6,9 +6,10 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: Registre-se que codifica um inteiro não assinado na ordem big-endian. O qubit com o índice `0` codifica o bit mais alto de um inteiro sem sinal.
 remarks: Abreviamos `BigEndian` como `BE` na documentação.
 syntax: newtype BigEndian = Qubit[];
-ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73221359"
+metadata:
+  ms.openlocfilehash: a4d96ab9299d983583949de5ae8eebba64a189a4
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73221359"

@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.conjugatedby
 name: ConjugatedBy
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-remarks: The outer operation is always assumed to be adjointable, but does not need to be controllable in order for the combined operation to be controllable.
+summary: Dadas as operações externas e internas, retorna uma nova operação que conjuga a operação interna pela operação externa.
+remarks: A operação externa sempre é presumida como adjointable, mas não precisa ser controlável para que a operação combinada seja controlável.
 syntax: "function ConjugatedBy (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit)) : ('T => Unit)"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit))"
   types:
   - name: outerOperation
-    summary: The operation $U$ that should be used to conjugate $V$. Note that the outer operation $U$ needs to be adjointable, but does not need to be controllable.
+    summary: A operação $U $ que deve ser usada para conjugar $V $. Observe que a operação externa $U $ precisa ser adjointable, mas não precisa ser controlável.
     isOperation: true
     input:
       types:
@@ -23,7 +23,7 @@ input:
     functors:
     - Adjoint
   - name: innerOperation
-    summary: The operation $V$ being conjugated.
+    summary: A operação $V $ sendo conjugada.
     isOperation: true
     input:
       types:
@@ -36,7 +36,7 @@ input:
 output:
   content: ('T => Unit)
   types:
-  - summary: A new operation whose action is represented by the unitary $U^{\dagger} V U$.
+  - summary: Uma nova operação cuja ação é representada pelo unitário $U ^ {\dagger} V U $.
     isOperation: true
     input:
       types:
@@ -48,15 +48,16 @@ output:
         uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: The type of the target on which each of the inner and outer operations act.
+  summary: O tipo de destino no qual cada uma das operações internas e externas atuam.
 seeAlso:
 - conjugatedbya
 - conjugatedbyc
 - conjugatedbyca
 - applywith
-ms.openlocfilehash: 4acd29aa515d1f2323b301673bd620f2b81d76f5
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73068007"
+metadata:
+  ms.openlocfilehash: 4acd29aa515d1f2323b301673bd620f2b81d76f5
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73068007"
