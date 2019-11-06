@@ -6,21 +6,22 @@ namespace: Microsoft.Quantum.Math
 summary: Retorna um número elevado a uma determinada potência.
 syntax: 'function PowC (base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
-  content: '(base_: Microsoft. Quantum. Math. Complex, Power: Microsoft. quântico. Math. Complex)'
+  content: '(base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex)'
   types:
-  - name: polybase
+  - name: base_
     uid: microsoft.quantum.math.complex
-  - name: Alimentar
+  - name: power
     summary: O Power $b $ para o qual $a $ deve ser gerado.
     uid: microsoft.quantum.math.complex
 output:
-  content: Microsoft. Quantum. Math. Complex
+  content: Microsoft.Quantum.Math.Complex
   types:
   - summary: O Power $a ^ b $
     uid: microsoft.quantum.math.complex
-ms.openlocfilehash: 77a3f8fdc769947e50b35b31547a98017e6e2529
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067259"
+metadata:
+  ms.openlocfilehash: 77a3f8fdc769947e50b35b31547a98017e6e2529
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067259"
