@@ -15,9 +15,9 @@ remarks: >-
   ```
 syntax: 'operation CCNOT (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 input:
-  content: '(Control1: qubit, Control2: qubit, target: qubit)'
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
-  - name: Control1
+  - name: control1
     summary: Primeiro controle qubit para o portão CCNOT.
     isPrimitive: true
     uid: Qubit
@@ -25,21 +25,22 @@ input:
     summary: Segundo controle qubit para o portão CCNOT.
     isPrimitive: true
     uid: Qubit
-  - name: alvo
+  - name: target
     summary: Qubit de destino para o portão CCNOT.
     isPrimitive: true
     uid: Qubit
 output:
-  content: Unidade
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: cf3731ba41dde045fb5b7509d7d33801f8e3cee6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067361"
+metadata:
+  ms.openlocfilehash: cf3731ba41dde045fb5b7509d7d33801f8e3cee6
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067361"

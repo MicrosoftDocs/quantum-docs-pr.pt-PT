@@ -9,17 +9,14 @@ summary: >-
 
   Ou seja, dado um `BlockEncodingReflection` unitário $U $ que codifica algum operador $H $ de interesse, converte-o em uma visão Quantum $W $ contendo o espectro de $ \pm e ^ {\pm i\sin ^{-1}(H)} $.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
-references: >-
-  - Hamiltonian Simulation by Qubitization
-    Guang Hao Low, Isaac L. Chuang
-    https://arxiv.org/abs/1610.06546
+references: '- Simulação de Hamiltonian por Qubitization Guang Hao Low, Julio L. Chuang https://arxiv.org/abs/1610.06546'
 input:
-  content: '(blockEncoding: Microsoft. Quantum. Simulation. BlockEncodingReflection)'
+  content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
   - name: blockEncoding
     uid: microsoft.quantum.simulation.blockencodingreflection
 output:
-  content: ((Qubit [], qubit []) = unidade de > é adj + CTL)
+  content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
   - summary: Uma Walk do Quantum $W $ agindo em conjunto em registros `a` e `s` que os codificadores de bloco $H $ e contém o espectro de $ \pm e ^ {\pm i\sin ^{-1}(H)} $.
     isOperation: true
@@ -41,9 +38,10 @@ output:
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
-ms.openlocfilehash: aec6e81e44d4fa09e2ca131f0350590541f4dc8d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065355"
+metadata:
+  ms.openlocfilehash: aec6e81e44d4fa09e2ca131f0350590541f4dc8d
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065355"

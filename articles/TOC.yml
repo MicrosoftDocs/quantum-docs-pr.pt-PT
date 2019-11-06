@@ -1,15 +1,39 @@
 - name: Documentação do Microsoft Quantum
   href: index.yml
 - name: Descrição geral
-  href: welcome.md
+  items:
+    - name: Introdução
+      href: welcome.md
+    - name: Cinco questões sobre a computação quântica
+      items:
+        - name: O que é a computação quântica?
+          href: overview/what-is-quantum-computing.md
+        - name: O que pode fazer um computador quântico?
+          href: overview/quantum-computers.md
+        - name: Razões para aprender computação quântica?
+          href: overview/why-learn-quantum-computing.md
+        - name: 'O que é a Q#?'
+          href: overview/what-is-qsharp.md
+        - name: Como aprender computação quântica?
+          href: overview/how-to-learn-quantum-computing.md
+    - name: Aprender com os Quantum Katas
+      href: intro-to-katas.md
 - name: Inícios rápidos
+  items:
+    - name: Gerador de números aleatórios quântico
+      href: quickstarts/qrng.md
+    - name: 'Noções básicas dos programas quânticos com Q#'
+      href: quickstart.md
+    - name: Implementar o algoritmo de pesquisa de Grover
+      href: quickstarts/search.md
+- name: Guias de procedimentos
   items:
     - name: Instalar o QDK
       href: install-guide/index.md
     - name: Atualizar o QDK
       href: install-guide/update.md
-    - name: Escrever o primeiro programa quântico
-      href: quickstart.md
+    - name: 'Criar um projeto Q#'
+      href: how-to-guides/create-qsharp-project.md
 - name: Conceitos
   items:
     - name: Técnicas de desenvolvimento quântico
@@ -22,7 +46,7 @@
       href: libraries/toc.yml
     - name: Conceitos de computação quântica
       href: concepts/toc.yml
-    - name: Como alojar um computador quântico
+    - name: Simuladores quânticos e avaliadores de recursos
       href: machines/toc.yml
 - name: Recursos
   items:
