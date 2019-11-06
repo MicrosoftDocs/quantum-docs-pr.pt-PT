@@ -9,13 +9,14 @@ input:
   content: ()
   types: []
 output:
-  content: Microsoft. Quantum. Simulation. TimeDependentGeneratorSystem
+  content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
   - summary: Um sistema de gerador dependente de tempo que representa a evolução nas $H Hamiltonian = $0 para todos os $s $.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
-ms.openlocfilehash: 348b97223c63422bf7ab9ea08e5a1e0ee3e31738
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065559"
+metadata:
+  ms.openlocfilehash: 348b97223c63422bf7ab9ea08e5a1e0ee3e31738
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065559"
