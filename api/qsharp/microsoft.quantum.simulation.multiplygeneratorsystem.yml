@@ -6,9 +6,9 @@ namespace: Microsoft.Quantum.Simulation
 summary: Multiplica o coeficiente de todos os termos em um `GeneratorSystem`.
 syntax: 'function MultiplyGeneratorSystem (multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.GeneratorSystem'
 input:
-  content: '(multiplicador: duplo, generatorSystem: Microsoft. Quantum. Simulation. GeneratorSystem)'
+  content: '(multiplier : Double, generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
-  - name: multiplicador
+  - name: multiplier
     summary: O multiplicador no coeficiente.
     isPrimitive: true
     uid: Double
@@ -16,15 +16,16 @@ input:
     summary: O `GeneratorSystem` a ser multiplicado.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: Microsoft. Quantum. Simulation. GeneratorSystem
+  content: Microsoft.Quantum.Simulation.GeneratorSystem
   types:
   - summary: Um `GeneratorSystem` que representa um sistema com coeficientes um fator `multiplier` maior.
     uid: microsoft.quantum.simulation.generatorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065457"
+metadata:
+  ms.openlocfilehash: e96870c4e59773542924dcd247aedc498d3f3307
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065457"
