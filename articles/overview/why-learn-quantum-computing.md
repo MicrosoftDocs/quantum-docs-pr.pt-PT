@@ -6,16 +6,18 @@ ms.author: nakersha
 ms.date: 10/16/2019
 ms.topic: article
 uid: microsoft.quantum.overview.why
-ms.openlocfilehash: 1ccf21aad9473f18a33bf6b12e14b021ac159cbb
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 389b745a9f19caa6272e7d537e3ee5f884cec36b
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443907"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529918"
 ---
 # <a name="why-learn-quantum-computing"></a>Razões para aprender computação quântica?
 
-Os computadores quânticos são interessantes, mas por que motivo deve aprender computação quântica? Nesta secção, vamos dar-lhe alguns motivos pelos quais é uma ótima ideia aprender computação quântica agora.
+Os computadores quânticos são interessantes, mas por que motivo deve aprender computação quântica?
+
+Nesta secção, vamos dar-lhe alguns motivos pelos quais é uma ótima ideia aprender computação quântica agora.
 
 ## <a name="join-the-quantum-revolution"></a>Junte-se à revolução quântica
 
@@ -27,7 +29,7 @@ Alcançar uma computação quântica eficiente é, possivelmente, um dos maiores
 
 ## <a name="get-inspired-by-the-quantum-world"></a>Deixe-se inspirar pelo mundo quântico
 
-Mesmo que ainda estejamos longe de alcançar os computadores quânticos tolerantes a falhas, já observamos algumas consequências impactantes da computação quântica na ciência da computação clássica. Nos últimos anos, foram desenvolvidos muitos algoritmos novos com base nas técnicas utilizadas na computação quântica. Estes são os chamados algoritmos inspirados na quântica e podem ser executados em computadores clássicos. Alguns exemplos destes algoritmos são os sistemas de recomendação ou os algoritmos genéticos que executam mais rapidamente do que qualquer método clássico anterior. Ao aprender computação quântica, também vai descobrir uma nova forma de analisar a computação, que mudará a sua perspetiva em relação à programação clássica!
+Mesmo que ainda estejamos longe de alcançar os computadores quânticos tolerantes a falhas, já observamos algumas consequências impactantes da computação quântica na ciência da computação clássica. Nos últimos anos, foram desenvolvidos muitos algoritmos novos com base nas técnicas utilizadas na computação quântica. Estes algoritmos são os chamados algoritmos inspirados na quântica e podem ser executados em computadores clássicos. Alguns exemplos destes algoritmos são os sistemas de recomendação ou os algoritmos genéticos que executam mais rapidamente do que qualquer método clássico anterior. Ao aprender computação quântica, também vai descobrir uma nova forma de analisar a computação, que mudará a sua perspetiva em relação à programação clássica!
 
 ## <a name="quantum-computing-is-fun"></a>A computação quântica é divertida!
 

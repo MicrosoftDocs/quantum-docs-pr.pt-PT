@@ -12,7 +12,7 @@ summary: >-
   Use @"Microsoft.Quantum.Canon.ApplyWithCA".
 syntax: "operation WithCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T) : Unit"
 input:
-  content: "(outerOperation: (t = > unidade é adj), innerOperation: (t = unidade > é adj + CTL), destino: ' t)"
+  content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl), target : 'T)"
   types:
   - name: outerOperation
     isOperation: true
@@ -39,20 +39,21 @@ input:
     functors:
     - Adjoint
     - Controlled
-  - name: alvo
+  - name: target
     uid: "'T"
     isLocal: true
 output:
-  content: Unidade
+  content: Unit
   types:
   - isPrimitive: true
     uid: Unit
 functors:
 - Adjoint
 - Controlled
-ms.openlocfilehash: 0c572b981ab01895a27da74c0386cf7f986e44e9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067633"
+metadata:
+  ms.openlocfilehash: 0c572b981ab01895a27da74c0386cf7f986e44e9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067633"

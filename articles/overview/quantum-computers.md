@@ -6,18 +6,20 @@ ms.author: nakersha
 ms.date: 10/23/2019
 ms.topic: article
 uid: microsoft.quantum.overview.computers
-ms.openlocfilehash: d4be970c635ca090e8dcb1b58d5c840eebd4d110
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 9d8ba90a504f298f9465ebf564c43625a4d43168
+ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73443839"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73529941"
 ---
 # <a name="what-can-a-quantum-computer-do"></a>O que pode fazer um computador quântico?
 
 O que podemos fazer com um computador quântico que não possa ser feito com um computador clássico?
 
-Para resolver alguns dos problemas mais desafiantes do mundo, onde os computadores atuais levariam milhares de milhões de anos a encontrar uma solução, um computador quântico poderia fazer o mesmo em dias, horas ou até mesmo minutos. A computação quântica irá permitir que os investigadores desenvolvam catalisadores e materiais novos, melhorem medicamentos, acelerem os avanços na inteligência artificial e respondam a questões fundamentais sobre a origem do nosso universo.
+Para resolver alguns dos problemas mais desafiantes do mundo, onde os computadores atuais levariam milhares de milhões de anos a encontrar uma solução, um computador quântico poderia fazer o mesmo em dias, horas ou até mesmo minutos.
+
+A computação quântica irá permitir que os investigadores desenvolvam catalisadores e materiais novos, melhorem medicamentos, acelerem os avanços na inteligência artificial e respondam a questões fundamentais sobre a origem do nosso universo.
 
 ## <a name="quantum-simulation"></a>Simulação quântica
 
@@ -29,19 +31,25 @@ As moléculas químicas são sistemas quânticos e, por isso, podem ser analisad
 
 ## <a name="cryptography"></a>Criptografia
 
-Talvez a aplicação mais famosa de computadores quânticos esteja em criptografia, em que Peter Shor demonstrou em 1994 que um computador quântico dimensionável consegue ultrapassar cada técnica de encriptação amplamente utilizada.  A criptografia clássica depende da dificuldade das operações em números grandes, como a fatorização de números grandes em dois números primos.  A computação quântica torna estas operações teoricamente possíveis (por via do algoritmo de Shor). Embora a implementação deste algoritmo não seja fisicamente possível com o dimensionamento atual do hardware quântico, gerou o desenvolvimento de algoritmos resistentes a ataques quânticos para uma segurança dos dados preparada para o futuro, incluindo algoritmos quânticos inovadores para encriptação e distribuição de chaves criptográficas.  Aqui na Microsoft, temos a equipa líder mundial em criptografia pós-quântica e algoritmos de desenvolvimento de segurança resistentes à quântica. 
+Talvez a aplicação mais famosa de computadores quânticos esteja em criptografia, em que Peter Shor demonstrou em 1994 que um computador quântico dimensionável consegue ultrapassar cada técnica de encriptação amplamente utilizada.  A criptografia clássica depende da dificuldade das operações em números grandes, como a fatorização de números grandes em dois números primos.
+
+A computação quântica torna estas operações teoricamente possíveis (por via do algoritmo de Shor). Embora a implementação deste algoritmo não seja fisicamente possível com o dimensionamento atual do hardware quântico, gerou o desenvolvimento de algoritmos resistentes a ataques quânticos para uma segurança dos dados preparada para o futuro, incluindo algoritmos quânticos inovadores para encriptação e distribuição de chaves criptográficas.
+
+Aqui na Microsoft, temos a equipa líder mundial em criptografia pós-quântica e algoritmos de desenvolvimento de segurança resistentes à quântica.
 
 ## <a name="optimization"></a>Otimização
 
-A otimização é a tarefa de executar uma pesquisa grande num espaço alto-dimensional para uma solução realmente boa que minimize uma determinada função de custo.   Num computador quântico, podemos acelerar os algoritmos de otimização ao encontrar soluções que de outra forma não seriam possíveis. As aplicações variam entre transporte e logística, saúde, diagnóstico e ciência materiais. Pode haver um impacto profundo sobre a forma como estes setores se podem tornar mais eficientes. 
+A otimização é a tarefa de executar uma pesquisa grande num espaço alto-dimensional para uma solução que minimize uma determinada função de custo.   Num computador quântico, podemos acelerar os algoritmos de otimização ao encontrar soluções que de outra forma não seriam possíveis. As aplicações variam entre transporte e logística, saúde, diagnóstico e ciência dos materiais. Pode haver um impacto profundo sobre a forma como estes setores se podem tornar mais eficientes.
 
-A otimização com a computação quântica permite-nos inovar em termos de transporte e logística de uma forma que não seria possível com os sistemas clássicos atuais. A otimização do fluxo de tráfego pode reduzir o congestionamento.  Além do planeamento de rotas, existe a atribuição de portas aéreas, entrega de pacotes, agendamento de tarefas e muito mais.  Com as inovações na ciência de materiais, existirão novas formas de energia, baterias com maior capacidade, materiais mais leves e mais fortes. 
+A otimização com a computação quântica permite-nos inovar em termos de transporte e logística de uma forma que não seria possível com os sistemas clássicos atuais.
+
+A otimização do fluxo de tráfego pode reduzir o congestionamento.  Além do planeamento de rotas, existe a atribuição de portas aéreas, entrega de pacotes, agendamento de tarefas e muito mais. Com as inovações na ciência de materiais, existirão novas formas de energia, baterias com maior capacidade, materiais mais leves e mais fortes.
 
 ## <a name="machine-learning"></a>Aprendizagem automática
 
-Grande parte dos cálculos numéricos na computação clássica consiste principalmente em resolver sistemas lineares de equações. Tal acontece sobretudo no campo da aprendizagem automática, onde a maior parte do custo da computação é atribuída ao cálculo do inverso de matrizes enormes.
+Grande parte dos cálculos numéricos na computação clássica consiste principalmente em resolver sistemas lineares de equações, o que acontece sobretudo no campo da aprendizagem automática, onde a maior parte do custo da computação é atribuída ao cálculo do inverso de matrizes enormes.
 
-Felizmente, existe um algoritmo quântico que nos permite solucionar aproximadamente o sistema de forma exponencialmente mais rápida do que um computador clássico, o que abre a porta a grandes acelerações em todos os problemas que precisem da solução para sistemas lineares de equações.
+Felizmente, existe um algoritmo quântico que nos permite solucionar aproximadamente o sistema de forma exponencialmente mais rápida do que um computador clássico. O algoritmo abre a porta a grandes acelerações em todos os problemas que precisem da solução para sistemas lineares de equações.
 
 Soluções para problemas nestas áreas ajudarão a resolver a crise energética, as alterações climáticas, a escassez de alimentos e o diagnóstico médico pessoal preciso.
 

@@ -1,6 +1,6 @@
 ### YamlMime:QSharpType
 uid: microsoft.quantum.extensions.convert.tostringd
-name: ToString
+name: ToStringD
 type: function
 namespace: Microsoft.Quantum.Extensions.Convert
 summary: >-
@@ -12,7 +12,7 @@ summary: >-
   Use @"microsoft.quantum.convert.doubleasstring".
 syntax: 'function ToStringD (a : Double) : String'
 input:
-  content: '(a: duplo)'
+  content: '(a : Double)'
   types:
   - name: a
     isPrimitive: true
@@ -22,9 +22,10 @@ output:
   types:
   - isPrimitive: true
     uid: String
-ms.openlocfilehash: 2eec8fae5d50a346515df00309e87d0255ecac4e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067429"
+metadata:
+  ms.openlocfilehash: 2eec8fae5d50a346515df00309e87d0255ecac4e
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067429"
