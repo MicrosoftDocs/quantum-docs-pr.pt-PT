@@ -3,22 +3,22 @@ uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Performs a single-qubit process tomography measurement in the Pauli basis, given a particular channel of interest.
-remarks: The distribution over results returned by this operation is a special case of two-qubit state tomography. Let $\rho = J(\Lambda) / 2$ be the Choi–Jamiłkowski state for $\Lambda$. Then, the distribution above is identical to $$ \begin{align} \Pr(\texttt{Zero} | \rho; M) = \operatorname{Tr}(M \rho), \end{align} $$ where $M = 2 (\boldone + P)^\mathrm{T} / 2 \cdot (\boldone + Q) / 2$ is the effective measurement corresponding to $P$ and $Q$.
+summary: Executa uma medida de tomography de processo de qubit único na base Pauli, dado um canal específico de interesse.
+remarks: A distribuição sobre os resultados retornados por essa operação é um caso especial de tomography de estado de duas qubit. Deixe que $ \rho = J (\Lambda)/$2 seja o estado Choi – Jamiłkowski para $ \Lambda $. Em seguida, a distribuição acima é idêntica a $ $ \begin{align} \Pr (\texttt{Zero} | \rho; M) = \operatorname{Tr} (M \rho), \end{Align} $ $, em que $M = 2 (\boldone + P) ^ \mathrm{T}/2 \cdot (\boldone + Q)/$2 é a medida efetiva correspondente a $P $ e $Q $.
 syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
 input:
   content: '(preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit))'
   types:
   - name: preparation
-    summary: The Pauli basis element $P$ in which a qubit is to be prepared.
+    summary: O elemento de base Pauli $P $ em que um qubit deve ser preparado.
     isPrimitive: true
     uid: Pauli
   - name: measurement
-    summary: The Pauli basis element $Q$ in which a qubit is to be measured.
+    summary: O elemento de base Pauli $Q $ no qual um qubit deve ser medido.
     isPrimitive: true
     uid: Pauli
   - name: channel
-    summary: A single qubit channel $\Lambda$ whose behavior is being estimated with process tomography.
+    summary: Um único qubit Channel $ \Lambda $ cujo comportamento está sendo estimado com o Process tomography.
     isOperation: true
     input:
       types:
@@ -32,14 +32,15 @@ output:
   content: Result
   types:
   - summary: >-
-      The Result `Zero` with probability $$ \begin{align} \Pr(\texttt{Zero} | \Lambda; P, Q) = \operatorname{Tr}\left( \frac{\boldone + Q}{2} \Lambda\left[ \frac{\boldone + P}{2} \right] \right).
+      O resultado `Zero` com probabilidade $ $ \begin{align} \Pr (\texttt{Zero} | \Lambda; P, Q) = \operatorname{Tr}\left (\frac{\boldone + Q}{2} \Lambda\left [\frac{\boldone + P}{2} \right] \right).
 
-      \end{align} $$
+      \end{align} $ $
     isPrimitive: true
     uid: Result
-ms.openlocfilehash: 48da4cd4d16a3466591c0c93710eed6b27a68fab
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73229026"
+metadata:
+  ms.openlocfilehash: 48da4cd4d16a3466591c0c93710eed6b27a68fab
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73229026"

@@ -11,20 +11,21 @@ remarks: >-
   Observe que o valor final definido de um intervalo pode ser diferente do último elemento na sequência especificada pelo intervalo; por exemplo, em um intervalo de 0.. 2.. 5 o último elemento é 4, mas o valor final é 5.
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
-  content: '(intervalo: intervalo)'
+  content: '(range : Range)'
   types:
-  - name: amplitude
+  - name: range
     isPrimitive: true
     uid: Range
 output:
-  content: inteiro
+  content: Int
   types:
   - summary: O valor final definido do intervalo especificado.
     isPrimitive: true
     uid: Int
-ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73066647"
+metadata:
+  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73066647"

@@ -6,22 +6,23 @@ namespace: Microsoft.Quantum.Simulation
 summary: Recupera o número de termos em um `GeneratorSystem`.
 syntax: 'function GetGeneratorSystemNTerms (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : Int'
 input:
-  content: '(generatorSystem: Microsoft. Quantum. Simulation. GeneratorSystem)'
+  content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
     summary: O `GeneratorSystem` de interesse.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
-  content: inteiro
+  content: Int
   types:
   - summary: O número de termos em um `GeneratorSystem`.
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
-ms.openlocfilehash: 007ef219bee6184197dde34f4594c2534c33ba6a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067463"
+metadata:
+  ms.openlocfilehash: 007ef219bee6184197dde34f4594c2534c33ba6a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067463"

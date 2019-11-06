@@ -9,9 +9,10 @@ remarks: >-
 
   Ambas as matrizes devem ter comprimento igual. Observe que em muitos casos, a primeira fase sobre o estado de início e a última fase sobre o estado de destino apresenta uma mudança de fase global e pode ser definida como $0 $.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
-ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73215562"
+metadata:
+  ms.openlocfilehash: ce9bab0540f70ac0115d5b7780437410e019a09b
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73215562"

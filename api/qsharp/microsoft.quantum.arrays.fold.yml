@@ -53,9 +53,10 @@ typeParameters:
   summary: O tipo de Estados no qual a função `folder` Opera, ou seja, aceita como seu primeiro argumento e retorna.
 - uid: "'T"
   summary: O tipo de elementos de `array`.
-ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73214355"
+metadata:
+  ms.openlocfilehash: 4be4752029b10351cfb3fe0fa6aa61b84b157510
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73214355"

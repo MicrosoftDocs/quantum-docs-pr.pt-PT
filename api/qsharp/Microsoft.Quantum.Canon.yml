@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.canon
-name: Microsoft. Quantum. Canon
+name: Microsoft.Quantum.Canon
 functions:
 - uid: microsoft.quantum.canon.asqubitarray
   summary: >-
@@ -936,9 +936,10 @@ newtypes:
     Uma pilha último a entrar, primeiro a sair de variáveis de `Result`.
 
     A pilha consiste em uma capacidade de inteiro, um ponteiro de pilha e uma `Result` matriz.
-ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065168"
+metadata:
+  ms.openlocfilehash: 8767d438adcecd7ccbd539d7c123ac42cfb8c295
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065168"

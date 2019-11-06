@@ -6,20 +6,21 @@ namespace: Microsoft.Quantum.Math
 summary: Retorna o valor absoluto de um número complexo de `ComplexPolar`de tipos.
 syntax: 'function AbsComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
 input:
-  content: '(entrada: Microsoft. Quantum. Math. ComplexPolar)'
+  content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
-  - name: entrada
+  - name: input
     summary: Número complexo $c = r e ^ {i t} $.
     uid: microsoft.quantum.math.complexpolar
 output:
-  content: Clique
+  content: Double
   types:
   - summary: Valor absoluto $ | c | = r $.
     isPrimitive: true
     uid: Double
-ms.openlocfilehash: e25535eab7813295ffac1fac52cbca122a233b7c
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73067531"
+metadata:
+  ms.openlocfilehash: e25535eab7813295ffac1fac52cbca122a233b7c
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73067531"

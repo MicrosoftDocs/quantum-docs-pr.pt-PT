@@ -4,23 +4,23 @@ name: NoOp
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Performs the identity operation (no-op) on an argument.
+  Executa a operação de identidade (não op) em um argumento.
 
 
-  This operation takes a value of any type and does nothing to it.
+  Essa operação usa um valor de qualquer tipo e não faz nada a ele.
 
-  This can be useful whenever an input of an operation type is expected, but no action should be taken.
+  Isso pode ser útil sempre que uma entrada de um tipo de operação é esperada, mas nenhuma ação deve ser executada.
 
-  For instance, if a particular error correction syndrome indicates that no error has occurred, `NoOp<Qubit[]>` may be the correct recovery procedure.
+  Por exemplo, se uma determinada síndrome de correção de erro indicar que nenhum erro ocorreu, `NoOp<Qubit[]>` pode ser o procedimento de recuperação correto.
 
-  Similarly, if an operation expects a state preparation procedure as input, `NoOp<Qubit[]>` can be used to prepare the state $\ket{0 \cdots 0}$.
-remarks: In almost all cases, the type parameter for `NoOp` needs to be specified explicitly. For instance, `NoOp<Qubit>` is identical to <xref:microsoft.quantum.intrinsic.i>.
+  Da mesma forma, se uma operação espera um procedimento de preparação de estado como entrada, `NoOp<Qubit[]>` pode ser usada para preparar o estado $ \ket{0 \cdots 0} $.
+remarks: Em quase todos os casos, o parâmetro de tipo para `NoOp` precisa ser especificado explicitamente. Por exemplo, `NoOp<Qubit>` é idêntica a <xref:microsoft.quantum.intrinsic.i>.
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
   types:
   - name: input
-    summary: A value to be ignored.
+    summary: Um valor a ser ignorado.
     uid: "'T"
     isLocal: true
 output:
@@ -33,9 +33,10 @@ functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.intrinsic.i
-ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73222685"
+metadata:
+  ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73222685"

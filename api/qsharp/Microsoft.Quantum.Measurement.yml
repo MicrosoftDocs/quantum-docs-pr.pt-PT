@@ -14,9 +14,10 @@ operations:
   summary: Mede um único qubit na base `Z` e o redefine para o estado base padrão | 0 〉 seguindo a medida.
 - uid: microsoft.quantum.measurement.multim
   summary: Mede cada qubit em uma determinada matriz na base padrão.
-ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210989"
+metadata:
+  ms.openlocfilehash: 872031f8a6ebd77e72cd74e1c98e7347c09ca14a
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73210989"

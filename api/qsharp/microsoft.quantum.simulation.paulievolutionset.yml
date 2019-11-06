@@ -10,13 +10,14 @@ input:
   content: ()
   types: []
 output:
-  content: Microsoft. Quantum. Simulation. Evolucionárioset
+  content: Microsoft.Quantum.Simulation.EvolutionSet
   types:
   - summary: Um `EvolutionSet` que mapeia um `GeneratorIndex` para a base Pauli para um ' EvolutionUnitary.
     uid: microsoft.quantum.simulation.evolutionset
-ms.openlocfilehash: cd1180caa3e2afeea044e409ddde9ac414a7ee84
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065389"
+metadata:
+  ms.openlocfilehash: cd1180caa3e2afeea044e409ddde9ac414a7ee84
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065389"

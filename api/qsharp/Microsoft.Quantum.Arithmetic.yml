@@ -1,6 +1,6 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
-name: Microsoft. Quantum. aritmético
+name: Microsoft.Quantum.Arithmetic
 summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções e operações usadas para calcular a aritmética coerente."
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
@@ -215,9 +215,10 @@ newtypes:
     Por exemplo, se $ \ket{x} $ for a codificação little-endian do inteiro $x $ na base computacional, $ \operatorname{QFTLE} \ket{x} $ será a codificação de $x $ na base QFT.
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Tipo de um inteiro assinado armazenado em little endian (consulte LittleEndian).
-ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73065151"
+metadata:
+  ms.openlocfilehash: 95a399e09ad5c1617c34a68302f9212a8ec4e0ad
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73065151"

@@ -42,9 +42,10 @@ typeParameters:
   summary: Tipo de entrada da função a ser convertida.
 - uid: "'Output"
   summary: Tipo de saída da função a ser convertida.
-ms.openlocfilehash: a58e2fc4f9c8f931b4020cb06abebdd94c642bd9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
-ms.translationtype: MT
-ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73220390"
+metadata:
+  ms.openlocfilehash: a58e2fc4f9c8f931b4020cb06abebdd94c642bd9
+  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 11/05/2019
+  ms.locfileid: "73220390"
