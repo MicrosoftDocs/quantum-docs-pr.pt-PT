@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 868d256270516cf99c228a757a11c6dc1a6319df
-ms.sourcegitcommit: c93fea5980d1d46fbda1e7c7153831b9337134bf
+ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
+ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73463331"
+ms.lasthandoff: 11/17/2019
+ms.locfileid: "74153319"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de Versão do Microsoft Quantum Development Kit
 
@@ -20,6 +20,17 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter as instruções de instalação, veja o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter as instruções de atualização, veja o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01019111607"></a>Versão 0.10.1911.1607
+
+*Data da versão: 17 de novembro de 2019*
+
+Esta versão contém o seguinte:
+
+- Correção de desempenho para [Quantum Katas](https://github.com/Microsoft/QuantumKatas) e blocos de notas Jupyter
+
+Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
 
 ## <a name="version-0101911307"></a>Versão 0.10.1911.307
 
