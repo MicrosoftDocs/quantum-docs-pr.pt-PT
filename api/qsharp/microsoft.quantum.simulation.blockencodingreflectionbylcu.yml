@@ -7,7 +7,7 @@ summary: >-
   Codifica um operador de interesse em um `BlockEncodingReflection`.
 
 
-  Isso constrói um `BlockEncodingReflection` unitário $U = P\cdot V\cdot P ^ \dagger $ que codifica algum operador $H = \sum_{j} | \alpha_j | U_j $ de interesse que é uma combinação linear de unidades. Normalmente, $P $ é uma \ket de preparação de estado, de modo que $P\|{0}\_a\sum_j\sqrt {\ alpha_j/\|\vec\alpha \_\_2} \ket{j} $ e $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
+  Isso constrói um `BlockEncodingReflection` unitário $U = P\cdot V\cdot P ^ \dagger $ que codifica algum operador $H = \ sum_ {j} | \ alpha_j | U_j $ de interesse que é uma combinação linear de unidades. Normalmente, $P $ é uma \ket de preparação de estado, de modo que $P \sqrt{\{0}\_a \ sum_j \ket{j} alpha_j/\|\vec\alpha\|\_2}\_a $ e $V = \ sum_ {j} \ket{j}\bra{j}\_a\otimes U_j $.
 remarks: Essa implementação de `BlockEncoding` fornece as propriedades de um `BlockEncodingReflection`.
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:

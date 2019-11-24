@@ -83,7 +83,7 @@ operations:
     Declara que a probabilidade de um estado específico de um registro Quantum tem o valor esperado.
 
 
-    Dado um estado de Quantum de $n $-qubit $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \alpha_j \ket{j} $, declara que a probabilidade $ | \alpha_j | ^ 2 $ do estado $ \ket{j} $ indexada por $j $ tem o valor esperado.
+    Dado um estado $n $-qubit Quantum $ \ket{\psi} = \sum ^ {2 ^ n-1} _ {j = 0} \ alpha_j \ket{j} $, declara que a probabilidade $ | \ alpha_j | ^ 2 $ do estado $ \ket{j} $ indexado por $j $ tem o valor esperado.
 - uid: microsoft.quantum.arithmetic.carry
   summary: Implementa uma porta de transporte reversível. Devido a um bit de transporte codificado em qubit `carryIn` e dois bits soma codificados em `summand1` e `summand2`, o computa o XOR de `carryIn`, `summand1` e `summand2` no qubit `summand2` e o transporte é XORed para qubit `carryOut`.
 - uid: microsoft.quantum.arithmetic.cascadeccnot
@@ -92,7 +92,7 @@ operations:
 
     A partir do qubits na posição 0 em ambos os registros como controles, CCNOT é aplicado ao qubit na posição 1 do registro de destino, então controlado pelo qubits na posição 1 atuando na qubit na posição 2 no registro de destino, etc., terminando com uma ação no qubit de destino na posição `Length(nQubits)-1`.
 - uid: microsoft.quantum.arithmetic.cascadecnot
-  summary: Implementa uma cascata de CNOT Gates no qubits vizinho em um determinado registro de qubit, começando do qubit na posição 0 como controle para o qubit na posição 1 como o destino e, em seguida, do qubit na posição 1 como o controle para o qubit na posição 2 como o destino , etc., terminando com qubit na posição `Length(register)-1` como o destino.
+  summary: Implementa uma cascata de CNOT Gates no qubits vizinho em um determinado registro de qubit, começando do qubit na posição 0 como controle para o qubit na posição 1 como o destino, em seguida, do qubit na posição 1 como o controle para o qubit na posição 2 como o destino, etc., terminando com o qubit na posição `Length(register)-1` como o destino.
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
   summary: Compara dois números de ponto fixo armazenados em registros de Quantum e controla uma inversão no resultado.
 - uid: microsoft.quantum.arithmetic.comparegti
@@ -179,19 +179,19 @@ operations:
   summary: >-
     Reversível, ondulado no local, adição de dois inteiros.
 
-    Considerando que dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros em que os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para o `carry`qubit.
+    Dadas dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros onde os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para qubit `carry`.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
   summary: >-
     Reversível, ondulado no local, adição de dois inteiros.
 
-    Considerando que dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros em que os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para o `carry`qubit.
+    Dadas dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros onde os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para qubit `carry`.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
   summary: Reversível, ondulado no local, adição de dois inteiros sem execução. Dado dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, a operação computa a soma dos dois módulos inteiros módulo $2 ^ n $, em que $n $ é o tamanho do bit `xs` e `ys`. Ele não computa o bit de execução.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
     Reversível, ondulado no local, adição de dois inteiros.
 
-    Considerando que dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros em que os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para o `carry`qubit.
+    Dadas dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros onde os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para qubit `carry`.
 - uid: microsoft.quantum.arithmetic.squarefxp
   summary: Quadrados de um número de ponto fixo.
 - uid: microsoft.quantum.arithmetic.squarei

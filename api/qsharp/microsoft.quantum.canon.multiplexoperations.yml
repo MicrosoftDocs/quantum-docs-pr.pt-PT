@@ -7,7 +7,7 @@ summary: >-
   Aplica uma matriz de operações controladas por uma matriz de Estados de número.
 
 
-  Ou seja, aplica a operação unitário controlada por multiplicação $U $ que aplica um _J unitário $V $ quando controlado pelo estado de número $n $-qubit $ \ket{j} $.
+  Ou seja, aplica a operação unitário controlada por multiplicação $U $ que aplica um $V unitário _j $ quando controlado $n pelo estado do número $ qubit $ \ket{j} $.
 
 
   $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -36,7 +36,7 @@ input:
     summary: $n o registro de controle $-qubit que codifica Estados de número $ \ket{j} $ no formato little-endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registro de qubit genérico que $V _J $ age em.
+    summary: Registro de qubit genérico que $V _j $ age em.
     uid: "'T"
     isLocal: true
 output:

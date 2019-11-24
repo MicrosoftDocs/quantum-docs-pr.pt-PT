@@ -4,7 +4,7 @@ name: AmpAmpByOracle
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: Algoritmo de amplificação de amplitude padrão
-remarks: Este é o algoritmo de amplificação de amplitude padrão obtido por uma opção de fases de reflexão computada por `AmpAmpPhasesStandard` supondo que \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ Text {Target} }\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} essa operação prepara o estado \begin{align} \operatorname{AmpAmpByOracle}\ket{0}\_{f} \ket{0}\_s = \sin ((2n + 1) \sin ^{-1}(\ lambda)) \ket{1}\_f\ket {\ Text {Target}}\_s + \cdots\ket{0}\_f \end{align} na maioria dos casos, `flagQubit` e `ancillaRegister` são inicializados no estado $ \ket{0}\_f\ket{0}@no__ t_25_ r $.
+remarks: Este é o algoritmo de amplificação de amplitude padrão obtido por uma opção de fases de reflexão computada por `AmpAmpPhasesStandard` supondo que \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ Text {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} esta operação prepara o estado \begin{align} \operatorname{AmpAmpByOracle}\ket{0}\_{f} \ket{0}\_s = \sin ((2n + 1) \sin ^{-1}(\ lambda)) \ket{1}\_f\ket {\ Text {Target}}\_s + \cdots\ket{0}\_f \end{align} na maioria dos casos, `flagQubit` e `ancillaRegister` são inicializados no estado $ \ket{0}\_f\ket{0}\_a $.
 syntax: 'function AmpAmpByOracle (nIterations : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 references: '- [*G. Brassard, P. Hoyer, M. mosca, A. Tapp*](https://arxiv.org/abs/quant-ph/0005055)'
 input:

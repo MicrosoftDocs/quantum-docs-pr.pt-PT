@@ -9,7 +9,7 @@ input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Coeficientes do polinomial como uma matriz Double, ou seja, a matriz $ [a_0, a_1,..., A_D] $ para o polinomial $P (x) = a_0 + a_1 x + \cdots + A_D x ^ d $.
+    summary: Coeficientes do polinomial como uma matriz Double, ou seja, a matriz $ [a_0, a_1,..., a_d] $ para o polinomial $P (x) = a_0 + a_1 x + \cdots + a_d x ^ d $.
     isArray: true
     isPrimitive: true
     uid: Double

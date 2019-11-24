@@ -15,7 +15,7 @@ input:
 output:
   content: Double
   types:
-  - summary: O logaritmo de base 2 $y = \log_2 (x) $, que $x = 2 ^ y $.
+  - summary: O logaritmo de base 2 $y = \ log_2 (x) $ desse tipo $x = 2 ^ y $.
     isPrimitive: true
     uid: Double
 metadata:

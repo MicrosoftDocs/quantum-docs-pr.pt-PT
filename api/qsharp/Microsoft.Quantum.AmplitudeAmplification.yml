@@ -26,7 +26,7 @@ functions:
     Constrói um `ReflectionOracle` sobre o estado de destino exclusivamente marcado pelo sinalizador qubit.
 
 
-    O estado de destino tem um único qubit definido como 1 e todos os outros 0: $ \ket{1}_F $.
+    O estado de destino tem um único qubit definido como 1 e todos os outros 0: $ \ket{1}_f $.
 operations:
 - uid: microsoft.quantum.amplitudeamplification.ampamprusbyoracle
   summary: Algoritmo de amplificação da amplitude de ponto fixo

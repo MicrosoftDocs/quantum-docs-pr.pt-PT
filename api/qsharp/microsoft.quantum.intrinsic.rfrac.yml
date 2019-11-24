@@ -7,7 +7,7 @@ summary: >-
   Aplica uma rotação sobre o eixo Pauli fornecido por um ângulo especificado como uma fração dyadic.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \sigma_{\mu}/2 ^ k}, \end{align} em que $ \mu na \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} em que $ \mu na \{I, X, Y, Z\}$.
 
 
   > [!WARNING]

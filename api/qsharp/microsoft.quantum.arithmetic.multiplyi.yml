@@ -7,7 +7,7 @@ summary: Número inteiro de multiplicação `xs` por inteiro `ys` e armazena o r
 remarks: >-
   Usa uma abordagem de mudança e adição padrão para implementar a multiplicação.
 
-  A versão controlada foi aprimorada copiando $x _i $ para uma ancilla qubit condição no qubits de controle e, em seguida, controlando a adição no ancilla qubit.
+  A versão controlada foi aprimorada copiando $x _i $ para um ancilla qubit condicionado no controle qubits e, em seguida, controlando a adição no ancilla qubit.
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'

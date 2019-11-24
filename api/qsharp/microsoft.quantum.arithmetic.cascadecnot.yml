@@ -3,7 +3,7 @@ uid: microsoft.quantum.arithmetic.cascadecnot
 name: CascadeCNOT
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Implementa uma cascata de CNOT Gates no qubits vizinho em um determinado registro de qubit, começando do qubit na posição 0 como controle para o qubit na posição 1 como o destino e, em seguida, do qubit na posição 1 como o controle para o qubit na posição 2 como o destino , etc., terminando com qubit na posição `Length(register)-1` como o destino.
+summary: Implementa uma cascata de CNOT Gates no qubits vizinho em um determinado registro de qubit, começando do qubit na posição 0 como controle para o qubit na posição 1 como o destino, em seguida, do qubit na posição 1 como o controle para o qubit na posição 2 como o destino, etc., terminando com o qubit na posição `Length(register)-1` como o destino.
 syntax: 'operation CascadeCNOT (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'

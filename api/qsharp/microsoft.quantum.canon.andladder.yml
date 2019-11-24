@@ -7,7 +7,7 @@ summary: >-
   Executa um ' e uma escada ' controlados no qubits de destino.
 
 
-  Isso aplica uma unitário fornecida pelo seguinte mapa em vetores de base computacional: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e em que $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
+  Isso aplica um unitário fornecido pelo seguinte mapa em vetores de base computacional: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e em que $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
 remarks: >-
   - Usado como parte de <xref:microsoft.quantum.canon.applymulticontrolledc> e <xref:microsoft.quantum.canon.applymulticontrolledca>.
 

@@ -14,7 +14,7 @@ summary: >-
 
   - O registro do sistema $s $, que armazenará o estado de Quantum desejado $ \ket{\psi}\_s $.
 remarks: >-
-  Este Oracle definido por $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots , $ $ age no estado de base computacional $ \ket{0}\_{f} \ket{0}\_s $ para criar o estado de destino $ \ket{\psi}\_s $ com amplitude $ \lambda $ na base sinalizada por $ \ket{1}\_f $.
+  Este Oracle definido por $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, $ $ age no estado de base computacional $ \ket{0}\_{f} \ket{0}\_s $ para criar o estado de destino $ \ket{\psi}\_s $ com amplitude $ \lambda $ na base sinalizada por $ \ket{1}\_f $.
 
   O primeiro parâmetro é um índice para o registro qubit de $ \ket{0}\_f $. O segundo parâmetro abrange ambos os registros.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);

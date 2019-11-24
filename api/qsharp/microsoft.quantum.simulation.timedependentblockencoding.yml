@@ -7,10 +7,10 @@ summary: >-
   Representa um `BlockEncoding` que é controlado por um registro de relógio.
 
 
-  Ou seja, um `TimeDependentBlockEncoding` é um $U unitário controlado por um estado $ \ket{k}_D $ no registro de relógio `d` de modo que um operador arbitrário $H _K $ de interesse que atue no registro do sistema `s` seja codificado no bloco superior esquerdo correspondente ao estado auxiliar $ \ket @no __t_3_ _A $. Isto é
+  Ou seja, um `TimeDependentBlockEncoding` é um $U unitário $ controlado por um estado $ \ket{k} _d $ no registro de relógio `d` de forma que um operador arbitrário $H _k $ de interesse que age no registro do sistema `s` seja codificado no bloco superior esquerdo correspondente ao estado auxiliar $ \ket{0}_a $. Isto é
 
 
-  $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \sum_{k}\ket{k}\bra{k}\_d\otimes H_k.
+  $ $ \begin{align} (\bra{0}\_a\otimes I_ {DS}) U (\ket{0}\_a\otimes I_ {DS}) = \ sum_ {k} \ket{k}\bra{k}\_d\otimes H_k.
 
   \end{align} $ $.
 syntax: newtype TimeDependentBlockEncoding = ((Qubit[], Qubit[], Qubit[]) => Unit is Adj + Ctl);

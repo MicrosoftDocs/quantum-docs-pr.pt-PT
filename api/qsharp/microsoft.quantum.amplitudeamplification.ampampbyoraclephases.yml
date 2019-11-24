@@ -9,7 +9,7 @@ remarks: >-
 
   Supõe-se que o estado de destino seja marcado por $ \ket{1}\_f $.
 
-  Presume-se que \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ Text {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots , \end{align} na maioria dos casos, `flagQubit` e `ancillaRegister` é inicializado no estado $ \ket{0}\_{f} \ket{0}\_s $.
+  Supõe-se que \begin{align} A\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ Text {Target}}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, \end{align} na maioria dos casos, `flagQubit` e `ancillaRegister` são inicializados no estado $ \ket{0}\_{f} \ket{0}\_s $.
 syntax: 'function AmpAmpByOraclePhases (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'

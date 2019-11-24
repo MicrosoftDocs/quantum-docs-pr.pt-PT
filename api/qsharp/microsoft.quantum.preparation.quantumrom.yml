@@ -7,11 +7,11 @@ summary: >-
   Usa a técnica de ROM Quantum para representar uma determinada matriz de densidade.
 
 
-  Dada uma lista de $N $ coeficientes $ \alpha_j $, isso retorna um unitário $U $ que usa a técnica Quantum-ROM para preparar uma aproximação $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ Bra {j} $ do Purification da matriz de densidade $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. Nessa aproximação, o erro $ \epsilon $ é de que $ | p_j-\frac{| alpha_j |} {\sum_k | \alpha_k |} | \le \epsilon/N $ e $\|\tilde\rho-\rho\| \le \epsilon $. Em outras palavras, $ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage}_J}.
+  Dada uma lista de $N $ coeficientes $ \ alpha_j $, isso retorna um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ do Purification da matriz de densidade $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Nessa aproximação, o erro $ \epsilon $ é de que $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ e $\|\tilde\rho-\rho\| \le \epsilon $. Em outras palavras, $ $ \begin{align} U\ket{0}^ {\lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
 
   \end{align} $ $
 examples: >-
-  O trecho de código a seguir prepara um Purification de $3 $-qubit State $ \rho = \sum_{j = 0} ^{4}\frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $, em que $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ e o erro é `1e-3`;
+  O trecho de código a seguir prepara um Purification de $3 $-qubit State $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, em que $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ e o erro é `1e-3`;
 
 
   ```qsharp
@@ -42,7 +42,7 @@ input:
     summary: >-
       Matriz de $N $ coeficientes especificando a probabilidade de Estados de base.
 
-      Números negativos $-\alpha_j $ serão tratados como $ | \alpha_j | $ positivos.
+      Números negativos $-\ alpha_j $ serão tratados como $ | \ alpha_j | $.
     isArray: true
     isPrimitive: true
     uid: Double
@@ -59,7 +59,7 @@ output:
       ## <a name="second-parameter"></a>Segundo parâmetro
 
 
-      A norma One-\sum_j | \alpha_j | $ da matriz de coeficiente.
+      A norma One-Activity $ \ sum_j | \ alpha_j | $ da matriz de coeficiente.
 
 
       ## <a name="third-parameter"></a>Terceiro parâmetro

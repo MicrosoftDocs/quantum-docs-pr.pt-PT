@@ -14,7 +14,7 @@ summary: >-
 
   - O sistema registra $s $ em que o unitário desejado $U $ é aplicado, post-Selected no registro $a $ estando no estado $ \ket{t}\_$.
 remarks: >-
-  Este Oracle definido por $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ age no ancilla State $ \ket{s}\_a $ para Implemente o unitário $U $ em qualquer estado do sistema $ \ket{\psi}\_s $ com amplitude $ \lambda $ na base sinalizada por $ \ket{t}\_um $.
+  Este Oracle definido por $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ age no estado ancilla $ \ket{s}\_um $ para implementar o unitário $U $ em qualquer estado do sistema $ \ket{\psi}\_s $ com amplitude $ \lambda $ na base sinalizada por $ \ket{t}\_a $.
 
   O primeiro parâmetro é o registro qubit de $ \ket{s}\_um $. O segundo parâmetro é o registro qubit de $ \ket{\psi}\_s $.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);

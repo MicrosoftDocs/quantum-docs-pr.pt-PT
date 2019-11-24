@@ -44,7 +44,7 @@ output:
   content: Double
   types:
   - summary: >-
-      Uma estimativa de $ \hat{p} $ da frequência com a qual $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retorna `Zero`, obtida usando o estimador binomial não polarizado $ \hat{p} = n\_{\uparrow}/n\_{\Text{Measurements}} $, em que $n\_{\ upseta} $ é o número de `Zero` resultados observados.
+      Uma estimativa de $ \hat{p} $ da frequência com a qual $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retorna `Zero`, obtida usando o estimador binomial não polarizado $ \hat{p} = n\_{\uparrow}/n\_{\Text{Measurements}} $, em que $n\_{\uparrow} $ é o número de `Zero` resultados observados.
 
 
       Isso é particularmente importante em computadores de destino que respeitam as limitações físicas, de modo que as probabilidades não podem ser medidas.

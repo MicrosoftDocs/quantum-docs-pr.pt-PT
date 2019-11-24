@@ -7,7 +7,7 @@ summary: >-
   Aplica uma rotação sobre o eixo de Pauli fornecido.
 
 
-  \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \sigma_{\mu}/2}, \end{Align}, em que $ \mu na \{I, X, Y, Z\}$.
+  \begin{align} R_ {\mu} (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_ {\mu}/2}, \end{align} em que $ \mu na \{I, X, Y, Z\}$.
 remarks: Quando chamado com `pauli = PauliI`, essa operação aplica uma *fase global*. Essa fase pode ser significativa quando usada com o `Controlled` functor.
 syntax: 'operation R (pauli : Pauli, theta : Double, qubit : Qubit) : Unit'
 input:
