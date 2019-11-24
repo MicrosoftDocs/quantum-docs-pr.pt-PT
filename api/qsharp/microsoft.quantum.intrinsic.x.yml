@@ -7,7 +7,7 @@ summary: >-
   Aplica a porta Pauli $X $.
 
 
-  \begin{align} \sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+  \begin{align} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
 
   \end{align}
 syntax: 'operation X (qubit : Qubit) : Unit'

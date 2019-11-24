@@ -7,10 +7,10 @@ summary: >-
   Representa um unitário em que um operador arbitrário de interesse é codificado no bloco superior esquerdo.
 
 
-  Ou seja, um `BlockEncoding` é um $U unitário $ em que um operador arbitrário $H $ de interesse que age no registro do sistema `s` é codificado no bloco superior esquerdo correspondente ao estado auxiliar $ \ket{0}_A $. Isto é
+  Ou seja, um `BlockEncoding` é um $U unitário $ em que um operador arbitrário $H $ de interesse que age no registro do sistema `s` é codificado no bloco superior esquerdo correspondente ao estado auxiliar $ \ket{0}_a $. Isto é
 
 
-  $ $ \begin{align} (\bra{0}_A \ OTimes I_s) U (\ket{0}_A \ OTimes I_s) = H \end{align} $ $.
+  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
   ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7

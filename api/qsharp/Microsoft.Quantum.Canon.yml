@@ -247,13 +247,13 @@ functions:
     > Preterido, use @"microsoft.quantum.math.modulusi".
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
-    Retorna uma operação unitário com controle de multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado de número n-qubit $ \ket{j} $.
+    Retorna uma operação unitário com controle de multiplicação $U $ que aplica um $V unitário _j $ quando controlado pelo estado do número n-qubit $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexerfromgenerator
   summary: >-
-    Retorna uma operação unitário com controle de multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado de número n-qubit $ \ket{j} $.
+    Retorna uma operação unitário com controle de multiplicação $U $ que aplica um $V unitário _j $ quando controlado pelo estado do número n-qubit $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -458,16 +458,16 @@ operations:
     Executa um ' e uma escada ' controlados no qubits de destino.
 
 
-    Isso aplica uma unitário fornecida pelo seguinte mapa em vetores de base computacional: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1 , \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e em que $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
+    Isso aplica um unitário fornecido pelo seguinte mapa em vetores de base computacional: $ $ \begin{align} \ket{x\_1, \dots, x\_n} \ket{y\_1, \dots, y\_{n-1}} \mapsto \ket{x\_1, \dots, x\_n} \ket{y\_1 \oplus (x\_1 \land x\_2), \dots, y\_{n-1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n-1}} , \end{Align} $ $, em que $ \ket{x\_1, \dots, x\_n} $ refere-se aos Estados de base computacional de `controls`e em que $ \ket{y\_1, \dots, y\_{n-1}} $ refere-se aos Estados de base computacional de `targets`.
 - uid: microsoft.quantum.canon.applydiagonalunitary
   summary: >-
     Aplica uma matriz de fases complexas a Estados de base numéricos de um registro de qubits.
 
 
-    Ou seja, isso implementa a operação de controle diagonal $U $ que aplica uma fase complexa $e ^ {i \theta_j} $ no estado de número $n $-qubit $ \ket{j} $.
+    Ou seja, isso implementa a operação de controle diagonal $U $ que aplica uma fase complexa $e ^ {i \ theta_j} $ no estado do número $n $-qubit $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ ket {j} \ Bra {j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Aplica a permuta Fermionic.
 - uid: microsoft.quantum.canon.applyif
@@ -752,7 +752,7 @@ operations:
     Computa a paridade de uma matriz de qubits em um qubit de destino.
 
 
-    Se a matriz estiver inicialmente no estado $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{Target}}} $, o estado final será fornecido por $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
+    Se a matriz estiver inicialmente no estado $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\Text{Target}}} $, o estado final será fornecido por $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
 - uid: microsoft.quantum.canon.copymostsignificantbitle
   summary: >-
     > [!WARNING]
@@ -763,19 +763,19 @@ operations:
     Aplica o portão X (CX) controlado a um par de qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $, em que linhas e colunas são organizadas como no guia de conceitos do Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{Align}, $ $, em que as linhas e colunas são organizadas como no guia de conceitos do Quantum.
 - uid: microsoft.quantum.canon.cy
   summary: >-
     Aplica a porta x (CY) controlada a um par de qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{align} , $ $, em que linhas e colunas são organizadas como no guia de conceitos do Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 &-i \\\\ 0 & 0 & i & 0 \end{Align}, $ $, em que as linhas e colunas são organizadas como no guia de conceitos do Quantum.
 - uid: microsoft.quantum.canon.cz
   summary: >-
     Aplica o portão-Z (CZ) controlado a um par de qubits.
 
 
-    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{align} , $ $, em que linhas e colunas são organizadas como no guia de conceitos do Quantum.
+    $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 0 & 0 &-1 \end{Align}, $ $, em que as linhas e colunas são organizadas como no guia de conceitos do Quantum.
 - uid: microsoft.quantum.canon.delay
   summary: Aplica uma determinada operação com um atraso.
 - uid: microsoft.quantum.canon.delaya
@@ -854,19 +854,19 @@ operations:
     Aplica uma matriz de operações controladas por uma matriz de Estados de número.
 
 
-    Ou seja, aplica a operação unitário controlada por multiplicação $U $ que aplica um _J unitário $V $ quando controlado pelo estado de número $n $-qubit $ \ket{j} $.
+    Ou seja, aplica a operação unitário controlada por multiplicação $U $ que aplica um $V unitário _j $ quando controlado $n pelo estado do número $ qubit $ \ket{j} $.
 
 
     $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexoperationsbruteforcefromgenerator
   summary: >-
-    Aplica a operação unitário controlada por multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado do número n-qubit $ \ket{j} $.
+    Aplica a operação unitário controlada por multiplicação $U $ que aplica um $V unitário _j $ quando controlado pelo estado do número n-qubit $ \ket{j} $.
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
 - uid: microsoft.quantum.canon.multiplexoperationsfromgenerator
   summary: >-
-    Aplica uma operação unitário com controle de multiplicação $U $ que aplica um unitário $V _J $ quando controlado pelo estado de número n-qubit $ \ket{j} $.
+    Aplica uma operação unitário com controle de multiplicação $U $ que aplica um $V unitário _j $ quando controlado pelo estado do número n-qubit $ \ket{j} $.
 
 
     $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
@@ -875,19 +875,19 @@ operations:
     Aplica uma rotação Pauli condição em uma matriz de qubits.
 
 
-    Isso aplica a operação unitário com controle de multiplicação $U $ que executa rotações por ângulo $ \theta_j $ sobre o operador Single-qubit Pauli $P $ quando controlado pelo estado do número $n $-qubit $ \ket{j} $.
+    Isso aplica a operação unitário com controle de multiplicação $U $ que executa rotações por meio do ângulo $ \ theta_j $ sobre o operador Pauli de qubit único $P $ quando controlado pelo $n $-qubit número estado $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i P \ theta_j} $.
 - uid: microsoft.quantum.canon.multiplexz
   summary: >-
     Aplica uma rotação de Pauli Z condicional em uma matriz de qubits.
 
 
-    Isso aplica a operação unitário com controle de multiplicação $U $ que executa rotações por ângulo $ \theta_j $ sobre o operador Single-qubit Pauli $Z $ quando controlado pelo estado do número $n $-qubit $ \ket{j} $.
+    Isso aplica a operação unitário com controle de multiplicação $U $ que executa rotações por meio do ângulo $ \ theta_j $ sobre o operador Pauli de qubit único $Z $ quando controlado pelo $n $-qubit número estado $ \ket{j} $.
 
 
-    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \theta_j} $.
+    $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes e ^ {i Z \ theta_j} $.
 - uid: microsoft.quantum.canon.noop
   summary: Executa a operação de identidade (não op) em um argumento.
 - uid: microsoft.quantum.canon.qft

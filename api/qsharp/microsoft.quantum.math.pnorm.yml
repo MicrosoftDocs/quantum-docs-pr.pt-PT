@@ -7,7 +7,7 @@ summary: >-
   Retorna a norma `L(p)` de um vetor de `Double`s.
 
 
-  Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna a $p $-norma $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $.
+  Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna a $p $-norma $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 syntax: 'function PNorm (p : Double, array : Double[]) : Double'
 input:
   content: '(p : Double, array : Double[])'

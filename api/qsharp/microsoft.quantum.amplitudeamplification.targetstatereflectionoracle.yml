@@ -7,7 +7,7 @@ summary: >-
   Constrói um `ReflectionOracle` sobre o estado de destino exclusivamente marcado pelo sinalizador qubit.
 
 
-  O estado de destino tem um único qubit definido como 1 e todos os outros 0: $ \ket{1}_F $.
+  O estado de destino tem um único qubit definido como 1 e todos os outros 0: $ \ket{1}_f $.
 syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(idxFlagQubit : Int)'
@@ -19,7 +19,7 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: Um `ReflectionOracle` que reflete o estado marcado por $ \ket{1}_F $.
+  - summary: Um `ReflectionOracle` que reflete o estado marcado por $ \ket{1}_f $.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle

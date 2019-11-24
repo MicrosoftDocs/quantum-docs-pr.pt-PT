@@ -7,7 +7,7 @@ summary: >-
   Entangles emparelhar dois registros de qubit.
 
 
-  Ou seja, dadas dois registros, o prepara o estado máximo de confusas $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ entre cada par de qubits nos respectivos registros, supondo que cada registro seja iniciado no $ \ket{0\ cdots 0} $ State.
+  Ou seja, dadas dois registros, o prepara o estado máximo de confusas $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ entre cada par de qubits nos respectivos registros, supondo que cada registro seja iniciado no estado $ \ket{0\cdots 0} $.
 syntax: 'operation PrepareEntangledState (left : Qubit[], right : Qubit[]) : Unit'
 input:
   content: '(left : Qubit[], right : Qubit[])'

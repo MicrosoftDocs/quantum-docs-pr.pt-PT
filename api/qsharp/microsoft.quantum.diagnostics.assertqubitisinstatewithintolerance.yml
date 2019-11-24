@@ -37,7 +37,7 @@ remarks: >-
   ```
 
 
-  A tolerância é a $L\_{\infty} $ Distance entre 3 vetores de dimensão real (x ₂, x ₃, x ₄) definido por $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ e real vector (Y ₂ , y ₃, y ₄) definido por ρ = y ₁ I + y ₂ X + y ₃ Y + y ₄ Z, em que ρ é a matriz de densidade correspondente ao estado do registro.
+  A tolerância é a $L\_{\infty} $ Distance entre 3 vetores de dimensão real (x ₂, x ₃, x ₄) definido por $ \langle\psi | \psi\rangle = x\_1 I + x\_2 X + x\_3 Y + x\_4 Z $ e real vector (y ₂, y ₃, y ₄) definido por ρ = y ₁ I + y ₂ X + y ₃ Y + Y ₄ Z, em que ρ é a matriz de densidade correspondente ao estado do registro.
 
   Isso só é verdade na suposição de que TR (ρ) e Tr (| ψ ⟩ ⟨ ψ |) são 1 (por exemplo, x ₁ = 1/2, y ₁ = 1/2).
 

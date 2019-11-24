@@ -7,7 +7,7 @@ summary: >-
   Aplica a porta Pauli $Z $.
 
 
-  \begin{align} \sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
+  \begin{align} \ sigma_z \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 &-1 \end{bmatrix}.
 
   \end{align}
 syntax: 'operation Z (qubit : Qubit) : Unit'

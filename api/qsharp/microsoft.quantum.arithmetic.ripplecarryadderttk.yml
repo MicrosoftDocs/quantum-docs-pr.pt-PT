@@ -6,7 +6,7 @@ namespace: Microsoft.Quantum.Arithmetic
 summary: >-
   Reversível, ondulado no local, adição de dois inteiros.
 
-  Considerando que dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros em que os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para o `carry`qubit.
+  Dadas dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros onde os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para qubit `carry`.
 remarks: Esta operação tem a mesma funcionalidade que RippleCarryAdderD e RippleCarryAdderCDKM, mas não usa nenhuma qubits de ancilla.
 syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-

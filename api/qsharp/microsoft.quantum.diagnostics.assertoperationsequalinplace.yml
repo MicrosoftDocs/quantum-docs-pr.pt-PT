@@ -7,7 +7,7 @@ summary: >-
   Dadas duas operações, afirma que elas agem de forma idêntica para todos os Estados de entrada.
 
 
-  Essa asserção é implementada verificando a ação das operações em todos os Estados do formulário $V _0 \otimes... \otimes V_ {n-1} $, em que $V _K $ é um dos Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ e $ \ket{i} $ (+ 1 eigenstate do operador Pauli Y).
+  Essa asserção é implementada verificando a ação das operações em todos os Estados do formulário $V _0 \otimes... \otimes V_ {n-1} $, em que $V _k $ é um dos Estados $ \ket{0}$, $ \ket{1}$, $ \ket{+} $ e $ \ket{i} $ (+ 1 eigenstate do operador Pauli Y).
 
 
   Essa declaração usa $n $ qubits e requer que várias chamadas das operações sejam comparadas.

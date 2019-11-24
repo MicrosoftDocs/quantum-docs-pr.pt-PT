@@ -21,7 +21,7 @@ input:
 output:
   content: Int
   types:
-  - summary: Um inteiro $i $ com probabilidade $ \Pr (i) = p_i/\sum_i p_i $, em que $p _i $ é o elemento $i $ th de `probs`.
+  - summary: Um inteiro $i $ com probabilidade $ \Pr (i) = p_i/\ sum_i p_i $, em que $p _i $ é o elemento $i $ th de `probs`.
     isPrimitive: true
     uid: Int
 metadata:

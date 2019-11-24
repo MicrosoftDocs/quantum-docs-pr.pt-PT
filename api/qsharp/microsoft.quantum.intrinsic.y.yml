@@ -7,7 +7,7 @@ summary: >-
   Aplica a porta Pauli $Y $.
 
 
-  \begin{align} \sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\\\ eu & 0 \end{bmatrix}.
+  \begin{align} \ sigma_y \mathrel{: =} \begin{bmatrix} 0 &-i \\\\ i & 0 \end{bmatrix}.
 
   \end{align}
 syntax: 'operation Y (qubit : Qubit) : Unit'

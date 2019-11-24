@@ -7,18 +7,18 @@ summary: >-
   Aplica uma matriz de fases complexas a Estados de base numéricos de um registro de qubits.
 
 
-  Ou seja, isso implementa a operação de controle diagonal $U $ que aplica uma fase complexa $e ^ {i \theta_j} $ no estado de número $n $-qubit $ \ket{j} $.
+  Ou seja, isso implementa a operação de controle diagonal $U $ que aplica uma fase complexa $e ^ {i \ theta_j} $ no estado do número $n $-qubit $ \ket{j} $.
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i\theta_j} \ ket {j} \ Bra {j} $.
-remarks: '`coefficients` será preenchido com os elementos $ \theta_j = $0 se menos de $2 ^ n $ forem especificados.'
+  $U = \sum ^ {2 ^ n-1} _ {j = 0} e ^ {i \ theta_j} \ket{j}\bra{j} $.
+remarks: '`coefficients` será preenchido com os elementos $ \ theta_j = $0 se menos de $2 ^ n $ forem especificados.'
 syntax: 'operation ApplyDiagonalUnitary (coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: '- Síntese de circuitos lógicos Quantum Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: coefficients
-    summary: Matriz de até $2 ^ n $ coeficientes $ \theta_j $. O coeficiente $j $ th indexa o estado de número $ \ket{j} $ codificado em um formato little-endian.
+    summary: Matriz de até $2 ^ n $ coeficientes $ \ theta_j $. O coeficiente $j $ th indexa o estado de número $ \ket{j} $ codificado em um formato little-endian.
     isArray: true
     isPrimitive: true
     uid: Double

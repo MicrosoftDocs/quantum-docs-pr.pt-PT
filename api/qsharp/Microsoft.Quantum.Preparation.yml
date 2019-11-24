@@ -14,7 +14,7 @@ functions:
     Usa a técnica de ROM Quantum para representar uma determinada matriz de densidade.
 
 
-    Dada uma lista de $N $ coeficientes $ \alpha_j $, isso retorna um unitário $U $ que usa a técnica Quantum-ROM para preparar uma aproximação $ \tilde\rho\sum_{j = 0} ^ {N-1} p_j\ket {j} \ Bra {j} $ do Purification da matriz de densidade $ \rho = \sum_{j = 0} ^ {N-1} \frac{| alpha_j |} {\sum_k | \alpha_k |} \ket{j}\bra{j} $. Nessa aproximação, o erro $ \epsilon $ é de que $ | p_j-\frac{| alpha_j |} {\sum_k | \alpha_k |} | \le \epsilon/N $ e $\|\tilde\rho-\rho\| \le \epsilon $. Em outras palavras, $ $ \begin{align} U\ket{0}^ {\lceil\log_2 N\rceil} \ ket{0}^ {m} = \sum_{j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage}_J}.
+    Dada uma lista de $N $ coeficientes $ \ alpha_j $, isso retorna um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ do Purification da matriz de densidade $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Nessa aproximação, o erro $ \epsilon $ é de que $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ e $\|\tilde\rho-\rho\| \le \epsilon $. Em outras palavras, $ $ \begin{align} U\ket{0}^ {\lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.quantumromqubitcount
@@ -24,10 +24,10 @@ functions:
     Retorna uma operação que prepara um estado de Quantum específico.
 
 
-    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes complexos $r _J e ^ {i t_j} $ do estado de base computacional $n $-qubit $ \ket{0...0} $.
+    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes complexos $r _j e ^ {i t_j} $ do estado de base computacional do $n $-qubit $ \ket{0...0} $.
 
 
-    A ação de U em um registro recém-alocado é fornecida por $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+    A ação de U em um registro recém-alocado é fornecida por $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
@@ -35,10 +35,10 @@ functions:
     Retorna uma operação que prepara o estado de Quantum fornecido.
 
 
-    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes positivos $ \alpha_j\ge $0 do estado de base computacional $n $-qubit $ \ket{0...0} $.
+    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes positivos $ \ alpha_j \ge $0 do estado de base computacional $n $-qubit $ \ket{0...0} $.
 
 
-    A ação de U em um registro recém-alocado é fornecida por $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} \alpha_j \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | \alpha_j | ^ 2}}.
+    A ação de U em um registro recém-alocado é fornecida por $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
 
     \end{align} $ $
 operations:
@@ -47,10 +47,10 @@ operations:
     Retorna uma operação que prepara um determinado estado de Quantum.
 
 
-    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes complexos $r _J e ^ {i t_j} $ do estado de base computacional $n $-qubit $ \ket{0...0} $.
+    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes complexos $r _j e ^ {i t_j} $ do estado de base computacional do $n $-qubit $ \ket{0...0} $.
 
 
-    $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\sum_{j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\sum_{j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+    $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
 
     \end{align} $ $
 - uid: microsoft.quantum.preparation.preparechoistate
@@ -66,7 +66,7 @@ operations:
     Entangles emparelhar dois registros de qubit.
 
 
-    Ou seja, dadas dois registros, o prepara o estado máximo de confusas $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ entre cada par de qubits nos respectivos registros, supondo que cada registro seja iniciado no $ \ket{0\ cdots 0} $ State.
+    Ou seja, dadas dois registros, o prepara o estado máximo de confusas $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ entre cada par de qubits nos respectivos registros, supondo que cada registro seja iniciado no estado $ \ket{0\cdots 0} $.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     Dado um registro, prepara esse registro no estado de forma máxima mista.
@@ -89,13 +89,13 @@ operations:
     Prepara um qubit no estado máximo misto.
 
 
-    Ele prepara o determinado qubit no estado $ \boldone/$2 aplicando o canal de despolarização $ $ \begin{align} \Omega (\rho) \mathrel{: =} \frac{1}{4} \sum_{\mu na \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\ Dagger}, \end{Align} $ $, em que $ \sigma\_i $ é o operador $i $ th Pauli e em que $ \rho $ é um operador de densidade que representa um estado misto.
+    Ele prepara o determinado qubit no estado $ \boldone/$2 aplicando o \rho de despolarização do canal $ $ \begin{align} \Omega (\mathrel{): =} \frac{1}{4} \ sum_ {\mu na \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{Align} $ $, em que $ \sigma\_i $ é o operador $i $ th Pauli e, em que $ \rho $ é um operador de densidade que representa um estado misto.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
     Cria uma superposição uniforme em Estados que codificam 0 a `nIndices`.
 
 
-    Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+    Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
 
     \end{align} $ $.
 metadata:

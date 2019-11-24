@@ -24,7 +24,7 @@ functions:
   summary: Retorna a operação de etapa Trotter e os parâmetros necessários para executá-lo.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
-  summary: Um unitário $U $ que aplica a cadeia de caracteres Pauli em $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ em qubits $0.. p $ conditioned em um índice $z na\{0, 1\}$ e $p $. Ou seja, $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0\ket {\ psi} \end{align} $ $
+  summary: Um unitário $U $ que aplica a cadeia de caracteres Pauli em $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ em qubits $0.. p $ conditioned em um índice $z na\{0, 1\}$ e $p $. Ou seja, $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesingleconfigurationalstatesinglesiteoccupation
   summary: Preparação de estado simples do estado de avaliação ocupando giros de rotação
 - uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate

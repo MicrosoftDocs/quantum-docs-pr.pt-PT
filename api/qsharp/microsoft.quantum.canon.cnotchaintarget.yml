@@ -7,7 +7,7 @@ summary: >-
   Computa a paridade de uma matriz de qubits em um qubit de destino.
 
 
-  Se a matriz estiver inicialmente no estado $ \ket{q_0} \ket{q_1} \cdots \ket{q_{\Text{Target}}} $, o estado final será fornecido por $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
+  Se a matriz estiver inicialmente no estado $ \ket{q_0} \ket{q_1} \cdots \ket{q_ {\Text{Target}}} $, o estado final será fornecido por $ \ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_ {n-1} \oplus \cdots \oplus q_0 \oplus q_ {\Text{Target}}} $.
 remarks: >-
   Os itens a seguir são equivalentes:
 
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  e em
+  e
 
 
   ```qsharp
