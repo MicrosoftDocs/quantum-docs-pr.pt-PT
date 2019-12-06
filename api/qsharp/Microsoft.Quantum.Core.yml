@@ -3,6 +3,8 @@ uid: microsoft.quantum.core
 name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace inclui funções e operações do p # Core.\n\n # <a name=\"remarks\"></a>Observações\n Esse namespace é aberto automaticamente pelo compilador Q #, de modo que todos os elementos desse namespace estejam sempre disponíveis."
 functions:
+- uid: microsoft.quantum.core.default
+  summary: Retorna uma instância padrão do tipo especificado.
 - uid: microsoft.quantum.core.length
   summary: Retorna o número de elementos em uma matriz.
 - uid: microsoft.quantum.core.rangeend
@@ -13,10 +15,17 @@ functions:
   summary: Retorna o valor inicial definido do intervalo especificado.
 - uid: microsoft.quantum.core.rangestep
   summary: Retorna o inteiro que especifica como o próximo valor de um intervalo é calculado.
+newtypes:
+- uid: microsoft.quantum.core.attribute
+  summary: Atributo reconhecido pelo compilador usado para marcar os tipos definidos pelo usuário como atributos.
+- uid: microsoft.quantum.core.deprecated
+  summary: Atributo reconhecido pelo compilador usado para marcar um tipo ou chamável como preterido.
+- uid: microsoft.quantum.core.entrypoint
+  summary: Atributo reconhecido pelo compilador usado para marcar o ponto de entrada de um executável.
 metadata:
-  ms.openlocfilehash: 41c28f8e8e11990ec1cf9b315478996a1e0811f4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6391521907deddbf4425b927b1dec12e73f0ee5d
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056897"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858586"

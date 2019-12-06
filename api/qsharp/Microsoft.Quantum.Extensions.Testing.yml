@@ -3,55 +3,25 @@ uid: microsoft.quantum.extensions.testing
 name: Microsoft.Quantum.Extensions.Testing
 operations:
 - uid: microsoft.quantum.extensions.testing.assertallzero
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertallzero".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertAllZero foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertallzero\".\nUse @\"microsoft.quantum.diagnostics.assertallzero\"."
 - uid: microsoft.quantum.extensions.testing.assertallzerotol
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertallzerowithintolerance".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertAllZeroTol foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\".\nUse @\"microsoft.quantum.diagnostics.assertallzerowithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
-
-    Observe que a ordem dos argumentos para esta operação foi alterada.
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertOperationsEqualInPlace foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplace\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalinplacecompbasis
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis".
-
-    Observe que a ordem dos argumentos para esta operação foi alterada.
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertOperationsEqualInPlaceCompBasis foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis\".\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalinplaceCompBasis\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
 - uid: microsoft.quantum.extensions.testing.assertoperationsequalreferenced
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertoperationsequalreferenced".
-
-    Observe que a ordem dos argumentos para esta operação foi alterada.
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertOperationsEqualReferenced foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nUse @\"microsoft.quantum.diagnostics.assertoperationsequalreferenced\".\nObserve que a ordem dos argumentos para esta operação foi alterada."
 - uid: microsoft.quantum.extensions.testing.assertqubit
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertqubit".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertQubit foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertqubit\".\nUse @\"microsoft.quantum.diagnostics.assertqubit\"."
 - uid: microsoft.quantum.extensions.testing.assertqubitstate
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertQubitState foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\".\nUse @\"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance\"."
 - uid: microsoft.quantum.extensions.testing.assertqubittol
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.diagnostics.assertqubitwithintolerance".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertQubitTol foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\".\nUse @\"microsoft.quantum.diagnostics.assertqubitwithintolerance\"."
 metadata:
-  ms.openlocfilehash: 031bbd476ac37f113f9fb692ccd6fca916612ac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0d06129c66f13c8c5ee9158ef6be41bf447791f9
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210356"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858419"
