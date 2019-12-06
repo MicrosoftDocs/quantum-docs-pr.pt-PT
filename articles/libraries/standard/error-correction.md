@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5aac40686ba9b45a51e0274a1828f2ff7cce6fc3
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: e1b78cf94ae0a043ad275d4cb06b230eafd7fc85
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184445"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863202"
 ---
 # <a name="error-correction"></a>Correção de erro #
 
@@ -28,7 +28,7 @@ Na configuração Quantum, veremos que a medida é problemática. Ainda podemos 
 É útil fazer isso para ver como é possível generalizar a correção de erro para o caso Quantum.
 Portanto, permita que $ \ket{\overline{0}} = \ket{000} = \ket{0} \otimes \ket{0} \otimes \ket{0}$ e permita que $ \ket{\overline{1}} = \ket{111}$.
 Em seguida, por linearidade, definimos nosso código de repetição para todas as entradas; por exemplo, $ \ket{\overline{+}} = (\ket{\overline{0}} + \ket{\overline{1}})/\sqrt{2} = (\ket{000} + \ket{111})/\sqrt{2}$.
-Em particular, deixando um erro de inversão $X o _1 $ Act no meio qubit, vemos que a correção necessária em ambas as ramificações é precisamente $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket @no__ t_3_ \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
+Em particular, deixando um erro de inversão $X _1 $ Act no meio qubit, vemos que a correção necessária em ambos os branches é precisamente $X _1 $: $ $ \begin{align} X_1 \ket{\overline{+}} & = \frac{1}{\sqrt{2}} \left (X_1 \ket{000} + X_1 \ket{111} \right) \\\\ & = \frac{1}{\sqrt{2}} \left (\ket{010} + \ket{101} \right).
 \end{align} $ $
 
 Para ver como podemos identificar que esse é o caso sem medir o estado que estamos tentando proteger, é útil anotar o que significa cada erro de inversão de bit diferente para nossos Estados lógicos:
@@ -44,10 +44,10 @@ Para proteger o estado que estamos codificando, precisamos ser capaz de distingu
 Por exemplo, se medirmos $Z _0 $, obteremos um resultado diferente para $ \ket{\overline{0}} $ e $ \ket{\overline{1}} $ no caso no-Error, para que recolha o estado codificado.
 Por outro lado, considere medir $Z _0 Z_1 $, a paridade dos dois primeiros bits em cada Estado de base computacional.
 Lembre-se de que cada medida de um operador Pauli verifica a qual eigenvalue o estado que está sendo medido corresponde a, portanto, para cada Estado $ \ket{\psi} $ na tabela acima, podemos calcular $Z _0 Z_1 \ket{\psi} $ para ver se obtemos $ \pm\ket{\psi} $.
-Observe que $Z _0 Z_1 \ket{000} = \ket{000}$ e $Z _0 Z_1 \ket{111} = \ket{111}$, para que possamos concluir que essa medida faz a mesma coisa para ambos os Estados codificados.
+Observe que $Z _0 Z_1 \ket{000} = \ket{000}$ e $Z _0 Z_1 \ket{111} = \ket{111}$, de modo que concluímos que essa medida faz a mesma coisa para ambos os Estados codificados.
 Por outro lado, $Z _0 Z_1 \ket{100} =-\ket{100}$ e $Z _0 Z_1 \ket{011} =-\ket{011}$, portanto, o resultado da medição $Z _0 Z_1 $ revela informações úteis sobre o erro ocorrido.
 
-Para enfatizar isso, repetimos a tabela acima, mas adiciono os resultados da medição $Z _0 Z_1 $ e $Z _1 Z_2 $ em cada linha.
+Para enfatizar isso, repetimos a tabela acima, mas adiciono os resultados da medição de $Z _0 Z_1 $ e $Z _1 Z_2 $ em cada linha.
 Nós denotamos os resultados de cada medição pelo sinal do eigenvalue observado, $ + $ ou $-$, que corresponde aos valores de `Result` Q # de `Zero` e `One`, respectivamente.
 
 | Erro $E $ | $E \ket{\overline{0}} $ | $E \ket{\overline{1}} $ | Resultado de $Z _0 Z_1 $ | Resultado de $Z _1 Z_2 $ |
@@ -67,7 +67,7 @@ Em particular, enfatizamos que a recuperação é um procedimento de inferência
 > Da mesma forma, aplicar uma operação de inversão de fase `Z` mapeará $ \ket{\overline{1}} $ para $-\ket{\overline{1}} $ e, portanto, mapeará $ \ket{\overline{+}} $ para $ \ket{\overline{-}} $.
 > Em geral, os códigos podem ser criados para lidar com um número maior de erros e para manipular $Z $ erros, bem como $X $ erros.
 
-O insight que podemos descrever as medidas na correção de erro Quantum que atuam da mesma forma em todos os Estados de código, é o essense da *forma formal do estabilizador*.
+A percepção de que podemos descrever as medidas na correção de erro Quantum que atuam da mesma forma em todos os Estados de código, é a essência do *semiformal do estabilizador*.
 O Q # Canon fornece uma estrutura para descrever a codificação e decodificação de códigos de estabilizador e para descrever como um se recupera de erros.
 Nesta seção, descrevemos essa estrutura e seu aplicativo com alguns códigos de correção de erro de Quantum simples.
 
@@ -117,6 +117,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Exploraremos isso mais detalhadamente na [amostra de código de inversão de bits](https://github.com/Microsoft/Quantum/tree/master/Samples/src/BitFlipCode).
+Exploraremos isso mais detalhadamente na [amostra de código de inversão de bits](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code).
 
-Além do código de inversão de bits, o Q # Canon é fornecido com implementações do [código perfeito de cinco qubit](https://arxiv.org/abs/1305.08)e o [código de sete qubit](https://arxiv.org/abs/quant-ph/9705052), que pode corrigir um erro arbitrário de qubit único.
+Além do código de inversão de bits, o Q # Canon é fornecido com implementações do [código perfeito de cinco qubit](https://arxiv.org/abs/quant-ph/9602019)e o [código de sete qubit](https://arxiv.org/abs/quant-ph/9705052), que pode corrigir um erro arbitrário de qubit único.

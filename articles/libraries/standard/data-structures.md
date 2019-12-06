@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e8b28561f1aba37cb5bf41c6176386d19bfacf06
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 6eb47de84fdfbb9d35fdfc2988883f8e1cffa332
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184513"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864360"
 ---
 # <a name="data-structures-and-modeling"></a>Estruturas de dados e modelagem #
 
@@ -20,7 +20,7 @@ ms.locfileid: "73184513"
 Juntamente com tipos definidos pelo usuário para representar conceitos de Quantum, a Canon também fornece operações, funções e tipos para trabalhar com dados clássicos usados no controle de sistemas Quantum.
 Por exemplo, a função <xref:microsoft.quantum.arrays.reversed> usa uma matriz como entrada e retorna a mesma matriz na ordem inversa.
 Isso pode ser usado em uma matriz do tipo `Qubit[]` para evitar a necessidade de aplicar Gates $ \operatorname{SWAP} $ desnecessários ao converter entre representações de Quantum de inteiros.
-Da mesma forma, vimos na seção anterior que tipos do formulário `(Int, Int -> T)` podem ser úteis para representar coleções de acesso aleatório, de modo que a função <xref:microsoft.quantum.arrays.lookupfunction> fornece uma maneira convienent de construir tais tipos de tipos de matriz.
+Da mesma forma, vimos na seção anterior que tipos do formulário `(Int, Int -> T)` podem ser úteis para representar coleções de acesso aleatório, de modo que a função <xref:microsoft.quantum.arrays.lookupfunction> fornece uma maneira conveniente de construir tais tipos de tipos de matriz.
 
 ### <a name="pairs"></a>Pares ###
 
@@ -31,7 +31,7 @@ let pair = (PauliZ, register); // type (Pauli, Qubit[])
 ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ```
 
-### <a name="arrays"></a>Storage ###
+### <a name="arrays"></a>Matrizes ###
 
 A Canon fornece várias funções para manipular matrizes.
 Essas funções são de tipo parametrizado e, portanto, podem ser usadas com matrizes de qualquer tipo Q #.
@@ -73,11 +73,11 @@ Aqui, o termo Oracle se refere a uma sub-rotina Quantum Blackbox que age em um c
 Essa sub-rotina muitas vezes pode ser considerada como uma entrada para um algoritmo Quantum que aceita o Oracle, além de alguns outros parâmetros, e aplica uma série de operações Quantum e tratando uma chamada para essa sub-rotina Quantum como se fosse um portão fundamental.
 Obviamente, para realmente implementar o algoritmo maior, uma decomposição concreta do Oracle em Gates fundamentais deve ser fornecida, mas essa decomposição não é necessária para entender o algoritmo que chama o Oracle.
 Em Q #, essa abstração é representada usando essas operações são valores de primeira classe, de modo que as operações podem ser passadas para implementações de algoritmos Quantum de uma maneira preta.
-Além disso, os tipos definidos pelo usuário são usados para rotular as diferentes representações do Oracle de forma segura, dificultando acidentalmente a definição de diferentes tipos de operações de caixa preta.
+Além disso, os tipos definidos pelo usuário são usados para rotular as diferentes representações do Oracle de forma segura, o que dificulta a deflatia acidentalmente tipos diferentes de operações de caixa preta.
 
 Esses Oracle são exibidos em vários contextos diferentes, incluindo exemplos famosos, como os algoritmos de simulação de pesquisa e Quantum [do Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) .
 Aqui, nos concentramos nos Oracle necessários apenas para dois aplicativos: amplificação de amplitude e estimativa de fase.
-Primeiro, discutiremos a amplitude de amplificações Oracle antes de se propassar à estimativa de fase.
+Primeiro, discutiremos a amplitude de amplificações Oracle antes de prosseguir para a estimativa de fase.
 
 ### <a name="amplitude-amplification-oracles"></a>Soluções de amplificação de amplitude Oracle ###
 
@@ -145,20 +145,20 @@ is Adj + Ctl {
 }
 ```
 
-Em seguida, podemos combinar esses dois Oracle juntos para girar entre os dois Estados e transformar de forma determinística $ \ket{+} ^ {\otimes n} $ para $ \ket{0}$ usando várias camadas de Hadamard Gates que é proporcional a $ \sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) versus as aproximadamente $2 ^ n $ camadas que seriam necessárias para preparar de forma não determinística o estado de{0}$ $ \ket $ preparando e medindo o estado inicial até que o resultado $0 $ seja observado.
+Em seguida, podemos combinar esses dois Oracle juntos para girar entre os dois Estados e transformar de forma determinística $ \ket{+} ^ {\otimes n} $ para $ \ket{0}$ usando várias camadas de Hadamard Gates que é proporcional a $ \sqrt{2 ^ n} $ (IE $m \propto \sqrt{2 ^ n} $) versus as aproximadamente $2 ^ n $ camadas que seriam necessárias para preparar de forma não determinística o estado $ \ket{0}$, preparando e medindo o estado inicial até que o resultado $0 $ seja observado.
 
 ### <a name="phase-estimation-oracles"></a>Estimativa de fase Oracle ###
 
 Para a estimativa de fase, os Oracle são um pouco mais naturais.
 A estimativa de objetivo na fase é criar uma sub-rotina capaz de amostragem da eigenvalues de uma matriz unitário.
-Esse método é indispensáveis na simulação do Quantum porque, para muitos problemas físicos em química e ciência de material, esses eigenvalues fornecem o energias de estado de terra de sistemas Quantum que fornece informações valiosas sobre os diagramas de fase do dinâmica de materiais e reação para moléculas.
+Esse método é indispensável na simulação do Quantum porque, para muitos problemas físicos em química e ciência de material, esses eigenvalues fornecem a energias de estado de aterramento de sistemas Quantum que fornece informações valiosas sobre os diagramas de fase do dinâmica de materiais e reação para moléculas.
 Cada tipo de estimativa de fase precisa de uma entrada unitário.
 Essa unitário é normalmente descrita por um dos dois tipos de Oracle.
 
 > [!TIP]
 > Os dois tipos de Oracle descritos abaixo são abordados nos exemplos.
-> Para saber mais sobre Oracle de consulta contínua, consulte o exemplo de [ **PhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/PhaseEstimation).
-> Para saber mais sobre Oracle de consulta discreta, consulte o exemplo de [ **IsingPhaseEstimation** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingPhaseEstimation).
+> Para saber mais sobre Oracle de consulta contínua, consulte o exemplo de [ **PhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
+> Para saber mais sobre Oracle de consulta discreta, consulte o exemplo de [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 O primeiro tipo de Oracle, que chamamos de uma consulta discreta da Oracle e que representam com o tipo definido pelo usuário <xref:microsoft.quantum.oracles.discreteoracle>, simplesmente envolve uma matriz unitário.
 Se $U $ é o unitário cujo eigenvalues desejamos estimar, o Oracle for $U $ é simplesmente um substituto para uma sub-rotina que implementa $U $.
@@ -186,7 +186,7 @@ Isso é importante para preencher todos os últimos onças de eficiência dos al
 
 Como um exemplo concreto disso, considere o problema de estimar não o ângulo de rotação de um portão, mas a frequência de processamento de um sistema Quantum rotativo.
 O unitário que descreve tal dinâmica de Quantum é $U (t) = R_z (2 \ ômega t) $ para tempo de evolução $t $ e frequência desconhecida $ \omega $.
-Nesse contexto, podemos simular $U (t) $ para qualquer $t $ usando uma única porta de $R _z $ e, como tal, não é necessário se restringir a apenas consultas discretas para o unitário.
+Nesse contexto, podemos simular $U (t) $ para qualquer $t $ usando uma única $R _z $ Gate e, como tal, não é necessário restringir apenas as consultas discretas para o unitário.
 Esse modelo contínuo também tem a propriedade que as frequências maiores que $2 \ PI $ podem ser aprendidas dos processos de estimativa de fase que usam consultas contínuas, pois as informações da fase que, de outra forma, seriam mascaradas pelos recortes de ramificação da função logarítmica podem ser revelado dos resultados de experimentos executados em valores não proporcionals de $t $.
 Portanto, para problemas como esses modelos de consulta contínua para a estimativa de fase, o Oracle não é apenas apropriado, mas também é preferível ao modelo de consulta discreto.
 Por esse motivo, Q # tem funcionalidade para ambos os formulários de consultas e deixá-lo para o usuário decidir sobre um algoritmo de estimativa de fase para atender às suas necessidades e o tipo de Oracle que está disponível.
@@ -199,17 +199,17 @@ Um objetivo principal da simulação dinâmica é implementar o operador tempo-e
 
 $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j, \end{align} $ $
 
-onde a evolução de tempo de cada termo sozinho é fácil de implementar em um computador Quantum. Por exemplo, se $H _J $ for um operador Pauli $X _1X_2 $ atuando nos elementos 1 e 2 do `qubits`de registro de qubit, a evolução do tempo por ti para qualquer momento $t $ pode ser implementado simplesmente chamando a operação `Exp([PauliX,PauliX], t, qubits[1..2])`, que tem assinatura `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`. Conforme discutido posteriormente na simulação de Hamiltonian, uma solução é aproximar a evolução do tempo por $H $ com uma sequência de operações mais simples
+onde a evolução de tempo de cada termo sozinho é fácil de implementar em um computador Quantum. Por exemplo, se $H _j $ for um operador Pauli $X _1X_2 $ atuando nos elementos 1 e 2 da `qubits`de registro qubit, a evolução do tempo por ti para qualquer momento $t $ pode ser implementada simplesmente chamando a operação `Exp([PauliX,PauliX], t, qubits[1..2])`, que tem assinatura `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)`. Conforme discutido posteriormente na simulação de Hamiltonian, uma solução é aproximar a evolução do tempo por $H $ com uma sequência de operações mais simples
 
-$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
+$ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j \\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $
 
 em que o inteiro $r > $0 controla o erro de aproximação.
 
 A biblioteca de modelagem de gerador dinâmico fornece uma estrutura para codificar sistematicamente geradores complicados em termos de geradores mais simples. Essa descrição pode então ser passada para, digamos, a biblioteca de simulações para implementar a evolução do tempo por um algoritmo de simulação de escolha, com muitos detalhes automaticamente resolvidos.
 
 > [!TIP]
-> A biblioteca de gerador dinâmico descrita abaixo é abordada nos exemplos. Para obter um exemplo baseado no modelo Ising, consulte o exemplo [ **IsingGenerators** ](https://github.com/Microsoft/Quantum/tree/master/Samples/src/IsingGenerators).
-> Para obter um exemplo baseado em molecular Hydrogen, consulte os exemplos de [**H2SimulationCmdLine**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationCmdLine) e [**H2SimulationGUI**](https://github.com/Microsoft/Quantum/tree/master/Samples/src/H2SimulationGUI) .
+> A biblioteca de gerador dinâmico descrita abaixo é abordada nos exemplos. Para obter um exemplo baseado no modelo Ising, consulte o exemplo [ **IsingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
+> Para obter um exemplo baseado em molecular Hydrogen, consulte os exemplos de [**H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) e [**H2SimulationGUI**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui) .
 
 ### <a name="complete-description-of-a-generator"></a>Descrição completa de um gerador ###
 
@@ -225,7 +225,7 @@ O tipo de `GeneratorSystem` definido pelo usuário é uma descrição clássica 
 newtype GeneratorSystem = (Int, (Int -> GeneratorIndex));
 ```
 
-O primeiro elemento `Int` da tupla armazena o número de termos $d $ no Hamiltonian, e o segundo elemento `(Int -> GeneratorIndex)` é uma função que mapeia um índice de número inteiro em $\{0, 1,..., d-1\}$ para um tipo de `GeneratorIndex` definido pelo usuário que identifica exclusivamente cada um termo primitivo no Hamiltonian. Observe que, ao expressar a coleção de termos no Hamiltonian como uma função, em vez de como uma matriz `GeneratorIndex[]`, isso permite a computação imediata da `GeneratorIndex`, o que é especialmente útil ao descrever Hamiltonians com um grande número de termos.
+O primeiro elemento `Int` da tupla armazena o número de termos $d $ no Hamiltonian, e o segundo elemento `(Int -> GeneratorIndex)` é uma função que mapeia um índice inteiro em $\{0, 1,..., d-1\}$ para um tipo de `GeneratorIndex` definido pelo usuário que identifica exclusivamente cada termo primitivo no Hamiltonian. Observe que, ao expressar a coleção de termos no Hamiltonian como uma função, em vez de como uma matriz `GeneratorIndex[]`, isso permite a computação imediata da `GeneratorIndex`, o que é especialmente útil ao descrever Hamiltonians com um grande número de termos.
 
 Crucialmente, não impõem uma Convenção sobre quais termos primitivos identificados pela `GeneratorIndex` são fáceis de simular. Por exemplo, os termos primitivos podem ser operadores Pauli como discutidos acima, mas também podem ser Fermionic Annihilation e operadores de criação comumente usados na simulação química do Quantum. Por si só, um `GeneratorIndex` não faz sentido, pois não descreve como a evolução do tempo pelo termo que ele aponta pode ser implementada como um circuito Quantum.
 
@@ -238,13 +238,13 @@ newtype EvolutionSet = (GeneratorIndex -> EvolutionUnitary);
 ### <a name="pauli-operator-generators"></a>Geradores do operador Pauli ###
 
 Um exemplo concreto e útil de geradores são Hamiltonians que são uma soma dos operadores Pauli, cada um possivelmente com um coeficiente diferente.
-$ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{Align} $ $, em que cada $ \hat H_j $ agora é desenhado do grupo Pauli. Para esses sistemas, fornecemos o `PauliEvolutionSet()` do tipo `EvolutionSet` que define uma Convenção de como um elemento do grupo Pauli e um coeficiente pode ser identificado por um `GeneratorIndex`, que tem a assinatura a seguir.
+$ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} a_j H_j, \end{Align} $ $, em que cada $ \hat H_j $ é agora desenhado do grupo Pauli. Para esses sistemas, fornecemos o `PauliEvolutionSet()` do tipo `EvolutionSet` que define uma Convenção de como um elemento do grupo Pauli e um coeficiente pode ser identificado por um `GeneratorIndex`, que tem a assinatura a seguir.
 
 ```qsharp
 newtype GeneratorIndex = ((Int[], Double[]), Int[]);
 ```
 
-Em nossa codificação, o primeiro parâmetro `Int[]` especifica uma cadeia de caracteres Pauli, em que $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 e $ \hat Z\rightarrow $3. O segundo parâmetro `Double[]` armazena o coeficiente da cadeia de caracteres Pauli no Hamiltonian. Observe que apenas o primeiro elemento dessa matriz é usado. O terceiro parâmetro `Int[]` indexa o qubits em que essa cadeia de caracteres Pauli atua e não deve ter nenhum elemento duplicado. Portanto, o Hamiltonian Term $0.04 \hat X_0 \hat Y_8\hat I_2\hat Z_1 $ pode ser representado como
+Em nossa codificação, o primeiro parâmetro `Int[]` especifica uma cadeia de caracteres Pauli, em que $ \hat I\rightarrow $0, $ \hat X\rightarrow $1, $ \hat Y\rightarrow $2 e $ \hat Z\rightarrow $3. O segundo parâmetro `Double[]` armazena o coeficiente da cadeia de caracteres Pauli no Hamiltonian. Observe que apenas o primeiro elemento dessa matriz é usado. O terceiro parâmetro `Int[]` indexa o qubits em que essa cadeia de caracteres Pauli atua e não deve ter nenhum elemento duplicado. Portanto, o Hamiltonian Term $0.04 \hat X_0 \hat Y_8 \hat I_2 \hat Z_1 $ pode ser representado como
 
 ```qsharp
 let generatorIndexExample = GeneratorIndex(([1,2,0,3], [0.4]]), [0,8,2,1]);

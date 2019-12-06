@@ -1,24 +1,24 @@
 ---
 title: Verificador de uso qubits invalidado | Simulador de rastreamento de computador Quantum | Microsoft Docs
-description: Visão geral do simulador de rastreamento de computador Quantum
+description: Descrição geral do simulador de rastreio do computador quântico
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: 7403381b995ab660aa5cbc5a52b1e12c5c9ce442
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 283cc7d7d88f731f40fa396c38ae5ea8dd90537f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184972"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863185"
 ---
 # <a name="invalidated-qubits-use-checker"></a>Verificador de uso qubits invalidado
 
 O `Invalidated Qubits Use Checker` é uma parte do computador Quantum [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) projetado para detectar possíveis bugs no código. Considere a seguinte parte do código do Q # para ilustrar os problemas detectados pelo `Invalidated Qubits Use Checker`.
 
 ```qsharp
-operation UseReleasedQubitTest () : Unit {
+operation UseReleasedQubit () : Unit {
     mutable q = new Qubit[1];
     using (ans = Qubit()) {
         set q w/= 0 <- ans;

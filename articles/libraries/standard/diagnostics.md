@@ -5,12 +5,12 @@ author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: b59f91b660281167eab182529b415b6d379e3d63
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: d5889b8d5a92801b0ada65f7a17c655c959fc57f
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184496"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864343"
 ---
 # <a name="diagnostics"></a>Diagnósticos #
 
@@ -42,7 +42,7 @@ Por comparação, a máquina de destino do [Toffoli Simulator](xref:microsoft.qu
 
 ## <a name="facts-and-assertions"></a>Fatos e asserções ##
 
-Conforme discutido em [testando e Depurando](xref:microsoft.quantum.techniques.testing-and-debugging), uma função ou operação com assinatura `Unit -> Unit` ou `Unit => Unit`, respectivamente, pode ser chamada como um *teste de unidade*.
+Conforme discutido em [testando e Depurando](xref:microsoft.quantum.techniques.testing-and-debugging), uma função ou operação com assinatura `Unit -> Unit` ou `Unit => Unit`, respectivamente, pode ser marcada como um *teste de unidade*.
 Cada teste de unidade geralmente consiste em um pequeno programa Quantum, juntamente com uma ou mais condições que verificam a exatidão desse programa.
 Essas condições podem vir na forma de _fatos_, que verificam os valores de suas entradas ou _asserções_, que verificam os Estados de um ou mais qubits passados como entrada.
 
@@ -109,7 +109,7 @@ No entanto, devido à fase global, podemos escolher $a\_i = $0, de modo que prec
 Portanto, precisamos especificar três asserções que são independentes umas das outras para declarar o estado esperado.
 Fazemos isso encontrando a probabilidade de observar `Zero` para cada medição de Pauli, dada $ \alpha $ e $ \beta $, e declarando cada uma independentemente.
 Permita que $x $, $y $ e $z $ sejam `Result` valores para as medidas Pauli $X $, $Y $ e $Z $, respectivamente.
-Em seguida, usando a função probabilidade para medições Quantum, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ \Pr (y = \texttt{Zero} | \alpha , \beta) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
+Em seguida, usando a função probabilidade para medições do Quantum, \begin{align} \Pr (x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_r + a\_i b\_i \\\\ \Pr (y = \texttt{Zero} | \alpha, \beta) & = \frac12 + a\_r b\_i-a\_i b\_r \\\\ \Pr (z = \texttt{Zero} | \alpha, \beta) & = \frac12\left (1 + a\_r ^ 2 + a\_i ^ 2 + b\_r ^ 2 + b\_i ^ 2 \right).
 \end{align}
 
 A operação <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> implementa essas asserções dadas as representações de $ \alpha $ e $ \beta $ como valores do tipo <xref:microsoft.quantum.math.complex>.
@@ -129,7 +129,7 @@ Essas estratégias são implementadas pelas operações de Canon <xref:microsoft
 
 > [!NOTE]
 > A declaração referenciada mencionada acima funciona com base no [Choi – Jamiłkowski isomorphism](https://en.wikipedia.org/wiki/Channel-state_duality), uma estrutura matemática que relaciona as operações em $n $ qubits a confusas Estados em $2n $ qubits.
-> Em particular, a operação de identidade em $n $ qubits é representada por $n as cópias do estado confusas $ \ket{\beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$.
+> Em particular, a operação de identidade em $n $ qubits é representada por $n as cópias do estado confusas $ \ket{\ beta_{00}} \mathrel{: =} (\ket{00} + \ket{11})/\sqrt{2}$.
 > A operação <xref:microsoft.quantum.preparation.preparechoistate> implementa esse isomorphism, preparando um estado que representa uma determinada operação.
 
 Aproximadamente, essas estratégias são diferenciadas por uma compensação de espaço em tempo.
@@ -146,7 +146,7 @@ Por outro lado, a declaração referenciada chama cada operação exatamente uma
 Esses dois testes são úteis para garantir a exatidão dos programas Quantum.
 
 
-## <a name="further-reading"></a>Leitura adicional ##
+## <a name="further-reading"></a>Leitura Adicional ##
 
 - <xref:microsoft.quantum.techniques.testing-and-debugging>
 - <xref:microsoft.quantum.diagnostics>

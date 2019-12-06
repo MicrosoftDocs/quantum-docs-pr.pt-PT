@@ -1,17 +1,17 @@
 ---
 title: Verificador de entradas distintos | Simulador de rastreamento de computador Quantum | Microsoft Docs
-description: Visão geral do simulador de rastreamento de computador Quantum
+description: Descrição geral do simulador de rastreio do computador quântico
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.distinct-inputs
-ms.openlocfilehash: 0df28f6d74279db4678c3485a23a9341680eec52
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ce3f156a84a4509781a74c9276b953c79670a756
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184700"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864309"
 ---
 # <a name="distinct-inputs-checker"></a>Verificador de entradas distintos
 
@@ -28,7 +28,7 @@ operation DoBoth(q1 : Qubit, q2 : Qubit, op1 : (Qubit => Unit), op2 : (Qubit => 
 Quando o usuário examina esse programa, ele pressupõe que a ordem na qual `op1` e `op2` são chamados não importa porque `q1` e `q2` são diferentes qubits e operações que atuam em diferentes qubits. Agora, vamos considerar um exemplo, em que esta operação é usada:
 
 ```qsharp
-operation DisctinctQubitCaptured2Test () : Unit {
+operation CapturedQubits () : Unit {
 
     using (q = Qubit[3]) {
         let op1 = CNOT(_, q[1]);

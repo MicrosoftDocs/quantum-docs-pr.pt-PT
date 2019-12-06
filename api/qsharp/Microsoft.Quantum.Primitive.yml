@@ -3,150 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.message".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA mensagem foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.message\".\nUse @\"microsoft.quantum.intrinsic.message\"."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.assert".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssert foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.assert\".\nUse @\"microsoft.quantum.intrinsic.assert\"."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.assertprob".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertProb foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.assertprob\".\nUse @\"microsoft.quantum.intrinsic.assertprob\"."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.ccnot".
+  summary: "\n> [!WARNING]\n> Preterido\n\nCCNOT foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.ccnot\".\nUse @\"microsoft.quantum.intrinsic.ccnot\"."
 - uid: microsoft.quantum.primitive.cnot
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.cnot".
+  summary: "\n> [!WARNING]\n> Preterido\n\nCNOT foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.cnot\".\nUse @\"microsoft.quantum.intrinsic.cnot\"."
 - uid: microsoft.quantum.primitive.exp
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.exp".
+  summary: "\n> [!WARNING]\n> Preterido\n\nExp foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.exp\".\nUse @\"microsoft.quantum.intrinsic.exp\"."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.expfrac".
+  summary: "\n> [!WARNING]\n> Preterido\n\nExpFrac foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.expfrac\".\nUse @\"microsoft.quantum.intrinsic.expfrac\"."
 - uid: microsoft.quantum.primitive.h
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.h".
+  summary: "\n> [!WARNING]\n> Preterido\n\nH foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.h\".\nUse @\"microsoft.quantum.intrinsic.h\"."
 - uid: microsoft.quantum.primitive.i
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.i".
+  summary: "\n> [!WARNING]\n> Preterido\n\nEu tenha sido preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.i\".\nUse @\"microsoft.quantum.intrinsic.i\"."
 - uid: microsoft.quantum.primitive.m
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.m".
+  summary: "\n> [!WARNING]\n> Preterido\n\nM foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.m\".\nUse @\"microsoft.quantum.intrinsic.m\"."
 - uid: microsoft.quantum.primitive.measure
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.measure".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA medida foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.measure\".\nUse @\"microsoft.quantum.intrinsic.measure\"."
 - uid: microsoft.quantum.primitive.multix
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.canon.applytoeachca".
+  summary: "\n> [!WARNING]\n> Preterido\n\nMultiX foi preterido. Em vez disso, use @ \"applytoeachca (x, _)\".\nUse @\"microsoft.quantum.canon.applytoeachca\"."
 - uid: microsoft.quantum.primitive.r
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.r".
+  summary: "\n> [!WARNING]\n> Preterido\n\nR foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.r\".\nUse @\"microsoft.quantum.intrinsic.r\"."
 - uid: microsoft.quantum.primitive.r1
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.r1".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO R1 foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.r1\".\nUse @\"microsoft.quantum.intrinsic.r1\"."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.r1frac".
+  summary: "\n> [!WARNING]\n> Preterido\n\nR1Frac foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.r1frac\".\nUse @\"microsoft.quantum.intrinsic.r1frac\"."
 - uid: microsoft.quantum.primitive.random
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.random".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO Random foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.random\".\nUse @\"microsoft.quantum.intrinsic.random\"."
 - uid: microsoft.quantum.primitive.reset
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.reset".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA redefinição foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.reset\".\nUse @\"microsoft.quantum.intrinsic.reset\"."
 - uid: microsoft.quantum.primitive.resetall
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.resetall".
+  summary: "\n> [!WARNING]\n> Preterido\n\nResetAll foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.resetall\".\nUse @\"microsoft.quantum.intrinsic.resetall\"."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.rfrac".
+  summary: "\n> [!WARNING]\n> Preterido\n\nRFrac foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.rfrac\".\nUse @\"microsoft.quantum.intrinsic.rfrac\"."
 - uid: microsoft.quantum.primitive.rx
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.rx".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO RX foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.rx\".\nUse @\"microsoft.quantum.intrinsic.rx\"."
 - uid: microsoft.quantum.primitive.ry
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.ry".
+  summary: "\n> [!WARNING]\n> Preterido\n\nEntar foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.ry\".\nUse @\"microsoft.quantum.intrinsic.ry\"."
 - uid: microsoft.quantum.primitive.rz
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.rz".
+  summary: "\n> [!WARNING]\n> Preterido\n\nRZ foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.rz\".\nUse @\"microsoft.quantum.intrinsic.rz\"."
 - uid: microsoft.quantum.primitive.s
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.s".
+  summary: "\n> [!WARNING]\n> Preterido\n\nS foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.s\".\nUse @\"microsoft.quantum.intrinsic.s\"."
 - uid: microsoft.quantum.primitive.swap
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.swap".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA permuta foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.swap\".\nUse @\"microsoft.quantum.intrinsic.swap\"."
 - uid: microsoft.quantum.primitive.t
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.t".
+  summary: "\n> [!WARNING]\n> Preterido\n\nT foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.t\".\nUse @\"microsoft.quantum.intrinsic.t\"."
 - uid: microsoft.quantum.primitive.x
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.x".
+  summary: "\n> [!WARNING]\n> Preterido\n\nX foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.x\".\nUse @\"microsoft.quantum.intrinsic.x\"."
 - uid: microsoft.quantum.primitive.y
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.y".
+  summary: "\n> [!WARNING]\n> Preterido\n\nY foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.y\".\nUse @\"microsoft.quantum.intrinsic.y\"."
 - uid: microsoft.quantum.primitive.z
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.intrinsic.z".
+  summary: "\n> [!WARNING]\n> Preterido\n\nZ foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.z\".\nUse @\"microsoft.quantum.intrinsic.z\"."
 metadata:
-  ms.openlocfilehash: 87dc52b15f7fb17c6e9c3c11ec04a91e775a36ef
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216038"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858246"

@@ -6,12 +6,12 @@ ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.techniques.qubits
-ms.openlocfilehash: d1a8ccc9423a9a04e12bc98e3783790232b2f5d8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 477b358c3eba58b62926b4e9094770c9741cac92
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183476"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864258"
 ---
 # <a name="working-with-qubits"></a>Trabalhando com qubits #
 
@@ -43,7 +43,7 @@ Veremos essas operações com mais detalhes em [operações intrínsecas e funç
 
 Primeiro, os operadores de Pauli qubit $X $, $Y $ e $Z $ são representados em Q # pelas operações intrínsecas `X`, `Y`e `Z`, cada uma delas com o tipo `(Qubit => Unit is Adj + Ctl)`.
 Conforme descrito em [operações e funções intrínsecas](xref:microsoft.quantum.libraries.standard.prelude), podemos considerar $X $ e, portanto, `X` como uma operação de inversão de bits ou não de porta.
-Isso nos permite preparar Estados do formulário $ \ket{s_0 s_1 \dots s_n} $ para algumas cadeias de caracteres de bits clássicas $s $:
+Isso nos permite preparar Estados do formulário $ \ket{s_0 s_1 \dots s_n} $ para uma cadeia de caracteres de bits clássica $s $:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit 
@@ -72,7 +72,7 @@ operation Example() : Unit {
 > [!TIP]
 > Mais tarde, veremos mais formas compactadas de gravar essa operação que não exigem controle de fluxo manual.
 
-Também podemos preparar Estados como $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ e $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ usando a transformação Hadamard $H $ , que é representado em Q # pela operação intrínseca `H : (Qubit => Unit is Adj + Ctl)`:
+Também podemos preparar Estados como $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ e $ \ket{-} = \left (\ket{0}-\ket{1}\right)/\sqrt{2}$ usando a transformação Hadamard $H $, que é representada em Q # pela operação intrínseca `H : (Qubit => Unit is Adj + Ctl)`:
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -90,7 +90,7 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Medições ##
 
-Usando a operação `Measure`, que é uma operação não-unitário intrínseca interna, podemos extrair informações clássicas de um objeto do tipo `Qubit` e atribuir um valor clássico como resultado, que tem um tipo reservado `Result`, indicando que o resultado é não mais um estado Quantum. A entrada para `Measure` é um eixo Pauli na esfera Bloch, representado por um objeto do tipo `Pauli` (ou seja, por instância `PauliX`) e um objeto do tipo `Qubit`. 
+Usando a operação `Measure`, que é uma operação não-unitário intrínseca interna, podemos extrair informações clássicas de um objeto do tipo `Qubit` e atribuir um valor clássico como resultado, que tem um tipo reservado `Result`, indicando que o resultado não é mais um estado Quantum. A entrada para `Measure` é um eixo Pauli na esfera Bloch, representado por um objeto do tipo `Pauli` (ou seja, por instância `PauliX`) e um objeto do tipo `Qubit`. 
 
 Um exemplo simples é a operação a seguir, que cria um qubit no estado $ \ket{0}$ e, em seguida, aplica um portão Hadamard ``H`` a ele e, em seguida, mede o resultado na base `PauliZ`. 
 
@@ -129,7 +129,7 @@ operation AllMeasurementsZero (qs : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
-A linguagem Q # permite dependências do fluxo de controle clássico nos resultados da medição de qubits. Isso, por sua vez, permite implementar gadgets probabilística poderosos que podem reduzir o custo computacional para a implementação de unidades. Por exemplo, é fácil implementar de forma que seja chamado de *repetir-até-êxito* em Q #, que são probabilística circuitos que têm um baixo custo *esperado* em termos de Gates elementares, mas para os quais o custo real depende de uma execução e de um real intercalação de várias ramificações possíveis. 
+A linguagem Q # permite dependências do fluxo de controle clássico nos resultados da medição de qubits. Isso, por sua vez, permite implementar gadgets probabilística poderosos que podem reduzir o custo computacional para a implementação de unidades. Por exemplo, é fácil implementar de forma que seja chamado de *repetir-até-êxito* em Q #, que são circuitos de probabilística que têm um baixo custo *esperado* em termos de Gates elementares, mas para o qual o custo real depende de uma execução atual e de uma intercalação real de várias ramificações possíveis. 
 
 Para facilitar os padrões do RUS (repetição até o êxito), o Q # dá suporte à construção
 ```qsharp
@@ -167,7 +167,7 @@ operation RUScircuit (qubit : Qubit) : Unit {
 
 Este exemplo mostra o uso de uma variável mutável `finished` que está no escopo de todo o loop Repeat-Until-recorretion e que é inicializado antes do loop e atualizado na etapa de correção.
 
-Por fim, mostramos um exemplo de um padrão RUS para preparar um estado Quantum $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, começando com o estado $ \ket{+} $. Consulte também o [exemplo de teste de unidade fornecido com a biblioteca padrão](https://github.com/Microsoft/Quantum/blob/master/Samples/src/UnitTesting/RepeatUntilSuccessCircuits.qs): 
+Por fim, mostramos um exemplo de um padrão RUS para preparar um estado Quantum $ \frac{1}{\sqrt{3}} \left (\sqrt{2}\ket{0}+ \ket{1}\right) $, começando com o estado $ \ket{+} $. Consulte também o [exemplo de teste de unidade fornecido com a biblioteca padrão](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs): 
 
 ```qsharp
 operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
@@ -212,4 +212,4 @@ operation RepeatUntilSuccessStatePreparation( target : Qubit ) : Unit {
 }
 ```
  
-Os recursos programáticos notáveis mostrados nesta operação são uma parte `fixup` mais complexa do loop, que envolve operações de Quantum e o uso de instruções `AssertProb` para determinar a probabilidade de medir o estado Quantum em determinados pontos especificados no Program. Consulte também [testando e Depurando](xref:microsoft.quantum.techniques.testing-and-debugging) para obter mais informações sobre instruções `Assert` e `AssertProb`. 
+Os recursos programáticos notáveis mostrados nesta operação são uma parte `fixup` mais complexa do loop, que envolve operações de Quantum e o uso de instruções `AssertProb` para determinar a probabilidade de medir o estado Quantum em determinados pontos especificados no programa. Consulte também [testando e Depurando](xref:microsoft.quantum.techniques.testing-and-debugging) para obter mais informações sobre instruções `Assert` e `AssertProb`. 

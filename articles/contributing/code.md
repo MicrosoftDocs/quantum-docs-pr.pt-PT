@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: cca50e6c63d4bb982aa5f0a59fc19d08ecbec508
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73185907"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74864428"
 ---
-# <a name="contributing-code"></a>Código de contribuição #
+# <a name="contributing-code"></a>Contribuir no Código #
 
 Além de relatar problemas e aprimorar a documentação, o código que contribui para o kit de desenvolvimento Quantum pode ser uma maneira muito direta de ajudar seus colegas na Comunidade de programação Quantum.
 Ao contribuir com código, você pode ajudar a corrigir problemas, fornecer novos exemplos, tornar as bibliotecas existentes mais fáceis de usar ou até mesmo adicionar recursos totalmente novos.
@@ -26,17 +26,18 @@ Uma contribuição de código ideal se baseia no trabalho existente em um reposi
 Quando aceitamos uma contribuição de código, ele se torna parte do próprio kit de desenvolvimento Quantum, de modo que novos recursos serão lançados, mantidos e desenvolvidos da mesma maneira que o restante do kit de desenvolvimento Quantum.
 Portanto, é útil quando a funcionalidade adicionada por uma contribuição é bem testada e documentada.
 
-### <a name="unit-tests"></a>Testes de unidade ###
+### <a name="unit-tests"></a>Testes da unidade ###
 
 As funções, operações e tipos definidos pelo usuário do Q # que compõem bibliotecas como a Canon são testadas automaticamente como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
 Quando uma nova solicitação pull é aberta, por exemplo, nossa configuração de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações na solicitação pull não interrompem nenhuma funcionalidade existente da qual a comunidade de programação Quantum dependa.
-Esses testes são escritos usando o pacote [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) , que expõe as funções e operações do Q # como testes para a estrutura [xUnit](https://xunit.github.io/) .
 
-O [`Standard/tests/Standard.Tests.csproj`](https://github.com/microsoft/QuantumLibraries/blob/master/Standard/tests/Standard.Tests.csproj) usa essa integração xUnit para executar qualquer função ou operação que termina em `Test`.
-Por exemplo, a função a seguir é usada para garantir que as funções <xref:microsoft.quantum.canon.fst> e <xref:microsoft.quantum.canon.snd> retornem as saídas corretas em um exemplo representativo.
+Com a versão mais recente do Q #, o teste de unidade é definido usando o atributo `@Test("QuantumSimulator")`. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" ou qualquer nome totalmente qualificado especificando o destino de execução. Vários atributos que definem destinos de execução diferentes podem ser anexados ao mesmo callable. Alguns dos nossos testes ainda usam o pacote [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) preterido que expõe todas as funções e operações Q # que terminam em `Test` à estrutura [xUnit](https://xunit.github.io/) . Este pacote não é mais necessário para definir testes de unidade. 
+
+A função a seguir é usada para garantir que as funções <xref:microsoft.quantum.canon.fst> e <xref:microsoft.quantum.canon.snd> retornem as saídas corretas em um exemplo representativo.
 Se a saída de `Fst` ou `Snd` estiver incorreta, a instrução `fail` será usada para fazer com que o teste falhe.
 
 ```qsharp
+@Test("QuantumSimulator")
 function PairTest () : Unit {
     let pair = (12, PauliZ);
 
@@ -56,6 +57,7 @@ Condições mais complicadas podem ser verificadas usando as técnicas na [seç�
 Por exemplo, o teste a seguir verifica se `H(q); X(q); H(q);` conforme chamado pelo <xref:microsoft.quantum.canon.applywith> faz a mesma coisa que `Z(q)`.
 
 ```qsharp
+@Test("QuantumSimulator")
 operation WithTest () : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;
