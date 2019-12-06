@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.tuplearrayasnestedarray
+name: TupleArrayAsNestedArray
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Transforma uma lista de duas tuplas em uma matriz aninhada.
+syntax: "function TupleArrayAsNestedArray (tupleList : ('T, 'T)[]) : 'T[][]"
+input:
+  content: "(tupleList : ('T, 'T)[])"
+  types:
+  - name: tupleList
+    summary: Lista de 2 tuplas a serem transformadas em uma matriz aninhada.
+    isArray: true
+    types:
+    - uid: "'T"
+      isLocal: true
+    - uid: "'T"
+      isLocal: true
+output:
+  content: "'T[][]"
+  types:
+  - summary: >-
+      Uma matriz aninhada com comprimento correspondente à tuplalist.
+
+
+      ## <a name="example"></a>Exemplo
+
+
+      ```qsharp
+
+      // The following returns [[2, 3], [4, 5]]
+
+      TupleArrayAsNestedArray([(2, 3), (4, 5)]);
+
+      ```
+    isArray: true
+    types:
+    - isArray: true
+      uid: "'T"
+      isLocal: true
+metadata:
+  ms.openlocfilehash: edc939bc4ebfe093ec4a97eda24888f6d7810e82
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866466"

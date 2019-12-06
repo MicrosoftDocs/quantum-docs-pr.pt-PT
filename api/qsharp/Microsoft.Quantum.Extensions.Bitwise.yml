@@ -3,44 +3,23 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.bitwise.and".
+  summary: "\n> [!WARNING]\n> Preterido\n\nE foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.and\".\nUse @\"microsoft.quantum.bitwise.and\"."
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.bitwise.not".
+  summary: "\n> [!WARNING]\n> Preterido\n\nNão foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.not\".\nUse @\"microsoft.quantum.bitwise.not\"."
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.bitwise.or".
+  summary: "\n> [!WARNING]\n> Preterido\n\nOu foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.or\".\nUse @\"microsoft.quantum.bitwise.or\"."
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.bitwise.parity".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA paridade foi preterida. Em vez disso, use @\"microsoft.quantum.bitwise.parity\".\nUse @\"microsoft.quantum.bitwise.parity\"."
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.bitwise.xbits".
+  summary: "\n> [!WARNING]\n> Preterido\n\nXBits foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.xbits\".\nUse @\"microsoft.quantum.bitwise.xbits\"."
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.bitwise.xor".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO XOR foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.xor\".\nUse @\"microsoft.quantum.bitwise.xor\"."
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.bitwise.zbits".
+  summary: "\n> [!WARNING]\n> Preterido\n\nZBits foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.zbits\".\nUse @\"microsoft.quantum.bitwise.zbits\"."
 metadata:
-  ms.openlocfilehash: ac63e91ec3fefe0002f14b1542eaa97456bd33aa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69399e7aa3c7173b1173f278a79046e639db71d6
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056762"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858402"

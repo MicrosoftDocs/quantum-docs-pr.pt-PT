@@ -73,11 +73,14 @@ operations:
     O último argumento define a tolerância com a qual a declaração é feita.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
   summary: Declara que o `q` qubit está no eigenstate esperado do operador Z Pauli até uma determinada tolerância.
+newtypes:
+- uid: microsoft.quantum.diagnostics.test
+  summary: Atributo reconhecido pelo compilador usado para marcar um teste de unidade.
 summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções e operações úteis para fins de diagnóstico, incluindo operações Assert e funções de declaração."
 metadata:
-  ms.openlocfilehash: c387a7dc3b2e997d00d54457b0af89a04fa918d3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a633a9555f380e6aa6c6701d277d026c58130ff2
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056860"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858280"

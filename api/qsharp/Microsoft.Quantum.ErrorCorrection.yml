@@ -23,15 +23,9 @@ functions:
   summary: Para uma determinada tabela de operações de Pauli em um determinado registro de qubits, essa função retorna um objeto do tipo `RecoveryFn` que contém todas as informações necessárias para executar uma decodificação de tabela de pesquisa em relação à matriz de operações de Pauli especificada.
 operations:
 - uid: microsoft.quantum.errorcorrection.bitflipdecoder
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
+  summary: "\n> [!WARNING]\n> Preterido\n\nBitFlipDecoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.decodefrombitflipcode\".\nUse @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.bitflipencoder
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.errorcorrection.encodeintobitflipcode".
+  summary: "\n> [!WARNING]\n> Preterido\n\nBitFlipEncoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\".\nUse @\"microsoft.quantum.errorcorrection.encodeintobitflipcode\"."
 - uid: microsoft.quantum.errorcorrection.decodefrombitflipcode
   summary: Decodifica do código [3, 1, 3]/⟦ 3, 1, 1 ⟧ bit-flip.
 - uid: microsoft.quantum.errorcorrection.decodefromfivequbitcode
@@ -45,15 +39,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.encodeintosteanecode
   summary: Uma operação de codificação que mapeia um registro Quantum não codificado para um registro Quantum codificado sob o código Quantum ⟦ 7, 1, 3 ⟧ Steane.
 - uid: microsoft.quantum.errorcorrection.fivequbitcodedecoder
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+  summary: "\n> [!WARNING]\n> Preterido\n\nFiveQubitCodeDecoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\".\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.fivequbitcodeencoder
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.errorcorrection.encodeintofivequbitcode".
+  summary: "\n> [!WARNING]\n> Preterido\n\nFiveQubitCodeEncoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\".\nUse @\"microsoft.quantum.errorcorrection.encodeintofivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.injectpi4yrotation
   summary: >-
     Executa uma rotação π/4 sobre `Y`.
@@ -75,15 +63,9 @@ operations:
 - uid: microsoft.quantum.errorcorrection.recovercss
   summary: Executa uma única rodada de correção de erro por um código Quantum descrito por um tipo de `CSS`.
 - uid: microsoft.quantum.errorcorrection.steanecodedecoder
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+  summary: "\n> [!WARNING]\n> Preterido\n\nSteaneCodeDecoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.decodefromsteanecode\".\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 - uid: microsoft.quantum.errorcorrection.steanecodeencoder
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.errorcorrection.decodefromfivequbitcode".
+  summary: "\n> [!WARNING]\n> Preterido\n\nSteaneCodeEncoder foi preterido. Em vez disso, use @\"microsoft.quantum.errorcorrection.encodeintosteanecode\".\nUse @\"microsoft.quantum.errorcorrection.decodefromfivequbitcode\"."
 newtypes:
 - uid: microsoft.quantum.errorcorrection.css
   summary: Representa um código de Calderbank – Atal – Steane (CSS) conforme definido por seu codificador, decodificador e seus procedimentos de medição de síndrome para erros de `X` e `Z`, respectivamente.
@@ -110,9 +92,9 @@ newtypes:
 - uid: microsoft.quantum.errorcorrection.syndromemeasop
   summary: Representa uma operação que é usada para medir a síndrome de um bloco de código com correção de erros.
 metadata:
-  ms.openlocfilehash: 6e1ef3ba9f22dac172e4edfb93bf1012e7bb21b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2f72286018b39e2d51d6e0ffa6babf7ce350d976
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056783"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858367"

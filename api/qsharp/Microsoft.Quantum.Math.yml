@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Converte um número complexo do tipo `ComplexPolar` em um número complexo de `Complex`de tipo.
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: ''
+  summary: "\n> [!WARNING]\n> Preterido\n\nComplexPolarToComplex foi preterido. Em vez disso, use @\"microsoft.quantum.math.complexpolarascomplex\"."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: ''
+  summary: "\n> [!WARNING]\n> Preterido\n\nComplexToComplexPolar foi preterido. Em vez disso, use @\"microsoft.quantum.math.complexascomplexpolar\"."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
   summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
@@ -177,13 +177,13 @@ functions:
     Retorna a norma `L(p)` de um vetor de `Double`s.
 
 
-    Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna a $p $-norma $\|x\|\_p = (\sum_{j} | x_j | ^ {p}) ^ {1/p} $.
+    Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna a $p $-norma $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
     Normaliza um vetor de `Double`s no `L(p)` normal.
 
 
-    Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna uma matriz em que todos os elementos são divididos pelo $p $-norma $\|x\|_p $.
+    Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna uma matriz em que todos os elementos são divididos pelo $p $-norma $\|x\|$ _p $.
 - uid: microsoft.quantum.math.powc
   summary: Retorna um número elevado a uma determinada potência.
 - uid: microsoft.quantum.math.powcp
@@ -253,9 +253,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Retorna um dos operadores de Pauli de qubit única de forma uniforme em aleatório.
 metadata:
-  ms.openlocfilehash: 7f30ee26a1155b64946e8fb16f5692ec602aa602
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 00156d553e8378b1a38dcd6f1749c4ff3cb689a7
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056305"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858263"

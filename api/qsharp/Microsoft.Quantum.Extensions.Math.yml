@@ -3,189 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.absl".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAbsB foi preterido. Em vez disso, use @\"microsoft.quantum.math.absl\".\nUse @\"microsoft.quantum.math.absl\"."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.absd".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAbsD foi preterido. Em vez disso, use @\"microsoft.quantum.math.absd\".\nUse @\"microsoft.quantum.math.absd\"."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.absi".
+  summary: "\n> [!WARNING]\n> Preterido\n\nAbsI foi preterido. Em vez disso, use @\"microsoft.quantum.math.absi\".\nUse @\"microsoft.quantum.math.absi\"."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.arccos".
+  summary: "\n> [!WARNING]\n> Preterido\n\nArcCos foi preterido. Em vez disso, use @\"microsoft.quantum.math.arccos\".\nUse @\"microsoft.quantum.math.arccos\"."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.arcsin".
+  summary: "\n> [!WARNING]\n> Preterido\n\nOs arcos foram preteridos. Em vez disso, use @\"microsoft.quantum.math.arcsin\".\nUse @\"microsoft.quantum.math.arcsin\"."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.arctan".
+  summary: "\n> [!WARNING]\n> Preterido\n\nArcTan foi preterido. Em vez disso, use @\"microsoft.quantum.math.arctan\".\nUse @\"microsoft.quantum.math.arctan\"."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.arctan2".
+  summary: "\n> [!WARNING]\n> Preterido\n\nArcTan2 foi preterido. Em vez disso, use @\"microsoft.quantum.math.arctan2\".\nUse @\"microsoft.quantum.math.arctan2\"."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.ceiling".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO teto foi preterido. Em vez disso, use @\"microsoft.quantum.math.ceiling\".\nUse @\"microsoft.quantum.math.ceiling\"."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.cos".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO cos foi preterido. Em vez disso, use @\"microsoft.quantum.math.cos\".\nUse @\"microsoft.quantum.math.cos\"."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.cosh".
+  summary: "\n> [!WARNING]\n> Preterido\n\nCosh foi preterido. Em vez disso, use @\"microsoft.quantum.math.cosh\".\nUse @\"microsoft.quantum.math.cosh\"."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.divreml".
+  summary: "\n> [!WARNING]\n> Preterido\n\nDivRemB foi preterido. Em vez disso, use @\"microsoft.quantum.math.divreml\".\nUse @\"microsoft.quantum.math.divreml\"."
 - uid: microsoft.quantum.extensions.math.e
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.e".
+  summary: "\n> [!WARNING]\n> Preterido\n\nE foi preterido. Use @\"microsoft.quantum.math.e\" em alternativa.\nUse @\"microsoft.quantum.math.e\"."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.expd".
+  summary: "\n> [!WARNING]\n> Preterido\n\nExpD foi preterido. Em vez disso, use @\"microsoft.quantum.math.expd\".\nUse @\"microsoft.quantum.math.expd\"."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.floor".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO andar foi preterido. Em vez disso, use @\"microsoft.quantum.math.floor\".\nUse @\"microsoft.quantum.math.floor\"."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.ieeeremainder".
+  summary: "\n> [!WARNING]\n> Preterido\n\nIEEERemainder foi preterido. Em vez disso, use @\"microsoft.quantum.math.ieeeremainder\".\nUse @\"microsoft.quantum.math.ieeeremainder\"."
 - uid: microsoft.quantum.extensions.math.log
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.log".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO log foi preterido. Em vez disso, use @\"microsoft.quantum.math.log\".\nUse @\"microsoft.quantum.math.log\"."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.log10".
+  summary: "\n> [!WARNING]\n> Preterido\n\nLog10 foi preterido. Em vez disso, use @\"microsoft.quantum.math.log10\".\nUse @\"microsoft.quantum.math.log10\"."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.maxl".
+  summary: "\n> [!WARNING]\n> Preterido\n\nMaxB foi preterido. Em vez disso, use @\"microsoft.quantum.math.maxl\".\nUse @\"microsoft.quantum.math.maxl\"."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.maxd".
+  summary: "\n> [!WARNING]\n> Preterido\n\nMaxD foi preterido. Em vez disso, use @\"microsoft.quantum.math.maxd\".\nUse @\"microsoft.quantum.math.maxd\"."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.maxi".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO máximo foi preterido. Em vez disso, use @\"microsoft.quantum.math.maxi\".\nUse @\"microsoft.quantum.math.maxi\"."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.minl".
+  summary: "\n> [!WARNING]\n> Preterido\n\nMinB foi preterido. Em vez disso, use @\"microsoft.quantum.math.minl\".\nUse @\"microsoft.quantum.math.minl\"."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.mind".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA mente foi preterida. Em vez disso, use @\"microsoft.quantum.math.mind\".\nUse @\"microsoft.quantum.math.mind\"."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.mini".
+  summary: "\n> [!WARNING]\n> Preterido\n\nMinI foi preterido. Em vez disso, use @\"microsoft.quantum.math.mini\".\nUse @\"microsoft.quantum.math.mini\"."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.modpowl".
+  summary: "\n> [!WARNING]\n> Preterido\n\nModPowB foi preterido. Em vez disso, use @\"microsoft.quantum.math.modpowl\".\nUse @\"microsoft.quantum.math.modpowl\"."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.pi".
+  summary: "\n> [!WARNING]\n> Preterido\n\nPI foi preterido. Em vez disso, use @\"microsoft.quantum.math.pi\".\nUse @\"microsoft.quantum.math.pi\"."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.powd".
+  summary: "\n> [!WARNING]\n> Preterido\n\nPowD foi preterido. Em vez disso, use @\"microsoft.quantum.math.powd\".\nUse @\"microsoft.quantum.math.powd\"."
 - uid: microsoft.quantum.extensions.math.round
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.round".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA rodada foi preterida. Em vez disso, use @\"microsoft.quantum.math.round\".\nUse @\"microsoft.quantum.math.round\"."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.signl".
+  summary: "\n> [!WARNING]\n> Preterido\n\nSignB foi preterido. Em vez disso, use @\"microsoft.quantum.math.signl\".\nUse @\"microsoft.quantum.math.signl\"."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.signd".
+  summary: "\n> [!WARNING]\n> Preterido\n\nA assinatura foi preterida. Em vez disso, use @\"microsoft.quantum.math.signd\".\nUse @\"microsoft.quantum.math.signd\"."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.signi".
+  summary: "\n> [!WARNING]\n> Preterido\n\nSigni foi preterido. Em vez disso, use @\"microsoft.quantum.math.signi\".\nUse @\"microsoft.quantum.math.signi\"."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.sin".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO Sin foi preterido. Em vez disso, use @\"microsoft.quantum.math.sin\".\nUse @\"microsoft.quantum.math.sin\"."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.sinh".
+  summary: "\n> [!WARNING]\n> Preterido\n\nSinh foi preterido. Em vez disso, use @\"microsoft.quantum.math.sinh\".\nUse @\"microsoft.quantum.math.sinh\"."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.sqrt".
+  summary: "\n> [!WARNING]\n> Preterido\n\nSqrt foi preterido. Em vez disso, use @\"microsoft.quantum.math.sqrt\".\nUse @\"microsoft.quantum.math.sqrt\"."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.tan".
+  summary: "\n> [!WARNING]\n> Preterido\n\nTan foi preterido. Em vez disso, use @\"microsoft.quantum.math.tan\".\nUse @\"microsoft.quantum.math.tan\"."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.tanh".
+  summary: "\n> [!WARNING]\n> Preterido\n\nTanh foi preterido. Em vez disso, use @\"microsoft.quantum.math.tanh\".\nUse @\"microsoft.quantum.math.tanh\"."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: >-
-    > [!WARNING]
-
-    > Preterido, use @"microsoft.quantum.math.truncate".
+  summary: "\n> [!WARNING]\n> Preterido\n\nO truncamento foi preterido. Em vez disso, use @\"microsoft.quantum.math.truncate\".\nUse @\"microsoft.quantum.math.truncate\"."
 metadata:
-  ms.openlocfilehash: a1a8cda192f7e95141eb2e34baa37ddaae4cb8c9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056340"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74858841"
