@@ -1,0 +1,14 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.core.entrypoint
+name: EntryPoint
+type: newtype
+namespace: Microsoft.Quantum.Core
+summary: Atributo reconhecido pelo compilador usado para marcar o ponto de entrada de um executável.
+syntax: newtype EntryPoint = Unit;
+metadata:
+  ms.openlocfilehash: acbc245a0e3f96405e4d36d11c1eae5ce8108987
+  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74866806"
