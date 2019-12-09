@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 90fd8ad455702ef4f962e1b3291c650eb0afea2e
-ms.sourcegitcommit: 87dd450cea5bcac76a42f0bdc224bfae712efdde
+ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
+ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/17/2019
-ms.locfileid: "74153319"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74863168"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de Versão do Microsoft Quantum Development Kit
 
@@ -20,6 +20,18 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter as instruções de instalação, veja o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter as instruções de atualização, veja o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01019120501"></a>Versão 0.10.1912.0501
+
+*Data da versão: 5 de dezembro de 2019*
+
+Esta versão contém o seguinte:
+
+- Novo atributo de Teste para o teste de unidades Q#. Veja a documentação atualizada da API [aqui](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) e o guia atualizado sobre testes e depuração [aqui](xref:microsoft.quantum.techniques.testing-and-debugging)
+- Adição do rastreio de pilha em caso da ocorrência de um erro de execução de um programa Q#
+- Suporte para pontos de interrupção no Visual Studio Code devido a uma atualização na [extensão OmniSharp C# Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+
+Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
 ## <a name="version-01019111607"></a>Versão 0.10.1911.1607
 
@@ -205,7 +217,7 @@ Esta versão contém o seguinte:
 
 - Adiciona suporte para o Jupyter Notebook, que constitui uma ótima forma para saber mais sobre o Q#.  [Veja os novos exemplos do Jupyter Notebook e saiba como escrever os seus próprios Notebooks](xref:microsoft.quantum.install). 
 
-- Adiciona aritmética de somador de números inteiros à biblioteca Quantum Canon.  Veja também um Jupyter Notebook que [descreve como utilizar os novos somadores de números inteiros](https://github.com/Microsoft/Quantum/blob/master/Samples/src/Arithmetic/Adder%20Example.ipynb).
+- Adiciona aritmética de somador de números inteiros à biblioteca Quantum Canon.  Veja também um Jupyter Notebook que [descreve como utilizar os novos somadores de números inteiros](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb).
 
 - Correção de bug para o problema do DumpRegister comunicado pela Comunidade ([148](https://github.com/Microsoft/Quantum/issues/148)).
 
