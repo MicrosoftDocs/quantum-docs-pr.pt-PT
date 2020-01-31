@@ -3,16 +3,54 @@ uid: microsoft.quantum.canon.iteratethroughcartesianproduct
 name: IterateThroughCartesianProduct
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Itera uma variável, digamos `arr`, por meio de um produto cartesiano [0, limites [0]-1] × [0, limites [1]-1] × [0, limites [comprimento (limites)-1]-1] e chamadas op (ARR) para cada elemento do produto cartesiano
+summary: >-
+  Aplica uma operação para cada índice no produto cartesiano de várias gamas.
+
+
+  Itterativamente aplica uma operação para cada elemento do produto cartesiano de `0..(bounds[0] - 1)`, `0..(bounds[1] - 1)`, ..., `0..(bounds[Length(bounds) - 1] - 1)`
+examples: >-
+  Dada uma operação `op`, os seguintes dois cortes são equivalentes:
+
+
+  ```Q#
+
+  IterateThroughCartesianProduct([3, 4, 5], op);
+
+  ```
+
+
+  ```Q#
+
+  op([0, 0, 0]);
+
+  op([1, 0, 0]);
+
+  op([2, 0, 0]);
+
+  op([0, 1, 0]);
+
+  // ...
+
+  op([0, 3, 0]);
+
+  op([0, 0, 1]);
+
+  //
+
+  op([2, 3, 4]);
+
+  ```
 syntax: 'operation IterateThroughCartesianProduct (bounds : Int[], op : (Int[] => Unit)) : Unit'
 input:
   content: '(bounds : Int[], op : (Int[] => Unit))'
   types:
   - name: bounds
+    summary: Uma matriz que especifica as gamas a serem iteradas, sendo cada gama especificada como um comprimento inteiro.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: op
+    summary: Uma operação a ser convocada para cada elemento do produto cartesiano dado.
     isOperation: true
     input:
       types:
@@ -28,10 +66,12 @@ output:
   types:
   - isPrimitive: true
     uid: Unit
+seeAlso:
+- microsoft.quantum.canon.iteratethroughcartesianpower
 metadata:
-  ms.openlocfilehash: 273364aab3edd85c1cfeefe226e4ba5a29da4ad7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 440c120daf8a316dec1fbbab758f4f46a929d6a0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223008"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871248"

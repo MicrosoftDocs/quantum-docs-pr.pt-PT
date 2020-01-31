@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applyand
+name: ApplyAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Inverte um determinado qubit-alvo se e apenas se ambos os qubits de controlo estiverem no estado 1, utilizando a medição para executar a operação adjoint.
+
+
+  Inverte `target` se e apenas se ambos os controlos forem 1, mas assume que `target` está no estado 0.  A operação tem contagem T 4, profundidade T 2 e não requer qubit auxiliar, podendo, portanto, ser preferível a uma operação CCNOT, se `target` se sabe ser 0.  O adjoint desta operação baseia-se na medição e não requer portões T.
+
+
+  A aplicação controlada desta operação não requer qubit de ajudante, `2^c` `Rz` portões e não está otimizada para a profundidade, onde `c` é o número de qubits de controlo global, incluindo os dois controlos da operação `ApplyAnd`.  A aplicação controlada por adjoint requer `2^c - 1` `Rz` portões (com um ângulo com o dobro do tamanho da operação não adjoint), sem qubit auxiliar e não está otimizado para profundidade.
+syntax: 'operation ApplyAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones: "Construções novas para o portão de Toffoli tolerante com falhas", Phys. Rev. A 87, 022328, 2013 [arXiv:1212.5069](https://arxiv.org/abs/1212.5069) doi:10.1103/PhysRevA.87.022328
+
+  - Craig Gidney: "Reduzir para metade o custo da adição quântica", Quantum 2, página 74, 2018 [arXiv:1709.06648](https://arxiv.org/abs/1709.06648) doi:10.1103/PhysRevA.85.044302
+
+  - Mathias Soeken: "Quantum Oracle Circuits and the Christmas Tree Pattern", [artigo do Blog do Decemer 19, 2019](https://msoeken.github.io/blog_qac.html) (nota: explica a construção múltipla controlada)
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: Qubit de primeiro controlo
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: Qubit de segundo controlo
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Qubit auxillary alvo; deve estar no estado 0
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 7cde3dbbd33ff482609bbaaccb15e4c7b1bc536e
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872993"

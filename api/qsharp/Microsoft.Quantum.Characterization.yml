@@ -1,34 +1,36 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.characterization
 name: Microsoft.Quantum.Characterization
-summary: " # <a name=\"summary\"></a>Resumo\n Este namespace contém funções e operações para aprender Propriedades de Estados e processos do Quantum, incluindo tomography e estimativa de fase."
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações para a aprendizagem de propriedades de estados e processos quânticos, incluindo tomografia e estimativa de fase."
 operations:
 - uid: microsoft.quantum.characterization.continuousphaseestimationiteration
-  summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativa (controlado de forma clássica) usando potências reais arbitrárias de um Oracle unitário.
+  summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativo (controlado clássicamente) usando poderes reais arbitrários de um oráculo unitário.
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
-  summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativa (controlado de forma clássica) usando potências de inteiros de um Oracle unitário.
+  summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativo (controlado clássicamente) usando poderes inteiros de um oráculo unitário.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Dada uma preparação e medida, o estima a frequência com a qual essa medida é realizada com sucesso (retorna `Zero`) executando um determinado número de avaliações.
+  summary: Dada a preparação e a medição, estima a frequência com que essa medição é bem sucedida (devolve `Zero`) através da realização de um determinado número de ensaios.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Devido a uma preparação que é de adjointable e de medição, o estima a frequência com a qual essa medida é realizada com sucesso (retorna `Zero`) executando um determinado número de avaliações.
+  summary: Dada uma preparação adjointável e a medição, estima a frequência com que essa medição é bem sucedida (devolve `Zero`) através da realização de um determinado número de ensaios.
+- uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
+  summary: Tendo em conta duas operações que cada um prepara cópias de um estado, estima a parte imaginária da sobreposição entre os Estados preparados por cada operação.
+- uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
+  summary: Tendo em conta duas operações que cada uma prepara cópias de um estado, estima a sobreposição quadrada entre os Estados preparados por cada operação.
+- uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
+  summary: Tendo em conta duas operações que cada um prepara cópias de um estado, estima a parte real da sobreposição entre os Estados preparados por cada operação.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: >-
-    Mede em conjunto um registro de qubits na base do Pauli Z.
-
-
-    Em outras palavras, o mede a operação $Z \otimes Z \otimes \cdots \otimes Z $ em um determinado registro.
+  summary: "\n> [!WARNING]\n> Preterido\n\nA MedidaAllZ foi depreciada. Por favor, use @\"microsoft.quantum.measurement.measureallz\" em vez disso.\nPor favor, use @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
-  summary: Mede o operador de identidade em um registro de qubits.
+  summary: Mede o operador de identidade num registo de qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Executa o algoritmo de estimativa de fase Quantum para um determinado `U` do Oracle e `targetState`, lendo a fase em um registro de Quantum big-endian.
+  summary: Executa o algoritmo de estimativa de fase quântica para um dado oráculo `U` e `targetState`, lendo a fase num registo quântico big-endian.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Executa o algoritmo de estimativa de fase de Quantum não iterativo robusto para um determinado `U` e eigenstate da Oracle e fornece uma única estimativa de valor real da fase com dimensionamento de variação no limite de Heisenberg.
+  summary: Executa o robusto algoritmo de estimativa da fase quântica não iterativa para um determinado oráculo `U` e eigenstate, e fornece uma única estimativa real da fase com variação de escala no limite de Heisenberg.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
-  summary: Executa uma medida de tomography de processo de qubit único na base Pauli, dado um canal específico de interesse.
+  summary: Efetua uma medição de tomografia de processo de um único qubit na base pauli, dado um determinado canal de interesse.
 metadata:
-  ms.openlocfilehash: f6ca8c97c1e44950fb87da8ed7335c885cabc425
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ff2bee3d5885c4b83a7ba17eeaf578c226dbbf20
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056952"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870686"

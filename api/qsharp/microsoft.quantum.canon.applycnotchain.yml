@@ -1,0 +1,36 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycnotchain
+name: ApplyCNOTChain
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Calcula a paridade de um registo de qubits no lugar.
+
+
+  Esta operação transforma o estado da sua entrada como $$ \start{align} \ket{q_0} \ket {q_1} \cdots \ket {q_{n { n - 1}} & \mapsto \ket {q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots \{q_0 \oplus \o q_plus \oplus \oplus
+
+  \end{align} $$
+syntax: 'operation ApplyCNOTChain (qubits : Qubit[]) : Unit'
+input:
+  content: '(qubits : Qubit[])'
+  types:
+  - name: qubits
+    summary: Conjunto de qubits cuja paridade deve ser calculada e armazenada.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: fd0cb45ae649e0bff5d836a2de84ddc88d502cf1
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872687"

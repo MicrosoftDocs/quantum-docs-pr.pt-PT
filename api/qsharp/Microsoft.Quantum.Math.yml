@@ -3,259 +3,259 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Retorna o valor absoluto de um número complexo de `Complex`de tipos.
+  summary: Devolve o valor absoluto de um número complexo de `Complex`tipo.
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Retorna o valor absoluto de um número complexo de `ComplexPolar`de tipos.
+  summary: Devolve o valor absoluto de um número complexo de `ComplexPolar`tipo.
 - uid: microsoft.quantum.math.absd
-  summary: Retorna o valor absoluto de um número de ponto flutuante de precisão dupla.
+  summary: Devolve o valor absoluto de um número de ponto flutuante de dupla precisão.
 - uid: microsoft.quantum.math.absi
-  summary: Retorna o valor absoluto de um inteiro.
+  summary: Devolve o valor absoluto de um inteiro.
 - uid: microsoft.quantum.math.absl
-  summary: Retorna o valor absoluto de um inteiro grande.
+  summary: Devolve o valor absoluto de um grande inteiro.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Retorna o valor absoluto do quadrado de um número complexo de tipos `Complex`.
+  summary: Devolve o valor absoluto quadrado de um número complexo de `Complex`tipo.
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Retorna o valor absoluto do quadrado de um número complexo de tipos `ComplexPolar`.
+  summary: Devolve o valor absoluto quadrado de um número complexo de `ComplexPolar`tipo.
 - uid: microsoft.quantum.math.arccos
-  summary: Retorna o ângulo cujo cosseno é o número especificado.
+  summary: Devolve o ângulo cujo cosseno é o número especificado.
 - uid: microsoft.quantum.math.arccosh
-  summary: Computa o cosseno hiperbólico inverso de um número.
+  summary: Calcula a cosina hiperbólica hiperbólica inversa de um número.
 - uid: microsoft.quantum.math.arcsin
-  summary: Retorna o ângulo cujo seno é o número especificado.
+  summary: Devolve o ângulo cujo seno é o número especificado.
 - uid: microsoft.quantum.math.arcsinh
-  summary: Computa o seno hiperbólico inverso de um número.
+  summary: Calcula o pecado hiperbólico inverso de um número.
 - uid: microsoft.quantum.math.arctan
-  summary: Retorna o ângulo cuja tangente é o número especificado.
+  summary: Devolve o ângulo cuja tangente é o número especificado.
 - uid: microsoft.quantum.math.arctan2
-  summary: Retorna o ângulo cuja tangente é o quociente de dois números especificados.
+  summary: Devolve o ângulo cuja tangente é o quociente de dois números especificados.
 - uid: microsoft.quantum.math.arctanh
-  summary: Computa a tangente hiperbólica inversa de um número.
+  summary: Calcula a tangente hiperbólica hiperbólica inversa de um número.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Retorna a fase de um número complexo de `Complex`de tipos.
+  summary: Devolve a fase de um número complexo de `Complex`tipo.
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Retorna a fase de um número complexo de `ComplexPolar`de tipos.
+  summary: Devolve a fase de um número complexo de `ComplexPolar`tipo.
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Para um `a`inteiro não negativo, retorna o número de bits necessários para representar `a`.
+    Para um `a`inteiro não negativo, devolve o número de bits necessários para representar `a`.
 
 
-    Ou seja, retorna o menor $n $, que $a < 2 ^ n $.
+    Ou seja, devolve a menor $n$ de tal forma que $a < 2^n$.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Para um `a`inteiro não negativo, retorna o número de bits necessários para representar `a`.
+    Para um `a`inteiro não negativo, devolve o número de bits necessários para representar `a`.
 
 
-    Ou seja, retorna o menor $n $, que $a < 2 ^ n $.
+    Ou seja, devolve a menor $n$ de tal forma que $a < 2^n$.
 - uid: microsoft.quantum.math.ceiling
-  summary: Retorna o menor inteiro maior ou igual ao número especificado.
+  summary: Devolve o menor inteiro maior ou igual ao número especificado.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Converte um número complexo do tipo `Complex` em um número complexo de `ComplexPolar`de tipo.
+  summary: Converte um número complexo de `Complex` tipo para um número complexo de `ComplexPolar`tipo .
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Converte um número complexo do tipo `ComplexPolar` em um número complexo de `Complex`de tipo.
+  summary: Converte um número complexo de `ComplexPolar` tipo para um número complexo de `Complex`tipo .
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Preterido\n\nComplexPolarToComplex foi preterido. Em vez disso, use @\"microsoft.quantum.math.complexpolarascomplex\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ComplexoPolarToComplex foi depreciado. Por favor, use @\"microsoft.quantum.math.complexpolarascomplex\" em vez disso."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Preterido\n\nComplexToComplexPolar foi preterido. Em vez disso, use @\"microsoft.quantum.math.complexascomplexpolar\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nComplexToComplexPolar foi depreciado. Por favor, use @\"microsoft.quantum.math.complexascomplexpolar\" em vez disso."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a `denominatorBound`
+  summary: Encontra a fração contínua convergente mais próxima de `fraction` com o denominador menos ou igual a `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Localiza a fração contínua Convergent mais próxima de `fraction` com o denominador menor ou igual a `denominatorBound`
+  summary: Encontra a fração contínua convergente mais próxima de `fraction` com o denominador menos ou igual a `denominatorBound`
 - uid: microsoft.quantum.math.cos
-  summary: Retorna o cosseno do ângulo especificado.
+  summary: Devolve o cosseno do ângulo especificado.
 - uid: microsoft.quantum.math.cosh
-  summary: Retorna o cosseno hiperbólico do ângulo especificado.
+  summary: Devolve a cosina hiperbólica do ângulo especificado.
 - uid: microsoft.quantum.math.dividedbyc
-  summary: Retorna o quociente de duas entradas.
+  summary: Devolve o quociente de duas entradas.
 - uid: microsoft.quantum.math.dividedbycp
-  summary: Retorna o quociente de duas entradas.
+  summary: Devolve o quociente de duas entradas.
 - uid: microsoft.quantum.math.dividedbyd
-  summary: Retorna o quociente de duas entradas.
+  summary: Devolve o quociente de duas entradas.
 - uid: microsoft.quantum.math.dividedbyi
-  summary: Retorna o quociente de duas entradas.
+  summary: Devolve o quociente de duas entradas.
 - uid: microsoft.quantum.math.dividedbyl
-  summary: Retorna o quociente de duas entradas.
+  summary: Devolve o quociente de duas entradas.
 - uid: microsoft.quantum.math.divreml
-  summary: Divide um valor de BigInteger por outro, retorna o resultado e o resto como uma tupla.
+  summary: Divide um valor BigInteger por outro, devolve o resultado e o restante como uma tuple.
 - uid: microsoft.quantum.math.e
-  summary: Retorna a base logarítmica natural $e $.
+  summary: Devolve a base logarítmica natural $e$.
 - uid: microsoft.quantum.math.expd
-  summary: Retorna $e $ elevado à potência especificada.
+  summary: Devoluções $e$ elevadas à potência especificada.
 - uid: microsoft.quantum.math.expmodi
-  summary: Retorna um número inteiro elevado a uma determinada potência, com relação a um determinado módulo.
+  summary: Devolve um inteiro elevado a um determinado poder, no que diz respeito a um determinado modulo.
 - uid: microsoft.quantum.math.expmodl
-  summary: Retorna um número inteiro elevado a uma determinada potência, com relação a um determinado módulo.
+  summary: Devolve um inteiro elevado a um determinado poder, no que diz respeito a um determinado modulo.
 - uid: microsoft.quantum.math.extendedgreatestcommondivisori
-  summary: Computa uma tupla $ (u, v) $ de forma que $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, em que $ \operatorname{GCD} $ é $a $ maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  summary: Computa um tuple $(u,v)$ de tal forma que $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, onde o nome de operador de $\{GCD}$ é $a$ maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 - uid: microsoft.quantum.math.extendedgreatestcommondivisorl
-  summary: Computa uma tupla $ (u, v) $ de forma que $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, em que $ \operatorname{GCD} $ é $a $ maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  summary: Computa um tuple $(u,v)$ de tal forma que $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, onde o nome de operador de $\{GCD}$ é $a$ maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 - uid: microsoft.quantum.math.floor
   summary: Retorna o maior inteiro menor ou igual ao número especificado.
 - uid: microsoft.quantum.math.greatestcommondivisori
-  summary: Computa o maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  summary: Calcula o maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 - uid: microsoft.quantum.math.greatestcommondivisorl
-  summary: Computa o maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+  summary: Calcula o maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 - uid: microsoft.quantum.math.ieeeremainder
-  summary: Retorna o resto resultante da divisão de um número especificado por outro número especificado.
+  summary: Devolve o restante resultante da divisão de um número especificado por outro número especificado.
 - uid: microsoft.quantum.math.inversemodi
-  summary: Retorna $b $, que $a \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $.
+  summary: Devoluções $b$ de tal forma que $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
 - uid: microsoft.quantum.math.inversemodl
-  summary: Retorna $b $, que $a \cdot b = 1 (\operatorname{mod} \texttt{Modulus}) $.
+  summary: Devoluções $b$ de tal forma que $a \cdot b = 1 (\operatorname{mod} \texttt{modulus})$.
 - uid: microsoft.quantum.math.iscoprimei
-  summary: Retornará true se $a $ e $b $ forem coprimos e false caso contrário.
+  summary: Devoluções verdadeiras se $a$ e $b$ são co-prime e falsos de outra forma.
 - uid: microsoft.quantum.math.iscoprimel
-  summary: Retornará true se $a $ e $b $ forem coprimos e false caso contrário.
+  summary: Devoluções verdadeiras se $a$ e $b$ são co-prime e falsos de outra forma.
 - uid: microsoft.quantum.math.lg
-  summary: Computa o logaritmo de base 2 de um número.
+  summary: Calcula o logarithm base-2 de um número.
 - uid: microsoft.quantum.math.log
-  summary: Retorna o logaritmo natural (base $e $) de um número especificado.
+  summary: Devolve o logarithm natural (base $e$) de um número especificado.
 - uid: microsoft.quantum.math.log10
-  summary: Retorna o logaritmo de base 10 de um número especificado.
+  summary: Devolve a base 10 logarithm de um número especificado.
 - uid: microsoft.quantum.math.logof2
-  summary: Retorna o logaritmo natural de 2.
+  summary: Devolve o logarithm natural de 2.
 - uid: microsoft.quantum.math.max
-  summary: Dada uma matriz de inteiros, retorna o maior elemento.
+  summary: Dado um leque de inteiros, devolve o maior elemento.
 - uid: microsoft.quantum.math.maxd
-  summary: Retorna o maior de dois números especificados.
+  summary: Devolve o maior de dois números especificados.
 - uid: microsoft.quantum.math.maxi
-  summary: Retorna o maior de dois números especificados.
+  summary: Devolve o maior de dois números especificados.
 - uid: microsoft.quantum.math.maxl
-  summary: Retorna o maior de dois números especificados.
+  summary: Devolve o maior de dois números especificados.
 - uid: microsoft.quantum.math.min
-  summary: Dada uma matriz de inteiros, retorna o elemento menor.
+  summary: Dado um conjunto de inteiros, devolve o menor elemento.
 - uid: microsoft.quantum.math.mind
-  summary: Retorna o menor de dois números especificados.
+  summary: Devolve o menor de dois números especificados.
 - uid: microsoft.quantum.math.mini
-  summary: Retorna o menor de dois números especificados.
+  summary: Devolve o menor de dois números especificados.
 - uid: microsoft.quantum.math.minl
-  summary: Retorna o menor de dois números especificados.
+  summary: Devolve o menor de dois números especificados.
 - uid: microsoft.quantum.math.minusc
-  summary: Retorna a diferença entre duas entradas.
+  summary: Devolve a diferença entre duas inputs.
 - uid: microsoft.quantum.math.minuscp
-  summary: Retorna a diferença entre duas entradas.
+  summary: Devolve a diferença entre duas inputs.
 - uid: microsoft.quantum.math.minusd
-  summary: Retorna a diferença entre duas entradas.
+  summary: Devolve a diferença entre duas inputs.
 - uid: microsoft.quantum.math.minusi
-  summary: Retorna a diferença entre duas entradas.
+  summary: Devolve a diferença entre duas inputs.
 - uid: microsoft.quantum.math.minusl
-  summary: Retorna a diferença entre duas entradas.
+  summary: Devolve a diferença entre duas inputs.
 - uid: microsoft.quantum.math.modi
-  summary: Retorna o módulo de um número em relação a outro número.
+  summary: Devolve o módulo de um número em relação a outro número.
 - uid: microsoft.quantum.math.modl
-  summary: Retorna o módulo de um número em relação a outro número.
+  summary: Devolve o módulo de um número em relação a outro número.
 - uid: microsoft.quantum.math.modpowl
-  summary: Executa uma divisão modular em um número elevado à potência de outro número.
+  summary: Executa uma divisão modular num número elevado ao poder de outro número.
 - uid: microsoft.quantum.math.modulusi
-  summary: Computa a residue canônica do `modulus`do módulo `value`.
+  summary: Calcula o resíduo canónico de `value` `modulus`de modulo .
 - uid: microsoft.quantum.math.modulusl
-  summary: Computa a residue canônica do `modulus`do módulo `value`.
+  summary: Calcula o resíduo canónico de `value` `modulus`de modulo .
 - uid: microsoft.quantum.math.negationc
-  summary: Retorna a negação unário de uma entrada.
+  summary: Devolve a negação não ária de uma entrada.
 - uid: microsoft.quantum.math.negationcp
-  summary: Retorna a negação unário de uma entrada.
+  summary: Devolve a negação não ária de uma entrada.
 - uid: microsoft.quantum.math.negationd
-  summary: Retorna a negação unário de uma entrada.
+  summary: Devolve a negação não ária de uma entrada.
 - uid: microsoft.quantum.math.negationi
-  summary: Retorna a negação unário de uma entrada.
+  summary: Devolve a negação não ária de uma entrada.
 - uid: microsoft.quantum.math.negationl
-  summary: Retorna a negação unário de uma entrada.
+  summary: Devolve a negação não ária de uma entrada.
 - uid: microsoft.quantum.math.pi
-  summary: Representa a proporção da circunferência de um círculo com o diâmetro, especificado pela constante, π.
+  summary: Representa a relação entre a circunferência de um círculo e o seu diâmetro, especificada pela constante, π.
 - uid: microsoft.quantum.math.plusa
-  summary: Retorna a soma (concatenação) de duas entradas.
+  summary: Devolve a soma (concatenação) de duas inputs.
 - uid: microsoft.quantum.math.plusc
-  summary: Retorna a soma de duas entradas.
+  summary: Devolve a soma de duas inputs.
 - uid: microsoft.quantum.math.pluscp
-  summary: Retorna a soma de duas entradas.
+  summary: Devolve a soma de duas inputs.
 - uid: microsoft.quantum.math.plusd
-  summary: Retorna a soma de duas entradas.
+  summary: Devolve a soma de duas inputs.
 - uid: microsoft.quantum.math.plusi
-  summary: Retorna a soma de duas entradas.
+  summary: Devolve a soma de duas inputs.
 - uid: microsoft.quantum.math.plusl
-  summary: Retorna a soma de duas entradas.
+  summary: Devolve a soma de duas inputs.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    Retorna a norma `L(p)` de um vetor de `Double`s.
+    Devolve a norma `L(p)` de um vetor de `Double`s.
 
 
-    Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna a $p $-norma $\|x\|\_p = (\ sum_ {j} | x_j | ^ {p}) ^ {1/p} $.
+    Ou seja, dado um matriz $x$ de `Double[]`tipo, isto devolve o $p$-norm $\|x\|\_p= (\sum_{j}x_j;{{p})^{1/p}$.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    Normaliza um vetor de `Double`s no `L(p)` normal.
+    Normaliza um vetor de `Double`s na norma `L(p)`.
 
 
-    Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna uma matriz em que todos os elementos são divididos pelo $p $-norma $\|x\|$ _p $.
+    Isto é, dado um matriz $x$ de `Double[]`tipo, isto devolve uma matriz onde todos os elementos são divididos pela $p$-norm $\|x\|_p$.
 - uid: microsoft.quantum.math.powc
-  summary: Retorna um número elevado a uma determinada potência.
+  summary: Devolve um número elevado a um determinado poder.
 - uid: microsoft.quantum.math.powcp
-  summary: Retorna um número elevado a uma determinada potência.
+  summary: Devolve um número elevado a um determinado poder.
 - uid: microsoft.quantum.math.powd
-  summary: Retorna o número x elevado à potência y.
+  summary: Devolve o número x elevado ao poder y.
 - uid: microsoft.quantum.math.powi
-  summary: Retorna um número elevado a uma determinada potência.
+  summary: Devolve um número elevado a um determinado poder.
 - uid: microsoft.quantum.math.powl
-  summary: Retorna um número elevado a uma determinada potência.
+  summary: Devolve um número elevado a um determinado poder.
 - uid: microsoft.quantum.math.realmod
-  summary: Computa o módulo entre dois números reais.
+  summary: Calcula o módulo entre dois números reais.
 - uid: microsoft.quantum.math.round
-  summary: Arredonda um valor para o inteiro mais próximo ou para o número especificado de dígitos fracionários.
+  summary: Arredonda um valor para o inteiro mais próximo.
 - uid: microsoft.quantum.math.signd
-  summary: Retorna um inteiro que indica o sinal de um número.
+  summary: Devolve uma prótese que indica o sinal de um número.
 - uid: microsoft.quantum.math.signi
-  summary: Retorna um inteiro que indica o sinal de um número.
+  summary: Devolve uma prótese que indica o sinal de um número.
 - uid: microsoft.quantum.math.signl
-  summary: Retorna um inteiro que indica o sinal de um número.
+  summary: Devolve uma prótese que indica o sinal de um número.
 - uid: microsoft.quantum.math.sin
-  summary: Retorna o seno do ângulo especificado.
+  summary: Devolve o seno do ângulo especificado.
 - uid: microsoft.quantum.math.sinh
-  summary: Retorna o seno hiperbólico do ângulo especificado.
+  summary: Devolve o seno hiperbólico do ângulo especificado.
 - uid: microsoft.quantum.math.sqrt
-  summary: Retorna a raiz quadrada de um número especificado.
+  summary: Devolve a raiz quadrada de um número especificado.
 - uid: microsoft.quantum.math.tan
-  summary: Retorna a tangente do ângulo especificado.
+  summary: Devolve a tangente do ângulo especificado.
 - uid: microsoft.quantum.math.tanh
-  summary: Retorna a tangente hiperbólica do ângulo especificado.
+  summary: Devolve a tangente hiperbólica do ângulo especificado.
 - uid: microsoft.quantum.math.timesc
-  summary: Retorna o produto de duas entradas.
+  summary: Devolve o produto de duas inputs.
 - uid: microsoft.quantum.math.timescp
-  summary: Retorna o produto de duas entradas.
+  summary: Devolve o produto de duas inputs.
 - uid: microsoft.quantum.math.timesd
-  summary: Retorna o produto de duas entradas.
+  summary: Devolve o produto de duas inputs.
 - uid: microsoft.quantum.math.timesi
-  summary: Retorna o produto de duas entradas.
+  summary: Devolve o produto de duas inputs.
 - uid: microsoft.quantum.math.timesl
-  summary: Retorna o produto de duas entradas.
+  summary: Devolve o produto de duas inputs.
 - uid: microsoft.quantum.math.truncate
-  summary: Calcula a parte integral de um número.
+  summary: Calcula a parte integrante de um número.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Representa um número racional do formulário `p/q`. O inteiro `p` é o primeiro elemento da tupla e `q` é o segundo elemento da tupla.
+  summary: Representa um número racional da forma `p/q`. A `p` é o primeiro elemento da tuple e `q` é o segundo elemento da tuple.
 - uid: microsoft.quantum.math.complex
   summary: >-
-    Representa um número complexo por seus componentes reais e imaginários.
+    Representa um número complexo pelos seus componentes reais e imaginários.
 
-    O primeiro elemento da tupla é o componente real, o segundo componente imaginário.
+    O primeiro elemento da tuple é o componente real, o segundo - o componente imaginário.
 - uid: microsoft.quantum.math.complexpolar
   summary: >-
     Representa um número complexo na forma polar.
 
 
-    A representação polar de um número complexo é $c = r e ^ {i t} $.
+    A representação polar de um número complexo é $c=r e^{i t}$.
 - uid: microsoft.quantum.math.fraction
-  summary: Representa um número racional do formulário `p/q`. O inteiro `p` é o primeiro elemento da tupla e `q` é o segundo elemento da tupla.
-summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções matemáticas clássicas e tipos de dados."
+  summary: Representa um número racional da forma `p/q`. A `p` é o primeiro elemento da tuple e `q` é o segundo elemento da tuple.
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções matemáticas clássicas e tipos de dados."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Gera um número inteiro aleatório de amostra uniforme maior ou igual a zero e menor que um limite superior fornecido.
+  summary: Gera uma nota aleatória uniformemente amostrada maior ou igual a zero e inferior a um limite superior fornecido.
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Gera um inteiro aleatório de amostra uniforme de todos os inteiros que podem ser representados em um determinado número de bits.
+  summary: Gera um inteiro aleatório, uniformemente amostrado de todos os inteiros que podem ser representados num determinado número de bits.
 - uid: microsoft.quantum.math.randomreal
-  summary: Retorna um número real aleatório no intervalo maior ou igual a zero e menor que um.
+  summary: Devolve um número real aleatório no intervalo maior ou igual a zero e inferior a um.
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Retorna um dos operadores de Pauli de qubit única de forma uniforme em aleatório.
+  summary: Devolve um dos operadores de Pauli de um único qubit uniformemente ao acaso.
 metadata:
-  ms.openlocfilehash: 00156d553e8378b1a38dcd6f1749c4ff3cb689a7
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: f1a0185252155a39572a6b4159a88686533154c0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858263"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870191"

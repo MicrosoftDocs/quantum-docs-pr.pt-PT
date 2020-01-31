@@ -3,23 +3,21 @@ uid: microsoft.quantum.canon.stackpop
 name: StackPop
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Remove o elemento superior de um <xref:microsoft.quantum.canon.resultstack>.
+summary: StackPop foi depreciado.
 syntax: 'function StackPop (stack : Microsoft.Quantum.Canon.ResultStack) : Microsoft.Quantum.Canon.ResultStack'
 input:
   content: '(stack : Microsoft.Quantum.Canon.ResultStack)'
   types:
   - name: stack
-    summary: A pilha a ser exibida.
     uid: microsoft.quantum.canon.resultstack
 output:
   content: Microsoft.Quantum.Canon.ResultStack
   types:
-  - summary: O `stack` com o elemento superior removido. A nova pilha tem a mesma capacidade que a antiga, mas seu comprimento é reduzido em um.
-    uid: microsoft.quantum.canon.resultstack
+  - uid: microsoft.quantum.canon.resultstack
 metadata:
-  ms.openlocfilehash: 371952e68e9c06fc11d9e8c309a4d388b80a9556
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 23c54fb83155e32415348d160649580a8b0cc501
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219370"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871469"

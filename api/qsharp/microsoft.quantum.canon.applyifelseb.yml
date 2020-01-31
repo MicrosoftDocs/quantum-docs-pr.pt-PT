@@ -4,19 +4,20 @@ name: ApplyIfElseB
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma das duas operações, dependendo do valor de um bit clássico.
+  Aplica-se uma de duas operações, dependendo do valor de uma parte clássica.
 
 
-  Dado um `bit`de bits, o aplica a operação `trueOp` com `trueInput` como sua entrada quando `bit` é `true`e aplica `falseOp(falseInput)` quando `bit` é `false`.
+  Dado um pouco `bit`, aplica a operação `trueOp` com `trueInput` como entrada quando `bit` é `true`, e aplica-se `falseOp(falseInput)` quando `bit` é `false`.
 syntax: "operation ApplyIfElseB (bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit), trueInput : 'T), (falseOp : ('U => Unit), falseInput : 'U))"
   types:
   - name: bit
+    summary: O valor booleano usado para determinar se `trueOp` ou `falseOp` é aplicado.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: A operação a ser aplicada quando `bit` for `true`.
+    summary: A operação a aplicar quando `bit` é `true`.
     isOperation: true
     input:
       types:
@@ -27,11 +28,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: trueInput
-    summary: A entrada a ser fornecida para `trueOp` quando `bit` é `true`.
+    summary: A entrada a fornecer a `trueOp` quando `bit` for `true`.
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: A operação a ser aplicada quando `bit` for `false`.
+    summary: A operação a aplicar quando `bit` é `false`.
     isOperation: true
     input:
       types:
@@ -42,7 +43,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: falseInput
-    summary: A entrada a ser fornecida para `falseOp` quando `bit` é `false`.
+    summary: A entrada a fornecer a `falseOp` quando `bit` for `false`.
     uid: "'U"
     isLocal: true
 output:
@@ -52,9 +53,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação `trueOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `trueOp` a ser aplicado condicionalmente.
 - uid: "'U"
-  summary: O tipo de entrada da operação `falseOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `falseOp` a ser aplicado condicionalmente.
 seeAlso:
 - microsoft.quantum.canon.applyifzero
 - microsoft.quantum.canon.applyifone
@@ -62,9 +63,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: 023608bfe390acff37363fde3dac71ab03eb3bb2
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bdec84c4a9bb341bea919f26836306e200c17a7b
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217483"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871010"

@@ -3,13 +3,14 @@ uid: microsoft.quantum.arrays.foreach
 name: ForEach
 type: operation
 namespace: Microsoft.Quantum.Arrays
-summary: Dada uma matriz e uma operação que é definida para os elementos da matriz, retorna uma nova matriz que consiste nas imagens da matriz original sob a operação.
-remarks: "A operação é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma operação `action : 'T -> 'U` podemos mapear os elementos da matriz e produzir uma nova matriz do tipo `'U[]`."
+summary: Dada uma matriz e uma operação definida para os elementos da matriz, devolve uma nova matriz que consiste nas imagens da matriz original sob a operação.
+remarks: "A operação é definida para tipos genéricos, ou seja, sempre que tivermos uma matriz `'T[]` e uma operação `action : 'T -> 'U` podemos mapear os elementos da matriz e produzir uma nova gama de `'U[]`tipo ."
 syntax: "operation ForEach (action : ('T => 'U), array : 'T[]) : 'U[]"
 input:
   content: "(action : ('T => 'U), array : 'T[])"
   types:
   - name: action
+    summary: Uma operação de `'T` a `'U` que é aplicada a cada elemento.
     isOperation: true
     input:
       types:
@@ -20,7 +21,7 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Uma matriz de elementos em `'T`.
+    summary: Uma série de elementos sobre `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -33,13 +34,13 @@ output:
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo de elementos de `array`.
+  summary: O tipo de elementos `array`.
 - uid: "'U"
-  summary: O tipo de resultado da operação de `action`.
+  summary: O tipo de resultado da operação `action`.
 metadata:
-  ms.openlocfilehash: f97e01504142681f34772cc84d6e598507d7d734
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6f61c37fb7a62bcbcfe91768725173e9a919e987
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218333"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871027"

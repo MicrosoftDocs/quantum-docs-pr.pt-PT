@@ -4,18 +4,18 @@ name: OperationPowC
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Gera uma operação para uma potência.
+  Eleva uma operação a uma potência.
 
   O modificador `C` indica que a operação é controlável.
 
 
-  Ou seja, dada uma operação que representa um portão $U $, retorna uma nova operação $U ^ m $ para um Power $m $.
-syntax: "function OperationPowC (oracle : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
+  Isto é, dada uma operação que representa um portão $U$, devolve uma nova operação $U^m$ por uma potência $m$.
+syntax: "function OperationPowC (op : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
 input:
-  content: "(oracle : ('T => Unit is Ctl), power : Int)"
+  content: "(op : ('T => Unit is Ctl), power : Int)"
   types:
-  - name: oracle
-    summary: Uma operação $U $ que representa o portão a ser repetido.
+  - name: op
+    summary: Uma operação $U$ representando o portão a repetir.
     isOperation: true
     input:
       types:
@@ -28,13 +28,13 @@ input:
     functors:
     - Controlled
   - name: power
-    summary: O número de vezes que $U $ será repetido.
+    summary: O número de vezes que $U$ deve ser repetido.
     isPrimitive: true
     uid: Int
 output:
   content: ('T => Unit is Ctl)
   types:
-  - summary: Uma nova operação representando $U ^ m $, em que $m = \texttt{Power} $.
+  - summary: Uma nova operação que represente $U^m$, onde $m = \texttt{power}$.
     isOperation: true
     input:
       types:
@@ -48,13 +48,13 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: O tipo da operação a ser alimentada.
+  summary: O tipo de operação a ser alimentada.
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: 5bc317597ef660bf92291b690fdb2d255eaaa616
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c8da707ae2a47e427204f95f11040154e0d53e02
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230811"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871265"

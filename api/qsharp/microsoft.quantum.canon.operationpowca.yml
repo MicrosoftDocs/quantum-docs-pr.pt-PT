@@ -4,18 +4,18 @@ name: OperationPowCA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Gera uma operação para uma potência.
+  Eleva uma operação a uma potência.
 
-  O modificador `A` indica que a operação é controlável e de adjointable.
+  O modificador `A` indica que a operação é controlável e adjointável.
 
 
-  Ou seja, dada uma operação que representa um portão $U $, retorna uma nova operação $U ^ m $ para um Power $m $.
-syntax: "function OperationPowCA (oracle : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
+  Isto é, dada uma operação que representa um portão $U$, devolve uma nova operação $U^m$ por uma potência $m$.
+syntax: "function OperationPowCA (op : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
 input:
-  content: "(oracle : ('T => Unit is Ctl + Adj), power : Int)"
+  content: "(op : ('T => Unit is Ctl + Adj), power : Int)"
   types:
-  - name: oracle
-    summary: Uma operação $U $ que representa o portão a ser repetido.
+  - name: op
+    summary: Uma operação $U$ representando o portão a repetir.
     isOperation: true
     input:
       types:
@@ -29,13 +29,13 @@ input:
     - Adjoint
     - Controlled
   - name: power
-    summary: O número de vezes que $U $ será repetido.
+    summary: O número de vezes que $U$ deve ser repetido.
     isPrimitive: true
     uid: Int
 output:
   content: ('T => Unit is Ctl + Adj)
   types:
-  - summary: Uma nova operação representando $U ^ m $, em que $m = \texttt{Power} $.
+  - summary: Uma nova operação que represente $U^m$, onde $m = \texttt{power}$.
     isOperation: true
     input:
       types:
@@ -50,13 +50,13 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: O tipo da operação a ser alimentada.
+  summary: O tipo de operação a ser alimentada.
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: d671ba738ec1d8d24b6fe956230ab0af60dbbda1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d5fcdf5fe3cefd5ecc5bf0421960db542a7f59a3
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211720"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871520"

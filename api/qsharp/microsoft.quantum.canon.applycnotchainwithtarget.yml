@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycnotchainwithtarget
+name: ApplyCNOTChainWithTarget
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Calcula a paridade de uma série de qubits num qubit alvo.
+
+
+  Se a matriz estiver inicialmente no estado $\ket{q_0} \ket{q_1} \cdots \ket{{q_{{{{{{{target}}}},o estado final é dado por $\ket{q_0} \ket {q_1 \oplus q_0} \cdots \ket {q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{{{target}}}}.}.}.}}.}}.}.}.o estado final é dado por $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket {q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{{{target}}}}.}.}.}.}.}.o estado final é dado por $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket {q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{{{target}}}}.}.}.}.}.}.o
+remarks: >-
+  Os seguintes são equivalentes:
+
+
+  ```qsharp
+
+  ApplyCNOTChainWithTarget(Most(qs), Last(qs));
+
+  ```
+
+
+  e em
+
+
+  ```qsharp
+
+  ApplyCNOTChain(qs);
+
+  ```
+syntax: 'operation ApplyCNOTChainWithTarget (qubits : Qubit[], targetQubit : Qubit) : Unit'
+input:
+  content: '(qubits : Qubit[], targetQubit : Qubit)'
+  types:
+  - name: qubits
+    summary: Conjunto de qubits em que a paridade é calculada.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetQubit
+    summary: Qubit final em que a paridade dos 'qubits' é XORed.
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: ec55fd89e8ef836439b58c8dc0cf4fa21b12ef23
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76873061"
