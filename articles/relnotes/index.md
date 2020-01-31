@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: c709f1eb130d37f930ffc4acc4bd663b8b8ba24a
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: c135dacb2fc305fa97874cb4abcf4e2ac489b9e4
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863168"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871622"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de Versão do Microsoft Quantum Development Kit
 
@@ -20,6 +20,19 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter as instruções de instalação, veja o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter as instruções de atualização, veja o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01020012831"></a>Versão 0.10.2001.2831
+
+*Data da versão: 29 de janeiro de 2020*
+
+Esta versão contém o seguinte:
+
+- Novo pacote NuGet Microsoft.Quantum.SDK; veja o ficheiro [README](https://github.com/microsoft/qsharp-compiler/blob/master/src/QuantumSdk/README.md) para obter mais detalhes
+- Suporte adicionado para .NET Core 3.1; recomenda-se vivamente ter instalada a versão 3.1.100, uma vez que compilar com versões mais antigas do SDK de .NET Core pode provocar problemas
+- Novas transformações de compilador disponíveis em Microsoft.Quantum.QsCompiler.Experimental
+- Nova funcionalidade para expor vetores de estado de saída como HTML em IQ#
+- Suporte adicionado para EstimateFrequencyA a Microsoft.Quantum.Characterization para testes Hadamard e SWAP
+- O espaço de nomes AmplitudeAmplification utiliza agora o guia de estilo da Q#
 
 ## <a name="version-01019120501"></a>Versão 0.10.1912.0501
 
@@ -127,7 +140,7 @@ Esta versão reorganiza as extensões e atualiza a biblioteca de química:
 * Adicione suporte para [wavefunctions de várias referências](xref:microsoft.quantum.chemistry.concepts.multireference), wavefunctions de várias referências dispersas e cluster conjugado unitário.  [PR 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Obrigado!) Contribuidor do [1QBit](https://1qbit.com) ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): avaliação energética com ansatz de variação. [PR 120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Atualização do esquema [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) para a nova [versão 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), ao adicionar a especificação de cluster conjugado unitário. [Problema 65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Adicione interoperabilidade Python às funções da biblioteca de química. Experimente esta [amostra](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problema 53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Adicione interoperabilidade Python às funções da biblioteca de química. Experimente esta [amostra](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problema 53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Versão 0.6.1905
 

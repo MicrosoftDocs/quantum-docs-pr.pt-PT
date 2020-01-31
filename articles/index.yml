@@ -1,21 +1,21 @@
 ### YamlMime:Landing
-title: Documentação do Microsoft Quantum
-summary: Saiba como utilizar o Microsoft Quantum Developer Kit e a Q#, uma linguagem para algoritmos quânticos. Conheça os conceitos-chave e escreva o primeiro programa quântico.
+title: Microsoft Quantum Development Kit
+summary: Saiba como utilizar o Microsoft Quantum Development Kit e a Q#, uma linguagem para programar algoritmos quânticos.
 metadata:
-  title: Documentação do Microsoft Quantum – Referência da API Q#
-  description: Saiba como utilizar o Microsoft Quantum development kit e o Q#, uma linguagem para programação quântica. Conheça os conceitos-chave e escreva o primeiro programa quântico.  Explore as ferramentas e bibliotecas avançadas do QDK.
+  title: Microsoft Quantum Development Kit - Referência da API para Q#
+  description: Saiba como utilizar o Microsoft Quantum Development Kit e a Q#, uma linguagem para programar algoritmos quânticos. Conheça os conceitos-chave e escreva o primeiro programa quântico.  Explore as ferramentas e bibliotecas avançadas do QDK.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: f757c99b1f5b1a821c9c341c442e1080378949a8
-  ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+  ms.openlocfilehash: 53ee7b0a1ba7a83fb943f18afd27b5c699f848b2
+  ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
   ms.translationtype: HT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/02/2019
-  ms.locfileid: "73442513"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76820730"
 landingContent:
 - title: Introdução ao Microsoft Quantum
   linkLists:
@@ -44,9 +44,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Instalação do Python
-      url: install-guide/index.md#develop-with-python
+      url: install-guide/pyinstall.md
     - text: Instalação do Jupyter
-      url: install-guide/index.md#develop-with-jupyter-notebooks
+      url: install-guide/qjupyter.md
   - linkListType: how-to-guide
     links:
     - text: Exemplos de Q# com Python
@@ -60,9 +60,9 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Instalação do Visual Studio
-      url: install-guide/index.md#develop-with-c-on-windows-using-visual-studio
+      url: install-guide/csinstall.md
     - text: Instalação do Visual Studio Code
-      url: install-guide/index.md#develop-with-c-using-visual-studio-code
+      url: install-guide/csinstall.md
 - title: Exemplos de Q#
   linkLists:
   - linkListType: how-to-guide
