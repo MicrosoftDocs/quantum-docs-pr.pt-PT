@@ -4,16 +4,16 @@ name: Compose
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Gera a composição de duas funções.
+  Devolve a composição de duas funções.
 
 
-  Ou seja, dadas duas funções $f $ e $g $, retorna uma nova função representando $f \circ g $.
+  Tendo em conta duas funções $f$ e $g$, devolve uma nova função representando $f \circ g$.
 syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
 input:
   content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
   types:
   - name: outer
-    summary: A segunda função a ser aplicada.
+    summary: A segunda função a aplicar.
     isFunction: true
     input:
       types:
@@ -24,7 +24,7 @@ input:
       - uid: "'V"
         isLocal: true
   - name: inner
-    summary: A primeira função a ser aplicada.
+    summary: A primeira função a aplicar.
     isFunction: true
     input:
       types:
@@ -37,7 +37,7 @@ input:
 output:
   content: ('T -> 'V)
   types:
-  - summary: Uma nova função $h $ de modo que para todas as entradas $x $, $f (g (x)) = h (x) $.
+  - summary: Uma nova função $h$ de tal forma que para todas as inputs $x$, $f (g(x)) = h(x)$.
     isFunction: true
     input:
       types:
@@ -49,15 +49,15 @@ output:
         isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da primeira função a ser aplicada.
+  summary: O tipo de entrada da primeira função a aplicar.
 - uid: "'U"
-  summary: O tipo de saída da primeira função a ser aplicada e o tipo de entrada da segunda função a ser aplicada.
+  summary: O tipo de saída da primeira função a aplicar e o tipo de entrada da segunda função a aplicar.
 - uid: "'V"
-  summary: O tipo de saída da segunda função a ser aplicada.
+  summary: O tipo de saída da segunda função a aplicar.
 metadata:
-  ms.openlocfilehash: 69fbd6a4fafbc61a63e41257b7100303fd48d4d4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44296db92d6261fc8aba843346700bf8e22663bb
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223076"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871554"

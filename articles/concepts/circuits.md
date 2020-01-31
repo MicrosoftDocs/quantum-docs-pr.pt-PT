@@ -1,93 +1,93 @@
 ---
-title: Circuitos Quantum | Microsoft Docs
-description: Circuitos Quantum
+title: Circuitos quânticos Microsoft Docs
+description: Circuitos quânticos
 author: QuantumWriter
 uid: microsoft.quantum.concepts.circuits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7c2afa58fd70d893529cf794ae07df480466aaec
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: fe845aa0dde7c780ea6721dfe2559119e90b4aa5
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210577"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820798"
 ---
-# <a name="quantum-circuits"></a>Circuitos Quantum
-Considere por um momento a transformação unitário $ \Text{CNOT} _{01}(H\otimes 1) $.
-Essa sequência de portão é de importância fundamental para a computação Quantum porque ela cria um estado confusas de duas qubit de maneira máxima:
+# <a name="quantum-circuits"></a>Circuitos Quânticos
+Considere por um momento a transformação unitária $\text{ CNOT}_{01}(H\otimes 1)$.
+Esta sequência de portão é de importância fundamental para a computação quântica porque cria um estado de dois qubits maximamente emaranhado:
 
-$ $ \mathrm{CNOT}_{01}(H\otimes 1) \ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right), $ $
+$$\mathrm{CNOT}_{01}(H\otimes 1)\ket{00} = \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right),$$$$
 
-As operações com essa ou mais complexidade são onipresentes em algoritmos Quantum e correção de erro Quantum, portanto, deve ser um grande alívio de que há um método simples para sua visualização chamada de *diagrama de circuito Quantum*.
-O diagrama de circuito para preparar esse estado de Quantum de confusas máximo é:
+As operações com esta ou maior complexidade são ubíquas em algoritmos quânticos e correção de erros quânticos, pelo que deve ser um grande alívio que existe um método simples para a sua visualização chamado diagrama de *circuito quântico.*
+O diagrama do circuito para preparar este estado quântico maximamente emaranhado é:
 
 <!--- ![](.\media\1.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/Concepts1.png)
 
-## <a name="quantum-circuit-diagram-conventions"></a>Convenções de diagrama de circuito Quantum
-Essa linguagem visual para operações Quantum pode ser mais prontamente fácil do que escrever sua matriz equivalente quando você entende as convenções para expressar um circuito Quantum.
-Analisamos essas convenções abaixo.
+## <a name="quantum-circuit-diagram-conventions"></a>Convenções de diagramas de circuito quântico
+Esta linguagem visual para operações quânticas pode ser mais facilmente digerível do que escrever a sua matriz equivalente uma vez que você entenda as convenções para expressar um circuito quântico.
+Revemos estas convenções abaixo.
 
-Em um diagrama de circuito, cada linha sólida representa um qubit ou mais geralmente um registro de qubit.
-Por convenção, a linha superior é o registro de qubit $0 $ e o resto é rotulado em sequência. O circuito de exemplo acima é representado como agindo em dois qubits (ou dois registros equivalentes que consistem em um qubit).
-As Gates que atuam em um ou mais registros de qubit são indicadas como uma caixa.
+Num diagrama de circuito, cada linha sólida retrata um qubit ou, mais geralmente, um registo qubit.
+Por convenção, a linha de cima é o registo qubit $0$ e o restante é rotulado sequencialmente. O circuito de exemplo acima é descrito como agindo em dois qubits (ou equivalentemente dois registos constituídos por um qubit).
+Os portões que atuam num ou mais registos qubit são denotados como uma caixa.
 Por exemplo, o símbolo
 
 <!--- ![](.\media\2.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_2.png)
 
-é o portão [Hadamard](xref:microsoft.quantum.primitive.h) que atua em um registro de qubit único.
+é o portão [Hadamard](xref:microsoft.quantum.intrinsic.h) agindo num registo de qubit único.
 
-As Gates da Quantum são ordenadas em ordem cronológica com a porta mais à esquerda como a portão aplicada pela primeira vez ao qubits.
-Em outras palavras, se você modelar os fios como tendo o estado Quantum, os fios trazem o estado da Quantum por meio de cada um dos Gates no diagrama da esquerda para a direita.
-Isso é para dizer 
+Os portões quânticos são encomendados por ordem cronológica com o portão mais à esquerda, uma vez que o portão se aplicava primeiro aos qubits.
+Por outras palavras, se imaginarmos os fios como segurando o estado quântico, os fios trazem o estado quântico através de cada um dos portões do diagrama da esquerda para a direita.
+Isto é, 
 
 <!--- ![](.\media\3.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_3.png)
 
-é a matriz unitário $CBA $.
-A multiplicação de matriz obedece à Convenção oposta: a matriz mais à direita é aplicada primeiro. Em diagramas de circuito Quantum, no entanto, o portão mais à esquerda é aplicado primeiro.
-Essa diferença pode, às vezes, levar à confusão. portanto, é importante observar essa diferença significativa entre a notação linear algébricas e os diagramas de circuito Quantum.
+é a matriz unitária $CBA$.
+A multiplicação da matriz obedece à convenção oposta: a matriz mais correta é aplicada primeiro. Nos diagramas de circuitos quânticos, no entanto, o portão mais à esquerda é aplicado primeiro.
+Esta diferença pode, por vezes, levar à confusão, pelo que é importante notar esta diferença significativa entre a notação algébrica linear e os diagramas de circuitos quânticos.
 
-## <a name="inputs-and-outputs-of-quantum-circuits"></a>Entradas e saídas de circuitos Quantum
-Todos os exemplos anteriores que tinham tido exatamente o mesmo número de fios (qubits) de entrada para uma porta Quantum como o número de cabos do portão Quantum.
-A princípio, pode parecer razoável que os circuitos Quantum pudessem ter mais, ou menos, saídas do que as entradas em geral.
-No entanto, isso é impossível, pois todas as operações de Quantum, salvar medida, são unitários e, portanto, reversível.
-Se eles não tiverem o mesmo número de saídas que não seriam reversível e, portanto, não são unitários, o que é uma contradição.
-Por esse motivo, qualquer caixa desenhada em um diagrama de circuito deve ter precisamente o mesmo número de fios inserindo-o como sendo encerrado.
+## <a name="inputs-and-outputs-of-quantum-circuits"></a>Inputs e saídas de circuitos quânticos
+Todos os exemplos anteriores dados tiveram precisamente o mesmo número de fios (qubits) de entrada para um portão quântico como o número de fios fora do portão quântico.
+Pode parecer razoável que os circuitos quânticos possam ter mais, ou menos, saídas do que inputs em geral.
+Isto é impossível, no entanto, porque todas as operações quânticas, exceto a medição, são unitárias e, portanto, reversíveis.
+Se não tivessem o mesmo número de saídas que os inputs, não seriam reversíveis e, portanto, não unitários, o que constitui uma contradição.
+Por esta razão, qualquer caixa desenhada num diagrama de circuito deve ter precisamente o mesmo número de fios que a entram como saída.
 
-Os diagramas de circuito qubit seguem convenções semelhantes para os qubit únicos.
-Como um exemplo de esclarecimento, podemos definir uma operação qubit de dois unitários $B $ para ser $ (H S\otimes X) $ e expressar o circuito equivalentemente como
+Os diagramas de circuitos multiqubits seguem convenções semelhantes às de um qubit único.
+Como exemplo esclarecedor, podemos definir uma operação unitária de dois qubits $B$ para ser $(H S\otimes X)$ e expressar o circuito de forma equivalente como
 
 <!--- ![](.\media\4.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_4.png)
 
-Também podemos exibir $B $ como tendo uma ação em um único registro de duas qubit em vez de registros de 2 1-qubit, dependendo do contexto no qual o circuito é usado. Talvez a propriedade mais útil desses diagramas de circuito abstrato seja que eles permitam que algoritmos de Quantum complicados sejam descritos em um alto nível sem precisar compilá-los em Gates fundamentais.
-Isso significa que você pode obter uma intuição sobre o fluxo de dados para um grande algoritmo Quantum sem a necessidade de entender todos os detalhes de como cada uma das sub-rotinas dentro do algoritmo funciona.
+Também podemos ver $B$ como tendo uma ação num único registo de dois qubits em vez de dois registos de um qubit dependendo do contexto em que o circuito é usado. Talvez a propriedade mais útil de tais diagramas de circuitos abstratos é que eles permitem que algoritmos quânticos complicados sejam descritos a um nível elevado sem ter que compilá-los até portões fundamentais.
+Isto significa que você pode obter uma intuição sobre o fluxo de dados para um grande algoritmo quântico sem precisar entender todos os detalhes de como cada uma das subrotinas dentro do algoritmo funciona.
 
-## <a name="controlled-gates"></a>Gates controlados
-O outro constructo criado em diagramas de circuito Quantum qubit é Control.
-A ação de um portão controlado de Quantum singular, denotado $ \Lambda (G) $, em que um único valor de qubit controla o aplicativo de $G $, pode ser compreendido examinando o exemplo a seguir de uma entrada de estado do produto $ \Lambda (G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket {\ psi} $.
-Ou seja, a porta controlada se aplica $G $ ao registro que contém $ \psi $ If e somente se o qubit de controle usa o valor $1 $.
-Em geral, descrevemos essas operações controladas em diagramas de circuito como
+## <a name="controlled-gates"></a>Portões controlados
+A outra construção que é incorporada em diagramas de circuito quântico multiqubit é o controlo.
+A ação de um portão controlado por singly quântico, denotada $\Lambda(G)$, onde um único qubit controla a aplicação de $G$, pode ser entendida olhando para o exemplo seguinte de uma entrada do estado do produto $\Lambda(G) (\alpha \ket{0} + \beta \ket{1}) \ket {\psi} = \ket{0} \ket {\psi+{1} \\
+Ou seja, o portão controlado aplica-se $G$ ao registo que contém $\psi$ se e apenas se o qubit de controlo levar o valor $1$.
+Em geral, descrevemos tais operações controladas em diagramas de circuitos como
 
 <!--- ![](.\media\5.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_5.png)
 
-Aqui, o círculo preto denota o bit quântico no qual o portão é controlado e uma transmissão vertical denota o unitário que é aplicado quando o qubit de controle usa o valor $1 $.
-Para os casos especiais em que $G = X $ e $G = Z $ apresentamos a notação a seguir para descrever a versão controlada das Gates (Observe que a porta X controlada é a [porta do $CNOT $](xref:microsoft.quantum.primitive.cnot)):
+Aqui o círculo negro denota a bit quântica em que o portão é controlado e um fio vertical denota o unitário que é aplicado quando o qubit de controlo leva o valor $1$.
+Para os casos especiais em que $G=X$ e $G=Z$ introduzimos a seguinte notação para descrever a versão controlada dos portões (note que o portão controlado-X é o [portão $CNOT$](xref:microsoft.quantum.intrinsic.cnot)):
 
 <!--- ![](.\media\6.svg) --->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_6.png)
 
-O Q # fornece métodos para gerar automaticamente a versão controlada de uma operação, o que evita que o programador tenha que codificar essas operações manualmente. Um exemplo disso é mostrado abaixo:
+Q# fornece métodos para gerar automaticamente a versão controlada de uma operação, que evita que o programador tenha de codificar estas operações manualmente. Um exemplo disto é mostrado abaixo:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -96,18 +96,18 @@ is Ctl { // Auto-generate the controlled specialization of the operation
 }
 ```
 
-## <a name="measurement-operator"></a>Operador de medida
-A operação restante a ser visualizada em diagramas de circuito é medida.
-A medição usa um registro qubit, mede-o e gera o resultado como informações clássicas.
-Uma operação de medição é denotada por um símbolo de medidor e sempre usa como entrada um registro de qubit (indicado por uma linha sólida) e gera informações clássicas (indicadas por uma linha dupla).
-Especificamente, esse subcircuito é semelhante a:
+## <a name="measurement-operator"></a>Operador de medição
+A operação restante para visualizar em diagramas de circuitos é a medição.
+A medição tem um registo qubit, mede-o e produz o resultado como informação clássica.
+Uma operação de medição é denotada por um símbolo de contador e toma sempre como entrada um registo qubit (denotado por uma linha sólida) e produz informações clássicas (denotadas por uma linha dupla).
+Especificamente, tal subcircuito parece:
 
 <!--- ![](.\media\7.svg) ---->
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
-![circuito de medição](~/media/concepts_7.png)
+](~/media/concepts_7.png) do circuito de medição de ![
 
-Q # implementa um [operador de medida](xref:microsoft.quantum.primitive.measure) para essa finalidade.
-Consulte a [seção sobre medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.
+Q# implementa um operador de [medida](xref:microsoft.quantum.intrinsic.measure) para o efeito.
+Consulte a [secção sobre medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.
 
 Da mesma forma, o subcircuito
 
@@ -115,14 +115,14 @@ Da mesma forma, o subcircuito
 <!-- Can't find a way to easily center this... probably an extension needed:  -->
 ![](~/media/concepts_8.png)
 
-fornece um portão controlado de forma clássica, em que $G $ é aplicado condicionalmente no bit de controle clássico sendo o valor de $1 $.
+dá um portão controlado clássicamente, onde $G$ é aplicado condicionado na broca de controlo clássico sendo $1$.
 
-## <a name="teleportation-circuit-diagram"></a>Diagrama de circuito de teleportação
-A [porta de transporte Quantum](xref:microsoft.quantum.techniques.puttingittogether) talvez seja o melhor algoritmo Quantum para ilustrar esses componentes.
-A teleportabilidade Quantum é um método para mover dados dentro de um computador Quantum (ou até mesmo entre computadores Quantum distantes em uma rede Quantum) por meio do uso de Entanglement e medição.
-Curiosamente, é realmente capaz de mover um estado Quantum, digamos o valor em um determinado qubit, de um qubit para outro, sem nem mesmo saber qual é o valor da qubit!
-Isso é necessário para que o protocolo funcione de acordo com as leis da mecânica quantum.
-O circuito de teleportabilidade Quantum é fornecido abaixo; também fornecemos uma versão anotada do circuito para ilustrar como ler o circuito Quantum.
+## <a name="teleportation-circuit-diagram"></a>Diagrama do circuito de teletransporte
+[A teleportação quântica](xref:microsoft.quantum.techniques.puttingittogether) é talvez o melhor algoritmo quântico para ilustrar estes componentes.
+A teleportação quântica é um método para mover dados dentro de um computador quântico (ou mesmo entre computadores quânticos distantes numa rede quântica) através do uso do emaranhado e da medição.
+Curiosamente, é realmente capaz de mover um estado quântico, digamos, o valor num determinado qubit, de um qubit para outro, sem sequer saber qual é o valor do qubit!
+Isto é necessário para que o protocolo funcione de acordo com as leis da Mecânica Quântica.
+O circuito de teletransporte quântico é dado abaixo; também fornecemos uma versão anotada do circuito para ilustrar como ler o circuito quântico.
 
 <!--- ![](.\media\tp2.svg){ width=50% } --->
 ![](~/media/concepts_tp2.png)

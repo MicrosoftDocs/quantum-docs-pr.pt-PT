@@ -1,40 +1,40 @@
 ---
-title: Código de contribuição | Microsoft Docs
-description: Código de contribuição
+title: Código contributante / Microsoft Docs
+description: Código contributante
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: 3ff15a744bf15924564d5a8fee54f4fbce4c04ee
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864428"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76819965"
 ---
 # <a name="contributing-code"></a>Contribuir no Código #
 
-Além de relatar problemas e aprimorar a documentação, o código que contribui para o kit de desenvolvimento Quantum pode ser uma maneira muito direta de ajudar seus colegas na Comunidade de programação Quantum.
-Ao contribuir com código, você pode ajudar a corrigir problemas, fornecer novos exemplos, tornar as bibliotecas existentes mais fáceis de usar ou até mesmo adicionar recursos totalmente novos.
+Além de reportar problemas e melhorar a documentação, contribuir com o código para o Kit de Desenvolvimento Quântico pode ser uma forma muito direta de ajudar os seus pares na comunidade de programação quântica.
+Ao contribuir com código, pode ajudar a corrigir problemas, fornecer novos exemplos, tornar as bibliotecas existentes mais fáceis de usar, ou até adicionar funcionalidades inteiramente novas.
 
-Neste guia, detalharemos um pouco do que procuramos quando revisarmos as solicitações de pull para ajudar sua contribuição a fazer o mais bom.
+Neste guia, vamos detalhar um pouco do que procuramos quando revermos os pedidos de pull para ajudar a sua contribuição a fazer o melhor.
 
 ## <a name="what-we-look-for"></a>O que procuramos ##
 
-Uma contribuição de código ideal se baseia no trabalho existente em um repositório de kit de desenvolvimento Quantum para corrigir problemas, expandir os recursos existentes ou adicionar novos recursos que estão dentro do escopo de um repositório.
-Quando aceitamos uma contribuição de código, ele se torna parte do próprio kit de desenvolvimento Quantum, de modo que novos recursos serão lançados, mantidos e desenvolvidos da mesma maneira que o restante do kit de desenvolvimento Quantum.
-Portanto, é útil quando a funcionalidade adicionada por uma contribuição é bem testada e documentada.
+Uma contribuição de código ideal baseia-se no trabalho existente num repositório do Kit de Desenvolvimento Quântico para corrigir problemas, expandir as funcionalidades existentes ou adicionar novas funcionalidades que estão no âmbito de um repositório.
+Quando aceitamos uma contribuição de código, torna-se parte do próprio Kit de Desenvolvimento Quântico, de modo a que novas funcionalidades sejam lançadas, mantidas e desenvolvidas da mesma forma que o resto do Kit de Desenvolvimento Quântico.
+Assim, é útil quando a funcionalidade adicionada por uma contribuição é bem testada e está documentada.
 
-### <a name="unit-tests"></a>Testes da unidade ###
+### <a name="unit-tests"></a>Testes unitários ###
 
-As funções, operações e tipos definidos pelo usuário do Q # que compõem bibliotecas como a Canon são testadas automaticamente como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries**](https://github.com/Microsoft/QuantumLibraries/) .
-Quando uma nova solicitação pull é aberta, por exemplo, nossa configuração de [Azure pipelines](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações na solicitação pull não interrompem nenhuma funcionalidade existente da qual a comunidade de programação Quantum dependa.
+As funções, operações e tipos definidos pelo utilizador que compõem bibliotecas como o cânone são automaticamente testados como parte do desenvolvimento do repositório [**Microsoft/QuantumLibraries.** ](https://github.com/Microsoft/QuantumLibraries/)
+Quando um novo pedido de pull é aberto, por exemplo, a nossa configuração [de Pipelines Azure](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações no pedido de pull não quebram qualquer funcionalidade existente de que a comunidade de programação quântica dependa.
 
-Com a versão mais recente do Q #, o teste de unidade é definido usando o atributo `@Test("QuantumSimulator")`. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator" ou qualquer nome totalmente qualificado especificando o destino de execução. Vários atributos que definem destinos de execução diferentes podem ser anexados ao mesmo callable. Alguns dos nossos testes ainda usam o pacote [Microsoft. Quantum. xUnit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) preterido que expõe todas as funções e operações Q # que terminam em `Test` à estrutura [xUnit](https://xunit.github.io/) . Este pacote não é mais necessário para definir testes de unidade. 
+Com a versão Q# mais recente, o teste de unidade é definido usando o atributo `@Test("QuantumSimulator")`. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", ou qualquer nome totalmente qualificado que especifique o alvo de execução. Vários atributos que definem diferentes alvos de execução podem ser anexados ao mesmo callable. Alguns dos nossos testes ainda utilizam o pacote [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) depreciado que expõe todas as funções e operações Q# terminando em `Test` à estrutura [xUnit.](https://xunit.github.io/) Este pacote já não é necessário para definir os testes unitários. 
 
-A função a seguir é usada para garantir que as funções <xref:microsoft.quantum.canon.fst> e <xref:microsoft.quantum.canon.snd> retornem as saídas corretas em um exemplo representativo.
-Se a saída de `Fst` ou `Snd` estiver incorreta, a instrução `fail` será usada para fazer com que o teste falhe.
+A função seguinte é utilizada para garantir que as funções <xref:microsoft.quantum.canon.fst> e <xref:microsoft.quantum.canon.snd> devolvam as saídas certas num exemplo representativo.
+Se a saída de `Fst` ou `Snd` estiver incorreta, a declaração de `fail` é utilizada para fazer com que o teste falhe.
 
 ```qsharp
 @Test("QuantumSimulator")
@@ -53,55 +53,55 @@ function PairTest () : Unit {
 }
 ```
 
-Condições mais complicadas podem ser verificadas usando as técnicas na [seção de teste](xref:microsoft.quantum.libraries.diagnostics) do guia de bibliotecas padrão.
-Por exemplo, o teste a seguir verifica se `H(q); X(q); H(q);` conforme chamado pelo <xref:microsoft.quantum.canon.applywith> faz a mesma coisa que `Z(q)`.
+Condições mais complicadas podem ser verificadas utilizando as técnicas na secção de [ensaio](xref:microsoft.quantum.libraries.diagnostics) do guia de bibliotecas padrão.
+Por exemplo, os seguintes controlos de teste que `H(q); X(q); H(q);` como chamado por <xref:microsoft.quantum.canon.applywith> faz o mesmo que `Z(q)`.
 
 ```qsharp
 @Test("QuantumSimulator")
-operation WithTest () : Unit {
+operation TestApplyWith() : Unit {
     let actual = ApplyWith(H, X, _);
     let expected = Z;
     AssertOperationsEqualReferenced(ApplyToEach(actual, _), ApplyToEachA(expected, _), 4);
 }
 ```
 
-Ao adicionar novos recursos, é uma boa ideia também adicionar novos testes para garantir que sua contribuição faça o que deveria.
-Isso ajuda o restante da Comunidade a manter e desenvolver seu recurso e, em particular, ajuda outros desenvolvedores a saber que eles podem contar com seu recurso.
+Ao adicionar novas funcionalidades, é uma boa ideia adicionar também novos testes para garantir que a sua contribuição faz o que é suposto.
+Isto ajuda o resto da comunidade a manter e desenvolver a sua funcionalidade, e em particular ajuda outros desenvolvedores a saberem que podem confiar na sua funcionalidade.
 
 > [!NOTE]
-> Isso também funciona da mesma forma!
-> Se houver um recurso existente que não tem alguns testes, nos ajudando a adicionar cobertura de teste, isso fará uma grande contribuição para a Comunidade.
+> Isto também funciona ao contrário!
+> Se houver uma característica existente que está a faltar a alguns testes, ajudar-nos a adicionar cobertura de teste daria uma grande contribuição para a comunidade.
 
-Localmente, os testes de unidade podem ser executados usando o Visual Studio Test Explorer ou o comando `dotnet test`, para que você possa verificar sua contribuição antes de abrir uma solicitação de pull.
+Localmente, os testes de unidade podem ser executados utilizando o Visual Studio Test Explorer ou o comando `dotnet test`, para que possa verificar a sua contribuição antes de abrir um pedido de pull.
 
 <!-- TODO:
 ### Comments and Documentation ###
 
 ### Citations and References ### -->
 
-## <a name="when-well-reject-a-pull-request"></a>Quando rejeitarmos uma solicitação de pull ##
+## <a name="when-well-reject-a-pull-request"></a>Quando rejeitaremos um pedido de retirada ##
 
-Às vezes, rejeitaremos a solicitação de pull para uma contribuição.
-Se isso acontecer com você, não significa que ela é inadequada, pois há vários motivos para não poder aceitar uma contribuição específica.
-Talvez, mais comumente, uma contribuição para a comunidade de programação Quantum seja realmente boa, mas os repositórios do kit de desenvolvimento do Quantum não são o lugar certo para desenvolvê-lo.
-Nesses casos, é altamente recomendável que você faça seu próprio repositório---parte da força do kit de desenvolvimento Quantum é que é fácil fazer e distribuir suas próprias bibliotecas usando o GitHub e o NuGet.org, da mesma forma que distribuímos a Canon e a química bibliotecas hoje.
+Às vezes, rejeitamos o pedido de uma contribuição.
+Se isto te acontecer, não significa que seja mau, já que há uma série de razões pelas quais podemos não aceitar uma contribuição em particular.
+Talvez mais comumente, uma contribuição para a comunidade de programação quântica é realmente boa, mas os repositórios do Kit de Desenvolvimento Quântico não são o lugar certo para desenvolvê-lo.
+Nesses casos, encorajamo-lo a fazer o seu próprio repositório --- parte da força do Kit de Desenvolvimento Quântico é que é fácil fazer e distribuir as suas próprias bibliotecas usando gitHub e NuGet.org, da mesma forma que distribuímos o cânone e a química bibliotecas hoje.
 
-Em outras ocasiões, poderemos rejeitar uma boa contribuição simplesmente porque ainda não estamos prontos para mantê-la e desenvolvê-la.
-Pode ser difícil fazer tudo, portanto, vamos planejar quais recursos podemos trabalhar melhor como um roteiro.
-Isso pode ser outro caso em que a liberação de um recurso como uma biblioteca de terceiros pode fazer muito sentido.
-Como alternativa, poderemos pedir ajuda para modificar um recurso para se ajustar melhor ao nosso roteiro, para que possamos fazer o melhor trabalho que possamos com ele.
+Noutras alturas, podemos rejeitar uma boa contribuição simplesmente porque ainda não estamos prontos para a manter e desenvolver.
+Pode ser difícil fazer tudo, por isso planeamos quais as características em que melhor podemos trabalhar como um roteiro.
+Este pode ser outro caso em que lançar uma funcionalidade como biblioteca de terceiros pode fazer muito sentido.
+Em alternativa, podemos pedir a sua ajuda para modificar uma funcionalidade para melhor encaixar no nosso roteiro para que possamos fazer o melhor trabalho possível com ele.
 
-Também solicitaremos alterações a uma solicitação de pull se precisar de mais testes de unidade ou de documentação para nos ajudar a usá-lo, ou se ele for diferente em relação ao estilo do restante das bibliotecas Q # que tornará mais difícil para os usuários encontrarem seu recurso.
-Nesses casos, tentaremos oferecer conselhos sobre as revisões de código sobre o que pode ser adicionado ou alterado para facilitar a inclusão da sua contribuição.
+Também pediremos alterações a um pedido de pull se necessitar de mais documentação ou testes unitários para nos ajudar a usá-lo, ou se difere o suficiente em estilo das restantes bibliotecas Q# que dificultará aos utilizadores encontrar a sua funcionalidade.
+Nestes casos, tentaremos oferecer alguns conselhos em revisões de códigosobre o que pode ser adicionado ou alterado para facilitar a sua contribuição para nós incluirmos.
 
-Por fim, não podemos aceitar contribuições que causam danos à comunidade de computação Quantum, conforme descrito no [código de conduta da Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
-Queremos garantir que as contribuições atendam a toda a comunidade de computação Quantum, tanto em sua diversidade maravilhosa atual quanto no futuro, à medida que ela cresce para se tornar ainda mais inclusiva.
-Agradecemos sua ajuda em concretizar essa meta.
+Por último, não podemos aceitar contribuições que causem danos à comunidade de computação quântica, tal como delineado no [Código de Conduta da Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
+Queremos assegurar que as contribuições sirvam toda a comunidade de computação quântica, tanto na sua atual diversidade maravilhosa, como no futuro à medida que cresce para se tornar ainda mais inclusiva.
+Agradecemos a sua ajuda na concretização deste objetivo.
 
 ## <a name="next-steps"></a>Passos seguintes ##
 
-Obrigado por ajudar a tornar o kit de desenvolvimento Quantum um excelente recurso para toda a comunidade de programação Quantum!
-Para saber mais, continue com o seguinte guia sobre o estilo de Q #.
+Obrigado por ajudar a fazer do Kit de Desenvolvimento Quântico um grande recurso para toda a comunidade de programação quântica!
+Para saber mais, por favor continue com o seguinte guia no estilo Q#.
 
 > [!div class="nextstepaction"]
-> [Saiba mais sobre as diretrizes de estilo Q #](xref:microsoft.quantum.contributing.style)
+> [Conheça as diretrizes do estilo Q#](xref:microsoft.quantum.contributing.style)

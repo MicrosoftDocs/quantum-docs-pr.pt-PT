@@ -1,25 +1,26 @@
 ---
-title: Introdução às técnicas de desenvolvimento do Quantum | Microsoft Docs
-description: Introdução às técnicas de desenvolvimento do Quantum
+title: Q# visão geral do programa - Técnicas Q# / Microsoft Docs
+description: Visão geral do programa - Técnicas Q#
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 702d23293a1c340ddd3d7032d0e05294345469b2
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+uid: microsoft.quantum.techniques.file-structure
+ms.openlocfilehash: e8f52e6b0d4382331665a8e845ef19a3a1beabf9
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442567"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820832"
 ---
-# <a name="q-program-overview"></a>Visão geral do programa Q #
+# <a name="q-program-overview"></a>Descrição geral do programa Q#
 
-O Q # é uma linguagem de programação específica de domínio de vários paradigmas escalonáveis para a computação Quantum. Q # é uma linguagem de programação Quantum no que pode ser usada para descrever como as instruções são executadas em computadores Quantum. Os computadores que podem ser direcionados variam de simuladores até o hardware Quantum real. O Q # é escalonável: pode ser usado para escrever programas de demonstração simples, como teleport, que são executados em alguns qubits, mas também oferece suporte à criação de programas grandes e sofisticados, como simulações de moléculas complexas que exigirão máquinas grandes com milhões de qubits. Embora grandes máquinas físicas ainda estejam no futuro, o Q # permite que um programador programe algoritmos de Quantum complexos agora. O que é mais, Q # dá suporte a várias tarefas, como depuração, criação de perfil, estimativa de recursos e determinadas simulações de finalidade especial de maneira escalonável. 
+Q# é uma linguagem de programação escalável, multi-paradigma, específica de domínio para computação quântica. Q# é uma linguagem de programação quântica na qual pode ser usada para descrever como as instruções são executadas em máquinas quânticas. As máquinas que podem ser direcionadas vão desde simuladores a hardware quântico real. Q# é escalável: pode ser usado para escrever programas de demonstração simples como teleport que funcionam em alguns qubits, mas também suporta a escrita de grandes e sofisticados programas como simulações de moléculas complexas que exigirão grandes máquinas com milhões de qubits. Mesmo que as grandes máquinas físicas ainda estejam no futuro, Q# permite que um programador programe algoritmos quânticos complexos agora. Além disso, Q# suporta várias tarefas como depuração, perfis, estimativa de recursos e certas simulações de propósito especial de uma forma escalável. 
 
-Do ponto de vista técnico, um programa Quantum pode ser visto como um conjunto específico de funções clássicas que, quando chamado, geram circuitos Quantum como seus efeitos colaterais. Uma consequência importante dessa exibição é que um programa escrito em Q # não modele diretamente o qubits em si, mas descreve como um computador de controle clássico interage com esses qubits.
-Por design, p #, portanto, não define os Estados Quantum ou outras propriedades da mecânica quantum diretamente, mas sim indiretamente por meio da ação das várias sub-rotinas definidas no idioma.
-Por exemplo, considere o estado $ \ket{+} = \left (\ket{0} + \ket{1}\right)/\sqrt{2}$ discutido no guia de [conceitos da computação Quantum](xref:microsoft.quantum.concepts.intro) .
-Para preparar esse estado em Q #, usamos os fatos que os qubits são inicializados no estado $ \ket{0}$ e que $ \ket{+} = H\ket{0}$, em que $H $ é a transformação Hadamard:
+Do ponto de vista técnico, um programa quântico pode ser visto como um conjunto particular de funções clássicas que, quando chamadas, geram circuitos quânticos como seus efeitos colaterais. Uma consequência importante dessa visão é que um programa escrito em Q# não modela diretamente qubits em si, mas descreve como um computador de controlo clássico interage com esses qubits.
+Por design, Q# assim não define estados quânticos ou outras propriedades da mecânica quântica diretamente, mas sim faz-o indiretamente através da ação das várias subrotinas definidas na linguagem.
+Por exemplo, considere o estado $\ket{+} = \left(\ket{0} + \ket{1}\right) / \sqrt{2}$ discutido no guia [Quantum Computing Concepts.](xref:microsoft.quantum.concepts.intro)
+Para preparar este estado em Q#, usamos os factos de que os qubits são inicializados no estado de $\ket{0}$, e que $\ket{+} = H\ket{0}$, onde $H$ é a transformação de Hadamard:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -28,34 +29,34 @@ using (qubit = Qubit()) {
     // We've now applied H, such that our qubit is in H|0〉 = |+〉, as we wanted.
 }
 ```
-## <a name="q-tranformations-of-quantum-states"></a>Q # tranformations de Estados da Quantum
+## <a name="q-tranformations-of-quantum-states"></a>Q# tranformações de estados quânticos
 
-O mais importante é que, ao escrever o programa acima, não nos referimos explicitamente ao estado em Q #, mas, em vez disso, descrevemos como o estado foi *transformado* por nosso programa.
-Assim, assim como um programa de sombreador de gráficos acumula uma descrição de transformações em cada vértice, um programa Quantum em Q # acumula transformações em Estados Quantum.
-Isso nos permite ser totalmente independente do que um estado Quantum ainda *está* em cada computador de destino, que pode ter interpretações diferentes dependendo do computador. 
+Importante, ao escrever o programa acima, não nos referimos explicitamente ao estado dentro de Q#, mas sim descrevemos como o estado foi *transformado* pelo nosso programa.
+Assim, semelhante à forma como um programa de som gráfico acumula uma descrição das transformações a cada vértice, um programa quântico em Q# acumula transformações em estados quânticos.
+Isto permite-nos ser inteiramente agnósticos sobre o que um estado quântico *é* mesmo em cada máquina-alvo, que pode ter interpretações diferentes dependendo da máquina. 
 
-Da perspectiva de um programa Q #, um qubit é uma referência totalmente opaca à estrutura interna de um computador de destino.
-Um programa Q # não tem a capacidade de introspecção no estado de um qubit, sua representação em um computador de destino ou até mesmo se ele é o mesmo qubit que qualquer outro qubit disponível para o programa.
-Em vez disso, um programa pode chamar operações como `Measure` para aprender informações de um qubit e chamar operações como `X` e `H` para agir no estado de um qubit.
-Essas operações não têm nenhuma definição intrínseca dentro do idioma e se tornam concretas apenas pela máquina de destino usada para executar um programa de Q # específico.
-Um programa Q # recombina essas operações conforme definido por um computador de destino para criar operações novas e de nível mais alto para a computação da Quantum Express.
-Dessa forma, o Q # torna fácil expressar os algoritmos Quantum subjacente e Quantum híbrido clássico, além de ser geral em relação à estrutura de um computador de destino ou simulador.
+Do ponto de vista de um programa Q#, um qubit é uma referência inteiramente opaca à estrutura interna de uma máquina-alvo.
+Um programa Q# não tem capacidade de introspeção no estado de um qubit, a sua representação numa máquina-alvo, ou mesmo se é o mesmo qubit que qualquer outro qubit disponível para o programa.
+Pelo contrário, um programa pode chamar operações como `Measure` para aprender informações a partir de um qubit, e chamar operações como `X` e `H` para agir sobre o estado de um qubit.
+Estas operações não têm definição intrínseca dentro da linguagem, e são feitas de concreto apenas pela máquina-alvo usada para executar um programa Q# particular.
+Um programa Q# recombina estas operações como definida por uma máquina-alvo para criar novas operações de alto nível para expressar a computação quântica.
+Desta forma, Q# torna fácil expressar a lógica subjacente aos algoritmos quânticos e híbridos quânticos-clássicos, ao mesmo tempo que é geral no que diz respeito à estrutura de uma máquina-alvo ou simulador.
 
-## <a name="q-operations-and-functions"></a>Operações e funções do Q #
+## <a name="q-operations-and-functions"></a>Q# operações e funções
 
-Concretamente, um programa Q # é composto de uma ou mais *operações*, uma ou mais *funções*e tipos definidos pelo usuário. As operações são usadas para descrever as transformações do estado de uma máquina Quantum e são o bloco de construção mais básico de programas do Q #. Cada operação definida em Q # pode então chamar qualquer número de outras operações, incluindo as operações *intrínsecas* internas implementadas por um computador de destino.
-Quando compilada, cada operação é representada como um tipo de classe do .NET que pode ser fornecido para os computadores de destino.
+Concretamente, um programa Q# é composto por uma ou mais *operações,* uma ou mais *funções,* e tipos definidos pelo utilizador. As operações são usadas para descrever as transformações do estado de uma máquina quântica e são o bloco de construção mais básico dos programas Q#. Cada operação definida em Q# pode então ligar para qualquer número de outras operações, incluindo as operações *intrínsecas* incorporadas implementadas por uma máquina-alvo.
+Quando compilado, cada operação é representada como um tipo de classe .NET que pode ser fornecido às máquinas-alvo.
 
-Em contraste com as operações, as funções são usadas para descrever o comportamento puramente clássico e não têm nenhum efeito além de calcular os valores de saída clássicas. Q # é uma linguagem fortemente tipada e vem com um conjunto de tipos primitivos internos, bem como suporte para tipos definidos pelo usuário. 
+Em contraste com as operações, as funções são usadas para descrever comportamentos puramente clássicos e não têm quaisquer efeitos além de calcular valores de saída clássicos. Q# é uma linguagem fortemente dactilografada e vem com um conjunto de tipos primitivos incorporados, bem como suporte para tipos definidos pelo utilizador. 
 
-Durante o restante deste guia, veremos como usar diferentes conceitos de linguagem e construções para nos ajudar a definir programas de Quantum complexos por meio dos blocos de construção básicos de operações, funções e tipos. 
+Ao longo do resto deste guia, veremos como usar diferentes conceitos e construções linguísticas para nos ajudar a definir programas quânticos complexos através dos blocos básicos de construção de operações, funções e tipos. 
 
-## <a name="structure-of-q-source-files"></a>Estrutura de arquivos de origem do Q #
+## <a name="structure-of-q-source-files"></a>Estrutura de Ficheiros De Origem Q#
 
-No mínimo, um arquivo de origem Q # consiste em uma *declaração de namespace*, que especifica um namespace .NET que conterá as definições no arquivo de origem.
-As definições de outros arquivos de origem Q # e bibliotecas podem ser incluídas usando a instrução `open`.
-Por exemplo, a maioria das operações que definem Gates fundamentais são definidas no namespace <xref:microsoft.quantum.intrinsic>.
-Para disponibilizar isso para nosso código, simplesmente `open` o namespace na parte superior de cada arquivo:
+Minimamente, um ficheiro de origem Q# consiste numa declaração de *espaço de nome,* que especifica um espaço de nome .NET que conterá as definições no ficheiro fonte.
+As definições de outros ficheiros e bibliotecas de origem Q# podem ser incluídas utilizando a declaração `open`.
+Por exemplo, a maioria das operações que definem portões fundamentais são definidas no espaço de nome <xref:microsoft.quantum.intrinsic>.
+Para disponibilizar isto ao nosso código, simplesmente `open` esse espaço de nome no topo de cada ficheiro:
 
 ```qsharp
 namespace Example {
@@ -65,5 +66,5 @@ namespace Example {
 }
 ```
 
-Dentro de um namespace, cada arquivo de origem Q # pode definir qualquer combinação de *operações*, *funções*e *tipos definidos pelo usuário*.
-No restante desta seção, descreveremos cada uma delas por vez e forneceremos exemplos de como elas podem ser usadas na prática para criar programas de Quantum úteis.
+Dentro de um espaço de nome, cada ficheiro de origem Q# pode definir qualquer combinação de *operações,* *funções*e *tipos definidos pelo utilizador*.
+No resto desta secção, descreveremos cada um por sua vez e forneceremos exemplos de como podem ser usados na prática para fazer programas quânticos úteis.

@@ -1,81 +1,77 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>Resumo\n Esses namespaces fornecem tipos definidos pelo usuário para decorar vários tipos de Oracle por seu uso pretendido em algoritmos Quantum, como estimativa de fase e amplificação de amplitude."
+summary: " # <a name=\"summary\"></a>Resumo\n Estes espaços de nome fornecem tipos definidos pelo utilizador para decorar vários tipos de oráculos pelo uso pretendido em algoritmos quânticos, tais como a estimativa de fase e amplificação de amplitude."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Converte um Oracle do tipo `StateOracle` em `DeterministicStateOracle`.
+  summary: Converte um oráculo de `StateOracle` tipo para `DeterministicStateOracle`.
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combina os Oracle `DeterministicStateOracle` e `ObliviousOracle`.
+  summary: Combina os oráculos `DeterministicStateOracle` e `ObliviousOracle`.
 - uid: microsoft.quantum.oracles.oracletodiscrete
-  summary: Dada uma operação que representa uma "caixa preta" da Oracle, retorna um Oracle de tempo discreto que representa a "caixa preta" da Oracle repetida várias vezes.
+  summary: Dada uma operação que representa um oráculo "black-box", devolve um oráculo de tempo discreto que representa o oráculo "black-box" repetido várias vezes.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: >-
-    Constrói a reflexão sobre um determinado estado de um Oracle.
-
-
-    Considerando o Oracle $O $ do tipo <xref:microsoft.quantum.oracles.deterministicstateoracle>, o resultado dessa função é uma reflexão em relação ao estado $ \ket{\psi} $ em que $O \ket{0} = \ket{\psi} $.
+  summary: Constrói reflexão sobre um dado estado de um oráculo.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Converte um Oracle do tipo `DeterministicStateOracle` em `StateOracle`.
+  summary: Converte um oráculo de `DeterministicStateOracle` tipo para `StateOracle`.
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
-    Representa um Oracle de tempo contínuo.
+    Representa um oráculo contínuo.
 
 
-    Esse é um Oracle que implementa $U (\delta t): \ket{\psi (t)} \mapsto \ket{\psi (t + \delta t)} $ para todos os horários $t $, em que $U $ é uma operação fixa e em que $ \delta t $ é um número real não negativo.
+    Este é um oráculo que implementa $U (\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}$ para todos os tempos $t$, onde $U$ é uma operação fixa, e onde $\delta t$ é um número real não negativo.
 - uid: microsoft.quantum.oracles.deterministicstateoracle
   summary: >-
-    Representa um Oracle para preparação de estado determinística.
+    Representa um oráculo para a preparação do Estado determinístico.
 
 
-    A entrada para o Oracle $O $ é:
+    A entrada para o oráculo $O$ é:
 
 
-    - O registro que armazenará o estado de Quantum desejado $ \ket{\psi}\_s $.
+    - O registo que armazenará o estado quântico desejado $\ket{\psi}\_s$.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
-    Representa um Oracle em tempo discreto.
+    Representa um oráculo de tempo discreto.
 
 
-    Este é um Oracle que implementa $U ^ m $ para uma operação fixa $U $ e um inteiro não negativo $m $.
+    Este é um oráculo que implementa $U^m$ para uma operação fixa $U$ e um inteiro não negativo $m$.
 - uid: microsoft.quantum.oracles.obliviousoracle
   summary: >-
-    Representa um Oracle para amplificação de amplitude de alheios.
+    Representa um oráculo para amplificação de amplitude alheia.
 
 
-    As entradas para o Oracle $O $ são:
+    As inputs para o oráculo $O$ são:
 
 
-    - O ancilla registra $a $ que $O $ age.
+    - O registo de $a$ que $O$ atua.
 
-    - O sistema registra $s $ em que o unitário desejado $U $ é aplicado, post-Selected no registro $a $ estando no estado $ \ket{t}\_$.
+    - O registo do sistema $s$ em que é aplicado o $U unitário desejado, pós-seleccionado no registo $a$ estando no estado $\ket{t}\_a$.
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
-    Representa uma reflexão do Oracle.
+    Representa um oráculo de reflexão.
 
 
-    Uma reflexão do Oracle, $O $, tem entradas:
+    Um oráculo de reflexão, $O$, tem inputs:
 
 
-    - A fase $ \phi $ pela qual girar o subespaço refletido.
+    - A fase $\phi$ para rodar o subespaço refletido.
 
-    - O qubit se registra no qual executar a reflexão determinada.
+    - O registo qubit sobre o qual realizar a reflexão dada.
 - uid: microsoft.quantum.oracles.stateoracle
   summary: >-
-    Representa um Oracle para preparação de estado.
+    Representa um oráculo para a preparação do Estado.
 
 
-    As entradas para o Oracle $O $ são:
+    As inputs para o oráculo $O$ são:
 
 
-    - Um inteiro que indexa o sinalizador qubit $f $.
+    - Um inteiro a indexar o qubit da bandeira $f$.
 
-    - O registro do sistema $s $, que armazenará o estado de Quantum desejado $ \ket{\psi}\_s $.
+    - O registo do sistema $s$ que armazenará o estado quântico desejado $\ket{\psi}\_s$.
 metadata:
-  ms.openlocfilehash: 10eb2c7acebf805b955816abe2bf1cabb95ce059
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216106"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76870008"

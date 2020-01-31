@@ -6,12 +6,12 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
-ms.openlocfilehash: 7fd9d1fa4fb3c5dd216d846038abd40454ece2e8
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 929745a6da6034599e97d2f573190308fde6eb75
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035124"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820441"
 ---
 # <a name="quantum-trace-simulator"></a>Simulador de Rastreio Quântico
 
@@ -24,29 +24,26 @@ O simulador de rastreio recorre a informações adicionais fornecidas pelo utili
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Fornecer a Probabilidade de Resultados de Medição
 
-Existem dois tipos de medições que aparecem em algoritmos quânticos. O primeiro tipo desempenha uma função auxiliar, na qual o utilizador costuma saber a probabilidade dos resultados. Neste caso, o utilizador pode escrever <xref:microsoft.quantum.primitive.assertprob> no espaço de nomes <xref:microsoft.quantum.primitive> para expressar esse mesmo conhecimento. O exemplo seguinte ilustra isso mesmo:
+Existem dois tipos de medições que aparecem em algoritmos quânticos. O primeiro tipo desempenha uma função auxiliar, na qual o utilizador costuma saber a probabilidade dos resultados. Neste caso, o utilizador pode escrever <xref:microsoft.quantum.intrinsic.assertprob> no espaço de nomes <xref:microsoft.quantum.intrinsic> para expressar esse mesmo conhecimento. O exemplo seguinte ilustra isso mesmo:
 
 ```qsharp
-operation Teleportation (source : Qubit, target : Qubit) : Unit {
-
-    using (ancilla = Qubit()) {
-
-        H(ancilla);
-        CNOT(ancilla, target);
-
-        CNOT(source, ancilla);
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
         H(source);
 
         AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
-        AssertProb([PauliZ], [ancilla], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
 
         if (M(source) == One)  { Z(target); X(source); }
-        if (M(ancilla) == One) { X(target); X(ancilla); }
+        if (M(q) == One) { X(target); X(q); }
     }
 }
 ```
 
-Quando o simulador de rastreio executar `AssertProb`, vai registar que a medição de `PauliZ` em `source` e `ancilla` deve receber um resultado de `Zero` com uma probabilidade de 0,5. Quando o simulador executar `M` mais tarde, detetará que os valores registados das probabilidades de resultado e `M` devolverão `Zero` ou `One` com uma probabilidade de 0,5. Quando o mesmo código for executado num simulador que monitoriza o estado quântico, esse simulador verificará se as probabilidades fornecidas em `AssertProb` estão corretas.
+Quando o simulador de rastreio executar `AssertProb`, vai registar que a medição de `PauliZ` em `source` e `q` deve receber um resultado de `Zero` com uma probabilidade de 0,5. Quando o simulador executar `M` mais tarde, detetará que os valores registados das probabilidades de resultado e `M` devolverão `Zero` ou `One` com uma probabilidade de 0,5. Quando o mesmo código for executado num simulador que monitoriza o estado quântico, esse simulador verificará se as probabilidades fornecidas em `AssertProb` estão corretas.
 
 ## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Executar o Programa com o Simulador de Rastreio do Computador Quântico 
 

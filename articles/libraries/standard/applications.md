@@ -1,198 +1,199 @@
 ---
-title: 'P # bibliotecas padrão – aplicativos | Microsoft Docs'
+title: Q# bibliotecas padrão - aplicações / Microsoft Docs
 description: Bibliotecas padrão Q#
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: ef22460a5bca63ebaf32c0ba21984e103ec8ebdd
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
+ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74864394"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868973"
 ---
 # <a name="applications"></a>Aplicações #
 
 ## <a name="hamiltonian-simulation"></a>Simulação Hamiltoniana ##
 
-A simulação de sistemas Quantum é um dos aplicativos mais empolgantes da computação Quantum.
-Em um computador clássico, a dificuldade de simular a mecânica quantum, em geral, é dimensionada com a dimensão $N $ de sua representação de vetor de estado.
-Como essa representação aumenta exponencialmente com o número de $n $ qubits $N = 2 ^ n $, uma característica conhecida também conhecida como o tempo [de indimensão](xref:microsoft.quantum.concepts.multiple-qubits), a simulação da Quantum no hardware clássico é inmanejável.
+A simulação dos sistemas quânticos é uma das aplicações mais excitantes da computação quântica.
+Num computador clássico, a dificuldade de simular a mecânica quântica, em geral, escala com a dimensão $N$ da sua representação vetorial do estado.
+À medida que esta representação cresce exponencialmente com o número de qubits de $n$ $N=2^n$, um traço também conhecido como [a maldição da dimensionalidade](xref:microsoft.quantum.concepts.multiple-qubits), a simulação quântica no hardware clássico é intratável.
 
-No entanto, a situação pode ser muito diferente no hardware Quantum. A variação mais comum da simulação do Quantum é chamada de problema de simulação de Hamiltonian de tempo independente. Lá, é fornecida uma descrição do sistema Hamiltonian $H $, que é uma matriz Hermitian, e algum estado inicial de Quantum $ \ket{\psi (0)} $ que é codificado de acordo com a $n $ qubits em um computador Quantum. Como os Estados da Quantum em sistemas fechados evoluem na equação Schrödinger $ $ \begin{align} i\frac {d \ket{\psi (t)}} {d t} & = H \ket{\psi (t)}, \end{align} $ $ o objetivo é implementar o operador de evolução temporal $U (t) = e ^ {-iHt} $ em um período fixo $t $ , em que $ \ket{\psi (t)} = U (t) \ket{\psi (0)} $ resolve a equação Schrödinger.
-De forma semelhante, o problema de simulação de Hamiltonian dependente de tempo resolve a mesma equação, mas com $H (t) $ agora é uma função de tempo.
+No entanto, a situação pode ser muito diferente no hardware quântico. A variação mais comum da simulação quântica é chamada de problema de simulação hamiltoniana independente do tempo. Ali, é fornecida uma descrição do sistema Hamiltonian $H$, que é uma matriz hermitiana, e algum estado quântico inicial $\ket{\psi(0)}$ que é codificado em alguma base com qubits de $n$ num computador quântico. À medida que os estados quânticos em sistemas fechados evoluem sob a equação de Schrödinger $$ \begin{align} i\frac {d \ket{\psi(t)}}{d} & = H \ket{\psi(t)}, \end{align} $$ o objetivo é implementar o operador unitário de evolução do tempo $U(t)=={{-iHt}$ em algum momento fixo $t$ , onde $\ket{\psi(t)}=U(t)\ket{\psi(0)}}$ resolve a equação de Schrödinger.
+Analogamente, o problema de simulação hamiltoniana dependente do tempo resolve a mesma equação, mas com $H(t)$ agora uma função do tempo.
 
-A simulação de Hamiltonian é um componente importante de muitos outros problemas de simulação de Quantum, e soluções para o problema de simulação de Hamiltonian são algoritmos que descrevem uma sequência de Gates de Quantum primitivo para sintetizar um aproximar unitário $ \tilde{U} $ com erro $\\| \tilde{U}-U (t)\\| \le \epsilon $ na [norma Spectral](xref:microsoft.quantum.concepts.matrix-advanced). A complexidade desses algoritmos depende muito de como uma descrição dos Hamiltonian de interesse é disponibilizada por um computador Quantum. Por exemplo, na pior das hipóteses, se $H $ agindo em $n $ qubits fosse fornecida como uma lista de $2 ^ n \times 2 ^ n $ Numbers, uma para cada elemento de matriz, simplesmente ler os dados já exigiria tempo exponencial. Na melhor das hipóteses, é possível assumir o acesso a um unitário de caixa preta que $O \ket{t}\ket{\psi (0)} = \ket{t}U (t) \ket{\psi (0)} $ resolve o problema de forma trivial. Nenhum desses modelos de entrada é particularmente interessante – o primeiro, pois não é melhor do que as abordagens clássicas, e a última opção é que a caixa preta oculta a complexidade do portão primitivo de sua implementação, que poderia ser exponencial no número de qubits.
+A simulação hamiltoniana é um componente importante de muitos outros problemas de simulação quântica, e as soluções para o problema da simulação hamiltoniana são algoritmos que descrevem uma sequência de portas quânticas primitivas para sintetizar um aproximando unitário $\tilde{U}$ com erro $\\\tilde{U} - U(t)\\\le \epsilon$ na [norma espectral](xref:microsoft.quantum.concepts.matrix-advanced). A complexidade destes algoritmos depende muito de como uma descrição do hamiltoniano de interesse é tornada acessível por um computador quântico. Por exemplo, no pior dos casos, se $H$ agindo sobre qubits de $n$ fosse fornecido como uma lista de números de $2^n \times 2^n$, um para cada elemento matriz, simplesmente ler os dados já exigiria tempo exponencial. Na melhor das hipóteses, pode-se assumir o acesso a uma caixa preta unitária que $O\ket{t}\ket{\psi(0)}=\ket{t}U(t)ket{\psi(0)}$ resolve trivialmente o problema. Nenhum destes modelos de entrada é particularmente interessante -- o primeiro, uma vez que não é melhor do que as abordagens clássicas, e este último como a caixa preta esconde a complexidade primitiva do portão da sua implementação, que pode ser exponencial no número de qubits.
 
-### <a name="descriptions-of-hamiltonians"></a>Descrições de Hamiltonians ###
+### <a name="descriptions-of-hamiltonians"></a>Descrições dos hamiltonianos ###
 
-Portanto, as suposições adicionais do formato da entrada são necessárias. Um equilíbrio fino deve ser riscado entre os modelos de entrada que são suficientemente descritivos para abranger Hamiltonians interessantes, como aqueles para sistemas físicos realísticos ou problemas computacionais interessantes e modelos de entrada que são suficientemente restritivos ser implementado de forma eficiente em um computador Quantum. Uma variedade de modelos de entrada não triviais pode ser encontrada na literatura e varia de Quantum para clássico. 
+Por conseguinte, são necessários pressupostos adicionais do formato da entrada. Deve ser alcançado um bom equilíbrio entre os modelos de entrada suficientemente descritivos para abranger hamiltonianos interessantes, tais como os de sistemas físicos realistas ou problemas computacionais interessantes, e modelos de entrada suficientemente restritivos ser eficientemente implementável num computador quântico. Uma variedade de modelos de entrada não triviais pode ser encontrado na literatura, e variam de quantum a clássico. 
 
-Como exemplos de modelos de entrada Quantum, [a simulação de Hamiltonian baseada em amostras](http://www.nature.com/articles/s41534-017-0013-7) assume o acesso de caixa preta a operações Quantum que produzem cópias de uma matriz de densidade $ \rho $, que são levadas a Hamiltonian $H $. No [modelo de acesso unitário](https://arxiv.org/abs/1202.5822) , um pressupõe que o Hamiltonian, em vez disso, é decomposto em uma soma de unidades $ $ \begin{align} H & = \sum ^ {d-1}\_{j = 0} a\_j \hat{U}\_j, \end{Align} $ $, em que $a\_j > 0 $ são coeficientes e $ \hat{U}\_j $ são unidades. Em seguida, supõe-se que um tenha acesso de caixa preta ao Oracle $V unitário = \sum ^ {d-1}\_{j = 0} \ket{j}\bra{j}\otimes \hat{U}\_j $ que selecione o $ \hat{U}\_j $ desejado, e o Oracle $A \ket{0}= \sum ^ {d-1}\_{j = 0} \sqrt{a\_j/\ Sum ^ {d-1}\_{k = 0} \alpha\_j} \ket{j} $ que criam uma codificação de estado Quantum com esses coeficientes. No caso da [simulação de Hamiltonian esparsa](https://arxiv.org/abs/quant-ph/0301023), uma assume que o Hamiltonian é uma matriz esparsa com apenas $d = \mathcal{O} (\Text{polylog} (N)) $ non-zero elemento em cada linha. Além disso, um assume a existência de circuitos Quantum eficientes que geram o local desses elementos diferentes de zero, bem como os respectivos valores. A complexidade dos [algoritmos de simulação de Hamiltonian](xref:microsoft.quantum.more-information) é avaliada em termos de número de consultas a essas caixas pretas, e a complexidade do portão primitivo depende muito da dificuldade de implementar essas caixas pretas.
+Como exemplos de modelos de entrada quântica, a [simulação hamiltoniana baseada em amostras](http://www.nature.com/articles/s41534-017-0013-7) pressupõe o acesso à caixa preta a operações quânticas que produzem cópias de uma matriz de densidade $\rho$, que são tomadas como a Hamiltonian $H$. No modelo de [acesso unitário](https://arxiv.org/abs/1202.5822) supõe-se que o Hamiltonian em vez disso se decompõe numa soma de unitários $$ \start{align} H & = \sum^{d-1}\_{j=0} a\_j \hat{U}\_j, \end{align} $$ onde $a\_j>0$ são coeficientes, e $\hat{U}\_j$ são unitaries. Presume-se então que se tem acesso à caixa preta ao oráculo unitário $V=\sum^{d-1}\_{j=0}\ket{j}\bra{j}\otimes \hat{U}\_j$ que seleciona o desejado $\hat{U}\_j$, e o oráculo $A\ket{0}=\sum^{d-1}\_{j=0}\sqrt{a\_j/\sum^{d-1}\_{k=0}\alfa\_j}\ket{j}$ que criam um estado quântico codificando estes coeficientes. No caso de [escassa simulação hamiltoniana,](https://arxiv.org/abs/quant-ph/0301023)supõe-se que o Hamiltonian é uma matriz escassa com apenas $d=\mathcal{O}(/text{polylog}(N)$ não-zero elemento em cada linha. Além disso, assume-se a existência de circuitos quânticos eficientes que produzem a localização destes elementos não zero, bem como os seus valores. A complexidade dos algoritmos de [simulação hamiltoniana](xref:microsoft.quantum.more-information) é avaliada em termos de número de consultas a estas caixas negras, e a complexidade primitiva do portão depende muito da dificuldade de implementar estas caixas negras.
 
 > [!NOTE]
-> A notação de Big-o geralmente é usada para descrever o dimensionamento da complexidade dos algoritmos. Dadas duas funções reais $f, g $, a expressão $g (x) = \mathcal{O} (f (x)) $ significa que existe uma constante positiva absoluta $x\_0, c > 0 $ de modo que $g (x) \le c f (x) $ para todos os $x \ge x\_$0. 
+> A notação big-O é comumente usada para descrever a complexidade da escala de algoritmos. Tendo em conta duas funções reais $f,g$, a expressão $g(x)=\mathcal{O}(f(x))$ significa que existe uma constante absolutamente positiva $x\_0, c>0$ de tal forma que $g(x) \le c f(x)$ para todos os $x\ge x\_0$. 
 
-Na maioria dos aplicativos práticos a serem implementados em um computador Quantum, essas caixas pretas devem ser implementadas de forma eficiente, ou seja, com as Gates $ \mathcal{O} (\Text{polylog} (N)) $ Primitive Quantum. De forma mais forte, simulable Hamiltonians deve ter uma descrição clássica suficientemente esparsa. Em uma dessas formulações, supõe-se que Hamiltonian é decomposto de uma soma de Hermitian partes $ $ \begin{align} H & = \sum ^ {d-1} _ {j = 0} H_j.
-\end{align} $ $ mais, presume-se que cada parte, um Hamiltonian $H\_j $, seja fácil de simular. Isso significa que o unitário $e ^ {-iH\_j t} $ para qualquer hora $t $ pode ser implementado exatamente usando as Gates $ \mathcal{O} (1) $ Primitive Quantum. Por exemplo, isso é verdadeiro no caso especial em que cada $H\_j $ são operadores de Pauli locais, o que significa que eles são de produtos tensor de $ \mathcal{O} (1) $ não Identity Pauli Operators que atuam em qubits de fechamento espacial. Esse modelo é particularmente aplicável a sistemas físicos com interação vinculada e local, uma vez que o número de termos é $d = \mathcal{O} (\Text{polylog} (N)) $ e pode ser escrito claramente, ou seja, descrito de forma clássica, em tempo polinomial.
-
-> [!TIP]
-> Hamiltonians que decompõem uma soma de partes podem ser descritos usando a biblioteca de representação do gerador dinâmico. Para obter mais informações, consulte a seção representação do gerador dinâmico em [estruturas de dados](xref:microsoft.quantum.libraries.data-structures).
-
-### <a name="simulation-algorithms"></a>Algoritmos de simulação ###
-
-Um algoritmo de simulação do Quantum converte uma determinada descrição de um Hamiltonian em uma sequência de Gates de Quantum primitivos que, como um todo, uma evolução de tempo aproximada disse Hamiltonian.
-
-No caso especial em que o Hamiltonian é decomposto em uma soma de partes Hermitian, a decomposição Trotter-Suzuki é um algoritmo especialmente simples e intuitivo para simular Hamiltonians que decompõem uma soma de componentes Hermitian. Por exemplo, um integrador de primeiro pedido desta família aproxima $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/r} e ^ {-iH\_1 t/r} \cdots e ^ {-iH\_{d-1} t/r} \right) ^ {r} + \mathcal{O} (d ^ 2 \ max_j\\| H\_j\\| ^ 2 t ^ 2/r), \end{align} $ $ usando um produto de $r d $ termos. 
+Na maioria das aplicações práticas a implementar num computador quântico, estas caixas pretas devem ser eficientemente implementáveis, isto é, com $\mathcal{O}(\text{polylog}(N)$ portas quânticas primitivas. Mais fortemente, os hamiltonianos eficientemente simulados devem ter uma descrição clássica suficientemente escassa. Numa dessas formulações, presume-se que o Hamiltonian decompõe-se numa soma de partes hermitianas $$ \start{align} H & = \sum^{d-1}_{j=0} H_j.
+\end{align} $$ Além disso, presume-se que cada parte, um Hamiltonian $H\_j$, é fácil de simular. Isto significa que o $e unitário^{-iH\_j t}$ por qualquer momento $t$ pode ser implementado exatamente usando $\mathcal{O}(1)$ portas quânticas primitivas. Por exemplo, isto é verdade no caso especial em que cada $H\_j$ são operadores pauli locais, o que significa que são de produtos tensores de $\mathcal{O}(1)$ operadores pauli não-identitários que agem em qubits espacialmente fechados. Este modelo é particularmente aplicável aos sistemas físicos com interação limitada e local, uma vez que o número de termos é $d=\mathcal{O}(\text{polylog}(N)$, e pode ser claramente escrito, ou seja, descrito clássicamente, em tempo polinómio.
 
 > [!TIP]
-> Os aplicativos do algoritmo de simulação Trotter-Suzuki são abordados nos exemplos.
-> Para o modelo Ising usando apenas as operações intrínsecas fornecidas por cada computador de destino, consulte o [exemplo **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
-> Para o modelo Ising usando a estrutura de controle de biblioteca Trotter-Suzuki, consulte o [exemplo **IsingTrotter** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
-> Para molecular Hydrogen usando a estrutura de controle de biblioteca Trotter-Suzuki, consulte o exemplo de [ **simulação H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
+> Os hamiltonianos que se decompõem numa soma de peças podem ser descritos usando a biblioteca Dynamical Generator Representation. Para mais informações, consulte a secção de Representação dinâmica do gerador nas estruturas de [dados](xref:microsoft.quantum.libraries.data-structures).
 
-Em muitos casos, gostaríamos de implementar o algoritmo de simulação, mas não estamos interessados nos detalhes de sua implementação. Por exemplo, o integrador de segunda ordem aproxima $ $ \begin{align} U (t) & = \left (e ^ {-iH\_0 t/2R} e ^ {-iH\_1 t/2R} \cdots e ^ {-iH\_{d-1} t/2R} e ^ {-iH\_{d-1} t/2R} \cdots e ^ {-iH\_1 t/2R} e ^ {-iH\_0 t/2R} \right) ^ {r} + \mathcal{O} (d ^ 3 \ max_j\\| H\_j\\| ^ 3 t ^ 3/r ^ 2), \end{align} $ $ usando um produto de $2rd $ termos. Ordens maiores envolverão ainda mais termos e variantes otimizadas podem exigir ordenações altamente não triviais em exponencials. Outros algoritmos avançados também podem envolver o uso de ancilla qubits em etapas intermediárias. Portanto, empacotamos algoritmos de simulação na Canon como o tipo definido pelo usuário
+### <a name="simulation-algorithms"></a>Algoritmos de Simulação ###
+
+Um algoritmo de simulação quântica converte uma descrição de um Hamiltonian numa sequência de portas quânticas primitivas que, no seu conjunto, aproximam-se da evolução do tempo por parte de Hamiltonian.
+
+No caso especial em que o Hamiltoniano se decompõe numa soma de partes hermitias, a decomposição Trotter-Suzuki é um algoritmo particularmente simples e intuitivo para simular hamiltonianos que se decompõem numa soma de componentes hermitianos. Por exemplo, um integrador de primeira ordem desta família aproxima-se de $$ \begin{ U(t) & = \left( e^{-iH\_0 t / r} e^{-iH\_1 t / r} \cdots e^{-iH\_{d-1} t / r} \right){r} + \mathcal{O}(d^\\max_j 2 H\_j\\^2 t^2/r), \end{align} $$ usando um produto de termos $r d$. 
+
+> [!TIP]
+> As aplicações do algoritmo de simulação Trotter-Suzuki estão cobertas nas amostras.
+> Para o modelo Ising utilizando apenas as operações intrínsecas fornecidas por cada máquina-alvo, consulte a amostra [ **Simpleising** ](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
+> Para o modelo Ising utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **IsingTrotter** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
+> Para hidrogénio molecular utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra de [ **simulação H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
+
+Em muitos casos, gostaríamos de implementar o algoritmo de simulação, mas não estamos interessados nos detalhes da sua implementação. Por exemplo, o integrador de segunda ordem aproxima-se de $$ \begin{align} U(t) & = \left( e^{-iH\_0 t / 2r} e^{-iH\_1 t / 2r} \cdots e^{-iH\_{d-1} t / 2r} e^{-iH\_{d-d-1} t / 2r} \cdots e^{-iH\_1 t / 2r} e^{-iH\_0 t / 2r} \right}{r} + \mathcal{O}(d^3 \max_j\\/ H\_j\\^3 t^3/r^2), \end{align} $$ usando um produto de termos de $2º$. Encomendas maiores envolverão ainda mais termos e variantes otimizadas podem exigir encomendas altamente não triviais sobre os exponenciais. Outros algoritmos avançados também podem envolver o uso de qubits acessórias em passos intermédios. Assim, embalamos algoritmos de simulação no cânion como o tipo definido pelo utilizador
 
 ```qsharp
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
 ```
 
-O primeiro parâmetro `Double` é a hora da simulação, o segundo parâmetro `EvolutionGenerator`, abordado na seção representação do gerador dinâmico de [estruturas de dados](xref:microsoft.quantum.libraries.data-structures), é uma descrição clássica de um Hamiltonian de tempo independente fornecido com instruções sobre como cada termo no Hamiltonian pode ser simulado por um circuito Quantum. Tipos desse formulário aproximam a operação de unitário $e ^ {-iHt} $ no terceiro parâmetro `Qubit[]`, que é o registro que armazena o estado Quantum do sistema simulado. Da mesma forma, para o caso dependente de tempo, definimos um tipo definido pelo usuário com um `EvolutionSchedule` tipo, que é uma descrição clássica de um Hamiltonian dependente de tempo.
+O primeiro parâmetro `Double` é o tempo de simulação, o segundo parâmetro `EvolutionGenerator`, coberto na secção dinâmica de representação do gerador de estruturas de [dados,](xref:microsoft.quantum.libraries.data-structures)é uma descrição clássica de um Hamiltonian independente do tempo embalado com instruções sobre como cada termo no Hamiltonian pode ser simulado por um circuito quântico. Os tipos desta forma aproximam-se da operação unitária $e^{-iHt}$ no terceiro parâmetro `Qubit[]`, que é o registo que armazena o estado quântico do sistema simulado. Da mesma forma para o caso dependente do tempo, definimos um tipo definido pelo utilizador com um tipo `EvolutionSchedule`, que é uma descrição clássica de um Hamiltonian dependente do tempo.
 
 ```qsharp
 newtype TimeDependentSimulationAlgorithm = ((Double, EvolutionSchedule, Qubit[]) => Unit : Adjoint, Controlled);
 ```
 
-Por exemplo, a decomposição Trotter-Suzuki pode ser chamada usando as seguintes funções de Canon, com parâmetros `trotterStepSize` modificando a duração da simulação em cada exponencial e `trotterOrder` para a ordem do integrador desejado.
+Como exemplo, a decomposição Trotter-Suzuki pode ser chamada usando as seguintes funções canon, com parâmetros `trotterStepSize` modificando a duração da simulação em cada exponencial, e `trotterOrder` para a ordem do integrador desejado.
 
 ```qsharp
 function TrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : SimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: SimulationAlgorithm {
     ...
 }
+
 function TimeDependentTrotterSimulationAlgorithm(
-    trotterStepSize: Double, 
-    trotterOrder: Int) 
-    : TimeDependentSimulationAlgorithm {
+    trotterStepSize : Double, 
+    trotterOrder : Int) 
+: TimeDependentSimulationAlgorithm {
     ...
 }
 ```
 
 > [!TIP]
-> Os aplicativos da biblioteca de simulação são abordados nos exemplos. Para estimativa de fase no modelo Ising usando `SimulationAlgorithm`, consulte o exemplo [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
-> Para a preparação do estado adiabatic no modelo Ising usando `TimeDependentSimulationAlgorithm`, consulte o [exemplo **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> As aplicações da biblioteca de simulação estão cobertas nas amostras. Para obter uma estimativa de fase no modelo Ising utilizando `SimulationAlgorithm`, consulte a amostra de estimativa de [ **fase de isingphase .** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation)
+> Para a preparação do estado adiabaático no modelo Ising utilizando `TimeDependentSimulationAlgorithm`, consulte a amostra de [ **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
 
 
-### <a name="adiabatic-state-preparation--phase-estimation"></a>Estimativa de estado de adiabatic de & fase de preparação ###
+### <a name="adiabatic-state-preparation--phase-estimation"></a>Preparação e Estimativa do Estado Adiabatic ###
 
-Um aplicativo comum de simulação de Hamiltonian é a preparação do estado adiabatic. Aqui, um é fornecido com dois Hamiltonians $H\_{\Text{Start}} $ e $H\_{\Text{end}} $ e um estado Quantum $ \ket{\psi (0)} $ que é um estado de aterramento da Hamiltonian $H\_{\Text{Start}} $. Normalmente, $H\_{\Text{Start}} $ é escolhido de modo que $ \ket{\psi (0)} $ seja fácil de se preparar de um estado de base computacional $ \ket{0\cdots 0} $. Ao fazer a interpolação entre esses Hamiltonians no problema de simulação dependente de tempo de forma suficientemente lenta, é possível terminar, com alta probabilidade, em um estado de terra do Hamiltonian final $H\_{\Text{end}} $. Embora a preparação de uma boa aproximação para os Estados de aterramento Hamiltonian possa continuar dessa maneira chamando os algoritmos de simulação de Hamiltonian dependentes de tempo como uma sub-rotina, outras abordagens conceitualmente diferentes, como a Quantum de variação eigensolver são possíveis.
+Uma aplicação comum da simulação hamiltoniana é a preparação do estado adiabático. Aqui, um é fornecido com dois Hamiltonians $H\_{\text{start}}$ e $H\_{\text{end}}$, e um estado quântico $\ket{\psi(0)}} que é um estado de base do início Hamiltonian $H\_{\text{start}}$. Tipicamente, $H\_{\text{start}}$ é escolhido de tal forma que $\ket{\psi(0)}$ é fácil de preparar a partir de um estado computacional $\ket{0\cdots 0}$. Ao interpolar entre estes Hamiltonians no problema de simulação dependente do tempo suficientemente lentamente, é possível acabar, com alta probabilidade, num estado de terra do último $H Hamiltonian\_{\text{end}}$. Embora preparar boas aproximações aos estados terrestres hamiltonianos poderia prosseguir desta forma, invocando algoritmos de simulação hamiltonianos dependentes do tempo como uma subrotina, outras abordagens conceptualmente diferentes, como o quântico variacional eigensolver são possíveis.
 
-Outro aplicativo onipresente no quantum química é estimar a energia de estado do solo de Hamiltonians que representa as etapas intermediárias da reação química. Tal esquema poderia, por exemplo, contar com a preparação do estado adiabatic para criar o estado do solo e, em seguida, incorporar a simulação de Hamiltonian de tempo independente como uma sub-rotina na caracterização da estimativa de fase para extrair essa energia com um erro finito e probabilidade de sucesso. 
+Outra aplicação ubíqua na química quântica está a estimar a energia do estado terrestre dos hamiltonianos que representam os passos intermédios da reação química. Tal esquema poderia, por exemplo, contar com a preparação do Estado adiabático para criar o estado terrestre, e, em seguida, incorporar a simulação hamiltoniana independente do tempo como uma subrotina na caracterização de estimativa de fase para extrair esta energia com algum erro finito e probabilidade de sucesso. 
 
-Abstrair algoritmos de simulação como os tipos definidos pelo usuário `SimulationAlgorithm` e `TimeDependentSimulationAlgorithm` nos permite incorporar convenientemente sua funcionalidade a algoritmos Quantum mais sofisticados. Isso nos motiva a fazer o mesmo para essas sub-rotinas usadas com frequência.
+Resumindo algoritmos de simulação à medida que os tipos definidos pelo utilizador `SimulationAlgorithm` e `TimeDependentSimulationAlgorithm` permitem incorporar convenientemente a sua funcionalidade em algoritmos quânticos mais sofisticados. Isto motiva-nos a fazer o mesmo por estas subrotinas comumente usadas.
 
-Portanto, definimos a função conveniente
+Assim, definimos a função conveniente
 
 ```qsharp
 function InterpolatedEvolution(
-        interpolationTime: Double, 
-        evolutionGeneratorStart: EvolutionGenerator,
-        evolutionGeneratorEnd: EvolutionGenerator,
-        timeDependentSimulationAlgorithm: TimeDependentSimulationAlgorithm)
-        : (Qubit[] => Unit is Adj + Ctl) {
+        interpolationTime : Double, 
+        evolutionGeneratorStart : EvolutionGenerator,
+        evolutionGeneratorEnd : EvolutionGenerator,
+        timeDependentSimulationAlgorithm : TimeDependentSimulationAlgorithm)
+: (Qubit[] => Unit is Adj + Ctl) {
         ...
 }
  
 ```
 
-Isso retorna uma operação unitário que implementa todas as etapas da preparação do estado adiabatic. O primeiro parâmetro `interpolatedTime` define o tempo sobre o qual interpolar linearmente entre o Hamiltonian inicial descrito pelo segundo parâmetro `evolutionGeneratorStart` e o final Hamiltonian descrito pelo terceiro parâmetro `evolutionGeneratorEnd`. O quarto parâmetro `timeDependentSimulationAlgorithm` é onde um faz a escolha do algoritmo de simulação. Observe que, se `interpolatedTime` for longa o suficiente, um estado inicial de terra permanecerá um estado de aterramento instantâneo da Hamiltonian durante toda a duração da simulação dependente de tempo e, portanto, terminará no estado de terra do Hamiltonian final.
+Isto devolve uma operação unitária que implementa todas as etapas de preparação do Estado adiabático. O primeiro parâmetro `interpolatedTime` define o tempo sobre o qual interpolamos linearmente entre o início que Hamiltonian descrito pelo segundo parâmetro `evolutionGeneratorStart` e o final hamiltoniano descrito pelo terceiro parâmetro `evolutionGeneratorEnd`. O quarto parâmetro `timeDependentSimulationAlgorithm` é onde se faz a escolha do algoritmo de simulação. Note-se que se `interpolatedTime` for tempo suficiente, um estado de terra inicial permanece um estado terrestre instantâneo do Hamiltonian durante toda a duração da simulação dependente do tempo, e assim termina no estado terrestre do final Hamiltonian.
 
-Também definimos uma operação útil que executa automaticamente todas as etapas de um experimento típico de química da Quantum. Por exemplo, temos o seguinte, que retorna uma estimativa de energia do estado produzido pela preparação do estado adiabatic:
+Também definimos uma operação útil que executa automaticamente todos os passos de uma experiência típica de química quântica. Por exemplo, temos o seguinte, que devolve uma estimativa energética do Estado produzida pela preparação do Estado adiabático:
 
 ```qsharp
-operation AdiabaticStateEnergyEstimate( 
-    nQubits : Int, 
-    statePrepUnitary: (Qubit[] => Unit),
-    adiabaticUnitary: (Qubit[] => Unit),
+operation EstimateAdiabaticStateEnergy(
+    nQubits : Int,
+    statePrepUnitary : (Qubit[] => Unit),
+    adiabaticUnitary : (Qubit[] => Unit),
     qpeUnitary: (Qubit[] => Unit is Adj + Ctl),
-    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double)) 
-    : Double {
+    phaseEstAlgorithm : ((DiscreteOracle, Qubit[]) => Double))
+: Double {
 ...
 }
 ```
 
-`nQubits` é o número de qubits usado para codificar o estado inicial do Quantum. `statePrepUnitary` prepara o estado de início da base computacional $ \ket{0\cdots 0} $. `adiabaticUnitary` é a operação unitário que implementa a preparação do estado adiabatic, como produzida pela função `InterpolatedEvolution`. `qpeUnitary` é a operação unitário que é usada para executar a estimativa de fase no estado resultante do Quantum. `phaseEstAlgorithm` é nossa escolha de algoritmo de estimativa de fase.
+`nQubits` é o número de qubits usados para codificar o estado quântico inicial. `statePrepUnitary` prepara o estado de partida a partir da base computacional $\ket{0\cdots 0}$. `adiabaticUnitary` é a operação unitária que implementa a preparação do Estado adiabático, como produzida pela função `InterpolatedEvolution`. `qpeUnitary` é a operação unitária que é usada para realizar estimativas de fase no estado quântico resultante. `phaseEstAlgorithm` é a nossa escolha de algoritmo de estimativa de fase.
 
 > [!TIP]
-> Os aplicativos da preparação do estado adiabatic são abordados nos exemplos. Para o modelo Ising usando uma implementação manual da preparação do estado adiabatic versus usando a função `AdiabaticEvolution`, consulte o [exemplo **AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
-> Para estimativa de fase e preparação do estado adiabatic no modelo Ising, consulte o [exemplo **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> As aplicações de preparação do Estado adiabático estão cobertas nas amostras. Para o modelo Ising utilizando uma implementação manual da preparação do estado adiabático versus utilização da função `AdiabaticEvolution`, consulte a amostra [ **adiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> Para a estimativa de fasee e preparação do estado adiabaático no modelo Ising, consulte a amostra [ **isingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
-> A [simulação de molecular Hydrogen](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) é uma amostra interessante e breve. O modelo e os resultados experimentais relatados em [' Malley et. al.](https://arxiv.org/abs/1512.06860) requer apenas matrizes Pauli e usa a forma $ \hat H = g\_{0}I\_0I\_1 + g\_1 {Z\_0} + g\_2 {Z\_1} + g\_3 {Z\_0} {Z\_1} + g\_4 {Y\_0} {Y\_1} + g\_5 {X\_0} {X\_1} $. Esse é um Hamiltonian efetivo que só exige apenas 2 qubits, em que as constantes $g $ são computadas a partir da distância $R $ entre os dois Atoms Hydrogen. Usando as funções do Canon, os Paul são convertidos em unidades e, em seguida, evoluíram por curtos períodos de tempo usando a decomposição Trotter-Suzuki. Uma boa aproximação para o estado de terra $H _2 $ pode ser criada sem usar a preparação do estado adiabatic e, portanto, a energia do estado terrestre pode ser encontrada diretamente usando a estimativa de fase da Canon.
+> A [simulação do hidrogénio molecular](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) é uma amostra interessante e breve. O modelo e os resultados experimentais relatados em [O'Malley et. al.](https://arxiv.org/abs/1512.06860) apenas requer matrizes Pauli e assume a forma $\hat H = g\_{0}eu\_0I\_1+g\_1{Z\_0}+g\_2{Z\_1}+g\_3{Z\_0}{Z\_1}+g\_4{Y\_0}{Y\_1}+g\_5{X\_0}0{X\_1}$. Este é um Hamiltonian eficaz que requer apenas 2 qubits, onde as constantes $g$ são calculadas à distância $R$ entre os dois átomos de Hidrogénio. Utilizando funções canonárias, os Paulis são convertidos em unitários e depois evoluíram durante curtos períodos de tempo usando a decomposição Trotter-Suzuki. Uma boa aproximação ao estado de terra $H_2$ pode ser criada sem a preparação do estado adiabático, e assim a energia do estado terrestre pode ser encontrada diretamente utilizando a estimativa de fase do cânone.
 
 ## <a name="shors-algorithm"></a>Algoritmo de Shor ##
-O algoritmo do Atal continua sendo um dos desenvolvimentos mais significativos na computação Quantum, pois ele mostrou que os computadores Quantum podem ser usados para resolver problemas importantes e, no momento, inmanejáveis.
-O algoritmo do Atal fornece uma maneira rápida de fatorar números grandes usando um computador Quantum, um problema chamado de *fatoração*.
-A segurança de muitos cryptosystems de hoje é baseada na suposição de que não existe um algoritmo rápido para fatoração.
-Portanto, o algoritmo de Atal teve um impacto profundo em como pensamos na segurança em um mundo posterior.
+O algoritmo de Shor continua a ser um dos desenvolvimentos mais significativos na computação quântica porque mostrou que os computadores quânticos poderiam ser usados para resolver problemas importantes, atualmente clássicamente difíceis.
+O algoritmo de Shor fornece uma maneira rápida de fatorizar grandes números usando um computador quântico, um problema chamado *factoring*.
+A segurança de muitos criptosistemas atuais baseia-se no pressuposto de que não existe algoritmo rápido para factoring.
+Assim, o algoritmo de Shor teve um profundo impacto na forma como pensamos sobre a segurança num mundo pós-quântico.
 
-O algoritmo do Atal pode ser considerado como um algoritmo híbrido.
-O computador Quantum é usado para executar uma tarefa de computação física conhecida como descoberta de períodos.
-Os resultados da localização do período são então processados de uma estimativa para estimar os fatores.
-Examinamos essas duas etapas abaixo.
+O algoritmo de Shor pode ser considerado um algoritmo híbrido.
+O computador quântico é usado para executar uma tarefa computacionalmente difícil conhecida como descoberta de período.
+Os resultados da constatação do período são então processados clássicamente para estimar os fatores.
+Revemos estes dois passos abaixo.
 
-### <a name="period-finding"></a>Localização do período ###
+### <a name="period-finding"></a>Constatação do período ###
 
-Depois de ver como o trabalho de transformação de Fourier de Quantum e a estimativa de fase (consulte [algoritmos de Quantum](xref:microsoft.quantum.libraries.standard.algorithms)), podemos usar essas ferramentas para resolver um problema computacional de forma clássica, chamado *localização de períodos*.  Na próxima seção, veremos como aplicar a localização do período à fatoração.
+Tendo visto como o quantum Fourier transforma e calcula a fase (ver [algoritmos quânticos),](xref:microsoft.quantum.libraries.standard.algorithms)podemos usar estas ferramentas para resolver um problema computacional clássico chamado de descoberta de *períodos.*  Na próxima secção, veremos como aplicar a constatação do período à ponderação.
 
-Considerando dois inteiros $a $ e $N $, em que $a < N $, a meta do período que localiza, também chamada de Order Localization, é encontrar a _ordem_ $r $ of $a $ módulo $N $, em que $r $ é definido para ser o inteiro mínimo positivo, de forma que $a ^ r \equiv 1 \Text{mod} N $.  
+Tendo em conta dois inteiros $a$ e $N$, onde $a<N$, o objetivo de encontrar o período, também chamado de conclusão de encomendas, é encontrar a _ordem_ $r$ de $a$ modulo $N$, onde $r$ é definido como o inteiro menos positivo que $a^r \equiv 1 \text{ mod } N$.  
 
-Para localizar o pedido usando um computador Quantum, podemos usar o algoritmo estimativa de fase aplicado ao operador unitário a seguir $U _a $: $ $ U_a \ket{x} \equiv \ket{(AX) \Text{mod} N}. $ $ eigenvectors de $U _a $ são para Integer $s $ e $0 \ Leq s \leq r-$1, $ $ \ket{x_s} \equiv 1/\sqrt{r} \sum\_{k = 0} ^ {r-1} e ^ {\frac{-2\pi i SK} {r}} \ket{a ^ k\text {mod} N}, $ $ são _eigenstates_ de $U _A $.
-O eigenvalues de $U _a $ $ U\_um \ket{x\_s} = e ^ {2 \ Pi i s/r} \ket{x\_s}. $$
+Para encontrar a encomenda usando um computador quântico, podemos usar o algoritmo de estimativa de fase aplicado ao seguinte operador unitário $U_a$: $U_a\ket{x} \equiv \ket {(ax)\text{ mod }N} .$$ Os eigenvectores de $U_a$ são para $s de suportes e $0\leq s \leq r - 1$, $$\ket{x_s} \equiv 1 / \sqrt{r} \sum\_{k=0}^{r-1} e^{{frac{-2\pi i sk}{{r}} \ket{a^k\text{ mod }N},$$ são _eigenstates_ de $U_a$.
+Os valores eigen de $U_a$ são $$ U\_um \ket{x\_s} = e^2\pi i s / r} \ket{x\_s} . $$
 
-A estimativa de fase gera, portanto, o eigenvalues $e ^ {2 \ Pi i s/r} $, do qual $r $ pode ser aprendido com eficiência usando as [frações contínuas](https://en.wikipedia.org/wiki/Continued_fraction) de $s/r $.
+A estimativa de fase produz assim os valores eigen$e^{2\pi i s/ r}$ a partir do qual $r$ pode ser aprendido eficientemente usando [frações contínuas](https://en.wikipedia.org/wiki/Continued_fraction) de $s/r$.
 
-O diagrama de circuito para localização do período Quantum é:
+O diagrama de circuito para a descoberta do período quântico é:
 
 ![](./../../media/QPE.svg)
 
-Aqui, $2n $ qubits são inicializados para $ \ket{0}$ e $n $ qubits são inicializados para $ \ket{1}$.
-O leitor pode imaginar novamente por que o Quantum Register para manter o eigenstates é inicializado para $ \ket{1}$.
-Como não sabemos a ordem $r $ antecipadamente, não podemos realmente preparar $ \ket{x_s} $ States diretamente.
-Felizmente, acontece que $1/\ sqrt {r} \sum\_{s = 0} ^ {r-1} \ket{x\_s} = \ket{1}$.
-Não precisamos realmente preparar $ \ket{x} $!
-Podemos apenas preparar um registro Quantum de $n $ qubits no estado $ \ket{1}$. 
+Aqui os qubits de $2n$ são inicializados para $\ket{0}$ e $n$ qubits são inicializados para $\ket{1}$.
+O leitor pode voltar a perguntar-se porque é que o registo quântico para deter os eigenstates é inicializado para $\ket{1}$.
+Como não se sabe a encomenda $r$ com antecedência, não podemos realmente preparar os estados de x_s x_s}$ de $\ket.
+Felizmente, verifica-se que $1/\sqrt{r} \sum\_{s=0}^{r-1} \ket{x\_s} = \ket{1}$.
+Não precisamos de preparar $\ket{x}$!
+Podemos preparar um registo quântico de qubits de $n$ no Estado $\ket{1}$. 
 
-O circuito contém o QFT e vários Gates controlados.
+O circuito contém o QFT e vários portões controlados.
 O portão QFT foi descrito [anteriormente](xref:microsoft.quantum.libraries.standard.algorithms).
-O $U controlado _a Gate mapeia $ \ket{x} $ para $ \ket{(AX) \Text{mod} N} $ se o controle qubit for $ \ket{1}$ e mapear $ \ket{x} $ para $ \ket{x} $ caso contrário.
+O portão controlado-$U_a$ mapeia $\ket{x}$ para $\ket{(ax)\text{ mod } N}$ se o qubit de controlo for $\ket{1}$, e mapeia $\ket{x}$ para $\ket{x}$ de outra forma.
 
-Para atingir $ (a ^ NX) \Text{mod} N $, podemos simplesmente aplicar controlled-$U _ {a ^ N} $, em que calculamos $a ^ N \Text{mod} N $ de forma clássica para conectar-se ao circuito Quantum.  
-Os circuitos para atingir esse tipo de aritmética de modulação foram descritos na [documentação aritmética do Quantum](./algorithms.md#arithmetic), especificamente exigimos um circuito de exponenciação modular para implementar as operações de $U controlado\_{a ^ i} $.
+Para conseguir $(a^nx)\text { mod } N$, podemos simplesmente aplicar $U controlado_{a^n}$, onde calculamos $a^n \text{ mod } N$ clássicamente para ligar ao circuito quântico.  
+Os circuitos para alcançar tal aritmética modular foram descritos na [documentação aritmética quântica,](./algorithms.md#arithmetic)especificamente exigimos um circuito de exponenciação modular para implementar as operações de $U controladas\_{a^i}$.
 
-Enquanto o circuito acima corresponde à [estimativa da fase Quantum](xref:microsoft.quantum.characterization.quantumphaseestimation) e habilita explicitamente a localização da ordem, podemos reduzir o número de qubits necessário. Podemos seguir o método de Beauregard para a localização de pedidos, conforme descrito [na página 8 de arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), ou use uma das rotinas de estimativa de fase disponível em Microsoft. Quantum. Canon. Por exemplo, a [estimativa de fase robusta](xref:microsoft.quantum.characterization.robustphaseestimation) também usa um qubit extra.
+Embora o circuito acima corresponda à Estimativa de [Fase Quântica](xref:microsoft.quantum.characterization.quantumphaseestimation) e permita explicitamente a descoberta da ordem, podemos reduzir o número de qubits necessários. Podemos seguir o método de descoberta de encomendas de Beauregard como descrito [na página 8 do arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8), ou usar uma das rotinas de estimativa de fase disponíveis na Microsoft.Quantum.Characterization. Por exemplo, [a Robust Phase Estimation](xref:microsoft.quantum.characterization.robustphaseestimation) também utiliza um qubit extra.
  
-### <a name="factoring"></a>Cálculo ###
-A meta de fatoração é determinar os dois fatores primos de Integer $N $, em que $N $ é um número de $n $-bit.  
-A fatoração consiste nas etapas descritas abaixo. As etapas são divididas em três partes: uma rotina de pré-processamento clássica (1-4); uma rotina de computação Quantum para localizar a ordem de $a \Text{mod} N $ (5); e uma rotina de pré-processamento clássica para derivar os fatores primos da ordem (6-9).
+### <a name="factoring"></a>Factoring ###
+O objetivo de factoring é determinar os dois fatores principais do inteiro $N$, onde $N$ é um número $n$bit.  
+Factoring consiste nos passos descritos abaixo. Os passos dividem-se em três partes: uma rotina clássica de pré-processamento (1-4); uma rotina de computação quântica para encontrar a ordem de $a \text{ mod } N$ (5); e uma rotina clássica de pós-processamento para derivar os fatores primos da ordem (6-9).
 
-A rotina de pré-processamento clássica consiste nas seguintes etapas:
-1. Se $N $ for par, retorne o fator principal $2 $.
-2. Se $N = p ^ q $ para $p \geq1 $, $q \geq2 $, retorne o fator principal $p $.  Esta etapa é executada de clássico.
-3. Escolha um número aleatório $a $ de $1 < um < N-$1.
-4. Se $ \Text{GCD} (a, N) > 1 $, retorne o fator principal $ \Text{GCD} (a, N) $. Esta etapa é calculada usando o algoritmo do Euclid.
-Se nenhum fator principal tiver sido retornado, continuamos para a rotina Quantum:
-5. Chame o algoritmo do período Quantum que localiza para calcular a ordem $r $ de $a \Text{mod} N $. Use $r $ na rotina de pré-processamento clássica para determinar os principais fatores:
-6. Se $r $ for ímpar, volte para a etapa de pré-processamento (3).
-7. Se $r $ for par e $a ^ {r/2} =-1 \ Text {mod} N $, volte para a etapa de pré-processamento (3).
-8. Se $ \Text{GCD} (a ^ {r/2} + 1, N) $ for um fator não trivial de $N $, retorne $ \Text{GCD} (um ^ {r/2} + 1, N) $.
-9. Se $ \Text{GCD} (a ^ {r/2}-1, N) $ for um fator não trivial de $N $, retorne $ \Text{GCD} (um ^ {r/2}-1, N) $.
+A rotina clássica de pré-processamento consiste nos seguintes passos:
+1. Se $N$ é igual, devolva o fator principal $2$.
+2. Se $N=p^q$ por $p\geq1$, $q\geq2$, devolva o fator principal $p$.  Este passo é realizado clássicamente.
+3. Escolha um número aleatório $a$ de tal forma que $1 < a < N-1$.
+4. Se $\text{gcd}(a,N)>1$, devolva o fator principal $\text{gcd}(a,N)$. Este passo é calculado usando o algoritmo de Euclid.
+Se nenhum fator principal foi devolvido, procedemos à rotina quântica:
+5. Ligue para o algoritmo de encontrar o período quântico para calcular a ordem $r$ de $a \text{ mod } N$. Use $r$ na rotina clássica de pós-processamento para determinar os fatores principais:
+6. Se $r$ for estranho, volte ao passo de pré-processamento (3).
+7. Se $r$ for equilibrado e $a^{r/2} = -1\text{ mod }N$, volte ao passo de pré-processamento (3).
+8. Se $\text{gcd}(a^{r/2}+1, N)$ é um fator não trivial de $N$, devolver $\text{gcd}(a{r/2}+1, N)$.
+9. Se $\text{gcd}(a^{r/2}-1, N)$ é um fator não trivial de $N$, devolver $\text{gcd}(a{r/2}-1, N)$.
 
 
-O algoritmo de fatoração é probabilística: pode ser mostrado que, com probabilidade, pelo menos uma metade que $r $ será par e $a ^ {r/2} \neq-1 \Text{mod} N $, produzindo assim um fator primo.  (Consulte o [artigo original do Atal](https://doi.org/10.1109/SFCS.1994.365700) para obter detalhes ou um dos textos *básicos de computação Quantum* no para obter [mais informações](xref:microsoft.quantum.more-information)).
-Se um fator principal não for retornado, basta repetir o algoritmo da etapa (1).  Após $n $ tentativas, a probabilidade de que cada tentativa tenha falha é no máximo $2 ^ {-n} $.
-Assim, depois de repetir o algoritmo, um número pequeno de vezes o sucesso é praticamente garantido.
+O algoritmo de factoring é probabilístico: pode ser demonstrado que, com probabilidade, pelo menos metade que $r$ será uniforme e $a^{r/2} \neq -1 \text { mod }N$, produzindo assim um fator primordial.  (Consulte o [documento original de Shor](https://doi.org/10.1109/SFCS.1994.365700) para obter mais detalhes, ou um dos textos básicos de *computação quântica* em For more [information).](xref:microsoft.quantum.more-information)
+Se um fator principal não for devolvido, então simplesmente repetimos o algoritmo do passo (1).  Depois de $n$ tenta, a probabilidade de todas as tentativas terem falhado é no máximo $2^{-n}$.
+Assim, depois de repetir o algoritmo, um pequeno número de vezes o sucesso é praticamente assegurado.

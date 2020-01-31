@@ -1,0 +1,45 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applylowdepthand
+name: ApplyLowDepthAnd
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Inverte um determinado qubit-alvo se e apenas se ambos os qubits de controlo estiverem no estado 1, com a profundidade T 1, utilizando a medição para executar a operação adjoint.
+
+
+  Inverte `target` se e apenas se ambos os controlos forem 1, mas assume que `target` está no estado 0.  A operação tem contagem T 4, profundidade T 1 e requer um qubit auxiliar, podendo, portanto, ser preferível a uma operação CCNOT, se `target` se sabe ser 0.  O adjoint desta operação é baseado em medição e não requer portões T, e nenhum qubit auxiliar.
+syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
+references: >-
+  - Cody Jones: "Construções novas para o portão de Toffoli tolerante com falhas", Phys. Rev. A 87, 022328, 2013 [arXiv:1212.5069](https://arxiv.org/abs/1212.5069) doi:10.1103/PhysRevA.87.022328
+
+  - Peter Selinger: "Circuitos quânticos de profundidade T", Phys. Rev. A 87, 042302, 2013 [arXiv:1210.0974](https://arxiv.org/abs/1210.0974) doi:10.1103/PhysRevA.87.042302
+input:
+  content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
+  types:
+  - name: control1
+    summary: Qubit de primeiro controlo
+    isPrimitive: true
+    uid: Qubit
+  - name: control2
+    summary: Qubit de segundo controlo
+    isPrimitive: true
+    uid: Qubit
+  - name: target
+    summary: Qubit auxillary alvo; deve estar no estado 0
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 060a4b2241f231a9d164bdcce2beb2a3315d96f9
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76872942"

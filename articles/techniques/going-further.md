@@ -1,31 +1,32 @@
 ---
-title: 'Técnicas de Q # – indo além | Microsoft Docs'
-description: 'Técnicas de Q #-aprofundando'
+title: Ir mais longe - Q# técnicas / Microsoft Docs
+description: Ir mais longe - Técnicas Q#
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: c079364f8808304e0132fa2a4226cd6400e81339
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+uid: microsoft.quantum.techniques.going-further
+ms.openlocfilehash: bd2b799d4001e280baccb04158247891b9cbb5bc
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863151"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820203"
 ---
-# <a name="going-further"></a>Aprofundando... #
+# <a name="going-further"></a>Indo mais longe #
 
-Agora que você já viu como escrever programas de Quantum interessantes em Q #, esta seção vai além, apresentando alguns tópicos mais avançados que devem ser úteis no futuro.
+Agora que já viu como escrever programas quânticos interessantes em Q#, esta secção vai mais longe introduzindo alguns tópicos mais avançados que devem ser úteis para avançar.
 
 
-## <a name="generic-operations-and-functions"></a>Operações e funções genéricas ##
+## <a name="generic-operations-and-functions"></a>Operações e Funções Genéricas ##
 
 > [!TIP]
-> Esta seção pressupõe alguma familiaridade básica com [genéricos C# ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics), em [genéricos, em F# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/) [ C++ modelos](https://docs.microsoft.com/cpp/cpp/templates-cpp), ou abordagens semelhantes à metaprogramação em outras linguagens.
+> Esta secção assume alguma familiaridade básica com [genéricos C#em, ](https://docs.microsoft.com/dotnet/csharp/programming-guide/generics/introduction-to-generics) [genéricos em, F# ](https://docs.microsoft.com/dotnet/fsharp/language-reference/generics/) [ C++ modelos,](https://docs.microsoft.com/cpp/cpp/templates-cpp)ou abordagens semelhantes à metaprogramação em outras línguas.
 
-Muitas funções e operações que desejamos definir não dependem muito dos tipos de suas entradas, mas, em vez disso, apenas usam implicitamente seus tipos por meio de alguma outra função ou operação.
-Por exemplo, considere o conceito de *mapa* comum a muitas linguagens funcionais; dada uma função $f (x) $ e uma coleção de valores $\{x_1, x_2, \dots, x_n\}$, MAP retorna uma nova coleção $\{f (x_1), f (x_2), \dots, f (x_n)\}$.
-Para implementar isso em Q #, podemos aproveitar essas funções como primeira classe.
-Vamos escrever um exemplo rápido de `Map`, usando ★ como um espaço reservado enquanto descobrimos quais tipos precisamos.
+Muitas funções e operações que podemos querer definir não dependem muito dos tipos das suas inputs, mas apenas utilizam implicitamente os seus tipos através de outra função ou operação.
+Por exemplo, considere o conceito de *mapa* comum a muitas línguas funcionais; dada uma função $f(x)$ e uma coleção de valores $\{x_1, x_2, \dots, x_n\}$, o mapa devolve uma nova coleção $\{f(x_1), f(x_2), \dots, f(x_n)\}$.
+Para implementar isto em Q#, podemos tirar partido dessas funções são de primeira classe.
+Vamos escrever um exemplo rápido de `Map`, usando ★ como espaço reservado enquanto descobrimos que tipos precisamos.
 
 ```qsharp
 function Map(fn : ★ -> ★, values : ★[]) : ★[] {
@@ -37,8 +38,8 @@ function Map(fn : ★ -> ★, values : ★[]) : ★[] {
 }
 ```
 
-Observe que essa função parece muito boa, independentemente de quais tipos reais substituímos.
-Um mapa de inteiros para Paulis, por exemplo, parece muito o mesmo que um mapa de números de ponto flutuante para cadeias de caracteres:
+Note que esta função parece muito a mesma, independentemente dos tipos reais em que substituímos.
+Um mapa de inteiros a Paulis, por exemplo, parece muito parecido com um mapa de números de pontos flutuantes a cordas:
 
 ```qsharp
 function MapIntsToPaulis(fn : Int -> Pauli, values : Int[]) : Pauli[] {
@@ -58,24 +59,24 @@ function MapDoublesToStrings(fn : Double -> String, values : Double[]) : String[
 }
 ```
 
-Em princípio, poderíamos escrever uma versão do `Map` para cada par de tipos que encontramos, mas isso apresenta uma série de dificuldades.
-Por exemplo, se encontrarmos um bug no `Map`, devemos garantir que a correção seja aplicada uniformemente em todas as versões do `Map`.
-Além disso, se construirmos uma nova tupla ou UDT, agora devemos também construir um novo `Map` para acompanhar o novo tipo.
-Embora isso seja indevido a um pequeno número dessas funções, à medida que coletamos cada vez mais funções da mesma forma que `Map`, o custo da introdução de novos tipos torna-se razoavelmente grande em ordem razoavelmente curta.
+Em princípio, poderíamos escrever uma versão de `Map` para cada par de tipos que encontramos, mas isso introduz uma série de dificuldades.
+Por exemplo, se encontrarmos um bug em `Map`, então temos de garantir que a correção seja aplicada uniformemente em todas as versões de `Map`.
+Além disso, se construirmos um novo tuple ou UDT, então temos agora de construir também um novo `Map` para acompanhar o novo tipo.
+Embora isto seja tratável para um pequeno número de tais funções, à medida que recolhemos cada vez mais funções da mesma forma que `Map`, o custo da introdução de novos tipos torna-se irracionalmente grande em ordem bastante curta.
 
-No entanto, grande parte dessa dificuldade faz com que não tenhamos dado ao compilador as informações de que ele precisa para reconhecer como as diferentes versões do `Map` estão relacionadas.
-Efetivamente, queremos que o compilador trate `Map` como um tipo de função matemática de *tipos* q # para funções q #.
-Essa noção é formalizada permitindo que funções e operações tenham *parâmetros de tipo*, bem como seus parâmetros de tupla comuns.
-Nos exemplos acima, desejamos considerar `Map` como tendo parâmetros de tipo `Int, Pauli` no primeiro caso e `Double, String` no segundo caso.
-Na maior parte, esses parâmetros de tipo podem ser usados como se fossem tipos comuns: usamos valores de parâmetros de tipo para criar matrizes e tuplas, chamar funções e operações e atribuir a variáveis comuns ou mutáveis.
+Grande parte desta dificuldade resulta, no entanto, do facto de não termos dado ao compilador a informação de que necessita para reconhecer como estão relacionadas as diferentes versões de `Map`.
+Efetivamente, queremos que o compilador trate `Map` como uma espécie de função matemática dos *tipos* Q# para as funções Q#.
+Esta noção é formalizada permitindo que funções e operações tenham *parâmetros de tipo,* bem como os seus parâmetros normais de tuple.
+Nos exemplos acima referidos, queremos pensar em `Map` como tendo parâmetros de tipo `Int, Pauli` no primeiro caso e `Double, String` no segundo caso.
+Na maior parte dos casos, estes parâmetros de tipo podem então ser usados como se fossem tipos comuns: usamos valores de parâmetros de tipo para fazer matrizes e tuples, funções de chamada e operações, e atribuir a variáveis ordinárias ou mutáveis.
 
 > [!NOTE]
-> O caso mais extremo de dependência indireta é o de qubits, em que um programa Q # não pode contar diretamente com a estrutura do tipo de `Qubit`, mas **deve** passar esses tipos para outras operações e funções.
+> O caso mais extremo de dependência indireta é o dos qubits, onde um programa Q# não pode depender diretamente da estrutura do tipo `Qubit`, mas **deve** passar esses tipos para outras operações e funções.
 
-Retornando ao exemplo acima, podemos ver que precisamos que `Map` tenha parâmetros de tipo, um para representar a entrada para `fn` e outro para representar a saída de `fn`.
-Em Q #, isso é escrito pela adição de colchetes angulares (`<>`, não brakets $ \braket{}$!) após o nome de uma função ou operação em sua declaração e listando cada parâmetro de tipo.
-O nome de cada parâmetro de tipo deve começar com um `'`de tique, indicando que ele é um parâmetro de tipo e não um tipo comum (também conhecido como um tipo *concreto* ).
-Por `Map`, portanto, escrevemos:
+Voltando ao exemplo acima, podemos ver que precisamos de `Map` para ter parâmetros de tipo, um para representar a entrada para `fn` e outro para representar a saída de `fn`.
+Em Q#, isto é escrito adicionando suportes de ângulo (isto é `<>`, não travões $\braket{}$!) após o nome de uma função ou operação na sua declaração, e listando cada parâmetro de tipo.
+O nome de cada parâmetro de tipo deve começar com um tique `'`, indicando que se trata de um parâmetro tipo e não de um tipo ordinário (também conhecido como tipo *de concreto).*
+Para `Map`, escrevemos assim:
 
 ```qsharp
 function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Output {
@@ -87,9 +88,9 @@ function Map<'Input, 'Output>(fn : 'Input -> 'Output, values : 'Input[]) : 'Outp
 }
 ```
 
-Observe que a definição de `Map<'Input, 'Output>` é muito semelhante às versões que escrevemos antes.
-A única diferença é que nós informamos explicitamente o compilador de que `Map` não depende diretamente do que `'Input` e `'Output` são, mas funciona para dois tipos usando-os indiretamente por meio de `fn`.
-Depois de definirmos `Map<'Input, 'Output>` dessa forma, podemos chamá-lo como se fosse uma função comum:
+Note que a definição de `Map<'Input, 'Output>` se parece extremamente com as versões que escrevemos anteriormente.
+A única diferença é que informamos explicitamente o compilador de que `Map` não depende diretamente do que `'Input` e `'Output` são, mas funciona para qualquer dois tipos, utilizando-os indiretamente através `fn`.
+Uma vez definido`Map<'Input, 'Output>` desta forma, podemos chamá-lo como se fosse uma função comum:
 
 ```qsharp
 // Represent Z₀ Z₁ X₂ Y₃ as a list of ints.
@@ -100,11 +101,11 @@ let paulis = Map(IntToPauli, ints);
 ```
 
 > [!TIP]
-> Escrever funções e operações genéricas é um lugar em que "tupla-in-out" é uma maneira muito útil de pensar em funções e operações do Q #.
-> Como cada função usa exatamente uma entrada e retorna exatamente uma saída, uma entrada do tipo `'T -> 'U` corresponde a *qualquer* função Q # qualquer.
-> Da mesma forma, qualquer operação pode ser passada para uma entrada do tipo `'T => 'U`.
+> Escrever funções e operações genéricas é um lugar onde "tuple-in tuple-out" é uma forma muito útil de pensar sobre as funções e operações q#.
+> Uma vez que cada função requer exatamente uma entrada e devolve exatamente uma saída, uma entrada de tipo `'T -> 'U` corresponde a *qualquer* função Q# qualquer.
+> Da mesma forma, qualquer operação pode ser passada para uma entrada de tipo `'T => 'U`.
 
-Como um segundo exemplo, considere o desafio de escrever uma função que retorne a composição de duas outras funções:
+Como segundo exemplo, considere o desafio de escrever uma função que retorne a composição de duas outras funções:
 
 ```qsharp
 function ComposeImpl(outerFn : (B -> C), innerFn : (A -> B), input : A) : C {
@@ -116,9 +117,9 @@ function Compose(outerFn : (B -> C), innerFn : (A -> B)) : (A -> C) {
 }
 ```
 
-Aqui, devemos especificar exatamente o que `A`, `B`e `C` são, portanto, limitando seriamente o utilitário de nossa nova função `Compose`.
-Afinal, `Compose` depende apenas `A`, `B`e `C` *via* `innerFn` e `outerFn`.
-Como alternativa, podemos adicionar parâmetros de tipo a `Compose` que indicam que ele funciona para *qualquer* `A`, `B`e `C`, contanto que esses parâmetros correspondam aos esperados por `innerFn` e `outerFn`:
+Aqui, temos de especificar exatamente quais são os `A`, `B`e `C`, limitando assim severamente a utilidade da nossa nova função `Compose`.
+Afinal, `Compose` só depende de `A`, `B`e `C` *via* `innerFn` e `outerFn`.
+Como alternativa, podemos, então, adicionar parâmetros de tipo a `Compose` que indiquem que funciona para *qualquer* `A`, `B`e `C`, desde que estes parâmetros correspondam aos esperados por `innerFn` e `outerFn`:
 
 ```qsharp
 function ComposeImpl<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B), input : 'A) : 'C {
@@ -130,15 +131,15 @@ function Compose<'A, 'B, 'C>(outerFn : ('B -> 'C), innerFn : ('A -> 'B)) : ('A -
 }
 ```
 
-As bibliotecas padrão de Q # fornecem uma variedade de operações e funções parametrizadas por tipo para facilitar o expressar o fluxo de controle de ordem mais alta.
-Eles são abordados mais detalhadamente no [Guia de biblioteca padrão do Q #](xref:microsoft.quantum.libraries.standard.intro).
+As bibliotecas padrão Q# fornecem uma gama dessas operações e funções paramétricas tipo para facilitar o fluxo de controlo de ordem mais fácil de expressar.
+Estes são discutidos mais no guia padrão da [biblioteca Q#](xref:microsoft.quantum.libraries.standard.intro).
 
-## <a name="borrowing-qubits"></a>Qubits emprestando ##
+## <a name="borrowing-qubits"></a>Qubits emprestados ##
 
-O mecanismo de empréstimo permite a alocação de qubits que pode ser usada como espaço transitório durante uma computação. Esses qubits geralmente não estão em um estado limpo, ou seja, eles não são necessariamente inicializados em um estado conhecido, como $ \ket{0}$. Um também fala sobre o qubits "sujo", pois seu estado é desconhecido e pode até mesmo ser confusas com outras partes da memória do computador Quantum. Entre os casos de uso conhecidos de qubits sujos estão implementações de Gates de CNOT de vários controle que exigem apenas poucos qubits e implementação de incrementais.
+O mecanismo de empréstimo permite a atribuição de qubits que podem ser usados como espaço de risco durante um cálculo. Estes qubits geralmente não estão em um estado limpo, ou seja, não são necessariamente inicializados em um estado conhecido como $\ket{0}$. Fala-se também de qubits "sujos", uma vez que o seu estado é desconhecido e pode até ser enredado com outras partes da memória do computador quântico. Entre os casos de utilização conhecidos de qubits sujos estão implementações de portões CNOT multi-controlados que requerem apenas muito poucos qubits e implementação de incrementadores.
 
-Na Canon, há exemplos que usam a palavra-chave `borrowing`, por exemplo, a função `MultiControlledXBorrow` definida abaixo.
-Se `controls` denota o qubits de controle que deve ser adicionado a uma operação `X`, um geral de `Length(controls)-2` muitos ancillas sujos serão adicionados por essa implementação.
+No cândia existem exemplos que usam a palavra-chave `borrowing`, por exemplo, a função `MultiControlledXBorrow` definida abaixo.
+Se `controls` denota os qubits de controlo que devem ser adicionados a uma operação `X`, então uma geral de `Length(controls)-2` muitas auxiliares sujas serão adicionadas por esta implementação.
 
 ```qsharp
 operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : Unit
@@ -177,6 +178,6 @@ is Adj + Ctl {
 }
 ```
 
-Observe que o uso extensivo do `With` combinador---em seu formato aplicável a operações que dão suporte a adpositivo, ou seja, `WithA`---foi feita neste exemplo, o que é bom estilo de programação, pois adicionar controle às estruturas que envolvem `With` só propaga o controle para a operação interna. Observe ainda que, além do `body` da operação, uma implementação do `controlled` corpo da operação foi explicitamente fornecida, em vez de recorrer a uma instrução `controlled auto`. O motivo disso é que sabemos da estrutura do circuito como adicionar com facilidade mais controles, o que é benéfico em comparação à adição de controle a cada porta individual na `body`. 
+Note-se que foi feita uma utilização extensiva do `With` combinador---na sua forma aplicável às operações que suportam a adjoint, ou seja, `WithA`---foi feita neste exemplo, que é um bom estilo de programação como um bom estilo de programação como um bom estilo de programação como um bom estilo de programação como um bom estilo de programação como um bom estilo de programação como um bom estilo de programação como um bom estilo de programação como um bom estilo de programação como a adição de controlo às estruturas que envolvem `With` apenas propaga o controlo à operação interna. Note-se ainda que, para além do `body` da operação, foi explicitamente fornecida uma execução do organismo `controlled` da operação, em vez de recorrer a uma declaração `controlled auto`. A razão para isso é que sabemos pela estrutura do circuito como adicionar facilmente mais controlos que são benéficos em comparação com a adição de controlo a cada portão individual do `body`. 
 
-É instrutivo comparar esse código com outra função Canon `MultiControlledXClean` que atinge o mesmo objetivo de implementar uma operação de `X` com controle de multiplicação, no entanto, que usa várias qubits limpas usando o mecanismo de `using`. 
+É instrutivo comparar este código com outra função canon `MultiControlledXClean` que atinja o mesmo objetivo de implementar uma operação de `X` controlada por multiplicação, no entanto, que utiliza vários qubits limpos utilizando o mecanismo `using`. 

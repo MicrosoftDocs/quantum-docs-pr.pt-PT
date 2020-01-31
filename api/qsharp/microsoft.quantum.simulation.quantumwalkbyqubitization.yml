@@ -4,12 +4,12 @@ name: QuantumWalkByQubitization
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Converte um `BlockEncodingReflection` em uma Walk do Quantum.
+  Converte um reflexo de codificação de blocos numa caminhada quântica.
 
 
-  Ou seja, dado um `BlockEncodingReflection` unitário $U $ que codifica algum operador $H $ de interesse, converte-o em uma visão Quantum $W $ contendo o espectro de $ \pm e ^ {\pm i\sin ^{-1}(H)} $.
+  Dado um `BlockEncodingReflection` representado por um $U$ unitário que codifica algum operador $H$ de juros, converte-o numa caminhada quântica $W$ contendo o espectro de $\pm e^{\pm i\sin^{-1}(H)}$.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
-references: '- Simulação de Hamiltonian por Qubitization Guang Hao Low, Julio L. Chuang https://arxiv.org/abs/1610.06546'
+references: '- Simulação hamiltoniana de Qubitization Guang Hao Low, Isaac L. Chuang https://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
@@ -18,7 +18,7 @@ input:
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Uma Walk do Quantum $W $ agindo em conjunto em registros `a` e `s` que os codificadores de bloco $H $ e contém o espectro de $ \pm e ^ {\pm i\sin ^{-1}(H)} $.
+  - summary: Uma caminhada quântica $W$ agindo conjuntamente em registos `a` e `s` que o bloco codifica $H$, e contém o espectro de $\pm e^{\pm i\sin^{-1}(H)}.$.
     isOperation: true
     input:
       types:
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: aec6e81e44d4fa09e2ca131f0350590541f4dc8d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aed748abe8f3468da0cc772606afc4f577c4abeb
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065355"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76869156"

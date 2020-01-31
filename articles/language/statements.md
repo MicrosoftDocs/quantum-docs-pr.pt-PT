@@ -1,33 +1,33 @@
 ---
-title: 'Instruções Q # | Microsoft Docs'
-description: 'Instruções Q #'
+title: Q# declarações / Microsoft Docs
+description: Q# declarações
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5bcbee868c76aaf53d0b7969e6e634da62689aaa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 9157cf3336ce0894816dbfbaf13ce0e712a6b096
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184870"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821070"
 ---
-# <a name="statements-and-other-constructs"></a>Instruções e outras construções
+# <a name="statements-and-other-constructs"></a>Declarações e Outras Construções
 
 ## <a name="comments"></a>Comentários
 
-Os comentários começam com duas barras, `//`e continuam até o fim da linha.
-Um comentário pode aparecer em qualquer lugar em um arquivo de origem Q #.
+Os comentários começam com dois cortes dianteiros, `//`, e continuam até ao fim da linha.
+Um comentário pode aparecer em qualquer lugar num ficheiro de origem Q#.
 
-### <a name="documentation-comments"></a>Comentários da documentação
+### <a name="documentation-comments"></a>Comentários de Documentação
 
-Os comentários que começam com três barras "/", `///`, são tratados especialmente pelo compilador quando aparecem imediatamente antes de um namespace, operação, especialização, função ou definição de tipo.
-Nesse caso, seu conteúdo é levado como documentação para o tipo definido pelo usuário ou callable, como para outras linguagens .NET.
+Os comentários que começam com três cortes dianteiros, `///`, são tratados especialmente pelo compilador quando aparecem imediatamente antes de um espaço de nome, operação, especialização, função ou definição de tipo.
+Nesse caso, os seus conteúdos são tomados como documentação para o tipo definido de callable ou definido pelo utilizador, como para outros idiomas .NET.
 
-Em `///` comentários, o texto a ser exibido como parte da documentação da API é formatado como [redução](https://daringfireball.net/projects/markdown/syntax), com partes diferentes da documentação que está sendo indicada por cabeçalhos nomeados especialmente.
-Como uma extensão para redução, referências cruzadas a operações, funções e tipos definidos pelo usuário em Q # podem ser incluídas usando o `@"<ref target>"`, onde `<ref target>` é substituído pelo nome totalmente qualificado do objeto de código que está sendo referenciado.
-Opcionalmente, um mecanismo de documentação também pode oferecer suporte a extensões de redução adicionais.
+No `///` comentários, o texto a aparecer como parte da documentação da API é formatado como [Markdown](https://daringfireball.net/projects/markdown/syntax), com diferentes partes da documentação a serem indicadas por cabeçalhos especialmente nomeados.
+Como extensão ao Markdown, as referências cruzadas a operações, funções e tipos definidos pelo utilizador em Q# podem ser incluídas utilizando o `@"<ref target>"`, onde `<ref target>` é substituído pelo nome totalmente qualificado do objeto de código que está a ser referenciado.
+Opcionalmente, um motor de documentação também pode suportar extensões de Markdown adicionais.
 
 Por exemplo:
 
@@ -54,81 +54,79 @@ Por exemplo:
 ///
 /// # See Also
 /// - Microsoft.Quantum.Intrinsic.H
-operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit
-{
+operation ApplyTwice<'T>(op : ('T => Unit), target : 'T) : Unit {
     op(target);
     op(target);
 }
 ```
 
-Os nomes a seguir são reconhecidos como cabeçalhos de comentário da documentação.
+Os seguintes nomes são reconhecidos como cabeçalhos de comentário documentais.
 
-- **Resumo**: um breve resumo do comportamento de uma função ou operação, ou da finalidade de um tipo. O primeiro parágrafo do resumo é usado para informações de foco. Ele deve ser texto sem formatação.
-- **Descrição**: uma descrição do comportamento de uma função ou operação, ou da finalidade de um tipo. O resumo e a descrição são concatenados para formar o arquivo de documentação gerado para a função, a operação ou o tipo.
-  A descrição pode conter símbolos e equações LaTeX e formatados em linha.
-- **Entrada**: uma descrição da tupla de entrada para uma operação ou função.
-  Pode conter subseções de redução adicionais indicando cada elemento individual da tupla de entrada.
-- **Saída**: uma descrição da tupla retornada por uma operação ou função.
-- **Parâmetros de tipo**: uma seção vazia que contém uma subseção adicional para cada parâmetro de tipo genérico.
-- **Exemplo**: um breve exemplo da operação, função ou tipo em uso.
-- **Comentários**: o Proseware variado que descreve algum aspecto da operação, função ou tipo.
-- **Consulte também**: uma lista de nomes totalmente qualificados que indica funções relacionadas, operações ou tipos definidos pelo usuário.
-- **Referências**: uma lista de referências e citações para o item que está sendo documentado.
+- **Resumo**: Um resumo curto do comportamento de uma função ou operação, ou do propósito de um tipo. O primeiro parágrafo do resumo é utilizado para informações sobre pairar. Deve ser um texto simples.
+- **Descrição**: Uma descrição do comportamento de uma função ou operação, ou do propósito de um tipo. O resumo e a descrição são concatenados para formar o ficheiro de documentação gerado para a função, operação ou tipo.
+  A descrição pode conter símbolos e equações formatados em linha LaTeX.
+- **Entrada**: Uma descrição do tuple de entrada para uma operação ou função.
+  Pode conter subsecções de Markdown adicionais indicando cada elemento individual da tuple de entrada.
+- **Saída**: Uma descrição do tuple devolvido por uma operação ou função.
+- **Parâmetros do tipo**: Uma secção vazia que contém uma subsecção adicional para cada parâmetro genérico do tipo.
+- **Exemplo**: Um pequeno exemplo do funcionamento, função ou tipo de utilização.
+- **Observações**: Prosa diversa que descreve algum aspeto da operação, função ou tipo.
+- **Ver Também:** Uma lista de nomes totalmente qualificados que indicam funções, operações ou tipos definidos pelo utilizador.
+- **Referências**: Uma lista de referências e citações para o artigo que está a ser documentado.
 
 ## <a name="namespaces"></a>Espaços de nomes
 
-Cada operação de Q #, função e tipo definido pelo usuário é definido em um namespace.
-O Q # segue as mesmas regras para nomear como outras linguagens .NET.
-No entanto, Q # não oferece suporte a referências relativas a namespaces.
-Ou seja, se o namespace `a.b` tiver sido aberto, uma referência a uma operação de nomes `c.d` não será resolvida para uma operação com o nome completo `a.b.c.d`.
+Cada operação, função e tipo definido pelo utilizador é definido dentro de um espaço de nome.
+Q# segue as mesmas regras para nomear outras línguas .NET.
+No entanto, Q# não suporta referências relativas a espaços de nome.
+Ou seja, se o espaço de nome`a.b` tiver sido aberto, uma referência a uma operação nomea `c.d` não será resolvida a uma operação com o nome completo `a.b.c.d`.
 
-Dentro de um bloco de namespace, a diretiva `open` pode ser usada para importar todos os tipos e chamadores declarados em um determinado namespace e consultá-los por seu nome não qualificado. Opcionalmente, um nome curto para o namespace aberto pode ser definido de modo que todos os elementos desse namespace possam (e precisam) ser qualificados pelo nome curto definido. A diretiva `open` se aplica ao bloco de namespace inteiro em um arquivo.
+Dentro de um bloco de espaço-nome, a diretiva `open` pode ser utilizada para importar todos os tipos e calíveis declarados num determinado espaço de nome e encaminhá-los pelo seu nome não qualificado. Opcionalmente, pode ser definido um nome curto para o espaço de nome aberto de modo a que todos os elementos desse espaço de nome possam (e precisam) ser qualificados pelo nome curto definido. A diretiva `open` aplica-se a todo o bloco de espaço de nome dentro de um ficheiro.
 
-Um tipo ou callable definido em outro namespace que não está aberto no namespace atual deve ser referenciado por seu nome totalmente qualificado.
-Por exemplo, uma operação chamada `Op` no namespace `X.Y` deve ser referenciada por seu nome totalmente qualificado `X.Y.Op`, a menos que o namespace `X.Y` tenha sido aberto anteriormente no bloco atual. Conforme mencionado acima, mesmo que o namespace de `X` tenha sido aberto, não é possível fazer referência à operação como `Y.Op`.
-Se um nome curto `Z` para `X.Y` tiver sido definido nesse namespace e arquivo, `Op` precisará ser chamado de `Z.Op`. 
+Um tipo ou callable definido em outro espaço de nome que não esteja aberto no espaço de nome atual deve ser referenciado pelo seu nome totalmente qualificado.
+Por exemplo, uma operação denominada `Op` no espaço de nome `X.Y` deve ser referenciada pelo seu nome totalmente qualificado `X.Y.Op`, a menos que o espaço de nome `X.Y` tenha sido aberto mais cedo no bloco atual. Como mencionado acima, mesmo que tenha sido aberto o espaço de nome `X`, não é possível fazer referência à operação como `Y.Op`.
+Se um nome curto `Z` para `X.Y` tiver sido definido nesse espaço de nome e arquivo, então `Op` deve ser referido como `Z.Op`. 
 
 ```qsharp
 namespace NS {
-
     open Microsoft.Quantum.Intrinsic; // opens the namespace
     open Microsoft.Quantum.Math as Math; // defines a short name for the namespace
 }
 ```
 
-Geralmente, é melhor incluir um namespace usando uma diretiva `open`.
-Usar um nome totalmente qualificado é necessário se dois namespaces definem construções com o mesmo nome e a fonte atual usa construções de ambos.
+Normalmente, é melhor incluir um espaço de nome através de uma diretiva `open`.
+É necessário utilizar um nome totalmente qualificado se dois espaços de nome definirem construções com o mesmo nome, e a fonte atual utiliza construções de ambos.
 
 ## <a name="formatting"></a>Formatação
 
-A maioria das instruções Q # e diretivas terminam com um ponto e vírgula de terminação, `;`.
-Instruções e declarações como `for` e `operation` que terminam com um bloco de instruções não exigem um ponto e vírgula de terminação.
-Cada descrição de instrução observa se o ponto e vírgula de terminação é necessário.
+A maioria das declarações e diretivas q# terminam com um ponto evígula terminando, `;`.
+Declarações e declarações como `for` e `operation` que terminam com um bloco de declaração não requerem um ponto e vírgula terminando.
+Cada descrição da declaração observa se o ponto evículo terminando é necessário.
 
-Instruções, como expressões, declarações e diretivas, podem ser divididas em várias linhas.
-Ter várias instruções em uma única linha deve ser evitada.
+Declarações, como expressões, declarações e diretivas, podem ser quebradas em várias linhas.
+Deve evitar-se várias declarações numa única linha.
 
-## <a name="statement-blocks"></a>Blocos de instrução
+## <a name="statement-blocks"></a>Blocos de Declaração
 
-As instruções Q # são agrupadas em blocos de instrução.
-Um bloco de instruções começa com um `{` de abertura e termina com um `}`de fechamento.
+As declarações de Q# são agruparadas em blocos de declaração.
+Um bloco de declaração começa com uma abertura `{` e termina com um fecho `}`.
 
-Um bloco de instrução que está delimitado de forma lexical dentro de outro bloco é considerado um subbloco do bloco de contenção; os blocos e os subcontêineres também são chamados de bloco externo e interno.
+Um bloco de declaração que seja lexicamente fechado dentro de outro bloco é considerado um subbloco do bloco contendo; contendo e subblocos também são chamados blocos exteriores e internos.
 
-## <a name="symbol-binding-and-assignment"></a>Atribuição e Associação de símbolo
+## <a name="symbol-binding-and-assignment"></a>Ligação e atribuição de símbolos
 
-Q # distingue entre símbolos mutáveis e imutáveis.
-Em geral, o uso de símbolos imutáveis é incentivado porque permite que o compilador execute mais otimizações.
+Q# distingue entre símbolos mutáveis e imutáveis.
+Em geral, o uso de símbolos imutáveis é encorajado porque permite ao compilador realizar mais otimizações.
 
-O lado esquerdo da Associação consiste em uma tupla de símbolos e no lado direito de uma expressão.
+O lado esquerdo da ligação consiste num símbolo tuple, e no lado direito de uma expressão.
 
-Como todos os tipos de Q # são tipos de valor – com o qubits de uma função especial, formalmente uma "cópia" é criada quando um valor é associado a um símbolo ou quando um símbolo é reassociado. Isso significa que o comportamento de Q # é o mesmo que se uma cópia fosse criada na atribuição. Isso, em particular, também inclui matrizes. É claro que, na prática, apenas as partes relevantes são, na verdade, recriadas, conforme necessário. 
+Uma vez que todos os tipos de Q# são tipos de valor - com os qubits a assumirem um papel um pouco especial - formalmente é criada uma "cópia" quando um valor está ligado a um símbolo, ou quando um símbolo é recuperado. Ou seja, o comportamento do Q# é o mesmo que se uma cópia fosse criada na atribuição. Isto, em particular, também inclui matrizes. É claro que, na prática, apenas as peças relevantes são recriadas, se necessário. 
 
-### <a name="tuple-deconstruction"></a>Desconstrução de tupla
+### <a name="tuple-deconstruction"></a>Desconstrução de Tuple
 
-Se o lado direito da associação for uma tupla, essa tupla poderá ser desconstruída após a atribuição.
-Essas desconstruções podem envolver tuplas aninhadas e qualquer desconstrução completa ou parcial é válida, desde que a forma da tupla no lado direito seja compatível com a forma da tupla de símbolo.
-A desconstrução de tupla pode, em particular, também ser usada quando o lado direito da `=` é uma expressão com valor de tupla.
+Se o lado direito da ligação for uma tuple, então essa tuple pode ser desconstruída após a atribuição.
+Tais desconstruções podem envolver tuples aninhados, e qualquer desconstrução total ou parcial é válida desde que a forma da tuple no lado direito seja compatível com a forma do símbolo tuple.
+A desconstrução de Tuple pode, em particular, ser usada quando o lado direito do `=` é uma expressão de valor tuple.
 
 ```qsharp
 let (i, f) = (5, 0.1); // i is bound to 5 and f to 0.1
@@ -140,29 +138,29 @@ let (r1, r2) = MeasureTwice(q1, PauliX, q2, PauliY);
 
 ### <a name="immutable-symbols"></a>Símbolos imutáveis
 
-Os símbolos imutáveis são associados usando a instrução `let`.
-Isso é praticamente equivalente à declaração de variável e à inicialização em idiomas C#como, exceto que os símbolos Q #, uma vez vinculados, não podem ser alterados; associações de `let` são imutáveis.
+Os símbolos imutáveis são ligados usando a declaração `let`.
+Isto equivale aproximadamente à declaração variável e C#à inicialização em línguas como, exceto que os símbolos Q#, uma vez ligados, não podem ser alterados; `let` encadernações são imutáveis.
 
-Uma associação imutável consiste na palavra-chave `let`, seguida por uma tupla de símbolo ou símbolo, um sinal de igual `=`, uma expressão para associar os símbolos a e um ponto e vírgula de terminação.
-O tipo de símbolo (s) associado é inferido com base na expressão no lado direito.
+Uma ligação imutável consiste na palavra-chave `let`, seguida de um símbolo ou túnica de símbolo, um sinal igual `=`, uma expressão para ligar o símbolo(s) a, e um ponto evícito terminando.
+O tipo de símbolo s de atado é inferido com base na expressão do lado direito.
 
 ### <a name="mutable-symbols"></a>Símbolos mutáveis
 
-Os símbolos mutáveis são definidos e inicializados usando a instrução `mutable`.
-Os símbolos declarados e associados como parte de uma instrução `mutable` podem ser reassociados a um valor diferente posteriormente no código. 
+Os símbolos mutáveis são definidos e inicializados utilizando a declaração `mutable`.
+Os símbolos declarados e vinculados como parte de uma declaração `mutable` podem ser recuperados para um valor diferente mais tarde no código. 
 
-Uma instrução de associação mutável consiste na palavra-chave `mutable`, seguida por uma tupla de símbolo ou símbolo, um sinal de igual `=`, uma expressão para associar os símbolos a e um ponto e vírgula de terminação.
-O tipo de símbolo (s) associado é inferido com base na expressão no lado direito. Se um símbolo for reassociado posteriormente no código, seu tipo não será alterado e o valor de limite precisará ser compatível com esse tipo.
+Uma declaração de ligação mutável consiste na palavra-chave `mutable`, seguida de um símbolo ou símbolo, um sinal igual `=`, uma expressão para ligar o símbolo(s) e um ponto evículo terminante.
+O tipo de símbolo s de atado é inferido com base na expressão do lado direito. Se um símbolo for recuperado mais tarde no código, o seu tipo não muda, e o valor vinculado tem de ser compatível com esse tipo.
 
-### <a name="rebinding-of-mutable-symbols"></a>Reassociação de símbolos mutáveis
+### <a name="rebinding-of-mutable-symbols"></a>Reenção de símbolos mutáveis
 
-Uma variável mutável pode ser reassociada usando uma instrução `set`.
-Essa reassociação consiste na `set`da palavra-chave, seguida por uma tupla de símbolo ou símbolo, um sinal de igual `=`, uma expressão para reassociar os símbolos a e um ponto e vírgula de terminação.
-O valor deve ser compatível com os tipos do (s) símbolo (es) ao qual está associado.
+Uma variável mutável pode ser recuperada usando uma declaração `set`.
+Tal reencência consiste na palavra-chave `set`, seguida de um símbolo ou símbolo, um sinal igual `=`, uma expressão para religar o símbolo(s) a, e um ponto evículo terminante.
+O valor deve ser compatível com o ou os tipos do símbolo a que está ligado.
 
-#### <a name="apply-and-reassign-statement"></a>Instrução de aplicação e reatribuição
+#### <a name="apply-and-reassign-statement"></a>Declaração de Candidatura e Reatribuição
 
-Um tipo específico de instrução SET-Statement que chamamos de instrução de aplicação e reatribuição fornece uma maneira conveniente de concatenação se o lado direito consistir no aplicativo de um operador binário e o resultado for ser reassociado ao argumento esquerdo para o operador. Por exemplo,
+Um tipo particular de declaração de set a que nos referimos como uma declaração de aplicação e reatribuição fornece uma forma conveniente de concatenação se o lado direito consistir na aplicação de um operador binário e o resultado é ser ressaltado para o argumento esquerdo para o operador. Por exemplo,
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -170,7 +168,7 @@ for (i in 1 .. 2 .. 10) {
     // ...
 }
 ```
-incrementa o valor do contador `counter` em cada iteração do loop `for`. O código acima é equivalente a 
+incrementa o valor do contador `counter` em cada iteração do ciclo `for`. O código acima é equivalente a 
 ```qsharp
 mutable counter = 0;
 for (i in 1 .. 2 .. 10) {
@@ -178,22 +176,22 @@ for (i in 1 .. 2 .. 10) {
     // ...
 }
 ```
-Instruções semelhantes estão disponíveis para todos os operadores binários nos quais o tipo do lado esquerdo corresponde ao tipo de expressão. Isso fornece, por exemplo, uma maneira conveniente de acumular valores:
+Estão disponíveis declarações semelhantes para todos os operadores binários em que o tipo do lado esquerdo corresponde ao tipo de expressão. Isto fornece, por exemplo, uma forma conveniente de acumular valores:
 ```qsharp
 mutable results = new Result[0];
-for (q in qubits) {
+for (qubit in qubits) {
     set results += [M(q)];
     // ...
 }
 ```
-#### <a name="update-and-reassign-statement"></a>Instrução UPDATE-and-REASSIGN
+#### <a name="update-and-reassign-statement"></a>Declaração de atualização e reatribuição
 
-Existe uma concatenação semelhante para expressões de copiar e atualizar no lado direito. De modo correspondente, as instruções UPDATE-and-REASSIGN existem para itens nomeados em tipos definidos pelo usuário, bem como para itens de matriz.  
+Existe uma concatenação semelhante para expressões de cópia e atualização no lado direito. Consequentemente, existem declarações de atualização e reatribuição para itens nomeados em tipos definidos pelo utilizador, bem como para itens de matriz.  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 
-function AddAll (reals : Double[], ims : Double[]) : Complex[] {
+function ElementwisePlus(reals : Double[], ims : Double[]) : Complex[] {
     mutable res = Complex(0.,0.);
 
     for (r in reals) {
@@ -206,22 +204,20 @@ function AddAll (reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-No caso de matrizes, nossas bibliotecas padrão contêm as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matriz e, portanto, ajudam a evitar a necessidade de atualizar itens de matriz em primeiro lugar. As instruções UPDATE-and-REASSIGN fornecem uma alternativa, se necessário:
+No caso das matrizes, as nossas bibliotecas padrão contêm as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matrizes, ajudando assim a evitar ter de atualizar itens de matriz em primeiro lugar. As declarações de atualização e reatribuição fornecem uma alternativa, se necessário:
 
 ```qsharp
-operation RandomInts(maxInt : Int, nrSamples : Int) : Int[] {
-
+operation GenerateRandomInts(max : Int, nSamples : Int) : Int[] {
     mutable samples = new Double[0];
-    for (i in 1 .. nrSamples) {
-        set samples += [RandomInt(maxInt)];
+    for (i in 1 .. nSamples) {
+        set samples += [RandomInt(max)];
     }
     return samples;
 }
 
-operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
-
-    let normalization = 1. / IntAsDouble(prec);
-    mutable samples = RandomInts(prec, nrSamples);
+operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
+    let normalization = 1. / IntAsDouble(nSteps);
+    mutable samples = GenerateRandomInts(nSteps, nSamples);
     
     for (i in IndexRange(samples) {
         let value = IntAsDouble(samples[i]);
@@ -232,41 +228,40 @@ operation SampleUniformDistr(nrSamples : Int, prec : Int) : Double[] {
 ```
 
 > [!TIP]   
-> Evite o uso desnecessário de instruções UPDATE-and-REASSIGN aproveitando as ferramentas fornecidas no <xref:microsoft.quantum.arrays>.
+> Evite a utilização desnecessária de declarações de atualização e reatribuição, aproveitando as ferramentas fornecidas em <xref:microsoft.quantum.arrays>.
 
 A função
 ```qsharp
-function EmbedPauli (pauli : Pauli, location : Int, n : Int) : Pauli[]
-{
-    mutable pauliArray = new Pauli[n];
-    for (index in 0 .. n - 1) {
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    mutable pauliArray = new Pauli[length];
+    for (index in 0 .. length - 1) {
         set pauliArray w/= index <- 
             index == location ? pauli | PauliI;
     }    
     return pauliArray;
 }
 ```
-por exemplo, pode simplesmente ser simplificado usando a função `ConstantArray` em `Microsoft.Quantum.Arrays`e retornar uma expressão de copiar e atualizar:
+por exemplo, pode simplesmente ser simplificado utilizando a função `ConstantArray` em `Microsoft.Quantum.Arrays`, e devolvendo uma expressão de cópia e atualização:
 
 ```qsharp
-function EmbedPauli (pauli : Pauli, i : Int, n : Int) : Pauli[] {
-    return ConstantArray(n, PauliI) w/ i <- pauli;
+function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
+    return ConstantArray(length, PauliI) w/ location <- pauli;
 }
 ```
 
-### <a name="binding-scopes"></a>Escopos de associação
+### <a name="binding-scopes"></a>Âmbitos vinculativos
 
-Em geral, as ligações de símbolo saem do escopo e se tornam inoperantes no final do bloco de instrução em que ocorrem.
-Há duas exceções a essa regra:
+Em geral, as ligações dos símbolos desbloqueiam o seu alcance e tornam-se inoperantes no final do bloco de declaração em que ocorrem.
+Há duas exceções a esta regra:
 
-- A associação da variável de loop de um loop de `for` está no escopo do corpo do loop for, mas não após o final do loop.
-- Todas as três partes de um `repeat`/loop de `until` (o corpo, o teste e a correção) são tratados como um único escopo, de modo que os símbolos associados ao corpo estão disponíveis no teste e no conserto.
+- A ligação da variável de ciclo de um ciclo de `for` está no âmbito do corpo do laço para o loop, mas não após o fim do laço.
+- Todas as três porções de um `repeat`/`until` loop (o corpo, o teste e a fixação) são tratadas como um único âmbito, pelo que os símbolos que estão ligados no corpo estão disponíveis no teste e na fixação.
 
-Para ambos os tipos de loops, cada passagem do loop é executada em seu próprio escopo, portanto, as associações de uma passagem anterior não estarão disponíveis em uma passagem posterior.
+Para ambos os tipos de loops, cada passe através do loop executa no seu próprio âmbito, pelo que as encadernações de um passe anterior não estão disponíveis num passe posterior.
 
-Associações de símbolo de blocos externos são herdadas por blocos internos.
-Um símbolo só pode ser associado uma vez por bloco; é ilegal definir um símbolo com o mesmo nome de outro símbolo que está dentro do escopo (sem "sombreamento").
-As sequências a seguir seriam legais:
+As ligações dos símbolos dos blocos exteriores são herdadas por blocos internos.
+Um símbolo só pode ser ligado uma vez por bloco; é ilegal definir um símbolo com o mesmo nome que outro símbolo que está dentro do âmbito (sem "sombra").
+As seguintes sequências seriam legais:
 
 ```qsharp
 if (a == b) {
@@ -292,7 +287,7 @@ if (a == b) {
 }
 ```
 
-Mas isso seria ilegal:
+Mas isto seria ilegal.
 
 ```qsharp
 let n = 5;
@@ -301,7 +296,7 @@ let n = 8;          // Error!!
 ...
 ```
 
-como seria:
+como:
 
 ```qsharp
 let n = 8;
@@ -315,23 +310,23 @@ if (a == b) {
 
 ## <a name="control-flow"></a>Fluxo de Controlo
 
-### <a name="for-loop"></a>Loop for
+### <a name="for-loop"></a>Para Loop
 
-A instrução `for` dá suporte à iteração em um intervalo de inteiros ou em uma matriz.
-A instrução consiste na palavra-chave `for`, um parêntese de abertura `(`, seguido por uma tupla de símbolo ou símbolo, a palavra-chave `in`, uma expressão do tipo `Range` ou matriz, um parêntese de fechamento `)`e um bloco de instruções.
+A declaração de `for` suporta a iteração sobre uma gama de inteiros ou sobre uma matriz.
+A declaração consiste na palavra-chave `for`, um parêntese aberto `(`, seguido de um símbolo ou símbolo, a palavra-chave `in`, uma expressão de tipo `Range` ou matriz, um parêntese próximo `)`, e um bloco de declaração.
 
-O bloco de instrução (o corpo do loop) é executado repetidamente, com os símbolos definidos (as variáveis de loop) associadas a cada valor no intervalo ou na matriz.
-Observe que, se a expressão de intervalo for avaliada como um intervalo ou uma matriz vazia, o corpo não será executado.
-A expressão é totalmente avaliada antes de entrar no loop e não será alterada enquanto o loop estiver em execução.
+O bloco de declaração (o corpo do laço) é executado repetidamente, com os símbolos definidos (a variável do laço(s)ligadoa a cada valor na gama ou matriz.
+Note que se a expressão de alcance avaliar para um alcance ou matriz vazio, o corpo não será executado de todo.
+A expressão é totalmente avaliada antes de entrar no loop, e não mudará enquanto o loop estiver executando.
 
-A Associação dos símbolos declarados é imutável e segue as mesmas regras que outras associações de variáveis. Em particular, é possível destruir, por exemplo, itens de matriz para uma iteração em uma matriz após a atribuição à (s) variável (ões) de loop.
+A ligação dos símbolos declarados é imutável e segue as mesmas regras que outras encadernações variáveis. Em particular, é possível destruir, por exemplo, itens de matriz para uma iteração sobre uma matriz aquando da atribuição à variável de loop.
 
 Por exemplo,
 
 ```qsharp
 // ...
-for (qb in qubits) { // qubits contains a Qubit[]
-    H(qb);
+for (qubit in qubits) { // qubits contains a Qubit[]
+    H(qubit);
 }
 
 mutable results = new (Int, Results)[Length(qubits)];
@@ -347,65 +342,65 @@ for ((index, measured) in results) {
 }
 ```
 
-A variável de loop é associada a cada entrada no corpo do loop e desassociada no final do corpo.
-Em particular, a variável de loop não é associada depois que o loop for é concluído.
+A variável do loop é ligada a cada entrada do corpo em loop, e desamarrada na extremidade do corpo.
+Em particular, a variável de loop não está ligada após a conclusão do ciclo para o loop.
 
-### <a name="repeat-until-success-loop"></a>Repetir-loop Until-êxito
+### <a name="repeat-until-success-loop"></a>Loop de repetição até ao sucesso
 
-A instrução `repeat` dá suporte ao padrão Quantum "repetir até o sucesso".
-Ele consiste na palavra-chave `repeat`, seguida por um bloco de instrução (o corpo do _loop_ ), a palavra-chave `until`, uma expressão booleana e um ponto e vírgula de terminação ou a palavra-chave `fixup` seguido por outro bloco de instrução (a _correção_).
-O corpo, a condição e a correção do loop são considerados um único escopo, portanto, os símbolos associados ao corpo estão disponíveis na condição e na correção.
+A declaração `repeat` apoia o padrão quântico de "repetir até ao sucesso".
+Consiste na palavra-chave `repeat`, seguida de um bloco de declaração (o corpo _de loop),_ a palavra-chave `until`, uma expressão booleana, e ou um ponto evículo terminando ou a palavra-chave `fixup` seguido de outro bloco de declaração (a _fixação)._
+O corpo, a condição e a fixação do laço são considerados um único âmbito, pelo que os símbolos ligados ao corpo estão disponíveis na condição e fixação.
 
 ```qsharp
 mutable iter = 1;
 repeat {
-    ProbabilisticCircuit(qs);
-    let success = ComputeSuccessIndicator(qs);
+    ProbabilisticCircuit(qubits);
+    let success = ComputeSuccessIndicator(qubits);
 }
 until (success || iter > maxIter)
 fixup {
     iter += 1;
-    ComputeCorrection(qs);
+    ComputeCorrection(qubits);
 }
 ```
 
-O corpo do loop é executado e a condição é avaliada.
-Se a condição for verdadeira, a instrução será concluída; caso contrário, a correção será executada e a instrução será executada novamente começando com o corpo do loop.
-Observe que a conclusão da execução da correção encerra o escopo da instrução, para que as associações de símbolo feitas durante o corpo ou correção não estejam disponíveis em repetições subsequentes.
+O corpo do loop é executado, e então a condição é avaliada.
+Se a condição for verdadeira, então a declaração é completada; caso contrário, a correção é executada, e a declaração é reexecutada a partir do corpo do loop.
+Note que a conclusão da execução da fixação termina o âmbito da declaração, de modo a que as ligações de símbolos efetuadas durante o corpo ou a fixação não estejam disponíveis em repetições subsequentes.
 
-Por exemplo, o código a seguir é um circuito probabilística que implementa um portão de rotação importante $V _3 = (\boldone + 2 i Z)/\sqrt{5}$ usando o Hadamard e T Gates.
-O loop termina em 8/5 repetições em média.
-Consulte [*repetir-até-êxito: decomposição não determinística de unidades de qubit único*](https://arxiv.org/abs/1311.1074) (Paetznick e Svore, 2014) para obter detalhes.
+Por exemplo, o seguinte código é um circuito probabilístico que implementa um importante portão de rotação $V_3 = (\boldone + 2 i Z) / \sqrt{5}$ utilizando os portões Hadamard e T.
+O loop termina em $\frac{8}{5}repetições de $, em média.
+Ver [*Repeat-Until-Success: Decomposição não-determinística de unitários monoqubit*](https://arxiv.org/abs/1311.1074) (Paetznick e Svore, 2014) para mais detalhes.
 
 ```qsharp
-using (anc = Qubit()) {
+using (qubit = Qubit()) {
     repeat {
-        H(anc);
-        T(anc);
-        CNOT(target,anc);
-        H(anc);
-        Adjoint T(anc);
-        H(anc);
-        T(anc);
-        H(anc);
-        CNOT(target,anc);
-        T(anc);
+        H(qubit);
+        T(qubit);
+        CNOT(target, qubit);
+        H(qubit);
+        Adjoint T(qubit);
+        H(qubit);
+        T(qubit);
+        H(qubit);
+        CNOT(target, qubit);
+        T(qubit);
         Z(target);
-        H(anc);
-        let result = M(anc);
+        H(qubit);
+        let result = M(qubit);
     } until (result == Zero);
 }
 ```
 
 > [!TIP]   
-> Evite usar loops repetir-até-sucesso dentro de funções. A funcionalidade correspondente é fornecida por loops em funções do. 
+> Evite utilizar laços de repetição até ao sucesso dentro das funções. A funcionalidade correspondente é fornecida através de loops nas funções. 
 
-### <a name="while-loop"></a>Loop while
+### <a name="while-loop"></a>Enquanto Loop
 
-Os padrões de repetição-até-sucesso têm uma connotação de muito Quantum específica. Eles são amplamente usados em classes específicas de algoritmos Quantum, portanto, a construção de linguagem dedicada em Q #. No entanto, os loops que quebram com base em uma condição e cujo comprimento de execução é, portanto, desconhecido em tempo de compilação precisam ser manipulados com cuidado específico em um tempo de execução do Quantum. Seu uso dentro de funções por outro lado é inproblemático, pois elas contêm apenas o código que será executado em hardware convencional (sem Quantum). 
+Os padrões de repetição até ao sucesso têm uma conotação muito quântica específica. Eles são amplamente usados em classes particulares de algoritmos quânticos - daí a construção de linguagem dedicada em Q#. No entanto, os laços que se rompem com base numa condição e cujo comprimento de execução é, portanto, desconhecido no tempo de compilação precisam de ser tratados com especial cuidado num tempo de execução quântico. A sua utilização dentro de funções, por outro lado, não é problemática, uma vez que estas contêm apenas código que será executado em hardware convencional (não quântico). 
 
-O Q #, portanto, dá suporte ao uso de loops while apenas dentro de funções. Uma instrução `while` consiste na `while`de palavras-chave, uma `(`de parênteses aberto, uma condição (ou seja, uma expressão booleana), um parêntese de fechamento `)`e um bloco de instruções.
-O bloco de instrução (o corpo do loop) é executado contanto que a condição seja avaliada como `true`.
+Q# apoia, portanto, a utilização de laços enquanto as funções apenas. Uma declaração `while` consiste na palavra-chave `while`, um `(`de parênteses abertas , uma condição (isto é, uma expressão booleana), um parêntese próximo `)`, e um bloco de declaração.
+O bloco de declaração (o corpo do laço) é executado desde que a condição avalie para `true`.
 
 ```qsharp
 // ...
@@ -416,19 +411,19 @@ while (index < Length(arr) && item < 0) {
 }
 ```
 
-### <a name="conditional-statement"></a>Instrução condicional
+### <a name="conditional-statement"></a>Declaração Condicional
 
-A instrução `if` dá suporte à execução condicional.
-Ele consiste na palavra-chave `if`, um `(`de parênteses aberto, uma expressão booleana, um parêntese de fechamento `)`e um bloco de instruções (o bloco _then_ ).
-Isso pode ser seguido por qualquer número de cláusulas else-if, cada uma das quais consiste na palavra-chave `elif`, um parênteses de abertura `(`, uma expressão booleana, um parêntese de fechamento `)`e um bloco de instrução (o bloco _else-if_ ).
-Por fim, a instrução pode, opcionalmente, ser concluída com uma cláusula else, que consiste na palavra-chave `else` seguida por outro bloco de instrução (o bloco _else_ ).
-A condição é avaliada e, se for verdadeira, o bloco then será executado.
-Se a condição for falsa, a primeira condição IF-IF será avaliada; Se for true, o bloco else if será executado.
-Caso contrário, o segundo bloco else é testado e, em seguida, o terceiro, e assim por diante, até que seja encontrada uma cláusula com uma condição true ou que não haja mais cláusulas If-If.
-Se a condição if original e todas as cláusulas If forem avaliadas como false, o bloco else será executado se um for fornecido.
+A declaração `if` apoia a execução condicional.
+Consiste na palavra-chave `if`, um parêntese aberto `(`, uma expressão booleana, um parêntese próximo `)`, e um bloco de declaração (o _bloco de então)._
+Isto pode ser seguido por qualquer número de cláusulas se, cada uma das quais consiste na palavra-chave `elif`, um parêntese aberto `(`, uma expressão booleana, um parêntese próximo `)`, e um bloco de declaração (o _bloco de outra sea)._
+Finalmente, a declaração pode terminar opcionalmente com uma outra cláusula, que consiste na palavra-chave `else` seguida de outro bloco de declaração (o _bloco de outra_ si).
+A condição é avaliada, e se for verdade, o bloco de então é executado.
+Se a condição for falsa, então a condição de outra pessoa é avaliada; se for verdade, que o bloco mais se for executado.
+Caso contrário, o segundo bloco se for testado, e depois o terceiro, e assim por diante, até que seja encontrada uma cláusula com uma condição real ou não haja mais cláusulas se.
+Se a condição original e todas as cláusulas se forem avaliadas como falsas, o outro bloco é executado se um for fornecido.
 
-Observe que qualquer bloco executado é executado em seu próprio escopo.
-Associações feitas dentro de um bloco then, else-if ou else não são visíveis após o final da instrução If.
+Note que qualquer bloco executado é executado no seu próprio âmbito.
+As encadernações feitas dentro de um bloco então, se, ou então, não são visíveis após o fim da declaração se.
 
 Por exemplo,
 
@@ -450,17 +445,17 @@ if (i == 1) {
 }
 ```
 
-### <a name="return"></a>exibir
+### <a name="return"></a>Devolução
 
-A instrução return encerra a execução de uma operação ou função e retorna um valor para o chamador.
-Ele consiste na palavra-chave `return`, seguida por uma expressão do tipo apropriado e um ponto e vírgula de terminação.
+A declaração de devolução termina a execução de uma operação ou função e devolve um valor ao chamador.
+Consiste na palavra-chave `return`, seguida de uma expressão do tipo apropriado, e de um ponto evíomina terminando.
 
-Um callable que retorna uma tupla vazia, `()`, não requer uma instrução de retorno.
-Se uma saída antecipada for desejada, `return ()` poderá ser usada nesse caso.
-Os chamadores que retornam qualquer outro tipo exigem uma instrução de retorno final.
+Um insensível que devolve uma tuple vazia, `()`, não requer uma declaração de devolução.
+Se for desejada uma saída antecipada, `return ()` podem ser utilizados neste caso.
+Os callables que devolvem qualquer outro tipo requerem uma declaração final de devolução.
 
-Não há um número máximo de instruções de retorno em uma operação.
-O compilador pode emitir um aviso se as instruções seguirem uma instrução return dentro de um bloco.
+Não há um número máximo de declarações de devolução dentro de uma operação.
+O compilador pode emitir um aviso se as declarações seguirem uma declaração de devolução dentro de um bloco.
 
 Por exemplo,
 
@@ -480,14 +475,14 @@ ou
 return (results, qubits);
 ```
 
-### <a name="fail"></a>Recuperação
+### <a name="fail"></a>Falha
 
-A instrução Fail encerra a execução de uma operação e retorna um valor de erro para o chamador.
-Ela consiste na `fail`de palavras-chave, seguida por uma cadeia de caracteres e um ponto e vírgula de terminação.
-A cadeia de caracteres é retornada ao driver clássico como a mensagem de erro.
+A declaração de falha termina a execução de uma operação e devolve um valor de erro ao chamador.
+Consiste na palavra-chave `fail`, seguida de uma corda e de um ponto evío minado.
+A corda é devolvida ao condutor clássico como mensagem de erro.
 
-Não há nenhuma restrição quanto ao número de instruções de falha em uma operação.
-O compilador pode emitir um aviso se as instruções seguirem uma instrução Fail dentro de um bloco.
+Não existe qualquer restrição ao número de declarações falhadas no âmbito de uma operação.
+O compilador pode emitir um aviso se as declarações seguirem uma declaração de falha dentro de um bloco.
 
 Por exemplo,
 
@@ -501,61 +496,60 @@ ou
 fail $"Syndrome {syn} is incorrect";
 ```
 
-## <a name="qubit-management"></a>Gerenciamento de qubit
+## <a name="qubit-management"></a>Gestão qubit
 
-Observe que nenhuma dessas instruções é permitida dentro do corpo de uma função.
-Eles só são válidos dentro de operações.
+Note que nenhuma destas declarações é permitida dentro do corpo de uma função.
+Só são válidos dentro das operações.
 
-### <a name="clean-qubits"></a>Limpar qubits
+### <a name="clean-qubits"></a>Qubits limpos
 
-A instrução `using` é usada para adquirir novas qubits para uso durante um bloco de instruções.
-Os qubits têm a garantia de serem inicializados para o estado computacional `Zero`.
-O qubits deve estar no estado computacional `Zero` no final do bloco de instrução; os simuladores são incentivados a impor isso.
+A declaração `using` é utilizada para adquirir novos qubits para utilização durante um bloco de declaração.
+Os qubits são garantidos para serem inicializados para o estado computacional `Zero`.
+Os qubits devem estar no estado de `Zero` computacional no final do bloco de declaração; simuladores são encorajados a impor isto.
 
-A instrução consiste na `using`de palavras-chave, seguida por um parêntese de abertura `(`, uma associação, um parêntese de fechamento `)`e o bloco de instruções dentro do qual o qubits estará disponível.
-A associação segue o mesmo padrão que `let` instruções: um único símbolo ou uma tupla de símbolos, seguido por um sinal de igual `=`e um único valor ou uma tupla correspondente de inicializadores.
-Inicializadores estão disponíveis para um único qubit, indicado como `Qubit()`, ou uma matriz de qubits, indicada por `Qubit[`, uma expressão de `Int` e `]`.
-
-Por exemplo,
-
-```qsharp
-using (q = Qubit()) {
-    // ...
-}
-using ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
-    // ...
-}
-```
-
-### <a name="dirty-qubits"></a>Qubits sujos
-
-A instrução `borrowing` é usada para obter qubits para uso temporário. A instrução consiste na `borrowing`de palavras-chave, seguida por um parêntese de abertura `(`, uma associação, um parêntese de fechamento `)`e o bloco de instruções dentro do qual o qubits estará disponível.
-A associação segue o mesmo padrão e regras que uma em uma instrução `using`.
+A declaração consiste na palavra-chave `using`, seguida de um parêntese aberto `(`, uma ligação, um parêntese próximo `)`, e o bloco de declaração dentro do qual estarão disponíveis os qubits.
+A ligação segue o mesmo padrão que as declarações `let`: um único símbolo ou uma tuple de símbolos, seguido de um sinal igual `=`, e um único valor ou uma túnica correspondente de iniciais.
+Os iniciais estão disponíveis para um único qubit, indicado como `Qubit()`, ou um conjunto de qubits, indicados por `Qubit[`, uma expressão `Int` e `]`.
 
 Por exemplo,
 
 ```qsharp
-borrowing (q = Qubit()) {
+using (qubit = Qubit()) {
     // ...
 }
-borrowing ((ancilla, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+using ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
     // ...
 }
 ```
 
-O qubits emprestado está em um estado desconhecido e sai do escopo no final do bloco de instrução.
-O tomador de confirmações para deixar o qubits no mesmo estado em que estavam emprestados, ou seja, seu estado no início e no final do bloco de instrução deve ser o mesmo.
-Esse estado em particular não é necessariamente um estado clássico, de modo que, na maioria dos casos, os escopos emprestados não devem conter medidas. 
+### <a name="borrowed-qubits"></a>Qubits emprestados
 
-Esses qubits geralmente são conhecidos como "Dirty ancilla".
-Consulte [*fatoração usando 2n + 2 qubits com multiplicação modular baseada em Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler e Svore 2017) para obter um exemplo de uso de ancilla sujos.
+A declaração `borrowing` é utilizada para obter qubits para uso temporário. A declaração consiste na palavra-chave `borrowing`, seguida de um parêntese aberto `(`, uma ligação, um parêntese próximo `)`, e o bloco de declaração dentro do qual estarão disponíveis os qubits.
+A encadernação segue o mesmo padrão e regras que a de uma declaração `using`.
 
-Ao emprestar qubits, o sistema primeiro tentará preencher a solicitação de qubits que estão em uso, mas que não são acessadas durante o corpo da instrução `borrowing`.
-Se não houver tal qubits suficiente, ele alocará o novo qubits para concluir a solicitação.
+Por exemplo,
+
+```qsharp
+borrowing (qubit = Qubit()) {
+    // ...
+}
+borrowing ((auxiliary, qubits) = (Qubit(), Qubit[bits * 2 + 3])) {
+    // ...
+}
+```
+
+Os qubits emprestados estão num estado desconhecido e saem do âmbito no final do bloco de declaração.
+O mutuário compromete-se a deixar os qubits no mesmo estado em que estavam quando foram emprestados, ou seja, o seu estado no início e no final do bloco de declaração deverá ser o mesmo.
+Este Estado, em particular, não é necessariamente um estado clássico, de tal forma que, na maioria dos casos, os âmbitos de empréstimo não devem conter medições. 
+
+Consulte [*factoring usando 2n+2 qubits com multiplicação modular baseada em Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler e Svore 2017) como um exemplo de utilização de qubit emprestado.
+
+Ao pedir qubits emprestados, o sistema tentará primeiro preencher o pedido de qubits que estão em uso, mas que não são acedidos durante o corpo da declaração de `borrowing`.
+Se não houver qubits suficientes, então irá alocar novos qubits para completar o pedido.
 
 ## <a name="conjugations"></a>Conjugações
 
-Em contraste com os bits clássicos, liberar memória Quantum é um pouco mais envolvida, uma vez que a redefinição oculta de qubits pode ter efeitos indesejados na computação restante se o qubits ainda for confusas. Isso pode ser evitado com o "desfazendo" adequadamente os cálculos executados antes de liberar a memória. Um padrão comum na computação Quantum é, portanto, o seguinte: 
+Em contraste com as partes clássicas, a libertação da memória quântica é um pouco mais envolvida, uma vez que os qubits de reposição cega podem ter efeitos indesejados no restante cálculo se os qubits ainda estiverem emaranhados. Isto pode ser evitado por "desfazer" corretamente as computações realizadas antes de libertar a memória. Um padrão comum na computação quântica é, portanto, o seguinte: 
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -570,7 +564,7 @@ operation ApplyWith<'T>(
 }
 ```
 
-: novo: começando com nossa versão 0,9, damos suporte a uma instrução Conjugation que implementa a transformação acima. Usando essa instrução, a operação `ApplyWith` pode ser implementada da seguinte maneira:
+:novo: A partir do nosso lançamento 0.9, apoiamos uma declaração de conjugação que implementa a transformação acima. Utilizando esta declaração, a operação `ApplyWith` pode ser implementada da seguinte forma:
 
 ```qsharp
 operation ApplyWith<'T>(
@@ -587,15 +581,15 @@ operation ApplyWith<'T>(
     }
 }
 ```
-Uma instrução de conjugação, obviamente, se torna muito mais útil se as transformações externa e interna não estão prontamente disponíveis como operações, mas são mais convenientes de descrever por um bloco que consiste em várias instruções. 
+Tal declaração de conjugação torna-se obviamente muito mais útil se a transformação exterior e interior não estiver prontamente disponível como operações, mas em vez disso são mais convenientes para descrever por um bloco composto por várias declarações. 
 
-A transformação inversa para as instruções definidas no bloco Within é gerada automaticamente pelo compilador e executada após a conclusão do bloco de aplicação. Como as variáveis mutáveis usadas como parte do bloco Within não podem ser reassociadas no bloco Apply, a transformação gerada é garantida como sendo a adjoin do cálculo no bloco Within. 
+A transformação inversa para as declarações definidas no bloco interior é automaticamente gerada pelo compilador e executada após a conclusão do bloco de aplicação. Uma vez que quaisquer variáveis mutáveis utilizadas como parte do bloco interior não podem ser recuperadas no bloco de aplicação, a transformação gerada é garantidamente a adjoint do cálculo no bloco interior. 
 
-## <a name="expression-evaluation-statements"></a>Instruções de avaliação de expressão
+## <a name="expression-evaluation-statements"></a>Declarações de avaliação de expressão
 
-Qualquer expressão de chamada do tipo `Unit` pode ser usada como uma instrução.
-Isso é basicamente usado ao chamar operações em qubits que retornam `Unit` porque a finalidade da instrução é modificar o estado de Quantum implícito.
-As instruções de avaliação de expressão exigem um ponto e vírgula de terminação.
+Qualquer expressão de chamada de `Unit` pode ser usada como uma declaração.
+Isto é principalmente útil quando se ligam operações sobre qubits que devolvem `Unit` porque o objetivo da declaração é modificar o estado quântico implícito.
+As declarações de avaliação da expressão requerem um ponto e vírgula terminando.
 
 Por exemplo,
 

@@ -4,12 +4,12 @@ name: IncrementByInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Incrementa um registro de Quantum não assinado por um inteiro clássico, usando rotações de fase.
+  Incrementa um registo quântico não assinado por um inteiro clássico, utilizando rotações de fase.
 
 
-  Suponha que `target` codifica um inteiro sem sinal $x $ em uma codificação little-endian e que `increment` é igual a $a $.
+  Suponha que `target` codifica um inteiro não assinado $x$ numa codificação pouco endiana e que `increment` é igual a $a$.
 
-  Em seguida, essa operação implementa o unitário $ \ket{x} \mapsto \ket{x + a} $, em que a adição é executada módulo $2 ^ n $, em que $n = \texttt{Length (Target!)} $.
+  Em seguida, esta operação implementa o unitário $\ket{x} \mapsto \ket{x + a}$, onde a adição é realizada modulo $2^n$, onde $n = \texttt{Length (target!)} $.
 syntax: 'operation IncrementByInteger (increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -19,7 +19,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Uma Quantum registra a codificação de um inteiro não assinado usando a codificação little-endian.
+    summary: Um registo quântico codificando um inteiro não assinado usando codificação de pouco endiano.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -29,12 +29,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- incrementbyintegerphasele
 metadata:
-  ms.openlocfilehash: 3eafc268377e36301d511b77feb4db352a075d5d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d05ed867e62f4f7474319ffe23dcd23aa34675c5
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215018"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871163"

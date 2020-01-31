@@ -3,28 +3,29 @@ uid: microsoft.quantum.characterization.discretephaseestimationiteration
 name: DiscretePhaseEstimationIteration
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativa (controlado de forma clássica) usando potências de inteiros de um Oracle unitário.
+summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativo (controlado clássicamente) usando poderes inteiros de um oráculo unitário.
 syntax: 'operation DiscretePhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
   types:
   - name: oracle
-    summary: Operação que atua em um inteiro e um registro, de modo que $U ^ m $ seja aplicada ao registro fornecido, em que $U $ é o unitário cuja fase deve ser estimada e onde $m $ é o número inteiro de energia fornecido para o Oracle
+    summary: Operação agindo num inteiro e num registo, de modo a que $U^m$ seja aplicada ao registo dado, onde $U$ é o unitário cuja fase deve ser estimada, e onde $m$ é o poder inteiro dado ao oráculo
     uid: microsoft.quantum.oracles.discreteoracle
   - name: power
-    summary: Número de vezes para aplicar o Oracle unitário fornecido.
+    summary: Número de vezes para aplicar o oráculo unitário dado.
     isPrimitive: true
     uid: Int
   - name: theta
-    summary: Ângulo pelo qual inverter a fase no qubit de controle antes de agir no estado de destino.
+    summary: Ângulo pelo qual inverter a fase do qubit de controlo antes de agir sobre o estado-alvo.
     isPrimitive: true
     uid: Double
   - name: targetState
-    summary: Registro de estado acionado pelo Oracle unitário determinado.
+    summary: Registo de Estado agido pelo oráculo unitário dado.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: controlQubit
+    summary: Um qubit auxiliário usado para controlar a aplicação do oráculo dado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -36,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9acf864fe93303489308078eb5039189808549f1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0382fa06b497b8388a6b48a561d2ce391df57265
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229230"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871197"

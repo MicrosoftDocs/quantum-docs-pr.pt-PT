@@ -4,14 +4,14 @@ name: MultiplyAndAddByModularInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Executa uma multiplicação modular e adicionar por constantes de inteiro em um registro de qubit.
+  Executa uma multiplicação modular e adicione por constantes de inteiros num registo qubit.
 
 
-  Implementa o MAP $ $ \begin{align} \ket{x} \ket{b} \mapsto \ket{x} \ket{b + a \cdot x \operatorname{mod} N} \end{align} $ $ para um determinado módulo $N $, o multiplicador constante $a $ e soma $y $.
+  Implementa o mapa $$ \start {align} \ket{x} \ket{b} \mapsto \ket{x} \ket{(b + um \cdot x) \operatorname {mod} N} \end{align} $$ para um determinado modulus $N$, multiplicador constante $a$, e resumo $y$.
 remarks: >-
-  - Para o diagrama de circuito e a explicação, consulte a Figura 6 na [página 7 de arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
+  - Para o diagrama do circuito e explicação consulte a Figura 6 na [página 7 do arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=7)
 
-  - Esta operação corresponde a CMULT (a) MOD (N) em [arXiv: Quant-pH/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+  - Esta operação corresponde a CMULT(a)MOD(N) em [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
 syntax: 'operation MultiplyAndAddByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -20,14 +20,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: O módulo $N $ que adição e multiplicação são tomadas em relação a.
+    summary: O modulo $N$ a que adição e multiplicação é tomado em relação a.
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Um registro Quantum que representa um inteiro sem sinal cujo valor deve ser adicionado a cada rótulo de estado base de `summand`.
+    summary: Um registo quântico que represente um inteiro não assinado cujo valor deve ser adicionado a cada rótulo de estado de base de `summand`.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: summand
-    summary: Um registro Quantum que representa um inteiro não assinado para usar como o destino para esta operação.
+    summary: Um registo quântico que representa um inteiro não assinado para usar como alvo para esta operação.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -37,10 +37,12 @@ output:
 functors:
 - Adjoint
 - Controlled
+seeAlso:
+- microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 6f445f584af1c05266be8e68a4298d73376cda27
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d0f3a28df20b6dd3a353a445bb9a6130e6100f99
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218775"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871435"

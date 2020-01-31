@@ -1,23 +1,23 @@
 ---
-title: 'P # bibliotecas padrão – controle e fluxo | Microsoft Docs'
-description: 'P # bibliotecas padrão – controle e fluxo'
+title: Q# bibliotecas padrão - controlo e fluxo / Microsoft Docs
+description: Q# bibliotecas padrão - controlo e fluxo
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 5e865dbb48029724b6f507ecb63b85d10d80c9a7
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: ff73cef12a3b8c2a6559308dc244c7c2e865ba9f
+ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185652"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76820458"
 ---
-# <a name="higher-order-control-flow"></a>Fluxo de controle de ordem superior #
+# <a name="higher-order-control-flow"></a>Fluxo de controlo de ordem superior #
 
-Uma das principais funções da biblioteca padrão é tornar mais fácil expressar ideias de algoritmos de alto nível como [programas Quantum](https://en.wikipedia.org/wiki/Quantum_programming).
-Assim, o Q # Canon fornece uma variedade de diferentes construções de controle de fluxo, cada uma implementada usando aplicativos parciais de funções e operações.
-Passando imediatamente para um exemplo, considere o caso em que um deseja construir uma "escada CNOT" em um registro:
+Um dos principais papéis da biblioteca padrão é facilitar a expressão de ideias algorítmicas de alto nível como [programas quânticos.](https://en.wikipedia.org/wiki/Quantum_programming)
+Assim, o cânone Q# fornece uma variedade de diferentes construções de controlo de fluxo, cada uma implementada usando aplicação parcial de funções e operações.
+Saltando imediatamente para um exemplo, considere o caso em que se quer construir uma "escada CNOT" num registo:
 
 ```qsharp
 let nQubits = Length(register);
@@ -27,7 +27,7 @@ CNOT(register[1], register[2]);
 CNOT(register[nQubits - 2], register[nQubits - 1]);
 ```
 
-Podemos expressar esse padrão usando loops de iteração e de `for`:
+Podemos expressar este padrão usando iteração e `for` loops:
 
 ```qsharp
 for (idxQubit in 0..nQubits - 2) {
@@ -35,62 +35,62 @@ for (idxQubit in 0..nQubits - 2) {
 }
 ```
 
-Expresso em termos de <xref:microsoft.quantum.canon.applytoeachca> e funções de manipulação de matriz, como <xref:microsoft.quantum.arrays.zip>, no entanto, isso é muito mais curto e mais fácil de ler:
+Expresso em termos de <xref:microsoft.quantum.canon.applytoeachca> e de manipulação de matriz, tais como <xref:microsoft.quantum.arrays.zip>, no entanto, isto é muito mais curto e fácil de ler:
 
 ```qsharp
 ApplyToEachCA(CNOT, Zip(register[0..nQubits - 2], register[1..nQubits - 1]));
 ```
 
-No restante desta seção, forneceremos vários exemplos de como usar as várias operações de controle de fluxo e funções fornecidas pela Canon para os programas Quantum Compact expressamente.
+No resto desta secção, forneceremos uma série de exemplos de como usar as várias operações e funções de controlo de fluxo fornecidas pelo cânon para expressar compactamente programas quânticos.
 
-## <a name="applying-operations-and-functions-over-arrays-and-ranges"></a>Aplicando operações e funções em matrizes e intervalos ##
+## <a name="applying-operations-and-functions-over-arrays-and-ranges"></a>Aplicação de operações e funções sobre matrizes e gamas ##
 
-Uma das abstrações primárias fornecidas pela Canon é a de iteração.
-Por exemplo, considere um meio do formato $U \otimes U \otimes \cdots \otimes U $ para um único-qubit unitário $U $.
-Em Q #, podemos usar <xref:microsoft.quantum.arrays.indexrange> para representar isso como um loop de `for` sobre um registro:
+Uma das abstrações primárias fornecidas pelo cânone é a da iteração.
+Por exemplo, considere um unitário do formulário $U \otimes U \otimes \cdots \otimes U$ para um único qubit unitary $U$.
+Em Q#, podemos usar <xref:microsoft.quantum.arrays.indexrange> para representar isto como um ciclo `for` sobre um registo:
 
 ```qsharp
 /// # Summary
 /// Applies $H$ to all qubits in a register.
-operation HAll(register : Qubit[]) : Unit 
-is Adj + Ctl {
-
+operation ApplyHadamardToAll(
+    register : Qubit[])
+: Unit is Adj + Ctl {
     for (qubit in register) {
         H(qubit);
     }
 }
 ```
 
-Em seguida, podemos usar essa nova operação como `HAll(register)` para aplicar $H \otimes H \otimes \cdots \otimes H $.
+Podemos então usar esta nova operação como `HAll(register)` para aplicar $H \otimes H \otimes \cdots \otimes H$.
 
-No entanto, isso é complicado, especialmente em um algoritmo maior.
-Além disso, essa abordagem é especializada para a operação específica que desejamos aplicar a cada qubit.
-Podemos usar o fato de que as operações são de primeira classe para expressar esse conceito de algoritmo mais explicitamente:
+Isto é complicado de fazer, no entanto, especialmente num algoritmo maior.
+Além disso, esta abordagem é especializada na operação específica que pretendemos aplicar a cada qubit.
+Podemos usar o facto de que as operações são de primeira classe para expressar este conceito algorítmico de forma mais explícita:
 
 ```qsharp
 ApplyToEachCA(H, register);
 ```
 
-Aqui, o sufixo `CA` indica que a chamada para `ApplyToEach` é, por sua vez, adjacente e controlável.
-Portanto, se `U` oferecer suporte a `Adjoint` e `Controlled`, as seguintes linhas serão equivalentes:
+Aqui, o sufixo `CA` indica que a chamada para `ApplyToEach` é em si mesma adjointable e controlável.
+Assim, se `U` apoia `Adjoint` e `Controlled`, as seguintes linhas são equivalentes:
 
 ```qsharp
 Adjoint ApplyToEachCA(U, register);
 ApplyToEachCA(Adjoint U, register);
 ```
 
-Em particular, isso significa que as chamadas para `ApplyToEachCA` podem aparecer em operações para as quais uma especialização adjacente é gerada automaticamente.
-Da mesma forma, <xref:microsoft.quantum.canon.applytoeachindex> é útil para representar padrões do formulário `U(0, targets[0]); U(1, targets[1]); ...`e oferece versões para cada combinação de transmissão functors com suporte em sua entrada.
+Isto significa, em particular, que as chamadas para `ApplyToEachCA` podem aparecer em operações para as quais uma especialização adjoint é gerada automaticamente.
+Da mesma forma, <xref:microsoft.quantum.canon.applytoeachindex> é útil para representar padrões do formulário `U(0, targets[0]); U(1, targets[1]); ...`, e oferece versões para cada combinação de functores suportados pela sua entrada.
 
 > [!TIP]
-> o `ApplyToEach` é de tipo parametrizado, de modo que possa ser usado com operações que usam entradas diferentes de `Qubit`.
-> Por exemplo, suponha que `codeBlocks` seja uma matriz de valores de <xref:microsoft.quantum.errorcorrection.logicalregister> que precisam ser recuperados.
-> Em seguida, `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` aplicará o código de correção de erros `code` e a função de recuperação `recoveryFn` para cada bloco de forma independente.
-> Isso contém até mesmo para entradas clássicas: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` aplicará uma rotação de $ \pi/$2 sobre $X $ seguido de uma rotação de $pi/$3 sobre $Y $.
+> `ApplyToEach` é parâmetro de tipo de modo a que possa ser utilizado com operações que tomem inputs que não sejam `Qubit`.
+> Por exemplo, suponha que `codeBlocks` é uma série de valores <xref:microsoft.quantum.errorcorrection.logicalregister> que precisam de ser recuperados.
+> Em seguida, `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` aplicará o código de correção de erros `code` e função de recuperação `recoveryFn` a cada bloco de forma independente.
+> Isto mantém-se mesmo para entradas clássicas: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` aplicará uma rotação de $\pi / 2$ cerca de $X$ seguido de uma rotação de $pi / 3$ cerca de $Y$.
 
-O Q # Canon também fornece suporte para padrões de enumeração clássicas familiares à programação funcional.
-Por exemplo, <xref:microsoft.quantum.arrays.fold> implementa o $f padrão (f (f (s\_{\Text{Initial}}, x\_0), x\_1), \dots) $ para reduzir uma função em uma lista.
-Esse padrão pode ser usado para implementar somas, produtos, mínimo, máximo e outras funções desse tipo:
+O cânon Q# também fornece suporte para padrões de enumeração clássica familiares à programação funcional.
+Por exemplo, <xref:microsoft.quantum.arrays.fold> implementa o padrão $f (f(f(s\_{\text{initial}}, x\_0), x\_1), \pontos)$ para reduzir uma função sobre uma lista.
+Este padrão pode ser utilizado para implementar somas, produtos, minima, maxima e outras funções:
 
 ```qsharp
 open Microsoft.Quantum.Arrays;
@@ -100,56 +100,56 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Da mesma forma, funções como <xref:microsoft.quantum.arrays.mapped> e <xref:microsoft.quantum.arrays.mappedbyindex> podem ser usadas para expressar conceitos de programação funcional em Q #.
+Da mesma forma, funções como <xref:microsoft.quantum.arrays.mapped> e <xref:microsoft.quantum.arrays.mappedbyindex> podem ser usadas para expressar conceitos de programação funcional em Q#.
 
-## <a name="composing-operations-and-functions"></a>Compondo operações e funções ##
+## <a name="composing-operations-and-functions"></a>Compor operações e funções ##
 
-As construções de fluxo de controle oferecidas pela Canon tomam operações e funções como suas entradas, de modo que é útil poder compor várias operações ou funções em um único callable.
-Por exemplo, o padrão $UVU ^ {\dagger} $ é extremamente comum na programação Quantum, de modo que a Canon fornece a operação <xref:microsoft.quantum.canon.applywith> como uma abstração para esse padrão.
-Essa abstração também permite um compliation mais eficiente em circuitos, pois `Controlled` atuando na sequência `U(qubit); V(qubit); Adjoint U(qubit);` não precisa agir em cada `U`.
-Para ver isso, permita que $c (U) $ seja o unitário que representa `Controlled U([control], target)` e permita que $c (V) $ seja definido da mesma maneira.
-Em seguida, para um estado arbitrário $ \ket{\psi} $, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{1} \otimes \ket{\psi} & = \ket{1} \otimes (UVU ^ {\dagger} \ket{\psi}) \\\\ & = (\boldone \otimes U) (c (V)) (\boldone \otimes U ^ \dagger) \ ket{1} \otimes \ket{\psi}.
-\end{align} pela definição de `Controlled`.
-Por outro lado, \begin{align} c (U) c (V) c (U) ^ \dagger \ket{0} \otimes \ket{\psi} & = \ket{0} \otimes \ket{\psi} \\\\ & = \ket{0} \otimes (UU ^ \dagger \ket{\psi}) \\\\ & = (\boldone \otimes U) (c ( V)) (\boldone \otimes U ^ \dagger) \ket{0} \otimes \ket{\psi}.
-\end{align} por linearidade, podemos concluir que podemos fatorar $U $ out dessa maneira para todos os Estados de entrada.
-Ou seja, $c (UVU ^ \dagger) = U c (V) U ^ \dagger $.
-Como o controle de operações pode ser caro em geral, o uso de variantes controladas como `WithC` e `WithCA` pode ajudar a reduzir o número de transmissão functors de controle que precisam ser aplicados.
+As construções de fluxo de controlo oferecidas pelo cânon tomam as operações e funções como suas inputs, de modo a que seja útil ser capaz de compor várias operações ou funções numa única chamada.
+Por exemplo, o padrão $UVU^{\dagger}$ é extremamente comum na programação quântica, de tal forma que o cânã fornece a operação <xref:microsoft.quantum.canon.applywith> como uma abstração para este padrão.
+Esta abstração também permite uma complição mais eficiente em circuitos, uma vez que `Controlled` atuando na sequência `U(qubit); V(qubit); Adjoint U(qubit);` não precisa de agir em cada `U`.
+Para ver isto, que $c(U)$ seja o unitário que representa `Controlled U([control], target)` e deixe que $c(V)$ seja definido da mesma forma.
+Em seguida, para um estado arbitrário $\ket {\psi}$, \start{align} c(U) c(V) c(U)^\dagger \ket{1} \otimes \ket{\psi} & = \ket{1} \otimes (UVU^{\dagger} \ket{\psi}) \\\\ & =(\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket{1} \otimes \otimes \otimes
+\fim{alinhar} pela definição de `Controlled`.
+Por outro lado, \begin{align} c(U) c(V) c(U)^dagger \ket{0} \otimes \ket {\psi} & = \ket{0} \otimes \ket{\psi} \\\\ & = \ket{0} \otimes (UU^\dagger \ket{\psi}) \\\\ & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket{0} \otimes \ket {\psi}.
+\end{align} Por linearidade, podemos concluir que podemos considerar $U$ desta forma para todos os estados de entrada.
+Ou seja, $c (UVU^\dagger) = U c(V) U^\dagger$.
+Uma vez que o controlo das operações pode ser dispendioso em geral, a utilização de variantes controladas como `WithC` e `WithCA` pode ajudar a reduzir o número de functores de controlo que precisam de ser aplicados.
 
 > [!NOTE]
-> Uma outra consequência de fatorar $U $ é que não precisamos nem saber como aplicar o `Controlled` functor ao `U`.
-> `ApplyWithCA`, portanto, tem uma assinatura mais fraca do que pode ser esperado:
+> Uma outra consequência de ter $U$ é que nem sequer precisamos de saber como aplicar o functor `Controlled` para `U`.
+> `ApplyWithCA`, portanto, tem uma assinatura mais fraca do que seria de esperar:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit
 > ```
 
-Da mesma forma, <xref:microsoft.quantum.canon.bind> produz operações que aplicam uma sequência de outras operações por vez.
+Da mesma forma, <xref:microsoft.quantum.canon.bound> produz operações que aplicam uma sequência de outras operações por sua vez.
 Por exemplo, os seguintes são equivalentes:
 
 ```qsharp
 H(qubit); X(qubit);
-Bind([H, X], qubit);
+Bound([H, X], qubit);
 ```
 
-Combinar com padrões de iteração pode tornar isso especialmente útil:
+Combinar com padrões de iteração pode tornar isto especialmente útil:
 
 ```qsharp
 // Bracket the quantum Fourier transform with $XH$ on each qubit.
-ApplyWith(ApplyToEach(Bind([H, X]), _), QFT, _);
+ApplyWith(ApplyToEach(Bound([H, X]), _), QFT, _);
 ```
 
-### <a name="time-ordered-composition"></a>Composição de tempo ordenado ###
+### <a name="time-ordered-composition"></a>Composição ordenada pelo tempo ###
 
-Podemos continuar ainda mais pensando no controle de fluxo em termos de aplicativos parciais e funções clássicas e pode modelar conceitos de Quantum ainda mais sofisticados em termos de controle de fluxo clássico.
-Essa analogia se torna precisa pelo reconhecimento de que os operadores unitários correspondem exatamente aos efeitos colaterais das operações de chamada, de modo que qualquer decomposição de operadores unitários em termos de outros operadores unitários corresponde à construção de um determinado sequência de chamada para sub-rotinas clássicas que emite instruções para atuar como operadores unitários específicos.
-Nessa exibição, `Bind` é precisamente a representação do produto de matriz, uma vez que `Bind([A, B])(target)` é equivalente a `A(target); B(target);`, que, por sua vez, é a sequência de chamada correspondente ao $BA $.
+Podemos ir ainda mais longe pensando no controlo de fluxos em termos de aplicação parcial e funções clássicas, e podemos modelar conceitos quânticos até bastante sofisticados em termos de controlo de fluxoclássico.
+Esta analogia é feita precisamente pelo reconhecimento de que os operadores unitários correspondem exatamente aos efeitos secundários das operações de chamada, de modo a que qualquer decomposição dos operadores unitários em termos de outros operadores unitários corresponda à construção de um determinado a sequência de chamadas para subrotinas clássicas que emitem instruções para agir como operadores unitários específicos.
+Nesta perspetiva, `Bound` é precisamente a representação do produto matricial, uma vez que `Bound([A, B])(target)` equivale a `A(target); B(target);`, que por sua vez é a sequência de chamadas correspondente a $BA$.
 
-Um exemplo mais sofisticado é a [expansão Trotter – Suzuki](https://arxiv.org/abs/math-ph/0506007v1).
-Conforme discutido na seção representação do gerador dinâmico de [estruturas de dados](xref:microsoft.quantum.libraries.data-structures), a expansão Trotter – Suzuki fornece uma maneira particularmente útil de expressar exponencials de matriz.
-Por exemplo, aplicar a expansão em sua ordem mais baixa produz isso para qualquer operador $A $ e $B $ de modo que $A = A ^ \dagger $ e $B = B ^ \dagger $, \begin{align} \tag{★} \label{EQ: Trotter-Suzuki-0} \exp (i [A + B] t) = \lim_{n\to\infty} \left (\exp (i t/n) \exp (i B/n ) \right) ^ n.
-\end{align} coloquialmente, isso diz que podemos expandir um estado em $A + B $ em constante evolução em $A $ e $B $ sozinho.
-Se representarmos a evolução em $A $ por uma operação `A : (Double, Qubit[]) => Unit` que se aplica $e ^ {i t A} $, a representação da expansão Trotter – Suzuki em termos de reorganizar as sequências de chamada torna-se clara.
-Concretamente, dada uma operação `U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl` de modo que `A = U(0, _, _)` e `B = U(1, _, _)`, podemos definir uma nova operação representando o integral de `U` no tempo $t $ gerando sequências do formulário
+Um exemplo mais sofisticado é a [expansão Trotter-Suzuki.](https://arxiv.org/abs/math-ph/0506007v1)
+Conforme discutido na secção dinâmica de representação do gerador das estruturas de [dados,](xref:microsoft.quantum.libraries.data-structures)a expansão Trotter-Suzuki fornece uma forma particularmente útil de expressar exponenciais matriciais.
+Por exemplo, aplicar a expansão à sua ordem mais baixa rende que para quaisquer operadores $A$ e $B$ de tal forma que $A = A^\dagger$ e $B = B^\dagger$, \begin{align} \tag{★} \label{eq:trotter-suzuki-0} \exp (i [A + B] t) = \lim_{n\to\infty} \left(\exp(i A/ n) \exp(i B t / n)\right^n.
+\end{align} Colloquially, isto diz que podemos evoluir aproximadamente um estado sob $A + B$ evoluindo alternadamente sob $A$ e $B$ apenas.
+Se representarmos a evolução sob $A$ por uma operação `A : (Double, Qubit[]) => Unit` que se aplica $e^{i a}$, então a representação da expansão Trotter-Suzuki em termos de reorganização de sequências de chamadas torna-se clara.
+Concretamente, dada uma operação `U : ((Int, Double, Qubit[]) => Unit is Adj + Ctl` tal que `A = U(0, _, _)` e `B = U(1, _, _)`, podemos definir uma nova operação que represente a integral da `U` no momento $t$ gerando sequências da forma
 
 ```qsharp
 U(0, time / Float(nSteps), target);
@@ -159,9 +159,9 @@ U(1, time / Float(nSteps), target);
 // ...
 ```
 
-Neste ponto, agora podemos ter uma razão da expansão Trotter – Suzuki *sem referência à mecânica quantum*.
-A expansão é efetivamente um padrão de iteração muito específico motivado por $ \eqref{EQ: Trotter-Suzuki-0} $.
-Esse padrão de iteração é implementado por <xref:microsoft.quantum.canon.decomposeintotimestepsca>:
+Neste momento, podemos agora raciocinar sobre a expansão Trotter-Suzuki *sem qualquer referência à mecânica quântica.*
+A expansão é efetivamente um padrão de iteração muito particular motivado por $\eqref{eq:trotter-suzuki-0}$.
+Este padrão de iteração é implementado por <xref:microsoft.quantum.canon.decomposeintotimestepsca>:
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,
@@ -170,37 +170,37 @@ Esse padrão de iteração é implementado por <xref:microsoft.quantum.canon.dec
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-A assinatura de `DecomposeIntoTimeStepsCA` segue um padrão comum em Q #, em que coleções podem ser apoiadas por matrizes ou por algo que os elementos de computação em tempo real são representados por tuplas cujos primeiros elementos são `Int` valores que indicam seus comprimentos.
+A assinatura de `DecomposeIntoTimeStepsCA` segue um padrão comum em Q#, onde coleções que podem ser apoiadas quer por matrizes, quer por algo que computa elementos na mosca são representados por tuples cujos primeiros elementos são `Int` valores indicando os seus comprimentos.
 
-## <a name="putting-it-together-controlling-operations"></a>Juntando-as: controlando as operações ##
+## <a name="putting-it-together-controlling-operations"></a>Reunindo-o: Operações de Controlo ##
 
-Por fim, a Canon baseia-se no `Controlled` functor fornecendo maneiras adicionais de operações de Quantum de condição.
-É comum, especialmente em aritmética de Quantum, para operações de condição em Estados de base computacional diferentes de $ \ket{0\cdots 0} $.
-Usando as operações de controle e as funções apresentadas acima, podemos obter mais condições de Quantum geral em uma única instrução.
-Vamos pular para o modo como <xref:microsoft.quantum.canon.controlledonbitstring> (os parâmetros de tipo Sans), em seguida, dividiremos as partes uma a uma.
-A primeira coisa que precisaremos fazer é definir uma operação que realmente faça o trabalho pesado de implementar o controle em Estados de base computacional arbitrários.
-No entanto, não chamaremos essa operação diretamente e, portanto, adicionamos `_` ao início do nome para indicar que é uma implementação de outra construção em outro lugar.
+Finalmente, o cânon baseia-se no functor `Controlled`, fornecendo formas adicionais de condicionar as operações quânticas.
+É comum, especialmente na aritmética quântica, condicionar operações em estados computacionais que não $\ket{0\cdots 0}$.
+Utilizando as operações de controlo e as funções acima introduzidas, podemos condições quânticas mais gerais numa única declaração.
+Vamos saltar para a forma como <xref:microsoft.quantum.canon.controlledonbitstring> faz (parâmetros do tipo sans), então vamos quebrar as peças um a um.
+A primeira coisa que temos de fazer é definir uma operação que realmente faz o pesado levantamento da implementação do controlo em estados computacionais arbitrários.
+No entanto, não chamaremos esta operação diretamente, e por isso adicionamos `_` ao início do nome para indicar que é uma implementação de outra construção noutro lugar.
 
 ```qsharp
 operation _ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl),
-        controlRegister : Qubit[],
-        targetRegister: Qubit[]) 
-: Unit 
-is Adj + Ctl {
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl),
+    controlRegister : Qubit[],
+    targetRegister: Qubit[])
+: Unit is Adj + Ctl
 ```
 
-Observe que pegamos uma cadeia de caracteres de bits, representada como uma matriz `Bool`, que usamos para especificar o condicionamento que queremos aplicar à operação `oracle` que recebemos.
-Como essa operação realmente faz o aplicativo diretamente, também precisamos pegar o controle e os registros de destino, ambos representados aqui como `Qubit[]`.
+Note que tomamos uma série de bits, representados como uma matriz de `Bool`, que usamos para especificar o condicionamento que queremos aplicar à operação `oracle` que nos é dado.
+Uma vez que esta operação efetivamente faz a aplicação diretamente, precisamos também de assumir os registos de controlo e de alvo, ambos aqui representados como `Qubit[]`.
 
-Em seguida, observamos que o controle do estado de base computacional $ \ket{\vec{s}} = \ket{s\_0 s\_1 \dots s\_{n-1}} $ para uma cadeia de caracteres de bits $ \vec{s} $ pode ser realizado com a transformação de $ \ket{\vec{s}} $ em $ \ket{0\cdots 0} $.
-Em particular, $ \ket{\vec{s}} = X ^ {s\_0} \otimes X ^ {s\_1} \otimes \cdots \otimes X ^ {s\_{n-1}} \ket{0\cdots 0} $.
-Como $X ^ {\dagger} = X $, isso implica que $ \ket{0\dots 0} = X ^ {s\_0} \otimes X ^ {s\_1} \otimes \cdots \otimes X ^ {s\_{n-1}} \ket{\vec{s}} $.
-Portanto, podemos aplicar $P = X ^ {s\_0} \otimes X ^ {s\_1} \otimes \cdots \otimes X ^ {s\_{n-1}} $, aplicar `Controlled oracle`e transformar de volta em $ \vec{s} $.
-Essa construção é precisamente `ApplyWith`, portanto, escrevemos o corpo da nossa nova operação de acordo:
+Em seguida, notamos que o controlo na base computacional estado $\ket{\vec{s}} = \ket{s\_0 s\_1 \dots s\_{n - 1}}} para um pouco de cadeia $\vec{s}$ pode ser realizado transformando $\ket{{{s}}$} em $\ket{0\cdots 0}$.
+Em particular, $\ket{\vec{s}} = X^{s\_0} \otimes X^{s\_1} \otimes \otimes \otimes X^{s\_{n - 1}} \ket{0\cdots 0}$.
+Desde $X^{\dagger} = X$, isto implica que $\ket{0\dots 0} = X^{s\_0} \otimes X^{s\_1} \otimes \cdots \otimes X^{s\_{n - 1}} \ket{\vec{s}}}.$.
+Assim, podemos aplicar $P = X^{s\_0} \otimes X^{s\_1} \otimes \otimes X^{s\_{n - 1}}},apply `Controlled oracle`, e transformar-se novamente em $\vec{s}$.
+Esta construção é precisamente `ApplyWith`, por isso escrevemos o corpo da nossa nova operação em conformidade:
 
 ```qsharp
+{
     ApplyWithCA(
         ApplyPauliFromBitString(PauliX, false, bits, _),
         (Controlled oracle)(_, targetRegister),
@@ -209,18 +209,18 @@ Essa construção é precisamente `ApplyWith`, portanto, escrevemos o corpo da n
 }
 ```
 
-Aqui, usamos <xref:microsoft.quantum.canon.applypaulifrombitstring> para aplicar $P $, parcialmente aplicando seu destino para uso com `ApplyWith`.
-No entanto, observe que precisamos transformar o registro de *controle* em nosso formato desejado, portanto, aplicamos parcialmente a operação interna `(Controlled oracle)` no *destino*.
-Isso deixa `ApplyWith` atuando para colocar o registro de controle com $P $, exatamente como desejamos.
+Aqui, utilizámos <xref:microsoft.quantum.canon.applypaulifrombitstring> para aplicar $P$, aplicando-se parcialmente sobre o seu alvo para utilização com `ApplyWith`.
+Note-se, no entanto, que precisamos de transformar o registo de *controlo* na nossa forma desejada, pelo que aplicamos parcialmente a operação interna `(Controlled oracle)` no *alvo.*
+Isto deixa `ApplyWith` a agir para estoirar o registo de controlo com $P$, exatamente como desejávamos.
 
-Neste ponto, poderíamos ser feito, mas está, de alguma forma, desconhecendo que nossa nova operação não "sente", como aplicar o `Controlled` functor.
-Portanto, terminamos de definir nosso novo conceito de fluxo de controle escrevendo uma função que usa o Oracle para ser controlado e que retorna uma nova operação.
-Dessa forma, nossa nova função parece ser muito parecida com a `Controlled`, ilustrando que podemos facilmente definir novas construções poderosas de fluxo de controle usando Q # e a Canon juntas:
+Neste momento, poderíamos ser feitos, mas é de alguma forma insatisfatório que a nossa nova operação não "sinta" como aplicar o `Controlled` functor.
+Assim, terminamos a definição do nosso novo conceito de fluxo de controlo escrevendo uma função que leva o oráculo a ser controlado e que devolve uma nova operação.
+Desta forma, a nossa nova função parece-se muito com `Controlled`, ilustrando que podemos facilmente definir novas e poderosas construções de fluxo de controlo usando Q# e o cânone juntos:
 
 ```qsharp
 function ControlledOnBitString(
-        bits : Bool[],
-        oracle: (Qubit[] => Unit is Adj + Ctl)) 
+    bits : Bool[],
+    oracle: (Qubit[] => Unit is Adj + Ctl))
 : ((Qubit[], Qubit[]) => Unit is Adj + Ctl) {
     return _ControlledOnBitString(bits, oracle, _, _);
 }

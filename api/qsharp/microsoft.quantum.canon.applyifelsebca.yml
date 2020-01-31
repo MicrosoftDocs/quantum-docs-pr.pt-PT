@@ -4,19 +4,20 @@ name: ApplyIfElseBCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma das duas operações de unitário, dependendo do valor de um bit clássico.
+  Aplica-se uma de duas operações unitárias, dependendo do valor de uma parte clássica.
 
 
-  Dado um `bit`de bits, o aplica a operação `trueOp` com `trueInput` como sua entrada quando `bit` é `true`e aplica `falseOp(falseInput)` quando `bit` é `false`.
+  Dado um pouco `bit`, aplica a operação `trueOp` com `trueInput` como entrada quando `bit` é `true`, e aplica-se `falseOp(falseInput)` quando `bit` é `false`.
 syntax: "operation ApplyIfElseBCA (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit"
 input:
   content: "(bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U))"
   types:
   - name: bit
+    summary: O valor booleano usado para determinar se `trueOp` ou `falseOp` é aplicado.
     isPrimitive: true
     uid: Bool
   - name: trueOp
-    summary: A operação unitário a ser aplicada quando `bit` é `true`.
+    summary: A operação unitária a aplicar quando `bit` for `true`.
     isOperation: true
     input:
       types:
@@ -30,11 +31,11 @@ input:
     - Adjoint
     - Controlled
   - name: trueInput
-    summary: A entrada a ser fornecida para `trueOp` quando `bit` é `true`.
+    summary: A entrada a fornecer a `trueOp` quando `bit` for `true`.
     uid: "'T"
     isLocal: true
   - name: falseOp
-    summary: A operação unitário a ser aplicada quando `bit` é `false`.
+    summary: A operação unitária a aplicar quando `bit` for `false`.
     isOperation: true
     input:
       types:
@@ -48,7 +49,7 @@ input:
     - Adjoint
     - Controlled
   - name: falseInput
-    summary: A entrada a ser fornecida para `falseOp` quando `bit` é `false`.
+    summary: A entrada a fornecer a `falseOp` quando `bit` for `false`.
     uid: "'U"
     isLocal: true
 output:
@@ -58,9 +59,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação `trueOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `trueOp` a ser aplicado condicionalmente.
 - uid: "'U"
-  summary: O tipo de entrada da operação `falseOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada da operação `falseOp` a ser aplicado condicionalmente.
 functors:
 - Adjoint
 - Controlled
@@ -71,9 +72,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: d9fa6aad5c319d4cde19ff6b1da697f47bcc8806
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 526170a58fcab51aa36abeee6bd1573dc5eeddbb
+  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213777"
+  ms.lasthandoff: 01/29/2020
+  ms.locfileid: "76871333"
