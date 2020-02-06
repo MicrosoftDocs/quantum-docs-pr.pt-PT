@@ -1,31 +1,31 @@
 ---
-title: Segunda quantização | Microsoft Docs
-description: Documentos conceituais de segunda quantificação
+title: Segunda Quantificação  Microsoft Docs
+description: Segundo Doscs Conceituais de Quantificação
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.secondquantization
-ms.openlocfilehash: b3cc7eb8139d2df6e02de371ccf7a423e58ea76d
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4b7b5a6be6d0c1f3520128609e6b9fa83e5460d5
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73210403"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036428"
 ---
-# <a name="second-quantization"></a>Segunda quantificação
+# <a name="second-quantization"></a>Segunda Quantificação
 
-A segunda quantificação analisa o problema da estrutura eletrônica por meio de uma lente diferente.
-Em vez de atribuir cada uma das $N _E $ elétrons a um estado específico (ou orbital), a segunda quantificação rastreia cada orbital e armazena se há uma eletrônica presente em cada uma delas e, ao mesmo tempo, garante automaticamente as propriedades de simetria do função de Wave correspondente.
-Isso é importante porque permite que os modelos de química da Quantum sejam especificados sem a necessidade de se preocupar com a symmetrizing do estado de entrada (conforme necessário para fermions) e também porque a segunda quantificação permite que esses modelos sejam simulados usando Quantum pequeno nos.
+A segunda quantificação analisa o problema da estrutura electrónica através de uma lente diferente.
+Em vez de atribuir cada um dos eletrões $N_e$ a um estado específico (ou orbital), a segunda quantificação rastreia cada orbital e armazena se existe um eletrão presente em cada um deles e, ao mesmo tempo, assegura automaticamente propriedades de simetria do função de onda correspondente.
+Isto é importante porque permite especificar os modelos de química quântica sem ter que se preocupar com a anti-simmetrização do estado de entrada (como é necessário para fermiões) e também porque a segunda quantificação permite que tais modelos sejam simulados usando um pequeno quantum computadores.
 
-Como um exemplo da segunda quantificação em ação, vamos supor que $ \psi_0\cdots \psi_{N-1} $ seja um conjunto orthonormal de órbitas espaciais.
-Esses órbitas são escolhidos para representar o sistema o mais precisamente possível dentro do conjunto de base finito considerado.
-Um exemplo comum de tais órbitas são os órbitas atômicos que formam um eigenbasis para o hydrogen atom.
-Como elétrons têm dois Estados de rotação, dois elétrons podem ser amontoadodos em cada orbital espacial.
-Isso significa que os Estados de base válidos estão no formato $ \psi_{0, \uparrow}, \ldots, \psi_{N-1, \uparrow}, \psi_{0, \downarrow}, \ldots, \psi_{N-1, \downarrow} $, em que $ \uparrow $ e $ \downarrow $ são rótulos que especificam os dois eigenstates do grau de rotação de livre.
-Esse índice combinado de $ (j, \sigma) $ para $ \sigma na \{\uparrow, \downarrow\}$ é chamado de spin-orbital porque armazena a espacial, bem como o grau de liberdade.
-Na biblioteca de química, as órbitas giradas são armazenadas em uma estrutura de dados `SpinOrbital` e são criadas da seguinte maneira.
+Como exemplo de segunda quantificação em ação, vamos assumir que $\psi_0\cdots \psi_{N-1}$ são um conjunto ortonormal de orbitais espaciais.
+Estes orbitais são escolhidos para representar o sistema o mais precisamente possível dentro do conjunto de base finita considerado.
+Um exemplo comum desses orbitais são os orbitais atómicos que formam uma base eigenpara o átomo de hidrogénio.
+Como os eletrões têm dois estados de rotação, dois eletrões podem ser amontoados em cada um desses orbitais espaciais.
+Ou seja, os estados de base válidas são do formulário $\psi_{0,\uparrow},\ldots,\psi_{N-1,\uparrow}, \psi_{{0,\downarrow},\ldots,\psi_{N-1,\downarrow}$ onde $\uparrow$ e $downarrow$ são rótulos que especificam os dois eigenstates do grau de centrifugação liberdade.
+Este índice combinado de $(j,\sigma)$ para $\sigma \in \{\uparrow,\downarrow\}$ é chamado de spin-orbital porque armazena tanto o espaço como o grau de rotação da liberdade.
+Na biblioteca de química, os orbitais de rotação são armazenados numa estrutura de dados `SpinOrbital`, e são criados da seguinte forma.
 
 ```csharp
     // First, we load the namespace containing spin-orbital objects.
@@ -49,10 +49,10 @@ Na biblioteca de química, as órbitas giradas são armazenadas em uma estrutura
     SpinOrbital spinOrbital1 = tuple;
 ```
 
-Isso significa que podemos imaginar a base para a parte de rotação e espacial da função de onda como $ \psi_{0} \cdots \psi_{2N-1} $, em que cada um dos índices agora é uma enumeração de $ (j, \sigma) $.
-Uma enumeração possível é $g (j, \sigma) = j + N\sigma ' $.
-Outra Enumeração possível é $h (j, \sigma) = 2 * j + \sigma $.
-A biblioteca química do Quantum pode usar essas convenções, e as rotações giradas em tal codificação podem ser instanciadas da seguinte maneira.
+Isto significa que podemos pensar formalmente na base tanto para a parte giratória como para a parte espacial da função de onda como $\psi_{0} \cdots \psi_ {2N-1}$ onde cada um dos índices agora é uma enumeração de um $(j,\sigma)$.
+Uma possível enumeração é $g (j,\sigma) = j+N\sigma'$.
+Outra possível enumeração é $h (j,\sigma) = 2*j + \sigma$.
+A biblioteca de química quântica pode usar estas convenções, e os orbitais de rotação em tal codificação podem ser instantâneos da seguinte forma.
 
 ```csharp
     // Let us use the spin orbital created in the previous snippet.
@@ -73,32 +73,32 @@ A biblioteca química do Quantum pode usar essas convenções, e as rotações g
     var integerIndexDefault = spinOrbital.ToInt();
 ```
 
-Para sistemas fermionic, o princípio de exclusão de Pauli impede que mais de um horário de uso de um sistema de informações em qualquer orbital de rotação seja exibido ao mesmo tempo.
-Isso significa que podemos escrever os dois Estados legais para $ \psi_1 $ como \begin{Equation} \psi_1 \rightarrow \begin{cases} \ket{0}_1 & \Text{If $ \psi_1 $ não está ocupado,} \\\
-\ket{1}_1 & \Text{If $ \psi_1 $ está ocupado.} \end{cases} \end{Equation} essa codificação é excelente para computadores Quantum porque significa que podemos armazenar a ocupação eletrônica como um único bit Quantum.
+Para os sistemas fermiónicos, o princípio da exclusão de Pauli impede que mais do que um eletrão esteja presente em qualquer rotação-orbital ao mesmo tempo.
+Isto significa que podemos escrever os dois estados legais por $\psi_1$ como \{equação} \psi_1 \seta direita \start{cases} \ket{0}_1 & \text{if $\psi_1$ is not ocupado,} \\\
+\ket{1}_1 & \text{if $\psi_1$ is ocupado.} \end{cases} \end{equation} Esta codificação é ótima para computadores quânticos porque significa que podemos armazenar a ocupação electrónica como uma única bit quântica.
 
-Os Estados de ocupação para as órbitas de rotação de $2N $ podem ser armazenados de forma semelhante em $2N $ qubits.
-Por exemplo, se $N = $2, então o estado $ $ \ket{0} \ket{1} \ket{1} \ket{0}, $ $
+A ocupação indica que os orbitais de rotação de $2N$ podem igualmente ser armazenados em qubits de $2N$.
+Como exemplo, se $N=2$ então o Estado $${0} \ket{1} \ket{1} \ket{0}, $$
 
-corresponderia às órbitas de giro $1 $ e $2 $ sendo ocupadas com o restante vazio.
-Da mesma forma, o estado $ $ \ket{0} \equiv \ket{0} _{0} \cdots \ket{0}_ {N-1}, $ $
+corresponderia aos orbitais de giro $1$ e $2$ sendo ocupados com o restante vazio.
+Da mesma forma, o estado $$ \ket{0} \equiv \ket{0} _{0} \cdots \ket{0}_ {N-1}, $$
 
-Não tem nenhum elétrons e é conhecido como ' estado de vácuo '.
+não tem eletrões e é conhecido como o "estado de vácuo".
 
-Um lindo efeito colateral da segunda quantificação é que não precisamos mais controlar explicitamente a antisimetria do estado do Quantum.
-Isso ocorre porque, como veremos, a antisimetria do estado representa a si mesmo por meio das regras de commutação dos operadores que criam e destróim a ocupação eletrônica de uma orbital de rotação.
+Um belo efeito colateral da segunda quantificação é que já não temos de acompanhar explicitamente a anti-simetria do estado quântico.
+Isto porque, como veremos, a anti-simetria do Estado representa-se, em vez disso, através das regras anti-comutação dos operadores que criam e destroem as ocupações electrónicas de um orbital de rotação.
 
-## <a name="fermionic-operators"></a>Operadores Fermionic
+## <a name="fermionic-operators"></a>Operadores fermiónicos
 
-Os dois operadores fundamentais que atuam nos vetores de base mais quantificados são conhecidos como operadores de criação e Annihilation.
-Esses operadores inserem ou destruim elétrons em um local específico.
-Eles são indicados $a ^ \dagger_j $ e $a _J $ respectivamente.
+Os dois operadores fundamentais que atuam sobre os vetores de base segundo quantificado são conhecidos como operadores de criação e aniquilação.
+Estes operadores inserem ou destroem eletrões num determinado local.
+Estes são denotados $a^\dagger_j$ e $a_j$ respectivamente.
 
-Por exemplo, \begin{align} a ^ \dagger_1 \ket{0}_1 = \ket{1}_1, \quad a ^ \dagger_1 \ket{1}_1 = 0, \quad a_1 \ket{0}_1 = 0, \quad a_1 \ket{1}_1 = \ket{0}_1.
-\end{align} Observe que aqui $a ^ \dagger_1 \ket{1}_1 = 0 $ e $a _1 \ket{0}_1 $ yield o vetor zero, não $ \ket{0}_1 $.
-Esses operadores, portanto, não são Hermitian nem unitário.
-Representamos operadores de criação e Annihilation gerais usando o tipo de <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderOperator`1>.
-Por exemplo, um único operador de criação é representado como a seguir.
+Por exemplo, \start{align} a^\dagger_1 \ket{0}_1 = \ket{1}_1,quad a^\dagger_1 \ket{1}_1 = 0,\quad a_1 \ket{0}_1 = 0,\quad a_1 \ket{1}_1 = \ket{0}_1.
+\end{align} Note que aqui $a^\dagger_1 \ket{1}_1=0$ e $a_1 \ket{0}_1$ rendimento do vetor zero e não $\ket{0}_1$.
+Por conseguinte, estes operadores não são hermitianos nem unitários.
+Representamos operadores gerais de criação e aniquilação utilizando o tipo <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderOperator`1>.
+Por exemplo, um único operador de criação é representado como segue.
 
 ```csharp
     // We load the namespace containing ladder operator objects.
@@ -123,8 +123,8 @@ Por exemplo, um único operador de criação é representado como a seguir.
     var ladderOperator1 = new LadderOperator<int>((creationEnum, spinOrbitalInteger));
 ```
 
-Usando também esses operadores, podemos expressar $ $ \ket{0} \ket{1} \ket{1} \ket{0} = a ^ \dagger_1 a ^ \dagger_2 \ket{0}^ {\otimes 4}.
-$ $ Esta sequência de operadores seria construída na biblioteca de simulação de Hamiltonian usando C# código semelhante ao caso de orbital de rotação única considerado acima acima:
+Também usando tais operadores podemos expressar $$ \ket{0} \ket{1} \ket{1} \ket{0} = a^\dagger_1 a^\dagger_2 \ket{0}{{\otimes 4}.
+$$ Esta sequência de operadores seria construída dentro C# da biblioteca de simulação hamiltoniana usando código semelhante ao caso orbital de rotação única acima considerado:
 ```csharp
     // We load the namespace containing fermion-related objects.
     using Microsoft.Quantum.Chemistry.Fermion;
@@ -144,16 +144,16 @@ $ $ Esta sequência de operadores seria construída na biblioteca de simulação
     var fermionTerm = new FermionTerm(ladderSequences);
 ```
 
-Para um sistema de $k $ fermions, na segunda Quantification, a ação do operador de criação $a ^ \dagger_i $ é fornecida por $ $ a ^ \dagger_i \ket{n_1, n_2, \ldots, 0_i, \ldots, n_k} = (-1) ^ {S_i} \ket{n_1, n_2, \ldots, 1_i , \ldots, n_k}, $ $ e $ $ a ^ \dagger_i \ket{n_1, n_2, \ldots, 1_i, \ldots, n_k} = 0, $ $ Where $S _i = \sum_{j < i} a ^ \dagger_j a_j $ mede o número total de fermions que estão no estado de uma partícula única e que têm um índice $j < i $.
+Para um sistema de $k$ Fermions, em segunda quantificação a ação do operador de criação $a^\dagger_i$ é dada por $$ a^\dagger_i \ket{n_1, n_2, \ldots, 0_i, \ldots, n_k } = (-1)^{S_i} \ket{n_1, n_2, \ldots, 1_i , \ldots, n_k}, $$ e $$ a^\dagger_i \ket{n_1, n_2, \ldots, \ldots 1_i, \ldots, n_k } = 0, $$ onde $S_i = \sum_{j<i} a^\dagger_j a_j$ mede o número total de Fermions que estão no estado de uma única partícula e que têm um índice $j < i$.
 
-Um terceiro operador também é geralmente usado em segundo representações quantificadas.
-Esse operador é conhecido como o operador Number e é definido por \begin{Equation} n_i = a ^ \dagger_i a_i.
-\end{Equation} esse operador conta a ocupação de um determinado orbital de rotação, que é dizer \begin{align} n_i \ket{0}_i & = 0 \ nonumber\\\
-n_i \ket{1}_i & = \ket{1}_i.
-\end{align} semelhante aos exemplos de `FermionTerm` acima, esse operador Number é construído da seguinte maneira.
+Um terceiro operador também é frequentemente utilizado em segundas representações quantificadas.
+Este operador é conhecido como o operador de números e é definido por \start{equation} n_i = a^\dagger_i a_i.
+\end{equation} Este operador conta a ocupação de um dado orbital de centrifugação, ou seja, \start{align} n_i{0}_i & 0\nonumber\\\
+n_i \ket{1}_i &= \ket{1}_i.
+\end{align} Semelhante aos exemplos acima `FermionTerm`, este operador de número é construído da seguinte forma.
 ```csharp
     // Let us use a new method to compactly create a sequence of ladder
-    // operators. Note that we have ommitted specifying whether the 
+    // operators. Note that we have omitted specifying whether the 
     // operators are raising or lowering. In this case, the first half
     // will be raising operators, and the second half will be lowering 
     // operators.
@@ -164,11 +164,11 @@ n_i \ket{1}_i & = \ket{1}_i.
     var fermionTerm0 = new FermionTerm(indices);
 ```
 
-Algumas sutilezas surgem ao usar operadores de criação ou Annihilation em sistemas fermionic.
-Exigimos que qualquer estado de Quantum válido seja antisimétrico em troca de rótulos.
-Isso significa que $ $ a ^ \dagger_2 a ^ \dagger_1 \ket{0} =-a ^ \dagger_1 a ^ \dagger_2 \ket{0}.
-$ $ Esses operadores são considerados "antimudo" e, em geral, para qualquer $i, j $ temos esse \begin{align} ^ \dagger_i a ^ \dagger_j =-(1-\delta_{i, j}) um ^ \dagger_j a ^ \dagger_i, \quad a ^ \dagger_i a_j = \delta_{i, j}-a_j a ^ \dagger_i.
-\end{align} assim, as duas instâncias de <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence`1> a seguir são consideradas inequivalentes
+Uma subtileza surge quando se utilizam operadores de criação ou aniquilação em sistemas fermiónicos.
+Exigimos que qualquer estado quântico válido seja antissimétrico sob troca de rótulos.
+Isto significa que $$ a^\dagger_2 a^\dagger_1 \ket{0} = -a^\dagger_1 a^\dagger_2 \ket{0}.
+$$ Estes operadores são ditos 'anti-comutação' e, em geral, para qualquer $i, j$ temos que \begin{align} a^\dagger_i a^\dagger_j = -(1-\delta_{i,j})a^\dagger_j a^\dagger_i,quad a^\dagger_i a_j =\delta_{i,j} - a_j a^\dagger_i.
+\end{align} Assim, as duas seguintes <xref:Microsoft.Quantum.Chemistry.LadderOperators.LadderSequence`1> casos são consideradas inequivalentes
 ```csharp
     // Let us initialize an array of tuples representing the
     // desired sequence of creation operators.
@@ -183,13 +183,13 @@ $ $ Esses operadores são considerados "antimudo" e, em geral, para qualquer $i,
     var equal = laddderSeqeunce == laddderSeqeunceReversed;
 ```
 
-O requisito de que cada um dos operadores de criação anti-mudo significa que usar uma segunda representação quantificada eliminar os desafios enfrentados pela antisimetria do fermions.
-Em vez disso, o desafio se resurgirá em nossa definição dos operadores de criação. 
+A exigência de que cada um dos operadores de criação anti-deslocação significa que a utilização de uma segunda representação quantificada obvia os desafios enfrentados pela anti-simetria dos Fermions.
+Em vez disso, o desafio ressurge na nossa definição de operadores de criação. 
 
-Usando as regras de antimutação, algumas instâncias de `LadderSequence` correspondem à mesma sequência de operadores fermionic, às vezes, até um sinal de menos.
-Por exemplo, considere o Hamiltonian $a _0 ^ \dagger a_1 ^ \dagger a_1 a_0 =-a_1 ^ \dagger a_0 ^ \dagger a_1 a_0 $.
-Isso nos motiva a definir uma ordenação canônica para cada `FermionTerm`.
-Qualquer `FermionTerm` é automaticamente colocada em ordem canônica, como a seguir.
+Utilizando as regras anti-comutação, algumas `LadderSequence` casos correspondem à mesma sequência de operadores fermiónicos, às vezes até um sinal negativo.
+Por exemplo, considere o $a_0^\dagger hamiltonian a_1^\punhal a_1 a_0 = - a_1\dagger a_0^\dagger a_0^\dagger a_1 a_0$.
+Isto motiva-nos a definir uma encomenda canónica para cada `FermionTerm`.
+Qualquer `FermionTerm` é automaticamente colocada em ordem canónica da seguinte forma.
 ```csharp
     // We now construct two `FermionTerms` that are equivalent with respect to
     // anti-commutation up to a sign change.
@@ -208,34 +208,34 @@ Qualquer `FermionTerm` é automaticamente colocada em ordem canônica, como a se
     var signEqual = sign0 == sign1;
 ```
 
-## <a name="second-quantized-fermionic-hamiltonian"></a>Segundo-quantificar Fermionic Hamiltonian
+## <a name="second-quantized-fermionic-hamiltonian"></a>Segundo-quantificado Fermionic Hamiltonian
 
-Talvez seja insurpreendente que o Hamiltonian em [modelos de Quantum para sistemas eletrônicos](xref:microsoft.quantum.chemistry.concepts.quantummodels) possa ser escrito em termos de criação e operadores Annihilation.
-Em particular, se $ \psi\_j $ são as órbitas de rotação que formam a base
+Talvez não seja de estranhar que o Hamiltonian em [Modelos Quânticos de Sistemas Eletrónicos](xref:microsoft.quantum.chemistry.concepts.quantummodels) possa ser escrito em termos de criação e aniquilação dos operadores.
+Em particular, se $\psi\_j$ são os orbitais de rotação que formam a base então
 
-\begin{Equation} \hat{H} = \sum\_{pq} H\_{pq} a ^ \dagger\_p a\_q + \frac{1}{2}\sum\_{PQRS} H\_{PQRS} a ^ \dagger\_p a ^ \dagger\_q a\_ra\_s + h\_{\textrm NUC}, \label{EQ:} \end{Equation} em que $h\_{\textrm NUC} $ é a energia nuclear (que é uma constante sob a aproximação de-Oppenheimer) e
+\begin{equation} \hat{H} = \soma\_{pq} h\_{pq}a^\dagger\_p a\_q + \frac{1}{2}\sum\_{pqrs} h\_{pqrs}a^\dagger\_p a^\dagger\_q a\_ra\_s +h\_{\textrm nuc},\label{eq:totalHam} \end{equation} onde $h\_{\textrm nuc}$ é a energia nuclear (que é uma constante sob a aproximação born-oppenheimer) e
 
-\begin{align} h\_{pq} & = \int\_{-\infty} ^ \infty \psi ^\*\_p (x\_1) \left (-\frac{\nabla ^ 2}{2} + V (x\_1) \right) \psi\_q (x\_1) \mathrm{d} ^ 3x @no__ t_9_ 1, \end{align}
+\begin{align} h\_{pq} &= \int\_{-\infty}\infty\infty \psi^ \_\*p(x\_1) \left(-\frac{\nabla^2}{2} +V(x\_1)\direita) \psi\_q(x\_1)\mathrm{d}^3x\_1, \end align{}
 
-onde $V (x) $ é o potencial de campo médio e
+onde $V(x)$ é o potencial médio-campo, e
 
-\begin{align} h\_{PQRS} & = \int\_{-\infty} ^ \infty \int\_{-\infty} ^ \infty\psi\_p ^\*(x\_1) \psi\_q ^\*(x\_2) \left (\frac{1}{| x_1-x_2 |} \ direita) \psi\_r (x\_2) \psi\_s (x\_1) \mathrm{d} ^ 3x\_1 \ mathrm {d} ^ 3x\_2. \ rótulo {EQ: integrals} \end{align}
+\begin{align} h\_{pqrs} &= \int\_{-\infty}^\int\_{-\infty}\infty\infty\infty\psi\_p^\*(x\_1)\psi\_q^\*(x\_2) \left(\frac{1}{/x_1-x_2} \right)\psi\_r(x\_2)\psi\_s(x\_1)\mathrm{d}^3x\_1\mathrm{d}^3x\_2.\label{eq :integrals} \end{align}
 
-Os termos $h\_{pq} $ são referenciados como integrantes de um único-único, pois todos esses termos envolvem apenas elétrons únicos e, da mesma forma, $h\_{PQRS} $ são os integrantes de ambos.
-Eles são chamados de integrals porque a computação dos valores desses coeficientes requer um integral.
-Os termos de uma única pessoa descrevem a energia Kinetic do elétrons individual e suas interações com os campos elétricos do nuclei.
-Os dois integrais de ambos os outros, por outro lado, descrevem as interações entre o elétrons.
+Os termos $h\_{pq}$ são referidos como integrales de um eletrão, porque todos esses termos envolvem apenas eletrões simples e $h\_{pqrs}$ são os integrais de dois eletrões.
+São chamados integrais porque a computação dos valores destes coeficientes requer uma integral.
+Os termos de um eletrão descrevem a energia cinética dos eletrões individuais e as suas interações com os campos elétricos dos núcleos.
+Os dois eletrões integrais, por outro lado, descrevem as interações entre os eletrões.
 
-Uma intuição do que esses termos significam pode ser obtida dos operadores de criação e Annihilation que compõem cada um deles.
-Por exemplo, $h _ {pq} a ^ \dagger_p a_q $ descreve a salto de US $s de rotação orbital $q $ para spin orbital $p $.
-Da mesma forma, o termo $h _ {PQRS} a ^ \dagger_p a ^ \dagger_q A_R A_S $ (para DISTINCT $p, q, r, s $) descreve dois elétrons em órbitas de rotação $r $ e $s $ dispersão entre si e terminando em órbitas de rotação $p $ e $q $.
-Se $r = q $ e $p = s $, então $h _ {PRRP} a ^ \dagger_p a ^ \dagger_r A_R a_p = h_ {PRRP} n_p n_r $ oferece a penalidade de energia associada às duas elétrons que estão perto umas das outras, mas não descreve um processo dinâmico.
+Uma intuição para o que estes termos significam pode ser recolhida a partir da criação e da aniquilação dos operadores que compõem cada um deles.
+Por exemplo, $h_{pq}a^\dagger_p a_q$ descreve o eletrão pulando de $q orbital de rotação para girar orbital $p$.
+Da mesma forma, o termo $h_{pqrs} a^\dagger_p a^\dagger_q a_r a_s$ (para $p distintos, q,r,s$) descreve dois eletrões em orbitais de rotação $r$ e $s$ espalhando-se uns dos outros e acabando em órbitas de rotação $p$ e $q$.
+Se $r=q$ e $p=s$ então $h_{prrp} a^\dagger_p a^\dagger_r a_p a_r = h_{prrp} n_p n_r$ dá a penalidade energética associada aos dois eletrões que estão perto um do outro, mas não descreve um processo dinâmico.
 
-Podemos representar tal Hamiltonians usando a classe `FermionHamiltonian`, que é essencialmente uma lista que contém todas as instâncias de `FermionTerm` desejadas.
-Como Hamiltonians são Hermitian por definição, indexamos termos usando o tipo mais especializado `HermitianFermionTerm` que também usa simetria de Hermitian ao verificar se os termos são equivalentes.
+Podemos representar esses Hamiltonians usando a classe `FermionHamiltonian`, que é essencialmente uma lista contendo todos os casos `FermionTerm` desejados.
+Como os hamiltonianos são hermitianos por definição, indexamos termos usando o tipo mais especializado `HermitianFermionTerm` que também usa simetria hermitiana ao verificar se os termos são equivalentes.
 
-Vamos criar alguns exemplos ilustrativos.
-Considere o Hamiltonian $ \hat{H} = a_0 ^ \dagger a_1 + a_1 ^ \dagger a_0 $.
+Construamos alguns exemplos ilustrativos.
+Considere o Hamiltonian $\hat{H} = a_0^\dagger a_1 + a_1^\dagger a_0$.
 ```csharp
     // We create a `FermionHamiltonian` instance to store the fermion terms.
     var hamiltonian = new FermionHamiltonian();
@@ -261,9 +261,9 @@ Considere o Hamiltonian $ \hat{H} = a_0 ^ \dagger a_1 + a_1 ^ \dagger a_0 $.
     hamiltonian.Add(hermitianFermionTerm0, 1.0);
     hamiltonian.Add(hermitianFermionTerm1, 1.0);
 ```
-Podemos simplificar essa construção usando o fato de que operadores Hamiltonian são operadores Hermitian.
-Ao adicionar termos ao Hamiltonian usando `Add`, qualquer termo não Hermitian como, por exemplo, `fermionTerm0` será considerado emparelhado com seu conjugado Hermitian.
-Portanto, o trecho a seguir também representa o mesmo Hamiltonian:
+Podemos simplificar esta construção utilizando o facto de os operadores hamiltonianos serem operadores hermitianos.
+Ao adicionar termos ao Hamiltonian usando `Add`, qualquer termo não eremitício como `fermionTerm0` é assumido ser emparelhado com o seu conjugado hermitário.
+Assim, o seguinte corte representa também o mesmo Hamiltonian:
 ```csharp
     // We create a `FermionHamiltonian` instance to store the fermion terms.
     var hamiltonian = new FermionHamiltonian();
@@ -272,11 +272,11 @@ Portanto, o trecho a seguir também representa o mesmo Hamiltonian:
     hamiltonian.Add(new HermitianFermionTerm(new[] { 1, 0 }), 2.0);
 ```
 
-Usando as regras de antimutação, algumas instâncias de `FermionTerm` no Hamiltonian realmente correspondem à mesma sequência de operadores fermionic, às vezes, até um sinal de menos.
-Por exemplo, considere o Hamiltonian $H = a_0 ^ \dagger a_1 ^ \dagger a_1 a_0-a_1 ^ \dagger a_0 ^ \dagger a_1 a_0 = 2a_0 ^ \dagger a_1 ^ \dagger a_1 a_0 $, que é uma soma dos termos construídos acima.
-Nem sempre pode ser claro para o usuário que eles são termos equivalentes e, portanto, podem ser adicionados ao Hamiltonian separadamente.
-Como alternativa, talvez você esteja interessado em modificar os termos já existentes no Hamiltonian.
-Nesses casos, podemos combinar os termos equivalentes da seguinte maneira.
+Utilizando as regras anti-comutação, alguns `FermionTerm` casos no Hamiltonian correspondem à mesma sequência de operadores fermiónicos, às vezes até um sinal negativo.
+Por exemplo, considere o $H hamiltoniano=a_0^\punhal a_1^\punhal a_1 a_0 - a_1\dagger a_0^a punhal a_1 a_0 =2a_0^\dagger a_1^\dagger a_1 a_0$, que é uma soma de termos construídos acima.
+Pode nem sempre ser claro para o utilizador que estes são termos equivalentes, pelo que podem ser adicionados ao Hamiltonian separadamente.
+Em alternativa, pode-se estar interessado em modificar os termos já existentes no Hamiltoniano.
+Nestes casos, podemos combinar termos equivalentes os seguintes.
 ```csharp
     // We create a `FermionHamiltonian` instance to store the fermion terms.
     var hamiltonian = new FermionHamiltonian();
@@ -295,28 +295,28 @@ Nesses casos, podemos combinar os termos equivalentes da seguinte maneira.
     var nTerms = hamiltonian.CountTerms();
 ```
 Ao combinar coeficientes de termos equivalentes, reduzimos o número total de termos no Hamiltonian.
-Posteriormente, isso reduz o número de Gates Quantum necessários para simular o Hamiltonian.
+Mais tarde, isto reduz o número de portões quânticos necessários para simular o Hamiltonian.
 
-### <a name="internal-representation"></a>Representação interna
+### <a name="internal-representation"></a>Representação Interna
 
-Um Hamiltonian fermionic com interações de um e dois corpo é representado em uma notação de segundo quantificação como
+Um Hamiltonian fermiónico com interações de um e dois corpos é representado em notação de segundo quantificado como
 
-$ $ \begin{align} H = \sum\_{pq} H\_{pq} a ^ \dagger\_{p} a\_{q} + \frac{1}{2}\sum\_{PQRS} H\_{PQRS} a ^ \dagger\_{p} a ^ \dagger\_{q} a @no__ t_10_ {r} um\_{s}.
-\end{align} $ $
+$$ \start{align} H=\sum\_{pq}h\_{pq}a^dagger\_{p}a\_{q}+\frac {2}{1} \sum\_{pqrs}h\_{pqrs}a^\dagger\_{p}a^\aapunhal\_{q}a\_{r}\_a {s}.
+\end{align} $$
 
-Nessa notação, há no máximo $N ^ 2 + N ^ 4 $ coeficientes.
-No entanto, muitos desses coeficientes podem ser coletados, pois correspondem ao mesmo operador.
-Por exemplo, no caso em que $p, q, r, s $ são índices distintos, podemos usar as regras de antimutação para mostrar que: $ $ a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} =-a ^ \dagger\_{q} a ^ \dagger\_{ p} a\_{r} a\_{s} =-a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{s} a\_{r} = a ^ \dagger\_{q} a ^ \dagger\_{p} a\_{s} a\_{r}.
+Nesta notação, existem no máximo coeficientes $N^2+N^4$.
+No entanto, muitos destes coeficientes podem ser recolhidos, uma vez que correspondem ao mesmo operador.
+Por exemplo, no caso em que $p,q,r,s$ são índices distintos, podemos usar as regras anti-comutação para mostrar que: $$ a^\dagger\_{p}a^a\dagger\_{q}a\_{r}a\_{s} = -a^\dagger\_{q}a^\dagger\_{p}a\_{r }a\_{s} = -a^\dagger\_{p}a^\dagger\_{q}a\_{s}a\_{r} = a^\dagger\_{q}a^\dagger\_{p}a\_{s}a\_{r}.
 $$
 
-Além disso, como $H $ é Hermitian, todos os operadores de fermionic não Hermitian, digamos $h\_{PQRS} um ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} $, tem um conjugado Hermitian que também é encontrado em $H $. Para indexar exclusivamente os grupos de termos caracterizados por esses Symmetries, definimos uma ordenação canônica nos índices $ (i\_1, \cdots, i\_n, j\_1, \cdots, j\_m) $ de qualquer sequência de operadores $n + m $ fermionic $a ^ \dagger\_{i\_1} \cdots ^ \dagger\_{i\_n} um\_{j\_1} \cdots a\_{j\_m} $as segue:
--   Todos os operadores de criação $a ^ \dagger\_{i\_\cdot} $ são colocados antes de todos os operadores de Annihilation $a\_{j\_\cdot} $.
--   Todos os índices do operador de criação são classificados em ordem crescente, $i\_1 < i\_2 < \cdots < eu\_n $.
--   Todos os índices do operador Annihilation são classificados em ordem decrescente, $j\_1 > j\_2 \cdots > j\_m $.
--   O índice mais à esquerda é menor ou igual ao índice mais à direita, $i\_1 \ Le j\_m $.
+Além disso, como $H$ é hermitiano, todos os operadores fermiónicos não hermitianos, dizem $h\_{pqrs}a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s}$, tem um conjugado Hermitiano que também é encontrado em $H$. A fim de indexar exclusivamente grupos de termos caracterizados por estas simetrias, definimos uma encomenda canónica nos índices $(i\_1,\cdots,i\_n,j\_1,\cdots,j\_m)$ de qualquer sequência de operadores fermiónico $as\_\_s $n+m$ $a^\dagger\_{i\_1}\cdots a^\\_\_\_\_aada :
+-   Todos os operadores de criação $a^\dagger\_{i\_\cdot}$ são colocados antes que todos os operadores de aniquilação $a\_{j\_\cdot}$.
+-   Todos os índices de operadores de criação estão classificados em ordem ascendente, ou seja, $i\_1< i\_2< \cdots < i\_n$.
+-   Todos os índices de aniquilação do operador estão classificados em ordem descendente, ou seja, $j\_1> j\_2 \cdots > j\_m$.
+-   O índice mais à esquerda é inferior ou igual ao índice mais à direita, que é $i\_1\le j\_m$.
 
-Vamos identificar esse conjunto de índices ordenados de forma canônica como $ $ \begin{align} (i\_1, \cdots, i\_n, j\_1, \cdots, j\_m) na S\_{n, m}.
-\end{align} $ $
+Identifiquemos este conjunto de índices ordenados canonicamente como $$ \begin {align} (i\_1,\cdots,i\_n,j\_1,\cdots,j\_m) \in S\_{n,m}.
+\end{align} $$
 
-Com essa ordenação canônica, o fermionic Hamiltonian pode ser expresso como $ $ \begin{align} H = \sum\_{(p, q) na S\_{1,1}} H '\_{pq} \frac{a ^ \dagger\_{p} a\_{q} + a ^ \dagger\_{q} a\_{ p}}{2}+ \sum\_{(p, q, r, s) na S\_{2,2}} h '\_{PQRS} \frac{a ^ \dagger\_{p} a ^ \dagger\_{q} a\_{r} a\_{s} + a ^ \dagger\_{s} a ^ \ Dagger\_{r} a\_{q} a\_{p}}{2}, \end{align} $ $ com adaptado adequadamente um-e dois inteiros de $h '\_{pq} $ e $h '\_{PQRS} $, respectivamente.
+Com esta ordem canónica, o Hamiltonian fermiónico pode ser expresso como $$ \start{align} H=\sum\_{(p,q)\em S\_{1,1}}h'\_{pq}\frac{a^\dagger\_{p}a\_{q}+a^\a^\dagger\_{q}a\_{p}}{2}+\soma\_{(p,q,r,s)\em S\_{2,2}}h'\_{pqrs}\frac{a^\dagger\_{p}a^\dagger\_{q}a\_{r}a\_{s}+a^\a^\a^\a^\\_a^\a apunhal\_{r}a\_{q}a\_{p}}{2}, \end{align} $$ com integrals de um e dois eletrões adaptados $h'\_{pq}$ e $h'\_{pqrs}$, respectivamente.
 

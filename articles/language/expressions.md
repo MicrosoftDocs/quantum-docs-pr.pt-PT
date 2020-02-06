@@ -1,43 +1,43 @@
 ---
-title: Expressões | Microsoft Docs
+title: Expressões  Microsoft Docs
 description: Expressões
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.language.expressions
-ms.openlocfilehash: 09d493df4e1178fee1f7a5946cfda2f411111006
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 83fe697aa07a8ab28bd64437c8f5746bc5893b27
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73185210"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036319"
 ---
 # <a name="expressions"></a>Expressões
 
 ## <a name="grouping"></a>Agrupamento
 
-Dada qualquer expressão, a mesma expressão entre parênteses é uma expressão do mesmo tipo.
-Por exemplo, `(7)` é uma expressão de `Int`, `([1,2,3])` é uma expressão do tipo matriz de `Int`s e `((1,2))` é uma expressão com o tipo `(Int, Int)`.
+Dada qualquer expressão, essa mesma expressão em parênteses é uma expressão do mesmo tipo.
+Por exemplo, `(7)` é uma expressão `Int`, `([1,2,3])` é uma expressão de tipo de matriz de `Int`s, e `((1,2))` é uma expressão com tipo `(Int, Int)`.
 
-A equivalência entre valores simples e tuplas de elemento único descritos no [modelo de tipo](xref:microsoft.quantum.language.type-model#tuple-types) remove a ambiguidade entre `(6)` como um grupo e `(6)` como uma tupla de elemento único.
+A equivalência entre valores simples e tuples de um único elemento descrito [no modelo](xref:microsoft.quantum.language.type-model#tuple-types) do tipo remove a ambiguidade entre `(6)` como um grupo e `(6)` como uma tuple de um único elemento.
 
-## <a name="symbols"></a>Symbol
+## <a name="symbols"></a>Símbolos
 
-O nome de um símbolo associado ou atribuído a um valor do tipo `'T` é uma expressão do tipo `'T`.
-Por exemplo, se o símbolo `count` estiver associado ao valor inteiro `5`, `count` será uma expressão de número inteiro.
+O nome de um símbolo ligado ou atribuído a um valor de tipo `'T` é uma expressão de tipo `'T`.
+Por exemplo, se o símbolo `count` está ligado ao valor inteiro `5`, então `count` é uma expressão inteiro.
 
 ## <a name="numeric-expressions"></a>Expressões numéricas
 
-Expressões numéricas são expressões do tipo `Int`, `BigInt`ou `Double`.
-Ou seja, eles são números inteiros ou de ponto flutuante.
+Expressões numéricas são expressões de tipo `Int`, `BigInt`ou `Double`.
+Ou são números inteiros ou flutuantes.
 
-os literais `Int` em Q # são idênticos aos literais C#inteiros no, exceto pelo fato de que nenhum "l" ou "l" à direita é necessário (ou permitido).
-Os inteiros hexadecimais e binários têm suporte com um prefixo "0x" e "0B", respectivamente.
+`Int` literals em Q# são idênticos C#aos inteiros literais em , exceto que não é necessário seguir "l" ou "L" (ou permitido).
+Os inteiros hexadecimais e binários são suportados com um prefixo "0x" e "0b", respectivamente.
 
-`BigInt` literais em Q # são idênticas às cadeias de caracteres inteiros grandes no .NET, com um "l" ou "L" à direita.
-Há suporte para inteiros grandes hexadecimais com um prefixo "0x".
-Portanto, veja a seguir todos os usos válidos de `BigInt` literais:
+`BigInt` os literais em Q# são idênticos às grandes cordas de inteiro em .NET, com um "l" ou "L".
+Os grandes inteiros hexadecimais são suportados com um prefixo "0x".
+Assim, todos os seguintes usos válidos de `BigInt` literais:
 
 ```qsharp
 let bigZero = 0L;
@@ -45,34 +45,34 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-os literais `Double` em Q # são idênticos aos literais C#duplos no, exceto pelo fato de que nenhum "d" ou "d" à direita é necessário (ou permitido).
+`Double` literals em Q# são idênticos aos duplos literais em C#, exceto que não é necessário seguir "d" ou "D" (ou permitido).
 
-Dada uma expressão de matriz de qualquer tipo de elemento, uma expressão `Int` pode ser formada usando a função interna `Length`, com a expressão de matriz entre parênteses, `(` e `)`.
-Por exemplo, se `a` estiver associado a uma matriz, `Length(a)` será uma expressão de número inteiro.
-Se `b` for uma matriz de matrizes de inteiros, `Int[][]`, `Length(b)` será o número de submatrizes em `b`e `Length(b[1])` será o número de inteiros na segunda submatriz em `b`.
+Dada a expressão da matriz de qualquer tipo de elemento, pode formar-se uma expressão `Int` utilizando a função `Length` incorporada, com a expressão da matriz fechada em parênteses, `(` e `)`.
+Por exemplo, se `a` está ligado a uma matriz, então `Length(a)` é uma expressão inteiro.
+Se `b` é um conjunto de conjuntos de inteiros, `Int[][]`, então `Length(b)` é o número de sub-matrizes em `b`, e `Length(b[1])` é o número de inteiros na segunda sub-matriz em `b`.
 
-Dadas duas expressões numéricas do mesmo tipo, os operadores binários `+`, `-`, `*`e `/` podem ser usados para formar uma nova expressão numérica.
+Tendo em conta duas expressões numéricas do mesmo tipo, os operadores binários `+`, `-`, `*`e `/` podem ser usados para formar uma nova expressão numérica.
 O tipo da nova expressão será o mesmo que os tipos das expressões constituintes.
 
-Dadas duas expressões de inteiro, o operador binário `^` (Power) pode ser usado para formar uma nova expressão de inteiro.
-Da mesma forma, `^` pode ser usado com duas expressões Double para formar uma nova expressão Double.
-Por fim, `^` pode ser usado com um inteiro grande à esquerda e um inteiro à direita para formar uma nova expressão de inteiro grande.
-Nesse caso, o segundo parâmetro deve caber em 32 bits; caso contrário, um erro de tempo de execução será gerado.
+Tendo em conta duas expressões inteiros, o operador binário `^` (potência) pode ser usado para formar uma nova expressão inteiro.
+Da mesma forma, `^` pode ser usado com duas expressões duplas para formar uma nova expressão dupla.
+Finalmente, `^` pode ser usado com um grande inteiro à esquerda e um inteiro à direita para formar uma nova grande expressão inteiro.
+Neste caso, o segundo parâmetro deve caber em 32 bits; se não, um erro de tempo de execução será levantado.
 
-Dadas duas expressões de inteiro ou de inteiro grande, um novo inteiro ou uma expressão de inteiro grande podem ser formados usando os operadores `%` (módulo), `&&&` (bit e), `|||` (bit-a-or) ou `^^^` ("XOR bit)".
+Tendo em conta duas expressões inteiros ou grandes inteiros, uma nova expressão inteiro ou grande inteiro pode ser formada usando os operadores `%` (modulo), `&&&` (bitwise And), `|||` (bitwise OR) ou `^^^` (bitwise XOR).
 
-Dado um inteiro ou uma expressão de inteiro grande à esquerda e uma expressão de inteiro à direita, os operadores de `<<<` (deslocamento aritmético à esquerda) ou `>>>` (deslocamento aritmético à direita) podem ser usados para criar uma nova expressão com o mesmo tipo que a do lado esquerdo expressão.
+Dado um inteiro ou uma expressão inteiro à esquerda, e uma expressão inteiro à direita, os operadores `<<<` (turno da esquerda aritmética) ou `>>>` (mudança de direita aritmética) podem ser usados para criar uma nova expressão com o mesmo tipo que a expressão esquerda.
 
-O segundo parâmetro (o valor de deslocamento) para a operação de deslocamento deve ser maior ou igual a zero; o comportamento para valores de deslocamento negativos é indefinido.
-O valor de deslocamento para uma das operações de deslocamento também deve se ajustar a 32 bits; caso contrário, um erro de tempo de execução será gerado.
-Se o número a ser deslocado for um inteiro, o valor de deslocamento será interpretado `mod 64`; ou seja, uma mudança de 1 e uma mudança de 65 têm o mesmo efeito.
+O segundo parâmetro (o valor de deslocação) para uma das operações por turnos deve ser maior ou igual a zero; o comportamento para quantidades de mudança negativa é indefinido.
+O montante de deslocação para qualquer uma das operações por turnos também deve caber em 32 bits; se não, um erro de tempo de execução será levantado.
+Se o número a deslocar for um inteiro, então o valor do turno é interpretado `mod 64`; isto é, uma mudança de 1 e uma mudança de 65 têm o mesmo efeito.
 
-Para os valores inteiros e inteiros grandes, as turnos são aritméticas.
-A mudança de um valor negativo para a esquerda ou direita resultará em um número negativo.
-Ou seja, mudar uma etapa para a esquerda ou para a direita é exatamente o mesmo que multiplicar ou dividir por 2, respectivamente.
+Tanto para valores inteiros como para grandes valores inteiros, as mudanças são aritméticas.
+Mudar um valor negativo, quer à esquerda quer à direita, resultará num número negativo.
+Ou seja, deslocar um passo para a esquerda ou para a direita é exatamente o mesmo que multiplicar ou dividir por 2, respectivamente.
 
-Divisão de inteiros e módulo de inteiro seguem o mesmo comportamento de números C#negativos.
-Ou seja, `a % b` sempre terá o mesmo sinal que `a`e `b * (a / b) + a % b` sempre será igual `a`.
+Divisão integer e modulo inteiro seguem o C#mesmo comportamento para números negativos que .
+Ou seja, `a % b` terá sempre o mesmo sinal que `a`, e `b * (a / b) + a % b` será sempre igual a `a`.
 Por exemplo:
 
  `A` | `B` | `A / B` | `A % B`
@@ -82,21 +82,21 @@ Por exemplo:
  -5 | 2 | -2 | -1
  -5 | -2 | 2 | -1
 
-Divisão de inteiro grande e módulo funciona da mesma maneira.
+A grande divisão de inteiros e o modulo funcionam da mesma forma.
 
-Dada qualquer expressão numérica, uma nova expressão pode ser formada usando o operador unário `-`.
-A nova expressão será o mesmo tipo da expressão constituinte.
+Dada qualquer expressão numérica, pode ser formada uma nova expressão utilizando o operador `-` não-secundário.
+A nova expressão será do mesmo tipo que a expressão constituinte.
 
-Dado qualquer inteiro ou expressão de inteiro grande, uma nova expressão do mesmo tipo pode ser formada usando o operador unário `~~~` (complemento bit-a).
+Dada a expressão inteiro ou grande inteiro, pode formar-se uma nova expressão do mesmo tipo utilizando o operador `~~~` (complemento bitwise).
 
 ## <a name="boolean-expressions"></a>Expressões booleanas
 
-Os dois `Bool` valores literais são `true` e `false`.
+Os dois valores `Bool` literários são `true` e `false`.
 
-Dadas as duas expressões do mesmo tipo primitivo, os operadores binários `==` e `!=` podem ser usados para construir uma expressão de `Bool`.
-A expressão será true se as duas expressões forem (resp. is not) iguais.
+Dadas duas expressões do mesmo tipo primitivo, os operadores `==` e `!=` binários podem ser utilizados para construir uma expressão `Bool`.
+A expressão será verdadeira se as duas expressões forem iguais, e falsas se não forem.
 
-Os valores de tipos definidos pelo usuário não podem ser comparados, apenas seus valores podem ser comparados. Por exemplo,
+Os valores dos tipos definidos pelo utilizador não podem ser comparados, apenas os seus valores não embrulhados podem ser comparados. Por exemplo, utilizando o operador "desembrulhar" `!` (explicado na página do [modelo do tipo Q#](xref:microsoft.quantum.language.type-model#user-defined-types)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -106,87 +106,87 @@ let z = x! == y!;             // This will compile and yield z = false.
 let t = x == y;               // This will cause a compiler error.
 ```
 
-A comparação de igualdade para valores de `Qubit` é igualdade de identidade; ou seja, se as duas expressões identificam o mesmo qubit.
-O estado dos dois qubits não são comparados, acessados, medidos ou modificados por essa comparação.
+A comparação da igualdade entre valores `Qubit` é a igualdade de identidade; isto é, se as duas expressões identificam o mesmo qubit.
+O estado dos dois qubits não é comparado, acedido, medido ou modificado por esta comparação.
 
-A comparação de igualdade para valores de `Double` pode ser enganosa devido a efeitos de arredondamento.
+A comparação da igualdade entre valores `Double` pode ser enganosa devido aos efeitos arredondamentos.
 Por exemplo, `49.0 * (1.0/49.0) != 1.0`.
 
-Dadas quaisquer duas expressões numéricas, os operadores binários `>`, `<`, `>=`e `<=` podem ser usados para construir uma nova expressão booliana que seja verdadeira se a primeira expressão for maior que, menor que, maior ou igual a ou menor ou igual à segunda expressão.
+Tendo em conta duas expressões numéricas, os operadores binários `>`, `<`, `>=`e `<=` podem ser usados para construir uma nova expressão booleana que seja verdade se a primeira expressão for respectivamente maior do que, inferior ou igual, ou inferior ou igual à segunda expressão.
 
-Dadas quaisquer duas expressões booleanas, os operadores binários `and` e `or` podem ser usados para construir uma nova expressão booliana que seja verdadeira se ambos (resp. ou ambos) as duas expressões forem true.
+Dadas duas expressões booleanas, os operadores binários `and` e `or` podem ser usados para construir uma nova expressão booleana que é verdade se ambos (resp. ou ambos) as duas expressões forem verdadeiras.
 
-Dada qualquer expressão booliana, o operador unário `not` pode ser usado para construir uma nova expressão booliana que seja verdadeira se a expressão constituinte for falsa.
+Dada qualquer expressão booleana, o `not` operador não-secundário pode ser usado para construir uma nova expressão booleana que é verdade se a expressão constituinte for falsa.
 
-## <a name="string-expressions"></a>Expressões de cadeia de caracteres
+## <a name="string-expressions"></a>Expressões de cordas
 
-Q # permite que as cadeias de caracteres sejam usadas na instrução `fail` e na função padrão `Log`.
+Q# permite que as cordas sejam usadas na declaração `fail` e na função padrão `Log`.
 
-Cadeias de caracteres em Q # são literais ou cadeias de caracteres interpoladas.
-Literais de cadeia de caracteres são semelhantes a literais de cadeia de caracteres simples na maioria dos idiomas: uma sequência de caracteres Unicode entre aspas duplas, `"`.
-Dentro de uma cadeia de caracteres, o caractere de barra invertida `\` pode ser usado para escapar de um caractere de aspas duplas e para inserir uma linha nova como `\n`, um retorno de carro como `\r`e uma tabulação como `\t`.
+As cordas em Q# são literais ou cordas interpoladas.
+Os literais de cordas são semelhantes aos simples literais de cordas na maioria das línguas: uma sequência de caracteres Unicode fechados em citações duplas, `"`.
+Dentro de uma corda, o `\` de caracteres de corte traseiro pode ser usado para escapar a um personagem de citação dupla, e para inserir uma nova linha como `\n`, um retorno de carruagem como `\r`, e um separador como `\t`.
 Por exemplo:
 
 ```qsharp
 "\"Hello world!\", she said.\n"
 ```
 
-A sintaxe de Q # para interpolações de cadeia de caracteres é C# um subconjunto da sintaxe 7,0; Q # não oferece suporte a cadeias de caracteres interpoladas (várias linhas) textuais.
-Consulte [*cadeias de caracteres interpoladas*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings) para a C# sintaxe.
+A sintaxe Q# para interpolações de C# cordas é um subconjunto da sintaxe 7.0; Q# não suporta cordas interpoladas verbatim (multi-linhas).
+Veja [*as Cordas Interpolated*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings) para a C# sintaxe.
 
-As expressões dentro de uma cadeia de caracteres interpolada seguem a sintaxe C# de Q #, não a sintaxe.
-Qualquer expressão Q # válida pode aparecer em uma cadeia de caracteres interpolada.
+Expressões dentro de uma corda interpolada seguem C# Q# sintaxe, não sintaxe.
+Qualquer expressão Q# válida pode aparecer numa corda interpolada.
 
-## <a name="qubit-expressions"></a>Expressões qubit
+## <a name="qubit-expressions"></a>Expressões Qubit
 
-As únicas `Qubit` expressões são símbolos associados a valores de `Qubit` ou elementos de matriz de matrizes de `Qubit`.
-Não há literais `Qubit`.
+As únicas expressões `Qubit` são símbolos que estão ligados a `Qubit` valores ou elementos matrizes de `Qubit` matrizes.
+Não há `Qubit` literal.
 
 ## <a name="pauli-expressions"></a>Expressões Pauli
 
-Os quatro valores `Pauli`, `PauliI`, `PauliX`, `PauliY`e `PauliZ`, são todas as expressões de `Pauli` válidas.
+Os quatro valores `Pauli`, `PauliI`, `PauliX`, `PauliY`e `PauliZ`, são todos expressões válidas `Pauli`.
 
-Além disso, as únicas expressões `Pauli` são símbolos associados a valores de `Pauli` ou elementos de matriz de matrizes de `Pauli`.
+Para além disso, as únicas expressões `Pauli` são símbolos que estão ligados a valores `Pauli` ou elementos matrizes de matrizes `Pauli`.
 
-## <a name="result-expressions"></a>Expressões de resultado
+## <a name="result-expressions"></a>Expressões de Resultados
 
-Os dois valores `Result`, `One` e `Zero`, são expressões de `Result` válidas.
+Os dois valores `Result`, `One` e `Zero`, são expressões válidas `Result`.
 
-Além disso, as únicas expressões `Result` são símbolos associados a valores de `Result` ou elementos de matriz de matrizes de `Result`.
-Em particular, observe que `One` não é o mesmo que o inteiro `1`, e não há nenhuma conversão direta entre eles.
-O mesmo é verdadeiro para `Zero` e `0`.
+Para além disso, as únicas expressões `Result` são símbolos que estão ligados a valores `Result` ou elementos matrizes de matrizes `Result`.
+Note-se, em particular, que `One` não é o mesmo que o `1`inteiro , e não existe uma conversão direta entre eles.
+O mesmo se aplica aos `Zero` e `0`.
 
-## <a name="range-expressions"></a>Expressões de intervalo
+## <a name="range-expressions"></a>Expressões de alcance
 
-Dadas as três expressões de `Int` `start`, `step`e `stop`, `start .. step .. stop` é uma expressão de intervalo cujo primeiro elemento é `start`, o segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `stop` seja passado.
-Um intervalo pode estar vazio se, por exemplo, `step` for positivo e `stop < start`.
-O último elemento do intervalo será `stop` se a diferença entre `start` e `stop` for um múltiplo integral de `step`; ou seja, o intervalo é inclusivo em ambas as extremidades.
+Tendo em conta quaisquer três expressões `Int` `start`, `step`e `stop`, `start .. step .. stop` é uma expressão de alcance cujo primeiro elemento é `start`, o segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `stop` seja passado.
+Uma gama pode estar vazia se, por exemplo, `step` for positivo e `stop < start`.
+O último elemento da gama será `stop` se a diferença entre `start` e `stop` for um múltiplo integral de `step`; ou seja, a gama é inclusiva em ambas as extremidades.
 
-Dadas quaisquer duas expressões `Int` `start` e `stop`, `start .. stop` é uma expressão de intervalo que é igual a `start .. 1 .. stop`.
-Observe que a `step` implícita é + 1, mesmo se `stop` for menor que `start`; Nesse caso, o intervalo está vazio.
+Tendo em conta duas expressões `Int` `start` e `stop`, `start .. stop` é uma expressão de alcance igual a `start .. 1 .. stop`.
+Note que o `step` implícito é +1 mesmo que `stop` seja inferior a `start`; em tal caso, o alcance está vazio.
 
-Alguns intervalos de exemplo são:
+Algumas gamas de exemplo são:
 
 - `1..3` é o intervalo 1, 2, 3.
-- `2..2..5` é o intervalo de 2, 4.
-- `2..2..6` é o intervalo de 2, 4, 6.
-- `6..-2..2` é o intervalo de 6, 4, 2.
-- `2..1` é o intervalo vazio.
+- `2..2..5` é o intervalo 2, 4.
+- `2..2..6` é o intervalo 2, 4, 6.
+- `6..-2..2` é o intervalo 6, 4, 2.
+- `2..1` é o alcance vazio.
 - `2..6..7` é o intervalo 2.
-- `2..2..1` é o intervalo vazio.
-- `1..-1..2` é o intervalo vazio.
+- `2..2..1` é o alcance vazio.
+- `1..-1..2` é o alcance vazio.
 
-## <a name="callable-expressions"></a>Expressões que podem ser chamadas
+## <a name="callable-expressions"></a>Expressões Insensíveis
 
-Um literal que pôde ser chamado é o nome de uma operação ou função definida no escopo de compilação.
-Por exemplo, `X` é um literal de operação que se refere à operação de `X` de biblioteca padrão e `Message` é um literal de função que se refere à função de `Message` de biblioteca padrão.
+Um literal calivel é o nome de uma operação ou função definida no âmbito da compilação.
+Por exemplo, `X` é uma operação literal que se refere à biblioteca padrão `X` operação, e `Message` é uma função literal que se refere à biblioteca padrão `Message` função.
 
-Se uma operação der suporte ao `Adjoint` functor, `Adjoint op` será uma expressão de operação.
-Da mesma forma, se a operação der suporte ao `Controlled` functor, `Controlled op` será uma expressão de operação.
-Os tipos dessas expressões são especificados em [transmissão functors](xref:microsoft.quantum.language.type-model#functors).
+Se uma operação suporta o functor `Adjoint`, então `Adjoint op` é uma expressão de operação.
+Da mesma forma, se a operação suporta o functor `Controlled`, então `Controlled op` é uma expressão de operação.
+Os tipos destas expressões são especificados em [Functors](xref:microsoft.quantum.language.type-model#functors).
 
-Transmissão functors (`Adjoint` e `Controlled`) são associados mais de mais de todos os outros operadores, exceto para o operador de desencapsulamento `!` e a indexação de matriz com `[]`.
-Portanto, as seguintes são todas legais, supondo que as operações suportam o transmissão functors usado:
+Os functores (`Adjoint` e `Controlled`) ligam-se mais de perto do que todos os outros operadores, com exceção do `!` do operador desembrulhar e indexação de matriz com `[]`.
+Assim, todos os seguintes são legais, assumindo que as operações apoiam os functors utilizados:
 
 ```qsharp
 Adjoint Op(qs)
@@ -195,9 +195,9 @@ Controlled Adjoint Op(controls, targets)
 Adjoint WrappedOp!(qs)
 ```
 
-Um literal resgatável pode ser usado como um valor, digamos para atribuir a uma variável ou passar para outro callable.
-Nesse caso, se o callable tiver parâmetros de tipo, eles deverão ser fornecidos como parte do valor que pode ser chamado.
-Um valor callable não pode ter nenhum parâmetro de tipo não especificado.
+Um literal calivel pode ser usado como um valor, por exemplo, atribuir a uma variável ou passar para outra chamada.
+Neste caso, se o callable tiver parâmetros de tipo, devem ser fornecidos como parte do valor calivel.
+Um valor callable não pode ter nenhum tipo de parâmetros não especificados.
 
 Por exemplo, se `Fun` for uma função com assinatura `'T1->Unit`:
 
@@ -208,56 +208,56 @@ let g = Fun;                 // This causes a compilation error.
 SomeOtherFun(Fun);           // This also causes a compilation error.
 ```
 
-## <a name="callable-invocation-expressions"></a>Expressões de invocação que podem ser chamadas
+## <a name="callable-invocation-expressions"></a>Expressões de invocação callable
 
-Dada uma expressão resgatável (operação ou função) e uma expressão de tupla do tipo de entrada da assinatura do callable, uma expressão de invocação pode ser formada acrescentando-se a expressão de tupla à expressão que pode ser chamada.
-O tipo da expressão de invocação é o tipo de saída da assinatura do callable.
+Dada uma expressão (operação ou função) insensível e uma expressão de tuple do tipo de entrada da assinatura do callable, uma expressão de invocação pode ser formada através da adesão da expressão de tuple à expressão calúgica.
+O tipo de expressão de invocação é o tipo de saída da assinatura do callable.
 
-Por exemplo, se `Op` for uma operação com assinatura `((Int, Qubit) => Double)`, `Op(3, qubit1)` será uma expressão do tipo `Double`.
-Da mesma forma, se `Sin` for uma função com assinatura `(Double -> Double)`, `Sin(0.1)` será uma expressão do tipo `Double`.
-Por fim, se `Builder` for uma função com assinatura `(Int -> (Int -> Int))`, `Builder(3)` será uma função de em para int.
+Por exemplo, se `Op` for uma operação com `((Int, Qubit) => Double)`de assinatura, `Op(3, qubit1)` é uma expressão de tipo `Double`.
+Da mesma forma, se `Sin` é uma função com `(Double -> Double)`de assinatura, `Sin(0.1)` é uma expressão de tipo `Double`.
+Finalmente, se `Builder` é uma função com assinatura `(Int -> (Int -> Int))`, então `Builder(3)` é uma função de Into to Int.
 
-Invocar o resultado de uma expressão com valor callable requer um par extra de parênteses em volta da expressão callable.
-Portanto, para invocar o resultado da chamada de `Builder` do parágrafo anterior, a sintaxe correta é:
+Invocar o resultado de uma expressão de valor calivel requer um par extra de parênteses em torno da expressão caluniável.
+Assim, para invocar o resultado da chamada `Builder` do parágrafo anterior, a sintaxe correta é:
 
 ```qsharp
 (Builder(3))(2)
 ```
 
-Ao invocar um callable-parametrizado de tipo, os parâmetros de tipo reais podem ser especificados entre colchetes angulares `<` e `>` após a expressão que pode ser chamada.
-Isso geralmente é desnecessário, pois o compilador Q # inferirá os tipos reais.
-Ele é necessário para o aplicativo parcial (veja abaixo) se um argumento com parâmetros de tipo for deixado não especificado.
-Às vezes, também é útil ao passar operações com functor diferentes para um callable.
+Ao invocar uma chamada de tipo parametrizada, os parâmetros do tipo real podem ser especificados dentro dos suportes angulares `<` e `>` após a expressão caltável.
+Isto é geralmente desnecessário, uma vez que o compilador Q# inferirá os tipos reais.
+É necessário para aplicação parcial (ver abaixo) se um argumento de tipo parametrizado não for deixado não especificado.
+Também é por vezes útil quando se passam operações com diferentes suportes de functor para um callable.
 
-Por exemplo, se `Func` tiver assinatura `('T1, 'T2, 'T1) -> 'T2`, `Op1` e `Op2` têm assinatura `(Qubit[] => Unit is Adj)`e `Op3` tem `(Qubit[] => Unit)`de assinatura, para invocar `Func` com `Op1` como o primeiro argumento, `Op2` como o segundo e `Op3` como o terceiro:
+Por exemplo, se `Func` tiver `('T1, 'T2, 'T1) -> 'T2`de assinatura , `Op1` e `Op2` têm `(Qubit[] => Unit is Adj)`de assinatura , e `Op3` tem `(Qubit[] => Unit)`de assinatura , para invocar `Func` com `Op1` como primeiro argumento, `Op2` como o segundo, e `Op3` como o terceiro:
 
 ```qsharp
 let combinedOp = Func<(Qubit[] => Unit), (Qubit[] => Unit is Adj)>(Op1, Op2, Op3);
 ```
 
-A especificação de tipo é necessária porque `Op3` e `Op1` têm tipos diferentes, portanto o compilador tratará isso como ambíguo sem a especificação.
+A especificação do tipo é necessária porque `Op3` e `Op1` têm tipos diferentes, por isso o compilador tratará isto como ambíguo sem a especificação.
 
-### <a name="partial-application"></a>Aplicativo parcial
+### <a name="partial-application"></a>Aplicação parcial
 
-Dada uma expressão resgatável, um novo callable pode ser criado fornecendo um subconjunto dos argumentos para o callable.
-Isso é chamado de _aplicativo parcial_.
+Dada uma expressão calépável, um novo callable pode ser criado fornecendo um subconjunto dos argumentos ao callable.
+Isto _chama-se aplicação parcial._
 
-Em Q #, um resgatável aplicado parcialmente é expresso escrevendo uma expressão de invocação normal, mas usando um sublinhado, `_`, para os argumentos não especificados.
-O callable que resultau tem o mesmo tipo de resultado que o callable de base, e as mesmas especializações para operações.
-O tipo de entrada do aplicativo parcial é simplesmente o tipo original com os argumentos especificados removidos.
+Em Q#, um callable parcialmente aplicado é expresso escrevendo uma expressão de invocação normal, mas usando um sublinhado, `_`, para os argumentos não especificados.
+O chamador resultante tem o mesmo tipo de resultado que a base callable, e as mesmas especializações para operações.
+O tipo de entrada da aplicação parcial é simplesmente o tipo original com os argumentos especificados removidos.
 
-Se uma variável mutável for passada como um argumento especificado ao criar um aplicativo parcial, o valor atual da variável será usado.
-Alterar o valor da variável subsequentemente não afetará o aplicativo parcial.
+Se uma variável mutável for aprovada como um argumento especificado ao criar uma aplicação parcial, o valor atual da variável é usado.
+A alteração do valor da variável posteriormente não terá impacto na aplicação parcial.
 
 Por exemplo, se `Op` tiver tipo `((Int, ((Qubit, Qubit), Double)) => Unit is Adj)`:
 
-- `Op(5,(_,_))` tem `(((Qubit,Qubit), Double) => Unit is Adj)`de tipo e, portanto, tem `Op(5,_)`.
-- `Op(_,(_,1.0))` tem `((Int, (Qubit,Qubit)) => Unit is Adj)`de tipo.
-- `Op(_,((q1,q2),_))` tem `((Int,Double) => Unit is Adj)`de tipo.
-   Observe que aplicamos a equivalência de tupla singleton aqui.
+- `Op(5,(_,_))` tem `(((Qubit,Qubit), Double) => Unit is Adj)`tipo, assim como `Op(5,_)`.
+- `Op(_,(_,1.0))` tem `((Int, (Qubit,Qubit)) => Unit is Adj)`tipo.
+- `Op(_,((q1,q2),_))` tem `((Int,Double) => Unit is Adj)`tipo.
+   Note que aplicamos equivalência de tuple singleton aqui.
 
-Se o chamado parcialmente aplicado tiver parâmetros de tipo que não podem ser inferidos pelo compilador, eles deverão ser fornecidos no site de invocação.
-O aplicativo parcial não pode ter nenhum parâmetro de tipo não especificado.
+Se o callable parcialmente aplicado tiver parâmetros de tipo que não podem ser inferidos pelo compilador, devem ser fornecidos no local de invocação.
+A aplicação parcial não pode ter parâmetros de tipo não especificados.
 
 Por exemplo, se `Op` tiver tipo `(('T1, Qubit, 'T1) => Unit : Adjoint)`:
 
@@ -269,43 +269,43 @@ let f3 = Op(_,qb, _);       // f3 generates a compilation error
 
 ### <a name="recursion"></a>Recursão
 
-Os chamadores do Q # podem ser recursivos direta ou indiretamente.
-Ou seja, uma operação ou função pode chamar a si mesma ou chamar outro callable que chama direta ou indiretamente a operação que pode ser chamada.
+Q# os callables são permitidos ser direta ou indiretamente recursivos.
+Ou seja, uma operação ou função pode chamar-se a si mesma, ou pode chamar outra chamada que, direta ou indiretamente, chama a operação de chamada.
 
-No entanto, há dois comentários importantes sobre o uso da recursão:
+No entanto, existem dois comentários importantes sobre a recura:
 
-- O uso da recursão nas operações provavelmente interfere em determinadas otimizações.
-  Isso pode ter um impacto significativo no tempo de execução do algoritmo.
-- Ao executar em um dispositivo Quantum real, o espaço de pilha pode ser limitado e, portanto, a recursão profunda pode levar a um erro de tempo de execução.
-  Em particular, o compilador e o tempo de execução do Q # não identificam e otimizam a recursão da cauda.
+- A utilização da recursição nas operações é suscetível de interferir com determinadas otimizações.
+  Isto pode ter um impacto substancial no tempo de execução do algoritmo.
+- Ao executar um dispositivo quântico real, o espaço da pilha pode ser limitado, e assim a recursão profunda pode levar a um erro de tempo de execução.
+  Em particular, o compilador Q# e o tempo de execução não identificam e otimizam a recursão da cauda.
 
-## <a name="tuple-expressions"></a>Expressões de tupla
+## <a name="tuple-expressions"></a>Expressões tuple
 
-Um literal de tupla é uma sequência de expressões de elemento do tipo apropriado, separadas por vírgulas, delimitadas em `(` e `)`.
-Por exemplo, `(1, One)` é uma expressão de `(Int, Result)`.
+Um tuple literal é uma sequência de expressões de elementos do tipo apropriado, separadas por vírgulas, fechadas em `(` e `)`.
+Por exemplo, `(1, One)` é uma expressão `(Int, Result)`.
 
-Além de literais, as únicas expressões de tupla são símbolos associados a valores de tupla, elementos de matriz de matrizes de tupla e invocações que retornam tuplas.
+Além dos literais, as únicas expressões de tuple são símbolos que estão ligados a valores de tuple, elementos marray de matrizes de tuple, e invocações calíveis que devolvem tuples.
 
-## <a name="user-defined-type-expressions"></a>Expressões de tipo definidas pelo usuário
+## <a name="user-defined-type-expressions"></a>Expressões de tipo definidas pelo utilizador
 
-Um literal de um tipo definido pelo usuário consiste no nome do tipo seguido por um literal de tupla do tipo de tupla base do tipo.
-Por exemplo, se `IntPair` for um tipo definido pelo usuário com base em `(Int, Int)`, `IntPair(2,3)` seria um literal válido desse tipo.
+Um literal de um tipo definido pelo utilizador consiste no nome do tipo seguido de um tuple literal do tipo de tuple base do tipo.
+Por exemplo, se `IntPair` é um tipo definido pelo utilizador com base em `(Int, Int)`, então `IntPair(2,3)` seria um literal válido desse tipo.
 
-Além de literais, as únicas expressões de um tipo definido pelo usuário são símbolos que são associados a valores desse tipo, elementos da matriz de matrizes desse tipo e invocações que retornam esse tipo.
+Para além dos literais, as únicas expressões de um tipo definido pelo utilizador são símbolos que estão ligados a valores desse tipo, elementos manuais de matrizes desse tipo, e invocações calíveis que devolvem esse tipo.
 
-## <a name="unwrap-expressions"></a>Desencapsular expressões
+## <a name="unwrap-expressions"></a>Desembrulhar Expressões
 
-Em Q #, o operador de desencapsulamento é um ponto de exclamação à direita `!`.
-Por exemplo, se `IntPair` for um tipo definido pelo usuário com o tipo subjacente `(Int, Int)`e `s` for uma variável com o valor `IntPair(2,3)`, `s!` seria `(2,3)`.
+Em Q#, o operador de desembrulhar é um ponto de exclamação `!`.
+Por exemplo, se `IntPair` é um tipo definido pelo utilizador com `(Int, Int)`de tipo subjacente, e `s` era uma variável com valor `IntPair(2,3)`, então `s!` seria `(2,3)`.
 
-Para tipos definidos pelo usuário definidos em termos de outros tipos definidos pelo usuário. o operador de desencapsulamento pode ser repetido; por exemplo, `s!!` indica o valor duplo desencapsulado de `s`.
-Portanto, se `WrappedPair` for um tipo definido pelo usuário com o tipo subjacente `IntPair`e `t` for uma variável com o valor `WrappedPair(IntPair(1,2))`, `t!!` seria `(1,2)`.
+Para tipos definidos pelo utilizador definidos em termos de outros tipos definidos pelo utilizador. O operador de desembrulhar pode ser repetido; por exemplo, `s!!` indica o valor duplamente desembrulhado de `s`.
+Assim, se `WrappedPair` é um tipo definido pelo utilizador com `IntPair`de tipo subjacente, e `t` é uma variável com valor `WrappedPair(IntPair(1,2))`, então `t!!` seria `(1,2)`.
 
-O operador de `!` tem precedência mais alta do que todos os outros operadores diferentes de `[]` para indexação e divisão de matriz.
-`!` e `[]` associar à posição; ou seja, `a[i]![3]` deve ser lido como `((a[i])!)[3]`: Pegue o elemento `i`' th de `a`, desenvolva-o e, em seguida, obtenha o terceiro elemento do valor não encapsulado (que deve ser uma matriz).
+O operador `!` tem uma precedência maior do que todos os outros operadores que não `[]` para indexação e corte de matriz.
+`!` e `[]` ligar posicionalmente; ou seja, `a[i]![3]` deve ser lido como `((a[i])!)[3]`: tome o `i`'th elemento de `a`, desembrulhe-o, e, em seguida, obtenha o 3º elemento do valor desembrulhado (que deve ser uma matriz).
 
-A precedência do operador de `!` tem um impacto que pode não ser óbvio.
-Se uma função ou operação retorna um valor que, em seguida, é desencapsulada, a função ou a chamada de operação deve ser colocada entre parênteses para que a tupla de argumento seja associada à chamada em vez de ser desencapsulada.
+A precedência do operador `!` tem um impacto que pode não ser óbvio.
+Se uma função ou operação devolver um valor que depois seja desembrulhado, a função ou chamada de operação deve ser encerrada em parênteses de modo a que o argumento se ligue à chamada e não ao desembrulhar.
 Por exemplo:
 
 ```qsharp
@@ -315,37 +315,37 @@ let g = Foo(arg)!;      // Syntax error
 
 ## <a name="array-expressions"></a>Expressões de matriz
 
-Um literal de matriz é uma sequência de uma ou mais expressões de elemento, separadas por vírgulas, delimitadas em `[` e `]`.
+Uma matriz literal é uma sequência de uma ou mais expressões de elementos, separadas por vírgulas, fechadas em `[` e `]`.
 Todos os elementos devem ser compatíveis com o mesmo tipo.
 
-Se o tipo de elemento comum for uma operação ou tipo de função, todos os elementos deverão ter os mesmos tipos de entrada e saída.
-O tipo de elemento da matriz dará suporte a qualquer transmissão functors que tenha suporte de todos os elementos.
-Por exemplo, se `Op1`, `Op2`e `Op3` todos são `Qubit[] => Unit`, mas `Op1` dá suporte a `Adjoint`, `Op2` dá suporte a `Controlled`e `Op3` dá suporte a:
+Se o tipo de elemento comum for um tipo de funcionamento ou de função, todos os elementos devem ter os mesmos tipos de entrada e saída.
+O tipo de elemento da matriz irá suportar todos os functors que sejam suportados por todos os elementos.
+Por exemplo, se `Op1`, `Op2`e `Op3` todos forem `Qubit[] => Unit`, mas `Op1` apoia `Adjoint`, `Op2` apoia `Controlled`, e `Op3` apoia ambos:
 
-- `[Op1, Op2]` é uma matriz de operações de `(Qubit[] => Unit)`.
-- `[Op1, Op3]` é uma matriz de operações de `(Qubit[] => Unit is Adj)`.
-- `[Op2, Op3]` é uma matriz de operações de `(Qubit[] => Unit is Ctl)`.
+- `[Op1, Op2]` é uma série de operações `(Qubit[] => Unit)`.
+- `[Op1, Op3]` é uma série de operações `(Qubit[] => Unit is Adj)`.
+- `[Op2, Op3]` é uma série de operações `(Qubit[] => Unit is Ctl)`.
 
-Literais de matriz vazios, `[]`, não são permitidos.
-Em vez disso, usando `new ★[0]`, em que `★` é um espaço reservado para um tipo adequado, permite criar a matriz desejada de comprimento zero.
+Não são permitidos os literais vazios, `[]`, não são permitidos.
+Em vez disso, a utilização de `new ★[0]`, onde `★` é um espaço reservado para um tipo adequado, permite criar a matriz de comprimento zero desejada.
 
-Dadas duas matrizes do mesmo tipo, o operador binário `+` pode ser usado para formar uma nova matriz que é a concatenação das duas matrizes.
+Tendo em conta duas matrizes do mesmo tipo, o operador de `+` binário pode ser usado para formar uma nova matriz que é a concatenação das duas matrizes.
 Por exemplo, `[1,2,3] + [4,5,6]` é `[1,2,3,4,5,6]`.
 
-### <a name="array-creation"></a>Criação de matriz
+### <a name="array-creation"></a>Criação de Matriz
 
-Dado um tipo e uma expressão `Int`, o operador `new` pode ser usado para alocar uma nova matriz do tamanho determinado.
-Por exemplo, `new Int[i+1]` alocaria uma nova matriz de `Int` com elementos `i+1`.
+Dado um tipo e uma expressão `Int`, o operador `new` pode ser utilizado para alocar um novo conjunto do tamanho dado.
+Por exemplo, `new Int[i+1]` atribuiria um novo conjunto de `Int` com elementos `i+1`.
 
-Os elementos de uma nova matriz são inicializados para um valor padrão dependente de tipo.
-Na maioria dos casos, essa é uma variação de zero.
+Os elementos de uma nova matriz são inicializados para um valor padrão dependente do tipo.
+Na maioria dos casos, esta é uma variação de zero.
 
-Para qubits e callableies, que são referências a entidades, não há nenhum valor padrão razoável.
-Portanto, para esses tipos, o padrão é uma referência inválida que não pode ser usada sem causar um erro de tempo de execução.
-Isso é semelhante a uma referência nula em linguagens como C# ou Java.
-As matrizes que contêm qubits ou callables devem ser inicializadas corretamente com valores não padrão antes que seus elementos possam ser usados com segurança. Rotinas de inicialização adequadas podem ser encontradas em <xref:microsoft.quantum.arrays>.
+Para qubits e callables, que são referências a entidades, não existe um valor razoável por defeito.
+Assim, para estes tipos, a predefinição é uma referência inválida que não pode ser utilizada sem causar um erro de tempo de execução.
+Isto é semelhante a uma referência C# nula em línguas como ou Java.
+As matrizes que contenham qubits ou callables devem ser corretamente inicializadas com valores não predefinidos antes de os seus elementos poderem ser utilizados com segurança. As rotinas de inicialização adequadas podem ser encontradas em <xref:microsoft.quantum.arrays>.
 
-Os valores padrão para cada tipo são:
+Os valores predefinidos para cada tipo são:
 
 Tipo | Predefinição
 ---------|----------
@@ -357,16 +357,16 @@ Tipo | Predefinição
  `Qubit` | _qubit inválido_
  `Pauli` | `PauliI`
  `Result` | `Zero`
- `Range` | O intervalo vazio, `1..1..0`
- `Callable` | _callable inválido_
+ `Range` | O alcance vazio, `1..1..0`
+ `Callable` | _inválido callable_
  `Array['T]` | `'T[0]`
 
-Os tipos de tupla são inicializados elemento por elemento.
+Os tipos tuple são inicializados elemento a elemento.
 
 
-### <a name="jagged-arrays"></a>Matrizes denteadas
+### <a name="jagged-arrays"></a>Matrizes Irregulares
 
-Uma matriz denteada, às vezes chamada de "matriz de matrizes", é uma matriz cujos elementos são matrizes. Os elementos de uma matriz denteada podem ser de tamanhos diferentes. O exemplo a seguir mostra como declarar e inicializar uma matriz denteada que representa uma tabela de multiplicação.
+Uma matriz irregular, às vezes chamada de "matrizes", é uma matriz cujos elementos são matrizes. Os elementos de uma matriz irregular podem ser de diferentes tamanhos. O exemplo que se segue mostra como declarar e inicializar uma matriz irregular representando uma tabela de multiplicação.
 
 ```qsharp
 let N = 4;
@@ -384,31 +384,31 @@ for (i in 1..N) {
 
 ### <a name="array-slices"></a>Fatias de matriz
 
-Dada uma expressão de matriz e uma expressão de `Range`, uma nova expressão pode ser formada usando o `[` e `]` operador de fatia de matriz.
+Dada a expressão da matriz e uma expressão `Range`, pode formar-se uma nova expressão utilizando o operador de `[` e `]` fatiade matriz.
 A nova expressão será do mesmo tipo que a matriz e conterá os itens de matriz indexados pelos elementos do `Range`, na ordem definida pelo `Range`.
-Por exemplo, se `a` estiver associado a uma matriz de `Double`s, `a[3..-1..0]` será uma expressão de `Double[]` que contém os quatro primeiros elementos de `a`, mas na ordem inversa, como aparecem no `a`.
+Por exemplo, se `a` está ligada a uma série de `Double`s, então `a[3..-1..0]` é uma expressão `Double[]` que contém os primeiros quatro elementos de `a` mas na ordem inversa, como aparecem em `a`.
 
-Se o `Range` estiver vazio, a fatia da matriz resultante será de comprimento zero.
+Se o `Range` estiver vazio, então a fatia de matriz resultante será de zero comprimento.
 
-Se a expressão de matriz não for um identificador simples, ela deverá ser colocada entre parênteses, para fatiar.
-Por exemplo, se `a` e `b` forem matrizes de `Int`s, uma fatia da concatenação seria expressa como:
+Se a expressão da matriz não for um identificador simples, deve ser fechada a parênteses para cortar.
+Por exemplo, se `a` e `b` forem ambos conjuntos de `Int`s, uma fatia da concatenação seria expressa como:
 
 ```qsharp
 (a+b)[1..2..7]
 ```
 
-Todas as matrizes em Q # são baseadas em zero.
-Ou seja, o primeiro elemento de uma matriz `a` sempre é `a[0]`.
+Todas as matrizes em Q# são baseadas em zero.
+Ou seja, o primeiro elemento de uma matriz `a` é sempre `a[0]`.
 
-A partir da nossa versão 0,8, damos suporte a expressões contextuais para divisão de intervalo. Em particular, os valores de início e término do intervalo podem ser omitidos no contexto de uma expressão de divisão do intervalo. Nesse caso, o compilador aplicará as regras a seguir para inferir os delimitadores pretendidos para o intervalo. 
+A partir do nosso lançamento 0.8, apoiamos expressões contextuais para corte de alcance. Em particular, os valores de início e fim de gama podem ser omitidos no contexto de uma expressão de corte de gama. Nesse caso, o compilador aplicará as seguintes regras para inferir os delimitadores pretendidos para a gama. 
 
-Por exemplo, se o valor de início do intervalo for omitido, o valor inicial inferido 
-- será zero se nenhuma etapa for especificada ou a etapa especificada for positiva e 
-- é o comprimento da matriz segmentada menos uma se a etapa especificada for negativa. 
+Por exemplo, se o valor de início de gama for omitido, então o valor de início inferido 
+- é zero se nenhum passo for especificado ou o passo especificado é positivo, e 
+- é o comprimento da matriz fatiada menos uma se o passo especificado for negativo. 
 
-Se o valor final do intervalo for omitido, o valor final inferido 
-- é o comprimento da matriz segmentada menos uma se nenhuma etapa for especificada ou a etapa especificada for positiva e 
-- será zero se a etapa especificada for negativa. 
+Se o valor final do intervalo for omitido, então o valor final inferido 
+- é o comprimento da matriz fatiada menos um se nenhum passo for especificado ou o passo especificado é positivo, e 
+- é zero se o passo especificado for negativo. 
 
 ```qsharp
 let arr = [1,2,3,4,5,6];
@@ -423,86 +423,86 @@ let slice9  = arr[...-1...];  // slice9 is [6,5,4,3,2,1];
 let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 ```
 
-## <a name="array-element-expressions"></a>Expressões de elementos de matriz
+## <a name="array-element-expressions"></a>Expressões do elemento matriz
 
-Dada uma expressão de matriz e uma expressão de `Int`, uma nova expressão pode ser formada usando o `[` e `]` operador de elemento de matriz.
+Dada a expressão da matriz e uma expressão `Int`, pode ser formada uma nova expressão utilizando o operador de elementos de `[` e `]` matriz.
 A nova expressão será do mesmo tipo que o tipo de elemento da matriz.
-Por exemplo, se `a` estiver associado a uma matriz de `Double`s, `a[4]` será uma expressão de `Double`.
+Por exemplo, se `a` está ligada a uma série de `Double`s, então `a[4]` é uma expressão `Double`.
 
-Se a expressão de matriz não for um identificador simples, ela deverá ser colocada entre parênteses para selecionar um elemento.
-Por exemplo, se `a` e `b` forem matrizes de `Int`s, um elemento da concatenação seria expresso como:
+Se a expressão da matriz não for um identificador simples, deve ser fechada a sua parênteses para selecionar um elemento.
+Por exemplo, se `a` e `b` forem ambos conjuntos de `Int`s, um elemento da constcatenação seria expresso como:
 
 ```qsharp
 (a+b)[13]
 ```
 
-Todas as matrizes em Q # são baseadas em zero.
-Ou seja, o primeiro elemento de uma matriz `a` sempre é `a[0]`.
+Todas as matrizes em Q# são baseadas em zero.
+Ou seja, o primeiro elemento de uma matriz `a` é sempre `a[0]`.
 
 
-## <a name="copy-and-update-expressions"></a>Expressões Copy-and-Update
+## <a name="copy-and-update-expressions"></a>Expressões de cópia e atualização
 
-Novas matrizes podem ser criadas a partir de existentes por meio de expressões de copiar e atualizar.
-Uma expressão de copiar e atualizar é uma expressão do formulário `expression1 w/ expression2 <- expression3`, em que `expression1` deve ser do tipo `T[]` para algum `T`de tipo. O segundo `expression2` define os índices dos elementos a serem modificados em comparação com a matriz em `expression1` e deve ser do tipo `Int` ou do tipo `Range`. Se `expression2` for do tipo `Int`, `expression3` terá que ser do tipo `T`. Se `expression2` for do tipo `Range`, `expression3` terá que ser do tipo `T[]`.
+Novas matrizes podem ser criadas a partir das existentes através de expressões de cópia e atualização.
+Uma expressão de cópia e atualização é uma expressão do formulário `expression1 w/ expression2 <- expression3`, onde `expression1` tem de ser de tipo `T[]` para algum tipo `T`. A segunda `expression2` define os índices dos elementos a modificar em comparação com a matriz em `expression1` e tem de ser de tipo `Int` ou de `Range`tipo . Se `expression2` for de tipo `Int`, `expression3` tem de ser do tipo `T`. Se `expression2` for de tipo `Range`, `expression3` tem de ser do tipo `T[]`.
 
-Uma expressão de copiar e atualizar `arr w/ idx <- value` constrói uma nova matriz com todos os elementos definidos para o elemento correspondente no `arr`, exceto para os elementos em `idx`, que são definidos como os que estão em `value`. Por exemplo, se `arr` contiver uma matriz `[0,1,2,3]`, então 
-- `arr w/ 0 <- 10` é a `[10,1,2,3]`de matriz.
-- `arr w/ 2 <- 10` é a `[0,1,10,3]`de matriz.
-- `arr w/ 0..2..3 <- [10,12]` é a `[10,1,12,3]`de matriz.
+Uma expressão de cópia e atualização `arr w/ idx <- value` constrói um novo conjunto com todos os elementos definidos para o elemento correspondente em `arr`, com exceção dos elementos `idx`, que estão definidos para os ou os `value`. Por exemplo, se `arr` contém uma matriz `[0,1,2,3]`, então 
+- `arr w/ 0 <- 10` é a matriz `[10,1,2,3]`.
+- `arr w/ 2 <- 10` é a matriz `[0,1,10,3]`.
+- `arr w/ 0..2..3 <- [10,12]` é a matriz `[10,1,12,3]`.
 
-Existem expressões semelhantes para itens nomeados em tipos definidos pelo usuário. Considere, por exemplo, o tipo 
+Existem expressões semelhantes para itens nomeados em tipos definidos pelo utilizador. Considere, por exemplo, o tipo 
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
 ```
-Se `c` contiver o valor do tipo `Complex(1.,-1.)`, `c w/ Re <- 0.` será uma expressão do tipo `Complex` que é avaliada como `Complex(0.,-1.)`.
+Se `c` contém o valor do tipo `Complex(1.,-1.)`, então `c w/ Re <- 0.` é uma expressão de tipo `Complex` que avalia para `Complex(0.,-1.)`.
 
-## <a name="conditional-expressions"></a>Expressões condicionais
+## <a name="conditional-expressions"></a>Expressões Condicionais
 
-Dadas duas outras expressões do mesmo tipo e uma expressão booliana, a expressão condicional pode ser formada usando o ponto de interrogação `?` e a barra vertical `|`.
+Tendo em conta duas outras expressões do mesmo tipo e uma expressão booleana, a expressão condicional pode ser formada utilizando o ponto de interrogação `?` e a barra vertical `|`.
 Por exemplo, `a==b ? c | d`.
-Neste exemplo, o valor da expressão condicional será `c` se `a==b` for true e `d` se for false.
+Neste exemplo, o valor da expressão condicional será `c` se `a==b` for verdade e `d` se for falsa.
 
-As duas expressões podem ser avaliadas como operações que têm as mesmas entradas e saídas, mas dão suporte a diferentes transmissão functors.
-Nesse caso, o tipo da expressão condicional é uma operação com as entradas e saídas que dão suporte a qualquer transmissão functors com suporte em ambas as expressões.
-Por exemplo, se `Op1`, `Op2`e `Op3` todos são `Qubit[]=>Unit`, mas `Op1` dá suporte a `Adjoint`, `Op2` dá suporte a `Controlled`e `Op3` dá suporte a:
+As duas expressões podem avaliar para operações que tenham as mesmas inputs e saídas, mas suportam diferentes functores.
+Neste caso, o tipo de expressão condicional é uma operação com as inputs e saídas que suporta todos os functors suportados por ambas as expressões.
+Por exemplo, se `Op1`, `Op2`e `Op3` todos forem `Qubit[]=>Unit`, mas `Op1` apoia `Adjoint`, `Op2` apoia `Controlled`, e `Op3` apoia ambos:
 
 - `flag ? Op1 | Op2` é uma operação `(Qubit[] => Unit)`.
 - `flag ? Op1 | Op3` é uma operação `(Qubit[] => Unit is Adj)`.
 - `flag ? Op2 | Op3` é uma operação `(Qubit[] => Unit is Ctl)`.
 
-Se qualquer uma das duas expressões de resultado possíveis incluir uma função ou uma chamada de operação, essa chamada só ocorrerá se o resultado for aquele que será o valor da chamada.
-Por exemplo, no caso `a==b ? C(qs) | D(qs)`, se `a==b` for true, a operação de `C` será invocada e, se for false, somente `D` será invocada.
-Isso é semelhante ao curto circuito em outras linguagens.
+Se uma das duas expressões de resultados possíveis incluir uma função ou chamada de operação, essa chamada só ocorrerá se esse resultado for o valor da chamada.
+Por exemplo, no caso `a==b ? C(qs) | D(qs)`, se `a==b` for verdade, então a operação `C` será invocada, e se for falsa, então apenas `D` serão invocadas.
+Isto é semelhante ao curto-circuito noutras línguas.
 
 
-## <a name="operator-precedence"></a>Precedência de operador
+## <a name="operator-precedence"></a>Precedência do operador
 
-Todos os operadores binários são associativos à direita, exceto para `^`.
+Todos os operadores binários são associativos de direito, com exceção `^`.
 
-Colchetes, `[` e `]`, para a divisão e a indexação de matriz, associe antes de qualquer operador.
+Os suportes, `[` e `]`, para corte e indexação de matrizes, ligam-se perante qualquer operador.
 
-O `Adjoint` transmissão functors e `Controlled` associado após a indexação da matriz, mas antes de todos os outros operadores.
+Os functores `Adjoint` e `Controlled` ligam-se após a indexação da matriz, mas antes de todos os outros operadores.
 
-Parênteses para operação e invocação de função também são associados antes de qualquer operador, mas após a indexação de matriz e transmissão functors.
+Os parênteses para a exploração e a invocação de funções também se ligam perante qualquer operador, mas após a indexação da matriz e functores.
 
-Operadores em ordem de precedência, do mais alto ao mais baixo:
+Operadores por ordem de precedência, dos mais elevados aos mais baixos:
 
-Operador | Arity | Descrição | Tipos de operando
+Operador | Rio Arity | Descrição | Tipos de operand
 ---------|----------|---------|---------------
- `!` à direita | Unário | Unwrap | Qualquer tipo definido pelo usuário
- `-`, `~~~`, `not` | Unário | Numérico negativo, complemento de bit-nte, negação lógica | `Int`, `BigInt` ou `Double` para `-`, `Int` ou `BigInt` para `~~~`, `Bool` para `not`
- `^` | binário | Potência de inteiro | `Int` ou `BigInt` para a base `Int` para o expoente
- `/`, `*`, `%` | binário | Divisão, multiplicação, módulo de inteiro | `Int`, `BigInt` ou `Double` para `/` e `*`, `Int` ou `BigInt` para `%`
- `+`, `-` | binário | Adição ou concatenação de cadeia de caracteres e matriz, subtração | `Int`, `BigInt` ou `Double`, além de `String` ou qualquer tipo de matriz para `+`
- `<<<`, `>>>` | binário | Deslocamento à esquerda, deslocamento à direita | `Int` ou `BigInt`
- `<`, `<=`, `>``>=` | binário | Comparações de menor que, menor que ou igual a, maior que, maior que ou igual a | `Int`, `BigInt` ou `Double`
- `==`, `!=` | binário | comparações iguais, não iguais | qualquer tipo primitivo
- `&&&` | binário | E | `Int` ou `BigInt`
- `^^^` | binário | XOR bits | `Int` ou `BigInt`
- <code>\|\|\|</code> | binário | OR-bit | `Int` ou `BigInt`
- `and` | binário | AND lógico | `Bool`
- `or` | binário | OR lógico | `Bool`
- `..` | Binary/ternário | Operador de intervalo | `Int`
- `?` `|` | Ternário | Condicional | `Bool` do lado esquerdo
-`w/` `<-` | Ternário | Copiar e atualizar | consulte [expressões de copiar e atualizar](#copy-and-update-expressions)
+ `!` de rasto | Unary | Desembrulhar | Qualquer tipo definido pelo utilizador
+ `-`, `~~~`, `not` | Unary | Negativa numérica, um complemento bitwise, negação lógica | `Int`, `BigInt` ou `Double` para `-`, `Int` ou `BigInt` para `~~~`, `Bool` para `not`
+ `^` | Binário | Poder inteiro | `Int` ou `BigInt` para a base, `Int` para o expoente
+ `/`, `*`, `%` | Binário | Divisão, multiplicação, modulo inteiro | `Int`, `BigInt` ou `Double` para `/` e `*`, `Int` ou `BigInt` para `%`
+ `+`, `-` | Binário | Adição ou cadeia e concatenação de cordas, subtração | `Int`, `BigInt` ou `Double`, adicionalmente `String` ou qualquer tipo de matriz para `+`
+ `<<<`, `>>>` | Binário | Turno da esquerda, turno da direita | `Int` ou `BigInt`
+ `<`, `<=`, `>`, `>=` | Binário | Comparações menos ou iguais, mais do que iguais, maiores do que iguais ou iguais | `Int`, `BigInt` ou `Double`
+ `==`, `!=` | Binário | comparações iguais e não iguais | qualquer tipo primitivo
+ `&&&` | Binário | Bitwise E | `Int` ou `BigInt`
+ `^^^` | Binário | Bitwise XOR | `Int` ou `BigInt`
+ <code>\|\|\|</code> | Binário | Bitwise OU | `Int` ou `BigInt`
+ `and` | Binário | Lógico E | `Bool`
+ `or` | Binário | Lógica OU | `Bool`
+ `..` | Binário/Ternary | Operador de gama | `Int`
+ `?` `|` | Ternário | Condicional | `Bool` para o lado esquerdo
+`w/` `<-` | Ternário | Cópia e atualização | ver [expressões de cópia e atualização](#copy-and-update-expressions)

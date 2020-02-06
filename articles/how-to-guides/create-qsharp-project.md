@@ -7,12 +7,12 @@ ms.date: 10/19/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.howto.createproject
-ms.openlocfilehash: 5fa32f14291fa2070b49e4bb3b720cbf31ee614b
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: c093284f1ea33b72d4d264992b0ba6bf6bc72782
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819897"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036445"
 ---
 # <a name="create-a-q-project-in-your-development-environment"></a>Crie um projeto Q# no seu ambiente de desenvolvimento
 
@@ -22,7 +22,7 @@ Um projeto Q# contém ficheiros Q# contendo código quântico, bem como um progr
 
 Escolha o seu ambiente e linguagem de desenvolvimento nas secções abaixo:
 
-* [Python](#create-a-python-project)
+* [python](#create-a-python-project)
 * [Cadernos Q# Jupyter](#create-a-q-jupyter-notebook-project)
 * [C#com Estúdio Visual](#create-a-c-project-on-windows-using-visual-studio)
 * [C#com código VS](#create-a-c-project-using-vs-code)
@@ -87,7 +87,7 @@ Agora pode continuar a desenvolver o seu programa quântico.
     jupyter notebook
     ```
 
-1. Navegue para o URL mostrado na linha de comandos. Por exemplo: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85 ]
+1. Navegue para o URL mostrado na linha de comandos. Por exemplo: [http://localhost:8888/?token=c790a52ba54f0cf77465c3c8983d776348285b0280d91b85]
 
 1. Uma página de Jupyter aparece no navegador. No separador **Ficheiros,** selecione **New** > **Q#** para criar um caderno Jupyter com um kernel Q#. Adicione o seguinte código à primeira célula de caderno:
 
@@ -173,7 +173,7 @@ Agora pode continuar o seu desenvolvimento quântico usando o Visual Studio Code
 
 1. Criar uma nova aplicação
 
-    ```bash
+    ```dotnetcli
     dotnet new console -lang Q# -o <project name>
     ```
 
@@ -187,7 +187,7 @@ Agora pode continuar o seu desenvolvimento quântico usando o Visual Studio Code
 
 1. Executar a aplicação
 
-    ```bash
+    ```dotnetcli
     dotnet run
     ```
 
@@ -195,6 +195,6 @@ Agora pode continuar o seu desenvolvimento quântico usando o Visual Studio Code
 
 Agora continua o teu desenvolvimento quântico, usando ferramentas de linha de comando.
 
-## <a name="whats-next"></a>O que se segue?
+## <a name="whats-next"></a>Passos seguintes?
 
 Agora que criou um projeto no seu ambiente preferido, pode continuar o seu desenvolvimento quântico.

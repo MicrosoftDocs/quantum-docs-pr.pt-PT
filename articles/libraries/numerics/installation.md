@@ -1,64 +1,64 @@
 ---
-title: Instalação e validação de biblioteca de numéricos | Microsoft Docs
-description: Instalação e validação de biblioteca de numéricos
+title: Instalação e Validação da Biblioteca Numérica Microsoft Docs
+description: Instalação e Validação da Biblioteca Numérica
 author: thomashaener
 ms.author: thhaner
-ms.date: 5/14/2019
+ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: 8369a6f342ee8e6f56b69bd1f2ce3df40e4093aa
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184632"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036462"
 ---
-# <a name="numerics-library-installation-and-validation"></a>Instalação e validação de biblioteca de numéricos
+# <a name="numerics-library-installation-and-validation"></a>Instalação e Validação da Biblioteca Numérica
 
-O kit de desenvolvimento Quantum fornece suporte para a funcionalidade de numéricos por meio do pacote NuGet [`Microsoft.Quantum.Numerics`](https://www.nuget.org/packages/Microsoft.Quantum.Numerics) .
+O Kit de Desenvolvimento Quântico fornece suporte para a funcionalidade numérica através do pacote [NuGet`Microsoft.Quantum.Numerics`.](https://www.nuget.org/packages/Microsoft.Quantum.Numerics)
 
-**Visual Studio > = 2019:** Se você estiver usando o Visual Studio 2019 ou posterior, poderá adicionar o pacote numéricos usando o Gerenciador de pacotes NuGet.
-Para fazer isso, selecione "gerenciar pacotes NuGet..." do item de menu "projeto" no Visual Studio.
+**Estúdio Visual >=2019:** Se estiver a utilizar o Visual Studio 2019 ou mais tarde, pode adicionar o pacote numérico utilizando o NuGet Package Manager.
+Para isso, selecione "Gerir pacotes NuGet..." do item do menu "Project" no Estúdio Visual.
 
-Na guia procurar, procure o nome do pacote "Microsoft. Quantum. Numerics"
+A partir do separador Browse, procure o nome de pacote "Microsoft.Quantum.Numerics"
 
 > [!NOTE]
-> Certifique-se de marcar "incluir pré-lançamento"
+> Certifique-se de marcar "Incluir pré-lançamento"
 
-Isso listará os pacotes disponíveis para download.
-Passar o mouse sobre "Microsoft. Quantum. Numerics" revela uma seta apontando para baixo à direita do número de versão.
-Clique na seta para instalar o pacote numéricos.
+Isto listará os pacotes disponíveis para download.
+Pairando sobre "Microsoft.Quantum.Numerics" revela uma seta virada para baixo para a direita do número da versão.
+Clique na seta para instalar o pacote numérico.
 
-Para obter mais detalhes, consulte o [Guia de interface do usuário do Gerenciador de pacotes](https://docs.microsoft.com/nuget/tools/package-manager-ui).
+Para mais detalhes, consulte o [guia UI do Gestor](https://docs.microsoft.com/nuget/tools/package-manager-ui)de Pacotes.
 
-Como alternativa, você pode usar o console do Gerenciador de pacotes para adicionar a biblioteca de numéricos ao seu projeto por meio da interface de linha de comando.
+Em alternativa, pode utilizar a Consola gestora de pacotes para adicionar a biblioteca numérica ao seu projeto através da interface da linha de comando.
 
-![](~/media/vs2017-nuget-console-menu.png)
+![](../../media/vs2017-nuget-console-menu.png)
 
-No console do Gerenciador de pacotes, execute o seguinte:
+A partir da consola gestora de pacotes, execute o seguinte:
 
 ```
 Install-Package Microsoft.Quantum.Numerics
 ```
 
-Para obter mais detalhes, consulte o [Guia do console do Gerenciador de pacotes](https://docs.microsoft.com/nuget/tools/package-manager-console).
+Para mais detalhes, consulte o guia de [consolas do Gestor](https://docs.microsoft.com/nuget/tools/package-manager-console)de Pacotes .
 
-**Linha de comando ou Visual Studio Code:** Usando a linha de comando por conta própria ou de dentro Visual Studio Code, você pode usar o comando `dotnet` para adicionar a referência do pacote NuGet ao seu projeto:
+**Linha de comando ou Código** de Estúdio Visual: Utilizando a linha de comando por si só ou dentro do Código visual do Estúdio, pode utilizar o comando `dotnet` para adicionar referência ao pacote NuGet ao seu projeto:
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.Quantum.Numerics
 ```
 
 
-## <a name="verifying-your-installation"></a>Verificando sua instalação
+## <a name="verifying-your-installation"></a>Verificar a sua instalação
 
-Como o restante do kit de desenvolvimento Quantum, a biblioteca de numéricos vem com exemplos que ajudam você a começar o mais rapidamente possível.
-Para testar a instalação usando esses exemplos, clone o [repositório principal de exemplos](https://github.com/Microsoft/Quantum) e, em seguida, execute um dos exemplos.
+Como o resto do Kit de Desenvolvimento Quântico, a biblioteca numérica vem com amostras que o ajudam a começar o mais rápido possível.
+Para testar a sua instalação utilizando estas amostras, clone o [repositório de amostras principais](https://github.com/Microsoft/Quantum) e, em seguida, executar uma das amostras.
 
-Para executar o exemplo de [`CustomModAdd`](https://github.com/microsoft/Quantum/tree/master/Numerics/CustomModAdd) :
+Para executar a amostra [`CustomModAdd`:](https://github.com/microsoft/Quantum/tree/master/samples/numerics/CustomModAdd)
 
 ```bash
 git clone https://github.com/Microsoft/Quantum.git
-cd Quantum/Numerics/CustomModAdd
+cd Quantum/samples/numerics/CustomModAdd
 dotnet run
 ```
