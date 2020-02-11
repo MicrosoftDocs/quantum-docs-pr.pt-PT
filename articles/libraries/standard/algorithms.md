@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 91f65b05c83367c2d2ece93212369dc448d8c2a8
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
-ms.translationtype: HT
+ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821019"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036360"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quânticos #
 
@@ -19,7 +19,7 @@ ms.locfileid: "76821019"
 
 *A Amplificação amplitude* é uma das ferramentas fundamentais da Computação Quântica. É a ideia fundamental que está subjacente à pesquisa, estimativa de amplitude de Grover e muitos algoritmos de aprendizagem automática quântica.  Existem muitas variantes, e em Q# fornecemos uma versão geral baseada na Amplificação de Amplitude Alheia com Reflexões Parciais para permitir a maior área de aplicação.
 
-A ideia central por trás da amplificação da amplitude é amplificar a probabilidade de um resultado desejado ocorrer através da realização de uma sequência de reflexões.  Estas reflexões giram o estado inicial mais próximo de um estado-alvo desejado, muitas vezes chamado de estado marcado.  Especificamente, se a probabilidade de medir o estado inicial para estar em estado marcado é $\sin^2(\theta)$ então depois de aplicar amplificação de amplitude $m$ vezes a probabilidade de sucesso se torna $\sin^2 ((2m+1)\theta)$.  Isto significa que se $\theta = \pi/[2(2n+1) $ por algum valor de $n$ então a amplificação amplitude é capaz de aumentar a probabilidade de sucesso para $100\\%$ após $n de iterações de amplificação amplitude.  Uma vez que $\teta = \sin^{-1}(\sqrt{\Pr(sucesso)}}}$isto significa que o número de iterações necessárias para obter um sucesso determinicamente é quadraticamente inferior ao número esperado necessário para encontrar um estado marcado não determinicamente usando amostras aleatórias.
+A ideia central por trás da amplificação da amplitude é amplificar a probabilidade de um resultado desejado ocorrer através da realização de uma sequência de reflexões.  Estas reflexões giram o estado inicial mais próximo de um estado-alvo desejado, muitas vezes chamado de estado marcado.  Especificamente, se a probabilidade de medir o estado inicial para estar em estado marcado é $\sin^2(\theta)$ então depois de aplicar amplificação de amplitude $m$ vezes a probabilidade de sucesso se torna $\sin^2 ((2m+1)\theta)$.  Isto significa que se $\theta = \pi/[2(2n+1)]] $ por algum valor de $n$ então a amplificação amplitude é capaz de aumentar a probabilidade de sucesso para $100\\%$ após $n de iterações de amplificação amplitude.  Uma vez que $\teta = \sin^{-1}(\sqrt{\Pr(sucesso)}}}$isto significa que o número de iterações necessárias para obter um sucesso determinicamente é quadraticamente inferior ao número esperado necessário para encontrar um estado marcado não determinicamente usando amostras aleatórias.
 
 Cada iteração da amplificação amplitude requer que sejam especificados dois operadores de reflexão. Especificamente, se $Q$ é o iterato de amplificação amplitude e $P_0$ é um operador de projetor no subespaço inicial e $P_1$ é o projetor sobre o subespaço marcado e ntão $Q=-(\boldone-2P_0)(\boldone -2P_1)$.  Recorde-se que um projetor é um operador hermitiano que tem valores eigenvalues $+1$ e $0$ e, como resultado, $(\boldone -2P_0)$ é unitário porque tem valores eigen que são raízes de unidade (neste caso $\pm $1$). Como exemplo, considere o caso da pesquisa de Grover com o estado inicial $H^{\otimes n} \ket{0}$ e estado marcado $\ket{m}$, $P_0 = H^{\otimes n}\ket{0}\bra{0}H^{\otimes n}$ e $P_1= \ket{m}\bra{m}$.  Na maioria das aplicações de amplificação de amplitude $P_0$ será um projetor para um estado inicial, o que significa que $P_0 = \boldone -2\ket{\psi}\bra{\psi}$ para algum vetor $\ket{\psi}$; no entanto, para a amplicação de amplitude alheia $P_0$ irá normalmente projetar em muitos estados quânticos (isto é, a multiplicidade do valor eigenvalue de $+1$ de $P_0$ é superior a $1$).
 
@@ -48,7 +48,8 @@ Além disso, a eficiência da *transformação quântica fourier* (QFT) supera e
 
 Como uma generalização aproximada do QFT, fornecemos a operação <xref:microsoft.quantum.canon.approximateqft> que permite mais otimizações através da poda de rotações que não são estritamente necessárias para a precisão algorítmica desejada.
 O QFT aproximado requer a operação disadica $Z rotação de $<xref:microsoft.quantum.intrinsic.rfrac> bem como a operação <xref:microsoft.quantum.intrinsic.h>.
-Presume-se que a entrada e a saída estão codificadas na codificação de grandes endianos (o bit/qubit mais baixo está à esquerda, tal como [a notação de ket).](xref:microsoft.quantum.concepts.dirac)
+Presume-se que a entrada e a saída estão codificadas na codificação de grandes endianos--- ou seja, o qubit com índice `0` é codificado na parte mais esquerda (mais alta) da representação binária do inteiro.
+Isto alinha-se com a [notação](xref:microsoft.quantum.concepts.dirac)de ket , como um registo de três qubits no estado $\ket{100}$ corresponde a $q_0$ estando no estado $\ket{1}$ enquanto $q_1$ e $q_2$ estão ambos no estado $\ket{0}$.
 O parâmetro de aproximação $a$ determina o nível de poda das rotações $Z$, ou seja, $a \in [0.n]$.
 Neste caso, todos os $Z$-rotações $2\pi/2^k$ onde $k > a$ são removidos do circuito QFT.
 Sabe-se que por $k \ge \log_2(n) + \log_2(1 / \epsilon) + 3$. pode-se vincular $\\[ ] \nome do operador{QFT} - \nome de operador{AQFT} \\\epsilon$.
@@ -56,7 +57,7 @@ Aqui $\\\cdot\\[$] é a norma do operador que neste caso é a raiz quadrada do m
 
 ## <a name="arithmetic"></a>Operações aritméticas ##
 
-Assim como a aritmética desempenha um papel central na computação clássica, também é indispensável na computação quântica.  Algoritmos como o algoritmo de factoring de Shor, métodos de simulação quântica, bem como muitos algoritmos oraculares dependem de operações aritméticas coerentes.  A maioria das abordagens para a aritmética se baseia maquetes em circuitos quânticos adder.  O adder mais simples pega numa entrada clássica $b$ e adiciona o valor a um estado quântico segurando um integer $\ket{a}$.  Matematicamente, o adder (que denotamos $\operatorname{Add}(b)$ para entrada clássica $b$) tem a propriedade que
+Tal como a aritmética desempenha um papel central na computação clássica, também é indispensável na computação quântica.  Algoritmos como o algoritmo de factoring de Shor, métodos de simulação quântica, bem como muitos algoritmos oraculares dependem de operações aritméticas coerentes.  A maioria das abordagens para a aritmética se baseia maquetes em circuitos quânticos adder.  O adder mais simples pega numa entrada clássica $b$ e adiciona o valor a um estado quântico segurando um integer $\ket{a}$.  Matematicamente, o adder (que denotamos $\operatorname{Add}(b)$ para entrada clássica $b$) tem a propriedade que
 
 $$ \operatorname{Add}(b)\ket{a}=\ket{a + b}.
 $$ Este circuito básico de adder é mais um incrementador do que um adder.

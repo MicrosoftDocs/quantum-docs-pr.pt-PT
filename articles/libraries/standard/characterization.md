@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 51124dc78feedf6d5c85fe224898e66a1c5ed459
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
-ms.translationtype: HT
+ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870355"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036258"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização quântica e Estatísticas #
 
@@ -82,13 +82,13 @@ O principal inconveniente dos métodos é que é computacionalmente exigente.
 Para entender como funciona este processo de inferência bayesiana, considere o caso de processamento de um único resultado `Zero`.
 Note que $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, de tal forma que $\ket{+}$ é o único eigenstate positivo de $X$ correspondente a `Zero`.
 A probabilidade de observar `Zero` para uma [medição`PauliX`](xref:microsoft.quantum.concepts.pauli) no primeiro qubit dado um estado de entrada {\cet{\psi}\ket{\phi}$ é assim \start{equation} \Pr(\texttt{{ { \ psi) = \left; \braket{+ \ \psi} \right^2.
-\end{equation} No caso da estimativa da fase iterativa, temos aquele $\ket{\psi} = R_1(m [\phi-theta]) \ket{+}$, de tal forma que \start{align} \Pr(\texttt{Zero} \ \phi; m,\theta) & = \left] \braket{+ [ R_1 (m[\phi-\theta]) +} \direita^^^2 \\\\ & = \left; \frac12 \left, \bra{0} + \bra{1} \right, \ket{0} + e^{i m [\phi-\theta]} \ket{1} \right; \right^2 \\\\ & = \left; \frac{1 + e^{i m [\phi-\theta]}}{2} \right\^\\2 \\ & = \cos^2(m [\phi-theta] / 2) \tag{★} \label{eq:phase-est-probabilidade}.
+\end{equation} No caso da estimativa da fase iterativa, temos aquele $\ket{\psi} = R_1(m [\phi-theta]) \ket{+}$, de tal forma que \start{align} \Pr(\texttt{Zero} \ \phi; m,\theta) & = \left] \braket{+ [ R_1 (m[\phi-\theta]) [ +} \direita^^^2 \\\\ & = \left; \frac12 \left, \bra{0} + \bra{1} \right, \ket{0} + e^{i m [\phi-\theta]} \ket{1} \right; \right^2 \\\\ & = \left; \frac{1 + e^{i m [\phi-\theta]}}{2} \right\^\\2 \\ & = \cos^2(m [\phi-theta] / 2) \tag{★} \label{eq:phase-est-probabilidade}.
 \end{align} Ou seja, a estimativa da fase iterativa consiste em aprender a frequência de oscilação de uma função sinusoidal, dada a capacidade de lançar uma moeda com um enviesamento dado por esse sinusoid.
 Seguindo a terminologia clássica tradicional, chamamos $\eqref{eq:phase-est-probabilidade}$ a *função de probabilidade* para estimativa de fase iterativa.
 
 Tendo observado uma `Result` da função de probabilidade de estimativa de fase iterativa, podemos então usar a regra de Bayes para prescrever o que devemos acreditar que a fase deve seguir essa observação.
 Concretamente, \start{equation} \Pr(\phi  d) = \frac{\Pr(d  \phi) \Pr(\phi){\int \Pr(d  \phi) \Pr(\phi){\mathrm d}\phi} \Pr(\phi), \end{equation} onde $d \in \\{\textt{Zero}, \texttt{One}\\}$ é um `Result`, e onde $\Pr(\phi)$ descreve as nossas crenças anteriores sobre $\phi$.
-Isto torna então explícita a natureza iterativa da estimativa da fase iterativa, uma vez que a distribuição posterior $\Pr(\phi / d)$ descreve as nossas crenças imediatamente precedidos da nossa observação da próxima `Result`.
+Isto torna então explícita a natureza iterativa da estimativa da fase iterativa, uma vez que a distribuição posterior $\Pr(\phi / d)$ descreve as nossas crenças imediatamente antes da nossa observação da próxima `Result`.
 
 Em qualquer momento durante este procedimento, podemos reportar a fase $\hat{\phi}$ inferida pelo controlador clássico como \start{equation} \hat{\phi \mathrel{:=} \expect[\phi ] \text{data}] = \int \phi \Pr(\phi [ \text{data}) {\mathrm d}\phi, \end{equação} onde o texto {{data}`Result`}
 

@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 1fd829c684502092bb7491b0f46b5f690320c941
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
+ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831023"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77036292"
 ---
 # <a name="develop-with-q--c"></a>Desenvolver com Q# +C#
 
@@ -23,7 +23,7 @@ Q# é construído para brincar bem com C#.NET idiomas -- especificamente . Você
 - [Q# C# + usando código de estúdio visual (Windows, Linux e Mac)](#VSC)
 - [Q # C# + usando a ferramenta de linha de comando `dotnet`](#command)
 
-## Desenvolver com Q# + C# usando o Visual Studio<a name="VS"></a>
+## Desenvolver com Q# + C# usando o Visual Studio <a name="VS"></a>
 
 O Visual Studio oferece um ambiente rico para desenvolver programas Q#. A extensão Q# Visual Studio contém modelos para ficheiros e projetos Q# bem como realce de sintaxe, conclusão de código e suporte intelliSense.
 
@@ -59,7 +59,7 @@ O Visual Studio oferece um ambiente rico para desenvolver programas Q#. A extens
 > [!NOTE]
 > * Se tiver vários projetos numa solução do Visual Studio, todos os projetos contidos na solução têm de estar na mesma pasta que a solução ou numa das suas subpastas.  
 
-## Desenvolver com Q# + C# usando código de estúdio visual<a name="VSC"></a>
+## Desenvolver com Q# + C# usando código de estúdio visual <a name="VSC"></a>
 
 O Visual Studio Code (VS Code) oferece um ambiente rico para desenvolver programas Q# no Windows, Linux e Mac.  A extensão do Código Q# VS inclui suporte para destaque de sintaxe Q#, conclusão de código e snippets de código Q#
 
@@ -111,7 +111,7 @@ Como é óbvio, também pode criar e executar programas Q# a partir da linha de 
 
 1. Instalar os modelos de projeto Quantum para .NET
 
-    ```bash
+    ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
@@ -121,8 +121,8 @@ Como é óbvio, também pode criar e executar programas Q# a partir da linha de 
 
     - Criar uma nova aplicação
 
-       ```bash
-       dotnet new console -lang Q# -o runSayHello
+       ```dotnetcli
+       dotnet new console -lang "Q#" -o runSayHello
        ```
 
     - Navegue para o novo diretório de aplicação
@@ -135,13 +135,13 @@ Como é óbvio, também pode criar e executar programas Q# a partir da linha de 
 
     - Executar a aplicação
 
-        ```bash
+        ```dotnetcli
         dotnet run
         ```
 
         Deverá ver o resultado seguinte: `Hello quantum world!`
 
     
-## <a name="whats-next"></a>O que se segue?
+## <a name="whats-next"></a>Passos seguintes?
 
 Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.write-program).
