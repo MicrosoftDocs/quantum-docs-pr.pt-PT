@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+name: EstimateClassificationProbabilities
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Dado um conjunto de amostras e um classificador sequencial, estima a probabilidade de classificação dessas amostras medindo repetidamente a saída do classificador em cada amostra.
+syntax: 'operation EstimateClassificationProbabilities (tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int) : Double[]'
+input:
+  content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int)'
+  types:
+  - name: tolerance
+    summary: A tolerância para permitir a codificação da amostra numa operação de preparação estatal.
+    isPrimitive: true
+    uid: Double
+  - name: model
+    summary: O modelo sequencial a utilizar para estimar as probabilidades de classificação das amostras dadas.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: Uma variedade de vetores de características para cada amostra ser classificada.
+    isArray: true
+    types:
+    - isArray: true
+      isPrimitive: true
+      uid: Double
+  - name: nMeasurements
+    summary: O número de measusrements a utilizar na estimativa da probabilidade de classificação.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Double[]
+  types:
+  - summary: Uma série de estimativas da probabilidade de classificação para cada amostra.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 83f3e35d0ef60d7925f8d62727d40d202220b851
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908672"

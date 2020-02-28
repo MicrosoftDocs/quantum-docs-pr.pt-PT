@@ -1,0 +1,39 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+name: ValidateSequentialClassifier
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Valida um dado classificador sequencial contra um conjunto de amostras pré-rotuladas.
+syntax: 'operation ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Microsoft.Quantum.MachineLearning.ValidationResults'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  types:
+  - name: model
+    summary: O modelo sequencial a ser validado.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: As amostras a utilizar para validar o modelo dado.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: tolerance
+    summary: A tolerância de aproximação à utilização na codificação de cada amostra como entrada para o classificador sequencial.
+    isPrimitive: true
+    uid: Double
+  - name: nMeasurements
+    summary: O número de medições a utilizar na classificação de cada amostra.
+    isPrimitive: true
+    uid: Int
+  - name: validationSchedule
+    summary: O calendário pelo qual as amostras devem ser retiradas do conjunto de validação.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+output:
+  content: Microsoft.Quantum.MachineLearning.ValidationResults
+  types:
+  - uid: microsoft.quantum.machinelearning.validationresults
+metadata:
+  ms.openlocfilehash: 211f5110f11a1128da4c73edbdfc948bc87e7959
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908485"

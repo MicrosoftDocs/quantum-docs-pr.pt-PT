@@ -4,21 +4,21 @@ name: MultiplexOperations
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma matriz de operações controladas por uma matriz de Estados de número.
+  Aplica uma série de operações controladas por uma série de estados de números.
 
 
-  Ou seja, aplica a operação unitário controlada por multiplicação $U $ que aplica um $V unitário _j $ quando controlado $n pelo estado do número $ qubit $ \ket{j} $.
+  Ou seja, aplica-se a operação unitária controlada pela Multiplicá-$U$ que aplica um $V_j$ unitário quando controlado por $n estado de número de $\ket {j}$.
 
 
-  $U = \sum ^ {2 ^ n-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-remarks: '`coefficients` será preenchido com elementos de identidade se menos de $2 ^ n $ forem especificados. Essa implementação usa $n-$1 ancilla qubits.'
+  $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
+remarks: '`coefficients` serão acolchoados com elementos de identidade se forem especificados menos de $2^n$. Esta implementação utiliza $n - qubits auxillary de 1$.'
 syntax: "operation MultiplexOperations (unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
-references: '- Para a primeira simulação de Quantum com aumento de velocidade Quantum Andrew M. Childs, Dmitri Maslov, Yunseong, Neil J. Ross, iuan Su https://arxiv.org/abs/1711.10980'
+references: '- Rumo à primeira simulação quântica com a aceleração quântica Andrew M. Childs, Dmitri Maslov, Yunseong Nam, Neil J. Ross, Yuan Su https://arxiv.org/abs/1711.10980'
 input:
   content: "(unitaries : ('T => Unit is Adj + Ctl)[], index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaries
-    summary: Matriz de até $2 ^ n $ operações de unitário. A operação $j $ th é indexada pelo estado do número $ \ket{j} $ codificado em um formato little-endian.
+    summary: Conjunto de até $2^n$ operações unitárias. A operação $j$th é indexada pelo estado número $\ket{j}$ codificado em formato pequeno-endian.
     isArray: true
     isOperation: true
     input:
@@ -33,10 +33,10 @@ input:
     - Adjoint
     - Controlled
   - name: index
-    summary: $n o registro de controle $-qubit que codifica Estados de número $ \ket{j} $ no formato little-endian.
+    summary: $n registo de controlo de qubit que codifica o número indica $\ket{j}$ em formato pequeno endiano.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registro de qubit genérico que $V _j $ age em.
+    summary: Registo genérico de qubit que $V_j$ age.
     uid: "'T"
     isLocal: true
 output:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: bd248ece9d76729a33db3dfead177fa68909f438
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 93fa7ef1f5a7374f970098eb5fa865e02854d1ff
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223501"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77906717"

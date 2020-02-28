@@ -1,0 +1,58 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoelementca
+name: ApplyToElementCA
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: >-
+  Aplica uma operação a um dado elemento de uma matriz.
+
+
+  Dada uma operação `op`, um `index`de índicee um conjunto de metas `targets`, aplica-se `op(targets[index])`.
+syntax: "operation ApplyToElementCA (op : ('T => Unit is Adj + Ctl), index : Int, targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T => Unit is Adj + Ctl), index : Int, targets : 'T[])"
+  types:
+  - name: op
+    summary: Uma operação a ser aplicada.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: index
+    summary: Um índice na variedade de alvos.
+    isPrimitive: true
+    uid: Int
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo de entrada da operação a aplicar.
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.canon.applytoelement
+- microsoft.quantum.canon.applytoelementc
+- microsoft.quantum.canon.applytoelementa
+metadata:
+  ms.openlocfilehash: 1a1ef74527720f326c2fdbfbdd53e72469a5f520
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908026"

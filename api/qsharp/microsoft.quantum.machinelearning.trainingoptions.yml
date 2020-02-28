@@ -1,0 +1,28 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.trainingoptions
+name: TrainingOptions
+type: newtype
+namespace: Microsoft.Quantum.MachineLearning
+summary: Uma coleção de opções a utilizar na formação de classificadores quânticos.
+remarks: >-
+  Esta UDT não deve ser criada diretamente, mas deve ser especificada chamando @"microsoft.quantum.machinelearning.defaulttrainingoptions" e, em seguida, utilizando o operador `w/` para anular diferentes incumprimentos.
+
+
+  Por exemplo, utilizar 100.000 medições e, no máximo, 8 épocas de treino:
+
+
+  ```Q#
+
+  let options = DefaultTrainingOptions()
+                w/ NMeasurements <- 100000
+                w/ MaxEpochs <- 8;
+  ```
+syntax: newtype TrainingOptions = (Double, Double, Int, Int, Int, Int, Double, Int, (String -> Unit));
+references: '- [arXiv:1804.00633](https://arxiv.org/abs/1804.00633)'
+metadata:
+  ms.openlocfilehash: adc7056880a32c369a0fc594b68f5f2d9f4015f5
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909029"

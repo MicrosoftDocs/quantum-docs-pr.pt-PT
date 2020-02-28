@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+name: TrainSequentialClassifierAtModel
+type: operation
+namespace: Microsoft.Quantum.MachineLearning
+summary: Dada a estrutura de um classificador sequencial, treina o classificador num determinado conjunto de formação rotulado, a partir de um determinado modelo.
+syntax: 'operation TrainSequentialClassifierAtModel (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
+input:
+  content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
+  types:
+  - name: model
+    summary: O modelo sequencial a ser usado como ponto de partida para o treino.
+    uid: microsoft.quantum.machinelearning.sequentialmodel
+  - name: samples
+    summary: Um conjunto de dados de formação rotulados que serão usados para realizar treinos.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.labeledsample
+  - name: options
+    summary: Configuração a utilizar durante o treino; ver @"microsoft.quantum.machinelearning.trainingoptions" e @"microsoft.quantum.machinelearning.defaulttrainingoptions" para mais detalhes.
+    uid: microsoft.quantum.machinelearning.trainingoptions
+  - name: trainingSchedule
+    summary: Um horário de amostragem a utilizar ao selecionar amostras dos dados de treino durante as etapas de treino.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: validationSchedule
+    summary: Um calendário de amostragem a utilizar ao selecionar amostras dos dados de treino ao selecionar qual o ponto de partida resultou na melhor pontuação do classificador.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+output:
+  content: (Microsoft.Quantum.MachineLearning.SequentialModel, Int)
+  types:
+  - summary: >-
+      - Uma parametrização do classificador dado e um enviesamento entre as duas classes, correspondendo ao melhor resultado de cada um dos pontos de partida.
+
+      - O número de falhas observadas no melhor modelo de classificação.
+    types:
+    - uid: microsoft.quantum.machinelearning.sequentialmodel
+    - isPrimitive: true
+      uid: Int
+seeAlso:
+- microsoft.quantum.machinelearning.trainsequentialclassifier
+- microsoft.quantum.machinelearning.validatesequentialclassifier
+metadata:
+  ms.openlocfilehash: 5b574d72115518389124d850a96f9fbcd669bd4e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909046"

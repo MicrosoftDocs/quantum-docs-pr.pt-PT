@@ -1,0 +1,42 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.misclassifications
+name: Misclassifications
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Dado um conjunto de etiquetas inferidas e um conjunto de etiquetas corretas, os índices de devolução de devoluções para onde cada conjunto de etiquetas difere.
+examples: >-
+  ```Q#
+
+  let misclassifications = Misclassifications([0, 1, 0, 0], [0, 1, 1, 0]);
+
+  Message($"{misclassifications}"); // Will print [2].
+
+  ```
+syntax: 'function Misclassifications (inferredLabels : Int[], actualLabels : Int[]) : Int[]'
+input:
+  content: '(inferredLabels : Int[], actualLabels : Int[])'
+  types:
+  - name: inferredLabels
+    summary: As etiquetas inferidas para um determinado conjunto de treino ou validação.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: actualLabels
+    summary: Os verdadeiros rótulos para um determinado conjunto de treino ou validação.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int[]
+  types:
+  - summary: Uma série de índices `idx` tal que `inferredLabels[idx] != actualLabels[idx]`.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+metadata:
+  ms.openlocfilehash: 3e8d0bfcacb97e10e861297078b70396e45705fd
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908774"

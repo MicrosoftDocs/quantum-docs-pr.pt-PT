@@ -1,74 +1,78 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.logical
 name: Microsoft.Quantum.Logical
-summary: " # <a name=\"summary\"></a>Resumo\n Contém funções para trabalhar com expressões lógicas e a lógica booliana."
+summary: " # <a name=\"summary\"></a>Resumo\n Contém funções para trabalhar com expressões lógicas e lógica booleana."
 functions:
 - uid: microsoft.quantum.logical.and
-  summary: Retorna a conjunção booliana de dois valores.
+  summary: Devolve a junção booleana de dois valores.
 - uid: microsoft.quantum.logical.conditioned
-  summary: Retorna um dos dois valores, dependendo do valor de uma condição booliana.
+  summary: Devolve um de dois valores, dependendo do valor de uma condição booleana.
 - uid: microsoft.quantum.logical.equalb
-  summary: Retorna true se e somente se duas entradas forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 - uid: microsoft.quantum.logical.equalc
-  summary: Retorna true se e somente se duas entradas forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 - uid: microsoft.quantum.logical.equalcp
-  summary: Retorna true se e somente se duas entradas forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 - uid: microsoft.quantum.logical.equald
-  summary: Retorna true se e somente se duas entradas forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 - uid: microsoft.quantum.logical.equali
-  summary: Retorna true se e somente se duas entradas forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 - uid: microsoft.quantum.logical.equall
-  summary: Retorna true se e somente se duas entradas forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 - uid: microsoft.quantum.logical.equalr
-  summary: Retorna true se e somente se duas entradas forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 - uid: microsoft.quantum.logical.greaterthand
-  summary: Retorna true se e somente se um número for maior que outro número.
+  summary: Retorna verdadeiro se e apenas se um número for maior que outro número.
 - uid: microsoft.quantum.logical.greaterthani
-  summary: Retorna true se e somente se um número for maior que outro número.
+  summary: Retorna verdadeiro se e apenas se um número for maior que outro número.
 - uid: microsoft.quantum.logical.greaterthanl
-  summary: Retorna true se e somente se um número for maior que outro número.
+  summary: Retorna verdadeiro se e apenas se um número for maior que outro número.
 - uid: microsoft.quantum.logical.greaterthanorequald
-  summary: Retorna true se e somente se um número for maior ou igual a outro número.
+  summary: Retorna verdadeiro se e apenas se um número for maior ou igual a outro número.
 - uid: microsoft.quantum.logical.greaterthanorequali
-  summary: Retorna true se e somente se um número for maior ou igual a outro número.
+  summary: Retorna verdadeiro se e apenas se um número for maior ou igual a outro número.
 - uid: microsoft.quantum.logical.greaterthanorequall
-  summary: Retorna true se e somente se um número for maior ou igual a outro número.
+  summary: Retorna verdadeiro se e apenas se um número for maior ou igual a outro número.
 - uid: microsoft.quantum.logical.lessthand
-  summary: Retorna true se e somente se um número for menor que outro número.
+  summary: Retorna verdadeiro se e apenas se um número for inferior a outro número.
 - uid: microsoft.quantum.logical.lessthani
-  summary: Retorna true se e somente se um número for menor que outro número.
+  summary: Retorna verdadeiro se e apenas se um número for inferior a outro número.
 - uid: microsoft.quantum.logical.lessthanl
-  summary: Retorna true se e somente se um número for menor que outro número.
+  summary: Retorna verdadeiro se e apenas se um número for inferior a outro número.
 - uid: microsoft.quantum.logical.lessthanorequald
-  summary: Retornará true se e somente se um número for menor ou igual a outro número.
+  summary: Retorna verdadeiro se e apenas se um número for inferior ou igual a outro número.
 - uid: microsoft.quantum.logical.lessthanorequali
-  summary: Retornará true se e somente se um número for menor ou igual a outro número.
+  summary: Retorna verdadeiro se e apenas se um número for inferior ou igual a outro número.
 - uid: microsoft.quantum.logical.lessthanorequall
-  summary: Retornará true se e somente se um número for menor ou igual a outro número.
+  summary: Retorna verdadeiro se e apenas se um número for inferior ou igual a outro número.
+- uid: microsoft.quantum.logical.nearlyequald
+  summary: Retorna verdadeiro se e apenas se duas inputs forem quase iguais (isto é, dentro de uma tolerância de 1e-12).
 - uid: microsoft.quantum.logical.not
-  summary: Retorna a negação booliana de um valor.
+  summary: Devolve a negação booleana de um valor.
 - uid: microsoft.quantum.logical.notequalb
-  summary: Retorna true se e somente se duas entradas não forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 - uid: microsoft.quantum.logical.notequalc
-  summary: Retorna true se e somente se duas entradas não forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 - uid: microsoft.quantum.logical.notequalcp
-  summary: Retorna true se e somente se duas entradas não forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 - uid: microsoft.quantum.logical.notequald
-  summary: Retorna true se e somente se duas entradas não forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 - uid: microsoft.quantum.logical.notequali
-  summary: Retorna true se e somente se duas entradas não forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 - uid: microsoft.quantum.logical.notequall
-  summary: Retorna true se e somente se duas entradas não forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 - uid: microsoft.quantum.logical.notequalr
-  summary: Retorna true se e somente se duas entradas não forem iguais.
+  summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
+- uid: microsoft.quantum.logical.notnearlyequald
+  summary: Retorna verdadeiro se e apenas se duas inputs não forem quase iguais (isto é, não estão dentro de uma tolerância de 1e-12).
 - uid: microsoft.quantum.logical.or
-  summary: Retorna a disjunção booliana de dois valores.
+  summary: Devolve a disjunção booleana de dois valores.
 - uid: microsoft.quantum.logical.xor
-  summary: Retorna a disjunção exclusiva booliana de dois valores.
+  summary: Devolve a disjunção exclusiva booleana de dois valores.
 metadata:
-  ms.openlocfilehash: 12f462356dfe7ae4bf7c60110e71a9928bc8c178
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 356a31be888d7ed3a96e219f8f7b31151179d3eb
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056285"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905901"

@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.sampled
+name: Sampled
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Amostras de uma determinada matriz, usando o horário dado.
+syntax: "function Sampled (schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[]) : 'T[]"
+input:
+  content: "(schedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, values : 'T[])"
+  types:
+  - name: schedule
+    summary: Um horário a utilizar em valores de amostragem.
+    uid: microsoft.quantum.machinelearning.samplingschedule
+  - name: values
+    summary: Uma série de valores a serem amostrados.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Uma série de elementos de valores, seguindo o horário dado.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+metadata:
+  ms.openlocfilehash: 6b6693f43e2684f3195c2f7ddbeb0268759020db
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908604"

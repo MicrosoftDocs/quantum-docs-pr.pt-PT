@@ -1,0 +1,31 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.localrotationslayer
+name: LocalRotationsLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Devolve uma série de rotações descontroladas (qubit único) ao longo de um determinado eixo, com uma rotação para cada qubit num registo, parametrizada por parâmetros de modelo distintos.
+syntax: 'function LocalRotationsLayer (nQubits : Int, axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(nQubits : Int, axis : Pauli)'
+  types:
+  - name: nQubits
+    summary: O número de qubits agidos pela camada dada.
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: O eixo de rotação para cada rotação na camada dada.
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: Uma série de rotações controladas sobre o eixo dado, uma em cada uma das `nQubits` qubits.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: 51883447aedaf43b5134d9adec6a6fafbe1bf399
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77909284"

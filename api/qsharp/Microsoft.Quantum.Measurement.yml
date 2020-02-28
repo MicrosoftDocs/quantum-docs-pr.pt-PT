@@ -16,10 +16,12 @@ operations:
   summary: Mede um único qubit na base `Z`, e repõe-o para o estado de base padrão 000 a seguir à medição.
 - uid: microsoft.quantum.measurement.multim
   summary: Mede cada qubit numa determinada matriz na base padrão.
+- uid: microsoft.quantum.measurement.settobasisstate
+  summary: Define um qubit para um determinado estado de base computacional medindo o qubit e aplicando um pouco de flip se necessário.
 metadata:
-  ms.openlocfilehash: 7964ab7b090fdff8f1a8af556e901dbab68cff9f
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: dc74db43b60728bf9924c05346bae4c6b329a265
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870035"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905765"
