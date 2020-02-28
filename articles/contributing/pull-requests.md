@@ -1,68 +1,68 @@
 ---
-title: Abrindo solicitações pull | Microsoft Docs
-description: Abrindo solicitações pull
+title: Pedidos de abertura de pull
+description: Saiba como submeter um pedido de pull GitHub quando estiver pronto para contribuir com código ou documentação para o Kit de Desenvolvimento Quântico da Microsoft.
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: d70a0a0319d14cfdae4910b897733d77b236f2f9
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73183731"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907465"
 ---
-# <a name="opening-pull-requests"></a>Abrindo solicitações pull #
+# <a name="opening-pull-requests"></a>Abrir Pedidos Pull #
 
-Toda a documentação do kit de desenvolvimento Quantum é gerenciada usando o sistema de controle de versão do git por meio do uso de vários repositórios hospedados no GitHub.
-O uso do git e do GitHub juntos torna mais fácil colaborar amplamente no kit de desenvolvimento Quantum.
-Em particular, qualquer repositório git pode ser clonado ou bifurcado para fazer uma cópia completamente independente desse repositório.
-Isso permite que você trabalhe em sua contribuição com as ferramentas e em um ritmo que preferir.
+Toda a documentação para o Kit de Desenvolvimento Quântico é gerida utilizando o sistema de controlo da versão Git através da utilização de vários repositórios hospedados no GitHub.
+A utilização do Git e do GitHub em conjunto facilita a colaboração ampla no Kit de Desenvolvimento Quântico.
+Em particular, qualquer repositório Git pode ser clonado ou bifurcado para fazer uma cópia completamente independente desse repositório.
+Isto permite-lhe trabalhar a sua contribuição com as ferramentas e a um ritmo que prefere.
 
-Quando estiver pronto, você pode nos enviar uma solicitação para incluir sua contribuição em nosso repositórios, usando a funcionalidade de _solicitação de pull_ do github.
-A página de cada solicitação de pull inclui detalhes de todas as alterações que fazem sua contribuição, uma lista de comentários sobre sua contribuição e um conjunto de ferramentas de revisão que outros membros da Comunidade podem usar para fornecer comentários e conselhos.
+Quando estiver pronto, pode enviar-nos um pedido para incluir a sua contribuição nos nossos repos, utilizando a funcionalidade de pedido de _puxão_ do GitHub.
+A página de cada pedido de pull inclui detalhes de todas as alterações que fazem a sua contribuição, uma lista de comentários sobre a sua contribuição, e um conjunto de ferramentas de revisão que outros membros da comunidade podem usar para fornecer feedback e conselhos.
 
 > [!NOTE]
-> Embora um tutorial completo sobre o Git esteja além do escopo deste guia, podemos sugerir os links a seguir para obter mais recursos no aprendizado do git:
+> Enquanto um tutorial completo sobre Git está fora do âmbito deste guia, podemos sugerir os seguintes links para mais recursos na aprendizagem de Git:
 >
-> - [Aprenda sobre o Git](https://www.atlassian.com/git): um conjunto de tutoriais do git do Atlassian.
-> - [Controle de versão no Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol): um guia sobre como usar Visual Studio Code como uma GUI para git.
-> - [Laboratório de aprendizado do GitHub](https://lab.github.com/): um conjunto de cursos online para usar git, GitHub e tecnologias relacionadas.
-> - [Visualizando o Git](https://git-school.github.io/visualizing-git/): uma ferramenta interativa para visualizar como os comandos git alteram o estado de um repositório.
-> - [Controle de versão com git (EPQIS 2016)](https://nbviewer.jupyter.org/github/QuinnPhys/PythonWorkshop-science/blob/master/lecture-1-scicomp-tools-part1.ipynb#Version-Control-with-Git-(50-Minutes)): um tutorial do git voltado para A computação científica.
-> - [Aprenda a ramificação do git](https://learngitbranching.js.org/): um conjunto interativo de quebra-cabeças e REBASE para ajudar a aprender novos recursos do git.
+> - [Learn Git](https://www.atlassian.com/git): Um conjunto de tutoriais git da Atlassian.
+> - [Controlo de versão no Código do Estúdio Visual](https://code.visualstudio.com/docs/editor/versioncontrol): Um guia sobre como usar o Código do Estúdio Visual como GUI para Git.
+> - [GitHub Learning Lab](https://lab.github.com/): Um conjunto de cursos online para a utilização de Git, GitHub e tecnologias relacionadas.
+> - [Visualização do Git](https://git-school.github.io/visualizing-git/): Uma ferramenta interativa para visualizar como os comandos Git mudam o estado de um repositório.
+> - [Controlo de Versão com Git (EPQIS 2016)](https://nbviewer.jupyter.org/github/QuinnPhys/PythonWorkshop-science/blob/master/lecture-1-scicomp-tools-part1.ipynb#Version-Control-with-Git-(50-Minutes)): Um tutorial git orientado para a computação científica.
+> - [Learn Git Branching](https://learngitbranching.js.org/): Um conjunto interativo de quebra-cabeças de ramificação e rebasquepara ajudar a aprender novas funcionalidades git.
 
-## <a name="what-is-a-pull-request"></a>O que é uma solicitação de pull? ##
+## <a name="what-is-a-pull-request"></a>O que é um pedido de puxar? ##
 
-Dito isso, é útil levar alguns minutos para dizer o que **é**uma solicitação pull.
-Ao trabalhar com o Git, todas as alterações são representadas como _confirmações_ que descrevem como essas alterações estão relacionadas ao estado do repositório antes dessas alterações.
-Em geral, desenhamos diagramas nos quais as confirmações são desenhadas como círculos com setas de confirmações anteriores.
+Dito o que precede, é útil tirar alguns momentos para dizer o que **é**um pedido de atração.
+Ao trabalhar com Git, quaisquer alterações são representadas como _compromissos_ que descrevem como essas alterações estão relacionadas com o estado do repositório antes dessas alterações.
+Muitas vezes desenhamos diagramas em que os compromissos são desenhados como círculos com setas de compromissos anteriores.
 
-Suponha que você tenha iniciado uma contribuição em uma _ramificação_ chamada `feature`.
-Em seguida, sua bifurcação da **Microsoft/Quantum** pode ser semelhante a esta:
+Suponha que tenha começado uma contribuição num _ramo_ chamado `feature`.
+Então o seu garfo de **Microsoft/Quantum** pode parecer algo assim:
 
-![](~/media/git-workflow-step0.png)
+![Um ramo de trabalho em GitHub](~/media/git-workflow-step0.png)
 
-Se você fizer as alterações em seu repositório local, poderá efetuar _pull_ de alterações de outro repositório em seu para obter as alterações que ocorreram upstream.
+Se fizer as suas alterações no seu repositório local, pode _retirar_ alterações de outro repositório para o seu para acompanhar quaisquer alterações que ocorreram a montante.
 
-![](~/media/git-workflow-step1.png)
+![Puxando e fundindo mudanças de um repo a montante](~/media/git-workflow-step1.png)
 
-As solicitações de pull funcionam da mesma forma, mas na ordem inversa: quando você abre uma solicitação de pull, solicita o repositório upstream para efetuar o pull da sua contribuição.
+Os pedidos de puxão funcionam da mesma forma, mas ao contrário: quando abre um pedido de puxão, pede-se que o repositório a montante puxe a sua contribuição.
 
-![](~/media/git-workflow-step2.png)
+![Solicitando para puxar as suas alterações de volta para o repo original](~/media/git-workflow-step2.png)
 
-Quando você abre uma solicitação de pull para um de nossos repositórios, o GitHub oferecerá uma oportunidade para que outras pessoas na Comunidade vejam um resumo das suas alterações, para comentar sobre elas e para fazer sugestões de como ajudar a fazer uma contribuição ainda melhor.
+Ao abrir um pedido de atração a um dos nossos repositórios, o GitHub oferecerá uma oportunidade para outros da comunidade verem um resumo das suas alterações, para comentá-las e fazer sugestões sobre como ajudar a dar uma contribuição ainda melhor.
 
-![](~/media/pull-request-header.png)
+![Screenshot de um pedido de puxar no GitHub](~/media/pull-request-header.png)
 
-O uso desse processo nos ajuda a usar a funcionalidade do GitHub para melhorar as contribuições e manter um produto de alta qualidade para a comunidade de programação Quantum.
+A utilização deste processo ajuda-nos a usar a funcionalidade GitHub para melhorar as contribuições e manter um produto de alta qualidade para a comunidade de programação quântica.
 
-## <a name="how-to-make-a-pull-request"></a>Como fazer uma solicitação de pull ##
+## <a name="how-to-make-a-pull-request"></a>Como fazer um pedido de puxar ##
 
-Há duas maneiras principais de fazer uma solicitação de pull.
-Para pequenas alterações que afetam apenas um único arquivo, a interface da Web do GitHub pode ser usada para fazer uma solicitação pull totalmente online.
-Para contribuições mais complicadas, geralmente é mais fácil usar seu computador local para se preparar primeiro para uma solicitação de pull.
+Há duas maneiras principais de fazer um pedido de atração.
+Para pequenas alterações que apenas afetam um único ficheiro, a interface web GitHub pode ser usada para fazer um pedido de pull inteiramente on-line.
+Para contribuições mais complicadas, é mais fácil usar o computador local para se preparar primeiro para um pedido de puxão.
 
 <!--
 ### Using the Web Interface ###
@@ -86,8 +86,8 @@ This way, you can edit your personal fork to your heart's content before making 
 
 ## <a name="next-steps"></a>Passos seguintes ##
 
-Parabéns por usar o Git para ajudar a Comunidade do kit de desenvolvimento do Quantum!
-Para saber mais sobre como contribuir com código, continue com o guia a seguir.
+Parabéns por usar git para ajudar a comunidade quantum development kit!
+Para saber mais sobre como contribuir com o código, continue com o seguinte guia.
 
 > [!div class="nextstepaction"]
 > [Saiba como contribuir com código](xref:microsoft.quantum.contributing.code)
