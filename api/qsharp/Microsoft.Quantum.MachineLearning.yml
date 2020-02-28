@@ -1,0 +1,72 @@
+### YamlMime:QSharpNamespace
+uid: microsoft.quantum.machinelearning
+name: Microsoft.Quantum.MachineLearning
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome fornece funções e operações usadas em aplicações de aprendizagem automática quântica.\n\n # <a name=\"references\"></a>Referências\n - Maria Schuld, Alex Bocharov, Krysta Svore, Nathan Wiebe, \"Classificadores quânticos centrados em circuitos\", https://arxiv.org/abs/1804.00633."
+functions:
+- uid: microsoft.quantum.machinelearning.approximateinputencoder
+  summary: Dado um conjunto de coeficientes e tolerância, devolve uma operação de preparação estatal que prepara cada coeficiente como a amplitude correspondente de um estado de base computacional, até à tolerância dada.
+- uid: microsoft.quantum.machinelearning.combinedstructure
+  summary: Dado uma ou mais camadas de rotações controladas, devolve uma única camada com índice de parâmetro seletiva deslocado de tal forma que camadas distintas são parametrizadas por parâmetros de modelo distintos.
+- uid: microsoft.quantum.machinelearning.cyclicentanglinglayer
+  summary: Devolve uma série de rotações controladas com singly ao longo de um determinado eixo, dispostas ciclicamente através de um registo de qubits, e parametrizadas por parâmetros de modelo distintos.
+- uid: microsoft.quantum.machinelearning.defaulttrainingoptions
+  summary: Devolve um conjunto padrão de opções para classificadores de treino.
+- uid: microsoft.quantum.machinelearning.featureregistersize
+  summary: Devolve o número de qubits necessários para codificar um vetor de características particular.
+- uid: microsoft.quantum.machinelearning.inferredlabel
+  summary: Dada uma probabilidade de classificação e um enviesamento, devolve o rótulo inferido dessa probabilidade.
+- uid: microsoft.quantum.machinelearning.inferredlabels
+  summary: Dado um conjunto de probabilidades de classificação e um enviesamento, devolve o rótulo inferido de cada probabilidade.
+- uid: microsoft.quantum.machinelearning.inputencoder
+  summary: Dado um conjunto de coeficientes e tolerância, devolve uma operação de preparação estatal que prepara cada coeficiente como a amplitude correspondente de um estado de base computacional.
+- uid: microsoft.quantum.machinelearning.localrotationslayer
+  summary: Devolve uma série de rotações descontroladas (qubit único) ao longo de um determinado eixo, com uma rotação para cada qubit num registo, parametrizada por parâmetros de modelo distintos.
+- uid: microsoft.quantum.machinelearning.misclassifications
+  summary: Dado um conjunto de etiquetas inferidas e um conjunto de etiquetas corretas, os índices de devolução de devoluções para onde cada conjunto de etiquetas difere.
+- uid: microsoft.quantum.machinelearning.nmisclassifications
+  summary: Tendo em conta um conjunto de etiquetas inferidas e um conjunto de etiquetas corretas, devolve o número de índices em que cada conjunto de etiquetas difere.
+- uid: microsoft.quantum.machinelearning.nqubitsrequired
+  summary: Devolve o número de qubits necessários para aplicar um dado classificador sequencial.
+- uid: microsoft.quantum.machinelearning.partialrotationslayer
+  summary: Devolve uma série de rotações de qubit único ao longo de um determinado eixo, parametrizado por parâmetros de modelo distintos.
+- uid: microsoft.quantum.machinelearning.sampled
+  summary: Amostras de uma determinada matriz, usando o horário dado.
+- uid: microsoft.quantum.machinelearning.schedulelength
+  summary: Devolve o número de elementos num determinado horário de amostragem.
+operations:
+- uid: microsoft.quantum.machinelearning.applysequentialclassifier
+  summary: Dada a estrutura e parametrização de um classificador sequencial, aplica o classificador a um registo de qubits.
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobabilities
+  summary: Dado um conjunto de amostras e um classificador sequencial, estima a probabilidade de classificação dessas amostras medindo repetidamente a saída do classificador em cada amostra.
+- uid: microsoft.quantum.machinelearning.estimateclassificationprobability
+  summary: Dada uma amostra e um classificador sequencial, estima a probabilidade de classificação dessa amostra medindo repetidamente a saída do classificador na dada amostra.
+- uid: microsoft.quantum.machinelearning.estimategradient
+  summary: Estima o gradiente de formação para um classificador sequencial num determinado modelo e para uma determinada entrada codificada.
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifier
+  summary: Dada a estrutura de um classificador sequencial, treina o classificador num determinado conjunto de formação com etiqueta.
+- uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
+  summary: Dada a estrutura de um classificador sequencial, treina o classificador num determinado conjunto de formação rotulado, a partir de um determinado modelo.
+- uid: microsoft.quantum.machinelearning.validatesequentialclassifier
+  summary: Valida um dado classificador sequencial contra um conjunto de amostras pré-rotuladas.
+newtypes:
+- uid: microsoft.quantum.machinelearning.controlledrotation
+  summary: Descreve uma rotação controlada em termos dos índices de alvo e controlo, eixo de rotação e índice num vetor de parâmetros de modelo.
+- uid: microsoft.quantum.machinelearning.labeledsample
+  summary: Uma amostra, rotulada com uma classe à qual essa amostra pertence.
+- uid: microsoft.quantum.machinelearning.samplingschedule
+  summary: Um horário para desenhar lotes de um conjunto de amostras.
+- uid: microsoft.quantum.machinelearning.sequentialmodel
+  summary: Descreve um modelo de classificação quântica composto por uma sequência de rotações parametrizadas e controladas, uma atribuição de ângulos de rotação e um enviesamento entre as duas classes reconhecidas pelo modelo.
+- uid: microsoft.quantum.machinelearning.stategenerator
+  summary: Descreve uma operação que prepara uma determinada entrada para um classificador sequencial.
+- uid: microsoft.quantum.machinelearning.trainingoptions
+  summary: Uma coleção de opções a utilizar na formação de classificadores quânticos.
+- uid: microsoft.quantum.machinelearning.validationresults
+  summary: Os resultados de ter validado um classificador contra um conjunto de amostras.
+metadata:
+  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908315"

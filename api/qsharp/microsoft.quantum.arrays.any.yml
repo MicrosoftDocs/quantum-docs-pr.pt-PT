@@ -3,14 +3,34 @@ uid: microsoft.quantum.arrays.any
 name: Any
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Dada uma matriz e um predicado que é definido para os elementos da matriz, verifica se pelo menos um elemento da matriz atende ao predicado.
-remarks: "A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma função `predicate: 'T -> Bool` podemos produzir um valor `Bool` que indica se algum elemento atende `predicate`."
+summary: Dada uma matriz e um predicado que é definido para os elementos da matriz, verifica se pelo menos um elemento da matriz satisfaz o predicado.
+remarks: "A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma função `predicate: 'T -> Bool` podemos produzir um valor `Bool` que indique se algum elemento satisfaz `predicate`."
+examples: >-
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function IsThreePresent() : Bool {
+      let arrayOfInts = [1, 2, 3, 4, 5];
+      let is3Present = IsNumberPresentInArray(3, arrayOfInts);
+      return is3Present;
+  }
+
+
+  function IsNumberPresentInArray(n : Int, array : Int[]) : Bool {
+      return Any(EqualI(_, n), array);
+  }
+
+  ```
 syntax: "function Any (predicate : ('T -> Bool), array : 'T[]) : Bool"
 input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Uma função de `'T` para `Bool` que é usada para verificar elementos.
+    summary: Uma função de `'T` a `Bool` que é usada para verificar elementos.
     isFunction: true
     input:
       types:
@@ -21,7 +41,7 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Uma matriz de elementos em `'T`.
+    summary: Uma série de elementos sobre `'T`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -33,11 +53,11 @@ output:
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: O tipo de elementos de `array`.
+  summary: O tipo de elementos `array`.
 metadata:
-  ms.openlocfilehash: 11e76d2b0b26d2dfcfed36d126e6ebb6ce76cef8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218384"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905561"

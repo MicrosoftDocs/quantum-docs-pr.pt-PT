@@ -1,0 +1,32 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.machinelearning.partialrotationslayer
+name: PartialRotationsLayer
+type: function
+namespace: Microsoft.Quantum.MachineLearning
+summary: Devolve uma série de rotações de qubit único ao longo de um determinado eixo, parametrizado por parâmetros de modelo distintos.
+syntax: 'function PartialRotationsLayer (idxsQubits : Int[], axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
+input:
+  content: '(idxsQubits : Int[], axis : Pauli)'
+  types:
+  - name: idxsQubits
+    summary: Índices para os qubits a utilizar como alvos para cada rotação.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: axis
+    summary: O eixo de rotação para cada rotação na camada dada.
+    isPrimitive: true
+    uid: Pauli
+output:
+  content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
+  types:
+  - summary: Uma série de rotações controladas sobre o eixo dado, uma em cada uma das `nQubits` qubits.
+    isArray: true
+    uid: microsoft.quantum.machinelearning.controlledrotation
+metadata:
+  ms.openlocfilehash: ece8381560c4d7501282eb909506a10e7ab1fe72
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77908638"

@@ -1,10 +1,10 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.multiplexpauli
-name: MultiplexPauli
+uid: microsoft.quantum.canon.approximatelymultiplexpauli
+name: ApproximatelyMultiplexPauli
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma rotação Pauli condicionada numa série de qubits.
+  Aplica uma rotação Pauli condicionada numa série de qubits, truncando pequenos ângulos de rotação de acordo com uma determinada tolerância.
 
 
   Isto aplica uma operação unitária controlada multiplicada que executa rotações por ângulo $\theta_j$ sobre o operador de Pauli de um único qubit $P$ quando controlado pelo estado de número de $n$-qubit $\ket{j}$.
@@ -19,10 +19,14 @@ summary: >-
 
   ##
 remarks: '`coefficients` serão acolchoados com elementos $\theta_j = 0,0$ se forem especificados menos de $2^n$.'
-syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
+syntax: 'operation ApproximatelyMultiplexPauli (tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
-  content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
+  content: '(tolerance : Double, coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
+  - name: tolerance
+    summary: Uma tolerância abaixo da qual pequenos coeficientes são truncados.
+    isPrimitive: true
+    uid: Double
   - name: coefficients
     summary: Um conjunto de coeficientes de $2^n$ $theta_j$. O coeficiente de $j$th indexa o estado número $\ket{j}$ codificado em formato pequeno endiano.
     isArray: true
@@ -48,11 +52,11 @@ functors:
 - Adjoint
 - Controlled
 seeAlso:
-- approximatelymultiplexpauli
+- multiplexpauli
 metadata:
-  ms.openlocfilehash: 7c30159a7774b407d7574018028b53e8c72f8d0a
+  ms.openlocfilehash: e3b828de03845724fc1cad78babfff0c01b8ae24
   ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
   ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77906581"
+  ms.locfileid: "77907941"

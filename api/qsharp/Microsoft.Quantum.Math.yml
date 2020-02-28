@@ -89,7 +89,7 @@ functions:
 - uid: microsoft.quantum.math.extendedgreatestcommondivisorl
   summary: Computa um tuple $(u,v)$ de tal forma que $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, onde o nome de operador de $\{GCD}$ é $a$ maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 - uid: microsoft.quantum.math.floor
-  summary: Retorna o maior inteiro menor ou igual ao número especificado.
+  summary: Devolve o maior inteiro inferior ou igual ao número especificado.
 - uid: microsoft.quantum.math.greatestcommondivisori
   summary: Calcula o maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 - uid: microsoft.quantum.math.greatestcommondivisorl
@@ -210,6 +210,8 @@ functions:
   summary: Devolve o seno hiperbólico do ângulo especificado.
 - uid: microsoft.quantum.math.sqrt
   summary: Devolve a raiz quadrada de um número especificado.
+- uid: microsoft.quantum.math.squarednorm
+  summary: Devolve a norma quadrada de 2 de um vetor.
 - uid: microsoft.quantum.math.tan
   summary: Devolve a tangente do ângulo especificado.
 - uid: microsoft.quantum.math.tanh
@@ -253,9 +255,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Devolve um dos operadores de Pauli de um único qubit uniformemente ao acaso.
 metadata:
-  ms.openlocfilehash: f1a0185252155a39572a6b4159a88686533154c0
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 03a0eba2101d3a20b393b7f685ac463b1abcd727
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870191"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905833"

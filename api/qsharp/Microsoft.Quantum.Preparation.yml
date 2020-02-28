@@ -1,107 +1,100 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.preparation
 name: Microsoft.Quantum.Preparation
-summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções e operações para preparar qubits para Estados iniciais arbitrários."
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações para a preparação de qubits em estados iniciais arbitrários."
 functions:
 - uid: microsoft.quantum.preparation.blochspherecoordinates
   summary: >-
-    Computa as coordenadas de esfera de Bloch para um estado de qubit único.
+    Computa a esfera bloch coordena para um estado de um único qubit.
 
 
-    Considerando-se dois números complexos $a 0, a1 $ que representam o estado qubit, o computa as coordenadas na esfera Bloch de forma que $a 0 \ket{0} + a1 \ket{1} = r e ^ {it} (e ^ {-i \phi/2}\cos{(\ teta/2)} \ket{0}+ e ^ {i \phi/2}\sin{(\ teta/2)} \ket{1}) $.
+    Tendo em conta dois números complexos $a0, a1$ que representam o estado qubit, computa coordenadas na esfera do Bloch de tal forma que $a0 \ket{0} + a1 \ket{1} = r e{itit}(e^{-i \phi /2}\cos{(\theta/2)}\ket{0}+e^{i \phi /2}\sin{(\theta/2){1}}
 - uid: microsoft.quantum.preparation.quantumrom
   summary: >-
-    Usa a técnica de ROM Quantum para representar uma determinada matriz de densidade.
+    Usa a técnica de ROM quântica para representar uma determinada matriz de densidade.
 
 
-    Dada uma lista de $N $ coeficientes $ \ alpha_j $, isso retorna um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ do Purification da matriz de densidade $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Nessa aproximação, o erro $ \epsilon $ é de que $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ e $\|\tilde\rho-\rho\| \le \epsilon $. Em outras palavras, $ $ \begin{align} U\ket{0}^ {\lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
+    Dada uma lista de coeficientes de $N$alpha_j$, isto devolve um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $\tilde\rho\rho\sum_{j=0}^{N-1}p_j\ket{j}\bra{j}$ da purificação da matriz de densidade $\rho=\sum_{j=0}^{N-1}\frac{j}} alpha_j} {\sum_k alpha_k} \ket{j}\bra{j}$. Nesta aproximação, o erro $\epsilon$ é tal que $p_j-\frac{alpha_j. {\sum_k \alpha_k; \le \epsilon / N$ e $\|\tilde\rho - \rho\| \le \epsilon$. Por outras palavras, $$ \begin {align} U\ket{0}^{\lceil\log_2 N\rceil}\ket{0}^{m}=\sum_{j=0}^{N-1}\sqrt{p_j} \ket{j}\ket{\text{{trash}_j}}
 
-    \end{align} $ $
+    \end{align} $$
 - uid: microsoft.quantum.preparation.quantumromqubitcount
-  summary: Retorna o número total de qubits que devem ser alocados para a operação retornada pelo `QuantumROM`.
+  summary: Devolve o número total de qubits que devem ser atribuídos à operação devolvida por `QuantumROM`.
 - uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   summary: >-
-    Retorna uma operação que prepara um estado de Quantum específico.
+    Devolve uma operação que prepara um estado quântico específico.
 
 
-    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes complexos $r _j e ^ {i t_j} $ do estado de base computacional do $n $-qubit $ \ket{0...0} $.
+    A operação devolvida $U$ prepara um estado quântico arbitrário $\ket{\psi}$ com coeficientes complexos $r_j e^{i t_j}$ do estado de base computacional $n$-qubit $\ket{0...0}$.
 
 
-    A ação de U em um registro recém-alocado é fornecida por $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
+    A ação de U num registo recém-atribuído é dada por $$ \start{{align} U\ket{0...0}=\ket{\psi}=\frac{sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{{sqrt{\sum_{j=0{{^2-1}/r_j
 
-    \end{align} $ $
+    \end{align} $$
 - uid: microsoft.quantum.preparation.statepreparationpositivecoefficients
   summary: >-
-    Retorna uma operação que prepara o estado de Quantum fornecido.
+    Devolve uma operação que prepara o estado quântico.
 
 
-    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes positivos $ \ alpha_j \ge $0 do estado de base computacional $n $-qubit $ \ket{0...0} $.
+    A operação devolvida $U$ prepara um estado quântico arbitrário $\ket{\psi}$ com coeficientes positivos $\alpha_j\ge 0$ do estado de base computacional $n$-qubit $\ket{0...0}$.
 
 
-    A ação de U em um registro recém-alocado é fornecida por $ $ \begin{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} \ alpha_j \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | \ alpha_j | ^ 2}}.
+    A ação de U num registo recém-atribuído é dada por $$ \start{{align} U \ket{0\cdots 0} = \ket{\psi} = \frac\sum_{j=0}^{2^n-1}\alpha_j\\ket{j}}{{\sum_{j=0}{{^&2-1}\\alpha_j\
 
-    \end{align} $ $
+    \end{align} $$
 operations:
+- uid: microsoft.quantum.preparation.approximatelypreparearbitrarystate
+  summary: Tendo em conta um conjunto de coeficientes e um registo quântico codificado pouco endiano, prepara um estado nesse registo descrito pelos coeficientes dado, até uma determinada tolerância de aproximação.
 - uid: microsoft.quantum.preparation.preparearbitrarystate
-  summary: >-
-    Retorna uma operação que prepara um determinado estado de Quantum.
-
-
-    A operação retornada $U $ prepara um estado de Quantum arbitrário $ \ket{\psi} $ com coeficientes complexos $r _j e ^ {i t_j} $ do estado de base computacional do $n $-qubit $ \ket{0...0} $.
-
-
-    $ $ \begin{align} U\ket {0... 0} = \ket{\psi} = \frac{\ sum_ {j = 0} ^ {2 ^ n-1} r_j e ^ {i t_j} \ket{j}}{\sqrt{\ sum_ {j = 0} ^ {2 ^ n-1} | r_j | ^ 2}}.
-
-    \end{align} $ $
+  summary: Dado um conjunto de coeficientes e um registo quântico codificado pouco endiano, prepara um estado nesse registo descrito pelos coeficientes.
 - uid: microsoft.quantum.preparation.preparechoistate
-  summary: Prepara o estado Choi – Jamiłkowski para uma determinada operação em determinados registros de referência e destino.
+  summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação em registos de referência e alvo.
 - uid: microsoft.quantum.preparation.preparechoistatea
-  summary: Prepara o estado Choi – Jamiłkowski para uma determinada operação com uma variante adjacente para os registros de referência e destino fornecidos.
+  summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação com uma variante adjoint em registos de referência e alvo.
 - uid: microsoft.quantum.preparation.preparechoistatec
-  summary: Prepara o estado Choi – Jamiłkowski para uma determinada operação com uma variante controlada na referência e nos registros de destino fornecidos.
+  summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação com uma variante controlada sobre registos de referência e alvo.
 - uid: microsoft.quantum.preparation.preparechoistateca
-  summary: Prepara o estado Choi – Jamiłkowski para uma determinada operação com variantes controladas e adjacentes em determinados registros de referência e destino.
+  summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação com variantes controladas e adjoint em registos de referência e alvo.
 - uid: microsoft.quantum.preparation.prepareentangledstate
   summary: >-
-    Entangles emparelhar dois registros de qubit.
+    Em pares, dois registos qubit.
 
 
-    Ou seja, dadas dois registros, o prepara o estado máximo de confusas $ \frac{1}{\sqrt{2}} \left (\ket{00} + \ket{11} \right) $ entre cada par de qubits nos respectivos registros, supondo que cada registro seja iniciado no estado $ \ket{0\cdots 0} $.
+    Ou seja, dado dois registos, prepara o estado maximamente emaranhado $\frac{1}{\sqrt{2}} \{00} à esquerda (\ket  + \ket{11} \right)$ entre cada par de qubits nos respetivos registos, assumindo que cada registo começa no estado $\ket{0\cdots 0}$.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
-    Dado um registro, prepara esse registro no estado de forma máxima mista.
+    Dado um registo, prepara esse registo no estado maximamente misto.
 
 
-    O registro está preparado no estado $ \boldone/2 ^ N $ aplicando o canal de despolarização completa a cada qubit, em que $N $ é o comprimento do registro.
+    O registo é preparado no estado $\boldone / 2^N$ aplicando o canal de despolarização completo a cada qubit, onde $N$ é o comprimento do registo.
 - uid: microsoft.quantum.preparation.preparequbit
   summary: >-
-    Prepara um qubit no eigenstate + 1 (`Zero`) do operador Pauli fornecido.
+    Prepara um qubit no eigenstate +1 (`Zero`) do dado operador Pauli.
 
-    Se o operador Identity for fornecido, o qubit será preparado no estado de forma máxima mista.
-
-
-    Se o qubit estava inicialmente no estado $ \ket{0}$, essa operação prepara o qubit na eigenstate $ + $1 de um determinado operador Pauli, ou, para `PauliI`, no estado de forma máxima mista (consulte <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+    Se o operador de identidade for administrado, o qubit é preparado no estado máximo misturado.
 
 
-    Se o qubit estava em um estado diferente de $ \ket{0}$, essa operação aplica as seguintes Gates: $H $ para `PauliX`, $HS $ para `PauliY`, $I $ para `PauliZ` e <xref:microsoft.quantum.preparation.preparesinglequbitidentity> para `PauliI`.
+    Se o qubit estava inicialmente no estado de $\ket{0}$, esta operação prepara o qubit no eigenstate de $+1$ de um determinado operador Pauli, ou, para `PauliI`, no estado maximamente misto (ver <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+
+
+    Se o qubit estava num estado que não seja $\ket{0}$, esta operação aplica os seguintes portões: $H$ para `PauliX`, $HS$ para `PauliY`, $I$ para `PauliZ` e <xref:microsoft.quantum.preparation.preparesinglequbitidentity> para `PauliI`.
 - uid: microsoft.quantum.preparation.preparesinglequbitidentity
   summary: >-
-    Prepara um qubit no estado máximo misto.
+    Prepara um qubit no estado maximamente misto.
 
 
-    Ele prepara o determinado qubit no estado $ \boldone/$2 aplicando o \rho de despolarização do canal $ $ \begin{align} \Omega (\mathrel{): =} \frac{1}{4} \ sum_ {\mu na \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu} ^ {\dagger}, \end{Align} $ $, em que $ \sigma\_i $ é o operador $i $ th Pauli e, em que $ \rho $ é um operador de densidade que representa um estado misto.
+    Prepara o qubit dado no estado $\boldone / 2$ aplicando o canal despolarizante $$ \start{align} \Omega(\rho) \mathrel{:=} \frac {4}{1}\sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu}^{adagger}, \end{align} $$ where $\sigma\_i$ é o operador de $i$th Pauli, e onde $\rho$ é um operador de densidade que representa um estado misto.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    Cria uma superposição uniforme em Estados que codificam 0 a `nIndices`.
+    Cria uma sobreposição uniforme sobre estados que codificam 0 a `nIndices`.
 
 
-    Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\ sum_ {j = 0} ^ {M-1} \ket{j}.
+    Ou seja, este $U$ unitário cria uma sobreposição uniforme sobre todos os estados do número $0$ a $M-1$, dado um estado de entrada $\ket{0\cdots 0}$. Por outras palavras, $$ \begin{align} U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
 
-    \end{align} $ $.
+    \end{align} $$.
 metadata:
-  ms.openlocfilehash: 2b9e3b89a29eb73b9b7417210628fce046c91209
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dd28a9a066fabd5afab7114d78cc2aca79254e18
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216021"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905680"

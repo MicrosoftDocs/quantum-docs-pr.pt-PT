@@ -81,7 +81,7 @@ functions:
 - uid: microsoft.quantum.canon.continuedfractionconvergent
   summary: "\n> [!WARNING]\n> Preterido\n\nContinuaçãoFractionConvergente foi depreciado. Por favor, use @\"microsoft.quantum.math.continuedfractionconvergenti\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.continuedfractionconvergenti\"."
 - uid: microsoft.quantum.canon.controlledonbitstring
-  summary: Devolve um operador unitário que aplica um oráculo no registo-alvo se o estado do registo de controlo corresponder a uma máscara de bit especificada.
+  summary: Devolve uma operação unitária que aplica um oráculo no registo-alvo se o estado do registo de controlo corresponder a uma máscara de bit especificada.
 - uid: microsoft.quantum.canon.controlledonint
   summary: Devolve um operador unitário que aplica um oráculo no registo-alvo se o estado do registo de controlo corresponder a um inteiro positivo especificado.
 - uid: microsoft.quantum.canon.curriedop
@@ -298,14 +298,7 @@ operations:
 - uid: microsoft.quantum.canon.applycnotchainwithtarget
   summary: Calcula a paridade de uma série de qubits num qubit alvo.
 - uid: microsoft.quantum.canon.applydiagonalunitary
-  summary: >-
-    Aplica um conjunto de fases complexas a estados de base numérica de um registo de qubits.
-
-
-    Ou seja, isto implementa a operação diagonal unitária $U$ que aplica uma fase complexa $e^{i \theta_j}$ no estado de número de $n$-qubit $\ket{j}$.
-
-
-    $U = \sum^{2^n-1}_{j=0}e^{i\theta_j}}ket{j}\bra{j}$.
+  summary: Aplica um conjunto de fases complexas a estados de base numérica de um registo de qubits.
 - uid: microsoft.quantum.canon.applyfermionicswap
   summary: Aplica a TROCA Fermiónica.
 - uid: microsoft.quantum.canon.applyif
@@ -440,6 +433,14 @@ operations:
     Aplica uma operação de um único qubit a cada elemento indexado num registo.
 
     O modificador `CA` indica que a operação de um qubit único é adjointável e controlável.
+- uid: microsoft.quantum.canon.applytoelement
+  summary: Aplica uma operação a um dado elemento de uma matriz.
+- uid: microsoft.quantum.canon.applytoelementa
+  summary: Aplica uma operação a um dado elemento de uma matriz.
+- uid: microsoft.quantum.canon.applytoelementc
+  summary: Aplica uma operação a um dado elemento de uma matriz.
+- uid: microsoft.quantum.canon.applytoelementca
+  summary: Aplica uma operação a um dado elemento de uma matriz.
 - uid: microsoft.quantum.canon.applytofirstqubit
   summary: Aplica uma operação ao primeiro qubit no registo.
 - uid: microsoft.quantum.canon.applytofirstqubita
@@ -541,6 +542,12 @@ operations:
   summary: Dada uma operação que aceita alguma entrada, uma função que devolve uma saída compatível com essa operação, e uma entrada nessa função, aplica a operação utilizando a função para transformar a entrada numa forma esperada pela operação.
 - uid: microsoft.quantum.canon.applywithinputtransformationca
   summary: Dada uma operação que aceita alguma entrada, uma função que devolve uma saída compatível com essa operação, e uma entrada nessa função, aplica a operação utilizando a função para transformar a entrada numa forma esperada pela operação.
+- uid: microsoft.quantum.canon.approximatelyapplydiagonalunitary
+  summary: Aplica um conjunto de fases complexas a estados de base numérica de um registo de qubits, truncando pequenos ângulos de rotação de acordo com uma determinada tolerância.
+- uid: microsoft.quantum.canon.approximatelymultiplexpauli
+  summary: Aplica uma rotação Pauli condicionada numa série de qubits, truncando pequenos ângulos de rotação de acordo com uma determinada tolerância.
+- uid: microsoft.quantum.canon.approximatelymultiplexz
+  summary: Aplica uma rotação Pauli Z condicionada numa série de qubits, truncando pequenos ângulos de rotação de acordo com uma determinada tolerância.
 - uid: microsoft.quantum.canon.approximateqft
   summary: Aplique a Transformação Quântica Aproximada de Fourier (AQFT) num registo quântico.
 - uid: microsoft.quantum.canon.asserthighestbit
@@ -648,23 +655,9 @@ operations:
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.multiplexpauli
-  summary: >-
-    Aplica uma rotação Pauli condicionada numa série de qubits.
-
-
-    Isto aplica a operação unitária controlada por multiplicação $U$ que realiza rotações por ângulo $\theta_j$ sobre o operador pauli de um único qubit $P$ quando controlado pelo estado de número de $n$-qubit $\ket{j}$.
-
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i P \theta_j}$.
+  summary: Aplica uma rotação Pauli condicionada numa série de qubits.
 - uid: microsoft.quantum.canon.multiplexz
-  summary: >-
-    Aplica uma rotação Pauli Z condicionada numa série de qubits.
-
-
-    Isto aplica a operação unitária controlada por multiplicação $U$ que executa rotações por ângulo $\theta_j$ sobre o operador pauli de um único qubit $Z$ quando controlado pelo estado de número de $n$-qubit $\ket{j}$.
-
-
-    $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes e^{i Z \theta_j}$.
+  summary: Aplica uma rotação Pauli Z condicionada numa série de qubits.
 - uid: microsoft.quantum.canon.noop
   summary: Executa a operação de identidade (sem op) num argumento.
 - uid: microsoft.quantum.canon.permutequbits
@@ -701,9 +694,9 @@ newtypes:
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Preterido\n\nResultStack foi depreciado."
 metadata:
-  ms.openlocfilehash: 8d54303daeb32281b1e531fce50443c132c14093
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: db3466b0e6fe493393f75bea85f9c91e2f56ec67
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870729"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77905629"
