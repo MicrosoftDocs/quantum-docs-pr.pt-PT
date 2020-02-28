@@ -1,17 +1,17 @@
 ---
-title: Representação Jordan-Wigner Microsoft Docs
-description: Docs conceptuais de representação jordan-wigner
+title: Representação Jordan-Wigner
+description: Saiba mais sobre a Representação Jordan-Wigner, que mapeia os operadores hamiltonianos para matrizes unitárias que podem ser mais facilmente implementadas num computador quântico.
 author: nathanwiebe2
 ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 5d9038e440a2022547395e889e149a531a7ef818
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820543"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904524"
 ---
 # <a name="jordan-wigner-representation"></a>Representação Jordan-Wigner
 
@@ -45,7 +45,7 @@ Em particular, $XZ = -ZX$ e $YZ=-ZY$.
 Assim, intercalando os operadores $Z$ na construção do operador, podemos imitar a anti-comutação correta.
 A construção completa é a seguinte: 
 
-\begin{align} a^\dagger_1 &amp;= \left(\frac{X-iY}{2}\right)\otimes 1 \otimes 1 \otimes 1 \otimes \otimes 1,\\\\ a^\dagger_2 &{2};\\\\ a^\dagger_3 &= Z\otimes \left(\frac{X-iY}{2}\right)\otimes 1 \otimes \cdots \otimes 1,\\\\ &\vdots\\\\ a^\dagger_N & otimes \left(\frac{X-iY}{2}\direita). \label{eq:JW} \end{align}
+\begin{align} a^\dagger_1 &amp;= \left(\frac{X-iY}{2}\right)\otimes 1 \otimes 1 \otimes 1 \otimes \otimes 1,\\\\ a^\dagger_2 &amp{2};\\\\ a^\dagger_3 &= Z\otimes \left(\frac{X-iY}{2}\right)\otimes 1 \otimes \cdots \otimes 1,\\\\ &\vdots\\\\ a^\dagger_N & otimes \left(\frac{X-iY}{2}\direita). \label{eq:JW} \end{align}
 
 Também é conveniente expressar os operadores de números, $n_j$, em termos de operadores Pauli.
 Felizmente, as cordas dos operadores $Z$ (conhecidas como cordas Jordan-Wigner) cancelam depois de uma fazer esta substituição.
