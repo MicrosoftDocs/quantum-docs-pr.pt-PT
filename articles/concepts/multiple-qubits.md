@@ -1,140 +1,140 @@
 ---
-title: Vários qubits | Microsoft Docs
-description: Vários qubits
+title: Vários qubits
+description: Saiba como realizar operações em dois ou mais qubits.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: e9c043f4ee41a878b9544a27d5ea052fce29f06e
-ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74863221"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907550"
 ---
-# <a name="multiple-qubits"></a>Vários qubits
+# <a name="multiple-qubits"></a>Múltiplos Qubits
 
-Embora os Gates de qubit tenham alguns recursos intuitivos, como a capacidade de estar em mais de um estado em um determinado momento, se tudo o que tínhamos em um computador Quantum fosse um único qubit Gates, teríamos um dispositivo com energia computacional que seria diminuído por até mesmo uma calculadora deixa um supercomputador clássico.
-O verdadeiro poder da computação Quantum só se torna evidente, pois aumentamos o número de qubits.
-Essa energia surge, em parte, porque a dimensão do espaço vetorial dos vetores de estado do Quantum aumenta exponencialmente com o número de qubits.
-Isso significa que, embora um único qubit possa ser modelado trivialmente, a simulação de uma computação Quantum 50-qubit impediria que os limites dos supercomputadors existentes fossem reforçados.
-Aumentar o tamanho da computação por apenas um qubit adicional *dobra* a memória necessária para armazenar o estado e, aproximadamente, *dobra* o tempo computacional.
-Essa dupla dobra de potência computacional é o motivo pelo qual um computador Quantum com um número relativamente pequeno de qubits pode superar de longe os supercomputadors mais potentes de hoje, amanhã e além de algumas tarefas computacionais.
+Enquanto os portões de um qubit único possuem algumas características contraintuitivas, tais como a capacidade de estar em mais de um estado em um dado momento, se tudo o que tínhamos num computador quântico fossem portões de um único qubit então teríamos um dispositivo com poder computacional que seria atenuado por mesmo uma calculadora muito menos um supercomputador clássico.
+O verdadeiro poder da computação quântica só se torna evidente à medida que aumentamos o número de qubits.
+Esta potência surge, em parte, porque a dimensão do espaço vetorial dos vetores do estado quântico cresce exponencialmente com o número de qubits.
+Isto significa que, embora um único qubit possa ser modelado trivialmente, simular uma computação quântica de 50 qubits iria indiscutivelmente empurrar os limites dos supercomputadores existentes.
+Aumentar o tamanho do cálculo por apenas um qubit adicional *duplica* a memória necessária para armazenar o estado e *aproximadamente duplica* o tempo computacional.
+Esta rápida duplicação do poder computacional é a razão pela qual um computador quântico com um número relativamente pequeno de qubits pode ultrapassar em muito os supercomputadores mais poderosos de hoje, amanhã e além para algumas tarefas computacionais.
 
-Por que temos um crescimento exponencial para os vetores de estado Quantum?  Nosso objetivo nesta seção é revisar as regras usadas para criar Estados qubit de Estados de qubit único, bem como discutir as operações de portão que precisamos incluir em nosso conjunto de portais para formar um computador Quantum universal de muitos qubit.
-Essas ferramentas são absolutamente necessárias para entender os conjuntos de porta que são comumente usados em código Q # e também para se aprofundar sobre por que os efeitos da Quantum, como Entanglement ou interferência, renderizam a computação Quantum mais potente do que a computação clássica.
+Por que temos crescimento exponencial para os vetores do estado quântico?  O nosso objetivo nesta secção é rever as regras utilizadas para construir estados multiqubit a partir de estados de qubit único, bem como discutir as operações do portal que precisamos incluir no nosso portal definido para formar um computador quântico universal de muitos qubits.
+Estas ferramentas são absolutamente necessárias para entender os conjuntos de portais que são comumente usados no código Q# e também para ganhar intuição sobre por que os efeitos quânticos como o emaranhado ou a interferência tornam a computação quântica mais poderosa do que a computação clássica.
 
-## <a name="representing-two-qubits"></a>Representando dois qubits
-A principal diferença entre os Estados de um e dois qubit é que os Estados de dois qubit são bidimensionais em vez de bidimensionais.
-Isso ocorre porque a base computacional para Estados de duas qubit é formada pelos produtos tensor de Estados One-qubit.  Por exemplo, temos \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix}, \qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ 1 \end{bmatrix} = \begin{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} & = \begin{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix}, \qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix}0 \\\\ \end{bmatrix} = \begin{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.
-\end{align}
+## <a name="representing-two-qubits"></a>Representando dois Qubits
+A principal diferença entre estados de um e dois qubits é que os estados de dois qubits são quatro estados dimensionais em vez de bidimensionais.
+Isto porque a base computacional para estados de dois qubits é formada pelos produtos tensores de estados de um qubit.  Por exemplo, temos \begin {align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start {bmatrix}1 \\\\ 0 \end{bmatrix} &= \start{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix},\qquad 01 \equiv \start{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start {bmatrix}0 \\\\ 1 \end{bmatrix} = \start{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \start{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \start{bmatrix}1 \\\\ 0 \end{bmatrix} &= \start{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end {bmatrix},\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \start {bmatrix}0 \\\\ 1 \end{bmatrix} = \start{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
+\fim{align}
 
-É fácil ver que, geralmente, o estado da Quantum de $n $ qubits é representado por um vetor de unidade da dimensão $2 ^ n $ usando essa construção.  O vetor
+É fácil ver que, de uma forma mais geral, o estado quântico de $n qubits de$ é representado por um vetor unitário de dimensão $2^n$ usando esta construção.  O vetor
 
-$ $ \begin{bmatrix} \ alpha_{00} \\\\ alpha_{01} \\\\ \end{bmatrix} alpha_{10} \\, \\ alpha_ $ $
+$$ \start{bmatrix} \alpha_{00} \\\\  \alpha_{01} \\\\{10} alpha_ \\ \\alpha_{11} \end{bmatrix} $}
 
-representa um estado Quantum em dois qubits se $ | \ alpha_{00}| ^ 2 + | \ alpha_{01}| ^ 2 + | \ alpha_{10}| ^ 2 + | \ alpha_{11}| ^ 2 = 1 $. Assim como ocorre com qubits único, o vetor de estado do quantum de vários qubits contém todas as informações necessárias para descrever o comportamento do sistema.
+representa um estado quântico em dois qubits se $\alpha_{00}^2+\alpha_{01}^2+\\alpha_{10}^2+\alpha_{11}^2=1$). Tal como acontece com os qubits individuais, o vetor de estado quântico de múltiplos qubits contém toda a informação necessária para descrever o comportamento do sistema.
 
-Se recebermos dois qubits separados, um no estado $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ e um segundo qubit no estado $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $, o estado correspondente de dois qubit será
+Se nos forda duas qubits separadas, um no estado $\start{bmatrix} \alpha \\\\ \beta {bmatrix}$ e um segundo qubit no estado $\start{bmatrix} \gamma \\\\ \delta {bmatrix}$, o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é o estado correspondente de dois qubits é
 
-$ $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} \otimes \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} = \begin{bmatrix} \alpha \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} \\\\ \beta \begin{bmatrix}\gamma \\\\ \delta \end{bmatrix} \end{bmatrix} = \begin{bmatrix} \alpha\gamma \\\\ \alpha\delta \\\\ \beta\gamma \\\\ \beta\delta \end{bmatrix} , $$
+$$ \start{bmatrix} \alpha \\\\ \beta \final{bmatrix} \otimes \start {bmatrix} \gamma \\\\ \delta \end {bmatrix} =\start{bmatrix} \alpha \start{bmatrix} \gamma \\\\ \delta \end{bmatrix} \\\\ \beta \start{bmatrix}\gamma \\\\ \delta \\end{bmatrix} = \start{bmatrix} \alpha\gamma \\\\ \alpha\delta \\\\ \beta\gamma \\\\ \beta\delta {end{bmatrix} , $$
 
-em que a operação $ \otimes $ é chamada de produto tensor (ou produto Kronecker) de vetores. Observe que, embora possamos sempre pegar o produto tensor de dois Estados de qubit único para formar um estado de dois qubit, nem todos os Estados de Quantum de dois qubit podem ser escritos como o produto tensor de dois Estados de qubit único.
-Por exemplo, não há Estados $ \psi = \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ e $ \phi = \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ de forma que seu produto tensor seja o estado 
+onde a operação $\otimes$ é chamado de produto tensor (ou produto Kronecker) de vetores. Note-se que, embora possamos sempre tomar o produto tensor de dois estados monobitais para formar um estado de dois qubits, nem todos os estados quânticos de dois qubits podem ser escritos como o produto tensor de dois estados monoqubit.
+Por exemplo, não existem estados $\psi=\begin{bmatrix} \alpha \\\\ \beta \end{bmatrix}$ and $\phi=\start{bmatrix} \gamma \\\\ \delta \\end{bmatrix}$ de tal forma que o seu produto tensor é o estado 
 
-$ $ \psi\otimes \phi = \begin{bmatrix} 1/\ sqrt{2} \\\\ 0 \\\\ 0 \\\\ 1/\ sqrt{2} \end{bmatrix}. $ $ 
+$$\psi\otimes \phi = \start{bmatrix} 1/\sqrt{2} \\\\ 0 \\\\ 0 \\\\ 1/\sqrt{2} \end{bmatrix}.$$ 
 
-Esse estado de duas qubit, que não pode ser escrito como o produto tensor de Estados de qubit único, é chamado de "estado confusas"; os dois qubits são considerados [*confusas*](https://en.wikipedia.org/wiki/Quantum_entanglement).  De forma flexível, como o estado do Quantum não pode ser considerado como um produto tensor de Estados de qubit único, as informações que o estado mantém não são confinadas para qualquer um dos qubits individualmente.  Em vez disso, as informações são armazenadas não localmente nas correlações entre os dois Estados.  Essa não localidade de informações é um dos principais recursos que distinguem a computação Quantum em relação à computação clássica e é essencial para vários protocolos Quantum, incluindo a [portadora Quantum](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation) e a [correção de erro Quantum](xref:microsoft.quantum.libraries.error-correction).
+Este estado de dois qubits, que não pode ser escrito como o produto tensor de estados monoqubits, é chamado de "estado emaranhado"; dizem que os dois qubits estão [*emaranhados.* ](https://en.wikipedia.org/wiki/Quantum_entanglement)  Vagamente falando, porque o estado quântico não pode ser considerado como um produto tensor de estados qubit únicos, a informação que o Estado detém não se limita a nenhum dos qubits individualmente.  Pelo contrário, a informação é armazenada não localmente nas correlações entre os dois Estados.  Esta não-localidade da informação é uma das principais características distintivas da computação quântica sobre a computação clássica e é essencial para uma série de protocolos quânticos, incluindo [teleportação quântica](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation) e [correção de erros quânticos.](xref:microsoft.quantum.libraries.error-correction)
 
-## <a name="measuring-two-qubit-states"></a>Medindo Estados de duas qubit ##
-Medir Estados de duas qubit é muito semelhante a medições de qubit único. Medindo o estado
+## <a name="measuring-two-qubit-states"></a>Medição de Dois Estados Qubit ##
+Medir estados de dois qubits é muito semelhante às medições de qubit único. Medindo o estado
 
-$ $ \begin{bmatrix} \ alpha_{00} \\\\ alpha_{01} \\\\ \end{bmatrix} alpha_{10} \\, \\ alpha_ $ $
+$$ \start{bmatrix} \alpha_{00} \\\\  \alpha_{01} \\\\{10} alpha_ \\ \\alpha_{11} \end{bmatrix} $}
 
-produz $0 $ com probabilidade $ | \ alpha_{00}| ^ $2, $1 $ com probabilidade $ | \ alpha_{01}| ^ $2, $10 $ com probabilidade $ | \ alpha_{10}| ^ $2 e $11 $ com probabilidade $ | \ alpha_{11}| ^ $2. As variáveis $ \ alpha_{00}, \ alpha_{01}, \ alpha_{10}, $ e $ \ alpha_{11}$ foram deliberadamente nomeadas para tornar essa conexão clara. Após a medição, se o resultado for $0 $, o estado do quantum do sistema de duas qubit foi recolhido e agora é
+rende $00$ com probabilidade $\alpha_{00}^^2$, $01$ com probabilidade $\alpha_{01}^^2$, $10$ com probabilidade $\alpha_{10}^^2$, e $11$ com probabilidade $\\alpha_{11}^^2$. As variáveis $\alpha_{00}, \alpha_{01}, \alpha_{10},$ e $\alpha_{11}$ foram deliberadamente nomeados para tornar esta ligação clara. Após a medição, se o resultado for $00$ então o estado quântico do sistema de dois qubits entrou em colapso e é agora
 
-$ $0 \equiv \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}.
+$00 \equiv \start{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}.
 $$
 
-Também é possível medir apenas um qubit de um estado de Quantum de dois qubit. Nos casos em que você mede apenas um dos qubits, o impacto da medição é ligeiramente diferente, pois o estado inteiro não é recolhido para um estado de base computacional, em vez disso, ele é recolhido para apenas um subsistema.  Em outras palavras, em tais casos medir apenas um qubit recolhe apenas um dos subsistemas, mas não todos eles.  
+Também é possível medir apenas um qubit de um estado quântico de dois qubits. Nos casos em que se mede apenas um dos qubits, o impacto da medição é subtilmente diferente porque todo o Estado não é colapsado para um estado de base computacional, pelo contrário, é colapsado para apenas um subsistema.  Por outras palavras, nestes casos, a medição de apenas um qubit só colapsa um dos subsistemas, mas nem todos.  
 
-Para ver isso, considere medir a primeira qubit do seguinte Estado, que é formada pela aplicação da transformação Hadamard $H $ em dois qubits inicialmente definido como o estado "0": $ $ H ^ {\otimes 2} \left (\begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \frac{1}{2}\begin{bmatrix}1 & 1 & 1 & 1 \\\\ 1 &-1 & 1 &-1 \\\\ 1 & 1 &-1 &-1 \\\\ 1 &- 1 &-1 & 1 \end{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0 \ fim {bmatrix} = \frac{1}{2}\begin{bmatrix}1\\\\ 1\\\\ 1\\\\ 1 \ fim {bmatrix} \mapsto \begin{cases}\Text{Outcome} = 0 & \frac{1}{\sqrt{2}} \begin{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ \Text{Outcome} = 1 & \frac{1}{\sqrt{2}} \begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
-$ $ Os dois resultados têm 50% de probabilidade de ocorrer.  O resultado sendo 50% de probabilidade para ambos pode ser Intuit do fato de que o vetor de estado inicial do Quantum é invariável em troca de $0 $ por $1 $ no primeiro qubit.
+Para ver isto considerar medir o primeiro qubit do seguinte estado, que é formada pela aplicação da transformação de Hadamard $H$ em dois qubits inicialmente definidos para o estado "0": $$ H^{\otimes 2} \start {bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start {bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \{1}frac \{2}1 \\\\ 1 e -1 e 1 e -1 \\\\ 1 e 1 e -1 e -1 e -1 \\\\ 1 e - 1 e -1 e 1 \end{bmatrix}\start{bmatrix}1\\\\ 0\\\\ 0\\\\ 0\end{bmatrix} = \frac{1}{2}\start {bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix\\} \mapsto \start{cases}\text {{0 & \frac{1}{\sqrt{2}\0}bmatrix 1\\\\ 1\\\\\\\\ \\ \text {outcome }=1 & \frac{1}{\sqrt{2}}\begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
+$$ Ambos os resultados têm 50% de probabilidade de ocorrer.  O resultado é 50% de probabilidade para ambos pode ser intuido pelo facto de o vetor do estado quântico inicial ser invariante ao trocar $0$ por $1$ no primeiro qubit.
 
-A regra matemática para medir o primeiro ou o segundo qubit é simples.  Se permitirmos que $e _k $ seja o vetor de base computacional $k ^ {\rm th} $ e permita que $S $ seja o conjunto de todos os $e _k $, de modo que o qubit em questão receba o valor $1 $ para esse valor de $k $.  Por exemplo, se estivermos interessados em medir o primeiro qubit, $S $ consistiria em $e _2 \ equiv $10 e $e _3 \ equiv $11.  Da mesma forma, se estivermos interessados na segunda qubit $S $ consistiria em $e _1 \ equiv $1 e $e _3 \equiv $11.  Em seguida, a probabilidade de medir o qubit escolhido para ser $1 $ é para o vetor de estado $ \psi $
+A regra matemática para medir o primeiro ou segundo qubit é simples.  Se deixarmos $e_k$ ser o vetor de base computacional $k^{\rm th}$ e deixar que $S$ seja o conjunto de todos os $e_k$ de tal forma que o qubit em questão leva o valor de $1$ por esse valor de $k$.  Por exemplo, se estivermos interessados em medir o primeiro qubit, então $S$ consistiria em $e_2\equiv 10$ e $e_3\equiv 11$.  Da mesma forma, se estivermos interessados no segundo qubit $S$ consistiria em $e_1\equiv 01$ e $e_3 \equiv 11$.  Em seguida, a probabilidade de medir o qubit escolhido para $1$ é para o vetor do estado $\psi$
 
-$ $ P (\Text{Outcome} = 1) = \ sum_ {e_k \Text{no conjunto} S} \psi ^ \dagger e_k e_k ^ \dagger \psi.
+$$ P(\text{outcome}=1)= \sum_{e_k \text{ no conjunto } S}\psi^\dagger e_k e_k^\dagger \psi.
 $$
 
-Como cada medida qubit só pode produzir $0 $ ou $1 $, a probabilidade de medir $0 $ é simplesmente $1-P (\Text{Outcome} = 1) $.  É por isso que só fornecemos explicitamente uma fórmula para a probabilidade de medir $1 $.
+Uma vez que cada medição de qubit só pode render $0$ ou $1$1$, a probabilidade de medir $0$ é simplesmente $1-P (\text{outcome}=1)$.  É por isso que só explicitamente damos uma fórmula para a probabilidade de medir $1$1$.
 
-A ação que tal medida tem no estado pode ser expressa matematicamente como
+A ação que tal medida tem sobre o estado pode ser expressa matematicamente como
 
-$ $ \psi \mapsto \frac{\ sum_ {e_k \Text{no conjunto} S} e_k e_k ^ \dagger \psi}{\sqrt{P (\Text{Outcome} = 1)}}.
+$$ \psi \mapsto \frac{\sum_{e_k \text{{ in the set } S} e_k e_k^\dagger \psi}{\sqrt{P(\text{outcome}=1)}}}
 $$
 
-O leitor cuidadoso pode se preocupar com o que acontece quando a probabilidade da medida é zero.  Embora o estado resultante seja tecnicamente indefinido nesse caso, nunca precisamos nos preocupar com essas eventualidades porque a probabilidade é zero!
+O leitor cauteloso pode preocupar-se com o que acontece quando a probabilidade da medição é zero.  Embora o estado resultante seja tecnicamente indefinido neste caso, nunca precisamos de nos preocupar com tais eventualidades porque a probabilidade é zero!
 
 
-Se levarmos $ \psi $ para ser o vetor de estado uniforme fornecido acima e estiver interessado em medir a primeira qubit, 
+Se levarmos $\psi$ para ser o vetor de estado uniforme dado acima e estamos interessados em medir o primeiro qubit então 
 
-$ $ P (\Text{Measurement do primeiro qubit} = 1) = (\psi ^ \dagger e_2) (e_2 ^ \dagger \psi) + (\psi ^ \dagger e_3) (e_3 ^ \dagger \psi) = | e_2 ^ \dagger \psi | ^ 2 + | e_3 ^ \dagger \psi | ^ 2.
+$$ P(\text{measurement of first qubit}=1) = (\psi^\dagger e_2)(e_2^\dagger \psi)(\psi^\dagger e_3)(e_3^\dagger \psi)=e_2^\apunhal \psi^2+/e_3^\apunhal \psi^2^2^.
 $$
 
-Observe que essa é apenas a soma das duas probabilidades que seriam esperadas para medir os resultados $10 $ e $11 $ foram todos os qubits a serem medidos.
-Para nosso exemplo, isso é avaliado como
+Note que esta é apenas a soma das duas probabilidades que seriam esperadas para medir os resultados $10$ e $11$ foram todos os qubits a medir.
+Para o nosso exemplo, isto avalia para
 
-$ $ \frac{1}{4}\left | \begin{bmatrix}0 & 0 & 1 & 0 \ end {bmatrix} \ Begin {bmatrix} 1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \right | ^ 2 + \frac{1}{4}\left | \begin{bmatrix}0 & 0 & 0 & 1 \ end {bmatrix} \ Begin {bmatrix} 1\\\\ 1\\\\ 1\\\\ 1 \ end {bmatrix} \right | ^ 2 = \frac{1}{2}.
+$$ \frac{1}{4}\left\\start{bmatrix}0&0&1&0\end{bmatrix}\start{bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix} \right\2+\frac{1}{4}\\start{bmatrix}0&0&0&1\end{bmatrix}\start{bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix} \right^2=\frac{1}{2}.
 $$
 
-que corresponde perfeitamente ao que nossa intuição nos informa que deve ser a probabilidade.  Da mesma forma, o estado pode ser escrito como
+que combina perfeitamente com o que a nossa intuição nos diz que a probabilidade deve ser.  Da mesma forma, o estado pode ser escrito como
 
-$ $ \frac{\frac{e_2}{2}+ \frac{e_3}{2}} {\sqrt{\frac{1}{2}}} = \frac{1}{\sqrt{2}} \begin{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1 \ fim {bmatrix} $ $
+$$ \frac{{e_2}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}=frac{1}{\sqrt{2}}\start{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1\end{bmatrix} $$
 
-novamente de acordo com nossa intuição.
+novamente de acordo com a nossa intuição.
 
-## <a name="two-qubit-operations"></a>Operações de duas qubit
-Como no caso de qubit único, qualquer transformação unitário é uma operação válida em qubits. Em geral, uma transformação unitário em $n $ qubits é uma matriz $U $ do tamanho de $2 ^ n \times 2 ^ n $ (para que ela atue em vetores de tamanho $2 ^ n $), de modo que $U ^{-1} = U ^ \dagger $. Por exemplo, a porta CNOT (controlada não) é uma porta de dois qubit comumente usada e é representada pela seguinte matriz de unitário:
+## <a name="two-qubit-operations"></a>Operações de Dois Qubit
+Tal como no caso do qubit único, qualquer transformação unitária é uma operação válida em qubits. Em geral, uma transformação unitária em qubits de $n$ é uma matriz $U$ de tamanho $2^n \vezes 2^n$ (de modo a agir em vetores de tamanho $2^n$), de tal forma que $U^{-1} = U^\dagger$. Por exemplo, o portão CNOT (controlado-NÃO) é um portão de dois qubits comumente utilizado e é representado pela seguinte matriz unitária:
 
-$ $ \operatorname{CNOT} = \begin{bmatrix} 1 \ 0 \ 0 \ 0 \\\\ 0 \ 1 \ 0 \ 0 \\\\ 0 \ 0 \ 0 \ 1 \\\\ 0 \ 0 \ 1 \ 0 \end{bmatrix} $ $
+$$ \operatorname{CNOT} = \start{bmatrix} 1\ 0\ 0\ 0\ 0 \\\\ 0\ 0\ 0\ 0\ 0 \\\\ 0\ 0 \\\ 0\ 1 \\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0 \ 0 \end{bmatrix} $$ $$
 
-Também podemos formar Gates de duas qubit aplicando Gates de qubit único em ambos os qubits. Por exemplo, se aplicarmos as Gates 
+Também podemos formar portões de dois qubits aplicando portões de qubit único em ambos os qubits. Por exemplo, se aplicarmos os portões 
 
-$ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} $ $
+$$ \start{bmatrix} a\ b\\\\ c\ d \end{bmatrix} $$
 
-e em
+e
 
-$ $ \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} $ $
+$$\start{bmatrix} e\ f\\\\  g\ h \end{bmatrix} $$
 
-para o primeiro e o segundo qubits, respectivamente, isso é equivalente a aplicar o unitário de dois qubit fornecido por seu produto tensor: $ $ \begin{bmatrix} a \ b\\\\ c \ d \end{bmatrix} \otimes \begin{bmatrix} e \ f\\\\ g \ h \end{bmatrix} = \begin{bmatrix} AE \ AF \ is \ BF \\\\ AG \ Ah \ BG \ BH \\\\ CE \ CF \ de \ DF \\\\ CG \ ch \ DG \ DH \end{bmatrix}. $ $, portanto, podemos formar duas qubit Gates ao pegar o produto tensor de algumas Gates de qubit individuais conhecidos. Alguns exemplos de Gates de duas qubit incluem $H \otimes H $, $X \otimes \boldone $ e $X \otimes Z $.
+ao primeiro e segundo qubits, respectivamente, isto equivale a aplicar o unitário de dois qubitda dado pelo seu produto tensor: $$\begin{bmatrix} a\ b\\\\ c\ d \end{bmatrix} \otimes \start {bmatrix} e\ f\\\\ g\ h \end{bmatrix}= \start{bmatrix} a E\ af\ be\ bf \\\\ ag\ ah\ bg\ \\bh \\ ce\ cf\ de\ df \\\\ cg\ ch\ dg\ dh \end{bmatrix}.$$$ Assim podemos formar portões de dois qubits tomando o produto tensor de alguns portões de um único qubit conhecidos. Alguns exemplos de portões de dois qubits incluem $H \otimes H$, $X \otimes \boldone$, e $X \otimes Z$.
 
-Observe que, embora qualquer um dos dois Gates qubit defina uma porta de dois qubit ao pegar seu produto tensor, o converso não será verdadeiro. Nem todas as Gates de duas qubit podem ser escritas como o produto tensor de Gates de qubit único.  Essa porta é chamada de portão *Entangling* . Um exemplo de um portão Entangling é o portão CNOT.
+Note que, embora quaisquer dois portões de qubit único definam um portão de dois qubits tomando o seu produto tensor, o inverso não é verdade. Nem todos os portões de dois qubits podem ser escritos como o produto tensor de portões de um único qubit.  Tal portão é chamado de portão *de engate.* Um exemplo de um portão de engate é o portão CNOT.
 
-A intuição por trás de uma porta controlada não pode ser generalizada para Gates arbitrárias.  Um portão controlado em geral é um portão que atua como identidade (ou seja, ele não tem nenhuma ação), a menos que um qubit específico seja $1 $.  Denotamos um unitário controlado, controlado nesse caso no qubit rotulado $x $, com um $ \Lambda\_x (U) $.  Por exemplo, $ \ Lambda_0 (U) e\_{1}\otimes {\psi} = e\_{1}\otimes U {\psi} $ e $ \Lambda\_0 (U) e\_{0}\otimes {\psi} = e\_{0}\otimes{\psi} $, em que $e\_$0 e $e\_$1 são os vetores de base computacional para um único qubit correspondente aos valores $0 $ e $1 $.  Por exemplo, considere o seguinte Gate controlado-$Z $, então podemos expressar isso como $ $ \Lambda\_0 (Z) = \begin{bmatrix}1 & 0 & 0 & 0\\\\0 & 1 & 0 & 0\\\\0 & 0 & 1 & 0\\\\0 & 0 & 0 &-1 \end{bmatrix} = (\boldone\otimes H) \operatorname{CNOT} (\boldone\otimes H).
+A intuição por trás de um portão não controlado pode ser generalizada a portões arbitrários.  Um portão controlado em geral é um portão que funciona como identidade (ou seja, não tem ação) a menos que um qubit específico seja $1$1$.  Denotamos um unitário controlado, controlado neste caso no qubit rotulado $x$, com um $\Lambda\_x(U)$.  Como exemplo $\Lambda_0(U) e\_{1}\otimes {\psi}=e\_{1}\otimes U{\psi}$ e $\Lambda\_0(U) e\_{0}\otimes {\psi}=e\_{0}\otimes{\psi}$, onde $e\_0$ e $e\_1$ são os vetores de base computacional para um único qubit correspondente aos valores $0$ e $1$1$.  Por exemplo, considere o seguinte portão controlado $Z$ então podemos expressá-lo como $$ \Lambda\_0(Z)= \start{bmatrix}1&0&0&0\\\\0&1&0&0\\\\0 &0&1&0\\\\0&0&0&-1 \end{bmatrix}=(\boldone\otimes H)\operatorname{CNOT}(\boldone\otimes H).
 $$
 
-A criação de unidades controladas de maneira eficiente é um grande desafio.  A maneira mais simples de implementar isso requer formar um banco de dados de versões controladas de Gates fundamentais e substituir cada portão fundamental na operação unitário original por sua contraparte controlada.  Geralmente, isso é muito inútil e a Insight inteligente muitas vezes pode ser usada apenas para substituir alguns Gates por versões controladas para obter o mesmo impacto.  Por esse motivo, fornecemos em nossa estrutura a capacidade de executar o método simples de controlar ou permitir que o usuário defina uma versão controlada do unitário se uma versão de ajuste manual for conhecida.
+Construir unitários controlados de forma eficiente é um grande desafio.  A forma mais simples de implementar isto requer a formação de uma base de dados de versões controladas de portões fundamentais e a substituição de todos os portãos fundamentais da operação unitária original pela sua congénere controlada.  Esta visão é muitas vezes bastante desperdiçada e inteligente muitas vezes pode ser usada para apenas substituir alguns portões por versões controladas para obter o mesmo impacto.  Por esta razão, fornecemos no nosso quadro a capacidade de executar o método ingénuo de controlo ou permitir que o utilizador defina uma versão controlada do unitário se for conhecida uma versão otimizada afinada à mão.
 
-Os Gates também podem ser controlados usando informações clássicas.  Um não portão, por exemplo, controlado de forma clássica, é apenas um não portão comum, mas só será aplicado se um bit clássico for $1 $ em oposição a um bit quântico.  Nesse sentido, um portão controlado de forma clássica pode ser considerado como uma instrução If no código Quantum, no qual a Gate é aplicada somente em uma ramificação do código.
+Os portões também podem ser controlados usando informações clássicas.  Um não-portão controlado clássicamente, por exemplo, é apenas um não-portão comum, mas só é aplicado se uma parte clássica for $1$ em oposição a uma parte quântica.  Neste sentido, um portão controlado clássicamente pode ser considerado como uma declaração se no código quântico em que o portão é aplicado apenas em um ramo do código.
 
 
-Como no caso de qubit único, um conjunto de portão de dois qubit é universal se qualquer matriz de US $4 \ vezes $4 pode ser aproximada por um produto de Gates desse conjunto para precisão arbitrária.
-Um exemplo de um conjunto de portão universal é o portão Hadamard, o portão T e o portão CNOT. Ao pegar produtos desses Gates, podemos aproximar qualquer matriz de dois qubits.
+Tal como no caso do qubit único, um conjunto de dois qubits gate é universal se qualquer matriz unitária de $4\times de 4$4$ pode ser aproximadamente aproximadapor um produto de portões deste conjunto para precisão arbitrária.
+Um exemplo de um portão universal definido é o portão Hadamard, o portão T, e o portão CNOT. Tomando produtos destes portões, podemos aproximar qualquer matriz unitária em dois qubits.
 
-## <a name="many-qubit-systems"></a>Muitos sistemas qubit
-Seguimos exatamente os mesmos padrões explorados no caso de duas qubit para criar vários Estados de Quantum de qubit de sistemas menores.  Esses Estados são criados com a formação de produtos tensor de Estados menores.  Por exemplo, considere a codificação da cadeia de caracteres de bits $1011001 $ em um computador Quantum.  Podemos codificá-lo como
+## <a name="many-qubit-systems"></a>Sistemas Many-Qubit
+Seguimos exatamente os mesmos padrões explorados no caso de dois qubits para construir muitos estados quânticos qubit a partir de sistemas menores.  Estes Estados são construídos através da formação de produtos tensores de estados mais pequenos.  Por exemplo, considere codificar a cadeia bit $1011001$ num computador quântico.  Podemos codificar isto como
 
-$ $1011001 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}.
+$$ 1011001 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \start {bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \start{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \start{{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \start{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \start{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \start{bmatrix} 0 \\\\ 1 \end{bmatrix}.
 $$
 
-As Gates da Quantum funcionam exatamente da mesma maneira.  Por exemplo, se quisermos aplicar o $X $ Gate ao primeiro qubit e, em seguida, executar um CNOT entre o segundo e o terceiro qubits, poderemos expressar essa transformação como
+Os portões quânticos funcionam exatamente da mesma maneira.  Por exemplo, se quisermos aplicar o portão $X$ ao primeiro qubit e, em seguida, executar um CNOT entre o segundo e o terceiro qubits podemos expressar esta transformação como
 
-\begin{align} & (X \otimes \operatorname{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone \otimes \boldone) \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\\\\ & \qquad\qquad\equiv 0011001.
-\end{align}
+\start{align} &(X \otimes \operatorname{CNOT}_{12}\otimes \boldone\otimes \boldone \otimes \boldone \otimes \boldone \otimes \boldone} \start{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \start{bmatrix} 1 \\\\ 0 \end{bmatrix }\otimes \start{bmatrix} 0 \\\\ 1 \end{bmatrix}\otimes \start{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \start{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \start{bmatrix} 1 \\\\ 0 \end{bmatrix}\otimes \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\\\\ &\qquad\qquad\equiv 0011001.
+\fim{align}
 
-Em muitos sistemas qubit, muitas vezes há necessidade de alocar e desalocar qubits que sirvam como memória temporária para o computador Quantum.  Tal qubit é chamada de ancilla.  Por padrão, supomos que o estado qubit seja inicializado para $e _0 $ na alocação.  Supomos que ele é retornado novamente para $e _0 $ antes da desalocação.  Essa suposição é importante porque, se um ancilla qubit se tornar confusas com outro registro de qubit quando ele se tornar desalocado, o processo de desalocação danificará o ancilla.  Por esse motivo, sempre presumimos que esses qubits sejam revertidos para seu estado inicial antes de serem liberados.
+Em muitos sistemas qubit, muitas vezes há a necessidade de alocar e desalocar qubits que servem de memória temporária para o computador quântico.  Tal qubit é chamado de uma cilla.  Por predefinição assumimos que o estado qubit é inicializado para $e_0$ após a atribuição.  Assumimos ainda que é devolvido novamente a $e_0$ antes da desatribuição.  Este pressuposto é importante porque se um qubit aceso se envolver com outro registo de qubit quando este for desalocado, então o processo de desafetação prejudicará a acessia.  Por esta razão, assumimos sempre que tais qubits são revertidos para o seu estado inicial antes de serem libertados.
 
-Finalmente, embora novos Gates precisem ser adicionados ao nosso conjunto de porta para obter a computação Quantum universal para dois computadores Quantum qubit, nenhum novo Gates precisa ser introduzido no caso de várias qubit.  O Gates $H $, $T $ e CNOT formam uma porta universal definida em muitos qubits porque qualquer transformação unitário geral pode ser quebrada em uma série de duas rotações de qubit.  Em seguida, podemos aproveitar a teoria desenvolvida para o caso de duas qubit e usá-la novamente aqui quando tivermos muitos qubits.
+Finalmente, embora fossem necessários novos portões para alcançar a computação quântica universal para dois computadores quânticos qubit, não é necessário introduzir novos portões no caso multiqubit.  Os portões $H$, $T$ e CNOT formam um portão universal definido em muitos qubits porque qualquer transformação unitária geral pode ser quebrada em uma série de duas rotações qubit.  Podemos então aproveitar a teoria desenvolvida para o caso de dois qubits e usá-la novamente aqui quando temos muitos qubits.
 
-Embora a notação linear algébricas que temos usado até agora pode, certamente, ser usada para descrever os Estados de qubit, ela se torna cada vez mais complicada à medida que aumentamos o tamanho dos Estados.  O vetor de coluna resultante para uma cadeia de caracteres de comprimento de 7 bits, por exemplo, é $128 $ dimensional, o que o torna expressando usando a notação descrita anteriormente muito complicada.  Por esse motivo, apresentamos uma notação comum na computação Quantum que nos permite descrever de forma concisa esses vetores altamente dimensionais.
+Embora a notação algébrica linear que temos vindo a utilizar até agora possa certamente ser usada para descrever estados multiqubit, torna-se cada vez mais complicada à medida que aumentamos a dimensão dos Estados.  O vetor de coluna resultante para uma corda de 7 bits, por exemplo, é $128$ dimensional, o que faz expressá-lo usando a notação descrita anteriormente muito pesada.  Por esta razão, apresentamos uma notação comum na computação quântica que nos permite descrever concisamente estes vetores de alta dimensão.

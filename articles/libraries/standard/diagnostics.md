@@ -1,18 +1,18 @@
 ---
-title: Q# bibliotecas padrão - diagnósticos / Microsoft Docs
-description: Q# bibliotecas padrão - diagnósticos
+title: Diagnósticos nas bibliotecas padrão Q#
+description: Conheça as funções e operações de diagnóstico nas bibliotecas padrão Q# usadas para capturar erros ou erros em programas quânticos.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 67ec6780d8cbbda7223d46026a9df97cebc92b33
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ba2f248327bb3db4ee895f8e65ea31c17e42b5f4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820985"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906241"
 ---
-# <a name="diagnostics"></a>Diagnósticos #
+# <a name="diagnostics"></a>Diagnóstico #
 
 Tal como no desenvolvimento clássico, é importante ser capaz de diagnosticar erros e erros em programas quânticos.
 As bibliotecas padrão Q# fornecem uma variedade de maneiras diferentes para garantir a correção dos programas quânticos, conforme detalhado em <xref:microsoft.quantum.techniques.testing-and-debugging>.

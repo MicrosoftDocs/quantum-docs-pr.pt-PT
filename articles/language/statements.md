@@ -1,17 +1,17 @@
 ---
-title: Q# declarações / Microsoft Docs
-description: Q# declarações
+title: Q# Declarações
+description: Conheça a utilização correta das declarações no Q#, incluindo declarações de função e operação, declarações e atribuições variáveis, e chamadas de operação.
 author: QuantumWriter
 uid: microsoft.quantum.language.statements
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 9a6f5d53ec21090d0c13f4369e0270d264cd1e9b
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: e801a5fdd24b973f47d23d2aca6f11bbebf333d4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036496"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904677"
 ---
 # <a name="statements-and-other-constructs"></a>Declarações e Outras Construções
 

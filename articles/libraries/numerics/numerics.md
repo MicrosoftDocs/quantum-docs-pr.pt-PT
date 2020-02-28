@@ -1,21 +1,21 @@
 ---
-title: Utilização da Biblioteca Numérica  Microsoft Docs
-description: Usando a Biblioteca Numérica
+title: Usando a Biblioteca numérica Microsoft Q#
+description: Conheça os tipos e operações disponíveis na biblioteca de Numéricos Quânticos da Microsoft.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: ca24ff60cd9ae5077c7f4bae0012fe1180d7e6d4
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: ad9f529efd06fdf13bab4467b091aafacf1d5b09
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821036"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907261"
 ---
 # <a name="using-the-numerics-library"></a>Usando a biblioteca numérica
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>Descrição geral
 
 A biblioteca numérica é composta por três componentes
 
@@ -36,7 +36,7 @@ A biblioteca numérica suporta os seguintes tipos
 1. **`SignedLittleEndian`** : O mesmo que `LittleEndian` exceto que representa um inteiro assinado armazenado no complemento de dois.
 1. **`FixedPoint`** : Representa um número real constituído por um `qArr2 : Qubit[]` de matriz qubit e uma posição de ponto binário `pos`, que conta o número de dígitos binários à esquerda do ponto binário. `qArr2` é armazenado da mesma forma que `SignedLittleEndian`.
 
-## <a name="operations"></a>Operations
+## <a name="operations"></a>Operações
 
 Para cada um dos três tipos acima, existe uma variedade de operações:
 

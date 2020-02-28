@@ -1,285 +1,285 @@
 ---
-title: Microsoft Quantum Development Kit software de terceiros | Microsoft Docs
-description: Microsoft Quantum Development Kit software de terceiros
+title: Microsoft Quantum Development Kit Software de terceiros
+description: Microsoft Quantum Development Kit avisos e informações de software de terceiros.
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Não adicione nem edite as palavras-chave sem consultar o perito em SEO.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
-ms.openlocfilehash: 85bade791c0744d6636d60fe4f7c9b8f7749c7c6
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 84d83bf65b3c01a630d98210a5ac3fe322fa501f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "73184377"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906819"
 ---
-# <a name="third-party-software-notices-and-information"></a>INFORMAÇÕES E AVISOS DE SOFTWARE DE TERCEIROS
+# <a name="third-party-software-notices-and-information"></a>AVISOS E INFORMAÇÕES DE SOFTWARE de terceiros
 
-Esse arquivo se baseia ou incorpora material dos projetos listados abaixo (IP de terceiros). A notificação de direitos autorais original e a licença sob a qual a Microsoft recebeu esse IP de terceiros são definidas abaixo. Essas licenças e avisos são fornecidos apenas para fins informativos. A Microsoft licencia o IP de terceiros para você sob os termos de licenciamento para o produto da Microsoft. A Microsoft reserva todos os outros direitos não expressamente concedidos sob este contrato, seja por implicação, embargo ou de outra forma.
+Este ficheiro baseia-se ou incorpora material dos projetos listados abaixo (IP de terceiros). O aviso original de direitos de autor e a licença sob a qual a Microsoft recebeu tal IP de terceiros, são apresentados abaixo. Tais licenças e avisos são fornecidos apenas para fins informantes. A Microsoft licencia-lhe o IP de terceiros nos termos de licenciamento do produto Microsoft. A Microsoft reserva todos os outros direitos não expressamente concedidos ao abrigo deste acordo, seja por implicação, estoppel ou outros.
 
-1. YamlDotNet. versão assinada 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
-2. xUnit. Runner. VisualStudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
-3. xUnit. Runner. console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
-4. xUnit. Extensibility. Execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
-5. xUnit. Extensibility. Core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
-6. xUnit. Core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
-7. xUnit. Assert 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
-8. xUnit. Analyzers 0.7.0 (https://www.nuget.org/packages/xunit.analyzers/0.7.0)
-9. xUnit. abstrações 2.0.1 (https://www.nuget.org/packages/xunit.abstractions/2.0.1)
-10. xUnit 2.3.1 (https://www.nuget.org/packages/xunit/2.3.1)
+1. YamlDotNet.Signed version 4.2.2 (https://www.nuget.org/packages/YamlDotNet.Signed/4.2.2)
+2. xunit.runner.visualstudio 2.3.1 (https://www.nuget.org/packages/xunit.runner.visualstudio/2.3.1)
+3. xunit.runner.console 2.3.1 (https://www.nuget.org/packages/xunit.runner.console/2.3.1 )
+4. xunit.extensibility.execution 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.execution/2.3.1)
+5. xunit.extensibility.core 2.3.1 (https://www.nuget.org/packages/xunit.extensibility.core/2.3.1)
+6. xunit.core 2.3.1 (https://www.nuget.org/packages/xunit.core/2.3.1)
+7. xunit.assert 2.3.1 (https://www.nuget.org/packages/xunit.assert/2.3.1)
+8. xunit.analisadores 0.7.0 (https://www.nuget.org/packages/xunit.analyzers/0.7.0)
+9. xunit.abstrações 2.0.1 (https://www.nuget.org/packages/xunit.abstractions/2.0.1)
+10. xunidade 2.3.1 (https://www.nuget.org/packages/xunit/2.3.1)
 11. ManagedEsent 1.9.4 (https://www.nuget.org/packages/ManagedEsent/1.9.4)
-12. FSharp. Core 4.2.3 (https://www.nuget.org/packages/FSharp.Core/4.2.3)
-13. 0\.91.1 de FSharp. Chart (https://www.nuget.org/packages/FSharp.Charting/0.91.1)
+12. FSharp.Core 4.2.3 (https://www.nuget.org/packages/FSharp.Core/4.2.3)
+13. FSharp.Charting 0.91.1 (https://www.nuget.org/packages/FSharp.Charting/0.91.1)
 14. FsCheck 2.10.4 (https://www.nuget.org/packages/FsCheck/2.10.4)
 15. Argu 3.7.0 (https://www.nuget.org/packages/Argu/3.7.0)
 16. FParsec 1.0.3 (https://www.nuget.org/packages/FParsec/1.0.3)
 
-## <a name="yamldotnetsigned-notices-and-information"></a>YamlDotNet. avisos e informações assinadas
+## <a name="yamldotnetsigned-notices-and-information"></a>YamlDotNet.Avisos assinados e informações
 ---------------------------------------
 Copyright (c) 2008, 2009, 2010, 2011, 2012, 2013, 2014 Antoine Aubry e colaboradores
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A autorização é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e ficheiros de documentação associados (o "Software"), para negociar no Software sem restrições, incluindo sem limitação os direitos de utilização, cópia, modificação, fusão, publicação, distribuição, sublicença e/ou venda de cópias do Software, e permitir que as pessoas a quem o Software esteja mobilado o façam, sujeitos às seguintes condições:
 
-O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
+O aviso de direitos de autor acima referido e este aviso de permissão serão incluídos em todas as cópias ou partes substanciais do Software.
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO. EM NENHUM EVENTO, OS AUTORES OU OS PROPRIETÁRIOS DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANO OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU, DE OUTRA FORMA, PROVENIENTE DE OU EM CONEXÃO COM O SOFTWARE OU COM O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+O SOFTWARE é FORNECIDO "AS IS", SEM GARANTIA DE QUALQUER TIPO, EXPRESSO ou IMPLÍCITO, INCLUINDO, MAS NÃO se LIMITAndo às garantias de comercialismo, aptidão para um determinado propósito e não infração. Em caso algum, os autores ou titulares de direitos autorais serão responsáveis por qualquer reclamação, indemnização ou outra responsabilidade, seja numa ação contratual, tort ou não, decorrente, fora ou em conexão com o software, nem com a utilização ou outros negócios no software.
 
 
 
-## <a name="xunitrunnervisualstudio-notices-and-information"></a>INFORMAÇÕES e avisos do xUnit. Runner. VisualStudio
+## <a name="xunitrunnervisualstudio-notices-and-information"></a>xunit.runner.visualstudio NOTICES And INFORMATION
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
  [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
 
 
-## <a name="xunitrunnerconsole-notices-and-information"></a>INFORMAÇÕES e avisos do xUnit. Runner. console
+## <a name="xunitrunnerconsole-notices-and-information"></a>xunit.runner.consola AVISOS E INFORMAÇÕES
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
 
 
-## <a name="xunitextensibilityexecution-notices-and-information"></a>INFORMAÇÕES e avisos de xUnit. Extensibility. Execution
+## <a name="xunitextensibilityexecution-notices-and-information"></a>xunit.extensibility.avisos de execução e informação
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
 
-## <a name="xunitextensibilitycore-notices-and-information"></a>AVISOS e informações do xUnit. Extensibility. Core
+## <a name="xunitextensibilitycore-notices-and-information"></a>xunit.extensibility.core NOTICES And INFORMATION
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
-## <a name="xunitcore-notices-and-information"></a>AVISOS e informações do xUnit. Core
+## <a name="xunitcore-notices-and-information"></a>xunit.core NOTICES And INFORMATION
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
-## <a name="xunitassert-notices-and-information"></a>INFORMAÇÕES e avisos do xUnit. Assert
+## <a name="xunitassert-notices-and-information"></a>xunit.assert AVISOS E INFORMAÇÃO
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
-## <a name="xunitanalyzers-notices-and-information"></a>INFORMAÇÕES e avisos do xUnit. Analyzers
+## <a name="xunitanalyzers-notices-and-information"></a>xunit.analisadores AVISOS E INFORMAÇÃO
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
-## <a name="xunitabstractions-notices-and-information"></a>INFORMAÇÕES e avisos de xUnit. abstrações
+## <a name="xunitabstractions-notices-and-information"></a>xunit.abstrações AVISOS E INFORMAÇÃO
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
-## <a name="xunit-notices-and-information"></a>INFORMAÇÕES e avisos do xUnit
+## <a name="xunit-notices-and-information"></a>avisos e informações do xunit
 ---------------------------------------
-Copyright (c) .NET Foundation e colaboradores todos os direitos reservados
+Direitos de autor (c) Fundação NET e Contribuintes Todos os Direitos Reservados
 
-Licenciado sob a licença do Apache, versão 2,0 (a "licença"); Você não pode usar esse arquivo, exceto em conformidade com a licença.
-Você pode obter uma cópia da licença em
+Licenciado ao abrigo da Licença Apache, versão 2.0 (a "Licença"); pode não utilizar este ficheiro, exceto em conformidade com a Licença.
+Você pode obter uma cópia da Licença em
 
   [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-A menos que seja exigido pela lei aplicável ou acordado por escrito, o software distribuído sob a licença é distribuído de acordo com uma base "no estado em que se encontra", sem garantias ou condições de qualquer tipo, seja expressa ou implícita.
-Consulte a licença para as permissões específicas de controle de idioma e limitações sob a licença.
+A menos que seja exigido por lei aplicável ou acordado por escrito, o software distribuído ao abrigo da Licença é distribuído numa base "AS IS", sem garantias ou condições de qualquer tipo, expressas ou implícitas.
+Consulte a Licença para a linguagem específica que rege as permissões e limitações ao abrigo da Licença.
 
-## <a name="managedesent-notices-and-information"></a>INFORMAÇÕES e avisos do ManagedEsent
+## <a name="managedesent-notices-and-information"></a>Avisos e INFORMAÇÃO geridos
 ---------------------------------------
-Licença pública da Microsoft (MS-PL)
+Licença Pública da Microsoft (Ms-PL)
 
-Essa licença controla o uso do software que o acompanha. Se você usar o software, aceitará essa licença. Se você não aceitar a licença, não use o software.
+Esta licença rege a utilização do software que o acompanha. Se usar o software, aceita esta licença. Se não aceitar a licença, não utilize o software.
 
 1. Definições
 
-Os termos "reproduzir", "reprodução", "trabalhos derivativos" e "distribuição" têm o mesmo significado aqui de acordo com as leis de direitos autorais dos EUA.
+Os termos "reproduzir", "reproduzir", "obras derivadas" e "distribuição" têm o mesmo significado aqui que a lei de direitos de autor dos EUA.
 
-Uma "contribuição" é o software original, ou quaisquer adições ou alterações no software.
+Uma "contribuição" é o software original, ou quaisquer adições ou alterações ao software.
 
-Um "colaborador" é qualquer pessoa que distribua sua contribuição sob esta licença.
+Um "contribuinte" é qualquer pessoa que distribua a sua contribuição ao abrigo desta licença.
 
-"Patentes licenciadas" são declarações de patente de um colaborador que lidam diretamente em sua contribuição.
+"Patentes licenciadas" são as reivindicações de patente de um contribuinte que lêem diretamente sobre a sua contribuição.
 
-2. Concessão de direitos
+2. Concessão de Direitos
 
-(A) concessão de direitos autorais-sujeito aos termos desta licença, incluindo as condições de licença e as limitações na seção 3, cada colaborador concede a você uma licença de copyright não exclusiva, mundial e isenta de royalties para reproduzir sua contribuição, preparar derivativo funciona de sua contribuição e distribui sua contribuição ou quaisquer trabalhos derivativos que você criar.
+(A) Concessão de Direitos autorais- Sujeito aos termos desta licença, incluindo as condições de licença e limitações na secção 3, cada contribuinte concede-lhe uma licença de direitos autorais não exclusiva, mundial e sem royalties para reproduzir a sua contribuição, preparar derivado obras da sua contribuição, e distribuir a sua contribuição ou quaisquer obras derivadas que você criar.
 
-(B) concessão de patente-sujeito aos termos desta licença, incluindo as condições de licença e as limitações na seção 3, cada colaborador concede a você uma licença não exclusiva, em todo o mundo, isenta de royalties sob suas patentes licenciadas para fazer, ter feito, usar, vender, oferecer para venda, importação e/ou, de outra forma, descarte sua contribuição no software ou trabalhos derivativos da contribuição no software.
+(B) Concessão de Patentes- Sujeito aos termos desta licença, incluindo as condições e limitações da licença na secção 3, cada contribuinte concede-lhe uma licença não exclusiva, mundial, sem royalties ao abrigo das suas patentes licenciadas para fazer, ter feito, utilizar, vender, vender, oferecer para venda, importar e/ou de outra forma alienar a sua contribuição no software ou obras derivadas da contribuição no software.
 
-3. Condições e limitações
+3. Condições e Limitações
 
-(A) sem licença de marca-esta licença não concede a você direitos de usar o nome, o logotipo ou as marcas registradas dos colaboradores.
+(A) Sem Licença de Marca registada - Esta licença não lhe concede direitos de utilização do nome, logotipo ou marca registada de qualquer colaborador.
 
-(B) se você trazer uma declaração de patente contra qualquer colaborador sobre as patentes que você alegar são infringidas pelo software, sua licença de patente desse colaborador para o software será encerrada automaticamente.
+(B) Se apresentar uma reclamação de patente contra qualquer contribuinte sobre patentes que alega serem infringidas pelo software, a sua licença de patente desse colaborador para o software termina automaticamente.
 
-(C) se você distribuir qualquer parte do software, deverá reter todos os avisos de direitos autorais, patente, marca registrada e atribuição que estão presentes no software.
+(C) Se distribuir qualquer parte do software, deve reter todos os avisos de direitos autorais, patentes, marcas e atribuições que estejam presentes no software.
 
-(D) se você distribuir qualquer parte do software no formulário de código-fonte, poderá fazer isso somente sob essa licença, incluindo uma cópia completa dessa licença com sua distribuição. Se você distribuir qualquer parte do software no formulário compilado ou de código de objeto, você só poderá fazer isso sob uma licença que esteja em conformidade com essa licença.
+(D) Se distribuir qualquer parte do software no formulário de código fonte, só poderá fazê-lo ao abrigo desta licença, incluindo uma cópia completa desta licença com a sua distribuição. Se distribuir qualquer parte do software no formulário de código compilado ou objeto, só poderá fazê-lo sob uma licença que cumpra esta licença.
 
-(E) o software é licenciado "no estado em que se encontra". O risco da respetiva utilização é da sua responsabilidade. Os colaboradores não oferecem garantias ou condições expressas. Você pode ter direitos de consumidor adicionais sob suas leis locais que esta licença não pode alterar. Até o limite permitido pelas leis locais, os colaboradores excluem as garantias implícitas de comercialização, adequação a uma finalidade específica e não violação.
+(E) O software é licenciado "as-is". O uso que faz do documento é da sua responsabilidade. Os contribuintes não dão garantias, garantias ou condições expressas. Pode ter direitos adicionais ao consumidor de acordo com as suas leis locais que esta licença não pode alterar. Na medida do permitido pela sua legislação local, os contribuintes excluem as garantias implícitas de comercialitabilidade, aptidão para um determinado fim e não infração.
 
-## <a name="fsharpcore-notices-and-information"></a>AVISOS e informações principais do FSharp. Core
+## <a name="fsharpcore-notices-and-information"></a>Avisos e informação fsharp.core
 ---------------------------------------
-A licença MIT (MIT)
+A Licença MIT (MIT)
 
 Copyright (c) Microsoft Corporation.
 Todos os direitos reservados.
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A autorização é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e ficheiros de documentação associados (o "Software"), para negociar no Software sem restrições, incluindo sem limitação os direitos de utilização, cópia, modificação, fusão, publicação, distribuição, sublicença e/ou venda de cópias do Software, e permitir que as pessoas a quem o Software esteja mobilado o façam, sujeitos às seguintes condições:
 
-O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
+O aviso de direitos de autor acima referido e este aviso de permissão serão incluídos em todas as cópias ou partes substanciais do Software.
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO. EM NENHUM EVENTO, OS AUTORES OU OS PROPRIETÁRIOS DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANO OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU, DE OUTRA FORMA, PROVENIENTE DE OU EM CONEXÃO COM O SOFTWARE OU COM O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+O SOFTWARE é FORNECIDO "AS IS", SEM GARANTIA DE QUALQUER TIPO, EXPRESSO ou IMPLÍCITO, INCLUINDO, MAS NÃO se LIMITAndo às garantias de comercialismo, aptidão para um determinado propósito e não infração. Em caso algum, os autores ou titulares de direitos autorais serão responsáveis por qualquer reclamação, indemnização ou outra responsabilidade, seja numa ação contratual, tort ou não, decorrente, fora ou em conexão com o software, nem com a utilização ou outros negócios no software.
 
-## <a name="fsharpcharting-notices-and-information"></a>NOTIFICAÇÕES e informações do FSharp. Char
+## <a name="fsharpcharting-notices-and-information"></a>FSharp.Charting AVISOS e INFORMAÇÕES
 ---------------------------------------
-A licença MIT (MIT)
+A Licença MIT (MIT)
 
 Copyright (c) 2013 Tomas Petricek
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A autorização é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e ficheiros de documentação associados (o "Software"), para negociar no Software sem restrições, incluindo sem limitação os direitos de utilização, cópia, modificação, fusão, publicação, distribuição, sublicença e/ou venda de cópias do Software, e permitir que as pessoas a quem o Software esteja mobilado o façam, sujeitos às seguintes condições:
 
-O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
+O aviso de direitos de autor acima referido e este aviso de permissão serão incluídos em todas as cópias ou partes substanciais do Software.
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO. EM NENHUM EVENTO, OS AUTORES OU OS PROPRIETÁRIOS DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANO OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU, DE OUTRA FORMA, PROVENIENTE DE OU EM CONEXÃO COM O SOFTWARE OU COM O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
-As versões empacotadas deste software podem incluir cópias de OxyPlot. Core. dll e OxyPlot. GtkSharp. dll, licença abaixo.
+O SOFTWARE é FORNECIDO "AS IS", SEM GARANTIA DE QUALQUER TIPO, EXPRESSO ou IMPLÍCITO, INCLUINDO, MAS NÃO se LIMITAndo às garantias de comercialismo, aptidão para um determinado propósito e não infração. Em caso algum, os autores ou titulares de direitos autorais serão responsáveis por qualquer reclamação, indemnização ou outra responsabilidade, seja numa ação contratual, tort ou não, decorrente, fora ou em conexão com o software, nem com a utilização ou outros negócios no software.
+As versões embaladas deste software podem incluir cópias de OxyPlot.Core.dll e OxyPlot.GtkSharp.dll, licença abaixo.
 
 ---
 
-A licença MIT (MIT)
+A Licença MIT (MIT)
 
 Copyright (c) 2012 Oystein Bjorke
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A autorização é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e ficheiros de documentação associados (o "Software"), para negociar no Software sem restrições, incluindo sem limitação os direitos de utilização, cópia, modificação, fusão, publicação, distribuição, sublicença e/ou venda de cópias do Software, e permitir que as pessoas a quem o Software esteja mobilado o façam, sujeitos às seguintes condições:
 
-O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
+O aviso de direitos de autor acima referido e este aviso de permissão serão incluídos em todas as cópias ou partes substanciais do Software.
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO. EM NENHUM EVENTO, OS AUTORES OU OS PROPRIETÁRIOS DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANO OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU, DE OUTRA FORMA, PROVENIENTE DE OU EM CONEXÃO COM O SOFTWARE OU COM O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+O SOFTWARE é FORNECIDO "AS IS", SEM GARANTIA DE QUALQUER TIPO, EXPRESSO ou IMPLÍCITO, INCLUINDO, MAS NÃO se LIMITAndo às garantias de comercialismo, aptidão para um determinado propósito e não infração. Em caso algum, os autores ou titulares de direitos autorais serão responsáveis por qualquer reclamação, indemnização ou outra responsabilidade, seja numa ação contratual, tort ou não, decorrente, fora ou em conexão com o software, nem com a utilização ou outros negócios no software.
 
-## <a name="fscheck-notices-and-information"></a>INFORMAÇÕES e avisos do FsCheck
+## <a name="fscheck-notices-and-information"></a>FsCheck AVISOS e INFORMAÇÕES
 ---------------------------------------
 Copyright (c) 2008-2014, Kurt Schelfthout
 
 Todos os direitos reservados.
 
-A redistribuição e o uso em formulários binários e de origem, com ou sem modificação, são permitidos desde que as seguintes condições sejam atendidas:
+São permitidas redistribuição e utilização em formas de origem e binários, com ou sem modificação, desde que sejam satisfeitas as seguintes condições:
 
-* As redistribuições do código-fonte devem reter o aviso de direitos autorais acima, esta lista de condições e a seguinte declaração.
-* As redistribuições em formato binário devem reproduzir o aviso de direitos autorais acima, esta lista de condições e a seguinte isenção de responsabilidade na documentação e/ou em outros materiais fornecidos com a distribuição.
-* Nem o nome de FsCheck nem os nomes de seus colaboradores podem ser usados para endossar ou promover produtos derivados deste software sem permissão específica prévia por escrito.
+* As redistribuições do código fonte devem manter o aviso de direitos de autor acima referido, esta lista de condições e a seguinte isenção de responsabilidade.
+* As redistribuições sob forma binária devem reproduzir o aviso de direitos de autor acima, esta lista de condições e a seguinte isenção de responsabilidade na documentação e/ou outros materiais fornecidos com a distribuição.
+* Nem o nome do FsCheck nem os nomes dos seus contribuintes podem ser utilizados para apoiar ou promover produtos derivados deste software sem autorização prévia específica.
 
-ESSE SOFTWARE É FORNECIDO PELOS CONTENTORES E COLABORADORES DE DIREITOS AUTORAIS "COMO ESTÃO" E QUAISQUER GARANTIAS EXPRESSAS OU IMPLÍCITAS, INCLUINDO, MAS NÃO SE LIMITANDO A, AS GARANTIAS IMPLÍCITAS DE COMERCIALIZAÇÃO E ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA SÃO DESALEGADAS. EM NENHUM EVENTO, O PROPRIETÁRIO OU OS COLABORADORES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUAISQUER DANOS DIRETOS, INDIRETOS, INCIDENTAIS, ESPECIAIS, EXEMPLARES OU CONSEQÜENCIAIS (INCLUINDO, MAS NÃO SE LIMITANDO A, AQUISIÇÃO DE BENS OU SERVIÇOS SUBSTITUTOS; PERDA DE USO, DADOS OU LUCROS; OU INTERRUPÇÕES DE NEGÓCIOS), NO ENTANTO, CAUSADOS E EM QUALQUER TEORIA DE RESPONSABILIDADE, SEJA EM CONTRATO, RESPONSABILIDADE ESTRITA OU DELITO (INCLUINDO NEGLIGÊNCIA OU DE OUTRA FORMA) RESULTANTE DE QUALQUER FORMA DO USO DESTE SOFTWARE, MESMO SE FOR INFORMADO SOBRE A POSSIBILIDADE DE TAIS DANOS.
+Este software é fornecido pelos titulares e contribuintes "as is" e quaisquer garantias expressas ou implícitas, incluindo, mas não se limitando a, as garantias implícitas de comercialismo e aptidão para um propósito específico são desreclamadas. Em caso algum, o titular ou colaborador dos direitos autorais será responsável por quaisquer danos diretos, indiretos, incidentais, exemplares ou consequenciais (incluindo, mas não limitados, a aquisição de bens ou serviços de substituição; PERDA DE UTILIZAÇÃO, DADOS OU LUCROS; Ou interrupção de negócio) NO ENTANTO, causada e em qualquer teoria da responsabilidade, seja em contrato, RESPONSABILIDADE RIGOROSA ou TORT (incluindo negligência ou outra) decorrente de qualquer saída da utilização deste software, mesmo que seja avisado da possibilidade de tal dano.
 
-## <a name="argu-notices-and-information"></a>INFORMAÇÕES e avisos do argu
+## <a name="argu-notices-and-information"></a>Avisos e INFORMAÇÃO de Argu
 ---------------------------------------
-A licença MIT (MIT)
+A Licença MIT (MIT)
 
 Copyright (c) 2016 Eirik Tsarpalis
 
-A permissão é concedida, sem encargos, a qualquer pessoa que obtenha uma cópia deste software e os arquivos de documentação associados (o "software"), para lidar com o software sem restrições, incluindo, sem limitação, os direitos de uso, cópia, modificação, mesclagem Publique, distribua, sublicenciamento e/ou venda de cópias do software e para permitir que pessoas com quem o software é fornecido façam isso, sujeito às seguintes condições:
+A autorização é concedida, gratuitamente, a qualquer pessoa que obtenha uma cópia deste software e ficheiros de documentação associados (o "Software"), para negociar no Software sem restrições, incluindo sem limitação os direitos de utilização, cópia, modificação, fusão, publicação, distribuição, sublicença e/ou venda de cópias do Software, e permitir que as pessoas a quem o Software esteja mobilado o façam, sujeitos às seguintes condições:
 
-O aviso de direitos autorais acima e esse aviso de permissão devem ser incluídos em todas as cópias ou partes substanciais do software.
+O aviso de direitos de autor acima referido e este aviso de permissão serão incluídos em todas as cópias ou partes substanciais do Software.
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU IMPLÍCITA, INCLUINDO, MAS NÃO SE LIMITANDO ÀS GARANTIAS DE COMERCIALIZAÇÃO, ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO. EM NENHUM EVENTO, OS AUTORES OU OS PROPRIETÁRIOS DE DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANO OU OUTRA RESPONSABILIDADE, SEJA EM UMA AÇÃO DE CONTRATO, DELITO OU, DE OUTRA FORMA, PROVENIENTE DE OU EM CONEXÃO COM O SOFTWARE OU COM O USO OU OUTRAS NEGOCIAÇÕES NO SOFTWARE.
+O SOFTWARE é FORNECIDO "AS IS", SEM GARANTIA DE QUALQUER TIPO, EXPRESSO ou IMPLÍCITO, INCLUINDO, MAS NÃO se LIMITAndo às garantias de comercialismo, aptidão para um determinado propósito e não infração. Em caso algum, os autores ou titulares de direitos autorais serão responsáveis por qualquer reclamação, indemnização ou outra responsabilidade, seja numa ação contratual, tort ou não, decorrente, fora ou em conexão com o software, nem com a utilização ou outros negócios no software.
 
-## <a name="fparsec-notices-and-information"></a>INFORMAÇÕES e avisos do FParsec
+## <a name="fparsec-notices-and-information"></a>Avisos e INFORMAÇÃO fParsec
 ---------------------------------------
 
-2 licença
+2 Licença
 
-Exceto quando indicado de outra forma, a biblioteca FParsec em formato de origem e binário é distribuída sob a licença do BSD simplificada. A licença do BSD simplificada (também conhecida como a "2 ‐ da cláusula BSD License") é uma licença simples e permissiva que é compatível com o OSI ‐. 
+Exceto quando se nota o contrário, a biblioteca FParsec em fonte e forma binária é distribuída sob a Licença BSD Simplificada. A Licença BSD Simplificada (também conhecido como BSD. "Licença BSD de 2 cláusulas") é uma licença simples e permissiva que é compatível com os SI.; 
 
-O FParsec incorpora dados derivados do banco de dados de caracteres Unicode v. 8.0.0, Copyright (c) 1991 \ u20122015 Unicode, Inc., que é distribuído sob os seguintes termos: http://www.unicode.org/terms_of_use.html#Exhibit1 
+A FParsec incorpora dados derivados da Base de Dados de Caracteres Unicode v. 8.0.0, Copyright (c) 1991\u2012015 Unicode, Inc., que é distribuído nos seguintes termos: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
-A documentação na pasta doc é licenciada sob a licença Creative Commons Reporting ‐ 3,0 comercialmente não portada. Essa licença Creative Commons não permite que você use a documentação para fins comerciais sem permissão. Isso significa, por exemplo, que você não pode vender a documentação do formulário de livro para fins de lucro ou colocá-la em um farm de conteúdo da Web para ganhar dinheiro com anúncios. No entanto, é claro que você pode usar a documentação em um contexto comercial (por exemplo, colocá-lo na intranet de uma corporação comercial), desde que você não esteja tentando ganhar dinheiro diretamente do texto da documentação. 
+A documentação na pasta Doc é licenciada ao abrigo da Licença Creative Commons Attribution‐NonCommercial 3.0 Não-Portada. Esta licença Creative Commons não lhe permite usar a documentação para fins comerciais sem permissão. Isto significa, por exemplo, que não é possível vender a documentação em forma de livro para fins lucrativos ou colocá-la numa quinta de conteúdos web para ganhar dinheiro com anúncios. No entanto, é claro que pode utilizar a documentação num contexto comercial (por exemplo, colocá-la na intranet de uma empresa comercial), desde que não esteja a tentar ganhar diretamente dinheiro com o texto da documentação. 
 
-2,1 licença BSD simplificada
+2.1 Licença BSD simplificada
 
-Copyright (c) 2007 \ u20122017, Stephan Tolksdorf. Todos os direitos reservados.
+Copyright (c) 2007\u2012017, Stephan Tolksdorf. Todos os direitos reservados.
 
-A redistribuição e o uso em formulários binários e de origem, com ou sem modificação, são permitidos desde que as seguintes condições sejam atendidas: 
-* As redistribuições do código-fonte devem reter o aviso de direitos autorais acima, esta lista de condições e a seguinte declaração.
-* As redistribuições em formato binário devem reproduzir o aviso de direitos autorais acima, esta lista de condições e a seguinte isenção de responsabilidade na documentação e/ou em outros materiais fornecidos com a distribuição. 
+São permitidas redistribuição e utilização em formas de origem e binários, com ou sem modificação, desde que sejam satisfeitas as seguintes condições: 
+* As redistribuições do código fonte devem manter o aviso de direitos de autor acima referido, esta lista de condições e a seguinte isenção de responsabilidade.
+* As redistribuições sob forma binária devem reproduzir o aviso de direitos de autor acima, esta lista de condições e a seguinte isenção de responsabilidade na documentação e/ou outros materiais fornecidos com a distribuição. 
 
-Esse software é fornecido pelos detentores de direitos autorais "como estão" e quaisquer garantias expressas ou implícitas, incluindo, mas não se limitando a, as garantias implícitas de comercialização e adequação a uma finalidade específica são desalegadas. Em nenhum evento, os proprietários de direitos autorais serão responsáveis por quaisquer danos diretos, indiretos, INCIDENTAIS, especiais, exemplares ou conseqüenciais (incluindo, mas não se limitando a, aquisição de bens ou serviços substitutos; perda de uso, dados ou lucros; ou negócios interrupções), no entanto, causados e em qualquer teoria de responsabilidade, seja em contrato, responsabilidade estrita ou delito (incluindo negligência ou de outra forma) resultante de qualquer forma do uso desse software, mesmo se for avisado sobre a possibilidade de tais danos. 
+Este software é fornecido pelos titulares de direitos autorais "como está" e quaisquer garantias expressas ou implícitas, incluindo, mas não se limitando a, as garantias implícitas de comercialismo e aptidão para um determinado fim são desreclamadas. Em caso algum, os titulares de direitos autorais serão responsáveis por quaisquer danos diretos, indiretos, incidentais, especiais, exemplares ou consequenciais (incluindo, mas não se limitando a, aquisição de bens ou serviços de substituição; perda de utilização, dados ou lucros; ou empresa; ou empresa; interrupção) no entanto causada e em qualquer teoria da responsabilidade, seja em contrato, responsabilidade severa ou delito (incluindo negligência ou outra) decorrente de qualquer forma fora da utilização deste software, mesmo que seja avisado da possibilidade de tal dano. 
 
-2,2 3,0 ‐ de atribuição da Creative Commons para licença não portada
+2.2 Creative Commons Atribuição‐NãoComercial 3.0 Licença não portada
 
 Resumo: https://creativecommons.org/licenses/by-nc/3.0/
 

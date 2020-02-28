@@ -1,22 +1,22 @@
 ---
-title: Obtendo estimativas de nível de energia | Microsoft Docs
-description: Obtendo documentos de estimativas de nível de energia
+title: Obter estimativas do nível de energia
+description: Caminhe por um programa Q# de amostra que estima os valores do nível de energia do hidrogénio molecular.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.energyestimate
-ms.openlocfilehash: 0fd457b152083af364d924502c18bc0813e34b83
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 3242d8c6dc6fad2bd99055027dd7ce4ec3510ff4
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442579"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907312"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Obter estimativas do nível de energia
-Estimar os valores dos níveis de energia é um dos principais aplicativos da quantum química. Aqui, descrevemos como isso pode ser executado para o exemplo canônico de molecular Hydrogen. O exemplo referenciado nesta seção é `MolecularHydrogen` no repositório de exemplos de química. Um exemplo mais visual que plota a saída é a `MolecularHydrogenGUI` demonstração.
+Estimar os valores dos níveis de energia é uma das principais aplicações da química quântica. Aqui, esboçamos como isto pode ser feito para o exemplo canónico do hidrogénio molecular. A amostra referida nesta secção é `MolecularHydrogen` no repositório de amostras de química. Um exemplo mais visual que traça a saída é a demonstração `MolecularHydrogenGUI`.
 
-Nossa primeira etapa é construir o Hamiltonian que representa o molecular Hydrogen. Embora isso possa ser construído por meio da ferramenta NWChem, adicionamos manualmente os termos de Hamiltonian para brevidade neste exemplo.
+O nosso primeiro passo é construir o Hamiltonian representando o hidrogénio molecular. Embora isto possa ser construído através da ferramenta NWChem, adicionamos manualmente termos Hamiltonian para brevidade nesta amostra.
 
 ```csharp
     // These orbital integrals are represented using the OrbitalIntegral
@@ -39,7 +39,7 @@ Nossa primeira etapa é construir o Hamiltonian que representa o molecular Hydro
     var fermionHamiltonian = new OrbitalIntegralHamiltonian(orbitalIntegrals).ToFermionHamiltonian();
 ```
 
-A simulação do Hamiltonian exige a conversão dos operadores Fermion em operadores qubit. Essa conversão é executada por meio da codificação Jordânia-Wigner da seguinte maneira.
+Simular o Hamiltonian exige que convertamos os operadores de fermion em operadores qubit. Esta conversão é realizada através da codificação Jordan-Wigner da seguinte forma.
 
 ```csharp
     // The Jordan-Wigner encoding converts the fermion Hamiltonian, 
@@ -60,7 +60,7 @@ A simulação do Hamiltonian exige a conversão dos operadores Fermion em operad
     var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Agora, passamos o `qSharpData` representando o Hamiltonian para a função `TrotterStepOracle` na [simulação do Hamiltonian Dynamics](xref:microsoft.quantum.libraries.standard.algorithms). `TrotterStepOracle` retorna uma operação Quantum que aproxima a evolução em tempo real do Hamiltonian.
+Passamos agora a `qSharpData` representando o Hamiltonian para a função `TrotterStepOracle` na simulação da [dinâmica hamiltoniana.](xref:microsoft.quantum.libraries.standard.algorithms) `TrotterStepOracle` retorna a uma operação quântica que se aproxima da evolução real do Hamiltonian.
 
 ```qsharp
 // qSharpData passed from driver
@@ -78,9 +78,9 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-Agora podemos usar os algoritmos de estimativa de fase da biblioteca padrão para aprender a energia de estado terrestre usando a simulação acima. Isso requer a preparação de uma boa aproximação para o estado de aterramento do Quantum. As sugestões para essas aproximaçãos são fornecidas no esquema de `Broombridge`, mas essas sugestões estão ausentes, a abordagem padrão adiciona um número de `hamiltonian.NElectrons` elétrons ao greedily minimizar o termo diagonal um-. As funções e operações de estimativa de fase estão localizadas no [namespace Microsoft. Quantum. caracterization](xref:microsoft.quantum.characterization in DocFX notation).
+Podemos agora usar os algoritmos de estimativa de fase da biblioteca padrão para aprender a energia do estado terrestre usando a simulação acima. Isto requer preparar uma boa aproximação ao estado quântico do solo. Sugestões para tais aproximações são fornecidas no esquema `Broombridge`, mas sem estas sugestões, a abordagem padrão adiciona uma série de eletrões `hamiltonian.NElectrons` para minimizar gananciosamente as energias diagonais de um só eletrão. As funções e operações de estimativa de fase estão localizadas no espaço de [nome microsoft.Quantum.Characterization](xref:microsoft.quantum.characterization in DocFX notation).
 
-O trecho a seguir mostra como a saída de evolução em tempo real da biblioteca de simulação de química pode ser integrada com a estimativa de fase Quantum.
+O seguinte corte mostra como a produção real de evolução do tempo pela biblioteca de simulação de química pode ser integrada com a estimativa de fase quântica.
 
 ```qsharp
 operation GetEnergyByTrotterization (
@@ -119,7 +119,7 @@ operation GetEnergyByTrotterization (
 }
 ```
 
-Este código de Q # agora pode ser invocado a partir do programa de driver. A seguir, criamos um simulador de estado completo e executamos `GetEnergyByTrotterization` para obter a energia do estado do solo.
+Este código Q# pode agora ser invocado do programa de condutor. No seguinte, criamos um simulador de estado inteiro e executamos `GetEnergyByTrotterization` para obter a energia do estado terrestre.
 
 ```csharp
 using (var qsim = new QuantumSimulator())
@@ -149,4 +149,4 @@ using (var qsim = new QuantumSimulator())
 }
 ```
 
-Observe que dois parâmetros são retornados. `energyEst` é a estimativa da energia do estado do solo e deve ser `-1.137` em média. `phaseEst` é a fase bruta retornada pelo algoritmo de estimativa de fase e é útil para diagnosticar quando ocorre um alias devido a um `trotterStep` muito grande.
+Note que dois parâmetros são devolvidos. `energyEst` é a estimativa da energia do estado terrestre, devendo rondar `-1.137`, em média. `phaseEst` é a fase bruta devolvida pelo algoritmo de estimativa de fase, e é útil para diagnosticar quando o pseudónimo ocorre devido a um `trotterStep` que é muito grande.

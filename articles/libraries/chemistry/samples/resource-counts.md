@@ -1,23 +1,23 @@
 ---
-title: Obtendo contagens de recursos | Microsoft Docs
-description: Obtendo documentos de contagem de recursos
+title: Obter contagens de recursos
+description: Aprenda a obter estimativas de recursos usando um simulador de vestígios quânticos.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.resourcecounts
-ms.openlocfilehash: f9311c1987ced4336c4e98bdb984fbee009e9acc
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 14d0a703a20a801dcee9678a113a33404859a1a9
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442453"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907839"
 ---
 # <a name="obtaining-resource-counts"></a>Obter contagens de recursos
 
-O custo da simulação de $n $ qubits em computadores clássicos é dimensionado exponencialmente com $n $. Isso limita bastante o tamanho de uma simulação de química do Quantum que pode ser executada com o simulador de estado completo. Para grandes instâncias de química, poderemos, no entanto, obter informações úteis. Aqui, examinamos como os custos de recursos, como o número de T-Gates ou CNOT Gates, para simular a química podem ser obtidos de maneira automatizada usando o [simulador de rastreamento](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Essas informações informam quando os computadores Quantum podem ser grandes o suficiente para executar esses algoritmos de química da Quantum. Para referência, consulte o exemplo de `GetGateCount` fornecido.
+O custo de simulação de $n qubits de $n dólares em escalas de computadores clássicos exponencialmente com $n$. Isto limita muito o tamanho de uma simulação de química quântica que podemos realizar com o simulador de estado inteiro. Para grandes instâncias de química, podemos, no entanto, obter informações úteis. Aqui, examinamos como os custos de recursos, como o número de portões T ou CNOT, para simular química podem ser obtidos de forma automatizada usando o simulador de [vestígios](xref:microsoft.quantum.machines.qc-trace-simulator.intro). Tal informação informa-nos de quando os computadores quânticos podem ser grandes o suficiente para executar estes algoritmos de química quântica. Para referência, consulte a amostra `GetGateCount` fornecida.
 
-Vamos supor que já temos uma instância de `FermionHamiltonian`, digamos, carregada do esquema Broombridge, conforme discutido no exemplo de [carregamento de arquivo](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) . 
+Partamos do princípio de que já temos um `FermionHamiltonian` caso, por exemplo, carregado do esquema de Broombridge, tal como discutido no exemplo do [loading-from-file.](xref:microsoft.quantum.chemistry.examples.loadhamiltonian) 
 
 ```csharp
     // Filename of Hamiltonian to be loaded.
@@ -31,7 +31,7 @@ Vamos supor que já temos uma instância de `FermionHamiltonian`, digamos, carre
     var qSharpData = problem.ToQSharpFormat();
 ```
 
-A sintaxe para obter estimativas de recursos é quase idêntica à execução do algoritmo no simulador de estado completo. Simplesmente escolhemos um computador de destino diferente. Para fins de estimativas de recursos, é suficiente avaliar o custo de uma única etapa Trotter ou uma movimentação Quantum criada pela técnica Qubitization. O texto clichê para invocar esses algoritmos é o seguinte.
+A sintaxe para obter estimativas de recursos é quase idêntica à execução do algoritmo no simulador de estado inteiro. Simplesmente escolhemos uma máquina alvo diferente. Para efeitos de estimativas de recursos, basta avaliar o custo de um único passo trotter, ou uma caminhada quântica criada pela técnica de Qubitização. A placa de caldeira para invocar estes algoritmos é a seguinte.
 
 ```qsharp
 //////////////////////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ operation RunQubitizationStep (qSharpData: JordanWignerEncodingData) : Double {
 }
 ```
 
-Agora, configuramos o simulador de rastreamento para acompanhar os recursos nos quais estamos interessados. Nesse caso, contamos operações Quantum primitivas definindo o sinalizador `usePrimitiveOperationsCounter` como `true`. Um `throwOnUnconstraintMeasurement` de detalhes técnicos é definido como `false` para evitar exceções em casos em que o código Q # não declara corretamente a probabilidade de resultados de medida, se algum for executado.
+Agora configuramos o simulador de vestígios para rastrear os recursos que nos interessam. Neste caso, contamos operações quânticas primitivas colocando a bandeira `usePrimitiveOperationsCounter` para `true`. Um detalhe técnico `throwOnUnconstraintMeasurement` está definido para `false` evitar exceções nos casos em que o código Q# não afirme corretamente a probabilidade de resultados de medição, se algum for realizado.
 
 ```csharp
 private static QCTraceSimulator CreateAndConfigureTraceSim()
@@ -99,7 +99,7 @@ private static QCTraceSimulator CreateAndConfigureTraceSim()
 }
 ```
 
-Agora, executamos o algoritmo Quantum do programa de driver da seguinte maneira.
+Agora executamos o algoritmo quântico do programa de motoristada da seguinte forma.
 
 ```csharp
 // Instantiate a trace simulator instance

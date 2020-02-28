@@ -1,17 +1,17 @@
 ---
-title: Estrutura de Arquivos [ Estrutura de Arquivos] Microsoft Docs
-description: Q# Estrutura de Arquivo
+title: Q# Estrutura de Arquivo
+description: Saiba como estruturar espaços de nome, e operação, função e declarações de tipo utilizador definidos em programas e bibliotecas Q#.
 author: QuantumWriter
 uid: microsoft.quantum.language.file-structure
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 364d353c55bda38f227456909755d13dc7e67080
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: b4bb7d4d70677dbd5d921a9f68313760499a56a1
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821087"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907397"
 ---
 # <a name="file-structure"></a>Estrutura de Ficheiros
 

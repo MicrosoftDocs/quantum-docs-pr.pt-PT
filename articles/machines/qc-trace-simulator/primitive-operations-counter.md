@@ -1,17 +1,17 @@
 ---
-title: Contador de Operações Primitivas  Simulador de vestígios de computador quântico  Microsoft Docs
-description: Descrição geral do simulador de rastreio do computador quântico
+title: Contador de Operações Primitivas
+description: Conheça o Contador de Operações Primitivas Microsoft QDK, que rastreia o número de execuções primitivas usadas por operações num programa quântico.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
-ms.openlocfilehash: 1f554c0a1b92c8f6b59be3a9d9965e0e25bd074f
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 8bdb0aed370e72b58b23025f1685ad7ce1a77a43
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820424"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77905952"
 ---
 # <a name="primitive-operations-counter"></a>Contador de Operações Primitivas  
 
@@ -63,6 +63,6 @@ Finalmente, para obter todas as estatísticas recolhidas pelo balcão do portal 
 string csvSummary = sim.ToCSV()[MetricsCountersNames.primitiveOperationsCounter];
 ```
 
-## <a name="see-also"></a>Ver também ##
+## <a name="see-also"></a>Consulte também ##
 
 - A visão geral do simulador de [rastreio](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do computador quântico.

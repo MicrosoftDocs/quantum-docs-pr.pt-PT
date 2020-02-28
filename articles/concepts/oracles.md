@@ -1,73 +1,73 @@
 ---
-title: Oracle Quantum | Microsoft Docs
-description: Oracle Quantum
+title: Oráculos quânticos
+description: Aprenda a trabalhar e definir oráculos quânticos, operações de caixa preta que são usadas como entrada para outro algoritmo.
 author: cgranade
 uid: microsoft.quantum.concepts.oracles
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 07/11/2018
 ms.topic: article
-ms.openlocfilehash: 96949b371a3a5a1135d624690933a48ea0214a2e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 1d1d0b0903db8e994166c3e8a5798f70742a1c7e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "73184717"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77904932"
 ---
-# <a name="quantum-oracles"></a>Oracle Quantum
+# <a name="quantum-oracles"></a>Oráculos Quânticos
 
-Um Oracle $O $ é uma operação de "caixa preta" que é usada como entrada para outro algoritmo.
-Muitas vezes, essas operações são definidas usando uma função clássica $f: \\{0, 1\\} ^ n \tO \\{0, 1\\} ^ m $, que usa uma entrada binária de $n de $ bits e produz uma saída binária de $ bits de $m.
-Para fazer isso, considere uma entrada binária específica $x = (x_{0}, x_{1}, \dots, x_ {n-1}) $.
-Podemos rotular Estados qubit como $ \ket{\vec{x}} = \ket{x_{0}} \otimes \ket{x_{1}} \otimes \cdots \otimes \ket{x_{n-1}} $.
+Um oráculo $O$ é uma operação de "caixa preta" que é usada como entrada para outro algoritmo.
+Muitas vezes, tais operações são definidas usando uma função clássica $f : \\{0, 1\\}^n \para \\{0, 1\\^m$ que leva uma entrada binária de $n$bit e produz uma saída binária de $m$bit.
+Para tal, considere uma entrada binária específica $x = (x_{0}, x_{1}, \pontos, x_{n-1})$.
+Podemos rotular os estados qubit como $\ket{\vec{x}} = \ket{x_{0}} \otimes \ket {x_{1}x_ } \otimes \otimes \otimes \ket{x_{n-1}}$.
 
-Primeiro, podemos tentar definir $O $ para que $O \ket{x} = \ket{f (x)} $, mas isso tem alguns problemas.
-Primeiro, $f $ pode ter um tamanho diferente de entrada e saída ($n \ne m $), de modo que a aplicação de $O $ alteraria o número de qubits no registro.
-Em segundo lugar, mesmo se $n = m $, a função pode não ser invertível: se $f (x) = f (y) $ para alguns $x \ne y $, $O \ket{x} = O\ket {y} $, $O ^ \dagger O\ket {x} \ne O ^ \dagger O\ket {y} $.
-Isso significa que não será possível construir a operação de addefinição $O ^ \dagger $ e os Oracle precisam ter um adjacente definido para eles.
+Podemos primeiro tentar definir $O$ para que $O\ket{x} = \ket{f(x)}$, mas isto tem alguns problemas.
+Em primeiro lugar, $f$ pode ter um tamanho diferente de entrada e saída ($n \ne m$), de modo que a aplicação $O$ alteraria o número de qubits no registo.
+Segundo, mesmo $n = m$, a função pode não ser invertível: se $f(x) = f(y)$ para algumas $x \ne y$, então $O\ket{x} = O\ket{y}$ mas $O^\dagger O\ket{x} \ne O^\dagger O\ket{y}$.
+Isto significa que não seremos capazes de construir a operação adjoint $O^\dagger$, e os oráculos têm que ter um adjoint definido para eles.
 
-## <a name="defining-an-oracle-by-its-effect-on-computational-basis-states"></a>Definindo um Oracle por seu efeito nos Estados de base computacional
-Podemos lidar com esses dois problemas introduzindo um segundo registro de $m $ qubits para manter nossa resposta.
-Em seguida, vamos definir o efeito do Oracle em todos os Estados de base computacional: para todos os $x na \\{0, 1\\} ^ n $ e $y na \\{0, 1\\} ^ m $,
+## <a name="defining-an-oracle-by-its-effect-on-computational-basis-states"></a>Definição de um oráculo pelo seu efeito nos estados de base computacional
+Podemos lidar com ambos estes problemas introduzindo um segundo registo de qubits de $m$ para manter a nossa resposta.
+Em seguida, definiremos o efeito do oráculo em todos os estados computacionais: para todos os $x \in \\{0, 1\\}^n$ e $y \in \\{0, 1\\}^m$,
 
-$ $ \begin{align} O (\ket{x} \otimes \ket{y}) = \ket{x} \otimes \ket{y \oplus f (x)}.
-\end{align} $ $
+$$ \begin{align} O (\ket{x} \otimes \ket {y}) = \ket{x} \otimes \ket {y \oplus f(x)}.
+\end{align} $$
 
-Agora $O = O ^ \dagger $ por construção, portanto, resolvemos os dois problemas anteriores.
+Agora $O = O^\dagger$ por construção, assim resolvemos ambos os problemas anteriores.
 
 > [!TIP]
-> Para ver que $O = O ^ {\dagger} $, observe que $O ^ 2 = \boldone $ desde $a \oplus b \oplus b = a $ para todos os $a, b na \{0, 1\}$.
-> Como resultado, $O \ket{x} \ket{y \oplus f (x)} = \ket{x} \ket{y \oplus f (x) \oplus f (x)} = \ket{x} \ket{y} $.
+> Para ver que $O = O^{\dagger}$, note que $O^2 = \boldone$ desde $a \oplus b \oplus b = a$ para todos os $a, b \in \{0, 1\}$.
+> Como resultado, $O \ket{x} \ket{y \oplus f(x)} = \ket{x} \ket{y\oplus f(x) \oplus f(x)} = \ket{x} \ket{y}$.
 
-De forma importante, definir um Oracle dessa maneira para cada Estado de base computacional $ \ket{x}\ket{y} $ também define como o $O $ age para qualquer outro Estado.
-Isso é seguido imediatamente do fato de que $O $, como todas as operações de Quantum, é linear no estado em que atua.
-Considere a operação Hadamard, por exemplo, que é definida por $H \ket{0} = \ket{+} $ e $H \ket{1} = \ket{-}$.
-Se quisermos saber como $H $ age em $ \ket{+} $, podemos usar essa $H $ é linear,
+Importante, definir um oráculo desta forma para cada estado de base computacional $\ket{x}\ket{y}$ também define como $O$ atua para qualquer outro estado.
+Isto decorre imediatamente do facto de $O$, como todas as operações quânticas, ser linear no estado em que age.
+Considere a operação Hadamard, por exemplo, que é definida por $H \ket{0} = \ket{+}$ e $H \ket{1} = \ket{-}$.
+Se quisermos saber como $H$ atua em $\ket{+}$, podemos usar esse $H$ é linear,
 
-$ $ \begin{align} H\ket {+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ ket {+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0}-\ket{1}) = \ket{0}.
-\end{align} $ $
+$$ \start{align} H\ket{+} & = \frac{1}{\sqrt{2}} H (\ket{0} + \ket{1}) = \frac{1}{\sqrt{2}} (H\ket{0} + H\ket{1}) \\\\ & = \frac{1}{\sqrt{2}} (\ket{+} + \ket{-}) = \frac12 (\ket{0} + \ket{1} + \ket{0} - \ket{1}{0}.
+\end{align} $$
 
-No caso da definição de nosso Oracle $O $, podemos usar de forma semelhante que qualquer estado $ \ket{\psi} $ em $n + m $ qubits pode ser escrito como
+No caso de definir o nosso oráculo $O$, podemos usar da mesma forma que qualquer estado $\ket{\psi}$ em $n + qubits m$ pode ser escrito como
 
-$ $ \begin{align} \ket{\psi} & = \sum_{x na \\{0, 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \end{align} $ $
+$$ \begin{align} \ket{\psi} & = \sum_{x \in \\{0, 1\\^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y} \end{align} $$
 
-em que $ \alpha: \\{0, 1\\} ^ n \times \\{0, 1\\} ^ m \tO \mathbb{C} $ representa os coeficientes do estado $ \ket{\psi} $. Dessa
+onde $\alfa: \\{0, 1\\}^n \vezes \\{0, 1\\}^m \para \mathbb{C}$ representa os coeficientes do estado $\ket{\psi}$. Assim,
 
-$ $ \begin{align} O \ket{\psi} & = O \sum_{x na \\{0, 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y} \\\\ & = \sum_{x na \\{0 , 1\\} ^ n, y na \\{0, 1\\} ^ m} \alpha (x, y) O \ket{x} \ket{y} \\\\ & = \sum_{x na \\{0, 1\\} ^ n, y na \\{0 , 1\\} ^ m} \alpha (x, y) \ket{x} \ket{y \oplus f (x)}.
-\end{align} $ $
+$$ \start{align} O \ket{\psi} & O \sum_{x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket{y} \\\\ & = \sum_ {x \in \\{0, 1\\}^n, y \in \\{0, 1\\}^m} \alpha(x, y) O \ket{x} \ket {y} \\\\ &amp\\\\sum_; , y \in \\{0, 1\\}^m} \alpha(x, y) \ket{x} \ket {y \oplus f(x)}.
+\end{align} $$
 
-## <a name="phase-oracles"></a>Fase Oracle
-Como alternativa, podemos codificar $f $ em um Oracle $O $ aplicando uma _fase_ com base na entrada para $O $.
-Por exemplo, podemos definir $O $ de modo que $ $ \begin{align} O \ket{x} = (-1) ^ {f (x)} \ket{x}.
-\end{align} $ $ se uma fase Oracle age em um registro inicialmente em um estado de base computacional $ \ket{x} $, essa fase é uma fase global e, portanto, não observável.
-Mas tal Oracle pode ser um recurso muito potente se aplicado a uma superposição ou como uma operação controlada.
-Por exemplo, considere uma fase orcale $O _F $ para uma função qubit única $f $.
-Em seguida, $ $ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1})/\sqrt{2} \\\\ & = ((-1) ^ {f (0)} \ket{0} + (-1) ^ {f (1)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f ( 0)} (\ket{0} + (-1) ^ {f (1)-f (0)} \ket{1})/\sqrt{2} \\\\ & = (-1) ^ {f (0)} Z ^ {f (0)-f (1)} \ket{+}.
-\end{align} $ $
+## <a name="phase-oracles"></a>Oráculos de fase
+Em alternativa, podemos codificar $f$ num oráculo $O$ aplicando uma _fase_ baseada na entrada para $O$.
+Por exemplo, podemos definir $O$ de tal forma que $$ \begin{align} O \ket{x} = (-1)^{f(x)} \ket{x}.
+\end{align} $$ Se um oráculo de fase agir num registo inicialmente numa base computacional estado $\ket{x}$, então esta fase é uma fase global e, portanto, não observável.
+Mas tal oráculo pode ser um recurso muito poderoso se aplicado a uma superposição ou como uma operação controlada.
+Por exemplo, considere uma fase orcale $O_f$ para uma função de um único qubit $f$.
+Em seguida, $$ \begin{align} O_f \ket{+} & = O_f (\ket{0} + \ket{1}) / \sqrt{2} \\\\ & = (-1)^{f(0)} \ket{0} + (-1)^{f(1)} \ket{1}) / \sqrt{2} \\\\ & = (-1)^{f(0)} (\ket{0} + (-1)^{f(1) - f(0)} \ket{1}) / \sqrt{2} \\\\ & = (-1)^{f(0)} Z^{f(0) - f(1)} \ket{+}.
+\end{align} $$
 
-Em geral, as duas exibições de Oracle podem ser ampliadas para representar funções clássicas que retornam números reais em vez de apenas um único bit.
+De um modo mais geral, ambas as visões dos oráculos podem ser alargadas para representar funções clássicas que devolvem números reais em vez de apenas um bit.
 
-Escolher a melhor maneira de implementar um Oracle depende muito da forma como esse Oracle será usado dentro de um determinado algoritmo.
-Por exemplo, o [algoritmo Deutsch-Jozsa](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) depende do Oracle implementado na primeira forma, enquanto o [algoritmo de Grover](https://en.wikipedia.org/wiki/Grover's_algorithm) se baseia no Oracle implementado da segunda maneira.
+Escolher a melhor maneira de implementar um oráculo depende muito de como este oráculo será usado dentro de um determinado algoritmo.
+Por exemplo, o [algoritmo Deutsch-Jozsa baseia-se](https://en.wikipedia.org/wiki/Deutsch%E2%80%93Jozsa_algorithm) no oráculo implementado da primeira forma, enquanto o [algoritmo de Grover](https://en.wikipedia.org/wiki/Grover's_algorithm) depende do oráculo implementado na segunda forma.
 
 
-Para obter mais detalhes, sugerimos a discussão em [Gilyén *et al*. 1711, 465](https://arxiv.org/abs/1711.00465).
+Para mais detalhes, sugerimos a discussão em [Gilyén *et al*. 1711.00465](https://arxiv.org/abs/1711.00465).

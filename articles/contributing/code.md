@@ -1,17 +1,17 @@
 ---
-title: Código contributante / Microsoft Docs
-description: Código contributante
+title: Código contributante para o Microsoft QDK
+description: Saiba como contribuir com o código de amostra e biblioteca para o Kit de Desenvolvimento Quântico da Microsoft (QDK).
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: f9e0f0d9540102331aea64a1245cbaa4833e1e02
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 1882e640dacf3987745ed225fef18636726f70a8
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76819965"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907482"
 ---
 # <a name="contributing-code"></a>Contribuir no Código #
 

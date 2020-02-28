@@ -1,17 +1,17 @@
 ---
-title: Instalação e Validação da Biblioteca Numérica Microsoft Docs
-description: Instalação e Validação da Biblioteca Numérica
+title: Biblioteca de numéricos Quânticos da Microsoft - Instalação e Validação
+description: Saiba como adicionar a biblioteca de numéricos Da Microsoft Quantum ao seu Visual Studio 2019 ou posterior instalação.
 author: thomashaener
 ms.author: thhaner
 ms.date: 05/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.installation
-ms.openlocfilehash: c41bb73ea484271689eea2ca1b59ce6639dc15a7
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: cb0d00a509b3986b605dd7f15f9bccc0661bb894
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036462"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906343"
 ---
 # <a name="numerics-library-installation-and-validation"></a>Instalação e Validação da Biblioteca Numérica
 
@@ -33,7 +33,7 @@ Para mais detalhes, consulte o [guia UI do Gestor](https://docs.microsoft.com/nu
 
 Em alternativa, pode utilizar a Consola gestora de pacotes para adicionar a biblioteca numérica ao seu projeto através da interface da linha de comando.
 
-![](../../media/vs2017-nuget-console-menu.png)
+![Utilize a consola gestora de pacotes a partir da linha de comando](../../media/vs2017-nuget-console-menu.png)
 
 A partir da consola gestora de pacotes, execute o seguinte:
 

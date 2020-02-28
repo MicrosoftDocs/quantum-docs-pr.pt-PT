@@ -1,17 +1,17 @@
 ---
-title: Juntando tudo - Técnicas Q# Microsoft Docs
-description: Juntando tudo - Técnicas Q#
+title: Técnicas Q# - Juntar tudo
+description: Caminhe por um programa básico de Q# que demonstre teletransporte quântico.
 uid: microsoft.quantum.techniques.puttingittogether
 author: QuantumWriter
 ms.author: Christopher.Granade@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3605826da159757d4b321dbf4ec6acd7f4e6be05
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 6c988f77ef6e433945dbf21dfb41204c74bdda3e
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820169"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906836"
 ---
 # <a name="putting-it-all-together-teleportation"></a>Colocando tudo junto: Teleportation #
 Voltemos ao exemplo do circuito de teletransporte definido em [Circuitos Quânticos.](xref:microsoft.quantum.concepts.circuits) Vamos usar isto para ilustrar os conceitos que aprendemos até agora. Uma explicação da teleportação quântica é fornecida abaixo para aqueles que não estão familiarizados com a teoria, seguido de uma passagem pela implementação do código em Q#. 
@@ -37,7 +37,7 @@ $$ \ket{\psi}\ket{\phi^+} = (\alpha\ket{0} + \beta\ket{1})(\frac{1}{\sqrt{2}}(\k
 
 Isto expande-se para:
 
-$$ \ket{\psi}\ket{\phi^+} = \frac{\alpha}{\sq{2}rt }}\ket{000} + \frac{\alpha}{\sqrt{2}}\ket{011} + \frac{\beta}{{{2}{\{\ket{100} + \frac{\beta}{\sqrt{2}{2}{111} ket
+$$ \ket{\psi}\ket{\phi^+} = \frac{\alpha}{\sq{2}rt }}\ket{000} + \frac{\alpha}{\sqrt{2}}\ket{011} + \frac{\beta}{{{2}{\{\ket{100} + \frac{\beta}{\sqrt{2}\&{111} ket
 
 Como lembrete, o portão CNOT inverte o qubit do alvo quando o qubit de controlo é 1. Assim, por exemplo, uma entrada de $\ket{000}$ não resultará em nenhuma alteração, uma vez que o primeiro qubit (o controlo) é 0. No entanto, tome um caso em que o primeiro qubit é 1 - por exemplo, uma entrada de $\ket{100}$. Neste caso, a saída é de $\ket{110}$, uma vez que o segundo qubit (o alvo) é virado pelo portão CNOT.
 

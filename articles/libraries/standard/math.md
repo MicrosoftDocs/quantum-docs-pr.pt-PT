@@ -1,22 +1,22 @@
 ---
-title: 'P # bibliotecas padrão-matemática | Microsoft Docs'
-description: 'P # bibliotecas padrão-matemática'
+title: Matemática nas bibliotecas padrão Q#
+description: Conheça as funções matemáticaclássicas nas bibliotecas padrão Q# que são usadas com os tipos de dados incorporados.
 author: cgranade
 uid: microsoft.quantum.libraries.math
 ms.author: chgranad@microsoft.com
 ms.topic: article
-ms.openlocfilehash: 7ac9d321f59f7cc95ad8939a4cf7c36e0c5e0491
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: bec866472abc0d4327cdc570306341375395f492
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2019
-ms.locfileid: "73184462"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906156"
 ---
-# <a name="classical-mathematical-functions"></a>Funções matemáticas clássicas #
+# <a name="classical-mathematical-functions"></a>Funções Matemáticas Clássicas #
 
-Essas funções são usadas principalmente para trabalhar com os tipos de dados internos Q # `Int`, `Double`e `Range`.
+Estas funções são usadas principalmente para trabalhar com os tipos de dados incorporados Q# `Int`, `Double`e `Range`.
 
-A operação de <xref:microsoft.quantum.intrinsic.random> tem `(Double[] => Int)`de assinatura.
-Ele usa uma matriz de duplicatas como entrada e retorna um índice selecionado aleatoriamente para a matriz como um `Int`.
-A probabilidade de selecionar um índice específico é proporcional ao valor do elemento de matriz nesse índice. n elementos da matriz que são iguais a zero são ignorados e seus índices nunca são retornados.
-Se qualquer elemento de matriz for menor que zero, ou se nenhum elemento de matriz for maior que zero, a operação falhará.
+A operação <xref:microsoft.quantum.intrinsic.random> tem `(Double[] => Int)`de assinatura.
+Leva uma série de duplos como entrada, e devolve um índice selecionado aleatoriamente na matriz como um `Int`.
+A probabilidade de selecionar um índice específico é proporcional ao valor do elemento matriz nesse índice. n Elementos matrizes que são iguais a zero são ignorados e os seus índices nunca são devolvidos.
+Se qualquer elemento de matriz for inferior a zero, ou se nenhum elemento de matriz for superior a zero, então a operação falha.

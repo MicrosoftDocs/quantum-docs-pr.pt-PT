@@ -1,17 +1,17 @@
 ---
-title: Q# bibliotecas padrão - aplicações / Microsoft Docs
-description: Bibliotecas padrão Q#
+title: Aplicações nas bibliotecas padrão Q#
+description: Saiba mais sobre duas aplicações fundamentais na computação quântica - simulação hamiltoniana e algoritmo de pesquisa de Shor.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 3e629e095bd2ee492496066710ef6fd4e578a543
-ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+ms.openlocfilehash: b7c46b634c6d691c067c0dd995301395408c85ca
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868973"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907227"
 ---
 # <a name="applications"></a>Aplicações #
 
@@ -159,7 +159,7 @@ A estimativa de fase produz assim os valores eigen$e^{2\pi i s/ r}$ a partir do 
 
 O diagrama de circuito para a descoberta do período quântico é:
 
-![](./../../media/QPE.svg)
+![Diagrama de circuito para a descoberta do período quântico](./../../media/QPE.svg)
 
 Aqui os qubits de $2n$ são inicializados para $\ket{0}$ e $n$ qubits são inicializados para $\ket{1}$.
 O leitor pode voltar a perguntar-se porque é que o registo quântico para deter os eigenstates é inicializado para $\ket{1}$.

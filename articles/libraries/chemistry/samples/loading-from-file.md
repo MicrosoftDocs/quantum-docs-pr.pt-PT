@@ -1,22 +1,22 @@
 ---
-title: Carregando um Hamiltonian do arquivo | Microsoft Docs
-description: Carregando um Hamiltonian de documentos de arquivo
+title: Carregar um Hamiltoniano do ficheiro
+description: Aprenda a gerar automaticamente um grande Hamiltonian usando o esquema broombridge.
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
-ms.openlocfilehash: 18f257efe8d53d2a22af4840bd8d17ab6b80a503
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 715dbcefc10ecc5af45f2bdd228890f1cb28886b
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442340"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907295"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Carregar um Hamiltoniano do ficheiro
-Anteriormente, construímos o Hamiltonians adicionando termos individuais a ele. Embora isso seja bom para exemplos pequenos, o quantum química em escala exige Hamiltonians com milhões ou bilhões de termos. Tais Hamiltonians, gerados por pacotes de química, como NWChem, são muito grandes para serem importados manualmente. Neste exemplo, ilustramos como uma instância de `FermionHamiltonian` pode ser gerada automaticamente de um molécula representado pelo [esquema Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge). Para referência, é possível inspecionar o exemplo de `LithiumHydrideGUI` fornecido ou o `RunSimulation` exemplo. O suporte limitado também está disponível para importação a partir do formato consumido por [LIQUi | >](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
+Anteriormente, construímos hamiltonianos adicionando-lhe termos individuais. Embora isto seja bom para pequenos exemplos, a química quântica em escala requer hamiltonianos com milhões ou biliões de mandatos. Tais hamiltonianos, gerados por pacotes de química como o NWChem, são demasiado grandes para serem importados à mão. Nesta amostra, ilustramos como um `FermionHamiltonian` instância pode ser gerado automaticamente a partir de uma molécula representada pelo esquema de [Broombridge.](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) Para referência, pode-se inspecionar a amostra `LithiumHydrideGUI` fornecida ou a amostra `RunSimulation`. Está também disponível suporte limitado para importação do formato consumido pela [LIQUi>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
 
-Vamos considerar o exemplo do nitrogen molécula, que é fornecido na pasta `IntegralData/YAML` do repositório de exemplos. O método para carregar o esquema de `Broombridge` é simples.
+Consideremos o exemplo da molécula de azoto, que é fornecida na pasta `IntegralData/YAML` do repositório de amostras. O método de carregamento do `Broombridge` esquema é simples.
 
 ```csharp
 // This is the name of the file we want to load
@@ -40,7 +40,7 @@ var fermionHamiltonian = orbitalIntegralHamiltonian.ToFermionHamiltonian(IndexCo
 var jordanWignerEncoding = fermionHamiltonian.ToPauliHamiltonian(Pauli.QubitEncoding.JordanWigner);
 ```
 
-O esquema Broombridge também contém sugestões para que o estado inicial seja preparado. Os rótulos, por exemplo, `"|G⟩"` ou `"|E1⟩"`, para esses Estados podem ser vistos inspecionando o arquivo. Para preparar esses Estados iniciais, o `qSharpData` consumido pelos algoritmos de Quantum do Q # é obtido de forma semelhante à [seção anterior](xref:microsoft.quantum.chemistry.examples.energyestimate), mas com um parâmetro adicional selecionando o estado inicial desejado. Por exemplo,
+O esquema de Broombridge também contém sugestões para que o estado inicial seja preparado. As etiquetas, por exemplo, `"|G⟩"` ou `"|E1⟩"`, para estes estados podem ser vistas inspecionando o ficheiro. Para preparar estes estados iniciais, o `qSharpData` consumido pelos algoritmos quânticos Q# é obtido semelhante à [secção anterior,](xref:microsoft.quantum.chemistry.examples.energyestimate)mas com um parâmetro adicional selecionando o estado inicial desejado. Por exemplo,
 ```csharp
 // The desired initial state, assuming that a description of it is present in the
 // Broombridge schema.
@@ -53,7 +53,7 @@ var qSharpWavefunctionData = wavefunction.ToQSharpFormat();
 var qSharpData = QSharpFormat.Convert.ToQSharpFormat(qSharpHamiltonianData, qSharpWavefunctionData);
 ```
 
-Todas as etapas acima podem ser abreviadas usando métodos de conveniência fornecidos a seguir.
+Todos os passos acima podem ser abreviados utilizando métodos de conveniência fornecidos da seguinte forma.
 ```csharp
 // This is the name of the file we want to load
 var filename = "...";
@@ -72,7 +72,7 @@ var problem = broombridge.ProblemDescriptions.Single();
 var qSharpData = problem.ToQSharpFormat("|E1>");
 ```
 
-Também poderemos carregar um Hamiltonian do formato LIQUi | >, usando uma sintaxe muito semelhante. 
+Podemos também carregar um Hamiltonian a partir do formato LIQUigt; formato, utilizando uma sintaxe muito semelhante. 
 
 ```csharp
 // This is the name of the file we want to load
@@ -88,4 +88,4 @@ var problem = LiQuiD.Deserialize($@"{root}\{filename}").First();
 var qSharpData = problem.ToQSharpFormat();
 ```
 
-Seguindo esse processo de qualquer instância de Broombridge, ou qualquer etapa intermediária, os algoritmos Quantum, como a estimativa de fase Quantum, podem ser executados no problema de estrutura eletrônica especificado.
+Seguindo este processo a partir de qualquer instância de Broombridge, ou qualquer passo intermédio, algoritmos quânticos como a estimativa da fase quântica podem ser executados no problema da estrutura electrónica especificado.

@@ -1,24 +1,24 @@
 ---
-title: Simulador de estado completo do kit de desenvolvimento do Quantum | Microsoft Docs
-description: Visão geral do simulador de estado completo do kit de desenvolvimento do quantum da Microsoft
+title: Simulador de Estado Completo
+description: Aprenda a executar os seus programas Q# no Microsoft Quantum Development Kit Full State Simulator.
 author: anpaz-msft
 ms.author: anpaz@microsoft.com
 ms.date: 12/7/2017
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
-ms.openlocfilehash: ab0e65765d27e301a59948d7c02105a523022e68
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: f73abbc4366b003e4b22366ed83ca9c897737307
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73184683"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906122"
 ---
-# <a name="quantum-development-kit-full-state-simulator"></a>Simulador de estado completo do kit de desenvolvimento do Quantum
+# <a name="quantum-development-kit-full-state-simulator"></a>Simulador de Estado completo do kit de desenvolvimento quântico
 
-O kit de desenvolvimento Quantum fornece um simulador de Quantum de estado completo semelhante a [Liq $ UI | \rangle $](http://stationq.github.io/Liquid/) da Microsoft Research.
-Esse simulador pode ser usado para executar e depurar algoritmos Quantum escritos em Q # no seu computador.
+O Kit de Desenvolvimento Quântico fornece um simulador quântico de estado completo semelhante ao [LIQ$Uirangle$ da](http://stationq.github.io/Liquid/) Microsoft Research.
+Este simulador pode ser usado para executar e depurar algoritmos quânticos escritos em Q# no seu computador.
 
-Esse simulador Quantum é exposto por meio da classe `QuantumSimulator`. Para usar o simulador, basta criar uma instância dessa classe e passá-la para o método `Run` da operação Quantum que você deseja executar junto com o restante dos parâmetros:
+Este simulador quântico é exposto através da classe `QuantumSimulator`. Para utilizar o simulador, basta criar uma instância desta classe e passá-la para o método `Run` da operação quântica que pretende executar juntamente com o resto dos parâmetros:
 
 ```csharp
     using (var sim = new QuantumSimulator())
@@ -28,13 +28,13 @@ Esse simulador Quantum é exposto por meio da classe `QuantumSimulator`. Para us
     }
 ```
 
-## <a name="idisposable"></a>IDisposable
+## <a name="idisposable"></a>Descartável
 
-A classe `QuantumSimulator` implementa <xref:System.IDisposable>, portanto, o método `Dispose` deve ser chamado uma vez que a instância do simulador não seja mais usada. A melhor maneira de fazer isso é encapsular o simulador em uma instrução `using`, como no exemplo acima.
+A classe `QuantumSimulator` implementa <xref:System.IDisposable>, pelo que o método `Dispose` deve ser chamado assim que a instância do simulador já não for utilizada. A melhor maneira de o fazer é embrulhar o simulador numa declaração `using`, como no exemplo acima.
 
-## <a name="seed"></a>Semente
+## <a name="seed"></a>semente
 
-O `QuantumSimulator` usa um gerador de número aleatório para simular a aleatoriedade Quantum. Para fins de teste, às vezes é útil ter resultados determinísticos. Isso pode ser feito fornecendo uma semente para o gerador de números aleatórios no construtor do `QuantumSimulator`por meio do parâmetro `randomNumberGeneratorSeed`:
+O `QuantumSimulator` usa um gerador de números aleatórios para simular a aleatoriedade quântica. Para efeitos de teste, às vezes é útil ter resultados determinísticos. Isto pode ser conseguido fornecendo uma semente para o gerador de números aleatórios no construtor do `QuantumSimulator`através do parâmetro `randomNumberGeneratorSeed`:
 
 ```csharp
     using (var sim = new QuantumSimulator(randomNumberGeneratorSeed: 42))
@@ -44,7 +44,7 @@ O `QuantumSimulator` usa um gerador de número aleatório para simular a aleator
     }
 ```
 
-## <a name="threads"></a>Threads
+## <a name="threads"></a>Fios
 
-O `QuantumSimulator` usa [OpenMP](http://www.openmp.org/) para paralelizar a Algebra linear necessária. Por padrão, o OpenMP usa todos os threads de hardware disponíveis, o que significa que os programas com pequenos números de qubits geralmente serão executados lentamente, pois a coordenação necessária irá Dwarf o trabalho real. Isso pode ser corrigido definindo a variável de ambiente `OMP_NUM_THREADS` como um número pequeno. Como uma regra prática muito interessante, 1 thread é bom para até cerca de 4 qubits e, em seguida, um thread adicional por qubit é bom, embora isso seja altamente dependente de seu algoritmo.
+O `QuantumSimulator` utiliza o [OpenMP](http://www.openmp.org/) para paralelor a álgebra linear necessária. Por predefinição, o OpenMP utiliza todos os threads de hardware disponíveis, o que significa que os programas com pequenos números de qubits serão normalmente executados lentamente, pois a coordenação necessária diminuirá o trabalho real. Isto pode ser corrigido definindo a variável ambiental `OMP_NUM_THREADS` para um número pequeno. Como regra geral muito superficial, um thread é bom para um máximo de quatro qubits e, em seguida, um thread adicional por qubit é bom, embora isto seja altamente dependente do algoritmo.
 
