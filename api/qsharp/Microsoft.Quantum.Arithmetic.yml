@@ -139,6 +139,8 @@ operations:
   summary: Multiplicar `xs` de inteiros assinado por `ys` inteiro assinado e armazenar o resultado em `result`, que deve ser zero inicialmente.
 - uid: microsoft.quantum.arithmetic.preparefxp
   summary: Inicialize um número quântico fixo para uma constante clássica.
+- uid: microsoft.quantum.arithmetic.reflectaboutinteger
+  summary: Reflete um registo quântico sobre um dado inteiro clássico.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
   summary: Reversível, no lugar ondulação-carry adição de dois inteiros.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
@@ -177,9 +179,9 @@ newtypes:
 - uid: microsoft.quantum.arithmetic.signedlittleendian
   summary: Tipo de inteiro assinado armazenado em pequeno endiano (ver LittleEndian).
 metadata:
-  ms.openlocfilehash: f4bdca1f7b6339079cd1e13cfafc2de4e592901a
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 905bac104c15881be6b2e600bd090ff650d63e0e
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870447"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77904558"
