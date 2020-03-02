@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 30135fa8a123e52a92b7187218f9980ba3cdbd2d
-ms.sourcegitcommit: aa5e6f4a2deb4271a333d3f1b1eb69b5bb9a7bad
+ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73442212"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77906734"
 ---
 # <a name="quantum-basics-with-q"></a>Noções básicas dos programas quânticos com Q#
 
@@ -30,7 +30,7 @@ Também pode acompanhar a narrativa sem instalar o QDK e rever as descrições g
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Demonstrar o comportamento dos qubits com Q#
 
-Lembre-se da nossa [definição de qubit](xref:microsoft.quantum.overview.what#the-qubit) simples.  Enquanto os bits clássicos contêm um único valor binário como 0 ou 1, o estado de um qubit pode estar numa **sobreposição** de 0 e 1 simultaneamente.  Conceitualmente, um qubit pode ser pensado como uma direção no espaço (também conhecido como um vetor).  Um qubit pode estar em qualquer uma das possíveis direções. Os dois **estados clássicos** são as duas direções, que representam 100% de probabilidade de medir 0 e 100% de probabilidade de medir 1.  Esta representação também é visualizada mais formalmente pela [Esfera de Bloch](/quantum/concepts/the-qubit?view=qsharp-preview#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Lembre-se da nossa [definição de qubit](xref:microsoft.quantum.overview.what#the-qubit) simples.  Enquanto os bits clássicos contêm um único valor binário como 0 ou 1, o estado de um qubit pode estar numa **sobreposição** de 0 e 1 simultaneamente.  Conceitualmente, um qubit pode ser pensado como uma direção no espaço (também conhecido como um vetor).  Um qubit pode estar em qualquer uma das possíveis direções. Os dois **estados clássicos** são as duas direções, que representam 100% de probabilidade de medir 0 e 100% de probabilidade de medir 1.  Esta representação também é visualizada mais formalmente pela [Esfera de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 O ato de medição produz um resultado binário e altera o estado de um qubit. A medição produz um valor binário de 0 ou 1.  O qubit vai do estado de sobreposição (qualquer direção) até um dos estados clássicos.  Depois disso, repetir a mesma medição sem nenhuma operação intermediária produz o mesmo resultado binário.  
@@ -39,14 +39,14 @@ O ato de medição produz um resultado binário e altera o estado de um qubit. A
 
 Agora, estamos prontos para demonstrar de que forma o Q# expressa este comportamento.  Vai começar com o programa mais simples possível e compilá-lo para demonstrar a sobreposição quântica e o entrelaçamento quântico.
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Configuração
 
 As aplicações desenvolvidas com o Microsoft Quantum Development Kit consiste em duas partes:
 
 1. Um ou mais algoritmos quânticos, implementados com a linguagem de programação quântica Q#.
 1. Um programa anfitrião, implementado numa linguagem de programação como Python ou C# e que serve como ponto de entrada principal e invoca operações Q# para executar um algoritmo quântico.
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Escolha uma localização para a aplicação
 
@@ -54,7 +54,7 @@ As aplicações desenvolvidas com o Microsoft Quantum Development Kit consiste e
 
 1. Crie um ficheiro denominado `host.py`. Este ficheiro conterá o código anfitrião Python.
 
-#### <a name="c-command-linetabtabid-csharp"></a>[Linha de Comandos C#](#tab/tabid-csharp)
+#### <a name="c-command-line"></a>[Linha de Comandos C#](#tab/tabid-csharp)
 
 1. Crie um novo projeto Q#:
 
@@ -71,7 +71,7 @@ As aplicações desenvolvidas com o Microsoft Quantum Development Kit consiste e
     mv Operation.qs Bell.qs
     ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Criar um novo projeto
 
@@ -177,7 +177,7 @@ A instrução `using` também é especial para Q#. É utilizada para alocar qubi
 
 ## <a name="create-the-host-application-code"></a>Criar o código da aplicação anfitriã
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Abra o ficheiro `host.py` e adicione-o ao seguinte código:
 
@@ -195,7 +195,7 @@ A instrução `using` também é especial para Q#. É utilizada para alocar qubi
       print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4}')
     ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 1. Substitua o conteúdo do ficheiro `Driver.cs` pelo código seguinte:
 
@@ -237,7 +237,7 @@ A instrução `using` também é especial para Q#. É utilizada para alocar qubi
 
 ### <a name="about-the-host-application-code"></a>Acerca do código da aplicação anfitriã
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 A aplicação anfitriã do Python possui três partes:
 
@@ -245,7 +245,7 @@ A aplicação anfitriã do Python possui três partes:
 * Execute o algoritmo quântico ao chamar o método `simulate()` da operação Q# importada.
 * Processe o resultado da operação. No exemplo, `res` recebe o resultado da operação. Aqui, o resultado é uma cadeia de identificação do número de zeros (`num_zeros`) e do número de uns (`num_ones`) medidos pelo simulador. Vamos desconstruir a cadeia de identificação para obter dois campos e imprimir os resultados.
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 A aplicação anfitriã C# possui quatro partes:
 
@@ -260,7 +260,7 @@ A aplicação anfitriã C# possui quatro partes:
 
 ## <a name="build-and-run"></a>Compilar e executar
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 1. Execute o seguinte comando no terminal:
 
@@ -277,7 +277,7 @@ Init:0    0s=1000 1s=0
 Init:1    0s=0    1s=1000
 ```
 
-#### <a name="command-line--visual-studio-codetabtabid-csharp"></a>[Linha de Comandos/Visual Studio Code](#tab/tabid-csharp)
+#### <a name="command-line--visual-studio-code"></a>[Linha de Comandos/Visual Studio Code](#tab/tabid-csharp)
 
 1. Execute o seguinte no terminal:
 
@@ -299,7 +299,7 @@ Init:One  0s=0    1s=1000
 Press any key to continue...
 ```
 
-#### <a name="visual-studiotabtabid-vs2019"></a>[Visual Studio](#tab/tabid-vs2019)
+#### <a name="visual-studio"></a>[Visual Studio](#tab/tabid-vs2019)
 
 1. Basta premir `F5` para o programa ser compilado e executado!
 
@@ -445,7 +445,7 @@ Se a executarmos, vamos obter exatamente o mesmo resultado de 50-50 que obtivemo
 
 O novo valor de retorno (`agree`) controla cada vez que a medição do primeiro qubit corresponde à medição do segundo qubit. É também necessário atualizar a aplicação anfitriã em conformidade:
 
-#### <a name="pythontabtabid-python"></a>[Python](#tab/tabid-python)
+#### <a name="python"></a>[Python](#tab/tabid-python)
 
 ```python
 import qsharp
@@ -461,7 +461,7 @@ for i in initials:
     print(f'Init:{i: <4} 0s={num_zeros: <4} 1s={num_ones: <4} agree={agree: <4}')
 ```
 
-#### <a name="ctabtabid-csharp"></a>[C#](#tab/tabid-csharp)
+#### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 ```csharp
             using (var qsim = new QuantumSimulator())
