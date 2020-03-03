@@ -1,18 +1,18 @@
 ---
-title: Técnicas de desenvolvimento quântico | Microsoft Docs
-description: Técnicas de desenvolvimento quântico
+title: Técnicas de desenvolvimento quântico
+description: Aprenda as noções básicas do desenvolvimento de programas Q#, a trabalhar com operações, funções, variáveis e qubits e, ainda, a criar um programa quântico simples.
 keywords: Não adicione nem edite as palavras-chave sem consultar o perito em SEO.
 author: QuantumWriter
 ms.author: MSFT-alias-person-or-DL
 ms.date: 9/20/2019
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.techniques.intro
-ms.openlocfilehash: c1263edb75f903702ab3c16cec0443857150b662
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e5b7fbde18afbc0333d89f70c5e4596848e30f4f
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76820815"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907720"
 ---
 # <a name="quantum-development-techniques"></a>Técnicas de Desenvolvimento Quântico
 

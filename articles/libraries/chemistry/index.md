@@ -1,17 +1,17 @@
 ---
-title: Introdução ao Pacote de Química Quântica | Microsoft Docs
-description: Introdução ao Pacote de Química Quântica
+title: Introdução à Biblioteca de Química Quântica
+description: Saiba mais sobre a Biblioteca de Química Quântica da Microsoft e como é utilizada para simular problemas estruturais eletrónicos em computadores quânticos.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.chemistry.concepts.intro
-ms.openlocfilehash: e5a9dd70874f1ae0baf4b781346278195a980a7e
-ms.sourcegitcommit: 8becfb03eb60ba205c670a634ff4daa8071bcd06
+ms.openlocfilehash: 4268eafa5e53c0a026d179503ac6db88652a8f90
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72960428"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907329"
 ---
 # <a name="introduction-to-the-quantum-chemistry-library"></a>Introdução à Biblioteca de Química Quântica
 

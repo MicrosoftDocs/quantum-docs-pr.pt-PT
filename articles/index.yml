@@ -1,28 +1,24 @@
 ### YamlMime:Landing
 title: Documentação do Microsoft Quantum
-summary: Saiba como utilizar o Microsoft Quantum Developer Kit e a Q#, uma linguagem para algoritmos quânticos. Conheça os conceitos-chave e escreva o primeiro programa quântico.
+summary: Saiba como utilizar o Microsoft Quantum Development Kit e o Q#, uma linguagem para programação quântica. Conheça os conceitos-chave e escreva o primeiro programa quântico. Explore as ferramentas e bibliotecas avançadas do QDK.
 metadata:
-  title: Documentação do Microsoft Quantum – Referência da API Q#
-  description: Saiba como utilizar o Microsoft Quantum Development Kit e o Q#, uma linguagem para programação quântica. Conheça os conceitos-chave e escreva o primeiro programa quântico.  Explore as ferramentas e bibliotecas avançadas do QDK.
+  title: Documentação do Microsoft Quantum Development Kit e Referência à API de Q#
+  description: Explore os conceitos da computação quântica e como utilizar o Microsoft Quantum Development Kit (QDK) e Q#, uma linguagem de programação quântica open source.
   ms.prod: quantum
   ms.topic: landing-page
   ms.collection: collection
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 10/21/2019
-  ms.openlocfilehash: a39b230bc3b740afd23f0050b9c45df6094bea4e
-  ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+  ms.openlocfilehash: 27f7ca535ddd846e7bae01baee3fbbb4713e0433
+  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
   ms.translationtype: HT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/06/2020
-  ms.locfileid: "77036581"
+  ms.lasthandoff: 02/28/2020
+  ms.locfileid: "77907431"
 landingContent:
-- title: Introdução ao Microsoft Quantum
+- title: Computação quântica
   linkLists:
-  - linkListType: overview
-    links:
-    - text: Quantum Development Kit
-      url: welcome.md
   - linkListType: learn
     links:
     - text: O que é a computação quântica?
@@ -31,66 +27,58 @@ landingContent:
       url: overview/quantum-computers.md
     - text: Razões para aprender computação quântica?
       url: overview/why-learn-quantum-computing.md
-    - text: O que é a Q#?
+    - text: O que é C# e o QDK?
       url: overview/what-is-qsharp.md
-    - text: Como posso saber mais sobre computação quântica?
+    - text: Como posso saber mais?
       url: overview/how-to-learn-quantum-computing.md
+  - linkListType: concept
+    links:
+    - text: Conceitos de computação quântica
+      url: concepts/index.md
 - title: Obter o Quantum Development Kit
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Quantum Development Kit
+      url: welcome.md
   - linkListType: download
     links:
     - text: Instalar o QDK
       url: install-guide/index.md
     - text: Atualizar o QDK
       url: install-guide/update.md
-- title: Guias de Início Rápido
-  linkLists:
-  - linkListType: quickstart
-    links:
-    - text: Criar um gerador de números aleatórios quântico
-      url: quickstarts/qrng.md
-    - text: Noções básicas dos programas quânticos com Q#
-      url: quickstart.md
-    - text: 'Aceleração quântica: algoritmo de pesquisa de Grover'
-      url: quickstarts/search.md
-- title: Conceitos de computação quântica
-  linkLists:
-  - linkListType: concept
-    links:
-    - text: Conceitos de computação quântica
-      url: concepts/index.md
 - title: Linguagem de programação Q#
   linkLists:
-  - linkListType: learn
+  - linkListType: overview
     links:
     - text: Introdução à linguagem Q#
       url: language/index.md
     - text: Técnicas de desenvolvimento do Q#
       url: techniques/index.md
-- title: Computadores de destino
-  linkLists:
-  - linkListType: overview
-    links:
     - text: Simuladores Quantum e aplicações anfitriãs
       url: machines/index.md
-  - linkListType: architecture
+  - linkListType: quickstart
     links:
-    - text: Simulador de estado completo
-      url: machines/full-state-simulator.md
-    - text: Simulador de recursos
-      url: machines/resources-estimator.md
-    - text: Simulador de rastreio
-      url: machines/qc-trace-simulator/index.md
-    - text: Simulador Toffoli
-      url: machines/toffoli-simulator.md
-- title: Recursos de aprendizagem do Q#
-  linkLists:
+    - text: Criar um gerador de números aleatórios quântico
+      url: quickstarts/qrng.md
+    - text: Explorar o entrelaçamento com Q#
+      url: quickstart.md
+    - text: 'Aceleração quântica: algoritmo de pesquisa de Grover'
+      url: quickstarts/search.md
   - linkListType: learn
     links:
     - text: Aprender com os Quantum Katas
       url: intro-to-katas.md
     - text: Procurar exemplos de código Q#
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
+- title: Comunidade e contribuição
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Contribuir para o QDK
+      url: contributing/index.md
+    - text: Ler o blogue do Microsoft Quantum
+      url: https://cloudblogs.microsoft.com/quantum
 - title: Bibliotecas Q#
   linkLists:
   - linkListType: reference
@@ -101,25 +89,3 @@ landingContent:
       url: libraries/numerics/index.md
     - text: Biblioteca de química
       url: libraries/chemistry/index.md
-    - text: Conceitos de química
-      url: libraries/chemistry/concepts/quantum-dynamics.md
-- title: Algoritmos e aplicações em Q# (a partir das bibliotecas padrão)
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Amplificação de Amplitude
-      url: libraries/standard/algorithms.md
-    - text: Estimativa da Fase Quântica
-      url: libraries/standard/algorithms.md#quantum-phase-estimation
-    - text: Algoritmo de Shor
-      url: libraries/standard/applications.md#shors-algorithm
-    - text: Simulação Hamiltoniana
-      url: libraries/standard/applications.md
-- title: Comunidade e contribuição
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Contribuir para o QDK
-      url: contributing/index.md
-    - text: Ler o blogue do Microsoft Quantum
-      url: https://cloudblogs.microsoft.com/quantum
