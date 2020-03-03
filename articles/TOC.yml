@@ -1,23 +1,21 @@
 - name: Documentação do Microsoft Quantum
   href: index.yml
-- name: Descrição geral
+- name: Introdução à computação quântica
   items:
-    - name: Introdução
+    - name: O que é a computação quântica?
+      href: overview/what-is-quantum-computing.md
+    - name: O que pode fazer um computador quântico?
+      href: overview/quantum-computers.md
+    - name: Razões para aprender computação quântica?
+      href: overview/why-learn-quantum-computing.md
+    - name: 'O que é C# e o QDK?'
+      href: overview/what-is-qsharp.md
+    - name: Como posso saber mais?
+      href: overview/how-to-learn-quantum-computing.md
+- name: Obter o Quantum Development Kit
+  items:
+    - name: Introdução ao QDK
       href: welcome.md
-    - name: Cinco questões sobre a computação quântica
-      items:
-        - name: O que é a computação quântica?
-          href: overview/what-is-quantum-computing.md
-        - name: O que pode fazer um computador quântico?
-          href: overview/quantum-computers.md
-        - name: Razões para aprender computação quântica?
-          href: overview/why-learn-quantum-computing.md
-        - name: 'O que é a Q#?'
-          href: overview/what-is-qsharp.md
-        - name: Como aprender computação quântica?
-          href: overview/how-to-learn-quantum-computing.md
-- name: Instalar e atualizar
-  items:
     - name: Instalar o QDK
       items:
         - name: Descrição geral da instalação
@@ -30,15 +28,23 @@
           href: install-guide/qjupyter.md
     - name: Atualizar o QDK
       href: install-guide/update.md
-- name: Guias de Início Rápido
+    - name: 'Como criar um projeto Q#'
+      href: how-to-guides/create-qsharp-project.md
+- name: 'Recursos de aprendizagem do Q#'
   items:
-    - name: Gerador de números aleatórios quântico
-      href: quickstarts/qrng.md
-    - name: 'Noções básicas dos programas quânticos com Q#'
-      href: quickstart.md
-    - name: Implementar o algoritmo de pesquisa de Grover
-      href: quickstarts/search.md
-- name: Conceitos
+    - name: Guias de Início Rápido
+      items:
+        - name: Gerador de números aleatórios quântico
+          href: quickstarts/qrng.md
+        - name: 'Explorar o entrelaçamento com Q#'
+          href: quickstart.md
+        - name: Implementar o algoritmo de pesquisa de Grover
+          href: quickstarts/search.md
+    - name: 'Aprender Q# com os Quantum Katas'
+      href: intro-to-katas.md
+    - name: 'Exemplos de código Q#'
+      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
+- name: Descrição aprofundada do QDK
   items:
     - name: Técnicas de desenvolvimento quântico
       topicHref: techniques/index.md
@@ -46,33 +52,17 @@
     - name: 'Linguagem de programação Q#'
       topicHref: language/index.md
       href: language/toc.yml
-    - name: 'Bibliotecas Q#'
-      href: libraries/toc.yml
     - name: Simuladores quânticos e avaliadores de recursos
       href: machines/toc.yml
-    - name: Conceitos de computação quântica
-      href: concepts/toc.yml
-- name: Guias de procedimentos
-  items:
-    - name: 'Criar um projeto Q#'
-      href: how-to-guides/create-qsharp-project.md
-- name: 'Recursos de Aprendizagem do Q#'
-  items:
-    - name: Aprender com os Quantum Katas
-      href: intro-to-katas.md
-    - name: 'Exemplos de Q#'
-      href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Recursos
-  items:
-    - name: Glossário
-      href: Glossary.md
-    - name: Mais recursos
-      href: for-more-info.md
-    - name: Notas de versão QDK
-      topicHref: relnotes/index.md
-      href: relnotes/toc.yml
-    - name: Contribuir para o QDK
-      href: contributing/toc.yml
-      topicHref: contributing/index.md
-    - name: Licença
-      href: license.md
+- name: 'Bibliotecas Q#'
+  href: libraries/toc.yml
+- name: Conceitos de computação quântica
+  href: concepts/toc.yml
+- name: Mais recursos
+  href: for-more-info.md
+- name: Contribuir para o QDK
+  href: contributing/toc.yml
+  topicHref: contributing/index.md
+- name: Notas de versão QDK
+  topicHref: relnotes/index.md
+  href: relnotes/toc.yml
