@@ -1,17 +1,17 @@
 ---
-title: Q# bibliotecas padrão - algoritmos / Microsoft Docs
-description: Bibliotecas padrão Q#
+title: 'Algoritmos quânticos em Q #'
+description: Aprenda sobre algoritmos fundamentais de computação quântica, incluindo amplificação de amplitude, fourier transform, draper e beauregard adders, e estimativa de fase.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: 1c45808207a2020f603448eba05900cdc40b4916
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036360"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907244"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quânticos #
 
@@ -19,7 +19,7 @@ ms.locfileid: "77036360"
 
 *A Amplificação amplitude* é uma das ferramentas fundamentais da Computação Quântica. É a ideia fundamental que está subjacente à pesquisa, estimativa de amplitude de Grover e muitos algoritmos de aprendizagem automática quântica.  Existem muitas variantes, e em Q# fornecemos uma versão geral baseada na Amplificação de Amplitude Alheia com Reflexões Parciais para permitir a maior área de aplicação.
 
-A ideia central por trás da amplificação da amplitude é amplificar a probabilidade de um resultado desejado ocorrer através da realização de uma sequência de reflexões.  Estas reflexões giram o estado inicial mais próximo de um estado-alvo desejado, muitas vezes chamado de estado marcado.  Especificamente, se a probabilidade de medir o estado inicial para estar em estado marcado é $\sin^2(\theta)$ então depois de aplicar amplificação de amplitude $m$ vezes a probabilidade de sucesso se torna $\sin^2 ((2m+1)\theta)$.  Isto significa que se $\theta = \pi/[2(2n+1)]] $ por algum valor de $n$ então a amplificação amplitude é capaz de aumentar a probabilidade de sucesso para $100\\%$ após $n de iterações de amplificação amplitude.  Uma vez que $\teta = \sin^{-1}(\sqrt{\Pr(sucesso)}}}$isto significa que o número de iterações necessárias para obter um sucesso determinicamente é quadraticamente inferior ao número esperado necessário para encontrar um estado marcado não determinicamente usando amostras aleatórias.
+A ideia central por trás da amplificação da amplitude é amplificar a probabilidade de um resultado desejado ocorrer através da realização de uma sequência de reflexões.  Estas reflexões giram o estado inicial mais próximo de um estado-alvo desejado, muitas vezes chamado de estado marcado.  Especificamente, se a probabilidade de medir o estado inicial para estar em estado marcado é $\sin^2(\theta)$ então depois de aplicar amplificação de amplitude $m$ vezes a probabilidade de sucesso se torna $\sin^2 ((2m+1)\theta)$.  Isto significa que se $\theta = \pi/[2(2n+1)] $ por algum valor de $n$ então a amplificação amplitude é capaz de aumentar a probabilidade de sucesso para $100\\%$ após $n de iterações de amplificação amplitude.  Uma vez que $\teta = \sin^{-1}(\sqrt{\Pr(sucesso)}}}$isto significa que o número de iterações necessárias para obter um sucesso determinicamente é quadraticamente inferior ao número esperado necessário para encontrar um estado marcado não determinicamente usando amostras aleatórias.
 
 Cada iteração da amplificação amplitude requer que sejam especificados dois operadores de reflexão. Especificamente, se $Q$ é o iterato de amplificação amplitude e $P_0$ é um operador de projetor no subespaço inicial e $P_1$ é o projetor sobre o subespaço marcado e ntão $Q=-(\boldone-2P_0)(\boldone -2P_1)$.  Recorde-se que um projetor é um operador hermitiano que tem valores eigenvalues $+1$ e $0$ e, como resultado, $(\boldone -2P_0)$ é unitário porque tem valores eigen que são raízes de unidade (neste caso $\pm $1$). Como exemplo, considere o caso da pesquisa de Grover com o estado inicial $H^{\otimes n} \ket{0}$ e estado marcado $\ket{m}$, $P_0 = H^{\otimes n}\ket{0}\bra{0}H^{\otimes n}$ e $P_1= \ket{m}\bra{m}$.  Na maioria das aplicações de amplificação de amplitude $P_0$ será um projetor para um estado inicial, o que significa que $P_0 = \boldone -2\ket{\psi}\bra{\psi}$ para algum vetor $\ket{\psi}$; no entanto, para a amplicação de amplitude alheia $P_0$ irá normalmente projetar em muitos estados quânticos (isto é, a multiplicidade do valor eigenvalue de $+1$ de $P_0$ é superior a $1$).
 
