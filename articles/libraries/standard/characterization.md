@@ -1,17 +1,17 @@
 ---
-title: Q# bibliotecas padrão - caracterização / Microsoft Docs
-description: Q# bibliotecas padrão - caracterização
+title: Caracterização quântica e estatísticas
+description: Saiba como as estatísticas de medição das estimativas de fase são usadas para estimar os valores dos resultados na programação quântica.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 0c347113339a77e9eaf63dc0967c320f8b063a0e
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
+ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036258"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77907193"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização quântica e Estatísticas #
 
@@ -82,7 +82,7 @@ O principal inconveniente dos métodos é que é computacionalmente exigente.
 Para entender como funciona este processo de inferência bayesiana, considere o caso de processamento de um único resultado `Zero`.
 Note que $X = \ket{+}\bra{+} - \ket{-}\bra{-}$, de tal forma que $\ket{+}$ é o único eigenstate positivo de $X$ correspondente a `Zero`.
 A probabilidade de observar `Zero` para uma [medição`PauliX`](xref:microsoft.quantum.concepts.pauli) no primeiro qubit dado um estado de entrada {\cet{\psi}\ket{\phi}$ é assim \start{equation} \Pr(\texttt{{ { \ psi) = \left; \braket{+ \ \psi} \right^2.
-\end{equation} No caso da estimativa da fase iterativa, temos aquele $\ket{\psi} = R_1(m [\phi-theta]) \ket{+}$, de tal forma que \start{align} \Pr(\texttt{Zero} \ \phi; m,\theta) & = \left] \braket{+ [ R_1 (m[\phi-\theta]) [ +} \direita^^^2 \\\\ & = \left; \frac12 \left, \bra{0} + \bra{1} \right, \ket{0} + e^{i m [\phi-\theta]} \ket{1} \right; \right^2 \\\\ & = \left; \frac{1 + e^{i m [\phi-\theta]}}{2} \right\^\\2 \\ & = \cos^2(m [\phi-theta] / 2) \tag{★} \label{eq:phase-est-probabilidade}.
+\end{equation} No caso da estimativa da fase iterativa, temos aquele $\ket{\psi} = R_1(m [\phi-theta]) \ket{+}$, de tal forma que \start{align} \Pr(\texttt{Zero} \ \phi; m,\theta) & = \left \braket{+ [ R_1 (m[\phi-\theta]) [ +} \direita^^^2 \\\\ & = \left; \frac12 \left, \bra{0} + \bra{1} \right, \ket{0} + e^{i m [\phi-\theta]} \ket{1} \right; \right^2 \\\\ & = \left; \frac{1 + e^{i m [\phi-\theta]}}{2} \right\^\\2 \\ & = \cos^2(m [\phi-theta] / 2) \tag{★} \label{eq:phase-est-probabilidade}.
 \end{align} Ou seja, a estimativa da fase iterativa consiste em aprender a frequência de oscilação de uma função sinusoidal, dada a capacidade de lançar uma moeda com um enviesamento dado por esse sinusoid.
 Seguindo a terminologia clássica tradicional, chamamos $\eqref{eq:phase-est-probabilidade}$ a *função de probabilidade* para estimativa de fase iterativa.
 
