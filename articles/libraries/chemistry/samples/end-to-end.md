@@ -5,16 +5,16 @@ author: cgranade
 ms.author: chgranad@microsoft.com
 ms.date: 10/23/2018
 uid: microsoft.quantum.chemistry.examples.endtoend
-ms.openlocfilehash: 545ade99859f2a9939477fb18604921f70a5d9aa
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 7605676e05ee352e47791657eeaafceef5dbb493
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77906513"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022499"
 ---
 # <a name="end-to-end-with-nwchem"></a>Ponto a ponto com NWChem #
 
-Nesta página, vamos percorrer um exemplo de obter contagens de portão para simulação de química quântica, a partir de um deck de entrada [NWChem.](http://www.nwchem-sw.org/index.php/Main_Page)
+Neste artigo, você vai passar por um exemplo de obter contagens de portão para simulação de química quântica, a partir de um deck de entrada [NWChem.](http://www.nwchem-sw.org/index.php/Main_Page)
 Antes de prosseguir com este exemplo, certifique-se de que instalou o Docker, seguindo o guia de [instalação e validação](xref:microsoft.quantum.chemistry.concepts.installation).
 
 Para obter mais informações:
@@ -62,7 +62,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Em seguida, importaremos o comando `Get-GateCount` fornecido com a amostra **GetGateCount.**
-Para mais detalhes, consulte as [instruções fornecidas com a amostra](https://github.com/Microsoft/Quantum/tree/master/Chemistry/GetGateCount).
+Para mais detalhes, consulte as [instruções fornecidas com a amostra](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
 Em seguida, execute o seguinte, substituindo `<runtime>` por `win10-x64`, `osx-x64`, ou `linux-x64`, dependendo do seu sistema operativo:
 
 ```powershell
@@ -112,7 +112,7 @@ set tce:qelb  9
 
 ## <a name="producing-and-consuming-broombridge-output-from-nwchem"></a>Produção e Consumo de Broombridge Output da NWChem ##
 
-Agora temos tudo o que precisamos para produzir e consumir documentos de Broombridge.
+Agora tem tudo o que precisa para produzir e consumir documentos de Broombridge.
 Para executar a NWChem e produzir um documento broombridge para o deck de entrada `h4_sto6g_0.000.nw`, executar `Convert-NWChemToBroombridge`:
 
 > [!NOTE]
@@ -123,7 +123,7 @@ Para executar a NWChem e produzir um documento broombridge para o deck de entrad
 Convert-NWChemToBroombridge h4_sto6g_0.000.nw 
 ```
 
-Isto produzirá um documento de Broombridge chamado `h4_sto6g_0.000.yaml` que podemos usar com `Get-GateCount`:
+Isto produzirá um documento de Broombridge chamado `h4_sto6g_0.000.yaml` que pode usar com `Get-GateCount`:
 
 ```powershell
 Get-GateCount -Format YAML h4_sto6g_0.000.yaml
@@ -164,7 +164,7 @@ Há muitas coisas para fazer a partir daqui:
 - Experimente diferentes decks de entrada predefinidos, por exemplo, variando o parâmetro `alpha` em `h4_sto6g_alpha.nw`, 
 - Tente modificar os decks editando diretamente os decks NWChem, por exemplo, explorando `STO-nG` modelos para várias escolhas de n, 
 - Experimente outros decks de entrada PRÉ-definidos da NWChem que estão disponíveis em `nwchem/qa/chem_library_tests`,
-- Experimente um conjunto de referências YAML de Broombridge pré-definidas que foram geradas a partir da NWChem e estão disponíveis como parte do [repositório Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/Chemistry/IntegralData/YAML). Estes critérios incluem: 
+- Experimente um conjunto de referências YAML de Broombridge pré-definidas que foram geradas a partir da NWChem e estão disponíveis como parte do [repositório Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Estes critérios incluem: 
     - pequenas moléculas como o hidrogénio molecular (H2), Beryllium (Be), o hidreto de lítio (LiH),
     - moléculas maiores como o ozono (O3), beta-caroteno, citosina, e muito mais. 
 - Experimente as [setas emslémicas](https://arrows.emsl.pnnl.gov/api/qsharp_chem) de ponta gráfica que possui uma interface para o Kit de Desenvolvimento Quântico da Microsoft. 

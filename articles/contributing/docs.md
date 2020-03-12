@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: d244a7841b4093031d6225230a6cbefb22cc6a39
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904898"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022639"
 ---
-# <a name="improving-documentation"></a>Melhorar a Documentação #
+# <a name="improving-documentation"></a>Melhorar a Documentação
 
 A documentação para o Kit de Desenvolvimento Quântico assume várias formas diferentes, de tal forma que a informação está prontamente disponível para os desenvolvedores quânticos.
 
@@ -28,7 +28,7 @@ Dito isto, cada forma de documentação varia um pouco nos detalhes:
 - A **referência API** é um conjunto de páginas para cada função, operação e tipo definido pelo utilizador, publicados para https://docs.microsoft.com/qsharp/api/. Estas páginas documentam as inputs e operações para cada chamada, juntamente com exemplos e links para mais informações. A referência API é extraída automaticamente de pequenos documentos DFM no código fonte Q# como parte de cada lançamento.
 - Os ficheiros **README<!---->.md** incluídos em cada amostra e kata descrevem como usar essa amostra ou kata é usada, o que cobre, e como se relaciona com o resto do Kit de Desenvolvimento Quântico. Estes ficheiros são escritos usando [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/), uma alternativa mais leve ao DFM que é popular para anexar documentação diretamente aos repositórios de código.
 
-## <a name="contributing-to-the-conceptual-documentation"></a>Contribuir para a Documentação Conceptual ##
+## <a name="contributing-to-the-conceptual-documentation"></a>Contribuir para a Documentação Conceptual
 
 Para contribuir com uma melhoria da documentação conceptual ou README, então, começa com um pedido de pull para [**MicrosoftDocs/quantum-docs-pr,** ](https://github.com/MicrosoftDocs/quantum-docs-pr/
 ) [**Microsoft/Quantum,** ](https://github.com/Microsoft/Quantum)ou [**Microsoft/QuantumKatas,** ](https://github.com/Microsoft/QuantumKatas)como é apropriado.
@@ -41,7 +41,18 @@ Descreveremos mais sobre pedidos de puxão abaixo, mas por enquanto há algumas 
 - Muitos membros da comunidade de programação quântica são investigadores académicos, e são reconhecidos principalmente através de citações pelas suas contribuições para a comunidade. Além de ajudar os leitores a encontrar materiais adicionais, garantir que cite corretamente os resultados académicos, como jornais, palestras, posts de blogs e ferramentas de software, pode ajudar os colaboradores académicos a continuarem a fazer o seu melhor trabalho para melhorar a comunidade.
 - A comunidade de programação quântica é uma comunidade ampla e maravilhosamente diversificada. O uso de pronomes de género em exemplos de terceira pessoa (por exemplo: "se um utilizador..., ele ...") pode trabalhar para excluir em vez de incluir. Ser consciente dos nomes das pessoas em citações e links, e da correta inclusão de personagens não-ASCII pode servir a diversidade da comunidade mostrando respeito aos seus membros. Da mesma forma, muitas palavras na língua inglesa são frequentemente usadas de forma odiosa, de modo que a sua utilização em documentação técnica pode causar danos tanto aos leitores individuais como à comunidade em geral.
 
-## <a name="contributing-to-the-api-references"></a>Contribuir para as Referências Da API ##
+### <a name="referencing-sample-code-from-conceptual-articles"></a>Referenciação do Código da Amostra de Artigos Conceituais
+
+Se quiser incluir código do [repositório de amostras,](https://github.com/Microsoft/Quantum)pode fazê-lo usando um comando especial de Markdown com sabor do DocFX:
+
+```markdown
+:::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
+```
+
+Este comando importará as linhas 4 a 8 do [ficheiro`Game.qs` a partir da amostra `chsh-game`,](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)marcando-as como código Q# para efeitos de realce de sintaxe.
+Utilizando este comando, pode evitar duplicar o código entre artigos conceptuais e o repositório de amostras, de modo que o código da amostra na documentação está sempre o mais atualizado possível.
+
+## <a name="contributing-to-the-api-references"></a>Contribuir para as Referências Da API
 
 Para contribuir com uma melhoria das referências da API, é mais útil abrir um pedido de pull diretamente sobre o código que está a ser documentado.
 Cada função, operação ou tipo definido pelo utilizador suporta um comentário de documentação (denotado com `///` em vez de `//`).
@@ -123,6 +134,7 @@ Para o exemplo de `ControlledOnBitString`, podemos escrever algo como o seguinte
      return ControlledOnBitStringImpl(bits, oracle, _, _);
  }
 ```
+
 Pode ver a versão renderizada do código acima na [documentação da API para a função `ControlledOnBitString`](xref:microsoft.quantum.canon.controlledonbitstring).
 
 Para além da prática geral da escrita de documentação, por escrito a documentação da API comenta que ajuda a ter algumas coisas em mente:
