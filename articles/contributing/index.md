@@ -6,14 +6,14 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing
-ms.openlocfilehash: 63c6f90a511c7bd14435b2e593af0d8615c18519
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: cf913a09395f0694a51645ec8f91171e5b1555c3
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904881"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022485"
 ---
-# <a name="contributing-to-the-quantum-development-kit"></a>Contribuir para o Quantum Development Kit #
+# <a name="contributing-to-the-quantum-development-kit"></a>Contribuir para o Quantum Development Kit
 
 O Quantum Development Kit é mais do que uma coleção de ferramentas para escrever programas quânticos.
 Faz parte de uma comunidade alargada de pessoas à descoberta da computação quântica, que investiga algoritmos quânticos, desenvolve novas aplicações para dispositivos quânticos e trabalha no sentido de tirar o máximo partido da computação quântica.
@@ -23,7 +23,7 @@ Estamos muito agradecidos pelos seus contributos e pela oportunidade de colabora
 
 Neste guia, fornecemos conselhos sobre como tornar o seu contributo o mais útil possível para a comunidade alargada de programação quântica.
 
-## <a name="building-community"></a>Criar a Comunidade ##
+## <a name="building-community"></a>Criar a Comunidade
 
 A primeira coisa a pensar ao dar o seu contributo é ter sempre em conta a comunidade para a qual está a contribuir.
 Ao agir de forma respeitosa e profissional para com os seus pares na comunidade de programação quântica e no geral, garante que o seu trabalho ajuda a criar a melhor e mais acolhedora comunidade possível.
@@ -31,7 +31,7 @@ Ao agir de forma respeitosa e profissional para com os seus pares na comunidade 
 Neste sentido, todos os projetos do Quantum Development Kit adotaram o [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) (Código de Conduta Open Source da Microsoft).
 Para obter mais informações, veja as [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) (FAQ do Código de Conduta) ou contacte [opencode@microsoft.com](mailto:opencode@microsoft.com) com quaisquer questões ou comentários adicionais.
 
-## <a name="what-kinds-of-contributions-help-the-community"></a>Que tipos de contributos ajudam a comunidade? ##
+## <a name="what-kinds-of-contributions-help-the-community"></a>Que tipos de contributos ajudam a comunidade?
 
 Existem muitas formas diferentes de ajudar a comunidade de programação quântica através dos contributos.
 Neste guia, vamos abordar três formas especialmente relevantes para o Quantum Development Kit.
@@ -45,7 +45,7 @@ No entanto, esta não é uma lista exaustiva. Recomendamos que explore outras fo
 Estes diferentes tipos de contributos são incrivelmente valiosos e muito apreciados.
 No resto do guia, daremos conselhos sobre como fazer cada tipo de contributo.
 
-## <a name="where-do-contributions-go"></a>Para onde vão os contributos? ##
+## <a name="where-do-contributions-go"></a>Para onde vão os contributos?
 
 O Quantum Development Kit inclui diferentes componentes que, em conjunto, criam uma plataforma para escrever programas quânticos.
 Cada um destes componentes existe num repositório diferente, por isso, uma das primeiras coisas a decidir é onde colocar cada contributo.
@@ -66,7 +66,7 @@ Existem também alguns repositórios mais especializados que incidem sobre event
 - [**msr-quarc/qsharp.sty**](https://github.com/msr-quarc/qsharp.sty): suporte de formatação LaTeX para sintaxe Q#.
 - [**msr-quarc/intern-workshop-2019**](https://github.com/msr-quarc/intern-workshop-2019): Bloco de notas IQ# para o tutorial Deutsch–Jozsa dado no workshop para estagiários de 2019.
 
-## <a name="next-steps"></a>Passos seguintes ##
+## <a name="next-steps"></a>Passos seguintes
 
 Obrigado fazer parte da comunidade Quantum Development Kit e aguardamos com entusiasmo os seus contributos.
 Se quiser saber mais sobre os contributos, continue com um dos seguintes guias.
