@@ -6,12 +6,12 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.algorithms
-ms.openlocfilehash: aaa9ddf47e5ea35e7e57b9828db082889d0e6adf
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 8b8a9019e8bc419f42b0c6f7558354d19a157917
+ms.sourcegitcommit: d61b388651351e5abd4bfe7a672e88b84a6697f8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907244"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79402855"
 ---
 # <a name="quantum-algorithms"></a>Algoritmos Quânticos #
 
@@ -77,9 +77,9 @@ $$ Se definirmos $$ \ket {\phi\_k(a)} = \frac{1}{\sqrt{2}}\left (\ket{0} + e^{i2
 $$ O caminho para a realização de um adder torna-se claro depois de observar que a soma das inputs pode ser escrita como $$ \ket{a+b}=\operatorname{QFT}^{-1}\ket{\phi\_1(a+b)}\otimes \cdots \otimes \ket{\phi\_n (a+b)}.
 $$ Os inteiros $b$ e $a$ podem então ser adicionados através da realização de rotação de fase controlada em cada um dos qubits na decomposição usando os pedaços de $b$ como controlos.
 
-Esta expansão pode ser simplificada notando que para qualquer $j de sempre e número real $x$, $e^{i2\pi(x+j)}=e^{i2\pi x}$.  Isto porque se rodar $360^{\circ}$ graus ($2\pi$$ radians) em círculo, então você acaba precisamente onde você começou.  A única parte importante de $x$ para $e^{i2\pi x}$ é, portanto, a parte fracionária de $x$.  Especificamente, se tivermos uma expansão binária da forma $x=y+0,x\_0x\_2\ldots x\_n$ e ntão $e^{i2\pi x}=e^{i2\pi (0,x\_0x\_2\ldots x\_{n-1}}}}$ e, portanto, $$\ket{{\phi\_k(a+b)}=frac{1}{\sqrt{2}}\left (\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1]}\ket{1} \right).$$$ Isto significa que se executarmos a adição incrementando cada um dos os fatores de tensor na expansão da transformação fourier de $\ket{a}$ então o número de rotações diminui à medida que $k$ diminui.  Isto reduz substancialmente o número de portões quânticos necessários no adder.  Denotamos a transformação fourier, a adição de fase e os passos de transformação inversa fourier que compõem o adder Draper como $\operatorname{QFT}^{-1} à esquerda (\phi\\\!\operatorname{ADD}\right) \nome de operador{QFT}$. Um circuito quântico que usa esta simplificação para implementar todo o processo pode ser visto abaixo.
+Esta expansão pode ser simplificada notando que para qualquer $j de sempre e número real $x$, $e^{i2\pi(x+j)}=e^{i2\pi x}$.  Isto porque se rodar $360^{\circ}$ graus ($2\pi$$ radians) em círculo, então você acaba precisamente onde você começou.  A única parte importante de $x$ para $e^{i2\pi x}$ é, portanto, a parte fracionária de $x$.  Especificamente, se tivermos uma expansão binária da forma $x=y+0,x\_0x\_2\ldots x\_n$ e depois $e^{i2\pi x}=e^{i2\pi (0,x\_0x\_2\ldots x\_{n-1}}}}}}$e, portanto, $\ket{{i2\pi=e^{i2\pi (0,x  0x  2\ldots x  {n-1}}}}}}$e, portanto, $$\ket\_{{i2\pi=e^{i2\pi (0,x  0x  2\ldots x  {n-1})}}}$e, portanto, $\ket{{i2\pi=e^{i2\pi (0,x  0x  2\ldots x  {n-1}}}}}}}}}}}}}}}}}\frac{1}{\sqrt{2}}\left(\ket{0} + e^{i2\pi [a/2^k+0.b\_k\ldots b\_1]}\ket{1} \right).$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ o número de rotações diminui à medida que $k$ diminui.  Isto reduz substancialmente o número de portões quânticos necessários no adder.  Denotamos a transformação fourier, a adição de fase e os passos de transformação inversa fourier que compõem o adder Draper como $\operatorname{QFT}^{-1} à esquerda (\phi\\\!\operatorname{ADD}\right) \nome de operador{QFT}$. Um circuito quântico que usa esta simplificação para implementar todo o processo pode ser visto abaixo.
 
-![Adder draper mostrado como diagrama de circuito](~/media/draper.png)
+![Adder draper mostrado como diagrama de circuito](~/media/draper.svg)
 
 Cada portão controlado $e^{i2\pi/k}$ no circuito refere-se a um portão de fase controlada.  Tais portões têm a propriedade que no par de qubits em que atuam, $\ket{00}\mapsto \ket{00}$ mas $\ket{11}\mapsto e^{i2\pi/k}\ket{11}$.  Este circuito permite-nos realizar a adição sem qubits adicionais para além dos necessários para armazenar as inputs e as saídas.
 
@@ -92,7 +92,7 @@ $$
 
 O adder Beauregard usa o adder Draper, ou mais especificamente $\phi\\\!nome de operador {ADD}$, para adicionar $a$ e $b$ em fase.  Em seguida, utiliza a mesma operação para identificar se $a+b <N$ subtraindo $N$ e testando se $a+b-N<0$.  O circuito armazena esta informação num qubit acessório e adiciona $N$ de volta ao registo se $a+b<N$.  Conclui então, descomputando esta broca acessória (este passo é necessário para garantir que a cilla pode ser desalocado após chamar o adder).  O circuito para o adder Beauregard é dado abaixo.
 
-![Beauregard adder mostrado como diagrama de circuito](~/media/beau.png)
+![Beauregard adder mostrado como diagrama de circuito](~/media/beau.svg)
 
 Aqui o portão $\Phi\\\!nome de operador{ADD}$ assume o mesmo formulário que $\phi\\\!nome de operador {ADD}$ exceto que neste contexto a entrada é clássica e não quântica.  Isto permite que as fases controladas em $\Phi\\\!o nome de operador {ADD}$ seja substituído por portões de fase que podem ser compilados em menos operações para reduzir tanto o número de qubits como o número de portões necessários para o adder.
 
@@ -111,7 +111,7 @@ Dito de outra forma, o efeito de aplicar $V$ é precisamente o mesmo que aplicar
 Assim, para o resto desta discussão discutiremos a estimativa de fase em termos de $R_1(\phi)$, que implementamos utilizando o chamado recuo de *fase*.
 
 Uma vez que o registo de controlo e alvo permanece desemaranhado após este processo, podemos reutilizar $\ket{\phi}$ como alvo de uma aplicação controlada de $U^2$ para preparar um segundo qubit de controlo no estado $R_1(2 \phi) \ket{+}$.
-Continuando desta forma, podemos obter um registo do formulário \begin{align} \ket{\psi} & = \sum_{j = 0}^n R_1(2^j \phi) \ket{{}} \\\\ & \propto \bigotimes_{j=0}^{n} \left (\ket{0} + \exp(i^{j} \phi) \ket{1}\\\ \\right \propto \sum_{k = 0}^{2^n - 1} \exp(i \phi k) \ket{k} \end{align} onde $n$ é o número de pedaços de precisão que exigimos, e onde usamos ${} \propto {}$ para indicar que suprimimos o fator de normalização de $ 1 / \sqrt{2^n}$.
+Continuando desta forma, podemos obter um registo do formulário \begin{align} \ket{\psi} & = \sum_{j = 0}^n R_1(2^j \phi) \ket{{}} \\\\ & \propto \bigotimes_{j=0}^{n} \left (\ket{0} + \exp(i^{j} \phi) \ket{1}\right \\ \\\propto \sum_{k = 0}^{2^n - 1} \exp(i \phi k) \ket{k} \end{align} onde $n$ é o número de pedaços de precisão que exigimos, e onde usamos ${} €propto {}$ para indicar que suprimimos o fator de normalização de $1 / \sqrt {2^n}$.
 
 Se assumirmos que $\phi = 2 \pi p / 2^k$ para um inteiro $p$, então reconhecemos isto como $\ket{\psi} = \operatorname{QFT} \ket{p_1 p_0 \dots p_n}$, onde $p_j$ é o $j^{\textrm{th}}$$ bit de $2 \pi \phi$.
 Aplicando a adjoint da transformação quântica fourier, obtemos assim a representação binária da fase codificada como um estado quântico.
