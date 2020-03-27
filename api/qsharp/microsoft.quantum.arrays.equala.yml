@@ -1,0 +1,76 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.equala
+name: EqualA
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: Dadas duas matrizes do mesmo tipo e um predicado que é definido para pares de elementos das matrizes, verifica se as matrizes são iguais.
+remarks: >-
+  Esta função é definida para tipos genéricos; isto é, sempre que temos duas matrizes `'T[]` e uma função `equal: ('T, 'T) -> Bool`, esta função devolve um valor `Bool` que indica se as matrizes são iguais.
+
+  Para que duas matrizes sejam consideradas iguais, têm de ter o mesmo comprimento e os elementos nas mesmas posições nas matrizes têm de ser iguais.
+examples: >-
+  O código seguinte verifica se diferentes pares de matrizes são iguais:
+
+
+  ```qsharp
+
+  open Microsoft.Quantum.Arrays;
+
+  open Microsoft.Quantum.Logical;
+
+
+  function EqualADemo() : Unit {
+      let equalArrays = EqualA(EqualI, [2, 3, 4], [2, 3, 4]);
+      let differentLength = EqualA(EqualD, [2.0, 3.0, 4.0], [2.0, 3.0]);
+      let differentElements = EqualA(EqualR, [One, Zero], [One, One]);
+      Message($"Equal arrays are {equalArrays ? "equal" | "not equal"}");
+      Message($"Arrays of different length are {differentLength ? "equal" | "not equal"}");
+      Message($"Arrays of the same length with different elements are {differentElements ? "equal" | "not equal"}");
+  }
+
+  ```
+syntax: "function EqualA (equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[]) : Bool"
+input:
+  content: "(equal : (('T, 'T) -> Bool), array1 : 'T[], array2 : 'T[])"
+  types:
+  - name: equal
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+  - name: array1
+    summary: A primeira matriz a ser comparada.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: array2
+    summary: A segunda matriz a ser comparada.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Bool
+  types:
+  - summary: >-
+      O valor `true` se e só se `array1` e `array2` forem iguais.
+
+      Isto é, se ambas as matrizes tiverem o mesmo comprimento, e todos os elementos forem iguais ao definido por `equal`.
+    isPrimitive: true
+    uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: O tipo de elementos de cada matriz.
+metadata:
+  ms.openlocfilehash: 466078fa243e2f394fa42dff15845ae5f1cd73df
+  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80321611"
