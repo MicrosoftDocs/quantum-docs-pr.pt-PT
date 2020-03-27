@@ -1,6 +1,6 @@
 - name: Reportar Erros
   href: reporting-bugs.md
-- name: Contribuir na Documentação
+- name: Melhorar a documentação
   href: docs.md
 - name: Abrir Pedidos Pull
   href: pull-requests.md
