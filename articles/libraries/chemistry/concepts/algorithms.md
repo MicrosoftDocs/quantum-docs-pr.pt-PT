@@ -6,12 +6,12 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.simulationalgorithms
-ms.openlocfilehash: e3ce76f5ddcca497adb519eece959c9dd5dec92f
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 5dad4e4a77eea99e72eb2efac52eec61ebbdb21c
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77904643"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320721"
 ---
 # <a name="simulating-hamiltonian-dynamics"></a>Simular a Dinâmica Hamiltoniana
 
@@ -28,14 +28,14 @@ Note que se $e^{-i H t}$ fosse um exponencial comum, então o erro nesta aproxim
 Este erro ocorre porque $e^{-iHt}$ é um operador exponencial e, como resultado, há um erro incorrido ao utilizar esta fórmula devido ao facto de os termos $H_j$ não se deslocarem *(isto é,* $H_j H_k \ne H_k H_j$ em geral).
 
 Se $t$ for grande, as fórmulas Trotter-Suzuki ainda podem ser usadas para simular a dinâmica com precisão, dividindo-a numa sequência de curtos passos de tempo.
-Que $rseja o número de passos dados na evolução do tempo.
-Então, temos que $$ e^{-i\sum_{j=1}^m H_j t} =\left(\prod_{j=1}^m e^{-iH_j t/r}\direita)^r + O(m^2 t^^2/r), $$ o que implica que se $r$ escalacomo $m^2/\epsilon$ então o erro pode ser cometido no máximo $\epsilon$ por qualquer $\epsilon>0$.
+Deixe $r$ seja o número de passos dados na evolução do tempo, para que cada passo corra pelo tempo $t/r$. Então, temos que $$ e^{-i\sum_{j=1}^m H_j t} =\left(\prod_{j=1}^m e^{-iH_j t/r}\direita)^r + O(m^2 t^^2/r), $$ o que implica que se $r$ escalacomo $m^2/\epsilon$ então o erro pode ser cometido no máximo $\epsilon$ por qualquer $\epsilon>0$.
 
 Aproximações mais precisas podem ser construídas construindo uma sequência de exponenciais do operador de modo a que os termos de erro cancelem.
-A fórmula mais simples, a fórmula simétrica de Trotter ou a divisão de Strang, assume o formulário $$ U_1(t) =\prod_{j=1}^m e^{-iH_j t/2}\prod_{j=m}^1 e^{-iH_j t} = e^{-iHt} + O(m^3 t^3), $3$ que pode ser feito menos de $\epsilon$ por qualquer $\epsilon>0$, escolhendo $r$ para escalar como $m^{3/2}t^{3/2}/\sqrt{\epsilon}$.
+A fórmula mais simples, a segunda encomenda fórmula Trotter-Suzuki, toma a forma $$ U_2(t) = \left(\prod_{j=1}^{m} e^-iH_j t/2r} \prod_{j=m}^1 e^{-iH_j t/2r}\right)^r = e^{-iHt} + O (m^t^t^t^t^t^t^t^t 3/r^2), $$ o erro do qual pode ser feito menos de $\epsilon$ por qualquer $\epsilon>0$, escolhendo $r$ para escalar como $m^{3/2}t^{3/2}/\sqrt{\epsilon}$.
 
-Até fórmulas Trotter de maior encomenda podem ser construídas com base em $U_1$.
-A fórmula de quarta ordem é a seguinte, originalmente introduzida pela Suzuki: $$ U_2(t) = U_1^2(s_1t) U_1([1-4s_1]t)U_1^2(s_1 t) = e^{-iHt} +O(m^5t^5), $$ onde $s_1 = (4-4^{1/3}^)^{-1}.
+Fórmulas ainda mais altas, especificamente ($2k$)th-order para $k>0$, pode ser construído de forma recursiva: $$ U_{2k}(t) = [U_{2k-2}(s_k\~ t)]^2 U_{2k-2}([1-4s_k]t) [U_{2k-2}(s_k\~ t)^2 = e^{-iHt} + O (m t)^{2k+1}/r^{2k}), $$ onde $s_k = (4-4^{1/(2k-1)}^{-1}$.
+
+A fórmula seguinte é a quarta encomenda ($k=2$), originalmente introduzida pela Suzuki: $$ U_4(t) = [U_2(s_2\~ t)]^2 U_2([1-4s_2]t) [U_2(s_2\~ t)]^2 = e^{-iHt} +O(m^5t^5/r^4), $$ onde $s_2 = (4-4^{1/3){-1}^
 Em geral, as fórmulas arbitrariamente de alta ordem podem ser construídas de forma semelhante; no entanto, os custos incorridos com a utilização de integradores mais complexos superam frequentemente os benefícios para além da quarta ordem para a maioria dos problemas práticos.
 
 Para que as estratégias acima funcionassem, precisamos de ter um método para simular uma grande classe de $e^{-iH_j t}$.

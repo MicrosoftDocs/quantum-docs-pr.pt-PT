@@ -6,17 +6,17 @@ ms.author: anpaz@microsoft.com
 ms.date: 1/22/2019
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
-ms.openlocfilehash: 37c901e5a861f0e8a10cdc911ad1d84ddd3e6e00
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 51186134e9279727fec212cdce84f69493aaa656
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907057"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320822"
 ---
 # <a name="the-resourcesestimator-target-machine"></a>A Máquina-Alvo do Estimativa de Recursos
 
 Como o nome indica, o `ResourcesEstimator` estima os recursos necessários para executar uma determinada instância de uma operação Q# num computador quântico.
-Consegue-o executando a operação quântica sem simular o estado de um computador quântico; por esta razão, pode estimar recursos para operações Q# que usam milhares de qubits.
+Consegue-o executando a operação quântica sem simular o estado de um computador quântico; por esta razão, pode estimar recursos para operações Q# que usam milhares de qubits, se a parte clássica do código pode ser executada em um tempo razoável.
 
 ## <a name="usage"></a>Utilização
 
@@ -130,7 +130,7 @@ operation Teleport(source : Qubit, target : Qubit) : Unit {
 Quando o `ResourcesEstimator` se encontrar `AssertProb` registará que a medição `PauliZ` em `source` e `q` deve ser dado um resultado de `Zero` com probabilidade de 0,5. Quando executar `M` mais tarde, encontrará os valores registados das probabilidades de resultados e `M` devolverá `Zero` ou `One` com probabilidade 0,5.
 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 O `ResourcesEstimator` é construído em cima do simulador de [rastreio](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de computador quântico, que fornece um conjunto mais rico de métricas, a capacidade de reportar métricas no gráfico de chamadas completo, e características como verificador de [inputs distintos](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) para ajudar a encontrar bugs em programas Q#. Consulte a documentação do simulador de [vestígios](xref:microsoft.quantum.machines.qc-trace-simulator.intro) para obter mais informações.
 

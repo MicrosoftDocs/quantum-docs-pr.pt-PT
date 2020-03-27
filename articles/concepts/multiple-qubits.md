@@ -6,12 +6,12 @@ uid: microsoft.quantum.concepts.multiple-qubits
 ms.author: nawiebe@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 2fa227c823cd87df9c799c043c699e4ce818b8e3
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 239073b7e7edafc49bc65cb60c9f45cf0af83dbe
+ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907550"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80320879"
 ---
 # <a name="multiple-qubits"></a>Múltiplos Qubits
 
@@ -27,7 +27,7 @@ Estas ferramentas são absolutamente necessárias para entender os conjuntos de 
 
 ## <a name="representing-two-qubits"></a>Representando dois Qubits
 A principal diferença entre estados de um e dois qubits é que os estados de dois qubits são quatro estados dimensionais em vez de bidimensionais.
-Isto porque a base computacional para estados de dois qubits é formada pelos produtos tensores de estados de um qubit.  Por exemplo, temos \begin {align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start {bmatrix}1 \\\\ 0 \end{bmatrix} &= \start{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{bmatrix},\qquad 01 \equiv \start{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start {bmatrix}0 \\\\ 1 \end{bmatrix} = \start{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix},\\\\ 10 \equiv \start{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \start{bmatrix}1 \\\\ 0 \end{bmatrix} &= \start{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end {bmatrix},\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \start {bmatrix}0 \\\\ 1 \end{bmatrix} = \start{bmatrix}0 \\\\ 0\\\\ 0 @no__ t_40_ \\ 1 \end{bmatrix}.\\
+Isto porque a base computacional para estados de dois qubits é formada pelos produtos tensores de estados de um qubit.  Por exemplo, temos \begin{align} 00 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start{bmatrix}1 \\\\ 0 \end{bmatrix} &= \start{bmatrix}1 \\\\ 0\\\\ 0\\\\ 0 \end{b Matrix},\qquad 01 \equiv \begin{bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start{bmatrix}0 \\\\ 1 \end{bmatrix} = \start{bmatrix}0 \\\\ 1\\\\ 0\\\\ 0 \end{bmatrix}\\\\ 10 \equiv \start{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \start{bmatrix}1 \\\\ 0 \end{bmatrix} &= \start{bmatrix}0 \\\\ 0\\\\ 1\\\\ 0 \end{bmatrix},\qquad 11 \equiv \begin{bmatrix}0 \\\\ 1 \end{bmatrix}\otimes \start {bmatrix}0 \\\\ 1 \end{bmatrix} = \start{bmatrix}0 \\\\ 0\\\\ 0\\\\ 1 \end{bmatrix}.
 \fim{align}
 
 É fácil ver que, de uma forma mais geral, o estado quântico de $n qubits de$ é representado por um vetor unitário de dimensão $2^n$ usando esta construção.  O vetor
@@ -59,13 +59,16 @@ $$
 
 Também é possível medir apenas um qubit de um estado quântico de dois qubits. Nos casos em que se mede apenas um dos qubits, o impacto da medição é subtilmente diferente porque todo o Estado não é colapsado para um estado de base computacional, pelo contrário, é colapsado para apenas um subsistema.  Por outras palavras, nestes casos, a medição de apenas um qubit só colapsa um dos subsistemas, mas nem todos.  
 
-Para ver isto considerar medir o primeiro qubit do seguinte estado, que é formada pela aplicação da transformação de Hadamard $H$ em dois qubits inicialmente definidos para o estado "0": $$ H^{\otimes 2} \start {bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start {bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \{1}frac \{2}1 \\\\ 1 e -1 e 1 e -1 \\\\ 1 e 1 e -1 e -1 e -1 \\\\ 1 e - 1 e -1 e 1 \end{bmatrix}\start{bmatrix}1\\\\ 0\\\\ 0\\\\ 0\end{bmatrix} = \frac{1}{2}\start {bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix\\} \mapsto \start{cases}\text {{0 & \frac{1}{\sqrt{2}\0}bmatrix 1\\\\ 1\\\\\\\\ \\ \text {outcome }=1 & \frac{1}{\sqrt{2}}\begin{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
+Para ver isto considerar medir o primeiro qubit do seguinte estado, que é formado pela aplicação da transformação de Hadamard $H$ em dois qubits inicialmente definidos para o estado "0": $$ H^{\otimes 2} \start {bmatrix}1 \\\\ 0 \end{bmatrix}\otimes \start {bmatrix}1 \\\\ 0 \end{bmatrix} \right) = \{1}{2}frac 1 \\\\ 1 e -1 e 1 e 1 e -1 \\\\ 1 e 1 e -1 e -1 \\\\ 1 e 1 e 1 final{bmatrix}\begin{bmatrix}1\\\\ 0\\\\ 0\\\\ 0\end{bmatrix} = \frac {2}{1}\begin {bmatrix}1\\\\ 1\\\\ 1\\\\ 1\end{bmatrix} \mapsto \start{cases}\text{outcome }=0 & \frac{1}{\sqrt{2}}\start{bmatrix}1\\\\ 1\\\\ 0\\\\ 0 \end{bmatrix} \\\\\text{outcome }=1 & \frac{1}{\sqrt{2}}\start{bmatrix}0\\\\ 0\\\\ 1\\\\ 1 \end{bmatrix}\\\\ \end{cases}.
 $$ Ambos os resultados têm 50% de probabilidade de ocorrer.  O resultado é 50% de probabilidade para ambos pode ser intuido pelo facto de o vetor do estado quântico inicial ser invariante ao trocar $0$ por $1$ no primeiro qubit.
 
-A regra matemática para medir o primeiro ou segundo qubit é simples.  Se deixarmos $e_k$ ser o vetor de base computacional $k^{\rm th}$ e deixar que $S$ seja o conjunto de todos os $e_k$ de tal forma que o qubit em questão leva o valor de $1$ por esse valor de $k$.  Por exemplo, se estivermos interessados em medir o primeiro qubit, então $S$ consistiria em $e_2\equiv 10$ e $e_3\equiv 11$.  Da mesma forma, se estivermos interessados no segundo qubit $S$ consistiria em $e_1\equiv 01$ e $e_3 \equiv 11$.  Em seguida, a probabilidade de medir o qubit escolhido para $1$ é para o vetor do estado $\psi$
+A regra matemática para medir o primeiro ou segundo qubit é simples.  Se deixarmos $e_k$ ser o vetor de base computacional $k^{\rm th}$ e deixar que $S$ seja o conjunto de todos os $e_k$ de tal forma que o qubit em questão leva o valor de $1$ por esse valor de $k$.  Por exemplo, se estivermos interessados em medir o primeiro qubit, então $S$ consistiria em $e_1\equiv 10$ e $e_3\equiv 11$.  Da mesma forma, se estivermos interessados no segundo qubit $S$ consistiria em $e_2\equiv 01$ e $e_3 \equiv 11$.  Em seguida, a probabilidade de medir o qubit escolhido para $1$ é para o vetor do estado $\psi$
 
 $$ P(\text{outcome}=1)= \sum_{e_k \text{ no conjunto } S}\psi^\dagger e_k e_k^\dagger \psi.
 $$
+
+> [!NOTE]
+> Neste documento estamos a usar o formato pouco endiano para rotular a base computacional. Em pouco formato endiano, as partes menos significativas vêm em primeiro lugar. Por exemplo, o número quatro em formato pequeno-endiano é representado pela cadeia de bits 001.
 
 Uma vez que cada medição de qubit só pode render $0$ ou $1$1$, a probabilidade de medir $0$ é simplesmente $1-P (\text{outcome}=1)$.  É por isso que só explicitamente damos uma fórmula para a probabilidade de medir $1$1$.
 
@@ -79,7 +82,7 @@ O leitor cauteloso pode preocupar-se com o que acontece quando a probabilidade d
 
 Se levarmos $\psi$ para ser o vetor de estado uniforme dado acima e estamos interessados em medir o primeiro qubit então 
 
-$$ P(\text{measurement of first qubit}=1) = (\psi^\dagger e_2)(e_2^\dagger \psi)(\psi^\dagger e_3)(e_3^\dagger \psi)=e_2^\apunhal \psi^2+/e_3^\apunhal \psi^2^2^.
+$$ P(\text{measurement of first qubit}=1) = (\psi^\dagger e_1)(e_1^\dagger \psi)(\psi^\dagger e_3)(e_3^\dagger \psi)=e_1^\dagger \psi^2+/e_3^\adagger \psi^2^2^.
 $$
 
 Note que esta é apenas a soma das duas probabilidades que seriam esperadas para medir os resultados $10$ e $11$ foram todos os qubits a medir.
@@ -90,12 +93,13 @@ $$
 
 que combina perfeitamente com o que a nossa intuição nos diz que a probabilidade deve ser.  Da mesma forma, o estado pode ser escrito como
 
-$$ \frac{{e_2}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}=frac{1}{\sqrt{2}}\start{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1\end{bmatrix} $$
+$$ \frac{{e_1}{2}+\frac{e_3}{2}}{\sqrt{\frac{1}{2}}}=\frac{1}{\sqrt{2}}\start{bmatrix} 0\\\\ 0\\\\ 1\\\\ 1\end{bmatrix} $$
 
 novamente de acordo com a nossa intuição.
 
 ## <a name="two-qubit-operations"></a>Operações de Dois Qubit
-Tal como no caso do qubit único, qualquer transformação unitária é uma operação válida em qubits. Em geral, uma transformação unitária em qubits de $n$ é uma matriz $U$ de tamanho $2^n \vezes 2^n$ (de modo a agir em vetores de tamanho $2^n$), de tal forma que $U^{-1} = U^\dagger$. Por exemplo, o portão CNOT (controlado-NÃO) é um portão de dois qubits comumente utilizado e é representado pela seguinte matriz unitária:
+Tal como no caso do qubit único, qualquer transformação unitária é uma operação válida em qubits. Em geral, uma transformação unitária em qubits de $n$ é uma matriz $U$ de tamanho $2^n \vezes 2^n$ (de modo a agir em vetores de tamanho $2^n$), de tal forma que $U^{-1} = U^\dagger$.
+Por exemplo, o portão CNOT (controlado-NÃO) é um portão de dois qubits comumente utilizado e é representado pela seguinte matriz unitária:
 
 $$ \operatorname{CNOT} = \start{bmatrix} 1\ 0\ 0\ 0\ 0 \\\\ 0\ 0\ 0\ 0\ 0 \\\\ 0\ 0 \\\ 0\ 1 \\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0 \ 0 \end{bmatrix} $$ $$
 
