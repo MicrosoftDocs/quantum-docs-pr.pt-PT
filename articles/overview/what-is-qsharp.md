@@ -1,5 +1,5 @@
 ---
-title: O que é Q# e o QDK?
+title: O que é C# e o QDK?
 description: Saiba mais sobre o Q#, uma linguagem de programação criada pela Microsoft para desenvolver aplicações para computadores quânticos e um componente fundamental do Microsoft Quantum Development Kit
 author: natke
 ms.author: nakersha
@@ -7,13 +7,13 @@ ms.date: 10/22/2019
 ms.topic: article
 uid: microsoft.quantum.overview.qsharp
 ms.openlocfilehash: a4bf21887e34ac85f75e5e0b9a033138464fd09d
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/16/2020
 ms.locfileid: "77907006"
 ---
-# <a name="what-are-q-and-the-qdk"></a>O que é Q# e o QDK?
+# <a name="what-are-q-and-the-qdk"></a>O que é C# e o QDK?
 
 Q# é uma linguagem de programação com funcionalidades concebidas especificamente para utilização na computação quântica.
 Como componente fundamental do Microsoft Quantum Development Kit (QDK), providencia aos programadores quânticos uma estrutura que lhe permite concentrar-se nos algoritmos sem ter de se preocupar com detalhes técnicos como a otimização da sequência das portas ou a implementação física de um computador quântico.
