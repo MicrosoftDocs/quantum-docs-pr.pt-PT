@@ -1,0 +1,82 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.research.characterization.randomwalkphaseestimation
+name: RandomWalkPhaseEstimation
+type: operation
+namespace: Microsoft.Quantum.Research.Characterization
+summary: Executa a estimativa de fase iterativa usando uma caminhada aleatória para aproximada inferência bayesiana sobre a medição clássica resulta de um determinado oráculo e eigenstate.
+remarks: >-
+  ### <a name="iterative-phase-estimation-and-eigenstates"></a>Estimativa de Fase Iterativa e Eigenstates
+
+
+  Em geral, o `eigenstate` registo de entrada não precisa de ser um eigenstate $\ket{\phi}$ de $U$, mas pode ser uma superposição sobre eigenstates. Suponha que o estado de entrada é dado por \start{align} \ket{\psi} & =\_\sum {j}\{\alpha\_\_j \ket{\phi\_j},\_\end{align} onde $ \alpha j\_\_\}$ são coeficientes complexos tais que\_$\sum j \\alfa j^^2 = 1$ e onde $U\ket{\phi j} = \phi j} = \phi j.} = \phi\_j.
+
+
+  Em seguida, a realização da estimativa da fase iterativa irá eventualmente convergir para um único eigenstate, como descrito no guia de [desenvolvimento.](xref:microsoft.quantum.libraries.characterization#iterative-phase-estimation-without-eigenstates)
+
+
+  ### <a name="experiment-design"></a>Design de experiências
+
+
+  Os tempos de medição $t$ e os ângulos de inversão $\theta$ `oracle` passados são escolhidos de acordo com a *heurística de adivinhação*de partículas , \start{align} \theta \sim \Pr(\phi),\quad t \aprox \frac{1}{\variance{\phi}}
+
+  \end{align} Este heurístico é ideal para reduzir a variação posterior esperada na estimativa da fase iterativa sob o pressuposto de um prior normal.
+
+
+  ### <a name="optimality"></a>Optimalidade
+
+
+  Esta operação aproxima o estimador ideal para a fase $\phi$, conforme avaliado com a perda quadrática $L (\phi, \hat{\phi}) \mathrel{:=} (\phi - \hat{\phi}^2$.
+
+
+  Consulte a [Estimativa da Fase Bayesiana](xref:microsoft.quantum.libraries.characterization#bayesian-phase-estimation) para obter mais detalhes sobre as estatísticas da estimativa da fase iterativa.
+syntax: 'operation RandomWalkPhaseEstimation (initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[]) : Double'
+references: >-
+  - Ferrie *et al.* 2011 [doi:10/tfx,](https://doi.org/10.1007/s11128-012-0407-6) [arXiv:1110.3067](https://arxiv.org/abs/1110.3067).
+
+  - Wiebe *et al.* 2013 [doi:10/tf3,](https://doi.org/10.1103/PhysRevLett.112.190501) [arXiv:1309.0876](https://arxiv.org/abs/1309.0876)
+
+  - Wiebe e Granade 2018 *(em preparação)*.
+input:
+  content: '(initialMean : Double, initialStdDev : Double, nMeasurements : Int, maxMeasurements : Int, unwind : Int, oracle : Microsoft.Quantum.Oracles.ContinuousOracle, targetState : Qubit[])'
+  types:
+  - name: initialMean
+    summary: Média da distribuição prévia normal inicial acima de $\phi$.
+    isPrimitive: true
+    uid: Double
+  - name: initialStdDev
+    summary: Desvio padrão da distribuição prévia normal inicial acima de $\phi$.
+    isPrimitive: true
+    uid: Double
+  - name: nMeasurements
+    summary: Número de medições a aceitar na estimativa final posterior.
+    isPrimitive: true
+    uid: Int
+  - name: maxMeasurements
+    summary: Número total de medições do que pode ser efetuada antes da operação ser considerada como tendo falhado.
+    isPrimitive: true
+    uid: Int
+  - name: unwind
+    summary: Número de resultados para esquecer quando as verificações de consistência falham.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: Uma operação que representa um $U unitário$ de tal forma que $U(t)\ket{\phi} = e{i t \phi\ket{\phi}$ for eigenstates $\ket {\phi}$ with unknown phase $\phi \in \mathbb{R}^+$.
+    uid: microsoft.quantum.oracles.continuousoracle
+  - name: targetState
+    summary: Um registo que $U$ age.
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+output:
+  content: Double
+  types:
+  - summary: A estimativa final $\hat{\phi} \mathrel{:=} \expect[\phi]$, onde a expectativa é sobre o posterior, dado todos os dados aceites.
+    isPrimitive: true
+    uid: Double
+metadata:
+  ms.openlocfilehash: 719c8583cb0fe7f0c9c0f7fa617fa469080a9588
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82706742"
