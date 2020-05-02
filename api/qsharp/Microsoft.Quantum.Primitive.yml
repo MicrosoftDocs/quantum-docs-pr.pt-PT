@@ -3,66 +3,66 @@ uid: microsoft.quantum.primitive
 name: Microsoft.Quantum.Primitive
 functions:
 - uid: microsoft.quantum.primitive.message
-  summary: "\n> [!WARNING]\n> Preterido\n\nA mensagem foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.message\".\nUse @\"microsoft.quantum.intrinsic.message\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA mensagem foi depreciada. Por @\"microsoft.quantum.intrinsic.message\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.message\"favor, use ."
 operations:
 - uid: microsoft.quantum.primitive.assert
-  summary: "\n> [!WARNING]\n> Preterido\n\nAssert foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.assert\".\nUse @\"microsoft.quantum.intrinsic.assert\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA assertão foi depreciada. Por @\"microsoft.quantum.intrinsic.assert\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.assert\"favor, use ."
 - uid: microsoft.quantum.primitive.assertprob
-  summary: "\n> [!WARNING]\n> Preterido\n\nAssertProb foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.assertprob\".\nUse @\"microsoft.quantum.intrinsic.assertprob\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertProb foi depreciada. Por @\"microsoft.quantum.intrinsic.assertprob\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.assertprob\"favor, use ."
 - uid: microsoft.quantum.primitive.ccnot
-  summary: "\n> [!WARNING]\n> Preterido\n\nCCNOT foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.ccnot\".\nUse @\"microsoft.quantum.intrinsic.ccnot\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCcNOT foi depreciado. Por @\"microsoft.quantum.intrinsic.ccnot\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.ccnot\"favor, use ."
 - uid: microsoft.quantum.primitive.cnot
-  summary: "\n> [!WARNING]\n> Preterido\n\nCNOT foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.cnot\".\nUse @\"microsoft.quantum.intrinsic.cnot\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCNOT foi depreciado. Por @\"microsoft.quantum.intrinsic.cnot\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.cnot\"favor, use ."
 - uid: microsoft.quantum.primitive.exp
-  summary: "\n> [!WARNING]\n> Preterido\n\nExp foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.exp\".\nUse @\"microsoft.quantum.intrinsic.exp\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA exfoifoi depreciada. Por @\"microsoft.quantum.intrinsic.exp\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.exp\"favor, use ."
 - uid: microsoft.quantum.primitive.expfrac
-  summary: "\n> [!WARNING]\n> Preterido\n\nExpFrac foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.expfrac\".\nUse @\"microsoft.quantum.intrinsic.expfrac\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ExpFrac foi depreciado. Por @\"microsoft.quantum.intrinsic.expfrac\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.expfrac\"favor, use ."
 - uid: microsoft.quantum.primitive.h
-  summary: "\n> [!WARNING]\n> Preterido\n\nH foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.h\".\nUse @\"microsoft.quantum.intrinsic.h\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nH foi depreciado. Por @\"microsoft.quantum.intrinsic.h\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.h\"favor, use ."
 - uid: microsoft.quantum.primitive.i
-  summary: "\n> [!WARNING]\n> Preterido\n\nEu tenha sido preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.i\".\nUse @\"microsoft.quantum.intrinsic.i\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nFui depreciado. Por @\"microsoft.quantum.intrinsic.i\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.i\"favor, use ."
 - uid: microsoft.quantum.primitive.m
-  summary: "\n> [!WARNING]\n> Preterido\n\nM foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.m\".\nUse @\"microsoft.quantum.intrinsic.m\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nM foi depreciado. Por @\"microsoft.quantum.intrinsic.m\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.m\"favor, use ."
 - uid: microsoft.quantum.primitive.measure
-  summary: "\n> [!WARNING]\n> Preterido\n\nA medida foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.measure\".\nUse @\"microsoft.quantum.intrinsic.measure\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA medida foi depreciada. Por @\"microsoft.quantum.intrinsic.measure\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.measure\"favor, use ."
 - uid: microsoft.quantum.primitive.multix
-  summary: "\n> [!WARNING]\n> Preterido\n\nMultiX foi preterido. Em vez disso, use @ \"applytoeachca (x, _)\".\nUse @\"microsoft.quantum.canon.applytoeachca\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO MultiX foi depreciado. Por favor, use @\"applytoeachca(x, _)\" em vez disso.\nPor @\"microsoft.quantum.canon.applytoeachca\"favor, use ."
 - uid: microsoft.quantum.primitive.r
-  summary: "\n> [!WARNING]\n> Preterido\n\nR foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.r\".\nUse @\"microsoft.quantum.intrinsic.r\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nR foi depreciado. Por @\"microsoft.quantum.intrinsic.r\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.r\"favor, use ."
 - uid: microsoft.quantum.primitive.r1
-  summary: "\n> [!WARNING]\n> Preterido\n\nO R1 foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.r1\".\nUse @\"microsoft.quantum.intrinsic.r1\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nR1 foi depreciado. Por @\"microsoft.quantum.intrinsic.r1\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.r1\"favor, use ."
 - uid: microsoft.quantum.primitive.r1frac
-  summary: "\n> [!WARNING]\n> Preterido\n\nR1Frac foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.r1frac\".\nUse @\"microsoft.quantum.intrinsic.r1frac\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nR1Frac foi depreciado. Por @\"microsoft.quantum.intrinsic.r1frac\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.r1frac\"favor, use ."
 - uid: microsoft.quantum.primitive.random
-  summary: "\n> [!WARNING]\n> Preterido\n\nO Random foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.random\".\nUse @\"microsoft.quantum.intrinsic.random\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAleatório foi depreciado. Por @\"microsoft.quantum.intrinsic.random\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.random\"favor, use ."
 - uid: microsoft.quantum.primitive.reset
-  summary: "\n> [!WARNING]\n> Preterido\n\nA redefinição foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.reset\".\nUse @\"microsoft.quantum.intrinsic.reset\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO reset foi depreciado. Por @\"microsoft.quantum.intrinsic.reset\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.reset\"favor, use ."
 - uid: microsoft.quantum.primitive.resetall
-  summary: "\n> [!WARNING]\n> Preterido\n\nResetAll foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.resetall\".\nUse @\"microsoft.quantum.intrinsic.resetall\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nResetAll foi depreciado. Por @\"microsoft.quantum.intrinsic.resetall\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.resetall\"favor, use ."
 - uid: microsoft.quantum.primitive.rfrac
-  summary: "\n> [!WARNING]\n> Preterido\n\nRFrac foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.rfrac\".\nUse @\"microsoft.quantum.intrinsic.rfrac\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO RFrac foi depreciado. Por @\"microsoft.quantum.intrinsic.rfrac\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.rfrac\"favor, use ."
 - uid: microsoft.quantum.primitive.rx
-  summary: "\n> [!WARNING]\n> Preterido\n\nO RX foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.rx\".\nUse @\"microsoft.quantum.intrinsic.rx\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO Rx foi depreciado. Por @\"microsoft.quantum.intrinsic.rx\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.rx\"favor, use ."
 - uid: microsoft.quantum.primitive.ry
-  summary: "\n> [!WARNING]\n> Preterido\n\nEntar foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.ry\".\nUse @\"microsoft.quantum.intrinsic.ry\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nRy foi depreciado. Por @\"microsoft.quantum.intrinsic.ry\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.ry\"favor, use ."
 - uid: microsoft.quantum.primitive.rz
-  summary: "\n> [!WARNING]\n> Preterido\n\nRZ foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.rz\".\nUse @\"microsoft.quantum.intrinsic.rz\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nRz foi depreciado. Por @\"microsoft.quantum.intrinsic.rz\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.rz\"favor, use ."
 - uid: microsoft.quantum.primitive.s
-  summary: "\n> [!WARNING]\n> Preterido\n\nS foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.s\".\nUse @\"microsoft.quantum.intrinsic.s\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nS foi depreciado. Por @\"microsoft.quantum.intrinsic.s\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.s\"favor, use ."
 - uid: microsoft.quantum.primitive.swap
-  summary: "\n> [!WARNING]\n> Preterido\n\nA permuta foi preterida. Em vez disso, use @\"microsoft.quantum.intrinsic.swap\".\nUse @\"microsoft.quantum.intrinsic.swap\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA SWAP foi depreciada. Por @\"microsoft.quantum.intrinsic.swap\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.swap\"favor, use ."
 - uid: microsoft.quantum.primitive.t
-  summary: "\n> [!WARNING]\n> Preterido\n\nT foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.t\".\nUse @\"microsoft.quantum.intrinsic.t\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nT foi depreciado. Por @\"microsoft.quantum.intrinsic.t\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.t\"favor, use ."
 - uid: microsoft.quantum.primitive.x
-  summary: "\n> [!WARNING]\n> Preterido\n\nX foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.x\".\nUse @\"microsoft.quantum.intrinsic.x\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nX foi depreciado. Por @\"microsoft.quantum.intrinsic.x\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.x\"favor, use ."
 - uid: microsoft.quantum.primitive.y
-  summary: "\n> [!WARNING]\n> Preterido\n\nY foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.y\".\nUse @\"microsoft.quantum.intrinsic.y\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nY foi depreciado. Por @\"microsoft.quantum.intrinsic.y\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.y\"favor, use ."
 - uid: microsoft.quantum.primitive.z
-  summary: "\n> [!WARNING]\n> Preterido\n\nZ foi preterido. Em vez disso, use @\"microsoft.quantum.intrinsic.z\".\nUse @\"microsoft.quantum.intrinsic.z\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nZ foi depreciado. Por @\"microsoft.quantum.intrinsic.z\" favor, use em vez disso.\nPor @\"microsoft.quantum.intrinsic.z\"favor, use ."
 metadata:
-  ms.openlocfilehash: d3eef5b065a00cee2b31ea1a99e8814b5ca11ae0
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 541a5ef9f6c87e18526a3883b6c4570666c8eb0d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858246"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673078"

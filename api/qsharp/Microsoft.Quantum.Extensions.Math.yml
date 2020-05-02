@@ -3,81 +3,81 @@ uid: microsoft.quantum.extensions.math
 name: Microsoft.Quantum.Extensions.Math
 functions:
 - uid: microsoft.quantum.extensions.math.absb
-  summary: "\n> [!WARNING]\n> Preterido\n\nAbsB foi preterido. Em vez disso, use @\"microsoft.quantum.math.absl\".\nUse @\"microsoft.quantum.math.absl\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO AbsB foi depreciado. Por @\"microsoft.quantum.math.absl\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.absl\"favor, use ."
 - uid: microsoft.quantum.extensions.math.absd
-  summary: "\n> [!WARNING]\n> Preterido\n\nAbsD foi preterido. Em vez disso, use @\"microsoft.quantum.math.absd\".\nUse @\"microsoft.quantum.math.absd\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO AbsD foi depreceed. Por @\"microsoft.quantum.math.absd\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.absd\"favor, use ."
 - uid: microsoft.quantum.extensions.math.absi
-  summary: "\n> [!WARNING]\n> Preterido\n\nAbsI foi preterido. Em vez disso, use @\"microsoft.quantum.math.absi\".\nUse @\"microsoft.quantum.math.absi\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO AbsI foi depreciado. Por @\"microsoft.quantum.math.absi\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.absi\"favor, use ."
 - uid: microsoft.quantum.extensions.math.arccos
-  summary: "\n> [!WARNING]\n> Preterido\n\nArcCos foi preterido. Em vez disso, use @\"microsoft.quantum.math.arccos\".\nUse @\"microsoft.quantum.math.arccos\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nArcCos foi depreciado. Por @\"microsoft.quantum.math.arccos\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.arccos\"favor, use ."
 - uid: microsoft.quantum.extensions.math.arcsin
-  summary: "\n> [!WARNING]\n> Preterido\n\nOs arcos foram preteridos. Em vez disso, use @\"microsoft.quantum.math.arcsin\".\nUse @\"microsoft.quantum.math.arcsin\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nArcSin foi depreciado. Por @\"microsoft.quantum.math.arcsin\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.arcsin\"favor, use ."
 - uid: microsoft.quantum.extensions.math.arctan
-  summary: "\n> [!WARNING]\n> Preterido\n\nArcTan foi preterido. Em vez disso, use @\"microsoft.quantum.math.arctan\".\nUse @\"microsoft.quantum.math.arctan\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nArcTan foi depreciado. Por @\"microsoft.quantum.math.arctan\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.arctan\"favor, use ."
 - uid: microsoft.quantum.extensions.math.arctan2
-  summary: "\n> [!WARNING]\n> Preterido\n\nArcTan2 foi preterido. Em vez disso, use @\"microsoft.quantum.math.arctan2\".\nUse @\"microsoft.quantum.math.arctan2\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nArcTan2 foi depreciado. Por @\"microsoft.quantum.math.arctan2\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.arctan2\"favor, use ."
 - uid: microsoft.quantum.extensions.math.ceiling
-  summary: "\n> [!WARNING]\n> Preterido\n\nO teto foi preterido. Em vez disso, use @\"microsoft.quantum.math.ceiling\".\nUse @\"microsoft.quantum.math.ceiling\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO teto foi depreciado. Por @\"microsoft.quantum.math.ceiling\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.ceiling\"favor, use ."
 - uid: microsoft.quantum.extensions.math.cos
-  summary: "\n> [!WARNING]\n> Preterido\n\nO cos foi preterido. Em vez disso, use @\"microsoft.quantum.math.cos\".\nUse @\"microsoft.quantum.math.cos\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPorque foi depreciado. Por @\"microsoft.quantum.math.cos\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.cos\"favor, use ."
 - uid: microsoft.quantum.extensions.math.cosh
-  summary: "\n> [!WARNING]\n> Preterido\n\nCosh foi preterido. Em vez disso, use @\"microsoft.quantum.math.cosh\".\nUse @\"microsoft.quantum.math.cosh\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCosh foi depreciado. Por @\"microsoft.quantum.math.cosh\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.cosh\"favor, use ."
 - uid: microsoft.quantum.extensions.math.divremb
-  summary: "\n> [!WARNING]\n> Preterido\n\nDivRemB foi preterido. Em vez disso, use @\"microsoft.quantum.math.divreml\".\nUse @\"microsoft.quantum.math.divreml\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nDivRemB foi depreciado. Por @\"microsoft.quantum.math.divreml\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.divreml\"favor, use ."
 - uid: microsoft.quantum.extensions.math.e
-  summary: "\n> [!WARNING]\n> Preterido\n\nE foi preterido. Use @\"microsoft.quantum.math.e\" em alternativa.\nUse @\"microsoft.quantum.math.e\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nE foi depreciado. Por favor, use@\"microsoft.quantum.math.e\" como alternativa.\nPor @\"microsoft.quantum.math.e\"favor, use ."
 - uid: microsoft.quantum.extensions.math.expd
-  summary: "\n> [!WARNING]\n> Preterido\n\nExpD foi preterido. Em vez disso, use @\"microsoft.quantum.math.expd\".\nUse @\"microsoft.quantum.math.expd\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA Exd foi depreciada. Por @\"microsoft.quantum.math.expd\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.expd\"favor, use ."
 - uid: microsoft.quantum.extensions.math.floor
-  summary: "\n> [!WARNING]\n> Preterido\n\nO andar foi preterido. Em vez disso, use @\"microsoft.quantum.math.floor\".\nUse @\"microsoft.quantum.math.floor\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO chão foi depreceed. Por @\"microsoft.quantum.math.floor\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.floor\"favor, use ."
 - uid: microsoft.quantum.extensions.math.ieeeremainder
-  summary: "\n> [!WARNING]\n> Preterido\n\nIEEERemainder foi preterido. Em vez disso, use @\"microsoft.quantum.math.ieeeremainder\".\nUse @\"microsoft.quantum.math.ieeeremainder\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO IEEERemainder foi depreciado. Por @\"microsoft.quantum.math.ieeeremainder\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.ieeeremainder\"favor, use ."
 - uid: microsoft.quantum.extensions.math.log
-  summary: "\n> [!WARNING]\n> Preterido\n\nO log foi preterido. Em vez disso, use @\"microsoft.quantum.math.log\".\nUse @\"microsoft.quantum.math.log\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO registo foi depreceado. Por @\"microsoft.quantum.math.log\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.log\"favor, use ."
 - uid: microsoft.quantum.extensions.math.log10
-  summary: "\n> [!WARNING]\n> Preterido\n\nLog10 foi preterido. Em vez disso, use @\"microsoft.quantum.math.log10\".\nUse @\"microsoft.quantum.math.log10\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO Log10 foi depreciado. Por @\"microsoft.quantum.math.log10\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.log10\"favor, use ."
 - uid: microsoft.quantum.extensions.math.maxb
-  summary: "\n> [!WARNING]\n> Preterido\n\nMaxB foi preterido. Em vez disso, use @\"microsoft.quantum.math.maxl\".\nUse @\"microsoft.quantum.math.maxl\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMaxB foi depreciado. Por @\"microsoft.quantum.math.maxl\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.maxl\"favor, use ."
 - uid: microsoft.quantum.extensions.math.maxd
-  summary: "\n> [!WARNING]\n> Preterido\n\nMaxD foi preterido. Em vez disso, use @\"microsoft.quantum.math.maxd\".\nUse @\"microsoft.quantum.math.maxd\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMaxD foi depreciado. Por @\"microsoft.quantum.math.maxd\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.maxd\"favor, use ."
 - uid: microsoft.quantum.extensions.math.maxi
-  summary: "\n> [!WARNING]\n> Preterido\n\nO máximo foi preterido. Em vez disso, use @\"microsoft.quantum.math.maxi\".\nUse @\"microsoft.quantum.math.maxi\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMaxI foi depreciado. Por @\"microsoft.quantum.math.maxi\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.maxi\"favor, use ."
 - uid: microsoft.quantum.extensions.math.minb
-  summary: "\n> [!WARNING]\n> Preterido\n\nMinB foi preterido. Em vez disso, use @\"microsoft.quantum.math.minl\".\nUse @\"microsoft.quantum.math.minl\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMinB foi depreciado. Por @\"microsoft.quantum.math.minl\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.minl\"favor, use ."
 - uid: microsoft.quantum.extensions.math.mind
-  summary: "\n> [!WARNING]\n> Preterido\n\nA mente foi preterida. Em vez disso, use @\"microsoft.quantum.math.mind\".\nUse @\"microsoft.quantum.math.mind\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO MinD foi depreciado. Por @\"microsoft.quantum.math.mind\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.mind\"favor, use ."
 - uid: microsoft.quantum.extensions.math.mini
-  summary: "\n> [!WARNING]\n> Preterido\n\nMinI foi preterido. Em vez disso, use @\"microsoft.quantum.math.mini\".\nUse @\"microsoft.quantum.math.mini\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMinI foi depreciado. Por @\"microsoft.quantum.math.mini\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.mini\"favor, use ."
 - uid: microsoft.quantum.extensions.math.modpowb
-  summary: "\n> [!WARNING]\n> Preterido\n\nModPowB foi preterido. Em vez disso, use @\"microsoft.quantum.math.modpowl\".\nUse @\"microsoft.quantum.math.modpowl\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nModPowB foi depreciado. Por @\"microsoft.quantum.math.modpowl\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.modpowl\"favor, use ."
 - uid: microsoft.quantum.extensions.math.pi
-  summary: "\n> [!WARNING]\n> Preterido\n\nPI foi preterido. Em vez disso, use @\"microsoft.quantum.math.pi\".\nUse @\"microsoft.quantum.math.pi\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPi foi depreciado. Por @\"microsoft.quantum.math.pi\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.pi\"favor, use ."
 - uid: microsoft.quantum.extensions.math.powd
-  summary: "\n> [!WARNING]\n> Preterido\n\nPowD foi preterido. Em vez disso, use @\"microsoft.quantum.math.powd\".\nUse @\"microsoft.quantum.math.powd\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPowD foi depreciado. Por @\"microsoft.quantum.math.powd\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.powd\"favor, use ."
 - uid: microsoft.quantum.extensions.math.round
-  summary: "\n> [!WARNING]\n> Preterido\n\nA rodada foi preterida. Em vez disso, use @\"microsoft.quantum.math.round\".\nUse @\"microsoft.quantum.math.round\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nRound foi depreciado. Por @\"microsoft.quantum.math.round\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.round\"favor, use ."
 - uid: microsoft.quantum.extensions.math.signb
-  summary: "\n> [!WARNING]\n> Preterido\n\nSignB foi preterido. Em vez disso, use @\"microsoft.quantum.math.signl\".\nUse @\"microsoft.quantum.math.signl\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA SignB foi depreciada. Por @\"microsoft.quantum.math.signl\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.signl\"favor, use ."
 - uid: microsoft.quantum.extensions.math.signd
-  summary: "\n> [!WARNING]\n> Preterido\n\nA assinatura foi preterida. Em vez disso, use @\"microsoft.quantum.math.signd\".\nUse @\"microsoft.quantum.math.signd\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO signd foi depreciado. Por @\"microsoft.quantum.math.signd\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.signd\"favor, use ."
 - uid: microsoft.quantum.extensions.math.signi
-  summary: "\n> [!WARNING]\n> Preterido\n\nSigni foi preterido. Em vez disso, use @\"microsoft.quantum.math.signi\".\nUse @\"microsoft.quantum.math.signi\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO sinal foi depreciado. Por @\"microsoft.quantum.math.signi\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.signi\"favor, use ."
 - uid: microsoft.quantum.extensions.math.sin
-  summary: "\n> [!WARNING]\n> Preterido\n\nO Sin foi preterido. Em vez disso, use @\"microsoft.quantum.math.sin\".\nUse @\"microsoft.quantum.math.sin\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO pecado foi depreciado. Por @\"microsoft.quantum.math.sin\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.sin\"favor, use ."
 - uid: microsoft.quantum.extensions.math.sinh
-  summary: "\n> [!WARNING]\n> Preterido\n\nSinh foi preterido. Em vez disso, use @\"microsoft.quantum.math.sinh\".\nUse @\"microsoft.quantum.math.sinh\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nSinh foi depreciado. Por @\"microsoft.quantum.math.sinh\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.sinh\"favor, use ."
 - uid: microsoft.quantum.extensions.math.sqrt
-  summary: "\n> [!WARNING]\n> Preterido\n\nSqrt foi preterido. Em vez disso, use @\"microsoft.quantum.math.sqrt\".\nUse @\"microsoft.quantum.math.sqrt\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nSqrt foi depreciado. Por @\"microsoft.quantum.math.sqrt\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.sqrt\"favor, use ."
 - uid: microsoft.quantum.extensions.math.tan
-  summary: "\n> [!WARNING]\n> Preterido\n\nTan foi preterido. Em vez disso, use @\"microsoft.quantum.math.tan\".\nUse @\"microsoft.quantum.math.tan\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nTan foi depreciado. Por @\"microsoft.quantum.math.tan\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.tan\"favor, use ."
 - uid: microsoft.quantum.extensions.math.tanh
-  summary: "\n> [!WARNING]\n> Preterido\n\nTanh foi preterido. Em vez disso, use @\"microsoft.quantum.math.tanh\".\nUse @\"microsoft.quantum.math.tanh\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nTanh foi depreciado. Por @\"microsoft.quantum.math.tanh\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.tanh\"favor, use ."
 - uid: microsoft.quantum.extensions.math.truncate
-  summary: "\n> [!WARNING]\n> Preterido\n\nO truncamento foi preterido. Em vez disso, use @\"microsoft.quantum.math.truncate\".\nUse @\"microsoft.quantum.math.truncate\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nTruncate foi depreciado. Por @\"microsoft.quantum.math.truncate\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.truncate\"favor, use ."
 metadata:
-  ms.openlocfilehash: 1eb20bd8834d2a34022ee503808fd26eccaf8c64
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: b94b4c7aa1523d9f3e8b42359e759ffa356b25ea
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858841"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673263"

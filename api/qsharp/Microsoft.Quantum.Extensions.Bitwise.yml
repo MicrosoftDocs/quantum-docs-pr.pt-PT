@@ -3,23 +3,23 @@ uid: microsoft.quantum.extensions.bitwise
 name: Microsoft.Quantum.Extensions.Bitwise
 functions:
 - uid: microsoft.quantum.extensions.bitwise.and
-  summary: "\n> [!WARNING]\n> Preterido\n\nE foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.and\".\nUse @\"microsoft.quantum.bitwise.and\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nE foi depreciado. Por @\"microsoft.quantum.bitwise.and\" favor, use em vez disso.\nPor @\"microsoft.quantum.bitwise.and\"favor, use ."
 - uid: microsoft.quantum.extensions.bitwise.not
-  summary: "\n> [!WARNING]\n> Preterido\n\nNão foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.not\".\nUse @\"microsoft.quantum.bitwise.not\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nNão foi depreciado. Por @\"microsoft.quantum.bitwise.not\" favor, use em vez disso.\nPor @\"microsoft.quantum.bitwise.not\"favor, use ."
 - uid: microsoft.quantum.extensions.bitwise.or
-  summary: "\n> [!WARNING]\n> Preterido\n\nOu foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.or\".\nUse @\"microsoft.quantum.bitwise.or\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nOu foi depreciado. Por @\"microsoft.quantum.bitwise.or\" favor, use em vez disso.\nPor @\"microsoft.quantum.bitwise.or\"favor, use ."
 - uid: microsoft.quantum.extensions.bitwise.parity
-  summary: "\n> [!WARNING]\n> Preterido\n\nA paridade foi preterida. Em vez disso, use @\"microsoft.quantum.bitwise.parity\".\nUse @\"microsoft.quantum.bitwise.parity\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA paridade foi depreciada. Por @\"microsoft.quantum.bitwise.parity\" favor, use em vez disso.\nPor @\"microsoft.quantum.bitwise.parity\"favor, use ."
 - uid: microsoft.quantum.extensions.bitwise.xbits
-  summary: "\n> [!WARNING]\n> Preterido\n\nXBits foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.xbits\".\nUse @\"microsoft.quantum.bitwise.xbits\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nXBits foi depreciado. Por @\"microsoft.quantum.bitwise.xbits\" favor, use em vez disso.\nPor @\"microsoft.quantum.bitwise.xbits\"favor, use ."
 - uid: microsoft.quantum.extensions.bitwise.xor
-  summary: "\n> [!WARNING]\n> Preterido\n\nO XOR foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.xor\".\nUse @\"microsoft.quantum.bitwise.xor\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nXor foi depreciado. Por @\"microsoft.quantum.bitwise.xor\" favor, use em vez disso.\nPor @\"microsoft.quantum.bitwise.xor\"favor, use ."
 - uid: microsoft.quantum.extensions.bitwise.zbits
-  summary: "\n> [!WARNING]\n> Preterido\n\nZBits foi preterido. Em vez disso, use @\"microsoft.quantum.bitwise.zbits\".\nUse @\"microsoft.quantum.bitwise.zbits\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nOs ZBits foram depreciados. Por @\"microsoft.quantum.bitwise.zbits\" favor, use em vez disso.\nPor @\"microsoft.quantum.bitwise.zbits\"favor, use ."
 metadata:
-  ms.openlocfilehash: 69399e7aa3c7173b1173f278a79046e639db71d6
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 9c5cdc98558deeff0ae92c86abfca1840c568233
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858402"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673304"

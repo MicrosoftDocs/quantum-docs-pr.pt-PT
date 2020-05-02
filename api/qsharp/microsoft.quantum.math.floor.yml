@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.floor
 name: Floor
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o maior inteiro menor ou igual ao número especificado.
-remarks: Consulte [System. Math. Floor](https://docs.microsoft.com/dotnet/api/system.math.floor) para obter mais detalhes.
+summary: Devolve o maior inteiro inferior ou igual ao número especificado.
+remarks: Consulte [system.math.floor](https://docs.microsoft.com/dotnet/api/system.math.floor) para mais detalhes.
 syntax: 'function Floor (value : Double) : Int'
 input:
   content: '(value : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 3a5c0c562c2284ad180cd7446adc2cdd557b7c13
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d4cb37905728768b8271841aef49974279eedb9e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232970"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673826"

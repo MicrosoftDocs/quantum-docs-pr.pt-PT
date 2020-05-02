@@ -4,15 +4,15 @@ name: EvolutionUnitary
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Representa um operador de evolução de tempo unitário.
+  Representa um operador unitário de evolução do tempo.
 
 
-  O primeiro parâmetro é a duração da evolução do tempo e o segundo parâmetro é o registro de qubit acionado pelo unitário.
+  O primeiro parâmetro é a duração da evolução do tempo, e o segundo parâmetro é o registo qubit acionado pelo unitário.
 syntax: newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 185e621920a7800fd2c78ccbfb7b4ca12d51e8ba
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: db3356176f70d940323e0e19c989e09de467d471
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067089"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673407"

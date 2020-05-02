@@ -64,9 +64,9 @@ newtypes:
 - uid: microsoft.quantum.machinelearning.validationresults
   summary: Os resultados de ter validado um classificador contra um conjunto de amostras.
 metadata:
-  ms.openlocfilehash: be0c17b6f3e42c03bacadbf02c693980f89cbe39
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 43b40489e34a2483ff9331b34b6cd289e3a7bb56
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908315"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673173"

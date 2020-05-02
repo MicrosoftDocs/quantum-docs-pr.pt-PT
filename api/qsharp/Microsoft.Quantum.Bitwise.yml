@@ -4,43 +4,43 @@ name: Microsoft.Quantum.Bitwise
 functions:
 - uid: microsoft.quantum.bitwise.and
   summary: >-
-    Retorna o bit e de dois inteiros.
+    Devolve o bitwise e de dois inteiros.
 
-    Isso executa a mesma computação que o operador de `&&&` interno.
+    Isto executa o mesmo cálculo `&&&` que o operador incorporado.
 - uid: microsoft.quantum.bitwise.leftshiftedi
-  summary: Desloca a representação bit a bit de um número à esquerda por um determinado número de bits.
+  summary: Muda a representação bitwise de um número deixado por um dado número de bits.
 - uid: microsoft.quantum.bitwise.leftshiftedl
-  summary: Desloca a representação bit a bit de um número à esquerda por um determinado número de bits.
+  summary: Muda a representação bitwise de um número deixado por um dado número de bits.
 - uid: microsoft.quantum.bitwise.not
   summary: >-
-    Retorna a não-bit que não é um inteiro.
+    Devolve o bitwise NÃO de um inteiro.
 
-    Isso executa a mesma computação que o operador de `~~~` interno.
+    Isto executa o mesmo cálculo `~~~` que o operador incorporado.
 - uid: microsoft.quantum.bitwise.or
   summary: >-
-    Retorna o bit e o de dois inteiros.
+    Devolve o bitwise OU de dois inteiros.
 
-    Isso executa a mesma computação que o operador de `|||` interno.
+    Isto executa o mesmo cálculo `|||` que o operador incorporado.
 - uid: microsoft.quantum.bitwise.parity
-  summary: Retorna a paridade de um número inteiro de bits (1 se sua representação binária contiver um número ímpar de uns e 0 caso contrário).
+  summary: Devolve a paridade bitwise de um inteiro (1 se a sua representação binária contiver um número ímpar de uns e 0 de outra forma).
 - uid: microsoft.quantum.bitwise.rightshiftedi
-  summary: Desloca a representação bit a bit de um número à direita por um determinado número de bits.
+  summary: Muda a representação bitwise de um número direito por um dado número de bits.
 - uid: microsoft.quantum.bitwise.rightshiftedl
-  summary: Desloca a representação bit a bit de um número à direita por um determinado número de bits.
+  summary: Muda a representação bitwise de um número direito por um dado número de bits.
 - uid: microsoft.quantum.bitwise.xbits
-  summary: Retorna um inteiro que representa os X bits de uma matriz de operadores Pauli.
+  summary: Devolve um inteiro representando os x bits de uma série de operadores Pauli.
 - uid: microsoft.quantum.bitwise.xor
   summary: >-
-    Retorna o bit-a-ou (XOR) exclusivo de dois inteiros.
+    Devolve o bitwise exclusive-OR (XOR) de dois inteiros.
 
-    Isso executa a mesma computação que o operador de `^^^` interno.
+    Isto executa o mesmo cálculo `^^^` que o operador incorporado.
 - uid: microsoft.quantum.bitwise.zbits
-  summary: Retorna um inteiro que representa os bits Z de uma matriz de operadores Pauli.
-summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções para atuar na representação bit a bit de tipos de dados clássicos."
+  summary: Devolve um inteiro representando as partes Z de uma série de operadores Pauli.
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções para agir sobre a representação mísera dos tipos de dados clássicos."
 metadata:
-  ms.openlocfilehash: c474d92e7a40f5491b21d80e00294fbdff96a62a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb52d02d38d31b96b46dfc469ee07ee62e29a9d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210955"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673385"

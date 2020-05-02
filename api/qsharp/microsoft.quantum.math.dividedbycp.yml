@@ -3,26 +3,26 @@ uid: microsoft.quantum.math.dividedbycp
 name: DividedByCP
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o quociente de duas entradas.
+summary: Devolve o quociente de duas entradas.
 syntax: 'function DividedByCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a
-    summary: A primeira entrada $a $ a ser dividida.
+    summary: A primeira entrada $a$ a ser dividida.
     uid: microsoft.quantum.math.complexpolar
   - name: b
-    summary: A segunda entrada $b $ a ser dividida.
+    summary: A segunda entrada $b$ a ser dividida.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Microsoft.Quantum.Math.ComplexPolar
   types:
-  - summary: O quociente $a/b $.
+  - summary: O quociente $a / b$.
     uid: microsoft.quantum.math.complexpolar
 metadata:
-  ms.openlocfilehash: 4edf66f7eb018cee9e8c4d2c9055d80f5471702b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 54eb09f20278eab3432582ba04dad55455c9144d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229757"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673936"

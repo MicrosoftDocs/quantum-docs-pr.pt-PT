@@ -4,24 +4,24 @@ name: StateOracle
 type: newtype
 namespace: Microsoft.Quantum.Oracles
 summary: >-
-  Representa um Oracle para preparação de estado.
+  Representa um oráculo para a preparação do Estado.
 
 
-  As entradas para o Oracle $O $ são:
+  As inputs para o oráculo $O$ são:
 
 
-  - Um inteiro que indexa o sinalizador qubit $f $.
+  - Um inteiro a indexar o qubit da bandeira $f$.
 
-  - O registro do sistema $s $, que armazenará o estado de Quantum desejado $ \ket{\psi}\_s $.
+  - O registo do sistema $s$ que armazenará o estado\_quântico desejado $\ket{\psi} s$.
 remarks: >-
-  Este Oracle definido por $ $ O\ket{0}\_{f} \ket{0}\_s = \lambda\ket{1}\_f\ket {\ psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{0}\_f\cdots, $ $ age no estado de base computacional $ \ket{0}\_{f} \ket{0}\_s $ para criar o estado de destino $ \ket{\psi}\_s $ com amplitude $ \lambda $ na base sinalizada por $ \ket{1}\_f $.
+  Este oráculo definido{0}\_por $${0}\_O\ket {f}\ket s= \lambda\ket{1}\_\_f\cet{\psi} s + \sqrt{1-\\lambda[^2}\ket{0}\_f\cdots, $${0}\_acts on the on computational state\_$\ket{0}\_{f}\ket s$ to create the target state $\{\psi} s$ with amplitude $\lambda$ in the{1}\_
 
-  O primeiro parâmetro é um índice para o registro qubit de $ \ket{0}\_f $. O segundo parâmetro abrange ambos os registros.
+  O primeiro parâmetro é um índice para o{0}\_registo qubit de $\ket f$. O segundo parâmetro abrangeu ambos os registos.
 syntax: newtype StateOracle = ((Int, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 1faa47c21e43355ed036498adf4e823ff3f8a0e4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fe7ced83927d709bcc6fe82d8866b221446c7d73
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067225"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673473"

@@ -1,19 +1,19 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.environment
 name: Microsoft.Quantum.Environment
-summary: " # <a name=\"summary\"></a>Resumo\n Essas funções fornecem informações sobre o ambiente no qual a computação Quantum está ocorrendo."
+summary: " # <a name=\"summary\"></a>Resumo\n Estas funções fornecem informações sobre o ambiente em que a computação quântica ocorre."
 operations:
 - uid: microsoft.quantum.environment.getqubitsavailabletoborrow
   summary: >-
-    Retorna o número de qubits disponíveis no momento para o empréstimo.
+    Devolve o número de qubits atualmente disponíveis para pedir emprestado.
 
-    Isso inclui qubits não utilizados; ou seja, isso inclui o qubits retornado por `GetQubitsAvailableToUse`.
+    Isto inclui qubits não utilizados; isto é, isto inclui os `GetQubitsAvailableToUse`qubits devolvidos por .
 - uid: microsoft.quantum.environment.getqubitsavailabletouse
-  summary: Retorna o número de qubits disponíveis no momento para uso.
+  summary: Devolve o número de qubits atualmente disponíveis para utilização.
 metadata:
-  ms.openlocfilehash: 50e5cfb7c1b9a4075c25b2705d00b435a09e159e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bd6d442aabb179f4c5fea0a0f48efaa472ec00cf
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73056819"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673339"

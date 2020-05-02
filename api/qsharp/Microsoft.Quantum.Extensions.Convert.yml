@@ -1,32 +1,32 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.extensions.convert
 name: Microsoft.Quantum.Extensions.Convert
-summary: " # <a name=\"summary\"></a>Resumo\n Essas são algumas das funções do namespace System. Convert do .NET CLR que são relevantes no sistema do tipo Q #.\n\n # <a name=\"remarks\"></a>Observações\n Se houver várias versões da função para tipos bool, int e Double, as funções correspondentes terão o sufixo B, I e D."
+summary: " # <a name=\"summary\"></a>Resumo\n Estas são algumas das funções do System.Converte espaço de nome de .NET CLR que são relevantes dentro do sistema de tipo Q#.\n\n # <a name=\"remarks\"></a>Observações\n Se existirem várias versões da função para tipos Bool, Int e Double, as funções correspondentes têm sufixo B,I e D."
 functions:
 - uid: microsoft.quantum.extensions.convert.biginttobools
-  summary: "\n> [!WARNING]\n> Preterido\n\nBigIntToBools foi preterido. Em vez disso, use @\"microsoft.quantum.convert.bigintasboolarray\".\nUse @\"microsoft.quantum.convert.bigintasboolarray\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBigIntToBools foi depreciado. Por @\"microsoft.quantum.convert.bigintasboolarray\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.bigintasboolarray\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.boolstobigint
-  summary: "\n> [!WARNING]\n> Preterido\n\nBoolsToBigInt foi preterido. Em vez disso, use @\"microsoft.quantum.convert.boolarrayasbigint\".\nUse @\"microsoft.quantum.convert.boolarrayasbigint\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBoolsToBigInt foi depreciado. Por @\"microsoft.quantum.convert.boolarrayasbigint\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.boolarrayasbigint\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.pauliarraytoint
-  summary: "\n> [!WARNING]\n> Preterido\n\nPauliArrayToInt foi preterido. Em vez disso, use @\"microsoft.quantum.convert.pauliarrayasint\".\nUse @\"microsoft.quantum.convert.pauliarrayasint\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPauliArrayToInt foi depreciado. Por @\"microsoft.quantum.convert.pauliarrayasint\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.pauliarrayasint\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.tobigint
-  summary: "\n> [!WARNING]\n> Preterido\n\nTobigint foi preterido. Em vez disso, use @\"microsoft.quantum.convert.intasbigint\".\nUse @\"microsoft.quantum.convert.intasbigint\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nToBigInt foi depreciado. Por @\"microsoft.quantum.convert.intasbigint\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.intasbigint\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.todouble
-  summary: "\n> [!WARNING]\n> Preterido\n\nTo-Double foi preterido. Em vez disso, use @\"microsoft.quantum.convert.intasdouble\".\nUse @\"microsoft.quantum.convert.intasdouble\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nToDouble foi depreciado. Por @\"microsoft.quantum.convert.intasdouble\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.intasdouble\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.tostringb
-  summary: "\n> [!WARNING]\n> Preterido\n\nToStringB foi preterido. Em vez disso, use @\"microsoft.quantum.convert.boolasstring\".\nUse @\"microsoft.quantum.convert.boolasstring\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ToStringB foi depreciado. Por @\"microsoft.quantum.convert.boolasstring\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.boolasstring\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.tostringd
-  summary: "\n> [!WARNING]\n> Preterido\n\nToString foi preterido. Em vez disso, use @\"microsoft.quantum.convert.doubleasstring\".\nUse @\"microsoft.quantum.convert.doubleasstring\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ToStringD foi depreciado. Por @\"microsoft.quantum.convert.doubleasstring\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.doubleasstring\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.tostringdformat
-  summary: "\n> [!WARNING]\n> Preterido\n\nToStringDFormat foi preterido. Em vez disso, use @\"microsoft.quantum.convert.doubleasstringwithformat\".\nUse @\"microsoft.quantum.convert.doubleasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nToStringDFormat foi depreciado. Por @\"microsoft.quantum.convert.doubleasstringwithformat\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.doubleasstringwithformat\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.tostringi
-  summary: "\n> [!WARNING]\n> Preterido\n\nTostringi foi preterido. Em vez disso, use @\"microsoft.quantum.convert.intasstring\".\nUse @\"microsoft.quantum.convert.intasstring\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nToStringI foi depreciado. Por @\"microsoft.quantum.convert.intasstring\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.intasstring\"favor, use ."
 - uid: microsoft.quantum.extensions.convert.tostringiformat
-  summary: "\n> [!WARNING]\n> Preterido\n\nToStringIFormat foi preterido. Em vez disso, use @\"microsoft.quantum.convert.intasstringwithformat\".\nUse @\"microsoft.quantum.convert.intasstringwithformat\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ToStringIFormat foi depreciado. Por @\"microsoft.quantum.convert.intasstringwithformat\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.intasstringwithformat\"favor, use ."
 metadata:
-  ms.openlocfilehash: 372c58096cab091560ae6d3bebc165f09e201b9c
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 8196882d8f7edf417f65bcd1651ecb770c4286f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858314"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673294"

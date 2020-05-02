@@ -3,9 +3,9 @@ uid: microsoft.quantum.math
 name: Microsoft.Quantum.Math
 functions:
 - uid: microsoft.quantum.math.abscomplex
-  summary: Devolve o valor absoluto de um número complexo de `Complex`tipo.
+  summary: Devolve o valor absoluto de `Complex`um número complexo de tipo.
 - uid: microsoft.quantum.math.abscomplexpolar
-  summary: Devolve o valor absoluto de um número complexo de `ComplexPolar`tipo.
+  summary: Devolve o valor absoluto de `ComplexPolar`um número complexo de tipo.
 - uid: microsoft.quantum.math.absd
   summary: Devolve o valor absoluto de um número de ponto flutuante de dupla precisão.
 - uid: microsoft.quantum.math.absi
@@ -13,9 +13,9 @@ functions:
 - uid: microsoft.quantum.math.absl
   summary: Devolve o valor absoluto de um grande inteiro.
 - uid: microsoft.quantum.math.abssquaredcomplex
-  summary: Devolve o valor absoluto quadrado de um número complexo de `Complex`tipo.
+  summary: Devolve o valor absoluto quadrado de `Complex`um número complexo de tipo.
 - uid: microsoft.quantum.math.abssquaredcomplexpolar
-  summary: Devolve o valor absoluto quadrado de um número complexo de `ComplexPolar`tipo.
+  summary: Devolve o valor absoluto quadrado de `ComplexPolar`um número complexo de tipo.
 - uid: microsoft.quantum.math.arccos
   summary: Devolve o ângulo cujo cosseno é o número especificado.
 - uid: microsoft.quantum.math.arccosh
@@ -31,35 +31,35 @@ functions:
 - uid: microsoft.quantum.math.arctanh
   summary: Calcula a tangente hiperbólica hiperbólica inversa de um número.
 - uid: microsoft.quantum.math.argcomplex
-  summary: Devolve a fase de um número complexo de `Complex`tipo.
+  summary: Devolve a fase de um `Complex`número complexo de tipo.
 - uid: microsoft.quantum.math.argcomplexpolar
-  summary: Devolve a fase de um número complexo de `ComplexPolar`tipo.
+  summary: Devolve a fase de um `ComplexPolar`número complexo de tipo.
 - uid: microsoft.quantum.math.bitsizei
   summary: >-
-    Para um `a`inteiro não negativo, devolve o número de bits necessários para representar `a`.
+    Para um inteiro não `a`negativo, devolve o número de `a`bits necessários para representar .
 
 
-    Ou seja, devolve a menor $n$ de tal forma que $a < 2^n$.
+    Ou seja, devolve o menor $n$ de tal forma que $a < 2^n$.
 - uid: microsoft.quantum.math.bitsizel
   summary: >-
-    Para um `a`inteiro não negativo, devolve o número de bits necessários para representar `a`.
+    Para um inteiro não `a`negativo, devolve o número de `a`bits necessários para representar .
 
 
-    Ou seja, devolve a menor $n$ de tal forma que $a < 2^n$.
+    Ou seja, devolve o menor $n$ de tal forma que $a < 2^n$.
 - uid: microsoft.quantum.math.ceiling
   summary: Devolve o menor inteiro maior ou igual ao número especificado.
 - uid: microsoft.quantum.math.complexascomplexpolar
-  summary: Converte um número complexo de `Complex` tipo para um número complexo de `ComplexPolar`tipo .
+  summary: Converte um número `Complex` complexo de tipo `ComplexPolar`para um número complexo de tipo .
 - uid: microsoft.quantum.math.complexpolarascomplex
-  summary: Converte um número complexo de `ComplexPolar` tipo para um número complexo de `Complex`tipo .
+  summary: Converte um número `ComplexPolar` complexo de tipo `Complex`para um número complexo de tipo .
 - uid: microsoft.quantum.math.complexpolartocomplex
-  summary: "\n> [!WARNING]\n> Preterido\n\nO ComplexoPolarToComplex foi depreciado. Por favor, use @\"microsoft.quantum.math.complexpolarascomplex\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ComplexoPolarToComplex foi depreciado. Por @\"microsoft.quantum.math.complexpolarascomplex\" favor, use em vez disso."
 - uid: microsoft.quantum.math.complextocomplexpolar
-  summary: "\n> [!WARNING]\n> Preterido\n\nComplexToComplexPolar foi depreciado. Por favor, use @\"microsoft.quantum.math.complexascomplexpolar\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nComplexToComplexPolar foi depreciado. Por @\"microsoft.quantum.math.complexascomplexpolar\" favor, use em vez disso."
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Encontra a fração contínua convergente mais próxima de `fraction` com o denominador menos ou igual a `denominatorBound`
+  summary: Encontra a fração contínua convergente mais próximo `fraction` com o denominador menos ou igual a`denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Encontra a fração contínua convergente mais próxima de `fraction` com o denominador menos ou igual a `denominatorBound`
+  summary: Encontra a fração contínua convergente mais próximo `fraction` com o denominador menos ou igual a`denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Devolve o cosseno do ângulo especificado.
 - uid: microsoft.quantum.math.cosh
@@ -145,9 +145,9 @@ functions:
 - uid: microsoft.quantum.math.modpowl
   summary: Executa uma divisão modular num número elevado ao poder de outro número.
 - uid: microsoft.quantum.math.modulusi
-  summary: Calcula o resíduo canónico de `value` `modulus`de modulo .
+  summary: Calcula o resíduo canónico `value` do modulo. `modulus`
 - uid: microsoft.quantum.math.modulusl
-  summary: Calcula o resíduo canónico de `value` `modulus`de modulo .
+  summary: Calcula o resíduo canónico `value` do modulo. `modulus`
 - uid: microsoft.quantum.math.negationc
   summary: Devolve a negação não ária de uma entrada.
 - uid: microsoft.quantum.math.negationcp
@@ -174,16 +174,16 @@ functions:
   summary: Devolve a soma de duas inputs.
 - uid: microsoft.quantum.math.pnorm
   summary: >-
-    Devolve a norma `L(p)` de um vetor de `Double`s.
+    Devolve `L(p)` a norma de `Double`um vetor de s.
 
 
-    Ou seja, dado um matriz $x$ de `Double[]`tipo, isto devolve o $p$-norm $\|x\|\_p= (\sum_{j}x_j;{{p})^{1/p}$.
+    Ou seja, dado um `Double[]`matriz $x$ de tipo,\|\_isto devolve o $p$-norm $\|x p= (\sum_{j}[x_j[{p})^{1/p}$.
 - uid: microsoft.quantum.math.pnormalized
   summary: >-
-    Normaliza um vetor de `Double`s na norma `L(p)`.
+    Normaliza um vetor `Double`de `L(p)` s na norma.
 
 
-    Isto é, dado um matriz $x$ de `Double[]`tipo, isto devolve uma matriz onde todos os elementos são divididos pela $p$-norm $\|x\|_p$.
+    Isto é, dado um `Double[]`conjunto $x$ de tipo, este devolve uma matriz\|onde\|todos os elementos são divididos pelo $p$-norm $ x _p$.
 - uid: microsoft.quantum.math.powc
   summary: Devolve um número elevado a um determinado poder.
 - uid: microsoft.quantum.math.powcp
@@ -230,7 +230,7 @@ functions:
   summary: Calcula a parte integrante de um número.
 newtypes:
 - uid: microsoft.quantum.math.bigfraction
-  summary: Representa um número racional da forma `p/q`. A `p` é o primeiro elemento da tuple e `q` é o segundo elemento da tuple.
+  summary: Representa um número racional `p/q`da forma. Inteiro `p` é o primeiro elemento da `q` tuple e é o segundo elemento da tuple.
 - uid: microsoft.quantum.math.complex
   summary: >-
     Representa um número complexo pelos seus componentes reais e imaginários.
@@ -243,7 +243,7 @@ newtypes:
 
     A representação polar de um número complexo é $c=r e^{i t}$.
 - uid: microsoft.quantum.math.fraction
-  summary: Representa um número racional da forma `p/q`. A `p` é o primeiro elemento da tuple e `q` é o segundo elemento da tuple.
+  summary: Representa um número racional `p/q`da forma. Inteiro `p` é o primeiro elemento da `q` tuple e é o segundo elemento da tuple.
 summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções matemáticas clássicas e tipos de dados."
 operations:
 - uid: microsoft.quantum.math.randomint
@@ -255,9 +255,9 @@ operations:
 - uid: microsoft.quantum.math.randomsinglequbitpauli
   summary: Devolve um dos operadores de Pauli de um único qubit uniformemente ao acaso.
 metadata:
-  ms.openlocfilehash: 03a0eba2101d3a20b393b7f685ac463b1abcd727
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 2ad787a0d29e98e25c733d1fdcf0a79fcc8c2803
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905833"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673166"

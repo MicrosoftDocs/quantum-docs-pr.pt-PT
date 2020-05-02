@@ -3,24 +3,24 @@ uid: microsoft.quantum.math.abssquaredcomplexpolar
 name: AbsSquaredComplexPolar
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o valor absoluto do quadrado de um número complexo de tipos `ComplexPolar`.
+summary: Devolve o valor absoluto quadrado de `ComplexPolar`um número complexo de tipo.
 syntax: 'function AbsSquaredComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: input
-    summary: Número complexo $c = r e ^ {i t} $.
+    summary: Número complexo $c = r e^{i t}$.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Double
   types:
-  - summary: Valor absoluto do quadrado $ | c | ^ 2 = r ^ 2 $.
+  - summary: Valor absoluto quadrado $[c^2 = r^2$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 47fbbcab9707c19d9d6cb064c69a0bc6d2c00011
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0118f138e19f314c301af6f4649442f36459409a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222056"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674013"

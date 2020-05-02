@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.i
 name: I
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: Eu tenha sido preterido. Em vez disso, use @"microsoft.quantum.intrinsic.i".
+summary: Fui depreciado. Por @"microsoft.quantum.intrinsic.i" favor, use em vez disso.
 syntax: 'operation I (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'
@@ -20,9 +20,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7c38f02d56cf77bdac6f7a6f736efd38702bb69c
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 40bf6096275520b6bb02fee36b1320ed948de3dc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74864853"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673455"

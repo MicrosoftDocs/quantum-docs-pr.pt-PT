@@ -3,33 +3,33 @@ uid: microsoft.quantum.math.extendedgreatestcommondivisorl
 name: ExtendedGreatestCommonDivisorL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Computa uma tupla $ (u, v) $ de forma que $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $, em que $ \operatorname{GCD} $ é $a $ maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+summary: Computa um tuple $(u,v)$ de tal forma que $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, onde o nome de operador de $\{GCD}$ é $a$ maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt, BigInt)'
-references: '- Essa implementação é de acordo com https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+references: '- Esta implementação é de acordo comhttps://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
   - name: a
-    summary: o primeiro número do qual o maior divisor comum estendido está sendo computado
+    summary: o primeiro número dos quais o maior divisor comum estendido está a ser calculado
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: o segundo número do qual o maior divisor comum estendido está sendo computado
+    summary: o segundo número dos quais o maior divisor comum estendido está a ser calculado
     isPrimitive: true
     uid: BigInt
 output:
   content: (BigInt, BigInt)
   types:
-  - summary: Tupla $ (u, v) $ com a propriedade $u \cdot a + v \cdot b = \operatorname{GCD} (a, b) $.
+  - summary: Tuple $(u,v)$ com a propriedade $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$.
     types:
     - isPrimitive: true
       uid: BigInt
     - isPrimitive: true
       uid: BigInt
 metadata:
-  ms.openlocfilehash: 0e3c6138d5efe03603338341e37a9cf7bc07fb47
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ade2f3451a273b69bcabaeae06ef7b234816291b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233021"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673841"

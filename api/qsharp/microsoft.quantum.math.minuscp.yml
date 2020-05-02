@@ -3,26 +3,26 @@ uid: microsoft.quantum.math.minuscp
 name: MinusCP
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna a diferença entre duas entradas.
+summary: Devolve a diferença entre duas inputs.
 syntax: 'function MinusCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a
-    summary: A primeira entrada $a $ a ser subtraída.
+    summary: A primeira entrada $a$ a ser subtraída.
     uid: microsoft.quantum.math.complexpolar
   - name: b
-    summary: A segunda entrada $b $ a ser subtraída.
+    summary: A segunda entrada $b$ a ser subtraída.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Microsoft.Quantum.Math.ComplexPolar
   types:
-  - summary: A diferença $a-b $.
+  - summary: A diferença $a- b$.
     uid: microsoft.quantum.math.complexpolar
 metadata:
-  ms.openlocfilehash: 57e0a74e5fc68e94dd53fd44523756338c8abbbe
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8f211dff61358cbeb3d56d6827523daae2e4315e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233888"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673583"
