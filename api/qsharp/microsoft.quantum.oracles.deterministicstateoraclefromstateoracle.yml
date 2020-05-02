@@ -3,30 +3,30 @@ uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
 name: DeterministicStateOracleFromStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Converte um Oracle do tipo `StateOracle` em `DeterministicStateOracle`.
+summary: Converte um oráculo de tipo `StateOracle` para `DeterministicStateOracle`.
 syntax: 'function DeterministicStateOracleFromStateOracle (idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle) : Microsoft.Quantum.Oracles.DeterministicStateOracle'
 input:
   content: '(idxFlagQubit : Int, stateOracle : Microsoft.Quantum.Oracles.StateOracle)'
   types:
   - name: idxFlagQubit
-    summary: 'O índice para o sinalizador qubit do `stateOracle` $A $, que age explicitamente em dois registros: o sinalizador $f $ e o sistema $s $, por exemplo, $A \ket{0}\_f\ket {\ psi}\_s $.'
+    summary: 'O índice para o qubit da bandeira `stateOracle` do $A$, que atua explicitamente em dois registos: a{0}\_bandeira $f$ e\_o sistema $s$, por exemplo, $A\ket f\ket{\psi} s$.'
     isPrimitive: true
     uid: Int
   - name: stateOracle
-    summary: Uma preparação de estado Oracle $A $ do tipo `StateOracle`.
+    summary: Um oráculo de `StateOracle`preparação estatal $A$ de tipo.
     uid: microsoft.quantum.oracles.stateoracle
 output:
   content: Microsoft.Quantum.Oracles.DeterministicStateOracle
   types:
-  - summary: A mesma preparação de estado Oracle $A $, mas agora do tipo `DeterministicStateOracle`, por isso atua em um registro no qual $a, s $ não é mais explicitamente separado, por exemplo,  $A \ket{0\psi}\_{as} $.
+  - summary: O mesmo oráculo de preparação estatal $A$, mas agora de tipo, `DeterministicStateOracle`por isso age num registo onde $a, s$ já não se separa explicitamente, por exemplo.  $A\ket{0\psi}\_{as}$.
     uid: microsoft.quantum.oracles.deterministicstateoracle
 seeAlso:
 - microsoft.quantum.canon.stateoracle
 - microsoft.quantum.canon.deterministicstateoracle
 metadata:
-  ms.openlocfilehash: 5eda40115d4d4ca7b4187f76b5e0807695913407
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cf6ddc1f1baff27c986f36d944e67192958a0d3f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231100"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681290"

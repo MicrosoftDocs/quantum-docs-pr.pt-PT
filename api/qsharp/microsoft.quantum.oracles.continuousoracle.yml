@@ -4,15 +4,15 @@ name: ContinuousOracle
 type: newtype
 namespace: Microsoft.Quantum.Oracles
 summary: >-
-  Representa um Oracle de tempo contínuo.
+  Representa um oráculo contínuo.
 
 
-  Esse é um Oracle que implementa $U (\delta t): \ket{\psi (t)} \mapsto \ket{\psi (t + \delta t)} $ para todos os horários $t $, em que $U $ é uma operação fixa e em que $ \delta t $ é um número real não negativo.
+  Este é um oráculo que implementa $U (\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}$ para todos os tempos $t$, onde $U$ é uma operação fixa, e onde $\delta t$ é um número real não negativo.
 syntax: newtype ContinuousOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: b412c93583a68f71c232d2f7e11fd3d506e5f817
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9c5776dfa2ec4cfbd128a6e20158f1be23680f11
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231168"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681326"

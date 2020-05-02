@@ -3,9 +3,9 @@ uid: microsoft.quantum.logical.greaterthanorequald
 name: GreaterThanOrEqualD
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna true se e somente se um número for maior ou igual a outro número.
+summary: Retorna verdadeiro se e apenas se um número for maior ou igual a outro número.
 remarks: >-
-  Os itens a seguir são equivalentes:
+  Os seguintes são equivalentes:
 
 
   ```Q#
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Double
   - name: b
-    summary: O segundo valor a ser comparado.
+    summary: O segundo valor a comparar.
     isPrimitive: true
     uid: Double
 output:
   content: Bool
   types:
-  - summary: '`true` se `a` for maior ou igual a `b`.'
+  - summary: '`true`se e `a` apenas se for `b`maior ou for igual a .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 049cd4a306ef0888f23a18c1ab48590b4333e101
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 39a152149f4ed715d70dfce59845efb6d70a8283
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225609"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681749"
