@@ -4,16 +4,16 @@ name: ApplyIfOne
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação com condição em um valor de resultado clássico sendo um.
+  Aplica uma operação condicionada a um valor clássico do resultado sendo um.
 
 
-  Devido a uma operação `op` e um valor de resultado `result`, o aplica `op` à `target` se `result` for `One`. Se `Zero`, nada acontecerá com o `target`.
+  Dada `op` uma operação `result`e um `op` valor `target` `result` de `One`resultado, aplica-se ao "se" é . Se, `Zero`nada acontece `target`com o.
 syntax: "operation ApplyIfOne (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
   types:
   - name: result
-    summary: Um resultado de medida que controla se op é aplicado ou não.
+    summary: Um resultado de medição que controla se a op é aplicada ou não.
     isPrimitive: true
     uid: Result
   - name: op
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: target
-    summary: A entrada à qual a operação é aplicada.
+    summary: A entrada a que a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -38,15 +38,15 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 seeAlso:
 - microsoft.quantum.canon.applyifonec
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 5609226c113fd6b9660fdad2f05d154a7abde5a3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1cf549dce4e903810d4c59f8020afb4689c26888
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220917"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672692"

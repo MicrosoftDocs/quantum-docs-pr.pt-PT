@@ -4,29 +4,29 @@ name: TargetStateReflectionOracle
 type: function
 namespace: Microsoft.Quantum.AmplitudeAmplification
 summary: >-
-  Constrói um `ReflectionOracle` sobre o estado de destino exclusivamente marcado pelo sinalizador qubit.
+  Constrói um `ReflectionOracle` estado-alvo exclusivamente marcado pelo qubit da bandeira.
 
 
-  O estado de destino tem um único qubit definido como 1 e todos os outros 0: $ \ket{1}_f $.
+  O estado-alvo tem um único qubit definido para 1, e todos os outros 0: $\ket{1}_f$.
 syntax: 'function TargetStateReflectionOracle (idxFlagQubit : Int) : Microsoft.Quantum.Oracles.ReflectionOracle'
 input:
   content: '(idxFlagQubit : Int)'
   types:
   - name: idxFlagQubit
-    summary: Index para sinalizar qubit $f $ do Oracle.
+    summary: Índice para qubit de bandeira $f$ de oráculo.
     isPrimitive: true
     uid: Int
 output:
   content: Microsoft.Quantum.Oracles.ReflectionOracle
   types:
-  - summary: Um `ReflectionOracle` que reflete o estado marcado por $ \ket{1}_f $.
+  - summary: Um `ReflectionOracle` que reflete sobre o estado{1}marcado por $\ket _f$.
     uid: microsoft.quantum.oracles.reflectionoracle
 seeAlso:
 - microsoft.quantum.canon.reflectionoracle
 metadata:
-  ms.openlocfilehash: c86011664da3f59bc978641b0aefcca5a50d3b1a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6f398f2c9122769dd6f83fd002d311c0b55db158
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215443"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672928"

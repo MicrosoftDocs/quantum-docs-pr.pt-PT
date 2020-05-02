@@ -4,20 +4,20 @@ name: AddFxP
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Adiciona dois números de ponto fixo armazenados em registros de Quantum.
+  Adiciona dois números fixos armazenados em registos quânticos.
 
 
-  Considerando dois registros de ponto fixo, respectivamente nos Estados $ \ket{f_1} $ e $ \ket{f_2} $, o executa a operação $ \ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2} $.
-remarks: A implementação atual requer que os dois números de ponto fixo tenham a mesma posição de ponto de contagem do bit menos significativo, ou seja, $n _i $ e $p _i $ devem ser iguais.
+  Tendo em conta dois registos fixos, respectivamente nos estados $\ket{f_1}$ e $\ket{f_2}$, realiza a operação $\ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2}$.
+remarks: A implementação atual requer que os dois números fixos tenham a mesma posição de ponto contando com a parte menos significativa, ou seja, $n_i$ e $p_i$ devem ser iguais.
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: fp1
-    summary: Primeiro número de ponto fixo
+    summary: Primeiro número fixo
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: fp2
-    summary: Segundo número de ponto fixo, será atualizado para conter a soma das duas entradas.
+    summary: Segundo número fixo, será atualizado para conter a soma das duas inputs.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 142c7927519e59fb3df1661b3beadd32cda0d2c8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b6e15299b6e0394af8cb530ee7bc66dc07c336
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215426"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672906"

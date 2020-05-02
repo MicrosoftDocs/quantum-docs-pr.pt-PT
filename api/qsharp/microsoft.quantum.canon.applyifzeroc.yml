@@ -4,18 +4,18 @@ name: ApplyIfZeroC
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação controlável com condição em um valor de resultado clássico igual a zero.
+  Aplica uma operação controlável condicionada com um valor de resultado clássico nulo.
 
 
-  Devido a uma operação `op` e um valor de resultado `result`, o aplica `op` à `target` se `result` for `Zero`. Se `One`, nada acontecerá com o `target`.
+  Dada `op` uma operação `result`e um `op` valor `target` `result` de `Zero`resultado, aplica-se ao "se" é . Se, `One`nada acontece `target`com o.
 
-  O sufixo `C` indica que a operação a ser aplicada é controlável.
+  O sufixo `C` indica que a operação a aplicar é controlável.
 syntax: "operation ApplyIfZeroC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
   types:
   - name: result
-    summary: Um resultado de medida que controla se op é aplicado ou não.
+    summary: Um resultado de medição que controla se a op é aplicada ou não.
     isPrimitive: true
     uid: Result
   - name: op
@@ -32,7 +32,7 @@ input:
     functors:
     - Controlled
   - name: target
-    summary: A entrada à qual a operação é aplicada.
+    summary: A entrada a que a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -42,7 +42,7 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 functors:
 - Controlled
 seeAlso:
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 6bb3b5900df1a2afcd4bb42fde3b68397804da46
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12484848b3208dcb0a52e1f2084bbc3a5f4ec359
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217381"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672605"

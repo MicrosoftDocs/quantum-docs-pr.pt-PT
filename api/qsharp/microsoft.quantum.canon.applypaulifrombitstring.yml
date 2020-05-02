@@ -3,27 +3,27 @@ uid: microsoft.quantum.canon.applypaulifrombitstring
 name: ApplyPauliFromBitString
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Aplica um operador Pauli em cada qubit em uma matriz se o bit correspondente de uma matriz booliana corresponde a uma determinada entrada.
-remarks: A matriz booliana e o registro do Quantum devem ser de comprimento igual.
+summary: Aplica um operador Pauli em cada qubit numa matriz se a parte correspondente de uma matriz Boolean corresponder a uma determinada entrada.
+remarks: A matriz booleana e o registo quântico devem ter igual comprimento.
 syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
   - name: pauli
-    summary: Operador Pauli a ser aplicado a `qubits[idx]` onde `bitsApply == bits[idx]`
+    summary: Operador Pauli para `qubits[idx]` se candidatar a onde`bitsApply == bits[idx]`
     isPrimitive: true
     uid: Pauli
   - name: bitApply
-    summary: aplicar Pauli se bit for esse valor
+    summary: aplicar Pauli se bit é este valor
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: Registro booliano que especifica quais qubit correspondentes no `qubits` devem ser operados
+    summary: Registo booleano especificando em `qubits` que qubit correspondente deve ser operado em
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: qubits
-    summary: Quantum registra-se para aplicar seletivamente o operador Pauli especificado
+    summary: Registo quântico no qual aplicar seletivamente o operador Pauli especificado
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a39d19c11a0ce48b2901097ac497c2ad9c707bba
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5a65ec2aae17a1469e820e8cd14a0d50d0639015
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220679"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672433"

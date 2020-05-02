@@ -4,16 +4,16 @@ name: ApplyIfZero
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação com condição em um valor de resultado clássico igual a zero.
+  Aplica uma operação condicionada a um valor clássico do resultado zero.
 
 
-  Devido a uma operação `op` e um valor de resultado `result`, o aplica `op` à `target` se `result` for `Zero`. Se `One`, nada acontecerá com o `target`.
+  Dada `op` uma operação `result`e um `op` valor `target` `result` de `Zero`resultado, aplica-se ao "se" é . Se, `One`nada acontece `target`com o.
 syntax: "operation ApplyIfZero (result : Result, (op : ('T => Unit), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit), target : 'T))"
   types:
   - name: result
-    summary: Um resultado de medida que controla se op é aplicado ou não.
+    summary: Um resultado de medição que controla se a op é aplicada ou não.
     isPrimitive: true
     uid: Result
   - name: op
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: target
-    summary: A entrada à qual a operação é aplicada.
+    summary: A entrada a que a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -38,15 +38,15 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 seeAlso:
 - microsoft.quantum.canon.applyifzeroc
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: c9d524a4be9c3ce6179f59d59c8a83819a611966
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: def6af6461ea91bc1df4ce347a1a35c6fb31cb8a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213641"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672623"

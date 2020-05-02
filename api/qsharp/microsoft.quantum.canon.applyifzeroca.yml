@@ -4,18 +4,18 @@ name: ApplyIfZeroCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação unitário com condição em um valor de resultado clássico igual a zero.
+  Aplica-se uma operação unitária condicionada a um valor de resultado clássico nulo.
 
 
-  Devido a uma operação `op` e um valor de resultado `result`, o aplica `op` à `target` se `result` for `Zero`. Se `One`, nada acontecerá com o `target`.
+  Dada `op` uma operação `result`e um `op` valor `target` `result` de `Zero`resultado, aplica-se ao "se" é . Se, `One`nada acontece `target`com o.
 
-  O sufixo `CA` indica que a operação a ser aplicada é unitário (controlável e adjacenttable).
+  O sufixo `CA` indica que a operação a aplicar é unitária (controlável e adjointável).
 syntax: "operation ApplyIfZeroCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
   types:
   - name: result
-    summary: Um resultado de medida que controla se op é aplicado ou não.
+    summary: Um resultado de medição que controla se a op é aplicada ou não.
     isPrimitive: true
     uid: Result
   - name: op
@@ -33,7 +33,7 @@ input:
     - Adjoint
     - Controlled
   - name: target
-    summary: A entrada à qual a operação é aplicada.
+    summary: A entrada a que a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -43,7 +43,7 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 functors:
 - Adjoint
 - Controlled
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 9ec05f688c3895b2d68fc3f4717401e127fbe641
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64e35b2fc198e7c3df862681e8c16870399f58c7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213607"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672574"
