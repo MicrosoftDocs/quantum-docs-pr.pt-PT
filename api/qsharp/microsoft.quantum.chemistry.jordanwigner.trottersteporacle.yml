@@ -3,16 +3,16 @@ uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
 name: TrotterStepOracle
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Retorna a operação de etapa Trotter e os parâmetros necessários para executá-lo.
+summary: Devolve a operação de etapa trotter e os parâmetros necessários para executá-lo.
 syntax: 'function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: qSharpData
-    summary: Hamiltonian descrito por `JordanWignerEncodingData` formato.
+    summary: Hamiltonian descrito `JordanWignerEncodingData` pelo formato.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: trotterStepSize
-    summary: Tamanho da etapa do integrador Trotter.
+    summary: Tamanho do tamanho do integrador Trotter.
     isPrimitive: true
     uid: Double
   - name: trotterOrder
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Uma tupla em que: `Int` é o número de qubits alocados, `Double` é `1.0/trotterStepSize`e a operação é a etapa Trotter.'
+  - summary: 'Uma tuple `Int` onde: é o número de `Double` `1.0/trotterStepSize`qubits atribuídos, é , e a operação é o passo Trotter.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 168203ef7e62522cf2df3c746ca75ffaf4ab3252
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d78cac1e2f1a3b95007a3572aa7257d1938b97f4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227598"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82662978"

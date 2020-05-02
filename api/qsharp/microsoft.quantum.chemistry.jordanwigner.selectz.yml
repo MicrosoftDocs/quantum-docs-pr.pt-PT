@@ -3,16 +3,16 @@ uid: microsoft.quantum.chemistry.jordanwigner.selectz
 name: SelectZ
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Um unitário $U $ que aplica a portão Pauli $Z $ em um qubits $p $ Condition em um estado de índice $ \ket{p} $. Ou seja, $ $ \begin{align} U\ket {p} \ ket {\ psi} = \ket{p}Z\_p\ket {\ psi} \end{align} $ $
+summary: Um $U$ unitário que aplica o portão Pauli $Z$ num qubits $p$ condicionado num estado indexado $\ket{p}$. Ou seja, $$ \start{align} U\ket{p}\ket{\psi} =\_\ket{p}Z p\ket{\psi} \end{align} $$
 syntax: 'operation SelectZ (indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
 input:
   content: '(indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: indexRegister
-    summary: O estado $ \ket{p} $ deste registro determina o qubit no qual $Z $ é aplicado.
+    summary: O estado $\ket{p}$ deste registo determina o qubit em que $Z$ é aplicado.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: targetRegister
-    summary: Registro de qubits em que os operadores Pauli são aplicados.
+    summary: Registo de qubits em que são aplicados os operadores Pauli.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -25,9 +25,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b0de216ff102b8c969b9e920127e567ed349e874
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4577f684260e3f0898dac1c2dd0794323deaa98e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225065"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82663253"
