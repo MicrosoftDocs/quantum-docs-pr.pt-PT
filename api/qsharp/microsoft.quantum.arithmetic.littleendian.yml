@@ -3,13 +3,13 @@ uid: microsoft.quantum.arithmetic.littleendian
 name: LittleEndian
 type: newtype
 namespace: Microsoft.Quantum.Arithmetic
-summary: Registre-se que codifica um inteiro não assinado na ordem little-endian. O qubit com o índice `0` codifica o menor bit de um inteiro sem sinal.
+summary: Registe-se que codifica um inteiro não assinado por ordem pequena. O qubit `0` com índice codifica a parte mais baixa de um inteiro não assinado.
 remarks: Abreviamos `LittleEndian` como `LE` na documentação.
 syntax: newtype LittleEndian = Qubit[];
 metadata:
-  ms.openlocfilehash: 6431500dfe67b46cab590f0fc31953d9fb80f9af
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de24c79091da80c2f5e9cbeecc8fe9e4bfb9cb89
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218826"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676842"

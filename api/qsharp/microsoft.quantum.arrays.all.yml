@@ -4,7 +4,7 @@ name: All
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dada uma matriz e um predicado que é definido para os elementos da matriz, e verifica se todos os elementos da matriz satisfazem o predicado.
-remarks: "A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma função `predicate: 'T -> Bool` podemos produzir um valor `Bool` que indique se todos os elementos satisfazem `predicate`."
+remarks: "A função é definida para tipos genéricos, ou `'T[]` seja, `predicate: 'T -> Bool` sempre que `Bool` temos uma matriz `predicate`e uma função podemos produzir um valor que indique se todos os elementos satisfazem ."
 examples: >-
   O código seguinte verifica se todos os elementos da matriz não são zero:
 
@@ -28,7 +28,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Uma função de `'T` a `Bool` que é usada para verificar elementos.
+    summary: Uma função `Bool` de a partir daí `'T` é usada para verificar elementos.
     isFunction: true
     input:
       types:
@@ -39,23 +39,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Uma série de elementos sobre `'T`.
+    summary: Uma série de `'T`elementos sobre .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: Um `Bool` valor da função e do predicado aplicado a todos os elementos.
+  - summary: Um `Bool` valor da função e função do predicado aplicada a todos os elementos.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: O tipo de elementos `array`.
+  summary: O tipo `array` de elementos.
 metadata:
-  ms.openlocfilehash: bc21229d0468adcd41f6c460f5325cad9f09ba5c
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: 116a2a537c4712c968187785873c0546ec236762
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320778"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676587"

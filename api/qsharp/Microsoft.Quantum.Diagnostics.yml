@@ -34,21 +34,21 @@ functions:
   summary: Afirma que um valor de ponto flutuante clássico tem o valor esperado até uma pequena tolerância de 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Afirma que dado que os qubits estão todos em $\ket{0}estado de $.
+  summary: Afirma que dado que os qubits estão todos em $\ket{0}$$ estado.
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Afirma que dado que os qubits estão todos em $\ket{0}estado de $até uma tolerância dada.
+  summary: Afirma que dado que os qubits estão todos em $\ket{0}$ estado até uma determinada tolerância.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Tendo em conta duas operações, afirma que agem de forma idêntica para todos os Estados inputs.
 
 
-    Esta afirmação é implementada verificando a ação das operações em todos os estados do formulário $V_0 \otimes... \otimes V_{n-1}$, onde $V_k$ é um dos estados $\ket{0}$, $\ket{1}$, $\ket{+}$ e $\ket{i}$ (+1 eigenstate do operador Pauli Y).
+    Esta afirmação é implementada verificando a ação das operações em todos os estados do formulário $V_0 \otimes... \otimes V_{n-1}$, onde $V_k$ é um dos estados $\ket{0}$, $\ket{1}{+}$ e $\ket{}} e $\ket{i}$ (+1 eigenstate do operador Pauli Y).
 
 
     Esta afirmação utiliza qubits $n$ e requer múltiplas chamadas das operações a serem comparadas.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    Verifica se a operação `givenU` é igual à operação `expectedU` na dimensão da entrada dada, verificando a ação das operações apenas nos vetores a partir da base computacional.
+    Verifica se `givenU` a operação é `expectedU` igual à operação no tamanho da entrada dada, verificando a ação das operações apenas nos vetores a partir da base computacional.
 
     Esta é uma condição necessária, mas não suficiente, para a igualdade de dois unitários.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
@@ -68,21 +68,23 @@ operations:
     Afirma que um qubit no estado esperado.
 
 
-    `expected` representa um vetor complexo, $\ket{\psi} = \start{bmatrix}a & b\end{bmatrix}{{{mathrm{T}}$.
+    `expected`representa um vetor complexo, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.
 
     O primeiro elemento das tuples que representam cada um dos $a$, $b$ é a parte real do número complexo, enquanto o segundo é a parte imaginária.
 
     O último argumento define a tolerância com que a afirmação é feita.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Afirma que o qubit `q` está no eigenstate esperado do operador Pauli Z até uma determinada tolerância.
+  summary: Afirma que o `q` qubit está no eigenstate esperado do operador Pauli Z até uma determinada tolerância.
 newtypes:
+- uid: microsoft.quantum.diagnostics.enabletestingvianame
+  summary: Compilador reconhecido atributo através do qual pode ser definido um nome alternativo que pode ser usado ao carregar um tipo ou callable para fins de teste.
 - uid: microsoft.quantum.diagnostics.test
   summary: Compilador reconhecido atributo usado para marcar um teste de unidade.
 summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações úteis para fins de diagnóstico, incluindo operações de afirmação e funções de reivindicação."
 metadata:
-  ms.openlocfilehash: 353750a6714b1cdd54ff866657a39bb825e34425
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905918"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676946"

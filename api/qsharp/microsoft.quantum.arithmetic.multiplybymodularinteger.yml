@@ -7,7 +7,7 @@ summary: >-
   Executa multiplicação modular por uma constante de inteiro num registo qubit.
 
 
-  Denotemos `modulus` por $N$ e `constMultiplier` por $a dólares.
+  Notemos `modulus` por $N$ `constMultiplier` e por $a$.
 
   Em seguida, esta operação implementa uma operação unitária definida pelo seguinte mapa na base computacional: $$ \begin {align} \ket{y} \mapsto \ket{(a \cdot y) \operatorname{mod} N} \end{align} $$ para todos os $y$ entre $0$ e $N - 1$.
 remarks: >-
@@ -23,7 +23,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: A operação de multiplicação é realizada `modulus`.
+    summary: A operação de multiplicação `modulus`é executada modulo .
     isPrimitive: true
     uid: Int
   - name: multiplier
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 49d46d1dda5afaf4a35667ec98d24aeb51beba1f
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 48a0f19334f65a6b80003d90dc4dc216dc8dee98
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871384"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676726"

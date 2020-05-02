@@ -3,9 +3,9 @@ uid: microsoft.quantum.arrays.enumerated
 name: Enumerated
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Dada uma matriz, retorna uma nova matriz contendo os elementos da matriz original junto com os índices de cada elemento.
+summary: Dada uma matriz, devolve uma nova matriz contendo elementos da matriz original juntamente com os índices de cada elemento.
 examples: >-
-  Os seguintes loops de `for` são equivalentes:
+  Os `for` seguintes ciclos são equivalentes:
 
 
   ```Q#
@@ -30,7 +30,7 @@ input:
 output:
   content: (Int, 'TElement)[]
   types:
-  - summary: Uma nova matriz que contém elments da matriz original junto com seus índices.
+  - summary: Uma nova matriz contendo eléis da matriz original juntamente com os seus índices.
     isArray: true
     types:
     - isPrimitive: true
@@ -41,9 +41,9 @@ typeParameters:
 - uid: "'TElement"
   summary: O tipo de elementos da matriz.
 metadata:
-  ms.openlocfilehash: 471b62b28ef2014584de637d41158fb8ac7c629d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9cfb5a48974128f865ada49df3aa3152bf0f33ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220968"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676515"

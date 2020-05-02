@@ -4,20 +4,20 @@ name: ApplyIfElseRA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma das duas operações de adjointable, dependendo do valor de um resultado clássico.
+  Aplica-se uma de duas operações adjointáveis, dependendo do valor de um resultado clássico.
 
 
-  Dado um resultado `result`, o aplica a operação `zeroOp` com `zeroInput` como sua entrada quando `result` é igual a `Zero`e aplica `oneOp(oneInput)` quando `result == One`.
+  Dado `result`um resultado, `zeroOp` aplica-se a operação `zeroInput` com `Zero`a sua `oneOp(oneInput)` `result == One`entrada quando `result` é igual a , e aplica-se quando .
 syntax: "operation ApplyIfElseRA (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit"
 input:
   content: "(result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U))"
   types:
   - name: result
-    summary: O resultado da medida usado para determinar se `zeroOp` ou `oneOp` é aplicado.
+    summary: O resultado de medição utilizado para determinar se `zeroOp` ou `oneOp` é aplicado.
     isPrimitive: true
     uid: Result
   - name: zeroOp
-    summary: A operação de adjointable a ser aplicada quando `result == Zero`.
+    summary: A operação adjointable a `result == Zero`aplicar quando .
     isOperation: true
     input:
       types:
@@ -30,11 +30,11 @@ input:
     functors:
     - Adjoint
   - name: zeroInput
-    summary: A entrada a ser fornecida para `zeroOp` quando `result == Zero`.
+    summary: A entrada a fornecer `zeroOp` `result == Zero`ao quando .
     uid: "'T"
     isLocal: true
   - name: oneOp
-    summary: A operação de adjointable a ser aplicada quando `result == One`.
+    summary: A operação adjointable a `result == One`aplicar quando .
     isOperation: true
     input:
       types:
@@ -47,7 +47,7 @@ input:
     functors:
     - Adjoint
   - name: oneInput
-    summary: A entrada a ser fornecida para `oneOp` quando `result == One`.
+    summary: A entrada a fornecer `oneOp` `result == One`ao quando .
     uid: "'U"
     isLocal: true
 output:
@@ -57,9 +57,9 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação `zeroOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada `zeroOp` da operação a aplicar condicionalmente.
 - uid: "'U"
-  summary: O tipo de entrada da operação `oneOp` ser aplicado condicionalmente.
+  summary: O tipo de entrada `oneOp` da operação a aplicar condicionalmente.
 functors:
 - Adjoint
 seeAlso:
@@ -69,9 +69,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifelsera
 - microsoft.quantum.canon.applyifelserca
 metadata:
-  ms.openlocfilehash: df838f6eda12db4710ee19cd3c0aeb334935cd22
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6168a991766f07ec5d0fd0a7685f17d02510e038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213913"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676320"

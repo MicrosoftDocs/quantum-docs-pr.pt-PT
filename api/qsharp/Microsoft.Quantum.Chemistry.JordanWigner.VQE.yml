@@ -3,18 +3,18 @@ uid: microsoft.quantum.chemistry.jordanwigner.vqe
 name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 functions:
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
-  summary: Expande a representação compacta dos coeficientes da Jordânia-Wigner para obter um mapeamento um-para-um entre esses e Pauli termos.
+  summary: Expande a representação compacta dos coeficientes Jordan-Wigner, a fim de obter um mapeamento um-para-um entre estes termos e Pauli.
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
-  summary: Computa todos os operadores de medida necessários para computar a expectativa de um termo Wigner da Jordânia.
+  summary: Calcula todos os operadores de medição necessários para calcular a expectativa de um termo Jordan-Wigner.
 operations:
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimateenergy
-  summary: Estima a energia do molécula somando a energia contribuída pelos termos individuais da Jordânia-Wigner.
+  summary: Estima a energia da molécula resumindo a energia contribuida pelos termos individuais de Jordan-Wigner.
 - uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
-  summary: Computa a energia associada a um determinado termo da Jordânia-Wigner Hamiltonian
+  summary: Calcula a energia associada a um determinado termo Jordan-Wigner Hamiltonian
 metadata:
-  ms.openlocfilehash: 5c56599c1926f2a11631c74cc03545c43a724eeb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 60becf06fdae7f096eee7d2752e2f606b98e2890
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73057225"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677065"
