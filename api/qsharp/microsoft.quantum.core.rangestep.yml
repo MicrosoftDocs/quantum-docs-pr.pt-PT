@@ -3,8 +3,8 @@ uid: microsoft.quantum.core.rangestep
 name: RangeStep
 type: function
 namespace: Microsoft.Quantum.Core
-summary: Retorna o inteiro que especifica como o próximo valor de um intervalo é calculado.
-remarks: O primeiro elemento de uma expressão de intervalo é `start`, seu segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `end` seja passado.
+summary: Devolve o inteiro que especifica como o próximo valor de uma gama é calculado.
+remarks: O primeiro elemento de `start`uma expressão de `start+step`alcance é `start+step+step`, o `end` seu segundo elemento é , o terceiro elemento é , etc., até que seja passado.
 syntax: 'function RangeStep (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -15,13 +15,13 @@ input:
 output:
   content: Int
   types:
-  - summary: O valor de etapa definido do intervalo especificado.
+  - summary: O valor definido da gama.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0195f0f2eb03c163ae08cc789867627286a44097
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 30f67fba4e263f3b01bec1c360198728087783f2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066613"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677333"

@@ -3,14 +3,14 @@ uid: microsoft.quantum.characterization.estimatefrequencya
 name: EstimateFrequencyA
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Devido a uma preparação que é de adjointable e de medição, o estima a frequência com a qual essa medida é realizada com sucesso (retorna `Zero`) executando um determinado número de avaliações.
-remarks: Para operações de adjointable, algumas suposições podem ser feitas, como chamar a operação, preparará o qubits para exatamente o mesmo estado, que permite que os computadores de destino façam algumas otimizações de desempenho.
+summary: Dada uma preparação adjointável e a medição, estima a `Zero`frequência com que essa medição é bem sucedida (devoluções) através da realização de um determinado número de ensaios.
+remarks: Para operações adjointable, podem ser feitos certos pressupostos como chamar a operação irá preparar os qubits exatamente para o mesmo estado, que permitem às máquinas-alvo fazer algumas otimizações de desempenho.
 syntax: 'operation EstimateFrequencyA (preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation : (Qubit[] => Unit is Adj), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation
-    summary: Uma operação de adjointable $P $ que prepara um determinado estado $ \rho $ em seu registro de entrada.
+    summary: Uma operação adjointable $P$ que prepara um determinado estado $\rho$ no seu registo de entrada.
     isOperation: true
     input:
       types:
@@ -24,7 +24,7 @@ input:
     functors:
     - Adjoint
   - name: measurement
-    summary: Uma operação $M $ representa a medida de interesse.
+    summary: Uma operação $M$ que representa a medição de interesses.
     isOperation: true
     input:
       types:
@@ -36,23 +36,23 @@ input:
       - isPrimitive: true
         uid: Result
   - name: nQubits
-    summary: O número de qubits em que cada ação de preparação e medição atua.
+    summary: O número de qubits em que a preparação e a medição de cada ato são.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
-    summary: O número de vezes que a medida deve ser executada para estimar a frequência de interesse.
+    summary: O número de vezes que a medição deve ser efetuada para estimar a frequência de interesses.
     isPrimitive: true
     uid: Int
 output:
   content: Double
   types:
-  - summary: Uma estimativa de $ \hat{p} $ da frequência com a qual $M (P (\ket{00 \cdots 0} \bra{00 \cdots 0})) $ retorna `Zero`, obtida usando o estimador binomial não polarizado $ \hat{p} = n\_{\uparrow}/n\_{\Text{Measurements}} $, em que $n\_{\uparrow} $ é o número de `Zero` resultados observados.
+  - summary: Uma estimativa $\hat{p}$ da frequência com que $M (P(\ket{00 \cdots 0}\bra{00 \cdots 0})})$} devoluções, `Zero`obtidas usando o\_estimador binomial imparcial $\hat{p} =\_n {\uparrow} / `Zero` n\_{\text{measurements}}}},onde $n {\uparrow}
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: cfc90cee0b98b88391ee23218489669600a97920
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 064f6d3cf9c075d635ed27ac4192b5aa4045e4d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229179"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677708"

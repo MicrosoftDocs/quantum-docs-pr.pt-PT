@@ -3,18 +3,18 @@ uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
 name: AssertAllZeroWithinTolerance
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
-summary: Assert que determinados qubits estão todos em $ \ket{0}$ State até uma determinada tolerância.
+summary: Afirma que dado que os qubits estão todos em $\ket{0}$ estado até uma determinada tolerância.
 syntax: 'operation AssertAllZeroWithinTolerance (qubits : Qubit[], tolerance : Double) : Unit'
 input:
   content: '(qubits : Qubit[], tolerance : Double)'
   types:
   - name: qubits
-    summary: Qubits que são declarados como em $ \ket{0}$ State.
+    summary: Qubits que são afirmados estar{0}em $\ket $$ estado.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: Precisão com a qual o estado deve estar em $ \ket{0}$ State
+    summary: Precisão com que o Estado deve{0}estar em $\ket $ estado
     isPrimitive: true
     uid: Double
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - assertqubitwithintolerance
 metadata:
-  ms.openlocfilehash: 0e3b560d08077bb353147d98a921a2c2ca3ae202
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae55998333d6bc3a4d8b41341842147d80dcd183
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066545"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677300"

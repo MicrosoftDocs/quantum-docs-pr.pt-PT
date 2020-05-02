@@ -3,13 +3,13 @@ uid: microsoft.quantum.canon.swapreverseregister
 name: SwapReverseRegister
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Usa Gates de permuta para reverter a ordem de qubits em um registro.
+summary: Utiliza portões SWAP para inverter a ordem dos qubits num registo.
 syntax: 'operation SwapReverseRegister (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: A ordem qubits da qual deve ser revertida usando SWAP Gates
+    summary: A ordem qubits que deve ser invertida utilizando portões SWAP
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -22,9 +22,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4c1061d67d89ee813202114879f04a94bbd39b59
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3e174a7f8248978ba32533213fd5b3ad1d2f7511
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217143"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678108"

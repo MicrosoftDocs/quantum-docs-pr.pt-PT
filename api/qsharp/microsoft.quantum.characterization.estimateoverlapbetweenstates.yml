@@ -4,7 +4,7 @@ name: EstimateOverlapBetweenStates
 type: operation
 namespace: Microsoft.Quantum.Characterization
 summary: Tendo em conta duas operações que cada uma prepara cópias de um estado, estima a sobreposição quadrada entre os Estados preparados por cada operação.
-remarks: Esta operação utiliza o teste SWAP para encontrar $$ \start{align} \left; \braket{00\cdots 0 / V^{\dagger} U  00\cdots 0} \right^2 \end{align} $$ onde $U$ é a representação unitária da ação de `preparation1`, e onde $V$ corresponde a `preparation2`.
+remarks: Esta operação utiliza o teste SWAP para encontrar $$ \start{align} \left; \braket{00\cdots 0 / V^{\dagger} U [ 00\cdots 0} \right^2 \end{align} $$ onde $U$ é a `preparation1`representação unitária da `preparation2`ação de , e onde $V$ corresponde a .
 syntax: 'operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int)'
@@ -38,7 +38,7 @@ input:
     functors:
     - Adjoint
   - name: nQubits
-    summary: O número de qubits em que `commonPreparation`, `preparation1`e `preparation2` todos atuam.
+    summary: O número de qubits `preparation1`em `preparation2` que, `commonPreparation`e todos agiram.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -54,9 +54,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: aa8713a1ef7176793a0b11baa675b22e48d61411
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 6eefd9b32b73d3f73bb31ff81509466e754e20d6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872619"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677677"

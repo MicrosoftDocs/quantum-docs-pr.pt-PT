@@ -4,15 +4,15 @@ name: UncurriedOpA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Dada uma função que retorna operações, retorna uma nova operação que usa as duas entradas como uma tupla.
+  Dada uma função que devolve as operações, devolve uma nova operação que toma ambas as inputs como uma tuple.
 
-  O modificador `A` indica que as operações são adjointable.
+  O modificador `A` indica que as operações são adjointáveis.
 syntax: "function UncurriedOpA (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 'U) => Unit is Adj)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Adj)))"
   types:
   - name: curriedOp
-    summary: Uma função que retorna operações.
+    summary: Uma função que devolve as operações.
     isFunction: true
     input:
       types:
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Adj)
   types:
-  - summary: Uma nova operação `op` de modo que `op(t, u)` é equivalente a `(curriedOp(t))(u)`.
+  - summary: Uma nova `op` operação `op(t, u)` que `(curriedOp(t))(u)`equivale a .
     isOperation: true
     input:
       types:
@@ -50,15 +50,15 @@ output:
     - Adjoint
 typeParameters:
 - uid: "'T"
-  summary: O tipo do primeiro argumento de uma função na forma curried.
+  summary: O tipo do primeiro argumento de uma função curada.
 - uid: "'U"
-  summary: O tipo do segundo argumento de uma função na forma curried.
+  summary: O tipo do segundo argumento de uma função curada.
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 305f90bd71f2dc6e790e470df649e5a2a5afb9ad
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 92ec8c1ae333bcd319c7d63f89fb8614f0793d79
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216990"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677990"
