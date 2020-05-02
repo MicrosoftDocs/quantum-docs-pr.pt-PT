@@ -3,13 +3,13 @@ uid: microsoft.quantum.arithmetic.reversedopbea
 name: ReversedOpBEA
 type: function
 namespace: Microsoft.Quantum.Arithmetic
-summary: Dada uma operação que usa uma entrada big-endian, retorna uma nova operação que usa uma entrada little-endian.
+summary: Dada uma operação que requer uma entrada de grande fim, devolve uma nova operação que requer uma entrada pouco endiana.
 syntax: 'function ReversedOpBEA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj)) : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj))'
   types:
   - name: op
-    summary: A operação cuja entrada deve ser revertida.
+    summary: A operação cuja entrada deve ser invertida.
     isOperation: true
     input:
       types:
@@ -23,7 +23,7 @@ input:
 output:
   content: (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj)
   types:
-  - summary: Uma nova operação que aceita sua entrada como um registro little-endian.
+  - summary: Uma nova operação que aceita a sua entrada como um registo pequeno-endiano.
     isOperation: true
     input:
       types:
@@ -40,9 +40,9 @@ seeAlso:
 - reversedopbec
 - reversedopbeca
 metadata:
-  ms.openlocfilehash: 52c9a2199a3298caa468708ef9225651b9a82017
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c67352e8b6e04304d6ab45095a3a487bc5de2862
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214746"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679355"

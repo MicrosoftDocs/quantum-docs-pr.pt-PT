@@ -3,13 +3,13 @@ uid: microsoft.quantum.arithmetic.applyreversedopbeca
 name: ApplyReversedOpBECA
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Aplica uma operação que usa a entrada big-endian em uma codificação de registro de um inteiro sem sinal usando o formato little-endian.
+summary: Aplica uma operação que leva a entrada de grande endiano a um registo codificando um inteiro não assinado usando formato pouco endiano.
 syntax: 'operation ApplyReversedOpBECA (op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Ctl + Adj), register : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
-    summary: Operação que atua em um registro big-endian.
+    summary: Operação que atua num registo de grandes endienses.
     isOperation: true
     input:
       types:
@@ -22,7 +22,7 @@ input:
     - Adjoint
     - Controlled
   - name: register
-    summary: Um registro little-endian a ser transformado.
+    summary: Um pequeno registo endiano a ser transformado.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -37,9 +37,9 @@ seeAlso:
 - applyreversedopbea
 - applyreversedopbec
 metadata:
-  ms.openlocfilehash: b905b37ebd68c3eedd4d7d6e2d0a5a4dc15abf1d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0deee5e330f38ac8fd956e36fbd9f3d2cf2bdf64
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215069"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679984"

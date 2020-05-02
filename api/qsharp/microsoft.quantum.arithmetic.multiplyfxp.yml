@@ -3,20 +3,20 @@ uid: microsoft.quantum.arithmetic.multiplyfxp
 name: MultiplyFxP
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Multiplica dois números de ponto fixo em registros de Quantum.
-remarks: A implementação atual requer que os três números de ponto fixo tenham a mesma posição de ponto e o mesmo número de qubits.
+summary: Multiplica dois números fixos nos registos quânticos.
+remarks: A implementação atual exige que os três números fixos tenham a mesma posição de ponto e o mesmo número de qubits.
 syntax: 'operation MultiplyFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: fp1
-    summary: Primeiro número de ponto fixo.
+    summary: Primeiro número fixo.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: fp2
-    summary: Segundo número de ponto fixo.
+    summary: Segundo número fixo.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Resultado número de ponto fixo, deve estar no estado $ \ket{0}$ inicialmente.
+    summary: Resultado número fixo de ponto, deve{0}estar no estado $\ket $$ inicialmente.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 0623deedf7dca05832ec1edd7c5771d7bc10aa08
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b37ca00a41df323f2cab854eecd40c276696cbe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214831"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679463"

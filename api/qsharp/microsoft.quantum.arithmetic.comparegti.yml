@@ -3,19 +3,19 @@ uid: microsoft.quantum.arithmetic.comparegti
 name: CompareGTI
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: 'Wrapper para comparação de inteiros: `result = x > y`.'
+summary: 'Invólucro para comparação `result = x > y`de inteiros: .'
 syntax: 'operation CompareGTI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
   types:
   - name: xs
-    summary: Primeiro $n número de $-bit
+    summary: Primeiro número $n$-bit
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: Segundo $n número de $-bit
+    summary: Segundo número $n$-bit
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: Será invertido se $x > y $
+    summary: Será virado se $x > y$
     isPrimitive: true
     uid: Qubit
 output:
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 90145423307847470212f593c83a6aaadb01a326
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c7db5342b4a01dcb959b12c87dc801b7b7a8f2b3
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221274"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679796"

@@ -3,16 +3,16 @@ uid: microsoft.quantum.amplitudeamplification.rotationphases
 name: RotationPhases
 type: newtype
 namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Fases para uma sequência de rotações de qubit única na amplificação de amplitude.
+summary: Fases para uma sequência de rotações de moqubit na amplificação de amplitude.
 remarks: >-
-  O primeiro parâmetro é uma matriz de fases para reflexões, expressa como um produto de rotações de qubit único.
+  O primeiro parâmetro é um conjunto de fases para reflexões, expressas como produto de rotações de qubit único.
 
-  [ G.H. Baixa, I. L Chuang, https://arxiv.org/abs/1707.05391].
+  [G.H. Baixo, I.L. Chuang, https://arxiv.org/abs/1707.05391].
 syntax: newtype RotationPhases = Double[];
 metadata:
-  ms.openlocfilehash: 1ad6a80a10cc3880122303a7bbd708087976f906
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bcf8502387a5f4479730bcbb41eaf03fa7925f87
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73215460"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680083"

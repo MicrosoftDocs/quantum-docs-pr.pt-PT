@@ -3,13 +3,13 @@ uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
 name: IdenticalPointPosFactFxP
 type: function
 namespace: Microsoft.Quantum.Arithmetic
-summary: Declare que todos os números de ponto fixo na matriz fornecida têm posições de ponto idênticas ao contar do bit menos significativo. Ou seja, o número de bits e a posição do ponto de menos deve ser constante para todos os números de ponto fixo na matriz.
+summary: Afirme que todos os números de pontos fixos na matriz fornecida têm posições de ponto idênticas ao contar da parte menos significativa. Ou seja, o número de bits menos posição de ponto deve ser constante para todos os números fixos da matriz.
 syntax: 'function IdenticalPointPosFactFxP (fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[]) : Unit'
 input:
   content: '(fixedPoints : Microsoft.Quantum.Arithmetic.FixedPoint[])'
   types:
   - name: fixedPoints
-    summary: Matriz de números de ponto fixo Quantum que serão verificados quanto à compatibilidade (usando asserções).
+    summary: Conjunto de números de pontos fixos quânticos que serão verificados para a compatibilidade (utilizando afirmações).
     isArray: true
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 2cd4bcb86490cf468215c507d32d8dc015af2a5b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4c8d3c487901e7e63c22305ecdeaf3f13dd50da0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220985"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679578"
