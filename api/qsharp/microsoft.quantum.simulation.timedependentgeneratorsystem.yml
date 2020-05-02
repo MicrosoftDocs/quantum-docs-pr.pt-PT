@@ -3,12 +3,12 @@ uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 name: TimeDependentGeneratorSystem
 type: newtype
 namespace: Microsoft.Quantum.Simulation
-summary: Representa um gerador dinâmico dependente de tempo como uma função de tempo até o valor do gerador dinâmico nesse momento.
+summary: Representa um gerador dinâmico dependente do tempo em função, desde o tempo até ao valor do gerador dinâmico da época.
 syntax: newtype TimeDependentGeneratorSystem = (Double -> Microsoft.Quantum.Simulation.GeneratorSystem);
 metadata:
-  ms.openlocfilehash: c57df9cdeda15479b63c6adf0ae559e4766ce949
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cc7894d1d136de59b9d065bc66d8109906291992
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065287"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687289"

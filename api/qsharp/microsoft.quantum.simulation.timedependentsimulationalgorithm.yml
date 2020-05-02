@@ -4,17 +4,17 @@ name: TimeDependentSimulationAlgorithm
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Representa um algoritmo de simulação dependente de tempo.
+  Representa um algoritmo de simulação dependente do tempo.
 
 
-  Uma técnica de simulação dependente de tempo converte um <xref:microsoft.quantum.simulation.evolutionschedule>
+  Uma técnica de simulação dependente do tempo converte um<xref:microsoft.quantum.simulation.evolutionschedule>
 
-  para o tempo de evolução unitário de um intervalo de tempo.
+  para evolução unitária do tempo para algum intervalo de tempo.
 syntax: newtype TimeDependentSimulationAlgorithm = ((Double, Microsoft.Quantum.Simulation.EvolutionSchedule, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0af6aa57fceb45254fa4cf13b97dad81f44fa237
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2467e0756a80ef14461dea16f5b84d2dff74825c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219931"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687281"
