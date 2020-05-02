@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.assertprobintbe
 name: AssertProbIntBE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: AssertProbIntBE foi preterido. Use @ "assertprobint (stateindex, prob, bigendianaslittleendian (qubits), tolerância)" em vez disso.
+summary: A AssertProbIntBE foi depreciada. Por favor use @"assertprobint (stateindex, prob, bigendianaslittleendian(qubits), tolerância)" em vez disso.
 syntax: 'operation AssertProbIntBE (stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double) : Unit'
 input:
   content: '(stateIndex : Int, prob : Double, qubits : Microsoft.Quantum.Arithmetic.BigEndian, tolerance : Double)'
@@ -25,9 +25,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 0a4ba2bae2a28e0f54f8c168323a308788cb7614
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: e83f8e1d5def6190d54249ebde754eb4bb221436
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74864122"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674301"

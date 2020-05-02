@@ -3,8 +3,8 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: As declarações que medem o qubits determinado na base de Pauli especificada terão o resultado fornecido com a probabilidade determinada, dentro de certa tolerância.
-remarks: Observe que as versões adjacente e controladas dessa operação não verificarão a condição.
+summary: Afirma que medir os qubits dado na base pauli dada terá o resultado dado com a probabilidade dada, dentro de alguma tolerância.
+remarks: Note que as versões Adjoint e Controlled desta operação não verificarão a condição.
 examples: >-
   ```qsharp
 
@@ -20,25 +20,25 @@ input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: Um efeito de medida para declarar a probabilidade de, expresso como um operador qubit Pauli.
+    summary: Um efeito de medição para afirmar a probabilidade de, expresso como um operador de Pauli multiqubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Um registro no qual fazer a asserção.
+    summary: Um registo para fazer a afirmação.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Um resultado esperado de `Measure(bases, qubits)`.
+    summary: Um resultado `Measure(bases, qubits)`esperado de .
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: A probabilidade com a qual o resultado especificado é esperado.
+    summary: A probabilidade com que se espera o resultado dado.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Uma mensagem a ser relatada se a asserção falhar.
+    summary: Uma mensagem a ser relatada se a afirmação falhar.
     isPrimitive: true
     uid: String
   - name: tol
@@ -55,9 +55,9 @@ functors:
 seeAlso:
 - assert
 metadata:
-  ms.openlocfilehash: 74260a7e80199049e2854a5cdb7988e5321adf83
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216650"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674166"

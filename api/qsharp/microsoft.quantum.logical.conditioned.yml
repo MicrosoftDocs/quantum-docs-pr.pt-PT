@@ -3,9 +3,9 @@ uid: microsoft.quantum.logical.conditioned
 name: Conditioned
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna um dos dois valores, dependendo do valor de uma condição booliana.
+summary: Devolve um de dois valores, dependendo do valor de uma condição booleana.
 remarks: >-
-  Ao contrário do operador de `?|`, essa função não é de curto circuito, de modo que ambas as entradas são totalmente avaliadas.
+  Ao `?|` contrário do operador, esta função não faz curto-circuito, de modo a que ambas as inputs sejam totalmente avaliadas.
 
 
   Até o comportamento de curto-circuito, os seguintes são equivalentes:
@@ -23,27 +23,27 @@ input:
   content: "(condition : Bool, ifTrue : 'T, ifFalse : 'T)"
   types:
   - name: condition
-    summary: Uma condição usada para controlar qual entrada é retornada.
+    summary: Uma condição usada para controlar a entrada devolvida.
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: O valor a ser retornado quando `condition` é `true`.
+    summary: O valor a `condition` ser `true`devolvido quando é.
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: O valor a ser retornado quando `condition` é `false`.
+    summary: O valor a `condition` ser `false`devolvido quando é.
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: '`ifTrue` se `condition` for `true`e `ifFalse` caso contrário.'
+  - summary: '`ifTrue`se `condition` `true`for, `ifFalse` e de outra forma.'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: f26e540b181ce405125dbf80cd97c3e177ad9531
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233344"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674069"
