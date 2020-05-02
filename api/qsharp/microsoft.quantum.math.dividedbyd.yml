@@ -3,29 +3,29 @@ uid: microsoft.quantum.math.dividedbyd
 name: DividedByD
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o quociente de duas entradas.
+summary: Devolve o quociente de duas entradas.
 syntax: 'function DividedByD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
   types:
   - name: a
-    summary: A primeira entrada $a $ a ser dividida.
+    summary: A primeira entrada $a$ a ser dividida.
     isPrimitive: true
     uid: Double
   - name: b
-    summary: A segunda entrada $b $ a ser dividida.
+    summary: A segunda entrada $b$ a ser dividida.
     isPrimitive: true
     uid: Double
 output:
   content: Double
   types:
-  - summary: O quociente $a/b $.
+  - summary: O quociente $a / b$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 8be5ff05b3a878958ffb61f6be3113c37f3d1dcd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7ec1a573f8d894264b400ec79a794b0ac487c0b4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229740"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673925"

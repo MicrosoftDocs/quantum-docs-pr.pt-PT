@@ -20,7 +20,7 @@ functions:
 - uid: microsoft.quantum.arrays.filtered
   summary: Dada uma matriz e um predicado que é definido para os elementos da matriz, devolve uma matriz que consiste nos elementos que satisfazem o predicado.
 - uid: microsoft.quantum.arrays.fold
-  summary: Iterates uma função `f` através de um `array`de matriz, retornando `f(f(f(initialState, array[0]), array[1]), ...)`.
+  summary: Iterates uma `f` função `array`através `f(f(f(initialState, array[0]), array[1]), ...)`de uma matriz, retornando .
 - uid: microsoft.quantum.arrays.head
   summary: Devolve o primeiro elemento da matriz.
 - uid: microsoft.quantum.arrays.indexof
@@ -69,9 +69,9 @@ operations:
 - uid: microsoft.quantum.arrays.foreach
   summary: Dada uma matriz e uma operação definida para os elementos da matriz, devolve uma nova matriz que consiste nas imagens da matriz original sob a operação.
 metadata:
-  ms.openlocfilehash: 422564f632efd7a6d093d78358a15ee012f918f8
-  ms.sourcegitcommit: a0e50c5f07841b99204c068cf5b5ec8ed087ffea
+  ms.openlocfilehash: a9088a037953f62ab7193ea525a6e71d43fe2fb2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 03/26/2020
-  ms.locfileid: "80320727"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673395"

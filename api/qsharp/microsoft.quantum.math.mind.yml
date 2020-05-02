@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.mind
 name: MinD
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o menor de dois números especificados.
-remarks: Consulte [System. Math. min](https://docs.microsoft.com/dotnet/api/system.math.min) para obter mais detalhes.
+summary: Devolve o menor de dois números especificados.
+remarks: Consulte [o System.Math.Min](https://docs.microsoft.com/dotnet/api/system.math.min) para mais detalhes.
 syntax: 'function MinD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 6a0e17a5be3d9f774b2bd79a8621cb991d563737
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fd1b404ffa5afeb25541992d230ffb1027d4b7b4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066596"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673655"

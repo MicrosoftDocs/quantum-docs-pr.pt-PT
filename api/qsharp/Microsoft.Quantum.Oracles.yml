@@ -4,15 +4,15 @@ name: Microsoft.Quantum.Oracles
 summary: " # <a name=\"summary\"></a>Resumo\n Estes espaços de nome fornecem tipos definidos pelo utilizador para decorar vários tipos de oráculos pelo uso pretendido em algoritmos quânticos, tais como a estimativa de fase e amplificação de amplitude."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Converte um oráculo de `StateOracle` tipo para `DeterministicStateOracle`.
+  summary: Converte um oráculo de tipo `StateOracle` para `DeterministicStateOracle`.
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combina os oráculos `DeterministicStateOracle` e `ObliviousOracle`.
+  summary: Combina os oráculos `DeterministicStateOracle` e. `ObliviousOracle`
 - uid: microsoft.quantum.oracles.oracletodiscrete
   summary: Dada uma operação que representa um oráculo "black-box", devolve um oráculo de tempo discreto que representa o oráculo "black-box" repetido várias vezes.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
   summary: Constrói reflexão sobre um dado estado de um oráculo.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Converte um oráculo de `DeterministicStateOracle` tipo para `StateOracle`.
+  summary: Converte um oráculo de tipo `DeterministicStateOracle` para `StateOracle`.
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
@@ -28,7 +28,7 @@ newtypes:
     A entrada para o oráculo $O$ é:
 
 
-    - O registo que armazenará o estado quântico desejado $\ket{\psi}\_s$.
+    - O registo que armazenará o estado quântico desejado\_$\ket{\psi} s$.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
     Representa um oráculo de tempo discreto.
@@ -45,7 +45,7 @@ newtypes:
 
     - O registo de $a$ que $O$ atua.
 
-    - O registo do sistema $s$ em que é aplicado o $U unitário desejado, pós-seleccionado no registo $a$ estando no estado $\ket{t}\_a$.
+    - O registo do sistema $s$ em que é aplicado o $U desejado, selecionado no registo\_$a$ estando no estado $\ket{t} a$.
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Representa um oráculo de reflexão.
@@ -67,11 +67,11 @@ newtypes:
 
     - Um inteiro a indexar o qubit da bandeira $f$.
 
-    - O registo do sistema $s$ que armazenará o estado quântico desejado $\ket{\psi}\_s$.
+    - O registo do sistema $s$ que armazenará o estado\_quântico desejado $\ket{\psi} s$.
 metadata:
-  ms.openlocfilehash: 7e582286b69563bc4baa856f5236e5c2bd292ae0
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76870008"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673111"

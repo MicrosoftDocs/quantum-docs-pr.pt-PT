@@ -3,13 +3,13 @@ uid: microsoft.quantum.extensions.diagnostics
 name: Microsoft.Quantum.Extensions.Diagnostics
 functions:
 - uid: microsoft.quantum.extensions.diagnostics.dumpmachine
-  summary: "\n> [!WARNING]\n> Preterido\n\nDumpMachine foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.dumpmachine\".\nUse @\"microsoft.quantum.diagnostics.dumpmachine\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA Máquina de Despejo foi depreciada. Por @\"microsoft.quantum.diagnostics.dumpmachine\" favor, use em vez disso.\nPor @\"microsoft.quantum.diagnostics.dumpmachine\"favor, use ."
 - uid: microsoft.quantum.extensions.diagnostics.dumpregister
-  summary: "\n> [!WARNING]\n> Preterido\n\nDumpRegister foi preterido. Em vez disso, use @\"microsoft.quantum.diagnostics.dumpregister\".\nUse @\"microsoft.quantum.diagnostics.dumpregister\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nDumpRegister foi depreciado. Por @\"microsoft.quantum.diagnostics.dumpregister\" favor, use em vez disso.\nPor @\"microsoft.quantum.diagnostics.dumpregister\"favor, use ."
 metadata:
-  ms.openlocfilehash: 71f997adf7dbca7e45250652032237c07f1354e5
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: dcd10bf143cd50e937cb6ad0d81f15247401c2b8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74858297"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673275"

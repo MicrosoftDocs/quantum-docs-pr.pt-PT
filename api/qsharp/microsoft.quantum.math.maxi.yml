@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.maxi
 name: MaxI
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o maior de dois números especificados.
-remarks: Consulte [System. Math. Max](https://docs.microsoft.com/dotnet/api/system.math.max) para obter mais detalhes.
+summary: Devolve o maior de dois números especificados.
+remarks: Consulte [system.math.Max](https://docs.microsoft.com/dotnet/api/system.math.max) para mais detalhes.
 syntax: 'function MaxI (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: b5417202d1051f767f41f40ca8bb02d49b722091
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b783cc228d0512e78c5cca29b2d40dfbf408f57c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234942"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673695"

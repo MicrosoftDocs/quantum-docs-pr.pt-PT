@@ -4,21 +4,21 @@ name: ReflectionOracle
 type: newtype
 namespace: Microsoft.Quantum.Oracles
 summary: >-
-  Representa uma reflexão do Oracle.
+  Representa um oráculo de reflexão.
 
 
-  Uma reflexão do Oracle, $O $, tem entradas:
+  Um oráculo de reflexão, $O$, tem inputs:
 
 
-  - A fase $ \phi $ pela qual girar o subespaço refletido.
+  - A fase $\phi$ para rodar o subespaço refletido.
 
-  - O qubit se registra no qual executar a reflexão determinada.
-remarks: Este Oracle $O = \boldone-(1-e ^ {i \phi}) \ket{\psi}\bra{\psi} $ executa uma reflexão parcial por uma fase $ \phi $ sobre um único estado puro $ \ket{\psi} $.
+  - O registo qubit sobre o qual realizar a reflexão dada.
+remarks: Este oráculo $O = \boldone - (1 - e^{i \phi}) \ket{\psi}\bra{\psi}} realiza uma reflexão parcial por uma fase $\phi$ sobre um único estado puro $\ket{\psi}$.
 syntax: newtype ReflectionOracle = ((Double, Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 7ca6551a83ae279c5a937556d7c2c9dde98e4522
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b75683aa7178248510c5f336e3dcda28623606af
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230862"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673518"

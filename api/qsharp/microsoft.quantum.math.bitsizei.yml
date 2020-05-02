@@ -4,28 +4,28 @@ name: BitSizeI
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  Para um `a`inteiro não negativo, retorna o número de bits necessários para representar `a`.
+  Para um inteiro não `a`negativo, devolve o número de `a`bits necessários para representar .
 
 
-  Ou seja, retorna o menor $n $, que $a < 2 ^ n $.
+  Ou seja, devolve o menor $n$ de tal forma que $a < 2^n$.
 syntax: 'function BitSizeI (a : Int) : Int'
 input:
   content: '(a : Int)'
   types:
   - name: a
-    summary: O inteiro cujo tamanho de bit deve ser calculado.
+    summary: O inteiro cujo tamanho é para ser calculado.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: O tamanho de bits de `a`.
+  - summary: O tamanho de `a`.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 5faf7961011c666b333cc9befc3da9af4872330d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8bbf4e02faeaca1731ce2461160ffcb374448948
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230182"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673967"

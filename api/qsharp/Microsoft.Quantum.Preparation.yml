@@ -8,17 +8,17 @@ functions:
     Computa a esfera bloch coordena para um estado de um único qubit.
 
 
-    Tendo em conta dois números complexos $a0, a1$ que representam o estado qubit, computa coordenadas na esfera do Bloch de tal forma que $a0 \ket{0} + a1 \ket{1} = r e{itit}(e^{-i \phi /2}\cos{(\theta/2)}\ket{0}+e^{i \phi /2}\sin{(\theta/2){1}}
+    Tendo em conta dois números complexos $a0, a1$ que representam o estado qubit, computa coordenadas na esfera do Bloch de tal forma que $a0{0} \ket + a1 \ket{1} = r e^{it}(e^{-i \phi /2}\cos{(\theta/2)}\ket{0}+e^{i \phi /2}\sin{(\theta/2)\}{1}
 - uid: microsoft.quantum.preparation.quantumrom
   summary: >-
     Usa a técnica de ROM quântica para representar uma determinada matriz de densidade.
 
 
-    Dada uma lista de coeficientes de $N$alpha_j$, isto devolve um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $\tilde\rho\rho\sum_{j=0}^{N-1}p_j\ket{j}\bra{j}$ da purificação da matriz de densidade $\rho=\sum_{j=0}^{N-1}\frac{j}} alpha_j} {\sum_k alpha_k} \ket{j}\bra{j}$. Nesta aproximação, o erro $\epsilon$ é tal que $p_j-\frac{alpha_j. {\sum_k \alpha_k; \le \epsilon / N$ e $\|\tilde\rho - \rho\| \le \epsilon$. Por outras palavras, $$ \begin {align} U\ket{0}^{\lceil\log_2 N\rceil}\ket{0}^{m}=\sum_{j=0}^{N-1}\sqrt{p_j} \ket{j}\ket{\text{{trash}_j}}
+    Dada uma lista de coeficientes de $N$alpha_j$, isto devolve um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $\tilde\rho\sum_{j=0}^{N-1}p_j\ket{j}\bra{j}$ da purificação da matriz de densidade $\rho=\sum_{j=0}^{N-1}\frac{[alpha_j]} {\sum_k [alpha_k]} \ket{j}\bra{j}$. Nesta aproximação, o erro $\epsilon$ é tal que $[p_j-\frac{[alpha_j]. {\sum_k [\alpha_k]; \le \epsilon / N$ e $\|\tilde\rho - \rho\| \le \epsilon$. Por outras palavras, $$ \begin{align} U\ket{0}^{\lceil\log_2{0}N\rceil}\ket ^{m}=\sum_{j=0}^{N-1}\sqrt{p_j} \ket{j}\ket{\text{trash}_j}.
 
     \end{align} $$
 - uid: microsoft.quantum.preparation.quantumromqubitcount
-  summary: Devolve o número total de qubits que devem ser atribuídos à operação devolvida por `QuantumROM`.
+  summary: Devolve o número total de qubits que devem `QuantumROM`ser atribuídos à operação devolvida por .
 - uid: microsoft.quantum.preparation.statepreparationcomplexcoefficients
   summary: >-
     Devolve uma operação que prepara um estado quântico específico.
@@ -59,7 +59,7 @@ operations:
     Em pares, dois registos qubit.
 
 
-    Ou seja, dado dois registos, prepara o estado maximamente emaranhado $\frac{1}{\sqrt{2}} \{00} à esquerda (\ket  + \ket{11} \right)$ entre cada par de qubits nos respetivos registos, assumindo que cada registo começa no estado $\ket{0\cdots 0}$.
+    Ou seja, dado dois registos, prepara o{1}estado maximamente{2}emaranhado $\frac{00} {\sqrt } \left (\ket + \ket{11} \right)$ entre cada par de qubits nos respetivos registos, assumindo que cada registo começa no estado $\ket{0\cdots 0}$.
 - uid: microsoft.quantum.preparation.prepareidentity
   summary: >-
     Dado um registo, prepara esse registo no estado maximamente misto.
@@ -68,33 +68,33 @@ operations:
     O registo é preparado no estado $\boldone / 2^N$ aplicando o canal de despolarização completo a cada qubit, onde $N$ é o comprimento do registo.
 - uid: microsoft.quantum.preparation.preparequbit
   summary: >-
-    Prepara um qubit no eigenstate +1 (`Zero`) do dado operador Pauli.
+    Prepara um qubit no`Zero`eigenstate +1 do operador Pauli.
 
     Se o operador de identidade for administrado, o qubit é preparado no estado máximo misturado.
 
 
-    Se o qubit estava inicialmente no estado de $\ket{0}$, esta operação prepara o qubit no eigenstate de $+1$ de um determinado operador Pauli, ou, para `PauliI`, no estado maximamente misto (ver <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+    Se o qubit estava inicialmente{0}no estado $\ket $, esta operação prepara o qubit no eigenstate `PauliI`$+1$ de um determinado <xref:microsoft.quantum.preparation.preparesinglequbitidentity>operador Pauli, ou, para, em vez disso, no estado maximamente misto (ver).
 
 
-    Se o qubit estava num estado que não seja $\ket{0}$, esta operação aplica os seguintes portões: $H$ para `PauliX`, $HS$ para `PauliY`, $I$ para `PauliZ` e <xref:microsoft.quantum.preparation.preparesinglequbitidentity> para `PauliI`.
+    Se o qubit estava num estado{0}diferente de $\ket $, esta `PauliX`operação aplica `PauliY`os seguintes `PauliZ` <xref:microsoft.quantum.preparation.preparesinglequbitidentity> portões: $H$ para , $HS$ para , $I$ para e para `PauliI`.
 - uid: microsoft.quantum.preparation.preparesinglequbitidentity
   summary: >-
     Prepara um qubit no estado maximamente misto.
 
 
-    Prepara o qubit dado no estado $\boldone / 2$ aplicando o canal despolarizante $$ \start{align} \Omega(\rho) \mathrel{:=} \frac {4}{1}\sum_{\mu \in \{0, 1, 2, 3\}} \sigma\_{\mu} \rho \sigma\_{\mu}^{adagger}, \end{align} $$ where $\sigma\_i$ é o operador de $i$th Pauli, e onde $\rho$ é um operador de densidade que representa um estado misto.
+    Prepara o qubit dado no estado $\boldone / 2$ aplicando o canal despolarizante $$ \begin{align} \Omega(\rho) \mathrel{:=}{1} {4} \frac \sum_{\mu \in \{0, 1, 2, 3\}}\_\sigma {\mu} \rho \sigma\_{\mu}^{\adagger}, \end{align} $} where $\sigma\_i$ é o operador $i$th Pauli, e onde $\rho$ é um operador de densidade que representa um estado misto.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    Cria uma sobreposição uniforme sobre estados que codificam 0 a `nIndices`.
+    Cria uma sobreposição uniforme sobre estados que codificam 0 através `nIndices`de .
 
 
     Ou seja, este $U$ unitário cria uma sobreposição uniforme sobre todos os estados do número $0$ a $M-1$, dado um estado de entrada $\ket{0\cdots 0}$. Por outras palavras, $$ \begin{align} U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
 
     \end{align} $$.
 metadata:
-  ms.openlocfilehash: dd28a9a066fabd5afab7114d78cc2aca79254e18
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 25ebe80b64af0cfd50e5a32c1ef91f8a299cef04
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905680"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82673094"
