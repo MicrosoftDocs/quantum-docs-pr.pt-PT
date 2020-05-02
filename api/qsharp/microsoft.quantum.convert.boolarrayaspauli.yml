@@ -3,22 +3,22 @@ uid: microsoft.quantum.convert.boolarrayaspauli
 name: BoolArrayAsPauli
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: Dada uma cadeia de caracteres de bits, retorna um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único.
-remarks: A matriz booliana e o registro do Quantum devem ser de comprimento igual.
+summary: Dada uma pequena corda, devolve um operador pauli multiqubit representado como uma variedade de operadores de Pauli de qubit único.
+remarks: A matriz booleana e o registo quântico devem ter igual comprimento.
 syntax: 'function BoolArrayAsPauli (pauli : Pauli, bitApply : Bool, bits : Bool[]) : Pauli[]'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[])'
   types:
   - name: pauli
-    summary: Operador Pauli a ser aplicado a qubits onde `bitsApply == bits[idx]`.
+    summary: Operador Pauli para aplicar a `bitsApply == bits[idx]`qubits onde .
     isPrimitive: true
     uid: Pauli
   - name: bitApply
-    summary: Aplique Pauli se bit for esse valor.
+    summary: aplicar Pauli se bit é este valor.
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: Matriz booliana.
+    summary: Matriz booleana.
     isArray: true
     isPrimitive: true
     uid: Bool
@@ -29,9 +29,9 @@ output:
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 3d251215e7f7bc136092caf7bafd677ecb1c05bd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c4f43eb0a30e42b6deb28c9910b1c95454b827c8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227190"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82661359"
