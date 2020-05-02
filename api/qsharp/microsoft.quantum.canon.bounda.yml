@@ -4,11 +4,11 @@ name: BoundA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Dada uma matriz de operações que atuam em uma única entrada, o produz uma nova operação que executa cada operação específica em sequência.
+  Dado um conjunto de operações agindo numa única entrada, produz uma nova operação que executa cada operação em sequência.
 
-  O modificador `A` indica que todas as operações na matriz são adjointable.
+  O modificador `A` indica que todas as operações na matriz são adjointáveis.
 examples: >-
-  Os itens a seguir são equivalentes:
+  Os seguintes são equivalentes:
 
 
   ```qsharp
@@ -33,7 +33,7 @@ input:
   content: "(operations : ('T => Unit is Adj)[])"
   types:
   - name: operations
-    summary: Uma sequência de operações a ser executada em uma determinada entrada.
+    summary: Uma sequência de operações a realizar numa determinada entrada.
     isArray: true
     isOperation: true
     input:
@@ -49,7 +49,7 @@ input:
 output:
   content: ('T => Unit is Adj)
   types:
-  - summary: Uma nova operação que executa cada operação específica em sequência em sua entrada.
+  - summary: Uma nova operação que executa cada operação em sequência na sua entrada.
     isOperation: true
     input:
       types:
@@ -63,13 +63,13 @@ output:
     - Adjoint
 typeParameters:
 - uid: "'T"
-  summary: O destino no qual cada uma das operações na matriz atua.
+  summary: O alvo em que cada uma das operações no ato de matriz.
 seeAlso:
 - microsoft.quantum.canon.bound
 metadata:
-  ms.openlocfilehash: a4707b75fdedf6612343690f0b42368fe0979ead
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a965cd80372dbec05810739ed3774b886dc0aa53
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220628"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676007"

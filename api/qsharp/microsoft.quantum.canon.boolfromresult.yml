@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.boolfromresult
 name: BoolFromResult
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: BoolFromResult foi preterido. Em vez disso, use @"microsoft.quantum.convert.resultasbool".
+summary: BoolFromResult foi depreciado. Por @"microsoft.quantum.convert.resultasbool" favor, use em vez disso.
 syntax: 'function BoolFromResult (input : Result) : Bool'
 input:
   content: '(input : Result)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 543ff1a6b5d5b33a35bddabc9286bff4bd887e67
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: ccdb12013460011325b23b741165eee936f3d5f2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74860793"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676040"

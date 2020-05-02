@@ -3,7 +3,7 @@ uid: microsoft.quantum.arrays.zip
 name: Zip
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Dadas duas matrizes, retorna uma nova matriz de pares, de modo que cada par contém um elemento de cada matriz original.
+summary: Dado dois arrays, devolve uma nova gama de pares de tal forma que cada par contém um elemento de cada matriz original.
 examples: >-
   ```qsharp
 
@@ -19,19 +19,19 @@ input:
   content: "(left : 'T[], right : 'U[])"
   types:
   - name: left
-    summary: Uma matriz que contém valores para o primeiro elemento de cada tupla.
+    summary: Uma matriz contendo valores para o primeiro elemento de cada tuple.
     isArray: true
     uid: "'T"
     isLocal: true
   - name: right
-    summary: Uma matriz que contém valores para o segundo elemento de cada tupla.
+    summary: Uma matriz contendo valores para o segundo elemento de cada tuple.
     isArray: true
     uid: "'U"
     isLocal: true
 output:
   content: ('T, 'U)[]
   types:
-  - summary: Uma matriz que contém pares do formulário `(left[idx], right[idx])` para cada `idx`. Se as duas matrizes não forem de comprimento igual, a saída será consumida quanto a menor das entradas.
+  - summary: Uma matriz contendo pares `(left[idx], right[idx])` da `idx`forma para cada . Se as duas matrizes não tiverem igual comprimento, a saída será tão longa quanto a menor das inputs.
     isArray: true
     types:
     - uid: "'T"
@@ -40,16 +40,16 @@ output:
       isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo dos elementos da matriz esquerda.
+  summary: O tipo de elementos de matriz esquerdo.
 - uid: "'U"
-  summary: O tipo dos elementos da matriz direita.
+  summary: O tipo de elementos de matriz certos.
 seeAlso:
 - zip3
 - zip4
 metadata:
-  ms.openlocfilehash: 9af79a617722ead8102ea4631d96934bf253beda
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ae3a66ee226cdc0e26ec0cc0e87b1822bad45579
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217823"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675088"

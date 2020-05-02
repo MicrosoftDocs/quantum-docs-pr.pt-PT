@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.ccontrolled
 name: CControlled
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Dada uma operação op, retorna uma nova operação que aplica a op se um bit de controle clássico for true. Se `false`, nada acontecerá.
+summary: Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`nada acontece.
 syntax: "function CControlled (op : ('T => Unit)) : ((Bool, 'T) => Unit)"
 input:
   content: "(op : ('T => Unit))"
@@ -22,7 +22,7 @@ input:
 output:
   content: ((Bool, 'T) => Unit)
   types:
-  - summary: Uma nova operação que será op se o bit de controle clássico for true.
+  - summary: Uma nova operação que é op se a parte de controlo clássico for verdadeira.
     isOperation: true
     input:
       types:
@@ -36,15 +36,15 @@ output:
         uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 seeAlso:
 - microsoft.quantum.canon.ccontrolledc
 - microsoft.quantum.canon.ccontrolleda
 - microsoft.quantum.canon.ccontrolledca
 metadata:
-  ms.openlocfilehash: 340a993f5949d3faa6e4ebf883ee0f15c219a49b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ed9e5a80bdb0678b21165ecc710f56cccdbbe76d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211992"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675920"

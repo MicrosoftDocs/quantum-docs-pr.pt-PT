@@ -7,7 +7,7 @@ summary: >-
   Reversível, no lugar ondulação-carry adição de dois inteiros.
 
 
-  Tendo em conta dois inteiros $n$bit codificados em registos LittleEndian `xs` e `ys`, e um transporte qubit, a operação calcula a soma dos dois inteiros onde os $n$ menos significativos do resultado são realizados em `ys` e a parte de realização é xored ao qubit `carry`.
+  Tendo em conta duas $n inteiros codificados nos `xs` registos `ys`littleEndian e , e um transporte qubit, a operação calcula a soma dos dois inteiros `ys` onde os $n$ menos significativos `carry`do resultado são mantidos e a broca de execução é xored ao qubit .
 remarks: Esta operação tem a mesma funcionalidade que o RippleCarryAdderD, mas só utiliza um qubit de oscilação em vez de $n$.
 syntax: 'operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
@@ -35,9 +35,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: bc5a7af8534741cab8e7b18a404b1745454a20c4
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: d75313cbc70643bc9cb96967c1b2eb928296f8d7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76871367"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675138"

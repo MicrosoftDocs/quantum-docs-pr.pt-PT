@@ -4,9 +4,9 @@ name: CControlledA
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Dada uma operação op, retorna uma nova operação que aplica a op se um bit de controle clássico for true. Se `false`, nada acontecerá.
+  Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`nada acontece.
 
-  O modificador `A` indica que a operação é de adjointable.
+  O modificador `A` indica que a operação é adcompável.
 syntax: "function CControlledA (op : ('T => Unit is Adj)) : ((Bool, 'T) => Unit is Adj)"
 input:
   content: "(op : ('T => Unit is Adj))"
@@ -27,7 +27,7 @@ input:
 output:
   content: ((Bool, 'T) => Unit is Adj)
   types:
-  - summary: Uma nova operação que será op se o bit de controle clássico for true.
+  - summary: Uma nova operação que é op se a parte de controlo clássico for verdadeira.
     isOperation: true
     input:
       types:
@@ -43,13 +43,13 @@ output:
     - Adjoint
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 seeAlso:
 - microsoft.quantum.canon.ccontrolled
 metadata:
-  ms.openlocfilehash: e02446273f93b51a228679d3eb75bf16a2526e8a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 12349ee5fe56d0209f510900f47cf255a7adc4d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068109"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82675898"
