@@ -3,13 +3,13 @@ uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationals
 name: PrepareSparseMultiConfigurationalState
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Preparação de estado de várias configurações esparsas do estado de avaliação adicionando excitations ao estado de avaliação inicial.
+summary: Escassa preparação do estado multi-configuracional do estado experimental adicionando excitações ao estado de julgamento inicial.
 syntax: 'operation PrepareSparseMultiConfigurationalState (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
 input:
   content: '(initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[])'
   types:
   - name: initialStatePreparation
-    summary: Unitário para preparar o estado de avaliação inicial.
+    summary: Unitário para preparar o estado de julgamento inicial.
     isOperation: true
     input:
       types:
@@ -21,11 +21,11 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: excitations
-    summary: Excitations do estado de avaliação inicial representado pela amplitude do Excitation e os índices qubit nos quais o Excitation atua.
+    summary: Excitações do estado experimental inicial representadas pela amplitude da excitação e pelos índices qubit em que a excitação age.
     isArray: true
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
   - name: qubits
-    summary: Qubits Hamiltonian.
+    summary: Qubits de Hamiltonian.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -35,9 +35,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: c97f5e7ec8a4cc26b4fb173414526363db424293
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 54d7bbbc0909279d9617b9e7cd523e998db5874a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231814"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82664905"
