@@ -4,17 +4,17 @@ name: ApplyWithA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Dadas duas operações, o aplica-se uma como conjugado com a outra.
+  Dadas duas operações, aplica-se uma como conjugada com a outra.
 
 
-  Dadas duas operações, respectivamente descritas por operadores unitários $U $ e $V $, aplica-as na sequência $U ^ {\dagger} V U $. Ou seja, essa operação implementa o operador unitário fornecido por $V $ conjugado com $U $.
-remarks: A operação externa sempre é presumida como adjointable, mas não precisa ser controlável para que a operação combinada seja controlável.
+  Tendo em conta duas operações, respectivamente descritas pelos operadores unitários $U$ e $V$, aplica-as na sequência $U^{\dagger} V U$. Ou seja, esta operação implementa o operador unitário dado por $V$ conjugado com $U$.
+remarks: A operação externa é sempre assumida como adjointável, mas não precisa de ser controlável para que a operação combinada seja controlável.
 syntax: "operation ApplyWithA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T)"
   types:
   - name: outerOperation
-    summary: A operação $U $ que deve ser usada para conjugar $V $. Observe que a operação externa $U $ precisa ser adjointable, mas não precisa ser controlável.
+    summary: A operação $U$ que deve ser usada para conjugar $V$. Note que a operação externa $U$ precisa de ser adjointável, mas não precisa de ser controlável.
     isOperation: true
     input:
       types:
@@ -27,7 +27,7 @@ input:
     functors:
     - Adjoint
   - name: innerOperation
-    summary: A operação $V $ sendo conjugada.
+    summary: A operação $V$ a ser conjugado.
     isOperation: true
     input:
       types:
@@ -40,7 +40,7 @@ input:
     functors:
     - Adjoint
   - name: target
-    summary: A entrada a ser fornecida para as operações externas e internas.
+    summary: A entrada a fornecer às operações exteriores e interiores.
     uid: "'T"
     isLocal: true
 output:
@@ -50,7 +50,7 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O destino no qual cada uma das operações internas e externas atuam.
+  summary: O alvo em que cada uma das operações internas e externas atua.
 functors:
 - Adjoint
 seeAlso:
@@ -58,9 +58,9 @@ seeAlso:
 - applywithc
 - applywithca
 metadata:
-  ms.openlocfilehash: 98ca0cd734202c7a1b78048177dd0c0774554864
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6852c035d778bd29da74008f13be13dff78138c0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212740"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674491"

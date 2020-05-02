@@ -3,9 +3,9 @@ uid: microsoft.quantum.logical.notequali
 name: NotEqualI
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna true se e somente se duas entradas não forem iguais.
+summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 remarks: >-
-  Os itens a seguir são equivalentes:
+  Os seguintes são equivalentes:
 
 
   ```Q#
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: b
-    summary: O segundo valor a ser comparado.
+    summary: O segundo valor a comparar.
     isPrimitive: true
     uid: Int
 output:
   content: Bool
   types:
-  - summary: '`true` se `a` não for igual a `b`.'
+  - summary: '`true`se e `a` apenas se `b`não for igual a .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 2aea02b6434ab1fa55b3b39146990a6c4bf4deba
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 91de33dc22bbc74ed61485e463644eeabd36f115
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235265"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674058"

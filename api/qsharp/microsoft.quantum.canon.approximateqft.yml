@@ -3,30 +3,30 @@ uid: microsoft.quantum.canon.approximateqft
 name: ApproximateQFT
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Aplique a transformação de Fourier de Quantum aproximada (AQFT) a um registro do Quantum.
+summary: Aplique a Transformação Quântica Aproximada de Fourier (AQFT) num registo quântico.
 remarks: >-
-  AQFT requer Gates de rotação Z do formato 2π/2K e Hadamard Gates.
+  A AQFT requer portões de rotação Z dos portões 2π/2k e Hadamard.
 
 
-  Presume-se que a entrada e a saída sejam codificadas na codificação big endian.
+  Presume-se que a entrada e a saída estão codificadas na codificação de grandes endianos.
 syntax: 'operation ApproximateQFT (a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 references: >-
-  - [*M. Roetteler, th. Beth*, APL. Algebra Eng. Commun. Compute. 19 (3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
+  - [*M. Roetteler, Th. Beth,* Appl. Algebra Eng. Commun. Computação. 19(3): 177-193 (2008)](http://doi.org/10.1007/s00200-008-0072-2)
 
-  - [*D. Coppersmith* arXiv: Quant-pH/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
+  - [*D. Coppersmith* arXiv:quant-ph/0201067v1](https://arxiv.org/abs/quant-ph/0201067)
 input:
   content: '(a : Int, qs : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: a
     summary: >-
-      parâmetro de aproximação que determina em qual nível as rotações Z controladas que ocorrem no circuito QFT são removidas.
+      parâmetro de aproximação que determina em que nível são podadas as rotações Z controladas que ocorrem no circuito QFT.
 
 
-      O parâmetro de aproximação a determina o nível de remoção das rotações Z, ou seja, um ∈ {0.. n} e todas as rotações Z 2π/2K em que k > a são removidas do circuito QFT. É conhecido que para k > = log ₂ (n) + log ₂ (1/ε) + 3 um pode ser associado | | QFT-AQFT | | < ε.
+      O parâmetro de aproximação a determina o nível de poda das rotações Z, ou seja, um {0.n} e todas as rotações Z 2π/2k onde k>a são removidos do circuito QFT. Sabe-se que por k >= log2(n)+log2(1/ε)+3 um pode vincular [] QFT-AQFT[<.
     isPrimitive: true
     uid: Int
   - name: qs
-    summary: registro da Quantum de n qubits para o qual a transformação de Fourier de Quantum aproximada é aplicada.
+    summary: registo quântico de n qubits a que é aplicada a Transformação Quântica Aproximada de Fourier.
     uid: microsoft.quantum.arithmetic.bigendian
 output:
   content: Unit
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6d650d4c1d80e747df7560c630543189513d252a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44d6a5937924f13cab04137bd3d0eb81396824c9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212536"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674396"

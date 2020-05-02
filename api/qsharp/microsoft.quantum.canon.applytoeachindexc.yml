@@ -4,15 +4,15 @@ name: ApplyToEachIndexC
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação single-qubit para cada elemento indexado em um registro.
+  Aplica uma operação de um único qubit a cada elemento indexado num registo.
 
-  O modificador `C` indica que a operação de qubit única é controlável.
+  O modificador `C` indica que a operação de qubit único é controlável.
 syntax: "operation ApplyToEachIndexC (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit"
 input:
   content: "(singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: Operação a ser aplicada a cada qubit.
+    summary: Operação para aplicar a cada qubit.
     isOperation: true
     input:
       types:
@@ -27,7 +27,7 @@ input:
     functors:
     - Controlled
   - name: register
-    summary: Matriz de qubits na qual aplicar a operação especificada.
+    summary: Conjunto de qubits sobre os quais aplicar a operação dada.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -38,15 +38,15 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O destino no qual cada uma das operações atua.
+  summary: O alvo em que cada uma das operações atua.
 functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeachindex
 metadata:
-  ms.openlocfilehash: ca5ba68229968b43d28535e3bf728b2b8a8ef4fb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 975cefaacf1e8f4fb6e80daf94ad4caecd7adb8d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73068449"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82674821"
