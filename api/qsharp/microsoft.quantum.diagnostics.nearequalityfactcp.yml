@@ -3,7 +3,7 @@ uid: microsoft.quantum.diagnostics.nearequalityfactcp
 name: NearEqualityFactCP
 type: function
 namespace: Microsoft.Quantum.Diagnostics
-summary: Declara que um número complexo clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+summary: Afirma que um número complexo clássico tem o valor esperado até uma pequena tolerância de 1e-10.
 syntax: 'function NearEqualityFactCP (actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar) : Unit'
 input:
   content: '(actual : Microsoft.Quantum.Math.ComplexPolar, expected : Microsoft.Quantum.Math.ComplexPolar)'
@@ -20,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 70df5b87bb44a8e92429bdb518178a98d7704619
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 658a61364ee3843288cc96aaf0e12d7b515ee9e1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230522"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682984"

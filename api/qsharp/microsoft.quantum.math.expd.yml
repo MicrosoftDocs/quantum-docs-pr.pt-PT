@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.expd
 name: ExpD
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna $e $ elevado à potência especificada.
-remarks: Consulte [System. Math. exp](https://docs.microsoft.com/dotnet/api/system.math.exp) para obter mais detalhes.
+summary: Devoluções $e$ elevadas à potência especificada.
+remarks: Consulte [system.math.exp](https://docs.microsoft.com/dotnet/api/system.math.exp) para mais detalhes.
 syntax: 'function ExpD (a : Double) : Double'
 input:
   content: '(a : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5dfea05371595ee0c8dffe251f168b3f4e7c3750
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 42b1299c3e9dcffc927ac316ac86e11be1fff167
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229536"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682768"

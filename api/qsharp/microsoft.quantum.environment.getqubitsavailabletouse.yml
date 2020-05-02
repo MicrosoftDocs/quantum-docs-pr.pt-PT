@@ -3,7 +3,7 @@ uid: microsoft.quantum.environment.getqubitsavailabletouse
 name: GetQubitsAvailableToUse
 type: operation
 namespace: Microsoft.Quantum.Environment
-summary: Retorna o número de qubits disponíveis no momento para uso.
+summary: Devolve o número de qubits atualmente disponíveis para utilização.
 syntax: 'operation GetQubitsAvailableToUse () : Int'
 input:
   content: ()
@@ -12,17 +12,17 @@ output:
   content: Int
   types:
   - summary: >-
-      O número de qubits que podem ser alocados em uma instrução `using`.
+      O número de qubits que poderiam ser atribuídos em comunicado. `using`
 
-      Se o computador de destino que está sendo usado não fornecer essas informações, `-1` será retornado.
+      Se a máquina-alvo que está a `-1` ser utilizada não fornecer estas informações, então é devolvida.
     isPrimitive: true
     uid: Int
 seeAlso:
 - getqubitsavailabletoborrow
 metadata:
-  ms.openlocfilehash: 1cb1331aa26ec9755a9e379336f46387b61bb0ae
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 82d8c27064cbb234b32707aa31fb0869f66ce23c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230471"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682387"

@@ -3,25 +3,25 @@ uid: microsoft.quantum.simulation.inttopauli
 name: IntToPauli
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Converte um inteiro em um operador qubit Pauli único.
+summary: Converte um inteiro para um operador pauli de um único qubit.
 syntax: 'function IntToPauli (idx : Int) : Pauli'
 input:
   content: '(idx : Int)'
   types:
   - name: idx
-    summary: O número inteiro no intervalo `0..3` a ser convertido em operadores Pauli.
+    summary: Inteiro na gama `0..3` a converter para operadores Pauli.
     isPrimitive: true
     uid: Int
 output:
   content: Pauli
   types:
-  - summary: Um operador de `Pauli` fornecido por `[PauliI, PauliX, PauliY, PauliZ][idx]`.
+  - summary: Um `Pauli` operador `[PauliI, PauliX, PauliY, PauliZ][idx]`dado por .
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: ca2ed56364d9fee748ac53b3f7f0aa40a96475b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 92d9d1e29d85c57d22cb0d7b9867986bf0768bc5
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065491"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682599"

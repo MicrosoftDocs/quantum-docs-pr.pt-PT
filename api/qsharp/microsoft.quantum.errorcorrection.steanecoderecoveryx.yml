@@ -3,20 +3,20 @@ uid: microsoft.quantum.errorcorrection.steanecoderecoveryx
 name: SteaneCodeRecoveryX
 type: function
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Decodificador para a parte X do grupo de estabilizador do ⟦ 7, 1, 3 ⟧ Steane código do Quantum.
-remarks: O decodificador escolhido usa a propriedade de código CSS do ⟦ 7, 1, 3 ⟧ Steane Code, ou seja, corrige erros X e Z erros separadamente. Uma propriedade do código é que o local da correção X, respectivamente, Z a ser aplicada é a codificação de 3 bits da síndrome X, respectivamente, Z, quando considerada um inteiro.
+summary: Descodificador para a parte X do grupo estabilizador do código quântico de 7, 1, 30 000.
+remarks: O descodificador escolhido utiliza a propriedade do código CSS do código 7, 1, 300, ou seja, corrige erros X e Erros Z separadamente. Uma propriedade do código é que a localização do X, respectivamente, a correção de Z a aplicar é a codificação de 3 bits do X, respectivamente, a síndrome de Z quando considerada uma inteiro.
 syntax: 'function SteaneCodeRecoveryX (syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome) : Pauli[]'
-references: '- D. Gottesman, "códigos de estabilizador e correção de erro Quantum", Ph.D. tese, Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman, "Códigos Estabilizadores e Correção de Erros Quânticos", Ph.D. Tese, Caltech, 1997;https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome)'
   types:
   - name: syndrome
-    summary: Uma matriz de síndrome obtida na medição da parte X do estabilizador.
+    summary: Uma matriz de síndrome obtida a partir da medição da parte X do estabilizador.
     uid: microsoft.quantum.errorcorrection.syndrome
 output:
   content: Pauli[]
   types:
-  - summary: Uma matriz de operações Pauli que, quando aplicada ao sistema Quantum codificado, corrige o erro correspondente a `syndrome`.
+  - summary: Um conjunto de operações pauli que, quando aplicadas ao sistema `syndrome`quântico codificado corrige o erro correspondente a .
     isArray: true
     isPrimitive: true
     uid: Pauli
@@ -24,9 +24,9 @@ seeAlso:
 - steanecoderecoveryx
 - steanecoderecoveryfns
 metadata:
-  ms.openlocfilehash: 7805284f29bfcbb6d4ba56f616f492b2f2126f7b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7b644842eb7ddfe9d44d5288ee5e34e097c00f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232290"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682977"
