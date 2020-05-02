@@ -3,20 +3,20 @@ uid: microsoft.quantum.diagnostics.dumpmachine
 name: DumpMachine
 type: function
 namespace: Microsoft.Quantum.Diagnostics
-summary: Despeja o status do computador de destino atual.
+summary: Despeja o estado da máquina-alvo atual.
 remarks: >-
-  Esse método permite despejar informações sobre o status atual do computador de destino em um arquivo ou em algum outro local.
+  Este método permite-lhe despejar informações sobre o estado atual da máquina alvo num ficheiro ou em qualquer outro local.
 
-  As informações reais geradas e a semântica de `location` são específicas para cada computador de destino. No entanto, fornecer uma tupla vazia como um local (`()`) ou simplesmente omitir o parâmetro `location` significa, normalmente, gerar a saída para o console.
+  A informação real gerada e `location` a semântica são específicas de cada máquina-alvo. No entanto, fornecer uma tuple`()`vazia como uma `location` localização ( ) ou apenas omitir o parâmetro normalmente significa gerar a saída para a consola.
 
 
-  Para o simulador de estado completo local distribuído como parte do kit de desenvolvimento Quantum, esse método espera uma cadeia de caracteres com o caminho para um arquivo no qual ele gravará a função Wave como uma matriz unidimensional de números complexos, na qual cada elemento representa o amplitudes da probabilidade de medir o estado correspondente.
+  Para o simulador de estado completo local distribuído como parte do Kit de Desenvolvimento Quântico, este método espera uma cadeia com o caminho para um ficheiro no qual escreverá a função de onda como uma matriz unidimensional de números complexos, no qual cada elemento representa as amplitudes da probabilidade de medir o estado correspondente.
 syntax: "function DumpMachine (location : 'T) : Unit"
 input:
   content: "(location : 'T)"
   types:
   - name: location
-    summary: Fornece informações sobre onde gerar o despejo da máquina.
+    summary: Fornece informações sobre onde gerar o depósito da máquina.
     uid: "'T"
     isLocal: true
 output:
@@ -26,9 +26,9 @@ output:
     isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 7d268127c56dc5554e7c99494ae90b2bc14b336c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7511e0bdded689c84cb90794860dd79e48950414
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227071"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82656561"
