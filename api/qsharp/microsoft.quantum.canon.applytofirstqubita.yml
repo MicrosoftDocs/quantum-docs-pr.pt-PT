@@ -4,15 +4,15 @@ name: ApplyToFirstQubitA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação ao primeiro qubit no registro.
+  Aplica uma operação ao primeiro qubit no registo.
 
-  O modificador `A` indica que a operação é de adjointable.
+  O modificador `A` indica que a operação é adcompável.
 syntax: 'operation ApplyToFirstQubitA (op : (Qubit => Unit is Adj), register : Qubit[]) : Unit'
 input:
   content: '(op : (Qubit => Unit is Adj), register : Qubit[])'
   types:
   - name: op
-    summary: Uma operação a ser aplicada ao primeiro qubit
+    summary: Uma operação a aplicar ao primeiro qubit
     isOperation: true
     input:
       types:
@@ -25,7 +25,7 @@ input:
     functors:
     - Adjoint
   - name: register
-    summary: Matriz qubit para a primeira qubit da qual a operação é aplicada
+    summary: Matriz qubit ao primeiro qubit do qual a operação é aplicada
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirstqubit
 metadata:
-  ms.openlocfilehash: 21246e0f9c9d27609107ad27c341851a15af5ede
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b97af9b9801a359238bd83c68b99d12ba8f6218b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213488"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82669572"
