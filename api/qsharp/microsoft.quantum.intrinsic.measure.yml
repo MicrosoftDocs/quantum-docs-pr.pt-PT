@@ -4,37 +4,37 @@ name: Measure
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Executa uma medida conjunta de um ou mais qubits nas bases de Pauli especificadas.
+  Efetua uma medição articular de um ou mais qubits nas bases pauli especificadas.
 
 
-  O resultado de saída é fornecido pela distribuição: \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \frac12 \braket{\psi \mid | \left (\boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} \right) \mid | \psi}, \end{align} em que $P _i $ é o elemento $i $ th de `bases`e onde $N = \texttt{Length} (\texttt{bases}) $.
+  O resultado da saída é dado pela distribuição: \start{align} \Pr(\texttt{Zero} \ ket{\psi}) = \frac12 \braket{ \psi \mid\ \left, \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} `bases`\right) \mid\ \psi } \end{align} onde $P_i$ é o elemento $i$th de , e onde $N = \texttt{Length}(\texttt{bases})$.
 
-  Ou seja, a medida retorna um `Result` $d $ de modo que o eigenvalue do efeito de medição observado seja $ (-1) ^ d $.
-remarks: Se a matriz de base e a matriz qubit tiverem comprimentos diferentes, a operação falhará.
+  Ou seja, a `Result` medição devolve uma $d$ de tal forma que o valor eigendo do efeito de medição observado é $(-1)^d$.
+remarks: Se a matriz base e a matriz qubit forem comprimentos diferentes, então a operação falhará.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
   content: '(bases : Pauli[], qubits : Qubit[])'
   types:
   - name: bases
-    summary: Matriz de valores de Pauli de qubit único que indicam os fatores de produto tensor em cada qubit.
+    summary: Conjunto de valores pauli de monoqubit indicando os fatores do produto tensor em cada qubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Registro de qubits a ser medido.
+    summary: Registo de qubits a medir.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: '`Zero` se $ + $1 eigenvalue for observado e `One` se o eigenvalue $-$1 for observado.'
+  - summary: '`Zero`se o valor eigenvalue de $+1$ for observado, e `One` se o eigenvalue de $1$ for observado.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 65390f851d82eb579d89072dc770f3ce077ce515
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234109"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682860"

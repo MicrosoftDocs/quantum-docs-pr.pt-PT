@@ -4,17 +4,17 @@ name: PauliBlockEncoding
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Cria um unitário de codificação de bloco para um Hamiltonian.
+  Cria um bloqueio de codificação unitário para um Hamiltonian.
 
 
-  O Hamiltonian $H = \sum_{j}\alpha_j P_j $ é descrito por uma soma de Pauli termos $P _J $, cada um com o coeficiente real $ \alpha_j $.
-remarks: Isso é obtido preparando e despreparando o estado $ \ sum_ {j} \ sqrt {\ alpha_j/\ Alpha} \ ket {j} $ e construindo um <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> unitário controlado por multiplicação e <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>.
+  O hamiltoniano $H=\sum_{j}\alpha_j P_j$ é descrito por uma soma de termos Pauli $P_j$, cada um com coeficiente real $\alpha_j$.
+remarks: Isto é obtido preparando e despreparando o estado $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$, <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>e construindo um unitário controlado por multiplicação e .
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystem
-    summary: Um `GeneratorSystem` que descreve $H $ como uma soma dos termos do Pauli
+    summary: Um `GeneratorSystem` que descreve $H$ como uma soma de termos Pauli
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)
@@ -23,21 +23,21 @@ output:
       ## <a name="first-parameter"></a>Primeiro parâmetro
 
 
-      A uma norma de coeficientes $ \alpha = \sum_{j} | \alpha_j | $.
+      A norma única dos coeficientes $\alpha=\sum_{j}\alpha_j[$].
 
 
       ## <a name="second-parameter"></a>Segundo parâmetro
 
 
-      Um `BlockEncodingReflection` unitário $U $ do Hamiltonian $H $. Como esse unitário satisfaz $U ^ 2 = I $, também é uma reflexão.
+      Um `BlockEncodingReflection` $U unitário$ do Hamiltonian $H$. Como este unitário satisfaz $U^2 = I$, é também uma reflexão.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 352ab71457601c38b22e93f706cb59f50bf24151
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216140"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682551"

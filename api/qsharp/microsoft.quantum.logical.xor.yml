@@ -3,7 +3,7 @@ uid: microsoft.quantum.logical.xor
 name: Xor
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna a disjunção exclusiva booliana de dois valores.
+summary: Devolve a disjunção exclusiva booleana de dois valores.
 syntax: 'function Xor (a : Bool, b : Bool) : Bool'
 input:
   content: '(a : Bool, b : Bool)'
@@ -13,19 +13,19 @@ input:
     isPrimitive: true
     uid: Bool
   - name: b
-    summary: O segundo valor a ser considerado.
+    summary: O segundo valor a considerar.
     isPrimitive: true
     uid: Bool
 output:
   content: Bool
   types:
-  - summary: '`true` se e somente se exatamente um dos `a` e `b` for `true`.'
+  - summary: '`true`se e só se `a` `b` exatamente um de e é `true`.'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: a876025d8b3a928e91d686b90f8ceccd65cc1e7c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de35d7427d3de31e27465319bf8fa96ba2fb9aed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235146"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682842"

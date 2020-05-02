@@ -3,22 +3,22 @@ uid: microsoft.quantum.errorcorrection.recovercss
 name: RecoverCSS
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Executa uma única rodada de correção de erro por um código Quantum descrito por um tipo de `CSS`.
+summary: Executa uma única rodada de correção de `CSS` erro por um código quântico descrito por um tipo.
 syntax: 'operation RecoverCSS (code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.CSS, fnX : Microsoft.Quantum.ErrorCorrection.RecoveryFn, fnZ : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Um código do quantum de erro de CSS-corrigindo o pacote de códigos como um `CSS` tipo descreve a codificação e a decodificação de dados Quantum e como os síndromes de erro devem ser medidos.
+    summary: Um código quântico de correção de erros `CSS` CSS embalado como um tipo descreve a codificação e descodificação de dados quânticos, e como as síndromes de erro devem ser medidas.
     uid: microsoft.quantum.errorcorrection.css
   - name: fnX
-    summary: Um `RecoveryFn` que mapeia cada síndrome de $X $ Error para as operações de `Pauli[]` que corrigem o erro detectado.
+    summary: A `RecoveryFn` que mapeia cada `Pauli[]` $Xsíndrome de erro de$ para as operações que corrigem o erro detetado.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: fnZ
-    summary: Um `RecoveryFn` que mapeia cada síndrome de $Z $ Error para as operações de `Pauli[]` que corrigem o erro detectado.
+    summary: A `RecoveryFn` que mapeia cada `Pauli[]` $Zsíndrome de erro de$ para as operações que corrigem o erro detetado.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
-    summary: Uma matriz de qubits onde o código de estabilizador é definido.
+    summary: Uma variedade de qubits onde o código estabilizador é definido.
     uid: microsoft.quantum.errorcorrection.logicalregister
 output:
   content: Unit
@@ -30,9 +30,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 4e07e66816c347aa9a7e1f06ebe88f65b2d040ce
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c9504e985b224421d3eb66b0d7e9bc0ef8f2e96
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220271"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682276"

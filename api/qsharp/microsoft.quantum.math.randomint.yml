@@ -3,26 +3,26 @@ uid: microsoft.quantum.math.randomint
 name: RandomInt
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Gera um número inteiro aleatório de amostra uniforme maior ou igual a zero e menor que um limite superior fornecido.
-remarks: Essa função chama <xref:microsoft.quantum.intrinsic.random>, de modo que sua aleatoriedade depende da implementação de `Random`.
+summary: Gera uma nota aleatória uniformemente amostrada maior ou igual a zero e inferior a um limite superior fornecido.
+remarks: Esta função chama, <xref:microsoft.quantum.intrinsic.random>pelo que a sua `Random`aleatoriedade depende da implementação de .
 syntax: 'operation RandomInt (maxInt : Int) : Int'
 input:
   content: '(maxInt : Int)'
   types:
   - name: maxInt
-    summary: Um número inteiro maior do que o maior inteiro a ser retornado por essa operação.
+    summary: Um inteiro maior que o maior inteiro a ser devolvido por esta operação.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Um inteiro $x $ uniformemente em aleatório do intervalo especificado; ou seja, com $ \Pr (x) = \frac{1}{\texttt{maxInt}} $.
+  - summary: Um inteiro $x$ uniformemente ao acaso a partir do intervalo dado; isto é, com $\Pr(x){1}= \frac {\texttt{maxInt}}$.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 83db1cc0e58cfbf2e3da4af4c72f59ccde4fedf9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 578761c1710484913122227fb3b37330702ea038
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220033"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682759"

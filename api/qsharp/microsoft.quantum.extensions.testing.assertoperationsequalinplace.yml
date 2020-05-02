@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.testing.assertoperationsequalinplace
 name: AssertOperationsEqualInPlace
 type: operation
 namespace: Microsoft.Quantum.Extensions.Testing
-summary: AssertOperationsEqualInPlace foi preterido. Em vez disso, use @"microsoft.quantum.diagnostics.assertoperationsequalinplace".
+summary: AssertOperationsEqualInPlace foi depreciado. Por @"microsoft.quantum.diagnostics.assertoperationsequalinplace" favor, use em vez disso.
 syntax: 'operation AssertOperationsEqualInPlace (actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int) : Unit'
 input:
   content: '(actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj), nQubits : Int)'
@@ -41,9 +41,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 23f02fa54b54560cc804d1fce9efd175fae3b6e9
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 1c1f22467cfd875d563d523665aedee77f5cf673
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74863340"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682930"

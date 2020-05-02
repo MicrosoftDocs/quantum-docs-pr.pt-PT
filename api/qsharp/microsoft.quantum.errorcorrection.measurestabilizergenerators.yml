@@ -3,27 +3,27 @@ uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
 name: MeasureStabilizerGenerators
 type: operation
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Mede o conjunto determinado de geradores de um grupo de estabilizador.
+summary: Mede o conjunto de geradores de um grupo estabilizador.
 remarks: >-
-  Isso não verifica se o conjunto determinado de geradores está em comutação.
+  Isto não verifica se o conjunto de geradores está a deslocar-se.
 
-  Se não estiverem em comutação, o resultado das medições poderá ser arbitrário.
+  Se não estiverem a deslocar-se, o resultado das medições pode ser arbitrário.
 syntax: 'operation MeasureStabilizerGenerators (stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result)) : Microsoft.Quantum.ErrorCorrection.Syndrome'
 input:
   content: '(stabilizerGroup : Pauli[][], logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister, gadget : ((Pauli[], Qubit[]) => Result))'
   types:
   - name: stabilizerGroup
     summary: >-
-      Uma matriz de operadores multiqubit Pauli.
+      Uma série de operadores de Pauli multiqubit.
 
-      Por exemplo, `stabilizerGroup[0]` é uma lista de matrizes de Pauli de qubit único, o produto tensor do que é um gerador de estabilizador.
+      Por exemplo, `stabilizerGroup[0]` é uma lista de matrizes pauli de um único qubit, o produto tensor do qual é um gerador estabilizador.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
   - name: logicalRegister
-    summary: Uma matriz de qubits onde o código de estabilizador é definido.
+    summary: Uma variedade de qubits onde o código estabilizador é definido.
     uid: microsoft.quantum.errorcorrection.logicalregister
   - name: gadget
     summary: Uma operação que especifica como medir um operador multiqubit Pauli.
@@ -43,12 +43,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.Syndrome
   types:
-  - summary: O resultado de medições.
+  - summary: O resultado das medições.
     uid: microsoft.quantum.errorcorrection.syndrome
 metadata:
-  ms.openlocfilehash: 1ebc1613c471e11a3d06878bc9ca48cf2d5be505
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d89455e8341d053053e110a6cfccd19e206d38d8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226765"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82682301"
