@@ -3,33 +3,33 @@ uid: microsoft.quantum.convert.pauliarrayasint
 name: PauliArrayAsInt
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: Codifica um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único em um inteiro.
+summary: Codifica um operador pauli multiqubit representado como uma variedade de operadores pauli de monoqubit em um inteiro.
 remarks: >-
-  Cada operador Pauli pode ser codificado usando dois bits: $ $ \begin{align} \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11, \quad Z \mapsto 10.
+  Cada operador pauli pode ser codificado usando dois bits: $$ \begin {{align} \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11, \quad Z \mapsto 10.
 
-  \end{align} $ $
+  \end{align} $$
 
 
-  Dada uma matriz de operadores Pauli `[P0, ..., Pn]`, essa função retorna um inteiro com a expansão binária formada pela concatenação dos mapeamentos de cada operador Pauli na ordem big-endian `bits(Pn) ... bits(P0)`.
+  Dado um conjunto `[P0, ..., Pn]`de operadores Pauli , esta função devolve um inteiro com expansão binária formada `bits(Pn) ... bits(P0)`pela concatenação dos mapeamentos de cada operador Pauli em ordem grande-endiana.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
   types:
   - name: paulis
-    summary: Uma matriz de no máximo 31 operadores de Pauli de qubit único.
+    summary: Uma série de 31 operadores de Moqubit Pauli.
     isArray: true
     isPrimitive: true
     uid: Pauli
 output:
   content: Int
   types:
-  - summary: Um inteiro que identifica `paulis`exclusivamente, conforme descrito abaixo.
+  - summary: Um inteiro identificando-se `paulis`exclusivamente, como descrito abaixo.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0c211075d07147b1c1392fe3f3e4ceb110364bb3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230760"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677398"

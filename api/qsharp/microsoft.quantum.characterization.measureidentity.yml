@@ -3,33 +3,33 @@ uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
 namespace: Microsoft.Quantum.Characterization
-summary: Mede o operador de identidade em um registro de qubits.
+summary: Mede o operador de identidade num registo de qubits.
 remarks: >-
-  Como $ \boldone $ tem apenas o eigenvalue $1 $ e não tem um eigenvalue negativo, essa operação sempre retorna `Zero`, correspondendo a eigenvalue $ + 1 = (-1) ^ 0 $ e não causa um recolhimento do estado de `register`.
+  Uma vez que $\boldone$ tem apenas o valor eigenvalue $1$, e `Zero`não tem um valor eigen negativo, esta operação sempre retorna , correspondendo `register`ao eigenvalue $+1 = (-1)^0$, e não causa um colapso do estado de .
 
 
-  Por si só, essa operação não é útil, mas é útil no contexto do processo tomography, pois fornece informações sobre a preservação de rastreamento de um processo Quantum.
+  Por si só, esta operação não é útil, mas é útil no contexto da tomografia do processo, uma vez que fornece informações sobre a preservação de vestígios de um processo quântico.
 
-  Em particular, um computador de destino com medição de perdas deve substituir essa operação por uma medida real de $ \boldone $.
+  Em particular, uma máquina-alvo com medição de perda deve substituir esta operação por uma medição real de $\boldone$.
 syntax: 'operation MeasureIdentity (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
   types:
   - name: register
-    summary: O registro a ser medido.
+    summary: O registo a medir.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: O valor de resultado `Zero`.
+  - summary: O valor `Zero`do resultado .
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: fcfe08d4ae7a192074b90b7b45fffbcb5944e7ff
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73229128"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677626"

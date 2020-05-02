@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.uncurryop
 name: UncurryOp
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: UncurryOp foi preterido. Em vez disso, use @"microsoft.quantum.canon.uncurriedop".
+summary: UncurryOp foi depreciado. Por @"microsoft.quantum.canon.uncurriedop" favor, use em vez disso.
 syntax: "function UncurryOp (curriedOp : ('T -> ('U => Unit))) : (('T, 'U) => Unit)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit)))"
@@ -40,9 +40,9 @@ output:
       - isPrimitive: true
         uid: Unit
 metadata:
-  ms.openlocfilehash: d21b350f6fedcb18bc49fe4e41458b4d7f35d516
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: c2f3762381aab01b5263253cdd3e15134d895363
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74859419"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677945"

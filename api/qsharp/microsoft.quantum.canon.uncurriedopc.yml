@@ -4,7 +4,7 @@ name: UncurriedOpC
 type: function
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Dada uma função que retorna operações, retorna uma nova operação que usa as duas entradas como uma tupla.
+  Dada uma função que devolve as operações, devolve uma nova operação que toma ambas as inputs como uma tuple.
 
   O modificador `C` indica que as operações são controláveis.
 syntax: "function UncurriedOpC (curriedOp : ('T -> ('U => Unit is Ctl))) : (('T, 'U) => Unit is Ctl)"
@@ -12,7 +12,7 @@ input:
   content: "(curriedOp : ('T -> ('U => Unit is Ctl)))"
   types:
   - name: curriedOp
-    summary: Uma função que retorna operações.
+    summary: Uma função que devolve as operações.
     isFunction: true
     input:
       types:
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Ctl)
   types:
-  - summary: Uma nova operação `op` de modo que `op(t, u)` é equivalente a `(curriedOp(t))(u)`.
+  - summary: Uma nova `op` operação `op(t, u)` que `(curriedOp(t))(u)`equivale a .
     isOperation: true
     input:
       types:
@@ -50,15 +50,15 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: O tipo do primeiro argumento de uma função na forma curried.
+  summary: O tipo do primeiro argumento de uma função curada.
 - uid: "'U"
-  summary: O tipo do segundo argumento de uma função na forma curried.
+  summary: O tipo do segundo argumento de uma função curada.
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 2808ad1be091f98185ca9b218d2df6065c15a143
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 763ea81f9a459a358d9a41e177697eb6bf2ca307
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216956"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677982"

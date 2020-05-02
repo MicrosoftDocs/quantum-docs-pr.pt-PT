@@ -4,19 +4,19 @@ name: AssertOperationsEqualInPlaceCompBasis
 type: operation
 namespace: Microsoft.Quantum.Diagnostics
 summary: >-
-  Verifica se a operação `givenU` é igual à operação `expectedU` no tamanho de entrada fornecido, verificando a ação das operações somente nos vetores da base computacional.
+  Verifica se `givenU` a operação é `expectedU` igual à operação no tamanho da entrada dada, verificando a ação das operações apenas nos vetores a partir da base computacional.
 
-  Essa é uma condição necessária, mas não suficiente, para a igualdade de duas unidades.
+  Esta é uma condição necessária, mas não suficiente, para a igualdade de dois unitários.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
   types:
   - name: nQubits
-    summary: O número de qubits $n $ em que as operações `givenU` e `expectedU` operam.
+    summary: O número de qubits $n$ que as operações `givenU` e `expectedU` operam.
     isPrimitive: true
     uid: Int
   - name: givenU
-    summary: Operação em $n $ qubits a ser verificada.
+    summary: Operação em qubits $n$ a verificar.
     isOperation: true
     input:
       types:
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: Operação de referência em $n $ qubits em que `givenU` deve ser comparada.
+    summary: Operação de referência em qubits de $n$ que `givenU` deve ser comparado com.
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 5841b6dc60047c051b38305c177f54d3eb84e087
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066562"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677281"
