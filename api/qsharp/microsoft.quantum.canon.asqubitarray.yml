@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.asqubitarray
 name: AsQubitArray
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: AsQubitArray foi preterido.
+summary: AsQubitArray foi depreciado.
 syntax: 'function AsQubitArray (arr : Qubit[]) : Qubit[]'
 input:
   content: '(arr : Qubit[])'
@@ -19,9 +19,9 @@ output:
     isPrimitive: true
     uid: Qubit
 metadata:
-  ms.openlocfilehash: 1ea1a2d9c5615c3d34bf456d9ebc7839cf50c901
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 0d565de7a65fada6ba00d4612aec7033d29f525e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74861834"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676226"

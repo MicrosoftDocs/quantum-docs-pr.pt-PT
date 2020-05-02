@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.applywithinputtransformationc
 name: ApplyWithInputTransformationC
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Dada uma operação que aceita alguma entrada, uma função que retorna uma saída compatível com essa operação e uma entrada para essa função, aplica a operação usando a função para transformar a entrada em um formato esperado pela operação.
+summary: Dada uma operação que aceita alguma entrada, uma função que devolve uma saída compatível com essa operação, e uma entrada nessa função, aplica a operação utilizando a função para transformar a entrada numa forma esperada pela operação.
 examples: >-
-  A chamada a seguir usa @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" para aplicar uma operação projetada para @"Microsoft.Quantum.Arithmetic.BigEndian" entradas a uma entrada do tipo @"Microsoft.Quantum.Arithmetic.LittleEndian":
+  A chamada @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" seguinte utiliza-se @"Microsoft.Quantum.Arithmetic.BigEndian" para aplicar uma operação concebida @"Microsoft.Quantum.Arithmetic.LittleEndian"para entradas numa entrada de tipo:
 
 
   ```qsharp
@@ -18,7 +18,7 @@ input:
   content: "(fn : ('U -> 'T), op : ('T => Unit is Ctl), input : 'U)"
   types:
   - name: fn
-    summary: Uma função que transforma a entrada fornecida em um formulário esperado pela operação.
+    summary: Uma função que transforma a entrada dada numa forma esperada pela operação.
     isFunction: true
     input:
       types:
@@ -29,7 +29,7 @@ input:
       - uid: "'T"
         isLocal: true
   - name: op
-    summary: A operação a ser aplicada.
+    summary: A operação a aplicar.
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: 628ec05a31e60c6323b53bd17a93ed5b7fc08a69
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 0f7538aaa51b3ecf45a4e78db6f214e323f4914c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73212621"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676261"

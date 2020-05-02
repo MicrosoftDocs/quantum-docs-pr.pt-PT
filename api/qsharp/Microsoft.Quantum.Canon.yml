@@ -5,35 +5,35 @@ functions:
 - uid: microsoft.quantum.canon.asqubitarray
   summary: "\n> [!WARNING]\n> Preterido\n\nAsQubitArray foi depreciado.\nEsta função foi removida."
 - uid: microsoft.quantum.canon.assertalmostequal
-  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertAlmostEqual foi depreciada. Por favor, use @\"microsoft.quantum.diagnostics.nearequalityfactd\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertAlmostEqual foi depreciada. Por @\"microsoft.quantum.diagnostics.nearequalityfactd\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.assertalmostequaltol
-  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertAlmostEqualTol foi depreciada. Por favor, use @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertAlmostEqualTol foi depreciada. Por @\"microsoft.quantum.diagnostics.equalitywithintolerancefact\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Diagnostics.EqualityWithinToleranceFact\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.assertboolarrayequal
-  summary: "\n> [!WARNING]\n> Preterido\n\nAssertBoolArrayEqual foi depreciado. Por favor, use @\"microsoft.quantum.diagnostics.allequalityfactb\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertBoolArrayEqual foi depreciado. Por @\"microsoft.quantum.diagnostics.allequalityfactb\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Diagnostics.AllEqualityFactB\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.assertboolequal
-  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertBoolEqual foi depreciada. Por favor, use @\"microsoft.quantum.diagnostics.equalityfactb\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertBoolEqual foi depreciada. Por @\"microsoft.quantum.diagnostics.equalityfactb\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Diagnostics.EqualityFactB\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.assertintequal
-  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertIntEqual foi depreciada. Por favor, use @\"microsoft.quantum.diagnostics.equalityfacti\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertIntEqual foi depreciada. Por @\"microsoft.quantum.diagnostics.equalityfacti\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Diagnostics.EqualityFactI\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.assertresultequal
-  summary: "\n> [!WARNING]\n> Preterido\n\nAssertResultEqual foi depreciado. Por favor, use @\"microsoft.quantum.diagnostics.equalityfactr\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertResultEqual foi depreciado. Por @\"microsoft.quantum.diagnostics.equalityfactr\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Diagnostics.EqualityFactR\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.bigendiantolittleendian
-  summary: "\n> [!WARNING]\n> Preterido\n\nBigEndianToLittleEndian foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBigEndianToLittleEndian foi depreciado. Por @\"microsoft.quantum.arithmetic.bigendianaslittleendian\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian\"favor, use ."
 - uid: microsoft.quantum.canon.bind
-  summary: "\n> [!WARNING]\n> Preterido\n\nBind foi depreciado. Por favor, use @\"microsoft.quantum.canon.bound\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.bound\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBind foi depreciado. Por @\"microsoft.quantum.canon.bound\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.bound\"favor, use ."
 - uid: microsoft.quantum.canon.binda
-  summary: "\n> [!WARNING]\n> Preterido\n\nBindA foi depreciada. Por favor, use @\"microsoft.quantum.canon.bounda\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.bounda\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBindA foi depreciada. Por @\"microsoft.quantum.canon.bounda\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.bounda\"favor, use ."
 - uid: microsoft.quantum.canon.bindc
-  summary: "\n> [!WARNING]\n> Preterido\n\nBindC foi depreciado. Por favor, use @\"microsoft.quantum.canon.boundc\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.boundc\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBindC foi depreciado. Por @\"microsoft.quantum.canon.boundc\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.boundc\"favor, use ."
 - uid: microsoft.quantum.canon.bindca
-  summary: "\n> [!WARNING]\n> Preterido\n\nBindCA foi depreciado. Por favor, use @\"microsoft.quantum.canon.boundca\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.boundca\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBindCA foi depreciado. Por @\"microsoft.quantum.canon.boundca\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.boundca\"favor, use ."
 - uid: microsoft.quantum.canon.bitsize
-  summary: "\n> [!WARNING]\n> Preterido\n\nBitSize foi depreciado. Por favor, use @\"microsoft.quantum.math.bitsizei\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.bitsizei\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBitSize foi depreciado. Por @\"microsoft.quantum.math.bitsizei\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.bitsizei\"favor, use ."
 - uid: microsoft.quantum.canon.boolarrfrompositiveint
-  summary: "\n> [!WARNING]\n> Preterido\n\nBoolArrFromPositiveInt foi depreciado. Por favor, use @\"microsoft.quantum.convert.intasboolarray\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.intasboolarray\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBoolArrFromPositiveInt foi depreciado. Por @\"microsoft.quantum.convert.intasboolarray\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.intasboolarray\"favor, use ."
 - uid: microsoft.quantum.canon.boolarrfromresultarr
-  summary: "\n> [!WARNING]\n> Preterido\n\nBoolArrFromFromResultArr foi depreciado. Por favor, use @\"microsoft.quantum.convert.resultarrayasboolarray\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBoolArrFromFromResultArr foi depreciado. Por @\"microsoft.quantum.convert.resultarrayasboolarray\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.resultarrayasboolarray\"favor, use ."
 - uid: microsoft.quantum.canon.boolfromresult
-  summary: "\n> [!WARNING]\n> Preterido\n\nBoolFromResult foi depreciado. Por favor, use @\"microsoft.quantum.convert.resultasbool\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.resultasbool\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nBoolFromResult foi depreciado. Por @\"microsoft.quantum.convert.resultasbool\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.resultasbool\"favor, use ."
 - uid: microsoft.quantum.canon.bound
   summary: Dado um conjunto de operações agindo numa única entrada, produz uma nova operação que executa cada operação em sequência.
 - uid: microsoft.quantum.canon.bounda
@@ -52,20 +52,20 @@ functions:
 
     O modificador `CA` indica que todas as operações na matriz são adumíveis e controláveis.
 - uid: microsoft.quantum.canon.ccontrolled
-  summary: Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`, nada acontece.
+  summary: Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`nada acontece.
 - uid: microsoft.quantum.canon.ccontrolleda
   summary: >-
-    Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`, nada acontece.
+    Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`nada acontece.
 
     O modificador `A` indica que a operação é adcompável.
 - uid: microsoft.quantum.canon.ccontrolledc
   summary: >-
-    Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`, nada acontece.
+    Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`nada acontece.
 
     O modificador `C` indica que a operação é controlável.
 - uid: microsoft.quantum.canon.ccontrolledca
   summary: >-
-    Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`, nada acontece.
+    Dada uma operação operatória, devolve uma nova operação que aplica a operação se uma parte de controlo clássico for verdadeira. Se `false`nada acontece.
 
     O modificador `CA` indica que a operação é controlável e adjointável.
 - uid: microsoft.quantum.canon.compose
@@ -79,7 +79,7 @@ functions:
 - uid: microsoft.quantum.canon.conjugatedbyca
   summary: Dadas as operações exteriores e internas, devolve uma nova operação que conjuga o funcionamento interno através da operação exterior.
 - uid: microsoft.quantum.canon.continuedfractionconvergent
-  summary: "\n> [!WARNING]\n> Preterido\n\nContinuaçãoFractionConvergente foi depreciado. Por favor, use @\"microsoft.quantum.math.continuedfractionconvergenti\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.continuedfractionconvergenti\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nContinuaçãoFractionConvergente foi depreciado. Por @\"microsoft.quantum.math.continuedfractionconvergenti\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.continuedfractionconvergenti\"favor, use ."
 - uid: microsoft.quantum.canon.controlledonbitstring
   summary: Devolve uma operação unitária que aplica um oráculo no registo-alvo se o estado do registo de controlo corresponder a uma máscara de bit especificada.
 - uid: microsoft.quantum.canon.controlledonint
@@ -91,11 +91,11 @@ functions:
 
     Ou seja, dada uma operação com duas inputs, esta função aplica o isomorfismo da Curry $f(x, y) \equiv f(x)(y)$para devolver uma operação de uma entrada que devolve uma operação de uma entrada.
 - uid: microsoft.quantum.canon.curryop
-  summary: "\n> [!WARNING]\n> Preterido\n\nCurryOp foi depreciado. Por favor, use @\"microsoft.quantum.canon.curriedop\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.curriedop\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCurryOp foi depreciado. Por @\"microsoft.quantum.canon.curriedop\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.curriedop\"favor, use ."
 - uid: microsoft.quantum.canon.decomposedintotimestepsca
   summary: Devolve uma operação de implementação do integrador Trotter-Suzuki para uma determinada operação.
 - uid: microsoft.quantum.canon.decomposeintotimestepsca
-  summary: "\n> [!WARNING]\n> Preterido\n\nDecomposiçãoIntoTimeStepsCA foi depreciado. Por favor, use @\"microsoft.quantum.canon.decomposedintotimestepsca\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nDecomposiçãoIntoTimeStepsCA foi depreciado. Por @\"microsoft.quantum.canon.decomposedintotimestepsca\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.delayed
   summary: Devolve uma operação que se aplica a uma operação dada com o dado argumento.
 - uid: microsoft.quantum.canon.delayeda
@@ -105,45 +105,45 @@ functions:
 - uid: microsoft.quantum.canon.delayedca
   summary: Devolve uma operação que se aplica a uma operação dada com o dado argumento.
 - uid: microsoft.quantum.canon.embedpauli
-  summary: Tendo em conta um operador pauli de um único qubit e o índice de um qubit, devolve um operador pauli multiqubit com o operador de qubit único desse índice e `PauliI` em todos os outros índices.
+  summary: Tendo em conta um operador pauli de um único qubit e o índice de um qubit, devolve `PauliI` um operador pauli multiqubit com o operador de qubit único desse índice e em todos os outros índices.
 - uid: microsoft.quantum.canon.expmod
-  summary: "\n> [!WARNING]\n> Preterido\n\nExpMod foi depreciado. Por favor, use @\"microsoft.quantum.math.expmodi\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.expmodi\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nExpMod foi depreciado. Por @\"microsoft.quantum.math.expmodi\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.expmodi\"favor, use ."
 - uid: microsoft.quantum.canon.extendedgcd
-  summary: "\n> [!WARNING]\n> Preterido\n\nO ExtendedGCD foi depreciado. Por favor, use @\"microsoft.quantum.math.extendedgreatestcommondivisori\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.extendedgreatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ExtendedGCD foi depreciado. Por @\"microsoft.quantum.math.extendedgreatestcommondivisori\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.extendedgreatestcommondivisori\"favor, use ."
 - uid: microsoft.quantum.canon.filter
-  summary: "\n> [!WARNING]\n> Preterido\n\nO filtro foi depreciado. Por favor, use @\"microsoft.quantum.arrays.filtered\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.Filtered\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO filtro foi depreciado. Por @\"microsoft.quantum.arrays.filtered\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.Filtered\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.forall
-  summary: "\n> [!WARNING]\n> Preterido\n\nForAll foi depreciado. Por favor, use @\"microsoft.quantum.arrays.all\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.All\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nForAll foi depreciado. Por @\"microsoft.quantum.arrays.all\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.All\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.forany
-  summary: "\n> [!WARNING]\n> Preterido\n\nPois qualquer foi depreciado. Por favor, use @\"microsoft.quantum.arrays.any\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.Any\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPois qualquer foi depreciado. Por @\"microsoft.quantum.arrays.any\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.Any\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.fst
   summary: Dado um par, devolve o seu primeiro elemento.
 - uid: microsoft.quantum.canon.gcd
-  summary: "\n> [!WARNING]\n> Preterido\n\nA GCD foi depreciada. Por favor, use @\"microsoft.quantum.math.greatestcommondivisori\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA GCD foi depreciada. Por @\"microsoft.quantum.math.greatestcommondivisori\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.greatestcommondivisori\"favor, use ."
 - uid: microsoft.quantum.canon.ignore
   summary: Ignora a saída de uma operação ou função.
 - uid: microsoft.quantum.canon.intabs
-  summary: "\n> [!WARNING]\n> Preterido\n\nO IntAbs foi depreciado. Por favor, use @\"microsoft.quantum.math.absi\" em vez disso.\nEsta função foi removida."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO IntAbs foi depreciado. Por @\"microsoft.quantum.math.absi\" favor, use em vez disso.\nEsta função foi removida."
 - uid: microsoft.quantum.canon.intarrayfromrange
-  summary: "\n> [!WARNING]\n> Preterido\n\nIntArrayFromRange foi depreciado. Por favor, use @\"microsoft.quantum.convert.rangeasintarray\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.rangeasintarray\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nIntArrayFromRange foi depreciado. Por @\"microsoft.quantum.convert.rangeasintarray\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.rangeasintarray\"favor, use ."
 - uid: microsoft.quantum.canon.intmax
-  summary: "\n> [!WARNING]\n> Preterido\n\nA IntMax foi depreciada. Por favor, use @\"microsoft.quantum.math.maxi\" em vez disso.\nEsta função foi removida."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA IntMax foi depreciada. Por @\"microsoft.quantum.math.maxi\" favor, use em vez disso.\nEsta função foi removida."
 - uid: microsoft.quantum.canon.inversemod
-  summary: "\n> [!WARNING]\n> Preterido\n\nO InversoMod foi depreciado. Por favor, use @\"microsoft.quantum.math.inversemodi\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.inversemodi\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO InversoMod foi depreciado. Por @\"microsoft.quantum.math.inversemodi\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.inversemodi\"favor, use ."
 - uid: microsoft.quantum.canon.iscoprime
-  summary: "\n> [!WARNING]\n> Preterido\n\nIsCoprime foi depreciado. Por favor, use @\"microsoft.quantum.math.iscoprimei\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.greatestcommondivisori\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nIsCoprime foi depreciado. Por @\"microsoft.quantum.math.iscoprimei\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.greatestcommondivisori\"favor, use ."
 - uid: microsoft.quantum.canon.isresultone
-  summary: Testes se um determinado valor resultado for igual a `One`.
+  summary: Testes se um determinado valor `One`resultado for igual a .
 - uid: microsoft.quantum.canon.isresultzero
-  summary: Testes se um determinado valor resultado for igual a `Zero`.
+  summary: Testes se um determinado valor `Zero`resultado for igual a .
 - uid: microsoft.quantum.canon.littleendiantobigendian
-  summary: "\n> [!WARNING]\n> Preterido\n\nLittleEndianToBigEndian foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.littleendianasbigendian\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nLittleEndianToBigEndian foi depreciado. Por @\"microsoft.quantum.arithmetic.littleendianasbigendian\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian\"favor, use ."
 - uid: microsoft.quantum.canon.map
-  summary: "\n> [!WARNING]\n> Preterido\n\nO mapa foi deprecado. Por favor, use @\"microsoft.quantum.arrays.mapped\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.Mapped\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO mapa foi deprecado. Por @\"microsoft.quantum.arrays.mapped\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.Mapped\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.mapindex
-  summary: "\n> [!WARNING]\n> Preterido\n\nMapIndex foi depreciado. Por favor, use @\"microsoft.quantum.arrays.mappedbyindex\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.MappedByIndex\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMapIndex foi depreciado. Por @\"microsoft.quantum.arrays.mappedbyindex\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.MappedByIndex\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.modulus
-  summary: "\n> [!WARNING]\n> Preterido\n\nModulo foi depreciado. Por favor, use @\"microsoft.quantum.math.modulusi\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.modulusi\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nModulo foi depreciado. Por @\"microsoft.quantum.math.modulusi\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.modulusi\"favor, use ."
 - uid: microsoft.quantum.canon.multiplexerbruteforcefromgenerator
   summary: >-
     Devolve uma operação unitária controlada por multiplicação $U$ que aplica um $V_j$ unitário quando controlado pelo estado n-qubit número $\ket{j}$.
@@ -157,7 +157,7 @@ functions:
 
     $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 - uid: microsoft.quantum.canon.nearequalityfact
-  summary: "\n> [!WARNING]\n> Preterido\n\nNearEqualityFact foi depreciado. Por favor, use @\"microsoft.quantum.diagnostics.nearequalityfactd\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nNearEqualityFact foi depreciado. Por @\"microsoft.quantum.diagnostics.nearequalityfactd\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Diagnostics.NearEqualityFactD\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.operationpow
   summary: >-
     Eleva uma operação a uma potência.
@@ -189,15 +189,15 @@ functions:
 
     Isto é, dada uma operação que representa um portão $U$, devolve uma nova operação $U^m$ por uma potência $m$.
 - uid: microsoft.quantum.canon.pad
-  summary: "\n> [!WARNING]\n> Preterido\n\nPad foi depreciado. Por favor, use @\"microsoft.quantum.arrays.padded\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.Padded\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPad foi depreciado. Por @\"microsoft.quantum.arrays.padded\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.Padded\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.paulifrombitstring
-  summary: "\n> [!WARNING]\n> Preterido\n\nPauliFromBitString foi depreciado. Por favor, use @\"microsoft.quantum.convert.boolarrayaspauli\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.boolarrayaspauli\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPauliFromBitString foi depreciado. Por @\"microsoft.quantum.convert.boolarrayaspauli\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.boolarrayaspauli\"favor, use ."
 - uid: microsoft.quantum.canon.pnormalize
-  summary: "\n> [!WARNING]\n> Preterido\n\nPNormalize foi depreciado. Por favor, use @\"microsoft.quantum.math.pnormalized\" em vez disso.\nPor favor, use @\"microsoft.quantum.math.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPNormalize foi depreciado. Por @\"microsoft.quantum.math.pnormalized\" favor, use em vez disso.\nPor @\"microsoft.quantum.math.pnormalized\"favor, use ."
 - uid: microsoft.quantum.canon.positiveintfromboolarr
-  summary: "\n> [!WARNING]\n> Preterido\n\nPositiveIntFromBoolArr foi depreciado. Por favor, use @\"microsoft.quantum.convert.boolarrayasint\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.boolarrayasint\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPositiveIntFromBoolArr foi depreciado. Por @\"microsoft.quantum.convert.boolarrayasint\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.boolarrayasint\"favor, use ."
 - uid: microsoft.quantum.canon.positiveintfromresultarr
-  summary: "\n> [!WARNING]\n> Preterido\n\nPositiveIntFromResultArr foi depreciado. Por favor, use @\"microsoft.quantum.convert.resultarrayasint\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nPositiveIntFromResultArr foi depreciado. Por @\"microsoft.quantum.convert.resultarrayasint\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.resultarrayasint\"favor, use ."
 - uid: microsoft.quantum.canon.restrictedtosubregister
   summary: Restringe uma operação a uma série de índices de um registo, ou seja, um subregisto.
 - uid: microsoft.quantum.canon.restrictedtosubregistera
@@ -216,25 +216,25 @@ functions:
 
     O modificador `CA` indica que a operação é controlável e adjointável.
 - uid: microsoft.quantum.canon.restricttosubregister
-  summary: "\n> [!WARNING]\n> Preterido\n\nO registo Restrito Subregisto foi depreciado. Por favor, use @\"microsoft.quantum.canon.restrictedtosubregister\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.restrictedtosubregister\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO registo Restrito Subregisto foi depreciado. Por @\"microsoft.quantum.canon.restrictedtosubregister\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.restrictedtosubregister\"favor, use ."
 - uid: microsoft.quantum.canon.restricttosubregistera
-  summary: "\n> [!WARNING]\n> Preterido\n\nO RestrictToSubregisterA foi depreciado. Por favor, use @\"microsoft.quantum.canon.restrictedtosubregistera\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.restrictedtosubregistera\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO RestrictToSubregisterA foi depreciado. Por @\"microsoft.quantum.canon.restrictedtosubregistera\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.restrictedtosubregistera\"favor, use ."
 - uid: microsoft.quantum.canon.restricttosubregisterc
-  summary: "\n> [!WARNING]\n> Preterido\n\nO RestrictToSubregisterC foi depreciado. Por favor, use @\"microsoft.quantum.canon.restrictedtosubregisterc\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.restrictedtosubregisterc\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO RestrictToSubregisterC foi depreciado. Por @\"microsoft.quantum.canon.restrictedtosubregisterc\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.restrictedtosubregisterc\"favor, use ."
 - uid: microsoft.quantum.canon.restricttosubregisterca
-  summary: "\n> [!WARNING]\n> Preterido\n\nO RestrictToSubregisterCA foi depreciado. Por favor, use @\"microsoft.quantum.canon.restrictedtosubregisterca\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.restrictedtosubregisterca\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO RestrictToSubregisterCA foi depreciado. Por @\"microsoft.quantum.canon.restrictedtosubregisterca\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.restrictedtosubregisterca\"favor, use ."
 - uid: microsoft.quantum.canon.resultarrfromboolarr
-  summary: "\n> [!WARNING]\n> Preterido\n\nResultArrFromBoolArr foi depreciado. Por favor, use @\"microsoft.quantum.convert.boolarrayasresultarray\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.resultarrayasboolarray\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nResultArrFromBoolArr foi depreciado. Por @\"microsoft.quantum.convert.boolarrayasresultarray\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.resultarrayasboolarray\"favor, use ."
 - uid: microsoft.quantum.canon.resultasint
-  summary: "\n> [!WARNING]\n> Preterido\n\nO ResultadoInt foi depreciado. Por favor, use @\"microsoft.quantum.convert.resultarrayasint\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.resultarrayasint\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO ResultadoInt foi depreciado. Por @\"microsoft.quantum.convert.resultarrayasint\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.resultarrayasint\"favor, use ."
 - uid: microsoft.quantum.canon.resultfrombool
-  summary: "\n> [!WARNING]\n> Preterido\n\nResultFromBool foi depreciado. Por favor, use @\"microsoft.quantum.convert.boolasresult\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.boolasresult\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nResultFromBool foi depreciado. Por @\"microsoft.quantum.convert.boolasresult\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.boolasresult\"favor, use ."
 - uid: microsoft.quantum.canon.reverse
-  summary: "\n> [!WARNING]\n> Preterido\n\nO inverso foi depreciado. Por favor, use @\"microsoft.quantum.arrays.reversed\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.Reversed\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO inverso foi depreciado. Por @\"microsoft.quantum.arrays.reversed\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.Reversed\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.snd
   summary: Dado um par, devolve o seu segundo elemento.
 - uid: microsoft.quantum.canon.splitarray
-  summary: "\n> [!WARNING]\n> Preterido\n\nSplitArray foi depreciado. Por favor, use @\"microsoft.quantum.arrays.partitioned\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arrays.Partitioned\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nSplitArray foi depreciado. Por @\"microsoft.quantum.arrays.partitioned\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arrays.Partitioned\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.stackcapacity
   summary: "\n> [!WARNING]\n> Preterido\n\nStackCapacity foi depreciado."
 - uid: microsoft.quantum.canon.stacklength
@@ -248,7 +248,7 @@ functions:
 - uid: microsoft.quantum.canon.stackpush
   summary: "\n> [!WARNING]\n> Preterido\n\nStackPush foi depreciado."
 - uid: microsoft.quantum.canon.tooperation
-  summary: "\n> [!WARNING]\n> Preterido\n\nA Operação foi depreciada. Por favor, use @\"microsoft.quantum.convert.functionasoperation\" em vez disso.\nPor favor, use @\"microsoft.quantum.convert.functionasoperation\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA Operação foi depreciada. Por @\"microsoft.quantum.convert.functionasoperation\" favor, use em vez disso.\nPor @\"microsoft.quantum.convert.functionasoperation\"favor, use ."
 - uid: microsoft.quantum.canon.transformedoperation
   summary: Dada uma função e uma operação, devolve uma nova operação cuja entrada é transformada pela função dada.
 - uid: microsoft.quantum.canon.transformedoperationa
@@ -275,20 +275,20 @@ functions:
 
     O modificador `CA` indica que as operações são controláveis e adjointáveis.
 - uid: microsoft.quantum.canon.uncurryop
-  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOp foi depreciado. Por favor, use @\"microsoft.quantum.canon.uncurriedop\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.uncurriedop\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOp foi depreciado. Por @\"microsoft.quantum.canon.uncurriedop\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.uncurriedop\"favor, use ."
 - uid: microsoft.quantum.canon.uncurryopa
-  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOpA foi depreciado. Por favor, use @\"microsoft.quantum.canon.uncurriedopa\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.uncurriedopa\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOpA foi depreciado. Por @\"microsoft.quantum.canon.uncurriedopa\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.uncurriedopa\"favor, use ."
 - uid: microsoft.quantum.canon.uncurryopc
-  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOpC foi depreciado. Por favor, use @\"microsoft.quantum.canon.uncurriedopc\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.uncurriedopc\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOpC foi depreciado. Por @\"microsoft.quantum.canon.uncurriedopc\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.uncurriedopc\"favor, use ."
 - uid: microsoft.quantum.canon.uncurryopca
-  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOpCA foi depreciado. Por favor, use @\"microsoft.quantum.canon.uncurriedopca\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.uncurriedopca\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nUncurryOpCA foi depreciado. Por @\"microsoft.quantum.canon.uncurriedopca\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.uncurriedopca\"favor, use ."
 - uid: microsoft.quantum.canon.weightonepaulis
   summary: Devolve uma série de todos os operadores pauli peso-1 em um determinado número de qubits.
 - uid: microsoft.quantum.canon.xor
-  summary: "\n> [!WARNING]\n> Preterido\n\nO XOR foi depreciado. Por favor, use @\"microsoft.quantum.logical.xor\" em vez disso.\nPor favor, use @\"microsoft.quantum.logical.xor\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO XOR foi depreciado. Por @\"microsoft.quantum.logical.xor\" favor, use em vez disso.\nPor @\"microsoft.quantum.logical.xor\"favor, use ."
 operations:
 - uid: microsoft.quantum.canon.adiabaticstateenergyunitary
-  summary: "\n> [!WARNING]\n> Preterido\n\nADiabaticStateEnergyUnitary foi depreciada. Por favor, use @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" em vez disso.\nPor favor, use @\"microsoft.quantum.simuilation.pnormalized\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nADiabaticStateEnergyUnitary foi depreciada. Por @\"microsoft.quantum.simulation.estimateenergywithadiabaticevolution\" favor, use em vez disso.\nPor @\"microsoft.quantum.simuilation.pnormalized\"favor, use ."
 - uid: microsoft.quantum.canon.andladder
   summary: Executa um "And ladder" controlado num registo de qubits-alvo.
 - uid: microsoft.quantum.canon.applyand
@@ -352,7 +352,7 @@ operations:
   summary: >-
     Aplica uma versão controlada multiplicadora de uma operação controlada com singly.
 
-    O modificador `CA` indica que a operação de um qubit único é controlável e adjointável.
+    O modificador `CA` indica que a operação de qubit único é controlável e adjointável.
 - uid: microsoft.quantum.canon.applyoprepeatedlyover
   summary: Aplica a mesma operação sobre um registo qubit várias vezes.
 - uid: microsoft.quantum.canon.applyoprepeatedlyovera
@@ -370,27 +370,27 @@ operations:
 - uid: microsoft.quantum.canon.applyquantumfouriertransformbe
   summary: "\n> [!WARNING]\n> Preterido\n\nApplyQuantumFourierTransformBE foi depreciado. Por favor use @\"applyquantumfouriertransform(bigendianaslittleendian(qs)\" em vez disso.\nEsta operação foi removida."
 - uid: microsoft.quantum.canon.applyquantumfouriertransformle
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyQuantumFourierTransformLE foi depreciado. Por favor, use @\"microsoft.quantum.canon.applyquantumfouriertransform\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.applyquantumfouriertransform\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyQuantumFourierTransformLE foi depreciado. Por @\"microsoft.quantum.canon.applyquantumfouriertransform\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.applyquantumfouriertransform\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedopbigendian
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndian foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedopbe\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndian foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedopbe\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBE\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedopbigendiana
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndianA foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedopbea\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndianA foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedopbea\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEA\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedopbigendianc
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndianC foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedopbec\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndianC foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedopbec\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedopbigendianca
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndianCA foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedopbeca\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpBigEndianCA foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedopbeca\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpBEC\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedoplittleendian
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndian foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedople\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndian foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedople\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLE\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedoplittleendiana
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndianA foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedoplea\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndianA foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedoplea\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEA\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianc
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndianC foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedoplec\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndianC foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedoplec\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"favor, use ."
 - uid: microsoft.quantum.canon.applyreversedoplittleendianca
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndianCA foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.applyreversedopleca\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyReversedOpLittleEndianCA foi depreciado. Por @\"microsoft.quantum.arithmetic.applyreversedopleca\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ApplyReversedOpLEC\"favor, use ."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorbe
   summary: "\n> [!WARNING]\n> Preterido\n\nApplyRippleCarryCompareatorBE foi depreciado. Por favor use @\"compareusingripplecarry(bigendianaslittleendian(x), bigendianaslittleendian(y), output)\" em vez disso.\nEsta operação foi removida."
 - uid: microsoft.quantum.canon.applyripplecarrycomparatorle
-  summary: "\n> [!WARNING]\n> Preterido\n\nApplyRippleCarryCompareatorLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.compareusingripplecarry\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nApplyRippleCarryCompareatorLE foi depreciado. Por @\"microsoft.quantum.arithmetic.compareusingripplecarry\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry\"favor, use ."
 - uid: microsoft.quantum.canon.applyseriesofops
   summary: Aplica uma lista de operações e seus alvos sequencialmente numa matriz.
 - uid: microsoft.quantum.canon.applyseriesofopsa
@@ -405,7 +405,7 @@ operations:
   summary: >-
     Aplica uma operação de qubit único a cada elemento num registo.
 
-    O modificador `A` indica que a operação de um qubit único é adcompável.
+    O modificador `A` indica que a operação de qubit único é adjointable.
 - uid: microsoft.quantum.canon.applytoeachc
   summary: >-
     Aplica uma operação de qubit único a cada elemento num registo.
@@ -415,14 +415,14 @@ operations:
   summary: >-
     Aplica uma operação de qubit único a cada elemento num registo.
 
-    O modificador `CA` indica que a operação de um qubit único é controlável e adjointável.
+    O modificador `CA` indica que a operação de qubit único é controlável e adjointável.
 - uid: microsoft.quantum.canon.applytoeachindex
   summary: Aplica uma operação de um único qubit a cada elemento indexado num registo.
 - uid: microsoft.quantum.canon.applytoeachindexa
   summary: >-
     Aplica uma operação de um único qubit a cada elemento indexado num registo.
 
-    O modificador `A` indica que a operação de um qubit único é adcompável.
+    O modificador `A` indica que a operação de qubit único é adjointable.
 - uid: microsoft.quantum.canon.applytoeachindexc
   summary: >-
     Aplica uma operação de um único qubit a cada elemento indexado num registo.
@@ -432,7 +432,7 @@ operations:
   summary: >-
     Aplica uma operação de um único qubit a cada elemento indexado num registo.
 
-    O modificador `CA` indica que a operação de um qubit único é adjointável e controlável.
+    O modificador `CA` indica que a operação de qubit único é adjointável e controlável.
 - uid: microsoft.quantum.canon.applytoelement
   summary: Aplica uma operação a um dado elemento de uma matriz.
 - uid: microsoft.quantum.canon.applytoelementa
@@ -551,43 +551,43 @@ operations:
 - uid: microsoft.quantum.canon.approximateqft
   summary: Aplique a Transformação Quântica Aproximada de Fourier (AQFT) num registo quântico.
 - uid: microsoft.quantum.canon.asserthighestbit
-  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertHighBit foi depreciada. Por favor, use @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA AssertHighBit foi depreciada. Por @\"microsoft.quantum.arithmetic.assertmostsignificantbit\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.AssertMostSignificantBit\"favor, use ."
 - uid: microsoft.quantum.canon.assertlessthanphasele
-  summary: "\n> [!WARNING]\n> Preterido\n\nAssertLessThanPhaseLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.assertphaselessthan\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nAssertLessThanPhaseLE foi depreciado. Por @\"microsoft.quantum.arithmetic.assertphaselessthan\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.AssertPhaseLessThan\"favor, use ."
 - uid: microsoft.quantum.canon.assertphase
   summary: >-
     Afirma que a fase de um estado de superposição igual tem o valor esperado.
 
 
-    Especificamente, afirma que a fase $\phi$ de um estado quântico que pode ser expressa como $\frac{e^{i}{\sqrt{2}}(e^{i\phi}\ket{0} + e^{-i\phi}\ket{1})$ para algum real arbitrário t tem o valor esperado.
+    Especificamente, afirma que a fase $\phi$ de um estado quântico que pode ser expressa como $\frac{e^{i}{\sqrt{2}}(e^{i\phi}\ket{0} + e^{-i\phi}\}\ket{1})$para algum real arbitrário t tem o valor esperado.
 - uid: microsoft.quantum.canon.assertprobintbe
   summary: "\n> [!WARNING]\n> Preterido\n\nA AssertProbIntBE foi depreciada. Por favor use @\"assertprobint (stateindex, prob, bigendianaslittleendian(qubits), tolerância)\" em vez disso.\nEsta operação foi removida."
 - uid: microsoft.quantum.canon.cascadecnot
-  summary: "\n> [!WARNING]\n> Preterido\n\nCascadeCNOT foi depreciado. Por favor, use @\"microsoft.quantum.canon.applycnotchain\" em vez disso.\nPor favor, use @\"microsoft.quantum.canon.applycnotchain\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCascadeCNOT foi depreciado. Por @\"microsoft.quantum.canon.applycnotchain\" favor, use em vez disso.\nPor @\"microsoft.quantum.canon.applycnotchain\"favor, use ."
 - uid: microsoft.quantum.canon.cnotchain
-  summary: "\n> [!WARNING]\n> Preterido\n\nCNOTChain foi depreciado. Por favor, use @\"microsoft.quantum.canon.applycnotchain\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCNOTChain foi depreciado. Por @\"microsoft.quantum.canon.applycnotchain\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.cnotchaintarget
-  summary: "\n> [!WARNING]\n> Preterido\n\nO CNOTChainTarget foi depreciado. Por favor, use @\"microsoft.quantum.canon.applycnotchainwithtarget\" em vez disso."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO CNOTChainTarget foi depreciado. Por @\"microsoft.quantum.canon.applycnotchainwithtarget\" favor, use em vez disso."
 - uid: microsoft.quantum.canon.copymostsignificantbitle
-  summary: "\n> [!WARNING]\n> Preterido\n\nCopyMostSignificantBitLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.copymostsignificantbit\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCopyMostSignificantBitLE foi depreciado. Por @\"microsoft.quantum.arithmetic.copymostsignificantbit\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.CopyMostSignificantBit\"favor, use ."
 - uid: microsoft.quantum.canon.cx
   summary: >-
     Aplica o portão controlado-X (CX) a um par de qubits.
 
 
-    $$ \begin{align} 1 & 0 & 0 & 0 e 0 \\\\ 0 & 1 & 0 & 0 e 0 \\\\ 0 & 0 & 1 \\\\ 0 & 0 & 0 & 0 & 0 \{align}, $$ onde as linhas e colunas são organizadas como no guia de conceitos quânticos.
+    $$ \start{align} 1 & 0 \\ \\ & 0 & \\ \\ 0 & 1 & \\ \\ 0 & & 0 & 0 & 1 0 & 0 & & 1 & 0 \end{align}, onde as linhas e colunas são organizadas como no guia de conceitos quânticos.
 - uid: microsoft.quantum.canon.cy
   summary: >-
     Aplica o portão de Y (CY) controlado a um par de qubits.
 
 
-    $$ \begin{align} 1 & 0 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & -i \\\\ 0 & 0 & i & 0 \{align}, $$ onde as linhas e colunas são organizadas como no guia de conceitos quânticos.
+    $$ \start{align} 1 & 0 \\ \\ & 0 & \\ \\ 0 & 1 & \\ \\ 0 & & 0 & 0 & -i 0 & 0 & i & 0 \end{align}, $$ onde as filas e colunas são organizadas como no guia de conceitos quânticos.
 - uid: microsoft.quantum.canon.cz
   summary: >-
     Aplica o portão de Z (CZ) controlado a um par de qubits.
 
 
-    $$ \begin{align} 1 & 0 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 e 0 \\\\ 0 & 0 & 0 e 0 \\\\ 0 & 0 & 0 & -1 \end{align}, $$ onde as linhas e colunas são organizadas como no guia de conceitos quânticos.
+    $$ \start{align} 1 & 0 \\ \\ & 0 & \\ \\ 0 & 1 & \\ \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & -1 \end{align}, $$ onde as linhas e colunas são organizadas como no guia de conceitos quânticos.
 - uid: microsoft.quantum.canon.delay
   summary: Aplica uma determinada operação com um atraso.
 - uid: microsoft.quantum.canon.delaya
@@ -604,19 +604,19 @@ operations:
     A transformação de Y Hadamard $H_Y = S H$ num único qubit é:
 
 
-    \begin{align} H_Y \mathrel{:=} \frac{1}{\sqrt{2}} \start {bmatrix} 1 & 1 \\\\ i & -i \end{bmatrix}.
+    \begin{align} H_Y \mathrel{:=}{1}\frac {\sqrt{2}} \begin{bmatrix} 1 & 1 \\ \\ i & -i \end{bmatrix}.
 
     \fim{align}
 - uid: microsoft.quantum.canon.inplacemajority
-  summary: "\n> [!WARNING]\n> Preterido\n\nA InPlaceMajority foi depreciada. Por favor, use @\"microsoft.quantum.arithmetic.applymajorityinplace\" em vez disso.\nPor favor, use @\"microsoft.quantum.arithmetic.applymajorityinplace\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA InPlaceMajority foi depreciada. Por @\"microsoft.quantum.arithmetic.applymajorityinplace\" favor, use em vez disso.\nPor @\"microsoft.quantum.arithmetic.applymajorityinplace\"favor, use ."
 - uid: microsoft.quantum.canon.inplacexorbe
   summary: "\n> [!WARNING]\n> Preterido\n\nA InPlaceXorBE foi depreciada. Por favor, use @\"applyreversedopleca (applyxorinplace (value, _), target)\" em vez disso.\nEsta operação foi removida."
 - uid: microsoft.quantum.canon.inplacexorle
-  summary: "\n> [!WARNING]\n> Preterido\n\nO InPlaceXorLE foi depreciado. Por favor, use @\"microsoft.quantum.measurement.applyxorinplace\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO InPlaceXorLE foi depreciado. Por @\"microsoft.quantum.measurement.applyxorinplace\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Measurement.ApplyXorInPlace\"favor, use ."
 - uid: microsoft.quantum.canon.integerincrementle
-  summary: "\n> [!WARNING]\n> Preterido\n\nO IntegerIncrementLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.incrementbyinteger\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO IntegerIncrementLE foi depreciado. Por @\"microsoft.quantum.arithmetic.incrementbyinteger\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.IncrementByInteger\"favor, use ."
 - uid: microsoft.quantum.canon.integerincrementphasele
-  summary: "\n> [!WARNING]\n> Preterido\n\nO integerIncrementPhaseLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nO integerIncrementPhaseLE foi depreciado. Por @\"microsoft.quantum.arithmetic.incrementphasebyinteger\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByInteger\"favor, use ."
 - uid: microsoft.quantum.canon.iteratethroughcartesianpower
   summary: Aplica uma operação para cada índice no poder cartesiano de uma gama inteiro.
 - uid: microsoft.quantum.canon.iteratethroughcartesianproduct
@@ -624,15 +624,15 @@ operations:
 - uid: microsoft.quantum.canon.measureintegerbe
   summary: "\n> [!WARNING]\n> Preterido\n\nMeasureIntegerBE foi depreciada. Por favor, use @\"measureinteger(bigendianaslittleendian(target)\" em vez disso.\nEsta operação foi removida."
 - uid: microsoft.quantum.canon.modularaddproductle
-  summary: "\n> [!WARNING]\n> Preterido\n\nModularAddProductLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nModularAddProductLE foi depreciado. Por @\"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddByModularInteger\"favor, use ."
 - uid: microsoft.quantum.canon.modularaddproductphasele
-  summary: "\n> [!WARNING]\n> Preterido\n\nModularAddProductPhaseLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nModularAddProductPhaseLE foi depreciado. Por @\"microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.MultiplyAndAddPhaseByModularInteger\"favor, use ."
 - uid: microsoft.quantum.canon.modularincrementle
-  summary: "\n> [!WARNING]\n> Preterido\n\nModularIncrementLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nModularIncrementLE foi depreciado. Por @\"microsoft.quantum.arithmetic.modularincrementbyinteger\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.ModularIncrementByInteger\"favor, use ."
 - uid: microsoft.quantum.canon.modularincrementphasele
-  summary: "\n> [!WARNING]\n> Preterido\n\nModularIncrementPhaseLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nModularIncrementPhaseLE foi depreciado. Por @\"microsoft.quantum.arithmetic.incrementphasebymodularinteger\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger\"favor, use ."
 - uid: microsoft.quantum.canon.modularmultiplybyconstantle
-  summary: "\n> [!WARNING]\n> Preterido\n\nModularMultiplyByConstantLE foi depreciado. Por favor, use @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nModularMultiplyByConstantLE foi depreciado. Por @\"microsoft.quantum.arithmetic.multiplybymodularinteger\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Arithmetic.MultiplyByModularInteger\"favor, use ."
 - uid: microsoft.quantum.canon.multiplexoperations
   summary: >-
     Aplica uma série de operações controladas por uma série de estados de números.
@@ -681,22 +681,22 @@ operations:
 - uid: microsoft.quantum.canon.swapreverseregister
   summary: Utiliza portões SWAP para inverter a ordem dos qubits num registo.
 - uid: microsoft.quantum.canon.with
-  summary: "\n> [!WARNING]\n> Preterido\n\nCom foi depreciado. Por favor, use @\"microsoft.quantum.canon.applywith\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Canon.ApplyWith\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCom foi depreciado. Por @\"microsoft.quantum.canon.applywith\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Canon.ApplyWith\"favor, use ."
 - uid: microsoft.quantum.canon.witha
-  summary: "\n> [!WARNING]\n> Preterido\n\nWithA foi depreciado. Por favor, use @\"microsoft.quantum.canon.applywitha\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Canon.ApplyWithA\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nWithA foi depreciado. Por @\"microsoft.quantum.canon.applywitha\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Canon.ApplyWithA\"favor, use ."
 - uid: microsoft.quantum.canon.withc
-  summary: "\n> [!WARNING]\n> Preterido\n\nCom c foi depreciado. Por favor, use @\"microsoft.quantum.canon.applywithc\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Canon.ApplyWithC\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nCom c foi depreciado. Por @\"microsoft.quantum.canon.applywithc\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Canon.ApplyWithC\"favor, use ."
 - uid: microsoft.quantum.canon.withca
-  summary: "\n> [!WARNING]\n> Preterido\n\nA ComCA foi depreciada. Por favor, use @\"microsoft.quantum.canon.applywithca\" em vez disso.\nPor favor, use @\"Microsoft.Quantum.Canon.ApplyWithCA\"."
+  summary: "\n> [!WARNING]\n> Preterido\n\nA ComCA foi depreciada. Por @\"microsoft.quantum.canon.applywithca\" favor, use em vez disso.\nPor @\"Microsoft.Quantum.Canon.ApplyWithCA\"favor, use ."
 newtypes:
 - uid: microsoft.quantum.canon.ccnotop
   summary: O tipo de assinatura do portão CCNOT.
 - uid: microsoft.quantum.canon.resultstack
   summary: "\n> [!WARNING]\n> Preterido\n\nResultStack foi depreciado."
 metadata:
-  ms.openlocfilehash: db3466b0e6fe493393f75bea85f9c91e2f56ec67
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: a38f0267c2caefba7acc63e8e36d96a1b8c08d91
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905629"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677062"

@@ -4,7 +4,7 @@ name: Any
 type: function
 namespace: Microsoft.Quantum.Arrays
 summary: Dada uma matriz e um predicado que é definido para os elementos da matriz, verifica se pelo menos um elemento da matriz satisfaz o predicado.
-remarks: "A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma função `predicate: 'T -> Bool` podemos produzir um valor `Bool` que indique se algum elemento satisfaz `predicate`."
+remarks: "`'T[]` A função é definida para tipos genéricos, `predicate: 'T -> Bool` `Bool` `predicate`ou seja, sempre que temos uma matriz e uma função podemos produzir um valor que indique se algum elemento satisfaz ."
 examples: >-
   ```qsharp
 
@@ -30,7 +30,7 @@ input:
   content: "(predicate : ('T -> Bool), array : 'T[])"
   types:
   - name: predicate
-    summary: Uma função de `'T` a `Bool` que é usada para verificar elementos.
+    summary: Uma função `Bool` de a partir daí `'T` é usada para verificar elementos.
     isFunction: true
     input:
       types:
@@ -41,23 +41,23 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Uma série de elementos sobre `'T`.
+    summary: Uma série de `'T`elementos sobre .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Bool
   types:
-  - summary: Um valor `Bool` da função OR do predicado aplicado a todos os elementos.
+  - summary: Um `Bool` valor da função OR do predicado aplicado a todos os elementos.
     isPrimitive: true
     uid: Bool
 typeParameters:
 - uid: "'T"
-  summary: O tipo de elementos `array`.
+  summary: O tipo `array` de elementos.
 metadata:
-  ms.openlocfilehash: 35555080f90588bc61d70e89ea412a23209408d6
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 4e80b5c39c83bc5d5b26d4df9ca86b8cbc796aeb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77905561"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676564"

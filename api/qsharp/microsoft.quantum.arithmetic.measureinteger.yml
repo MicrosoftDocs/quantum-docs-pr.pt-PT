@@ -3,27 +3,27 @@ uid: microsoft.quantum.arithmetic.measureinteger
 name: MeasureInteger
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Mede o conteúdo de um Quantum registrado e o converte em um inteiro. A medida é executada em relação à base computacional padrão, ou seja, a eigenbasis de `PauliZ`.
-remarks: Esta operação redefine seu registro de entrada para o estado $ \ket{00\cdots 0} $, adequado para a liberação de volta para um computador de destino.
+summary: Mede o conteúdo de um registo quântico e converte-o num inteiro. A medição é efetuada no que diz respeito à base computacional `PauliZ`padrão, ou seja, a base eigende de .
+remarks: Esta operação repõe o seu registo de entrada para o estado $\ket{00\cdots 0}$, adequado para libertar de volta para uma máquina-alvo.
 syntax: 'operation MeasureInteger (target : Microsoft.Quantum.Arithmetic.LittleEndian) : Int'
 input:
   content: '(target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: target
-    summary: Um registro da Quantum na codificação little-endian.
+    summary: Um registo quântico na codificação de pequenos endianos.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Int
   types:
-  - summary: Um inteiro sem sinal que contém o valor medido de `target`.
+  - summary: Um inteiro não assinado que contenha `target`o valor medido de .
     isPrimitive: true
     uid: Int
 seeAlso:
 - microsoft.quantum.canon.measureintegerbe
 metadata:
-  ms.openlocfilehash: 989302867cbfb6b429bf8e8d4b8a76a0c1c4e61d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cb7432ccf4c66b4f508b182e8c96bd73b13e2f08
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214882"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676759"

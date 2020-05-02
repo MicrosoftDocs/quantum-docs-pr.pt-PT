@@ -4,25 +4,25 @@ name: RippleCarryAdderD
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Reversível, ondulado no local, adição de dois inteiros.
+  Reversível, no lugar ondulação-carry adição de dois inteiros.
 
-  Considerando que dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros em que os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para o `carry`qubit.
-remarks: A operação controlada especificada faz uso de simetria e cancelamento mútuo de operações para melhorar a implementação padrão que adiciona um controle a cada operação.
+  Tendo em conta duas $n inteiros codificados nos `xs` registos `ys`littleEndian e , e um transporte qubit, a operação calcula a soma dos dois inteiros `ys` onde os $n$ menos significativos `carry`do resultado são mantidos e a broca de execução é xored ao qubit .
+remarks: A operação controlada especificada utiliza simetria e cancelamento mútuo de operações para melhorar a implementação predefinida que adiciona um controlo a cada operação.
 syntax: 'operation RippleCarryAdderD (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
-  - Thomas G. Draper: "adição em um computador Quantum", 2000.
+  - Thomas G. Draper: "Adição num Computador Quântico", 2000.
     https://arxiv.org/abs/quant-ph/0008033
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
   types:
   - name: xs
-    summary: LittleEndian qubit registrar o primeiro soma inteiro.
+    summary: Registo qubit littleEndian codificando a primeira soma inteiro.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: LittleEndian qubit a codificação do segundo inteiro soma, é modificado para manter o $n $ menos significativo bits da soma.
+    summary: O registo de qubit sucadiviado da LittleEndian, codificando a segunda soma de inteiro, é modificado para manter os $n$ menos significativos da soma.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: carry
-    summary: Qubit, é XORed com o bit mais significativo da soma.
+    summary: O transporte qubit, é xored com a parte mais significativa da soma.
     isPrimitive: true
     uid: Qubit
 output:
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ef8f5ec89d0a1bf32e401385f21a6dcf1ec24db7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4afc8f01d1a1e85aee8c974e126c4c112fd43536
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214576"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676699"

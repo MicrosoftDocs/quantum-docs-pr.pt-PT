@@ -4,25 +4,25 @@ name: RippleCarryAdderTTK
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Reversível, ondulado no local, adição de dois inteiros.
+  Reversível, no lugar ondulação-carry adição de dois inteiros.
 
-  Dadas dois $n inteiros de $ bit codificados em registros de LittleEndian `xs` e `ys`, e um qubit de transporte, a operação computa a soma dos dois inteiros onde os bits $n $ menos significativos do resultado são mantidos em `ys` e o bit de execução é XORed para qubit `carry`.
-remarks: Esta operação tem a mesma funcionalidade que RippleCarryAdderD e RippleCarryAdderCDKM, mas não usa nenhuma qubits de ancilla.
+  Tendo em conta duas $n inteiros codificados nos `xs` registos `ys`littleEndian e , e um transporte qubit, a operação calcula a soma dos dois inteiros `ys` onde os $n$ menos significativos `carry`do resultado são mantidos e a broca de execução é xored ao qubit .
+remarks: Esta operação tem a mesma funcionalidade que rippleCarryAdderD e, RippleCarryAdderCDKM, mas não utiliza quaisquer qubits acessórias.
 syntax: 'operation RippleCarryAdderTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit) : Unit'
 references: >-
-  - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "circuitos de adição Quantum e Fan-out não vinculado", informações de Quantum e computação, Vol. 10, 2010.
+  - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum Addition Circuits and Unbounded Fan-Out", Quantum Information and Computation, Vol. 10, 2010.
     https://arxiv.org/abs/0910.2530
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, carry : Qubit)'
   types:
   - name: xs
-    summary: LittleEndian qubit registrar o primeiro soma inteiro.
+    summary: Registo qubit littleEndian codificando a primeira soma inteiro.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: LittleEndian qubit a codificação do segundo inteiro soma, é modificado para manter o $n $ menos significativo bits da soma.
+    summary: O registo de qubit sucadiviado da LittleEndian, codificando a segunda soma de inteiro, é modificado para manter os $n$ menos significativos da soma.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: carry
-    summary: Qubit, é XORed com o bit mais significativo da soma.
+    summary: O transporte qubit, é xored com a parte mais significativa da soma.
     isPrimitive: true
     uid: Qubit
 output:
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9c27164d8245c587b03c43606acebd0d156626bd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8c1d67c4ffb7d2f75d70bc02be958fd08b6c6b14
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214491"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82676668"

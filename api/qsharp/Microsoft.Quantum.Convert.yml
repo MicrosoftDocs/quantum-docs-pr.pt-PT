@@ -1,66 +1,66 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.convert
 name: Microsoft.Quantum.Convert
-summary: " # <a name=\"summary\"></a>Resumo\n Esse namespace contém funções para converter entre vários tipos de dados Q #."
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções para a conversão entre vários tipos de dados Q#."
 functions:
 - uid: microsoft.quantum.convert.bigintasboolarray
   summary: >-
-    Converte um inteiro grande em uma matriz de boolianos.
+    Converte um inteiro em uma variedade de Booleans.
 
-    O elemento 0 da matriz é o bit menos significativo do inteiro grande.
+    O elemento 0 da matriz é a parte menos significativa do grande inteiro.
 - uid: microsoft.quantum.convert.boolarrayasbigint
   summary: >-
-    Converte uma determinada matriz de boolianos em um inteiro grande equivalente.
+    Converte um conjunto de Booleans a um grande inteiro equivalente.
 
-    O elemento 0 da matriz é o bit menos significativo do inteiro grande.
+    O elemento 0 da matriz é a parte menos significativa do grande inteiro.
 - uid: microsoft.quantum.convert.boolarrayasint
-  summary: Produz um inteiro positivo de uma cadeia de caracteres de bits no formato little endian.
+  summary: Produz um inteiro positivo a partir de uma série de pedaços em formato endiano.
 - uid: microsoft.quantum.convert.boolarrayaspauli
-  summary: Dada uma cadeia de caracteres de bits, retorna um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único.
+  summary: Dada uma pequena corda, devolve um operador pauli multiqubit representado como uma variedade de operadores de Pauli de qubit único.
 - uid: microsoft.quantum.convert.boolarrayasresultarray
-  summary: Converte um tipo de `Bool[]` em um tipo de `Result[]`, em que `true` é mapeado para `One` e `false` é mapeado para `Zero`.
+  summary: Converte `Bool[]` um tipo `Result[]` para `true` um tipo, `One` onde `false` é mapeado e é mapeado para `Zero`.
 - uid: microsoft.quantum.convert.boolasresult
-  summary: Converte um tipo de `Bool` em um tipo de `Result`, em que `true` é mapeado para `One` e `false` é mapeado para `Zero`.
+  summary: Converte `Bool` um tipo `Result` para `true` um tipo, `One` onde `false` é mapeado e é mapeado para `Zero`.
 - uid: microsoft.quantum.convert.boolasstring
-  summary: Converte um determinado valor booliano em uma representação de cadeia de caracteres equivalente.
+  summary: Converte um dado valor booleano para uma representação de cordas equivalente.
 - uid: microsoft.quantum.convert.doubleasstring
-  summary: Converte um determinado número de ponto flutuante de precisão dupla em uma representação de cadeia de caracteres equivalente.
+  summary: Converte um dado número de ponto flutuante de dupla precisão para uma representação de corda equivalente.
 - uid: microsoft.quantum.convert.doubleasstringwithformat
-  summary: Converte um determinado número de ponto flutuante de precisão dupla em uma representação de cadeia de caracteres equivalente, usando o formato fornecido.
+  summary: Converte um dado número de ponto flutuante de dupla precisão para uma representação de corda equivalente, utilizando o formato dado.
 - uid: microsoft.quantum.convert.functionasoperation
   summary: Converte funções em operações.
 - uid: microsoft.quantum.convert.intasbigint
-  summary: Converte um determinado inteiro em um inteiro grande equivalente.
+  summary: Converte um inteiro dado a um grande inteiro equivalente.
 - uid: microsoft.quantum.convert.intasboolarray
-  summary: Produz uma representação binária de um inteiro positivo, usando a representação little-endian para a matriz retornada.
+  summary: Produz uma representação binária de um inteiro positivo, usando a representação pouco endiana para a matriz devolvida.
 - uid: microsoft.quantum.convert.intasdouble
-  summary: Converte um determinado inteiro em um número de ponto flutuante de precisão dupla equivalente.
+  summary: Converte um inteiro num número equivalente de ponto flutuante de dupla precisão.
 - uid: microsoft.quantum.convert.intasstring
-  summary: Converte um número inteiro determinado em uma representação de cadeia de caracteres equivalente.
+  summary: Converte um número inteiro em representação equivalente.
 - uid: microsoft.quantum.convert.intasstringwithformat
-  summary: Converte um número inteiro determinado em uma representação de cadeia de caracteres equivalente, usando o formato fornecido.
+  summary: Converte um número inteiro determinado para uma representação de cadeia equivalente, utilizando o formato dado.
 - uid: microsoft.quantum.convert.maybebigintasint
   summary: >-
-    Converte um inteiro grande em um inteiro equivalente, se possível.
+    Converte um inteiro grande em equivalente, se possível.
 
-    A função retorna um par do inteiro resultante e um sinalizador booliano que é true, se e somente se a conversão fosse possível.
+    A função devolve um par de inteiros resultantes e uma bandeira booleana que é verdade, se e apenas se a conversão fosse possível.
 - uid: microsoft.quantum.convert.pauliarrayasint
-  summary: Codifica um operador qubit Pauli representado como uma matriz de operadores de Pauli de qubit único em um inteiro.
+  summary: Codifica um operador pauli multiqubit representado como uma variedade de operadores pauli de monoqubit em um inteiro.
 - uid: microsoft.quantum.convert.rangeasintarray
-  summary: Cria uma matriz `arr` de inteiros enumerados por início.. etapa.. completo.
+  summary: Cria uma `arr` série de inteiros enumerados pelo início. passo. fim.
 - uid: microsoft.quantum.convert.resultarrayasboolarray
-  summary: Converte um tipo de `Result[]` em um tipo de `Bool[]`, em que `One` é mapeado para `true` e `Zero` é mapeado para `false`.
+  summary: Converte `Result[]` um tipo `Bool[]` para `One` um tipo, `true` onde `Zero` é mapeado e é mapeado para `false`.
 - uid: microsoft.quantum.convert.resultarrayasint
-  summary: Produz um inteiro positivo de uma cadeia de caracteres de resultados no formato little endian.
+  summary: Produz um inteiro positivo a partir de uma série de Resultados em pouco formato endiano.
 - uid: microsoft.quantum.convert.resultasbool
-  summary: Converte um tipo de `Result` em um tipo de `Bool`, em que `One` é mapeado para `true` e `Zero` é mapeado para `false`.
+  summary: Converte `Result` um tipo `Bool` para `One` um tipo, `true` onde `Zero` é mapeado e é mapeado para `false`.
 operations:
 - uid: microsoft.quantum.convert.call
   summary: Chama uma função com uma determinada entrada.
 metadata:
-  ms.openlocfilehash: a0c347d8004b8f8bd35fc1b7f7eaf52e6230cee0
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d435979692fe94efb64af82f4a7a949cb2341ef8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210972"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82677005"
