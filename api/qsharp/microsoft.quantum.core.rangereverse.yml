@@ -3,8 +3,8 @@ uid: microsoft.quantum.core.rangereverse
 name: RangeReverse
 type: function
 namespace: Microsoft.Quantum.Core
-summary: Retorna um novo intervalo que é o inverso do intervalo de entrada.
-remarks: Observe que o inverso de um intervalo não é simplesmente `end`..`-step`..`start`, porque o último elemento real de um intervalo pode não ser o mesmo que `end`.
+summary: Devolve uma nova gama que é o inverso da gama de entrada.
+remarks: Note que o inverso de `end`uma gama não é simplesmente .. `-step`.. `start`, porque o último elemento de uma gama `end`pode não ser o mesmo que .
 syntax: 'function RangeReverse (r : Range) : Range'
 input:
   content: '(r : Range)'
@@ -16,13 +16,13 @@ input:
 output:
   content: Range
   types:
-  - summary: Um novo intervalo que é o inverso do intervalo especificado.
+  - summary: Uma nova gama que é o inverso da gama dada.
     isPrimitive: true
     uid: Range
 metadata:
-  ms.openlocfilehash: 978a476556d01f48533540333b5951f83da3d6dc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d6fbf120ecb9bff176857cf8d3c48d6f08da0bde
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066630"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657374"

@@ -3,12 +3,12 @@ uid: microsoft.quantum.core.rangestart
 name: RangeStart
 type: function
 namespace: Microsoft.Quantum.Core
-summary: Retorna o valor inicial definido do intervalo especificado.
+summary: Devolve o valor de início definido da gama dada.
 remarks: >-
-  O primeiro elemento de uma expressão de intervalo é `start`, seu segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `end` seja passado.
+  O primeiro elemento de `start`uma expressão de `start+step`alcance é `start+step+step`, o `end` seu segundo elemento é , o terceiro elemento é , etc., até que seja passado.
 
 
-  Observe que o valor inicial definido de um intervalo é o mesmo que o primeiro elemento da sequência, a menos que o intervalo especifique uma sequência vazia (por exemplo, 2... 1).
+  Note que o valor de início definido de uma gama é o mesmo que o primeiro elemento da sequência, a menos que a gama especifique uma sequência vazia (por exemplo, 2 .. 1).
 syntax: 'function RangeStart (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,13 +19,13 @@ input:
 output:
   content: Int
   types:
-  - summary: O valor inicial definido do intervalo especificado.
+  - summary: O valor de início definido da gama dada.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0d618a26d71a5b41e6ea6b73503e9f099b18f129
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a5a5240da851b459e732c78f7be94b8a2d02b1f1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231763"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657239"

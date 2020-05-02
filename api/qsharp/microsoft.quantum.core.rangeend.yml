@@ -3,12 +3,12 @@ uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
 namespace: Microsoft.Quantum.Core
-summary: Retorna o valor final definido do intervalo especificado, que não é necessariamente o último elemento na sequência.
+summary: Devolve o valor final definido da gama dada, que não é necessariamente o último elemento da sequência.
 remarks: >-
-  O primeiro elemento de uma expressão de intervalo é `start`, seu segundo elemento é `start+step`, o terceiro elemento é `start+step+step`, etc., até que `end` seja passado.
+  O primeiro elemento de `start`uma expressão de `start+step`alcance é `start+step+step`, o `end` seu segundo elemento é , o terceiro elemento é , etc., até que seja passado.
 
 
-  Observe que o valor final definido de um intervalo pode ser diferente do último elemento na sequência especificada pelo intervalo; por exemplo, em um intervalo de 0.. 2.. 5 o último elemento é 4, mas o valor final é 5.
+  Note que o valor final definido de uma gama pode diferir do último elemento na sequência especificada pela gama; por exemplo, num intervalo 0 .. 2 .. 5 o último elemento é 4 mas o valor final é 5.
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -19,13 +19,13 @@ input:
 output:
   content: Int
   types:
-  - summary: O valor final definido do intervalo especificado.
+  - summary: O valor final definido da gama dada.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: c7436046b6be7d4d0801471ecc6c78e36421e54a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066647"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82657645"
