@@ -3,26 +3,26 @@ uid: microsoft.quantum.math.randomintpow2
 name: RandomIntPow2
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Gera um inteiro aleatório de amostra uniforme de todos os inteiros que podem ser representados em um determinado número de bits.
-remarks: Essa função chama <xref:microsoft.quantum.intrinsic.random>, de modo que sua aleatoriedade depende da implementação de `Random`.
+summary: Gera um inteiro aleatório, uniformemente amostrado de todos os inteiros que podem ser representados num determinado número de bits.
+remarks: Esta função chama, <xref:microsoft.quantum.intrinsic.random>pelo que a sua `Random`aleatoriedade depende da implementação de .
 syntax: 'operation RandomIntPow2 (maxBits : Int) : Int'
 input:
   content: '(maxBits : Int)'
   types:
   - name: maxBits
-    summary: O número de bits clássicos necessários para representar o maior inteiro que pode ser retornado por essa operação.
+    summary: O número de bits clássicos necessários para representar o maior inteiro que poderia ser devolvido por esta operação.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: Um inteiro $x $ uniformemente em aleatório de $ [0, 2 ^ {\texttt{maxBits}}-1] $; ou seja, com $ \Pr (x) = \frac{1}{2 ^ {\texttt{maxBits}}} $.
+  - summary: Um inteiro $x$ uniformemente a partir de $[0,2^{\texttt{maxBits}}-1]$; isto é, com $\Pr(x){1}= \frac {2^{\texttt{maxBits}}}$.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: e690509a7dcd2b1ec51bdde85da6439a688e75e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dec46f725da2f805839f7c03306853c851700027
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219982"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681548"

@@ -38,13 +38,13 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: Uma série de rotações controladas por dois qubits estabelecidas ciclicamente através de um registo de `nQubits` qubits.
+  - summary: Uma série de rotações controladas por dois qubits `nQubits` estabelecidas ciclicamente através de um registo de qubits.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 64f64fcfe2cbb969a0d16fba07ca39d64b53cbd4
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: 9578cb4798fc403642a98c7886374295000b6097
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77908740"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681671"

@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.sin
 name: Sin
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o seno do ângulo especificado.
-remarks: Consulte [System. Math. Sin](https://docs.microsoft.com/dotnet/api/system.math.sin) para obter mais detalhes.
+summary: Devolve o seno do ângulo especificado.
+remarks: Consulte [o System.Math.Sin](https://docs.microsoft.com/dotnet/api/system.math.sin) para mais detalhes.
 syntax: 'function Sin (theta : Double) : Double'
 input:
   content: '(theta : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 331a21be5b5c4ced27ba5669eda02f7f3da263c1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 103f223767fd7d32d817c229d4d96d9c20bdcb40
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223637"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681434"

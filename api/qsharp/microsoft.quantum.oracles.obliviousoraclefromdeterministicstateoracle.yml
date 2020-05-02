@@ -3,29 +3,29 @@ uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
 name: ObliviousOracleFromDeterministicStateOracle
 type: function
 namespace: Microsoft.Quantum.Oracles
-summary: Combina os Oracle `DeterministicStateOracle` e `ObliviousOracle`.
+summary: Combina os oráculos `DeterministicStateOracle` e. `ObliviousOracle`
 syntax: 'function ObliviousOracleFromDeterministicStateOracle (ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle) : Microsoft.Quantum.Oracles.ObliviousOracle'
 input:
   content: '(ancillaOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle)'
   types:
   - name: ancillaOracle
-    summary: Uma preparação de estado Oracle $A $ do tipo `DeterministicStateOracle` atuando no registro $a $.
+    summary: Um oráculo de `DeterministicStateOracle` preparação estatal $A$ de tipo agindo no registo $a$.
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Um Oracle $U $ do tipo `ObliviousOracle` atuando em conjunto no $a de registro, s $.
+    summary: Um oráculo `ObliviousOracle` $U$ de tipo agindo conjuntamente no registo $a,s$.
     uid: microsoft.quantum.oracles.obliviousoracle
 output:
   content: Microsoft.Quantum.Oracles.ObliviousOracle
   types:
-  - summary: Um Oracle $O = UA $ do tipo `ObliviousOracle`.
+  - summary: Um oráculo $O=UA$ de tipo `ObliviousOracle`.
     uid: microsoft.quantum.oracles.obliviousoracle
 seeAlso:
 - microsoft.quantum.canon.deterministicstateoracle
 - microsoft.quantum.canon.obliviousoracle
 metadata:
-  ms.openlocfilehash: 2fc80a583ef8990b0a9043e4847d926f37b48b77
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 036d89ed2a9b3a0db2637964e4fabec7352a67d9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231015"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681231"

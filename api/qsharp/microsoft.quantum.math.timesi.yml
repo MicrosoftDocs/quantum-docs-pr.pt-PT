@@ -3,29 +3,29 @@ uid: microsoft.quantum.math.timesi
 name: TimesI
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o produto de duas entradas.
+summary: Devolve o produto de duas inputs.
 syntax: 'function TimesI (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    summary: A primeira entrada $a $ a ser multiplicada.
+    summary: A primeira entrada $a$ a ser multiplicada.
     isPrimitive: true
     uid: Int
   - name: b
-    summary: A segunda entrada $b $ a ser multiplicada.
+    summary: A segunda entrada $b$ a ser multiplicada.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: O produto $a \times b $.
+  - summary: O produto $a \vezes b$.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: ba6ae03bff214aa4ee999ef2df3c833a22399ed3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 15961b6bdd40c6c0e841f6c360aed8f01eaddd01
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231474"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681433"

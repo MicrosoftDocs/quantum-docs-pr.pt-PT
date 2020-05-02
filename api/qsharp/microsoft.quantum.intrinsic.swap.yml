@@ -4,13 +4,13 @@ name: SWAP
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Aplica a porta de permuta a um par de qubits.
+  Aplica o portão SWAP a um par de qubits.
 
 
-  \begin{align} \operatorname{SWAP} \mathrel{: =} \begin{bmatrix} 1 & 0 & 0 & 0 \\\\ 0 & 0 & 1 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \end{bmatrix}, \end{align}
+  \begin{align} \operatorname{SWAP} \mathrel{:=} \start{bmatrix} 1 & \\ \\ 0 & 0 \\ \\ & 0 & & \\ \\ 1 & 0 & 1 & 0 & 0 & 0 & & 0 & 1 \end{bmatrix}, \end{align}
 
 
-  onde as linhas e colunas são ordenadas como no guia de conceitos do Quantum.
+  onde as linhas e colunas são ordenadas como no guia de conceitos quânticos.
 remarks: >-
   Equivalente a:
 
@@ -45,9 +45,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 32a379b784d0be0084b00a80edf8607ccf760f9e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e8e2681cef50354ac0e6807304912fcddcc0361b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216361"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681773"

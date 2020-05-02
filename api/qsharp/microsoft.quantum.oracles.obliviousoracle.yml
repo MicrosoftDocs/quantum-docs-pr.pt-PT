@@ -4,24 +4,24 @@ name: ObliviousOracle
 type: newtype
 namespace: Microsoft.Quantum.Oracles
 summary: >-
-  Representa um Oracle para amplificação de amplitude de alheios.
+  Representa um oráculo para amplificação de amplitude alheia.
 
 
-  As entradas para o Oracle $O $ são:
+  As inputs para o oráculo $O$ são:
 
 
-  - O ancilla registra $a $ que $O $ age.
+  - O registo de $a$ que $O$ atua.
 
-  - O sistema registra $s $ em que o unitário desejado $U $ é aplicado, post-Selected no registro $a $ estando no estado $ \ket{t}\_$.
+  - O registo do sistema $s$ em que é aplicado o $U desejado, selecionado no registo\_$a$ estando no estado $\ket{t} a$.
 remarks: >-
-  Este Oracle definido por $ $ O\ket {s}\_a\ket {\ psi}\_s = \lambda\ket{t}\_U \ket{\psi}\_s + \sqrt{1-| \lambda | ^ 2} \ket{t ^ \perp}\_a\cdots $ $ age no estado ancilla $ \ket{s}\_um $ para implementar o unitário $U $ em qualquer estado do sistema $ \ket{\psi}\_s $ com amplitude $ \lambda $ na base sinalizada por $ \ket{t}\_a $.
+  Este oráculo definido por $$ O\ket{s}\_a\ket{\psi}\_\_s= \lambda\ket{t} a U \ket{\psi} s + \sqrt{1-\\lambda\^2}\ket{t^\perp} a U \ket{\psi}\_s +\_\sqrt{1-\\lambda^2}\ket{t^\perp}\cdots $$ atua no estado de oscilação $\ket{s}\_a$ para implementar o $U unitário$ em qualquer estado de sistema $\ket{\psi}\_s$ com amplitude $\lambda$ na base sinalizada por $\ket{t}\_a$.
 
-  O primeiro parâmetro é o registro qubit de $ \ket{s}\_um $. O segundo parâmetro é o registro qubit de $ \ket{\psi}\_s $.
+  O primeiro parâmetro é o registo qubit de\_$\ket{s} a$. O segundo parâmetro é o registo qubit de\_$\ket{\psi} s$.
 syntax: newtype ObliviousOracle = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: f06527701dfad61843df66faca5dd265525b6aa6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9d7a799a9069e6d7eb3470d62322f803a68eb2e6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231066"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681263"

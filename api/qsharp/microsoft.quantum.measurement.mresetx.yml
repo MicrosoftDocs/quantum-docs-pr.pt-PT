@@ -3,25 +3,25 @@ uid: microsoft.quantum.measurement.mresetx
 name: MResetX
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Mede um único qubit na base X e o redefine para o estado base padrão | 0 〉 seguindo a medida.
+summary: Mede um único qubit na base X e repõe-o para o estado de base padrão [000 a seguir à medição.
 syntax: 'operation MResetX (target : Qubit) : Result'
 input:
   content: '(target : Qubit)'
   types:
   - name: target
-    summary: Um único qubit a ser medido.
+    summary: Um único qubit a medir.
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: O resultado da medição de `target` na base Pauli $X $.
+  - summary: O resultado da `target` medição na base Pauli $X$.
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 48c819595cf492588fd5d4b08e1315cfb092fcd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de0422b51d7772892919ee1faeff1f27e9d0616b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231236"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681414"
