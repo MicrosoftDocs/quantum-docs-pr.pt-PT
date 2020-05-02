@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.applyquantumfouriertransform
 name: ApplyQuantumFourierTransform
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Executa a transformação de Fourier do Quantum em um registro do Quantum contendo um inteiro na representação little-endian.
-remarks: Presume-se que a entrada e a saída estejam em little endian codificação.
+summary: Executa a Transformação Quântica fourier num registo quântico contendo um inteiro na representação pouco endiana.
+remarks: A entrada e a saída são assumidas como estando em pequena codificação endiana.
 syntax: 'operation ApplyQuantumFourierTransform (qs : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(qs : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: qs
-    summary: Quantum registrado para o qual a transformação de Fourier do Quantum é aplicada
+    summary: Registo quântico ao qual é aplicada a Quantum Fourier Transform
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -23,9 +23,9 @@ functors:
 seeAlso:
 - applyquantumfouriertransformbe
 metadata:
-  ms.openlocfilehash: 7660a59dad4c90a6f6a0b5cc5c959a3e7a3d659f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7aabfba5f152a6d37ca137ebeb4d99a253e5f8b6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217330"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672414"

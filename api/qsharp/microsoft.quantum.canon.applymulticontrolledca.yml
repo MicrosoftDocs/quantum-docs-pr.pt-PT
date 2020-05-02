@@ -4,26 +4,26 @@ name: ApplyMultiControlledCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma versão controlada de multiplicação de uma operação controlada individualmente.
+  Aplica uma versão controlada multiplicadora de uma operação controlada com singly.
 
-  O modificador `CA` indica que a operação de qubit única é controlável e de adjointable.
+  O modificador `CA` indica que a operação de qubit único é controlável e adjointável.
 remarks: >-
-  Esta operação usa apenas qubits limpo ancilla.
+  Esta operação utiliza apenas qubits acessórias limpos.
 
 
-  Para obter a explicação e o diagrama de circuito, consulte a Figura 4,10, seção 4,3 em Nielsen & Chuang
+  Para a explicação e diagrama do circuito ver Figura 4.10, Secção 4.3 em Nielsen & Chuang
 syntax: 'operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
-references: '- [*Michael A. Nielsen, Julio L. Chuang*, computação Quantum e informações de Quantum](http://doi.org/10.1017/CBO9780511976667)'
+references: '- [*Michael A. Nielsen, Isaac L. Chuang,* Computação Quântica e Informação Quântica](http://doi.org/10.1017/CBO9780511976667)'
 input:
   content: '(singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
   - name: singlyControlledOp
     summary: >-
-      Uma operação controlada em um único qubit.
+      Uma operação controlada num único qubit.
 
-      O primeiro qubit no argumento da operação assumida como um controle e o restante são considerados como destino qubits.
+      O primeiro qubit no argumento da operação assumido como um controlo e o resto são assumidos como qubits-alvo.
 
-      `ApplyMultiControlled` sempre chama `singlyControlledOp` com um argumento de comprimento pelo menos 1.
+      `ApplyMultiControlled`sempre `singlyControlledOp` chama com um argumento de comprimento pelo menos 1.
     isOperation: true
     input:
       types:
@@ -37,18 +37,18 @@ input:
     functors:
     - Adjoint
   - name: ccnot
-    summary: A porta controlada por controlado não usada para a construção.
+    summary: O portão não controlado controlado para utilizar para a construção.
     uid: microsoft.quantum.canon.ccnotop
   - name: controls
     summary: >-
-      O qubits que `singlyControlledOp` deve ser controlado.
+      Os qubits `singlyControlledOp` que deve ser controlado.
 
-      O comprimento de `controls` deve ser pelo menos 1.
+      O comprimento `controls` deve ser pelo menos 1.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: O qubits de destino com o qual `singlyControlledOp` atua.
+    summary: Os qubits-alvo que `singlyControlledOp` atuam.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -63,9 +63,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applymulticontrolledc
 metadata:
-  ms.openlocfilehash: d9b0f2b18d025d0ce60bbb02a9559546539eaecd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1cb239c8c49ff4f4f8f991d6ad81374f0dd23f7f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73220713"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672533"

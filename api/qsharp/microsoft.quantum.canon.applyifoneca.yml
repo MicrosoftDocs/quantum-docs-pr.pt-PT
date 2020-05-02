@@ -4,18 +4,18 @@ name: ApplyIfOneCA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação unitário com condição em um valor de resultado clássico sendo um.
+  Aplica uma operação unitária condicionada pelo valor do resultado clássico sendo um.
 
 
-  Devido a uma operação `op` e um valor de resultado `result`, o aplica `op` à `target` se `result` for `One`. Se `Zero`, nada acontecerá com o `target`.
+  Dada `op` uma operação `result`e um `op` valor `target` `result` de `One`resultado, aplica-se ao "se" é . Se, `Zero`nada acontece `target`com o.
 
-  O sufixo `CA` indica que a operação a ser aplicada é unitário (controlável e adjacenttable).
+  O sufixo `CA` indica que a operação a aplicar é unitária (controlável e adjointável).
 syntax: "operation ApplyIfOneCA (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T))"
   types:
   - name: result
-    summary: Um resultado de medida que controla se op é aplicado ou não.
+    summary: Um resultado de medição que controla se a op é aplicada ou não.
     isPrimitive: true
     uid: Result
   - name: op
@@ -33,7 +33,7 @@ input:
     - Adjoint
     - Controlled
   - name: target
-    summary: A entrada à qual a operação é aplicada.
+    summary: A entrada a que a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -43,7 +43,7 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 functors:
 - Adjoint
 - Controlled
@@ -52,9 +52,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifonea
 - microsoft.quantum.canon.applyifoneca
 metadata:
-  ms.openlocfilehash: 9756dcc29853d41e1d2a9fee5816254afa5e5d73
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f8837e549ec1fc70b76e8151a211c4bf9f71168e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217398"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82672654"
