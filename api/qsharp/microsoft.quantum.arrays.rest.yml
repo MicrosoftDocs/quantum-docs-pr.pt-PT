@@ -3,30 +3,30 @@ uid: microsoft.quantum.arrays.rest
 name: Rest
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Cria uma matriz que é igual a uma matriz de entrada, exceto que o primeiro elemento da matriz é Descartado.
+summary: Cria uma matriz que é igual a uma matriz de entrada, exceto que o primeiro elemento de matriz é largado.
 syntax: "function Rest (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: Uma matriz cujo segundo para o último elementos é formar a matriz de saída.
+    summary: Uma matriz cujos elementos de segundo a último são para formar a matriz de saída.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma matriz que contém os elementos `array[1..Length(array) - 1]`.
+  - summary: Uma matriz que `array[1..Length(array) - 1]`contém os elementos.
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo dos elementos da matriz.
+  summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: 96779f32f93d2d045502b5e7264de1af39affd9f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 045480f59b03523e39f8feaddacc17b9e6a20c8a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218044"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680868"

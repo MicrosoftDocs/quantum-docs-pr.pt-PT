@@ -4,18 +4,18 @@ name: BlockEncoding
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Representa um unitário em que um operador arbitrário de interesse é codificado no bloco superior esquerdo.
+  Representa um unitário onde um operador de interesse arbitrário é codificado no bloco superior esquerdo.
 
 
-  Ou seja, um `BlockEncoding` é um $U unitário $ em que um operador arbitrário $H $ de interesse que age no registro do sistema `s` é codificado no bloco superior esquerdo correspondente ao estado auxiliar $ \ket{0}_a $. Isto é
+  Ou seja, `BlockEncoding` um $U$ unitário onde um operador arbitrário $H$ de juros que atua no registo `s` do sistema{0}está codificado no bloco superior esquerdo correspondente ao estado auxiliar $\ket _a$. Isso é
 
 
-  $ $ \begin{align} (\bra{0}_a \otimes I_s) U (\ket{0}_a \otimes I_s) = H \end{align} $ $.
+  $$ \start{align} (\bra{0}_a\otimes I_s)U (\ket{0}_a\otimes I_s) = H \end{align} $$.
 syntax: newtype BlockEncoding = ((Qubit[], Qubit[]) => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 0991b1b54cdd8e908f60fc104edf588ae08e12e7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 400173be551747127198f8cee52390a2694dbfe4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73066035"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681106"

@@ -1,147 +1,101 @@
 ---
-title: Desenvolver com Q# +C#
+title: Programar com Q# + C#
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 7803846279f230f5fc0ee8424bd39be735a650ca
-ms.sourcegitcommit: 5094c0a60cbafdee669c8728b92df281071259b9
+ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77036292"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680169"
 ---
-# <a name="develop-with-q--c"></a>Desenvolver com Q# +C#
+# <a name="using-q-with-c-and-f"></a>Usando Q#\# com C e F\#
 
-Instale o QDK para desenvolver C# programas de anfitriões para ligar para as operações Q#.
+Q# é construído para jogar bem com .NET línguas como C# e F#.
+Neste guia, vamos demonstrar como usar o Q# com um programa de anfitriões escrito numa linguagem .NET.
 
-Q# é construído para brincar bem com C#.NET idiomas -- especificamente . Você pode trabalhar com este emparelhamento dentro de diferentes ambientes de desenvolvimento:
+## <a name="prerequisites"></a>Pré-requisitos
 
-- [Q# C# + usando o Estúdio Visual (Windows)](#VS)
-- [Q# C# + usando código de estúdio visual (Windows, Linux e Mac)](#VSC)
-- [Q # C# + usando a ferramenta de linha de comando `dotnet`](#command)
+- Instale o Kit de Desenvolvimento Quântico [para utilização com projetos de linha de comando Q#](xref:microsoft.quantum.install.standalone).
 
-## Desenvolver com Q# + C# usando o Visual Studio <a name="VS"></a>
+## <a name="creating-a-q-library-and-a-net-host"></a>Criar uma biblioteca Q# e um hospedeiro .NET
 
-O Visual Studio oferece um ambiente rico para desenvolver programas Q#. A extensão Q# Visual Studio contém modelos para ficheiros e projetos Q# bem como realce de sintaxe, conclusão de código e suporte intelliSense.
+O primeiro passo é criar projetos para a sua biblioteca Q# e para o anfitrião .NET que irá chamar para as operações e funções definidas na sua biblioteca Q#.
 
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-1. Pré-requisitos
+- Criar uma nova biblioteca Q#
+  - Ir para **Arquivar** -> **Novo** -> **Projeto**
+  - Digite "Q#" na caixa de pesquisa
+  - Selecione **Biblioteca Q#**
+  - Selecione **Next**
+  - Escolha um nome e localização para a sua biblioteca
+  - Certifique-se de que "colocar projeto e solução no mesmo diretório" não é **verificado**
+  - Selecione **Criar**
+- Crie um novo programa de anfitriões C# ou F#
+  - Ir a **Arquivo** → **Novo** **Projeto** →
+  - Selecione "Console App (.NET Core")" para C# ou F #
+  - Selecione **Next**
+  - Sob *solução*, selecione "adicionar à solução"
+  - Escolha um nome para o seu programa de anfitriões
+  - Selecione **Criar**
 
-    - [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, com a carga de trabalho de desenvolvimento para várias plataformas .NET Core ativada
+### <a name="visual-studio-code-or-command-line"></a>[Código de estúdio visual ou linha de comando](#tab/tabid-cmdline)
 
-1. Instalar a extensão do Visual Studio Q#
+- Criar uma nova biblioteca Q#
 
-    - Descarregue e instale a [extensão do Estúdio Visual](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+  ```dotnetcli
+  dotnet new classlib -lang Q# -o quantum
+  ```
 
-1. Verificar a instalação ao criar uma aplicação `Hello World`
+- Criar um novo projeto de consola C# ou F#
 
-    - Crie uma nova aplicação Q#
+  ```dotnetcli
+  dotnet new console -lang C# -o host  
+  ```
 
-        - Aceda a **Ficheiro** -> **Novo** -> **Projeto**
-        - Escreva `Q#` na caixa de pesquisa
-        - Selecione **Aplicação Q#**
-        - Selecione **Seguinte**
-        - Escolha um nome e uma localização para a aplicação
-        - Selecione **Criar**
+- Adicione a sua biblioteca Q# como referência do seu programa de anfitriões
 
-    - Inspecione o projeto
+  ```dotnetcli
+  cd host
+  dotnet add reference ../quantum/quantum.csproj
+  ```
 
-        Deverá ver dois ficheiros criados: `Driver.cs`, que é a aplicação anfitriã C#; e `Operation.qs`, que é um programa Q# que define uma operação simples para imprimir uma mensagem na consola.
+- [Opcional] Criar uma solução para ambos os projetos
 
-    - Executar a aplicação
+  ```dotnetcli
+  dotnet new sln -n quantum-dotnet
+  dotnet sln quantum-dotnet.sln add ./quantum/quantum.csproj
+  dotnet sln quantum-dotnet.sln add ./host/host.csproj
+  ```
 
-        - Selecione **Depurar** -> **Iniciar sem Depurar**
-        - Deverá ver o texto `Hello quantum world!` impresso numa janela da consola.
+***
 
-> [!NOTE]
-> * Se tiver vários projetos numa solução do Visual Studio, todos os projetos contidos na solução têm de estar na mesma pasta que a solução ou numa das suas subpastas.  
+## <a name="calling-into-q-from-net"></a>Chamando para Q# de .NET
 
-## Desenvolver com Q# + C# usando código de estúdio visual <a name="VSC"></a>
+Assim que tiver os seus projetos configurados seguindo as instruções acima, pode ligar para Q# a partir da sua aplicação de consola .NET.
+O compilador Q# criará classes .NET para cada operação e função Q# que lhe permitem executar os seus programas quânticos num simulador.
 
-O Visual Studio Code (VS Code) oferece um ambiente rico para desenvolver programas Q# no Windows, Linux e Mac.  A extensão do Código Q# VS inclui suporte para destaque de sintaxe Q#, conclusão de código e snippets de código Q#
+Por exemplo, a [amostra de interoperabilidade .NET](https://github.com/microsoft/Quantum/tree/master/samples/interoperability/dotnet) inclui o seguinte exemplo de uma operação Q#:
 
-1. Pré-requisitos
+:::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-   - [Código VS](https://code.visualstudio.com/download)
-   - [.NET Core SDK 3.1 ou posterior](https://www.microsoft.com/net/download)
+Para chamar esta operação de .NET num simulador `Run` quântico, `RunAlgorithm` pode utilizar o método da classe .NET gerado pelo compilador Q#:
 
-1. Instalar a extensão do VS Code Quantum
+### <a name="c"></a>[C #](#tab/tabid-csharp)
 
-    - Instale a [extensão do VS Code](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode)
+:::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
-1. Instalar os modelos de projeto Quantum:
+### <a name="f"></a>[F#](#tab/tabid-fsharp)
 
-   - Aceda a **Ver** -> **Paleta de Comandos**
-   - Selecione **Q#: Instale modelos de projeto**
+:::code language="fsharp" source="~/quantum/samples/interoperability/dotnet/fsharp/Host.fs" range="4-":::
 
-    Agora, tem o Quantum Development Kit instalado e pronto para utilizar nas aplicações e bibliotecas.
-
-1. Verificar a instalação ao criar uma aplicação `Hello World`
-
-    - Crie um novo projeto:
-
-        - Aceda a **Ver** -> **Paleta de Comandos**
-        - Selecione **Q#: Criar novo projeto**
-        - Selecione **aplicação** de consola autónoma
-        - Navegue para a localização no sistema de ficheiros onde quer criar a aplicação
-        - Clique no botão **Abrir novo projeto...** , após o projeto ser criado.
-
-    - Se ainda não tiver C# a extensão do Código VS instalada, aparecerá um pop-up. Instale a extensão. 
-
-    - Execute a aplicação:
-
-        - Ir ao **Terminal** -> **Novo Terminal**
-        - Insira `dotnet run`
-        - Deverá ver o seguinte texto na janela de saída `Hello quantum world!`
-
-
-> [!NOTE]
-> * As áreas de trabalho com várias pastas raiz não são atualmente suportadas pela extensão do Visual Studio Code. Se tiver vários projetos numa área de trabalho do VS Code, todos os projetos terão de estar na mesma pasta raiz.
-
-## Desenvolver com Q# + C# utilizando a ferramenta de linha de comando `dotnet`<a name="command"></a>
-
-Como é óbvio, também pode criar e executar programas Q# a partir da linha de comandos ao simplesmente instalar o SDK de .NET Core e os modelos de projeto do QDK. 
-
-1. Pré-requisitos
-
-    - [.NET Core SDK 3.1 ou posterior](https://www.microsoft.com/net/download)
-
-1. Instalar os modelos de projeto Quantum para .NET
-
-    ```dotnetcli
-    dotnet new -i Microsoft.Quantum.ProjectTemplates
-    ```
-
-    Agora, tem o Quantum Development Kit instalado e pronto para utilizar nas aplicações e bibliotecas.
-
-1. Verificar a instalação ao criar uma aplicação `Hello World`
-
-    - Criar uma nova aplicação
-
-       ```dotnetcli
-       dotnet new console -lang "Q#" -o runSayHello
-       ```
-
-    - Navegue para o novo diretório de aplicação
-
-       ```bash
-       cd runSayHello
-       ```
-
-    Deverá ver que foram criados dois ficheiros, juntamente com os ficheiros de projeto da aplicação: um ficheiro Q# (`Operation.qs`) e um ficheiro de anfitrião C# (`Driver.cs`).
-
-    - Executar a aplicação
-
-        ```dotnetcli
-        dotnet run
-        ```
-
-        Deverá ver o resultado seguinte: `Hello quantum world!`
-
+***
     
 ## <a name="whats-next"></a>Passos seguintes?
 
-Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.write-program).
+Agora que tem o Quantum Development Kit configurado para ambos os programas de linha de comando Q# e para interoperabilidade com .NET, pode escrever e executar [o seu primeiro programa quântico](xref:microsoft.quantum.write-program).

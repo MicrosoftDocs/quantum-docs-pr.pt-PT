@@ -3,14 +3,14 @@ uid: microsoft.quantum.canon.conjugatedbyca
 name: ConjugatedByCA
 type: function
 namespace: Microsoft.Quantum.Canon
-summary: Dadas as operações externas e internas, retorna uma nova operação que conjuga a operação interna pela operação externa.
-remarks: A operação externa sempre é presumida como adjointable, mas não precisa ser controlável para que a operação combinada seja controlável.
+summary: Dadas as operações exteriores e internas, devolve uma nova operação que conjuga o funcionamento interno através da operação exterior.
+remarks: A operação externa é sempre assumida como adjointável, mas não precisa de ser controlável para que a operação combinada seja controlável.
 syntax: "function ConjugatedByCA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl)) : ('T => Unit is Adj + Ctl)"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj + Ctl))"
   types:
   - name: outerOperation
-    summary: A operação $U $ que deve ser usada para conjugar $V $. Observe que a operação externa $U $ precisa ser adjointable, mas não precisa ser controlável.
+    summary: A operação $U$ que deve ser usada para conjugar $V$. Note que a operação externa $U$ precisa de ser adjointável, mas não precisa de ser controlável.
     isOperation: true
     input:
       types:
@@ -23,7 +23,7 @@ input:
     functors:
     - Adjoint
   - name: innerOperation
-    summary: A operação $V $ sendo conjugada.
+    summary: A operação $V$ a ser conjugado.
     isOperation: true
     input:
       types:
@@ -39,7 +39,7 @@ input:
 output:
   content: ('T => Unit is Adj + Ctl)
   types:
-  - summary: Uma nova operação cuja ação é representada pelo unitário $U ^ {\dagger} V U $.
+  - summary: Uma nova operação cuja ação é representada pelo unitário $U^{\adagger} V U$.
     isOperation: true
     input:
       types:
@@ -54,16 +54,16 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: O tipo de destino no qual cada uma das operações internas e externas atuam.
+  summary: O tipo de alvo em que cada uma das operações internas e externas atua.
 seeAlso:
 - conjugatedbya
 - conjugatedbyc
 - conjugatedbyca
 - applywith
 metadata:
-  ms.openlocfilehash: c9ffbcd0c7c441f3148ae3c834e47d944895557d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a57abf658e59e05baabc700a08c38e10e1325801
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223586"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680379"

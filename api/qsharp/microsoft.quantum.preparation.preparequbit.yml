@@ -4,25 +4,25 @@ name: PrepareQubit
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Prepara um qubit no eigenstate + 1 (`Zero`) do operador Pauli fornecido.
+  Prepara um qubit no`Zero`eigenstate +1 do operador Pauli.
 
-  Se o operador Identity for fornecido, o qubit será preparado no estado de forma máxima mista.
-
-
-  Se o qubit estava inicialmente no estado $ \ket{0}$, essa operação prepara o qubit na eigenstate $ + $1 de um determinado operador Pauli, ou, para `PauliI`, no estado de forma máxima mista (consulte <xref:microsoft.quantum.preparation.preparesinglequbitidentity>).
+  Se o operador de identidade for administrado, o qubit é preparado no estado máximo misturado.
 
 
-  Se o qubit estava em um estado diferente de $ \ket{0}$, essa operação aplica as seguintes Gates: $H $ para `PauliX`, $HS $ para `PauliY`, $I $ para `PauliZ` e <xref:microsoft.quantum.preparation.preparesinglequbitidentity> para `PauliI`.
+  Se o qubit estava inicialmente{0}no estado $\ket $, esta operação prepara o qubit no eigenstate `PauliI`$+1$ de um determinado <xref:microsoft.quantum.preparation.preparesinglequbitidentity>operador Pauli, ou, para, em vez disso, no estado maximamente misto (ver).
+
+
+  Se o qubit estava num estado{0}diferente de $\ket $, esta `PauliX`operação aplica `PauliY`os seguintes `PauliZ` <xref:microsoft.quantum.preparation.preparesinglequbitidentity> portões: $H$ para , $HS$ para , $I$ para e para `PauliI`.
 syntax: 'operation PrepareQubit (basis : Pauli, qubit : Qubit) : Unit'
 input:
   content: '(basis : Pauli, qubit : Qubit)'
   types:
   - name: basis
-    summary: Um operador Pauli $P $.
+    summary: Um operador pauli $P$.
     isPrimitive: true
     uid: Pauli
   - name: qubit
-    summary: Um qubit a ser preparado.
+    summary: Um qubit para estar preparado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -31,9 +31,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: be4eb730bebd00531aaa49302578b23f4a52237b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 70032bd9174bb987206e2084e2788e5ac7169ae7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226544"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82681124"

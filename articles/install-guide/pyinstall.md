@@ -1,19 +1,19 @@
 ---
-title: Desenvolver com Q# + Python
+title: Programar com Q# + Python
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 1e40c2dddeaf4fad41693c976493f10fffffa139
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831006"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680154"
 ---
-# <a name="develop-with-q--python"></a>Desenvolver com Q# + Python
+# <a name="develop-with-q--python"></a>Programar com Q# + Python
 
 Instale o QDK para desenvolver programas de anfitriões Python para ligar para as operações Q#.
 
@@ -24,13 +24,13 @@ Instale o QDK para desenvolver programas de anfitriões Python para ligar para a
     - [.NET Core SDK 3.1 ou posterior](https://www.microsoft.com/net/download)
 
 
-1. Instale o pacote `qsharp`, um pacote Python que permite o interop entre Q# e Python.
+1. Instale `qsharp` o pacote, um pacote Python que permite o interop entre Q# e Python.
 
     ```bash
     pip install qsharp
     ```
 
-1. Instale `iqsharp`, um núcleo utilizado pela Jupyter e python que fornece a funcionalidade principal para a compilação e execução de operações Q#.
+1. Instale o IQ#, um núcleo utilizado pela Jupyter e python que fornece a funcionalidade central para a compilação e execução de operações Q#.
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
@@ -83,6 +83,6 @@ Instale o QDK para desenvolver programas de anfitriões Python para ligar para a
 > [!NOTE]
 > * Você também pode usar os cadernos Python Jupyter para escrever o programa clássico Python e chamar operações Q# a partir das células. O código Python é apenas um programa python normal.
 
-## <a name="whats-next"></a>O que se segue?
+## <a name="whats-next"></a>Passos seguintes?
 
 Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.write-program).

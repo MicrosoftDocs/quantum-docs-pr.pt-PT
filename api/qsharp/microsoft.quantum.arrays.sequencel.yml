@@ -3,8 +3,8 @@ uid: microsoft.quantum.arrays.sequencel
 name: SequenceL
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Obter uma matriz de inteiros em um determinado intervalo.
-remarks: A diferença entre `from` e `to` deve se ajustar a um valor de `Int`.
+summary: Obter uma variedade de inteiros num determinado intervalo.
+remarks: A diferença `from` `to` entre e `Int` deve caber num valor.
 examples: >-
   ```qsharp
 
@@ -20,24 +20,24 @@ input:
   content: '(from : BigInt, to : BigInt)'
   types:
   - name: from
-    summary: Um índice inicial inclusivo do intervalo.
+    summary: Um índice de início inclusivo do intervalo.
     isPrimitive: true
     uid: BigInt
   - name: to
-    summary: Um índice final inclusivo do intervalo que não é menor que `from`.
+    summary: Um índice final inclusivo do intervalo que `from`não é menor do que .
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt[]
   types:
-  - summary: Uma matriz que contém a sequência de números `from`, `from + 1`,... `to`.
+  - summary: Uma matriz que `from`contém `from + 1`a `to`sequência de números, ......, ....
     isArray: true
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 09d5798b0311285e671bc5ed1f9358c557a74946
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7271856286009cfd1651f19f69f932e79d79c2bf
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217993"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680816"

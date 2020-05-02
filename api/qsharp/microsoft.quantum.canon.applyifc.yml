@@ -4,14 +4,14 @@ name: ApplyIfC
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação controlável condicionalmente em um bit clássico.
+  Aplica uma operação controlável condicionada numa parte clássica.
 
 
-  Dada uma operação `op` e um valor de bit `bit`, o aplica `op` à `target` se `bit` for `true`. Se `false`, nada acontecerá com o `target`.
+  Dada `op` uma operação `bit`e um `op` pouco `target` `bit` de `true`valor, aplica-se ao "se" é . Se, `false`nada acontece `target`com o.
 
-  O sufixo `C` indica que a operação a ser aplicada é controlável.
+  O sufixo `C` indica que a operação a aplicar é controlável.
 examples: >-
-  O seguinte prepara um registro de qubits para um estado de base computacional representado por uma cadeia de caracteres de bits clássicas fornecida como uma matriz de valores de `Bool`:
+  O seguinte prepara um registo de qubits num estado de base computacional `Bool` representado por uma cadeia de bits clássica dada como uma variedade de valores:
 
 
   ```Q#
@@ -43,11 +43,11 @@ input:
     functors:
     - Controlled
   - name: bit
-    summary: um booliano que controla se op é aplicado ou não.
+    summary: uma booleanque controla se a op é aplicada ou não.
     isPrimitive: true
     uid: Bool
   - name: target
-    summary: A entrada à qual a operação é aplicada.
+    summary: A entrada a que a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -57,7 +57,7 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser aplicada condicionalmente.
+  summary: O tipo de entrada da operação a aplicar condicionalmente.
 functors:
 - Controlled
 seeAlso:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: 166f61f877a282578a71419a74fea6361cc2cac3
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73217585"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680498"

@@ -3,9 +3,9 @@ uid: microsoft.quantum.arrays.mappedbyindex
 name: MappedByIndex
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Dada uma matriz e uma função que é definida para os elementos indexados da matriz, retorna uma nova matriz que consiste nas imagens da matriz original sob a função.
+summary: Dada uma matriz e uma função definida para os elementos indexados da matriz, devolve uma nova matriz que consiste nas imagens da matriz original sob a função.
 examples: >-
-  As duas linhas a seguir são equivalentes:
+  As duas linhas seguintes são equivalentes:
 
 
   ```qsharp
@@ -28,7 +28,7 @@ input:
   content: "(mapper : ((Int, 'T) -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Uma função de `(Int, 'T)` para `'U` que é usada para mapear elementos e seus índices.
+    summary: Uma função `'U` de a partir daí `(Int, 'T)` é usada para mapear elementos e seus índices.
     isFunction: true
     input:
       types:
@@ -41,28 +41,28 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Uma matriz de elementos em `'T`.
+    summary: Uma série de `'T`elementos sobre .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: Uma matriz `'U[]` de elementos que são mapeados pela função `mapper`.
+  - summary: Uma `'U[]` variedade de elementos que são `mapper` mapeados pela função.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo de elementos de `array`.
+  summary: O tipo `array` de elementos.
 - uid: "'U"
-  summary: O tipo de resultado da função `mapper`.
+  summary: O tipo de `mapper` resultado da função.
 seeAlso:
 - mapped
 metadata:
-  ms.openlocfilehash: 08dacd9b53b151d5cadcef16db8b460d4326d746
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 64741df4a3d7b7937f13614ffc9c7c7ec1aa3f7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214287"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680926"
