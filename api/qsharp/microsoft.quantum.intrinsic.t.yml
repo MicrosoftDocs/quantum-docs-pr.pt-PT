@@ -7,15 +7,15 @@ summary: >-
   Aplica o portão π/8 a um único qubit.
 
 
-  \begin{align} T \mathrel{: =} \begin{bmatrix} 1 & 0 \\\\ 0 & e ^ {i \pi/4} \end{bmatrix}.
+  \begin{align} T \mathrel{:=} \begin{bmatrix} \\ \\ 1 & 0 0 & e^{i \pi / 4} \end{bmatrix}.
 
-  \end{align}
+  \fim{align}
 syntax: 'operation T (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: Qubit ao qual a portão deve ser aplicada.
+    summary: Qubit ao qual o portão deve ser aplicado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3857f95e02fad6d38569758733d37191a491e508
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f654748925ec76cfececadd9fe2de8698449f6f8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216344"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685412"

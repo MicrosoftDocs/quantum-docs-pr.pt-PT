@@ -3,7 +3,7 @@ uid: microsoft.quantum.logical.equalc
 name: EqualC
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna true se e somente se duas entradas forem iguais.
+summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 syntax: 'function EqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
 input:
   content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
@@ -12,18 +12,18 @@ input:
     summary: O primeiro valor a ser comparado.
     uid: microsoft.quantum.math.complex
   - name: b
-    summary: O segundo valor a ser comparado.
+    summary: O segundo valor a comparar.
     uid: microsoft.quantum.math.complex
 output:
   content: Bool
   types:
-  - summary: '`true` se `a` for igual a `b`.'
+  - summary: '`true`se e `a` apenas `b`se for igual a .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 73d36b39c05fc459371be744e043422e3e324d94
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 586dc4b3e30ba8083f090b9515d1f4e0ed851092
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233259"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685969"

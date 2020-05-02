@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.math.sinh
 name: Sinh
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: Sinh foi preterido. Em vez disso, use @"microsoft.quantum.math.sinh".
+summary: Sinh foi depreciado. Por @"microsoft.quantum.math.sinh" favor, use em vez disso.
 syntax: 'function Sinh (d : Double) : Double'
 input:
   content: '(d : Double)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: ccdfa6225055192b4b2d1fda7c2b8989bfde85ae
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 284c3f5dee16dc2b06a43fe7be8a94d7345fa8b1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74865108"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686035"

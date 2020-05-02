@@ -3,23 +3,23 @@ uid: microsoft.quantum.math.complexpolarascomplex
 name: ComplexPolarAsComplex
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Converte um número complexo do tipo `ComplexPolar` em um número complexo de `Complex`de tipo.
+summary: Converte um número `ComplexPolar` complexo de tipo `Complex`para um número complexo de tipo .
 syntax: 'function ComplexPolarAsComplex (input : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: input
-    summary: Número complexo $c = r e ^ {i t} $.
+    summary: Número complexo $c = r e^{i t}$.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Microsoft.Quantum.Math.Complex
   types:
-  - summary: Número complexo $c = x + i y $.
+  - summary: Número complexo $c = x + i y$.
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: 5754e91abca30dc0c0c4b122d4c8a127e53519a9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 93eb6e745c9d5fe65fd6960fe398eae3b7deb71c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73230080"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685775"

@@ -3,24 +3,24 @@ uid: microsoft.quantum.math.abscomplex
 name: AbsComplex
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o valor absoluto de um número complexo de `Complex`de tipos.
+summary: Devolve o valor absoluto de `Complex`um número complexo de tipo.
 syntax: 'function AbsComplex (input : Microsoft.Quantum.Math.Complex) : Double'
 input:
   content: '(input : Microsoft.Quantum.Math.Complex)'
   types:
   - name: input
-    summary: Número complexo $c = x + i y $.
+    summary: Número complexo $c = x + i y$.
     uid: microsoft.quantum.math.complex
 output:
   content: Double
   types:
-  - summary: Valor absoluto $ | c | = \sqrt{x ^ 2 + y ^ 2} $.
+  - summary: Valor absoluto $[c] = \sqrt{x^2 + y^2}$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 75592bd683679e49ca453ab3c93954c963d536b9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 76c1a367f72ecdbcf9a92180b05f4e2c05833cee
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235078"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685829"

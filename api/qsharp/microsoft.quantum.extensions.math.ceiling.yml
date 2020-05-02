@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.math.ceiling
 name: Ceiling
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: O teto foi preterido. Em vez disso, use @"microsoft.quantum.math.ceiling".
+summary: O teto foi depreciado. Por @"microsoft.quantum.math.ceiling" favor, use em vez disso.
 syntax: 'function Ceiling (value : Double) : Int'
 input:
   content: '(value : Double)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: a6602f15086103c0711111098918a3d116af56aa
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: bb631eefabe0b7491cfe32d38b9402656c6031b6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74863493"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685494"
