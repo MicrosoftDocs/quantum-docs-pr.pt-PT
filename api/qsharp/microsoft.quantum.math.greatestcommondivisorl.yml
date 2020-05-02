@@ -3,29 +3,29 @@ uid: microsoft.quantum.math.greatestcommondivisorl
 name: GreatestCommonDivisorL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Computa o maior divisor comum de $a $ e $b $. O GCD é sempre positivo.
+summary: Calcula o maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 syntax: 'function GreatestCommonDivisorL (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
   - name: a
-    summary: o primeiro número do qual o maior divisor comum estendido está sendo computado
+    summary: o primeiro número dos quais o maior divisor comum estendido está a ser calculado
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: o segundo número do qual o maior divisor comum estendido está sendo computado
+    summary: o segundo número dos quais o maior divisor comum estendido está a ser calculado
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt
   types:
-  - summary: Maior divisor comum de $a $ e $b $
+  - summary: Maior divisor comum de $a$ e $b$
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 54808793900a2a4878c91a5b4f8810a9e289f945
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4a49c4a3bfbd662bdaf2990d5de87dc668cae135
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232817"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684217"
