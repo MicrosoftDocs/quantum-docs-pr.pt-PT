@@ -4,17 +4,17 @@ name: MultiplexOperationsBruteForceFromGenerator
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica a operação unitário controlada por multiplicação $U $ que aplica um $V unitário _j $ quando controlado pelo estado do número n-qubit $ \ket{j} $.
+  Aplica uma operação unitária controlada por multiplicação $U$ que aplica um $V_j$ unitário quando controlado pelo estado n-qubit número $\ket{j}$.
 
 
-  $U = \sum ^ {N-1} _ {j = 0} \ket{j}\bra{j}\otimes V_j $.
-remarks: '`coefficients` será preenchido com elementos de identidade se menos de $2 ^ n $ forem especificados. Essa versão é implementada diretamente por meio de um loop por meio de operadores unitários controlados por n.'
+  $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
+remarks: '`coefficients`será acolchoado com elementos de identidade se forespecificado menos de $2^n$. Esta versão é implementada diretamente através de operadores unitários controlados n.'
 syntax: "operation MultiplexOperationsBruteForceFromGenerator (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit"
 input:
   content: "(unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T)"
   types:
   - name: unitaryGenerator
-    summary: Uma tupla em que o primeiro elemento `Int` é o número de unidades $N $, e o segundo elemento `(Int -> ('T => () is Adj + Ctl))` é uma função que usa um inteiro $j $ em $ [0, N-1] $ e gera a operação unitário $V _j $.
+    summary: Uma túnica onde `Int` o primeiro elemento é o número de `(Int -> ('T => () is Adj + Ctl))` unitários $N$, e o segundo elemento é uma função que leva um inteiro $j$ em $[0,N-1]$ e produz a operação unitária $V_j$.
     types:
     - isPrimitive: true
       uid: Int
@@ -38,10 +38,10 @@ input:
           - Adjoint
           - Controlled
   - name: index
-    summary: $n o registro de controle $-qubit que codifica Estados de número $ \ket{j} $ no formato little-endian.
+    summary: $n registo de controlo de qubit que codifica o número indica $\ket{j}$ em formato pequeno endiano.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registro de qubit genérico que $V _j $ age em.
+    summary: Registo genérico de qubit que $V_j$ age.
     uid: "'T"
     isLocal: true
 output:
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a010fc41e76c09f064fdb7a0fa890efcfd8a41f8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ea435831323b0e117027005fa8007c87ab3f2575
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73225167"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678807"

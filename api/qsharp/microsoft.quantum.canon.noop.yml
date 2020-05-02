@@ -4,17 +4,17 @@ name: NoOp
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Executa a operação de identidade (não op) em um argumento.
+  Executa a operação de identidade (sem op) num argumento.
 
 
-  Essa operação usa um valor de qualquer tipo e não faz nada a ele.
+  Esta operação tem um valor de qualquer tipo e não lhe faz nada.
 
-  Isso pode ser útil sempre que uma entrada de um tipo de operação é esperada, mas nenhuma ação deve ser executada.
+  Isto pode ser útil sempre que se espera uma entrada de um tipo de operação, mas não devem ser tomadas medidas.
 
-  Por exemplo, se uma determinada síndrome de correção de erro indicar que nenhum erro ocorreu, `NoOp<Qubit[]>` pode ser o procedimento de recuperação correto.
+  Por exemplo, se uma determinada síndrome de correção `NoOp<Qubit[]>` de erros indicar que não ocorreu nenhum erro, pode ser o procedimento correto de recuperação.
 
-  Da mesma forma, se uma operação espera um procedimento de preparação de estado como entrada, `NoOp<Qubit[]>` pode ser usada para preparar o estado $ \ket{0 \cdots 0} $.
-remarks: Em quase todos os casos, o parâmetro de tipo para `NoOp` precisa ser especificado explicitamente. Por exemplo, `NoOp<Qubit>` é idêntica a <xref:microsoft.quantum.intrinsic.i>.
+  Da mesma forma, se uma operação espera `NoOp<Qubit[]>` um procedimento de preparação do Estado como entrada, pode ser usado para preparar o estado $\ket {0 \cdots 0}$.
+remarks: Em quase todos os casos, o parâmetro do tipo para `NoOp` deve ser especificado explicitamente. Por exemplo, `NoOp<Qubit>` é <xref:microsoft.quantum.intrinsic.i>idêntico a .
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 8752eb93c1fba59065518ffd4665ea6f110ce1cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222685"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678725"
