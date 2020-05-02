@@ -4,19 +4,19 @@ name: GeneratorIndex
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Representa um único termo primitivo no conjunto de todos os geradores dinâmicos, por exemplo, operadores Hermitian, para os quais existe um mapa desse gerador para a evolução do tempo por esse gerador, por meio de `EvolutionSet`.
+  Representa um único termo primitivo no conjunto de todos os geradores dinâmicos, por exemplo, operadores hermitianos, para `EvolutionSet`os quais existe um mapa desse gerador para a evolução temporal por esse gerador, através de .
 
 
-  O primeiro elemento (int [], Double []) é o índice de um único termo, por exemplo, a cadeia de caracteres Pauli XXY com o coeficiente 0,5 seria indexada por ([1, 1, 2], [0,5]). Como alternativa, o Hamiltonians parametrizado por uma variável contínua, como X cos φ + Y Sin φ, pode, por exemplo, ser representado por ([], [φ]). O segundo elemento indexa o subsistema no qual o gerador atua.
+  O primeiro elemento (Int[], Double[]) são os índices que a termo único -- Por exemplo, a cadeia Pauli XXY com coeficiente 0,5 seria indexada por ([1,1,2], [0,5]). Alternativamente, os Hamiltonianos parametróitos por uma variável contínua, como X cos φ + Y pecado φ, podem, por exemplo, ser representados por ([], [φ]). O segundo elemento indexa o subsistema em que o gerador atua.
 remarks: >-
   > [!WARNING]
 
-  > A interpretação de um `GeneratorIndex` não é definida, exceto com referência a um conjunto específico de geradores.
+  > A interpretação `GeneratorIndex` de um não é definida exceto com referência a um determinado conjunto de geradores.
 
 
   ### <a name="examples"></a>Exemplos
 
-  Usando <xref:microsoft.quantum.simulation.paulievolutionset>, o operador $ \pi X_2 X_5 Y_9 $ é representado como:
+  Utilizando <xref:microsoft.quantum.simulation.paulievolutionset>, o operador $\pi X_2 X_5 Y_9$ é representado como:
 
 
   ```qsharp
@@ -29,9 +29,9 @@ seeAlso:
 - evolutionset
 - paulievolutionset
 metadata:
-  ms.openlocfilehash: dc5f5b96a6d1708e94de918a65cbd68e0af06192
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d633ecdc11075eb45a40a58bb2a1ca67af577c3c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067055"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655147"
