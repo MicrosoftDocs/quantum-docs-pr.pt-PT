@@ -4,17 +4,17 @@ name: BlockEncodingByLCU
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Codifica um operador de interesse em um `BlockEncoding`.
+  Codifica um operador de interesse `BlockEncoding`em .
 
 
-  Isso constrói um `BlockEncoding` unitário $U = P\cdot V\cdot P ^ \dagger $ que codifica algum operador $H = \sum_{j} | \alpha_j | U_j $ de interesse que é uma combinação linear de unidades. Normalmente, $P $ é um tipo de preparação de estado, de modo que $P \ket{0}\_a = \ sum_j\sqrt {\ alpha_j/\|\vec\alpha\|\_2} \ket{j}\_$ e $V = \sum_{j}\ket{j}\bra{j}\_a\otimes U_ j $.
-remarks: Essa implementação de `BlockEncoding` fornece as propriedades de um `BlockEncodingReflection`.
+  Isto constrói `BlockEncoding` um $U unitário=P\cdot V\cdot P^\dagger$ que codifica algum operador $H=\sum_{j}\alpha_j; U_j de interesse que é uma combinação linear de unitários. Tipicamente, $P$ é uma preparação estatal{0}\_unitária que $P\ket\|a=\sum_j\sqrt{\alpha_j/ \vec\alpha\|\_2}\ket{j}\_a$, e $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
+remarks: Esta `BlockEncoding` implementação confere-lhe as propriedades de a `BlockEncodingReflection`.
 syntax: "function BlockEncodingByLCU (statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl)) : (('T, 'S) => Unit is Adj + Ctl)"
 input:
   content: "(statePreparation : ('T => Unit is Adj + Ctl), selector : (('T, 'S) => Unit is Adj + Ctl))"
   types:
   - name: statePreparation
-    summary: Um unitário $P $ que prepara algum estado de destino.
+    summary: Um $P$ unitário que prepara algum estado-alvo.
     isOperation: true
     input:
       types:
@@ -28,7 +28,7 @@ input:
     - Adjoint
     - Controlled
   - name: selector
-    summary: Um unitário $V $ que codifica as unidades de componente de $H $.
+    summary: Um $V unitário que codifica os componentes unitários de $H$.
     isOperation: true
     input:
       types:
@@ -46,7 +46,7 @@ input:
 output:
   content: (('T, 'S) => Unit is Adj + Ctl)
   types:
-  - summary: Um unitário $U $ agindo em conjunto em registros `a` e `s` que os codificadores de bloco $H $ e satisfazem $U ^ \dagger = U $.
+  - summary: Um $U unitário$ agindo conjuntamente em registos `a` e `s` que bloqueia códigos $H$, e satisfaz $U^\dagger = U$.
     isOperation: true
     input:
       types:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: b2a107a8497e6fdd24f5d6511d61541ce932ec6c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 581170f33001b0fef6606a39085b36c7f9559ac0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227870"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686898"

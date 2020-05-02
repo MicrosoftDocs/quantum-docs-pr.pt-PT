@@ -3,18 +3,18 @@ uid: microsoft.quantum.simulation.paulistringfromgenidx
 name: PauliStringFromGenIdx
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Extrai a cadeia de caracteres Pauli e seus índices qubit de um termo Pauli descrito por um `GeneratorIndex`.
+summary: Extrai a corda Pauli e os seus índices qubit de um termo Pauli descrito por a `GeneratorIndex`.
 syntax: 'function PauliStringFromGenIdx (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : (Pauli[], Int[])'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: '`GeneratorIndex` tipo que codifica um termo de Pauli.'
+    summary: '`GeneratorIndex`tipo que codifica um termo Pauli.'
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: (Pauli[], Int[])
   types:
-  - summary: A cadeia de caracteres Pauli do termo descrito por um `GeneratorIndex`e os índices para o qubits em que ele atua.
+  - summary: A cadeia Pauli do termo `GeneratorIndex`descrito por a , e indices aos qubits em que age.
     types:
     - isArray: true
       isPrimitive: true
@@ -23,9 +23,9 @@ output:
       isPrimitive: true
       uid: Int
 metadata:
-  ms.openlocfilehash: e94fd2ddf1b6c18890cc0e4c82cef9d648808661
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 585cac037696e370f3fc3ca4364db6f753b2c642
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221665"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687034"

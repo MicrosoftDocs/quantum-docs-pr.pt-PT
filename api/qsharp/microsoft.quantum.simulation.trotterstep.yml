@@ -3,27 +3,27 @@ uid: microsoft.quantum.simulation.trotterstep
 name: TrotterStep
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Implementa uma única etapa de tempo de evolução de tempo pelo sistema descrito em um `EvolutionGenerator` usando uma decomposição Trotter – Suzuki.
-remarks: Para obter mais informações sobre a decomposição Trotter – Suzuki, consulte [composição de tempo ordenado](/quantum/libraries/control-flow#time-ordered-composition).
+summary: Implementa um único passo temporal de evolução temporal `EvolutionGenerator` pelo sistema descrito numa decomposição Trotter-Suzuki.
+remarks: Para mais informações sobre a decomposição Trotter-Suzuki, consulte a [Composição ordenada pelo tempo](/quantum/libraries/control-flow#time-ordered-composition).
 syntax: 'function TrotterStep (evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(evolutionGenerator : Microsoft.Quantum.Simulation.EvolutionGenerator, trotterOrder : Int, trotterStepSize : Double)'
   types:
   - name: evolutionGenerator
-    summary: Uma descrição completa do sistema a ser simulado.
+    summary: Uma descrição completa do sistema a simular.
     uid: microsoft.quantum.simulation.evolutiongenerator
   - name: trotterOrder
-    summary: Ordem do integrador Trotter. Deve ser 1 ou um número par.
+    summary: Ordem do integrador Trotter. Isto deve ser um ou um número par.
     isPrimitive: true
     uid: Int
   - name: trotterStepSize
-    summary: Duração da evolução de tempo simulada em uma única etapa de Trotter.
+    summary: Duração da evolução do tempo simulada em um único passo de Trotter.
     isPrimitive: true
     uid: Double
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Operação unitário que aproxima uma única etapa da evolução do tempo para `trotterStepSize`de duração.
+  - summary: Funcionamento unitário que se aproxima de um `trotterStepSize`único passo de evolução temporal durante a duração .
     isOperation: true
     input:
       types:
@@ -38,9 +38,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 0605c7de832286b8b7a11b82af50b528d233d18c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7059972ad5494e7d2cd86c943314005f620ad60f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065219"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687217"

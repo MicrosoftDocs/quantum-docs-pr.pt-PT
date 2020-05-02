@@ -3,17 +3,17 @@ uid: microsoft.quantum.simulation.estimateenergy
 name: EstimateEnergy
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Executa a preparação do estado aplicando um `statePrepUnitary` em uma estimativa de fase de estado de entrada alocada automaticamente com relação a `qpeUnitary`no estado resultante usando uma `phaseEstAlgorithm`.
+summary: Executa a preparação `statePrepUnitary` do Estado aplicando uma estimativa de fase `qpeUnitary`de estado de `phaseEstAlgorithm`entrada automaticamente atribuída no que diz respeito ao estado resultante utilizando a .
 syntax: 'operation EstimateEnergy (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
   types:
   - name: nQubits
-    summary: Número de qubits usadas para executar a simulação.
+    summary: Número de qubits usados para realizar simulação.
     isPrimitive: true
     uid: Int
   - name: statePrepUnitary
-    summary: Um Oracle representando a preparação do estado para o gerador dinâmico inicial.
+    summary: Um oráculo que representa a preparação do estado para o gerador dinâmico inicial.
     isOperation: true
     input:
       types:
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Um Oracle representando um operador unitário $U $ representando a evolução do tempo $ \delta t $ em um gerador dinâmico com estado de terra $ \ket{\phi} $ e Energy State de terra $E = \phi\\, \delta t $.
+    summary: Um oráculo que representa um operador unitário $U$ que representa a evolução por tempo $\delta t$ sob um\\gerador dinâmico com estado terrestre $\ket{\phi}$ e energia do estado terrestre $E = \phi ,\delta t$.
     isOperation: true
     input:
       types:
@@ -41,9 +41,9 @@ input:
     - Controlled
   - name: phaseEstAlgorithm
     summary: >-
-      Uma operação que executa a estimativa de fase em uma determinada operação de unitário.
+      Uma operação que executa a estimativa de fase numa determinada operação unitária.
 
-      Consulte [estimativa de fase iterativa](/quantum/libraries/characterization#iterative-phase-estimation) para obter mais detalhes.
+      Consulte a estimativa da [fase iterativa](/quantum/libraries/characterization#iterative-phase-estimation) para obter mais detalhes.
     isOperation: true
     input:
       types:
@@ -58,13 +58,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Uma estimativa de $ \hat{\phi} $ do estado do solo Energy $ \phi $ da energia de estado terrestre do gerador representado pelo $U $.
+  - summary: Uma estimativa de $\hat{\phi}$ da energia do estado terrestre $\phi$ da energia do estado terrestre do gerador representado por $U$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: aff8ac5575b6a5e08dc80263a7a8d4bfec59fa12
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d7f32999782763bbb6224afc2c764188c718379b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223331"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686882"

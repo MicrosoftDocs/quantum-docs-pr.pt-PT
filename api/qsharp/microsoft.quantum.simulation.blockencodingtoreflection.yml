@@ -4,33 +4,33 @@ name: BlockEncodingToReflection
 type: function
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Converte um `BlockEncoding` em um `BLockEncodingReflection`equivalente.
+  Converte `BlockEncoding` um em `BLockEncodingReflection`equivalente.
 
 
-  Ou seja, dado um `BlockEncoding` unitário $U $ que codifica algum operador $H $ de interesse, converte-o em um `BlockEncodingReflection` $U ' $ que codifica o mesmo operador, mas também satisfaz $U ' ^ \dagger = U ' $.
+  Ou seja, `BlockEncoding` dado um $U de $U$ unitário que codifica algum `BlockEncodingReflection` operador $H$ de juros, converte-o num $U'$ que codifica o mesmo operador, mas também satisfaz $U'^\apunhala = U'$.
 
-  Isso aumenta o tamanho do registro auxiliar de $U $ por um qubit.
-remarks: Isso aumenta o tamanho do registro auxiliar de $U $ por um qubit.
+  Isto aumenta o tamanho do registo auxiliar de $U$ por um qubit.
+remarks: Isto aumenta o tamanho do registo auxiliar de $U$ por um qubit.
 syntax: 'function BlockEncodingToReflection (blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
-references: '- Simulação de Hamiltonian por Qubitization Guang Hao Low, Julio L. Chuang https://arxiv.org/abs/1610.06546'
+references: '- Simulação hamiltoniana por Qubitization Guang Hao Low, Isaac L. Chuanghttps://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncoding)'
   types:
   - name: blockEncoding
-    summary: Um `BlockEncoding` unitário $U $ a ser convertido em uma reflexão.
+    summary: Um `BlockEncoding` $U de ser convertido em reflexão.
     uid: microsoft.quantum.simulation.blockencoding
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Um unitário $U ' $ atuando em conjunto em registros `a` e `s` que os codificadores de bloco $H $ e satisfazem $U ' ^ \dagger = U ' $.
+  - summary: Um $U'$ unitário agindo conjuntamente em registos `a` e `s` que bloqueia códigos $H$, e satisfaz $U'^\dagger = U'$.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 47eba3c59ef30f89139830aa4d9b98d22d141d8f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e656a5ab9e187660a20420049374380ef9726647
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73065627"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686910"

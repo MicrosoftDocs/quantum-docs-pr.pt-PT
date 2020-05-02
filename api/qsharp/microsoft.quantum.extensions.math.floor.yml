@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.math.floor
 name: Floor
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: O andar foi preterido. Em vez disso, use @"microsoft.quantum.math.floor".
+summary: O chão foi depreceed. Por @"microsoft.quantum.math.floor" favor, use em vez disso.
 syntax: 'function Floor (value : Double) : Int'
 input:
   content: '(value : Double)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 994756f65682b590ae4562ed6ac33e9b9c6944a3
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: ed30822f104b01d4d92a22c7ee9f3cc47a5bda65
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74865346"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686325"

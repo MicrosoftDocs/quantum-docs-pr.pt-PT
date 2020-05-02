@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.random
 name: Random
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: O Random foi preterido. Em vez disso, use @"microsoft.quantum.intrinsic.random".
+summary: Aleatório foi depreciado. Por @"microsoft.quantum.intrinsic.random" favor, use em vez disso.
 syntax: 'operation Random (probs : Double[]) : Int'
 input:
   content: '(probs : Double[])'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 4e6804b7a9e1c80e62fd98e5e8b67d294fb9ba7b
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 83f62817f1ce642ee55ba1f13c9c9266d49f7307
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74864700"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687093"

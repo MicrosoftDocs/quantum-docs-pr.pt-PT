@@ -3,13 +3,13 @@ uid: microsoft.quantum.simulation.adiabaticstateenergyunitary
 name: AdiabaticStateEnergyUnitary
 type: operation
 namespace: Microsoft.Quantum.Simulation
-summary: Executa a preparação do estado aplicando um `statePrepUnitary` no estado de entrada, seguido pela preparação do estado adiabatic usando uma `adiabaticUnitary`e estimativa de fase finally com relação a `qpeUnitary`no estado resultante usando um `phaseEstAlgorithm`.
+summary: Executa a preparação `statePrepUnitary` do Estado aplicando um estado de entrada, `adiabaticUnitary`seguido de preparação do `qpeUnitary`Estado adiabático utilizando uma , e, finalmente, estimativa de fase em relação ao estado resultante usando a `phaseEstAlgorithm`.
 syntax: 'operation AdiabaticStateEnergyUnitary (statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[]) : Double'
 input:
   content: '(statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double), qubits : Qubit[])'
   types:
   - name: statePrepUnitary
-    summary: Um Oracle representando a preparação do estado para o gerador dinâmico inicial.
+    summary: Um oráculo que representa a preparação do estado para o gerador dinâmico inicial.
     isOperation: true
     input:
       types:
@@ -21,7 +21,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: adiabaticUnitary
-    summary: Um Oracle que representa o algoritmo de evolução do adiabatic a ser usado para implementar as varreduras para o estado final do algoritmo.
+    summary: Um oráculo que representa o algoritmo de evolução adiabática a ser usado para implementar as varreduras para o estado final do algoritmo.
     isOperation: true
     input:
       types:
@@ -33,7 +33,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Um Oracle representando um operador unitário $U $ representando a evolução do tempo $ \delta t $ em um gerador dinâmico com estado de terra $ \ket{\phi} $ e Energy State de terra $E = \phi\\, \delta t $.
+    summary: Um oráculo que representa um operador unitário $U$ que representa a evolução por tempo $\delta t$ sob um\\gerador dinâmico com estado terrestre $\ket{\phi}$ e energia do estado terrestre $E = \phi ,\delta t$.
     isOperation: true
     input:
       types:
@@ -49,9 +49,9 @@ input:
     - Controlled
   - name: phaseEstAlgorithm
     summary: >-
-      Uma operação que executa a estimativa de fase em uma determinada operação de unitário.
+      Uma operação que executa a estimativa de fase numa determinada operação unitária.
 
-      Consulte [estimativa de fase iterativa](/quantum/libraries/characterization#iterative-phase-estimation) para obter mais detalhes.
+      Consulte a estimativa da [fase iterativa](/quantum/libraries/characterization#iterative-phase-estimation) para obter mais detalhes.
     isOperation: true
     input:
       types:
@@ -64,20 +64,20 @@ input:
       - isPrimitive: true
         uid: Double
   - name: qubits
-    summary: Um registro de qubits a ser usado para executar a simulação.
+    summary: Um registo de qubits a utilizar para realizar a simulação.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Double
   types:
-  - summary: Uma estimativa de $ \hat{\phi} $ do estado do solo Energy $ \phi $ do gerador representado pelo $U $.
+  - summary: Uma estimativa de $\hat{\phi}$ da energia do estado terrestre $\phi$ do gerador representado por $U$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 747e9f6d926863ce1add86d183ca2ed1dc43c8a4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2e8e3917b6f3f741fba3f03aeb467a8785b5325c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232035"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687123"

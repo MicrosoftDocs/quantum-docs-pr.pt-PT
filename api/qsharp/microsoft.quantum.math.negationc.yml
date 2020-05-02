@@ -3,23 +3,23 @@ uid: microsoft.quantum.math.negationc
 name: NegationC
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna a negação unário de uma entrada.
+summary: Devolve a negação não ária de uma entrada.
 syntax: 'function NegationC (input : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(input : Microsoft.Quantum.Math.Complex)'
   types:
   - name: input
-    summary: Um valor cuja negação deve ser retornada.
+    summary: Um valor cuja negação deve ser devolvida.
     uid: microsoft.quantum.math.complex
 output:
   content: Microsoft.Quantum.Math.Complex
   types:
-  - summary: A negação unário de `input`.
+  - summary: A negação não `input`ária de .
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: 29907f747d5973ca191cb4aa55458e5d15d5de61
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4a8fff92778578483db7c8bfa579c66549da5670
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232443"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686614"

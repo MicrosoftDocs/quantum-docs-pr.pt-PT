@@ -3,29 +3,29 @@ uid: microsoft.quantum.math.modl
 name: ModL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o módulo de um número em relação a outro número.
+summary: Devolve o módulo de um número em relação a outro número.
 syntax: 'function ModL (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
   - name: a
-    summary: A entrada $a $ cujo módulo deve ser retornado.
+    summary: A entrada $a$ cujo modulo deve ser devolvido.
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: O número com relação ao qual o módulo de $a $ será retornado.
+    summary: O número em relação ao qual o modulo de $a$ deve ser devolvido.
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt
   types:
-  - summary: O módulo $a \bmod b $.
+  - summary: O modulo $a bmod b$.
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 7431cc366b8c8e592008d2787a58e45d101dd2e6
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bdcfc7793e20b75dddc24fc61b880349eb8e10ed
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233718"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686684"

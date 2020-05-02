@@ -3,18 +3,18 @@ uid: microsoft.quantum.research.chemistry.jwoptimizedstatepreparation
 name: JWOptimizedStatePreparation
 type: operation
 namespace: Microsoft.Quantum.Research.Chemistry
-summary: Preparação de estado simples do estado de avaliação ocupando giros de rotação
+summary: Preparação simples do estado experimental, ocupando os orbitais de rotação
 syntax: 'operation JWOptimizedStatePreparation (qubitIndices : Int[], qubits : Qubit[]) : Unit'
 input:
   content: '(qubitIndices : Int[], qubits : Qubit[])'
   types:
   - name: qubitIndices
-    summary: Índices de qubits a serem ocupados por elétrons.
+    summary: Índices de qubits a serem ocupados por eletrões.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: qubits
-    summary: Qubits Hamiltonian.
+    summary: Qubits de Hamiltonian.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a9d4ef8d604a5bfe6ae24e7cb2dda316102cc6aa
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 5fe5b532436e0560e98fa12385e77657f23a8515
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227972"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686925"

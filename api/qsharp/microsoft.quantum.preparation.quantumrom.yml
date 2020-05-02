@@ -4,14 +4,14 @@ name: QuantumROM
 type: function
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Usa a técnica de ROM Quantum para representar uma determinada matriz de densidade.
+  Usa a técnica de ROM quântica para representar uma determinada matriz de densidade.
 
 
-  Dada uma lista de $N $ coeficientes $ \ alpha_j $, isso retorna um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $ \tilde\rho\ sum_ {j = 0} ^ {N-1} p_j \ket{j}\bra{j} $ do Purification da matriz de densidade $ \rho = \ sum_ {j = 0} ^ {N-1} \frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $. Nessa aproximação, o erro $ \epsilon $ é de que $ | p_j-\frac{| alpha_j |} {\ sum_k | \ alpha_k |} | \le \epsilon/N $ e $\|\tilde\rho-\rho\| \le \epsilon $. Em outras palavras, $ $ \begin{align} U\ket{0}^ {\lceil\ log_2 N\rceil} \ ket{0}^ {m} = \ sum_ {j = 0} ^ {N-1} \sqrt{p_j} \ket{j}\ket{\Text{Garbage} _j}.
+  Dada uma lista de coeficientes de $N$alpha_j$, isto devolve um $U unitário que usa a técnica Quantum-ROM para preparar uma aproximação $\tilde\rho\sum_{j=0}^{N-1}p_j\ket{j}\bra{j}$ da purificação da matriz de densidade $\rho=\sum_{j=0}^{N-1}\frac{[alpha_j]} {\sum_k [alpha_k]} \ket{j}\bra{j}$. Nesta aproximação, o erro $\epsilon$ é tal que $[p_j-\frac{[alpha_j]. {\sum_k [\alpha_k]; \le \epsilon / N$ e $\|\tilde\rho - \rho\| \le \epsilon$. Por outras palavras, $$ \begin{align} U\ket{0}^{\lceil\log_2{0}N\rceil}\ket ^{m}=\sum_{j=0}^{N-1}\sqrt{p_j} \ket{j}\ket{\text{trash}_j}.
 
-  \end{align} $ $
+  \end{align} $$
 examples: >-
-  O trecho de código a seguir prepara um Purification de $3 $-qubit State $ \rho = \ sum_ {j = 0} ^{4}\frac{| alpha_j |} {\ sum_k | \ alpha_k |} \ket{j}\bra{j} $, em que $ \vec\alpha = (1.0, 2.0, 3.0, 4.0, 5.0) $ e o erro é `1e-3`;
+  O seguinte código snippet prepara uma purificação do estado $3$-qubit $\rho=\sum_{j=0}^{4}\frac{[alpha_j]} {\sum_k [alpha_k]} \ket{j}\bra{j}$, onde $\vec\alfa=(1.0,2.0,0,0.0.0,5.0)$, e `1e-3`o erro é;
 
 
   ```qsharp
@@ -30,19 +30,19 @@ examples: >-
 
   ```
 syntax: 'function QuantumROM (targetError : Double, coefficients : Double[]) : ((Int, (Int, Int)), Double, ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl))'
-references: '- Codificação eletrônica de Spectra em circuitos Quantum com complexidade T linear Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru fosco, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662'
+references: '- Codificação de Espectros Eletrônicos em Circuitos Quânticos com Complexidade Linear T Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru Paler, Austin Fowler, Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
 input:
   content: '(targetError : Double, coefficients : Double[])'
   types:
   - name: targetError
-    summary: O erro de destino $ \epsilon $.
+    summary: O erro do alvo $\epsilon$.
     isPrimitive: true
     uid: Double
   - name: coefficients
     summary: >-
-      Matriz de $N $ coeficientes especificando a probabilidade de Estados de base.
+      Uma série de coeficientes de $N$ que especificam a probabilidade de estados de base.
 
-      Números negativos $-\ alpha_j $ serão tratados como $ | \ alpha_j | $.
+      Os números negativos $-\alpha_j$ serão tratados como positivos $alpha_j[$].
     isArray: true
     isPrimitive: true
     uid: Double
@@ -53,19 +53,19 @@ output:
       ## <a name="first-parameter"></a>Primeiro parâmetro
 
 
-      Uma tupla `(x,(y,z))` em que `x = y + z` é o número total de qubits alocados, `y` é o número de qubits para o registro de `LittleEndian` e `z` é o número de qubits de lixo.
+      `(x,(y,z))` Uma tuple `x = y + z` onde está o número total `y` de qubits atribuídos, `LittleEndian` é `z` o número de qubits para o registo, e é o Número de qubits de lixo.
 
 
       ## <a name="second-parameter"></a>Segundo parâmetro
 
 
-      A norma One-Activity $ \ sum_j | \ alpha_j | $ da matriz de coeficiente.
+      A norma única $\sum_j [\alpha_j[$ da matriz de coeficiente.
 
 
       ## <a name="third-parameter"></a>Terceiro parâmetro
 
 
-      O unitário $U $.
+      O unitário $U$.
     types:
     - types:
       - isPrimitive: true
@@ -92,9 +92,9 @@ output:
       - Adjoint
       - Controlled
 metadata:
-  ms.openlocfilehash: 33d21289b0b1ad64577677d5fa5ca622346224cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 9bf373f0cb7c495f8c29a4426861c74fbb0ec7f6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226425"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686484"

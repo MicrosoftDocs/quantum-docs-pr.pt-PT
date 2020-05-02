@@ -3,30 +3,30 @@ uid: microsoft.quantum.math.modulusl
 name: ModulusL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Computa a residue canônica do `modulus`do módulo `value`.
-remarks: 'Essa função se comporta de forma diferente com o modo como o operador `%` se C# comporta e Q # como no resultado é sempre um inteiro positivo entre 0 e `modulus - 1`, mesmo se o valor for negativo.'
+summary: Calcula o resíduo canónico `value` do modulo. `modulus`
+remarks: Esta função comporta-se `%` de forma diferente da forma como o operador se comporta em `modulus - 1`C# e Q# uma vez que, no resultado, é sempre um inteiro positivo entre 0 e , mesmo que o valor seja negativo.
 syntax: 'function ModulusL (value : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, modulus : BigInt)'
   types:
   - name: value
-    summary: O valor do qual residue é computado
+    summary: O valor de que resíduo é calculado
     isPrimitive: true
     uid: BigInt
   - name: modulus
-    summary: O módulo pelo qual residues são tomadas, deve ser positivo
+    summary: O módulo pelo qual os resíduos são tomadas, deve ser positivo
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt
   types:
-  - summary: Inteiro $r $ entre 0 e `modulus - 1` de modo que `value - r` seja divisível por módulo
+  - summary: Integer $r$ entre `modulus - 1` 0 `value - r` e tal que é divisível por modulo
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 14ef3669e4c59912129c9ffac6ecbf1a2ed25534
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c4a9403cc5c2bf62e43b5cc248fb9502f15818e8
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232460"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686632"
