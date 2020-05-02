@@ -3,31 +3,31 @@ uid: microsoft.quantum.chemistry.jordanwigner.vqe.expandedcoefficients
 name: ExpandedCoefficients
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
-summary: Expande a representação compacta dos coeficientes da Jordânia-Wigner para obter um mapeamento um-para-um entre esses e Pauli termos.
+summary: Expande a representação compacta dos coeficientes Jordan-Wigner, a fim de obter um mapeamento um-para-um entre estes termos e Pauli.
 syntax: 'function ExpandedCoefficients (coeff : Double[], termType : Int) : Double[]'
 input:
   content: '(coeff : Double[], termType : Int)'
   types:
   - name: coeff
-    summary: Uma matriz de coeficientes, como lida com a estrutura de dados Hamiltonian da Jordânia-Wigner.
+    summary: Uma série de coeficientes, como se pode ler na estrutura de dados Jordan-Wigner Hamiltonian.
     isArray: true
     isPrimitive: true
     uid: Double
   - name: termType
-    summary: O tipo do termo Jordânia-Wigner.
+    summary: O tipo do termo Jordan-Wigner.
     isPrimitive: true
     uid: Int
 output:
   content: Double[]
   types:
-  - summary: Matrizes expandidas de coeficientes, uma por termo Pauli.
+  - summary: Conjuntos expandidos de coeficientes, um por termo Pauli.
     isArray: true
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 1eb141b0410e8d4cccaef0001bfec67fecf12831
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 56a2d86a59ec110eac20cdd7e6aa29a9e617ee46
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227513"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82662629"

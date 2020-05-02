@@ -3,37 +3,37 @@ uid: microsoft.quantum.chemistry.jordanwigner.vqe.measurementoperators
 name: MeasurementOperators
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
-summary: Computa todos os operadores de medida necessários para computar a expectativa de um termo Wigner da Jordânia.
+summary: Calcula todos os operadores de medição necessários para calcular a expectativa de um termo Jordan-Wigner.
 syntax: 'function MeasurementOperators (nQubits : Int, indices : Int[], termType : Int) : Pauli[][]'
 input:
   content: '(nQubits : Int, indices : Int[], termType : Int)'
   types:
   - name: nQubits
-    summary: O número de qubits necessárias para simular o sistema molecular.
+    summary: O número de qubits necessários para simular o sistema molecular.
     isPrimitive: true
     uid: Int
   - name: indices
-    summary: Uma matriz que contém os índices do qubit cada operador Pauli é aplicado a.
+    summary: É aplicada uma matriz contendo os índices do qubit a que cada operador pauli é aplicada.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: termType
-    summary: O tipo do termo Jordânia-Wigner.
+    summary: O tipo do termo Jordan-Wigner.
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[][]
   types:
-  - summary: Uma matriz de operadores de medida (cada um sendo uma matriz de Pauli).
+  - summary: Um conjunto de operadores de medição (cada um deles é um conjunto de Pauli).
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
 metadata:
-  ms.openlocfilehash: e22af035b43d8b3ebeea22c8c4bfa0f7289ab82c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: cae0c641ca24e81d6c5ce4c3293e33ba0adb8f22
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73227530"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82662236"
