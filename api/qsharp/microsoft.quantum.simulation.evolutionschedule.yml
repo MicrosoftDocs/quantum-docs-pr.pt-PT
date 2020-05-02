@@ -4,15 +4,15 @@ name: EvolutionSchedule
 type: newtype
 namespace: Microsoft.Quantum.Simulation
 summary: >-
-  Representa um gerador dinâmico dependente de tempo.
+  Representa um gerador dinâmico dependente do tempo.
 
 
-  O parâmetro `Double` é um agendamento em $ [0, 1] $.
+  O `Double` parâmetro é um horário em $[0, 1]$.
 syntax: newtype EvolutionSchedule = (Microsoft.Quantum.Simulation.EvolutionSet, (Double -> Microsoft.Quantum.Simulation.GeneratorSystem));
 metadata:
-  ms.openlocfilehash: 44cbb1c42fa60219ed3125a41752cd8867d1a764
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 99e49eb5e118dc64f8fab3a8ef75a796651c3734
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211108"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82655144"
