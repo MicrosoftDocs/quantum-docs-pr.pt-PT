@@ -4,12 +4,12 @@ name: M
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Executa uma medida de um único qubit na base do Pauli $Z $.
+  Executa uma medição de um único qubit na base Pauli $Z$.
 
 
-  O resultado da saída é fornecido pela distribuição \begin{align} \Pr (\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}.
+  O resultado da saída é dado pela distribuição \start{align} \Pr(\texttt{Zero} [ \ket{\psi}) = \braket{\psi / 0} \braket{0 ; \psi}.
 
-  \end{align}
+  \fim{align}
 remarks: >-
   Equivalente a:
 
@@ -24,19 +24,19 @@ input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: Qubit a ser medido.
+    summary: Qubit a medir.
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: '`Zero` se $ + $1 eigenvalue for observado e `One` se o eigenvalue $-$1 for observado.'
+  - summary: '`Zero`se o valor eigenvalue de $+1$ for observado, e `One` se o eigenvalue de $1$ for observado.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 842035790ecd03df97f9ad583b049121681b4f2b
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: e13f82aa3489fcd1d0c5121f436ae1f600675957
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73234143"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683754"

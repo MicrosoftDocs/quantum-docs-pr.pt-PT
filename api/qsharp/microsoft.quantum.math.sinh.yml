@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.sinh
 name: Sinh
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o seno hiperbólico do ângulo especificado.
-remarks: Consulte [System. Math. Sinh](https://docs.microsoft.com/dotnet/api/system.math.sinh) para obter mais detalhes.
+summary: Devolve o seno hiperbólico do ângulo especificado.
+remarks: Consulte [o System.Math.Sinh](https://docs.microsoft.com/dotnet/api/system.math.sinh) para mais detalhes.
 syntax: 'function Sinh (d : Double) : Double'
 input:
   content: '(d : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 0a722677e787e634efb2497279e96a56f4e5a980
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 44542c22554806190323f097d50e0e5941f634d6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231712"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683265"

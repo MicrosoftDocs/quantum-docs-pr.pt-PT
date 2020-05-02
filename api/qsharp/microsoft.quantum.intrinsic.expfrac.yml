@@ -4,29 +4,29 @@ name: ExpFrac
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Aplica o exponencial de um operador qubit Pauli com um argumento fornecido por uma fração dyadic.
+  Aplica o exponencial de um operador pauli multiqubit com um argumento dado por uma fração dyadica.
 
 
-  \begin{align} e ^ {i \pi k [P_0 \otimes P_1 \cdots P_ {N-1}]/2 ^ N}, \end{align} em que $P _i $ é o elemento $i $ th de `paulis`e em que $N = $`Length(paulis)`.
+  \begin{align} e^{i \pi k [P_0 \otimes P_1 \cdots P_{N-1}] / 2^n}, \end{align} `paulis`onde $P_i$`Length(paulis)`é o elemento $i$th de , e onde $N = $ .
 syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
   - name: paulis
-    summary: Matriz de valores de Pauli de qubit único que indicam os fatores de produto tensor em cada qubit.
+    summary: Conjunto de valores pauli de monoqubit indicando os fatores do produto tensor em cada qubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: numerator
-    summary: O numerador ($k $) na representação de fração dyadic do ângulo pelo qual o registro qubit deve ser girado.
+    summary: Numerador ($k$) na representação da fração disadica do ângulo pelo qual o registo qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: power
-    summary: Potência de dois ($n $) especificando o denominador do ângulo pelo qual o registro de qubit deve ser girado.
+    summary: Potência de dois ($n$) especificando o denominador do ângulo pelo qual o registo qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: qubits
-    summary: Registre-se para aplicar a rotação fornecida ao.
+    summary: Registe-se para aplicar a rotação dada.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -39,9 +39,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d02f48d695db3dd2d7012df5bbf22718ffe41b74
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 61bd52b3bcce87c6bcbf61ebeb52f720e96fe0f0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223773"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683812"

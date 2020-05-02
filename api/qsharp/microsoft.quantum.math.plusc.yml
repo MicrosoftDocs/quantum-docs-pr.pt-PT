@@ -3,26 +3,26 @@ uid: microsoft.quantum.math.plusc
 name: PlusC
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna a soma de duas entradas.
+summary: Devolve a soma de duas inputs.
 syntax: 'function PlusC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
   types:
   - name: a
-    summary: A primeira entrada $a $ a ser somada.
+    summary: A primeira entrada $a$ a resumir.
     uid: microsoft.quantum.math.complex
   - name: b
-    summary: A segunda entrada $b $ a ser somada.
+    summary: A segunda entrada $b$ a resumir.
     uid: microsoft.quantum.math.complex
 output:
   content: Microsoft.Quantum.Math.Complex
   types:
-  - summary: A soma $a + b $.
+  - summary: A soma $a + b$.
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: 1478e0fb13939c3e266616c8accd564edb64c708
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6eb9adbd4b1ee255572a391b707f7a01e3e69e0d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211363"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684135"

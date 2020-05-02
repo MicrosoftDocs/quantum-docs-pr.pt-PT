@@ -3,9 +3,9 @@ uid: microsoft.quantum.logical.or
 name: Or
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna a disjunção booliana de dois valores.
+summary: Devolve a disjunção booleana de dois valores.
 remarks: >-
-  Ao contrário do operador de `or`, essa função não é de curto circuito, de modo que ambas as entradas são totalmente avaliadas.
+  Ao `or` contrário do operador, esta função não faz curto-circuito, de modo a que ambas as inputs sejam totalmente avaliadas.
 
 
   Até o comportamento de curto-circuito, os seguintes são equivalentes:
@@ -27,19 +27,19 @@ input:
     isPrimitive: true
     uid: Bool
   - name: b
-    summary: O segundo valor a ser considerado.
+    summary: O segundo valor a considerar.
     isPrimitive: true
     uid: Bool
 output:
   content: Bool
   types:
-  - summary: '`true` se e somente se `a` ou `b` forem `true`.'
+  - summary: '`true`se e apenas `b` `true`se um ou `a` for .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 7324679482e300b868902e9bf1c17cc9cc0da10d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: fb3d62473ec3fd7c40b44bfa919b69d54c5d0218
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235163"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683568"

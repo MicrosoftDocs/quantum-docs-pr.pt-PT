@@ -4,17 +4,17 @@ name: R1Frac
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Aplica uma rotação sobre o estado $ \ket{1}$ por um ângulo especificado como uma fração dyadic.
+  Aplica uma rotação sobre o{1}estado $\ket $ por um ângulo especificado como uma fração disadica.
 
 
-  \begin{align} R_1 (n, k) \mathrel{: =} \operatorname{diag} (1, e ^ {i \pi k/2 ^ n}).
+  \begin{align} R_1(n, k) \mathrel{:=} \operatorname{diag}(1, e^{i \pi k / 2^n}).
 
-  \end{align}
+  \fim{align}
 
 
   > [!WARNING]
 
-  > Esta operação usa a Convenção de sinal **oposta** da @"microsoft.quantum.intrinsic.r"e não inclui o fator de $1/2 $ incluído por @"microsoft.quantum.intrinsic.r1".
+  > Esta operação utiliza a @"microsoft.quantum.intrinsic.r"convenção de sinalização **oposta** de , e @"microsoft.quantum.intrinsic.r1"não inclui o fator de $1/ 2$ incluído por .
 remarks: >-
   Equivalente a:
 
@@ -31,15 +31,15 @@ input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: numerator
-    summary: O numerador na representação de fração dyadic do ângulo pelo qual o qubit deve ser girado.
+    summary: Numerador na representação da fração disadica do ângulo pelo qual o qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: power
-    summary: Potência de dois especificando o denominador do ângulo pelo qual o qubit deve ser girado.
+    summary: Potência de dois especificando o denominador do ângulo pelo qual o qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: qubit
-    summary: Qubit ao qual a portão deve ser aplicada.
+    summary: Qubit ao qual o portão deve ser aplicado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c91aa9424abd038fa3a5a22fd23ac92cce171414
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233990"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683737"

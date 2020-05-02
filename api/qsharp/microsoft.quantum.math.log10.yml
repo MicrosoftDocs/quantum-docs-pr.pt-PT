@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.log10
 name: Log10
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o logaritmo de base 10 de um número especificado.
-remarks: Consulte [System. Math. LOG10](https://docs.microsoft.com/dotnet/api/system.math.log10) para obter mais detalhes.
+summary: Devolve a base 10 logarithm de um número especificado.
+remarks: Consulte [system.math.log10](https://docs.microsoft.com/dotnet/api/system.math.log10) para obter mais detalhes.
 syntax: 'function Log10 (input : Double) : Double'
 input:
   content: '(input : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 33e3b902e1f441c401e586016004f33ac057d5c1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c7b85ac178392669d3dc4864ffc64cc1c65b6eb7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232596"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683319"

@@ -4,18 +4,18 @@ name: H
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Aplica a transformação Hadamard a um único qubit.
+  Aplica a transformação de Hadamard a um único qubit.
 
 
-  \begin{align} H \mathrel{: =} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ 1 &-1 \end{bmatrix}.
+  \begin{align} H \mathrel{:=}{1}\frac {\sqrt{2}} \begin{bmatrix} 1 & 1 1 1 \\ \\ & -1 \end{bmatrix}.
 
-  \end{align}
+  \fim{align}
 syntax: 'operation H (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: Qubit ao qual a portão deve ser aplicada.
+    summary: Qubit ao qual o portão deve ser aplicado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 29b6d66a3d222007f94a0d4556249b91da447df1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d37e45d0af2daf07a594c8e1ffe8f8b5e5140d1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73223722"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683792"

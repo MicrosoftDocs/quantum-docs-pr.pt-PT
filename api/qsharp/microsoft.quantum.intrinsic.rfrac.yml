@@ -4,15 +4,15 @@ name: RFrac
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Aplica uma rotação sobre o eixo Pauli fornecido por um ângulo especificado como uma fração dyadic.
+  Aplica uma rotação sobre o eixo Pauli dado por um ângulo especificado como uma fração disadica.
 
 
-  \begin{align} R_ {\mu} (n, k) \mathrel{: =} e ^ {i \pi n \ sigma_ {\mu}/2 ^ k}, \end{align} em que $ \mu na \{I, X, Y, Z\}$.
+  \start{align} R_{\mu}(n, k) \mathrel{:=} e^i \pi n \sigma_{\mu} / 2^k}, \end{align} onde $\mu \in \{I, X, Y, Z\}$.
 
 
   > [!WARNING]
 
-  > Esta operação usa a Convenção de sinal **oposta** da @"microsoft.quantum.intrinsic.r".
+  > Esta operação utiliza a @"microsoft.quantum.intrinsic.r"convenção de sinalização **oposta** de .
 remarks: >-
   Equivalente a:
 
@@ -29,19 +29,19 @@ input:
   content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: pauli
-    summary: O operador Pauli deve ser exponenciação para formar a rotação.
+    summary: O operador Pauli deve ser exponenciado para formar a rotação.
     isPrimitive: true
     uid: Pauli
   - name: numerator
-    summary: O numerador na representação de fração dyadic do ângulo pelo qual o qubit deve ser girado.
+    summary: Numerador na representação da fração disadica do ângulo pelo qual o qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: power
-    summary: Potência de dois especificando o denominador do ângulo pelo qual o qubit deve ser girado.
+    summary: Potência de dois especificando o denominador do ângulo pelo qual o qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: qubit
-    summary: Qubit ao qual a portão deve ser aplicada.
+    summary: Qubit ao qual o portão deve ser aplicado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 10795932b7057ccf58d2219208af2750eff0e363
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dc9f0ca68e1528ee7a36ef1503785cf60c08567c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216497"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683689"

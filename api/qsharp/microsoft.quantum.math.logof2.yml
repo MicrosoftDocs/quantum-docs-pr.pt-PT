@@ -3,7 +3,7 @@ uid: microsoft.quantum.math.logof2
 name: LogOf2
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o logaritmo natural de 2.
+summary: Devolve o logarithm natural de 2.
 syntax: 'function LogOf2 () : Double'
 input:
   content: ()
@@ -11,13 +11,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Retorna um `Double` igual a $0.6931471805599453 $.
+  - summary: Devolve `Double` um valor igual a $0.6931471805599453$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 4a2bbd6adff643a5240fd280a020be076190eed1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 26efec659acda2d93921ef6789b56ff2493d4531
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232511"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683297"
