@@ -3,13 +3,7 @@ uid: microsoft.quantum.intrinsic.rx
 name: Rx
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: >-
-  Aplica uma rotação sobre o eixo $ $x por um determinado ângulo.
-
-
-  \begin{align} R_x (\theta) \mathrel{: =} e ^ {-i \theta \ sigma_x/2} = \begin{bmatrix} \cos \frac{\theta}{2} &-i\sin \frac{\theta}{2}\\\\-i\sin \frac{\theta}{2} & \cos \frac{\theta}{2} \end{bmatrix}.
-
-  \end{align}
+summary: "Aplica uma rotação sobre o eixo $x$por um determinado ângulo.\n\n\\start{align} R_x(\\theta) \\mathrel{:=} e^{-i \\theta \\sigma_x / 2} = \\start{bmatrix} \\cos \\frac{\\theta}{2} &{2} \\\\ \\\\ -i\\sin \\frac {\\theta} -i\\sin \\frac{\\theta}{2} & \\cos \\frac{\\theta}{2} \\end{bmatrix}.  \n\\fim{align}"
 remarks: >-
   Equivalente a:
 
@@ -24,11 +18,11 @@ input:
   content: '(theta : Double, qubit : Qubit)'
   types:
   - name: theta
-    summary: Ângulo sobre o qual o qubit deve ser girado.
+    summary: Ângulo sobre o qual o qubit deve ser rodado.
     isPrimitive: true
     uid: Double
   - name: qubit
-    summary: Qubit ao qual a portão deve ser aplicada.
+    summary: Qubit ao qual o portão deve ser aplicado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -40,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f34879cef60d33bbf260031c1b39572081027f2f
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7a205e787e79743cad3f40e978f459d0f42a8100
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216446"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683668"

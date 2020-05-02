@@ -3,25 +3,25 @@ uid: microsoft.quantum.math.negationl
 name: NegationL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna a negação unário de uma entrada.
+summary: Devolve a negação não ária de uma entrada.
 syntax: 'function NegationL (input : BigInt) : BigInt'
 input:
   content: '(input : BigInt)'
   types:
   - name: input
-    summary: Um valor cuja negação deve ser retornada.
+    summary: Um valor cuja negação deve ser devolvida.
     isPrimitive: true
     uid: BigInt
 output:
   content: BigInt
   types:
-  - summary: A negação unário de `input`.
+  - summary: A negação não `input`ária de .
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 40c63c0a5aeaa6c6fb0e9bc0dc1492d6e1d8574a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 89ed30d46691a593f7ac8487df78d64f8885a601
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211414"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684178"

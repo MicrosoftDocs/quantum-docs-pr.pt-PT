@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.log
 name: Log
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna o logaritmo natural (base $e $) de um número especificado.
-remarks: Consulte [System. Math. log](https://docs.microsoft.com/dotnet/api/system.math.log) para obter mais detalhes.
+summary: Devolve o logarithm natural (base $e$) de um número especificado.
+remarks: Consulte [system.math.Log](https://docs.microsoft.com/dotnet/api/system.math.log) para mais detalhes.
 syntax: 'function Log (input : Double) : Double'
 input:
   content: '(input : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: cf44c840546830d0913291fab37cc69b1591d5cc
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 69b9150083ad718036a114d7cee962f13b3650d4
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232630"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683333"

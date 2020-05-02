@@ -3,25 +3,25 @@ uid: microsoft.quantum.math.plusa
 name: PlusA
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna a soma (concatenação) de duas entradas.
+summary: Devolve a soma (concatenação) de duas inputs.
 syntax: "function PlusA (a : 'Element[], b : 'Element[]) : 'Element[]"
 input:
   content: "(a : 'Element[], b : 'Element[])"
   types:
   - name: a
-    summary: A primeira entrada $a $ a ser somada.
+    summary: A primeira entrada $a$ a resumir.
     isArray: true
     uid: "'Element"
     isLocal: true
   - name: b
-    summary: A segunda entrada $b $ a ser somada.
+    summary: A segunda entrada $b$ a resumir.
     isArray: true
     uid: "'Element"
     isLocal: true
 output:
   content: "'Element[]"
   types:
-  - summary: A soma $a + b $.
+  - summary: A soma $a + b$.
     isArray: true
     uid: "'Element"
     isLocal: true
@@ -29,9 +29,9 @@ typeParameters:
 - uid: "'Element"
   summary: O tipo de cada elemento em cada uma das duas matrizes de entrada.
 metadata:
-  ms.openlocfilehash: d37faecdcbe7e1d96f27fcaddd211989a543f1d9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: bf52166cbd0331b6c6a8c49a00bd343913344a41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211465"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684150"

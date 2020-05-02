@@ -3,7 +3,7 @@ uid: microsoft.quantum.intrinsic.reset
 name: Reset
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Considerando um único qubit, o mede e garante que ele esteja no estado | 0 ⟩, de modo que ele possa ser liberado com segurança.
+summary: Dado um único qubit, mede-o e garante que é no estado de [000' que pode ser libertado com segurança.
 syntax: 'operation Reset (target : Qubit) : Unit'
 input:
   content: '(target : Qubit)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 9c46f5d3162c8f124418b61dae7449f05f86072d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c26e69568b237c274341c092cfcb9c023cbd292c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216616"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683728"

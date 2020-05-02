@@ -4,16 +4,16 @@ name: PNormalized
 type: function
 namespace: Microsoft.Quantum.Math
 summary: >-
-  Normaliza um vetor de `Double`s no `L(p)` normal.
+  Normaliza um vetor `Double`de `L(p)` s na norma.
 
 
-  Ou seja, dada uma matriz $x $ do tipo `Double[]`, isso retorna uma matriz em que todos os elementos são divididos pelo $p $-norma $\|x\|$ _p $.
+  Isto é, dado um `Double[]`conjunto $x$ de tipo, este devolve uma matriz\|onde\|todos os elementos são divididos pelo $p$-norm $ x _p$.
 syntax: 'function PNormalized (p : Double, array : Double[]) : Double[]'
 input:
   content: '(p : Double, array : Double[])'
   types:
   - name: p
-    summary: O expoente $p $ no $p $-normal.
+    summary: O expoente $p$ no $p norma$.
     isPrimitive: true
     uid: Double
   - name: array
@@ -23,16 +23,16 @@ input:
 output:
   content: Double[]
   types:
-  - summary: A matriz $x $ normalizada pelo $p $-regular $\|x\|_p $.
+  - summary: A matriz $x$ normalizada pelo\|$p$-norm $ x\|_p$.
     isArray: true
     isPrimitive: true
     uid: Double
 seeAlso:
 - pnorm
 metadata:
-  ms.openlocfilehash: 5fd219b866b14d3d6faf58cdf4f1ce2b9fbadf9d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 68697fe159fecfeed0078f95de8d91f825125f41
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067293"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684018"

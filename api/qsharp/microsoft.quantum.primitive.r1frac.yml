@@ -3,7 +3,7 @@ uid: microsoft.quantum.primitive.r1frac
 name: R1Frac
 type: operation
 namespace: Microsoft.Quantum.Primitive
-summary: R1Frac foi preterido. Em vez disso, use @"microsoft.quantum.intrinsic.r1frac".
+summary: R1Frac foi depreciado. Por @"microsoft.quantum.intrinsic.r1frac" favor, use em vez disso.
 syntax: 'operation R1Frac (numerator : Int, power : Int, qubit : Qubit) : Unit'
 input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'
@@ -26,9 +26,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1b116647ef805eec1763d357f1ca5a4edce74328
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 6c42e59b563b0178ef411cf9045fdbb6b23e884e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74864717"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82683940"

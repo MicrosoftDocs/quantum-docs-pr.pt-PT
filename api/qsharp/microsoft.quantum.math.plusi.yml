@@ -3,29 +3,29 @@ uid: microsoft.quantum.math.plusi
 name: PlusI
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retorna a soma de duas entradas.
+summary: Devolve a soma de duas inputs.
 syntax: 'function PlusI (a : Int, b : Int) : Int'
 input:
   content: '(a : Int, b : Int)'
   types:
   - name: a
-    summary: A primeira entrada $a $ a ser somada.
+    summary: A primeira entrada $a$ a resumir.
     isPrimitive: true
     uid: Int
   - name: b
-    summary: A segunda entrada $b $ a ser somada.
+    summary: A segunda entrada $b$ a resumir.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: A soma $a + b $.
+  - summary: A soma $a + b$.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 18bcd4a8ba2b7e5dca2cb72997a842d76c0e52b7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: db75cff49b60159a805182ee91ff3d037f56a520
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211329"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684070"
