@@ -22,23 +22,23 @@ input:
     isPrimitive: true
     uid: Int
   - name: arr
-    summary: Matriz de entrada a ser dividida.
+    summary: Conjunto de entrada a ser dividido.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[][]"
   types:
-  - summary: Várias matrizes em que a primeira matriz é a primeira `nElements[0]` de `arr` e a segunda matriz são as próximas `nElements[1]` de `arr` etc. A última matriz conterá todos os elementos restantes.
+  - summary: Múltiplas matrizes onde a `nElements[0]` `arr` primeira matriz é `nElements[1]` a `arr` primeira e a segunda matriz são as próximas de etc. A última matriz conterá todos os elementos restantes.
     isArray: true
     types:
     - isArray: true
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 6e26d4d49f50c8e9ee4c18681f88272a45d2ef20
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 319147f72f0ef13a942ab5440a51f60d6f2bae1f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218095"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680887"

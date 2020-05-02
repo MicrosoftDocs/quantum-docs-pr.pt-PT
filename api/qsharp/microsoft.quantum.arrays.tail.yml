@@ -3,13 +3,13 @@ uid: microsoft.quantum.arrays.tail
 name: Tail
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Retorna o último elemento da matriz.
+summary: Devolve o último elemento da matriz.
 syntax: "function Tail (array : 'A[]) : 'A"
 input:
   content: "(array : 'A[])"
   types:
   - name: array
-    summary: Matriz da qual o último elemento é tirado. A matriz deve ter comprimento pelo menos 1.
+    summary: Conjunto do qual o último elemento é tomado. A matriz deve ter comprimento pelo menos 1.
     isArray: true
     uid: "'A"
     isLocal: true
@@ -21,11 +21,11 @@ output:
     isLocal: true
 typeParameters:
 - uid: "'A"
-  summary: O tipo dos elementos da matriz.
+  summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: 718c4357ccac0cba69250ec86bf2fe2cdd74230a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 597b24c8a7dc79fbc5fd52f5cea7cf7cb247d43f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73214202"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680771"

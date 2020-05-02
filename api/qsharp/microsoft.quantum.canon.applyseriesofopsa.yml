@@ -3,16 +3,16 @@ uid: microsoft.quantum.canon.applyseriesofopsa
 name: ApplySeriesOfOpsA
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Aplica uma lista de operações e seus destinos seqüencialmente em uma matriz. (Adjacente)
+summary: Aplica uma lista de operações e seus alvos sequencialmente numa matriz. (Adjoint)
 syntax: "operation ApplySeriesOfOpsA (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit"
 input:
   content: "(listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[])"
   types:
   - name: listOfOps
     summary: >-
-      Lista de operações, cada uma levando uma matriz não, a ser aplicada. Eles são aplicados em sequência, o índice mais baixo primeiro.
+      Lista de operações, cada uma tomando uma matriz 'T, para ser aplicada. São aplicados sequencialmente, o índice mais baixo primeiro.
 
-      Cada um deve ter um functor adjacente
+      Cada um deve ter um functor adjoint
     isArray: true
     isOperation: true
     input:
@@ -27,14 +27,14 @@ input:
     functors:
     - Adjoint
   - name: targets
-    summary: Matrizes aninhadas que descrevem os destinos da operação. Cada matriz deve conter uma lista de ints descrevendo os índices a serem usados.
+    summary: Matrizes aninhadas descrevendo os alvos da operação. Cada matriz deve conter uma lista de ints que descrevem os índices a serem usados.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Int
   - name: register
-    summary: Qubit registrar-se para ser tratado.
+    summary: Registo qubit a ser agido.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -48,9 +48,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applyoprepeatedlyover
 metadata:
-  ms.openlocfilehash: 0d48ff75f99ea7fd3b7c65790ef6c5d184532f82
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 0dc453358d10f8b35d0a5885ab451930dc19e6a9
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74866398"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680397"

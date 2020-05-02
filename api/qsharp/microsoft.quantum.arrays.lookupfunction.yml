@@ -3,21 +3,21 @@ uid: microsoft.quantum.arrays.lookupfunction
 name: LookupFunction
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Dada uma matriz, retorna uma função que retorna elementos dessa matriz.
-remarks: Essa função é útil principalmente para interoperar com funções e operações que usam `Int -> 'T` funções como seus argumentos. Isso é comum, por exemplo, na biblioteca de representação do gerador, em que as funções são usadas para evitar a necessidade de registrar uma matriz inteira na memória.
+summary: Dada uma matriz, devolve uma função que devolve elementos dessa matriz.
+remarks: Esta função é principalmente útil para interoperação com funções e operações que assumem `Int -> 'T` funções como seus argumentos. Isto é comum, por exemplo, na biblioteca de representação do gerador, onde as funções são usadas para evitar a necessidade de gravar toda uma matriz na memória.
 syntax: "function LookupFunction (array : 'T[]) : (Int -> 'T)"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: A matriz a ser representada como uma função de pesquisa.
+    summary: A matriz a ser representada como uma função de procuração.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: (Int -> 'T)
   types:
-  - summary: Uma função `f` tal `f(idx) == f[idx]`.
+  - summary: Uma `f` função `f(idx) == f[idx]`tal que.
     isFunction: true
     input:
       types:
@@ -29,11 +29,11 @@ output:
         isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo dos elementos da matriz que está sendo representada como uma função de pesquisa.
+  summary: O tipo de elementos da matriz sendo representado como uma função de procuração.
 metadata:
-  ms.openlocfilehash: b4f509de7137377465f1e76e59a04abfd9a22fd1
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 4d911a3952c273e050c75e4d785e6812d54f5fa1
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218112"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680960"

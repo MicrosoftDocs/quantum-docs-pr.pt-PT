@@ -4,10 +4,10 @@ name: CX
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica o portão X (CX) controlado a um par de qubits.
+  Aplica o portão controlado-X (CX) a um par de qubits.
 
 
-  $ $ \begin{align} 1 & 0 & 0 & 0 \\\\ 0 & 1 & 0 & 0 \\\\ 0 & 0 & 0 & 1 \\\\ 0 & 0 & 1 & 0 \end{align} , $ $, em que linhas e colunas são organizadas como no guia de conceitos do Quantum.
+  $$ \start{align} 1 & 0 \\ \\ & 0 & \\ \\ 0 & 1 & \\ \\ 0 & & 0 & 0 & 1 0 & 0 & & 1 & 0 \end{align}, onde as linhas e colunas são organizadas como no guia de conceitos quânticos.
 remarks: >-
   Equivalente a:
 
@@ -19,7 +19,7 @@ remarks: >-
   ```
 
 
-  e para:
+  e:
 
 
   ```qsharp
@@ -32,11 +32,11 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: Controle qubit para o portão CX.
+    summary: Qubit de controlo para o portão CX.
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Qubit de destino para o portão CX.
+    summary: Qubit de alvo para o portão CX.
     isPrimitive: true
     uid: Qubit
 output:
@@ -48,9 +48,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 26cbc8dc2f22cdf8583d453b84e53b0151619f5d
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d5a987001de638b9415a1d5ede1dc88aee7edf0f
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73067871"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680302"

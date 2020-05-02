@@ -4,10 +4,10 @@ name: Xor
 type: function
 namespace: Microsoft.Quantum.Bitwise
 summary: >-
-  Retorna o bit-a-ou (XOR) exclusivo de dois inteiros.
+  Devolve o bitwise exclusive-OR (XOR) de dois inteiros.
 
-  Isso executa a mesma computação que o operador de `^^^` interno.
-remarks: Consulte o [ C# operador ^](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) para obter mais detalhes.
+  Isto executa o mesmo cálculo `^^^` que o operador incorporado.
+remarks: Consulte o [Operador C# ^](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/xor-operator) para obter mais detalhes.
 examples: >-
   ```qsharp
 
@@ -34,9 +34,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 5521b9fa4838261e44554de39704c0adbb45f8ed
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8b7da5a00592a071617d775d71fb7f07931cf299
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213845"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680566"

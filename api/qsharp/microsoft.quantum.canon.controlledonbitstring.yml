@@ -7,22 +7,22 @@ summary: >-
   Devolve uma operação unitária que aplica um oráculo no registo-alvo se o estado do registo de controlo corresponder a uma máscara de bit especificada.
 
 
-  A saída desta função é uma operação que pode ser representada por uma transformação unitária $U$ de tal forma que \start{align} U \ket{b_0 b_1 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes \begin {cases} V \ket{\psi} & \textrm{if} (b_0 b_1 \cdots b_{n - 1}) = \texttt{bits} \\\\ \{\psi} & \textrm{otherwise} \end{cases}, \end{align} onde $V$ é uma transformação unitária que representa a ação da operação `oracle`.
+  A saída desta função é uma operação que pode ser representada por uma transformação unitária $U$ de tal forma que \start{align} U \ket{b_1 b_0 \cdots b_{n - 1}} \ket{\psi} = \ket{b_0 b_1 \cdots b_{n-1}} \otimes \begin {{cases} \\ \\ V \ket {\psi} & \textrm{se} (b_0 b_1 \cdots b_{n - 1}) `oracle` = \texttt{bits} \ket{\psi} & \textrm{otherwise} \end{cases}, \end{align} onde $V$ é uma transformação unitária que representa a ação da operação.
 remarks: >-
-  A duração da `bits` e `controlRegister` deve ser igual.
+  O comprimento `bits` `controlRegister` e deve ser igual.
 
 
-  Dada uma `bits` de matriz booleana e uma operação unitária `oracle`, a saída desta função é uma operação que executa os seguintes passos:
+  Dada uma `bits` matriz Boolean `oracle`e uma operação unitária, a saída desta função é uma operação que executa os seguintes passos:
 
 
-  * aplicar uma operação `X` a cada qubit do registo de controlo que corresponda a `false` elemento da `bits`;
+  * aplicar `X` uma operação a cada qubit do `false` registo de `bits`controlo que corresponda a elemento do;
 
-  * aplicar `Controlled oracle` aos registos de controlo e de destino;
+  * aplicar-se `Controlled oracle` aos registos de controlo e de destino;
 
-  * aplicar uma operação `X` a cada qubit do registo de controlo que corresponda a `false` elemento da `bits` voltar a devolver o registo de controlo ao estado original.
+  * aplicar `X` uma operação a cada qubit do `false` registo de `bits` controlo que corresponda ao elemento do novo para devolver o registo de controlo ao estado original.
 
 
-  A saída do functor `Controlled` é um caso especial de `ControlledOnBitString` em que `bits` é igual a `[true, ..., true]`.
+  A saída `Controlled` do functor é `ControlledOnBitString` um `bits` caso `[true, ..., true]`especial de onde é igual a .
 examples: >-
   Os seguintes códigos são equivalentes:
 
@@ -48,7 +48,7 @@ examples: >-
   ```
 
 
-  O seguinte código prepara um estado $\frac{1}{2}(\ket{00} - \ket{01} + \ket{10} + \ket{11})$:
+  O seguinte código prepara um{1}{2}estado{00} $\frac{01} (\ket - \ket + \ket{10} + \ket{11})ket )$:
 
 
   ```qsharp
@@ -85,7 +85,7 @@ input:
 output:
   content: ((Qubit[], 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Uma operação unitária que se aplica `oracle` no registo-alvo se o estado do registo de controlo corresponder à máscara de bit `bits`.
+  - summary: Uma operação unitária `oracle` que se aplica no registo-alvo se o `bits`estado do registo de controlo corresponder à máscara de bit .
     isOperation: true
     input:
       types:
@@ -102,9 +102,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: e6f7f8980b2b9b8305df12da41e30fc563e54ad1
-  ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+  ms.openlocfilehash: d5a6223c130150f42f83044aec19b1d5a875bb1d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 02/28/2020
-  ms.locfileid: "77906530"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680348"

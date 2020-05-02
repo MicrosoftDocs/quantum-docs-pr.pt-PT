@@ -3,30 +3,30 @@ uid: microsoft.quantum.arrays.most
 name: Most
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Cria uma matriz que é igual a uma matriz de entrada, exceto que o último elemento da matriz é Descartado.
+summary: Cria uma matriz que é igual a uma matriz de entrada, exceto que o último elemento de matriz é largado.
 syntax: "function Most (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: Uma matriz cujos primeiros aos últimos elementos são formar a matriz de saída.
+    summary: Uma matriz cujos elementos de primeiro a último são para formar a matriz de saída.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma matriz que contém os elementos `array[0..Length(array) - 2]`.
+  - summary: Uma matriz que `array[0..Length(array) - 2]`contém os elementos.
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo dos elementos da matriz.
+  summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: 8b7d324bac18c03692761ae3fb22669b240f3704
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 352e0eb9931b47e14f549828aa2a1c34af8ad901
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218078"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680915"

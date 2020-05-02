@@ -3,9 +3,9 @@ uid: microsoft.quantum.bitwise.rightshiftedl
 name: RightShiftedL
 type: function
 namespace: Microsoft.Quantum.Bitwise
-summary: Desloca a representação bit a bit de um número à direita por um determinado número de bits.
+summary: Muda a representação bitwise de um número direito por um dado número de bits.
 remarks: >-
-  Os itens a seguir são equivalentes:
+  Os seguintes são equivalentes:
 
 
   ```Q#
@@ -20,23 +20,23 @@ input:
   content: '(value : BigInt, amount : Int)'
   types:
   - name: value
-    summary: O número cuja representação em bits bit a lado deve ser deslocada para a direita (menos significativa).
+    summary: O número cuja representação bitwise deve ser deslocada para a direita (menos significativa).
     isPrimitive: true
     uid: BigInt
   - name: amount
-    summary: O número de bits pelos quais `value` deve ser deslocado para a direita.
+    summary: O número de bits por que `value` deve ser deslocado para a direita.
     isPrimitive: true
     uid: Int
 output:
   content: BigInt
   types:
-  - summary: O valor de `value`, deslocado para a direita por `amount` bits.
+  - summary: O valor `value`de. `amount`
     isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 4c370d859eefdcff5fc844cf55e17adad7b5df86
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: c6a61d838141e86d831bb341a1e077927e580dcc
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213862"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680592"

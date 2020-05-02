@@ -3,14 +3,14 @@ uid: microsoft.quantum.arrays.mapped
 name: Mapped
 type: function
 namespace: Microsoft.Quantum.Arrays
-summary: Dada uma matriz e uma função que é definida para os elementos da matriz, retorna uma nova matriz que consiste nas imagens da matriz original sob a função.
-remarks: "A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma função `mapper: 'T -> 'U` podemos mapear os elementos da matriz e produzir uma nova matriz do tipo `'U[]`."
+summary: Dada uma matriz e uma função definida para os elementos da matriz, devolve uma nova matriz que consiste nas imagens da matriz original sob a função.
+remarks: "A função é definida para tipos genéricos, ou `'T[]` seja, `mapper: 'T -> 'U` sempre que temos uma matriz e uma `'U[]`função podemos mapear os elementos da matriz e produzir uma nova gama de tipos."
 syntax: "function Mapped (mapper : ('T -> 'U), array : 'T[]) : 'U[]"
 input:
   content: "(mapper : ('T -> 'U), array : 'T[])"
   types:
   - name: mapper
-    summary: Uma função de `'T` para `'U` que é usada para mapear elementos.
+    summary: Uma função `'U` de a partir daí `'T` é usada para mapear elementos.
     isFunction: true
     input:
       types:
@@ -21,26 +21,26 @@ input:
       - uid: "'U"
         isLocal: true
   - name: array
-    summary: Uma matriz de elementos em `'T`.
+    summary: Uma série de `'T`elementos sobre .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'U[]"
   types:
-  - summary: Uma matriz `'U[]` de elementos que são mapeados pela função `mapper`.
+  - summary: Uma `'U[]` variedade de elementos que são `mapper` mapeados pela função.
     isArray: true
     uid: "'U"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo de elementos de `array`.
+  summary: O tipo `array` de elementos.
 - uid: "'U"
-  summary: O tipo de resultado da função `mapper`.
+  summary: O tipo de `mapper` resultado da função.
 metadata:
-  ms.openlocfilehash: 3e9262d3d2b294ccfafac24b2b080b124c9e319c
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 877899dad82374281090e189c727c2a662f12b7b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218129"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680954"

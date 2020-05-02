@@ -7,11 +7,11 @@ summary: >-
   Aplica uma determinada operação com um atraso.
 
 
-  Dada uma operação e uma entrada para essa operação, o aplica a operação quando uma entrada adicional é fornecida.
+  Dada uma operação e uma entrada nessa operação, aplica-se a operação assim que for fornecida uma entrada adicional.
 
-  Em particular, a expressão `Delay(op, arg, _)` é uma operação que se aplica `op` ao `arg` quando chamado.
+  Em particular, `Delay(op, arg, _)` a expressão é `op` uma `arg` operação que se aplica a quando chamada.
 
-  A expressão `Delay(op,arg,_)` permite atrasar a aplicação de `op`.
+  A `Delay(op,arg,_)` expressão permite atrasar `op`a aplicação de .
 syntax: "operation Delay (op : ('T => 'U), arg : 'T, aux : Unit) : 'U"
 input:
   content: "(op : ('T => 'U), arg : 'T, aux : Unit)"
@@ -28,11 +28,11 @@ input:
       - uid: "'U"
         isLocal: true
   - name: arg
-    summary: A entrada à qual a operação é aplicada.
+    summary: A entrada a que a operação é aplicada.
     uid: "'T"
     isLocal: true
   - name: aux
-    summary: Argumento usado para atrasar a aplicação de operação usando o aplicativo parcial.
+    summary: Argumento usado para atrasar a aplicação de operação utilizando aplicação parcial.
     isPrimitive: true
     uid: Unit
 output:
@@ -42,18 +42,18 @@ output:
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação a ser atrasada.
+  summary: O tipo de entrada da operação deve ser adiado.
 - uid: "'U"
-  summary: O tipo de retorno da operação a ser atrasada.
+  summary: O tipo de devolução da operação deve ser adiado.
 seeAlso:
 - microsoft.quantum.canon.delayc
 - microsoft.quantum.canon.delaya
 - microsoft.quantum.canon.delayca
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: 1759670182cff1153859c62e9c95d1be1f998674
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d6e9c821bdb21714ee914bc908f6f93222b5c3b6
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226119"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82680204"
