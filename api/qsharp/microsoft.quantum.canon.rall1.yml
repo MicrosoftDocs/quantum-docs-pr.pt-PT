@@ -4,20 +4,20 @@ name: RAll1
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Executa uma operação de alternância de fase.
+  Executa uma operação de mudança de fase.
 
 
-  $R = \boldone-(1-e ^ {i \phi}) \ket{1\cdots 1} \bra{1\cdots 1} $.
+  $R=\boldone-(1-e^{i \phi})\ket{1\cdots 1}\bra{1\cdots 1}$.
 syntax: 'operation RAll1 (phase : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(phase : Double, qubits : Qubit[])'
   types:
   - name: phase
-    summary: A fase $ \phi $ aplicada ao estado $ \ket{1\cdots 1} \bra{1\cdots 1} $.
+    summary: A fase $\phi$ aplicada ao estado $\ket{1\cdots 1}\bra{1\cdots 1}$.
     isPrimitive: true
     uid: Double
   - name: qubits
-    summary: O registro cujo estado deve ser girado por $R $.
+    summary: O registo cujo estado deve ser rodado por $R$.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: d7539b99b352806296e696ce94e78a33dc18f49a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8dbfc158af20385fa4a38279e6f89a84a68ec1e0
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73222600"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678491"

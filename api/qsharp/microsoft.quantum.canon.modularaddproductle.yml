@@ -3,7 +3,7 @@ uid: microsoft.quantum.canon.modularaddproductle
 name: ModularAddProductLE
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: ModularAddProductLE foi preterido. Em vez disso, use @"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger".
+summary: ModularAddProductLE foi depreciado. Por @"microsoft.quantum.arithmetic.multiplyandaddbymodularinteger" favor, use em vez disso.
 syntax: 'operation ModularAddProductLE (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, summand : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1ab32d441f5dd162992cfbf681b02166b6262520
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: c46815d604095cb08438b4abbc5be6438c23b234
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74859810"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82678955"
