@@ -3,9 +3,9 @@ uid: microsoft.quantum.canon.applytoeach
 name: ApplyToEach
 type: operation
 namespace: Microsoft.Quantum.Canon
-summary: Aplica uma operação de qubit único a cada elemento em um registro.
+summary: Aplica uma operação de qubit único a cada elemento num registo.
 examples: >-
-  Preparar um estado de três qubit $ \ket{+} $:
+  Prepare um estado de três qubit $\ket{+}$:
 
 
   ```qsharp
@@ -20,7 +20,7 @@ input:
   content: "(singleElementOperation : ('T => Unit), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: Operação a ser aplicada a cada qubit.
+    summary: Operação para aplicar a cada qubit.
     isOperation: true
     input:
       types:
@@ -31,7 +31,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: register
-    summary: Matriz de qubits na qual aplicar a operação especificada.
+    summary: Conjunto de qubits sobre os quais aplicar a operação dada.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -42,15 +42,15 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O destino no qual a operação atua.
+  summary: O alvo em que a operação age.
 seeAlso:
 - microsoft.quantum.canon.applytoeachc
 - microsoft.quantum.canon.applytoeacha
 - microsoft.quantum.canon.applytoeachca
 metadata:
-  ms.openlocfilehash: a8f58bc8f3bf1d460a5b1f4ffbeba95185d09a1a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8d04e012f9ee1837b233a7127361027a5bfe7ccd
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73210537"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82670818"
