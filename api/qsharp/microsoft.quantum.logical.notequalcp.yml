@@ -3,7 +3,7 @@ uid: microsoft.quantum.logical.notequalcp
 name: NotEqualCP
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna true se e somente se duas entradas não forem iguais.
+summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 syntax: 'function NotEqualCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Bool'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
@@ -12,18 +12,18 @@ input:
     summary: O primeiro valor a ser comparado.
     uid: microsoft.quantum.math.complexpolar
   - name: b
-    summary: O segundo valor a ser comparado.
+    summary: O segundo valor a comparar.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Bool
   types:
-  - summary: '`true` se `a` não for igual a `b`.'
+  - summary: '`true`se e `a` apenas se `b`não for igual a .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 6f1ad17bd977e39ed6c0f6648e6049424893f657
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: ecedd873481c655c9c799c55192d01edc19a1773
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235316"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684546"

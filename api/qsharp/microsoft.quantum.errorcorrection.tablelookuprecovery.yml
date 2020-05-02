@@ -3,13 +3,13 @@ uid: microsoft.quantum.errorcorrection.tablelookuprecovery
 name: TableLookupRecovery
 type: function
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Para uma determinada tabela de operações de Pauli em um determinado registro de qubits, essa função retorna um objeto do tipo `RecoveryFn` que contém todas as informações necessárias para executar uma decodificação de tabela de pesquisa em relação à matriz de operações de Pauli especificada.
+summary: Para uma determinada tabela de operações da Pauli num determinado registo `RecoveryFn` de qubits, esta função devolve um objeto de tipo que contém todas as informações necessárias para realizar uma descodificação de mesa-lookup no que diz respeito ao conjunto determinado de operações da Pauli.
 syntax: 'function TableLookupRecovery (table : Pauli[][]) : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: '(table : Pauli[][])'
   types:
   - name: table
-    summary: Tabela de operações Pauli que operam em um determinado registro do qubit
+    summary: Tabela de operações da Pauli que operam num determinado registo qubit
     isArray: true
     types:
     - isArray: true
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Um objeto do tipo `RecoveryFn`, ou seja, um mapa `Syndrome -> Pauli[]` que associa a uma determinada matriz da síndrome uma operação de correção Pauli correspondente.
+  - summary: Um objeto `RecoveryFn`de tipo, ou seja, um mapa `Syndrome -> Pauli[]` que associa a uma determinada matriz de síndrome uma operação de correção pauli correspondente.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 metadata:
-  ms.openlocfilehash: cd84c24f5a50574a9bc2ab189832ada6516f12a8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 20400c4afb1819225192ea695e4cc525e0b2f22b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232222"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684815"

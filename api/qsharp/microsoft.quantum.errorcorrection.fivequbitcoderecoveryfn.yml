@@ -3,11 +3,11 @@ uid: microsoft.quantum.errorcorrection.fivequbitcoderecoveryfn
 name: FiveQubitCodeRecoveryFn
 type: function
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Retorna a função que mapeia as medições de erro de síndrome para os operadores de Pauli de correção de erros apropriados por pesquisa de tabela para o código Quantum ⟦ 5, 1, 3 ⟧.
+summary: Função de retorna que mapeia as medições da síndrome do erro aos operadores pauli adequados corrigindo erros por procura de tabela para o código quântico de 5, 1, 30.
 remarks: >-
-  Ao iterar em todos os erros de peso de $1 $, obtemos um total de US $3 \ vezes 5 = 15 $ possíveis síndromes não triviais.
+  Ao iterar sobre todos os erros de peso $1$1$, obtemos um total de $3\times 5=15$ possíveis síndromes não triviais.
 
-  Junto com a identidade, uma tabela de erros e a síndrome correspondente são criadas. Para o código de 5 qubit, essa tabela é fornecida por: $X\_1: (0, 0, 0, 1); X\_2: (1, 0, 0, 0); X\_3: (1, 1, 0, 0); X\_4: (0, 1, 1, 0); X\_5: (0, 0, 1, 1) $, $Z\_1: (1, 0, 1, 0); Z\_2: (0, 1, 0, 1); Z\_3: (0, 0, 1, 0); Z\_4: (1, 0, 0, 1); Z\_5: (0, 1, 0, 0) $ com $Y _i $ obtido adicionando as síndromes $X _i $ e $Z $ _i $. Observe que a ordem na recuperação de pesquisa de tabela é fornecida pela conversão de bitvectors em inteiros (usando little endian).
+  Juntamente com a identidade, constrói-se uma tabela de erro e síndrome correspondente. Para o código de 5 qubits\_esta tabela é dada por: $X 1: (0,0,0,1); X\_2: (1,0,0,0); X\_3: (1,1,0,0); X\_4: (0,1,1,0); X\_5: (0,0,1,1)$, $Z\_1: (1,0,1,0); Z\_2: (0,1,0,1); Z\_3: (0,0,1,0); Z\_4: (1,0,0,1); Z\_5: (0,1,0,0)$ com $Y_i$ obtidos adicionando as síndromes $X_i$ e $Z_i$. Note que a encomenda na recuperação de procura de mesa é dada através da conversão dos bitvectors em inteiros (usando pouco endiano).
 syntax: 'function FiveQubitCodeRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()
@@ -15,14 +15,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Função do tipo `RecoveryFn` que usa uma medida de síndrome `Result[]` e retorna os operadores de `Pauli[]` que corrige o erro detectado.
+  - summary: Função `RecoveryFn` do tipo que `Result[]` faz `Pauli[]` uma medição da síndrome e devolve os operadores que corrigem o erro detetado.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - recoveryfn
 metadata:
-  ms.openlocfilehash: efeabbeb6595d1440882eef73f152610a3ac74c5
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8de748ddaf446cfcf7b8694079bd84bfc171211c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73211635"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684891"

@@ -3,9 +3,9 @@ uid: microsoft.quantum.logical.lessthanorequali
 name: LessThanOrEqualI
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retornará true se e somente se um número for menor ou igual a outro número.
+summary: Retorna verdadeiro se e apenas se um número for inferior ou igual a outro número.
 remarks: >-
-  Os itens a seguir são equivalentes:
+  Os seguintes são equivalentes:
 
 
   ```Q#
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: b
-    summary: O segundo valor a ser comparado.
+    summary: O segundo valor a comparar.
     isPrimitive: true
     uid: Int
 output:
   content: Bool
   types:
-  - summary: '`true` se `a` for menor ou igual a `b`.'
+  - summary: '`true`se e `a` apenas se for `b`inferior ou igual a .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 9c9b663eab0c88024f05bd9da245a3c49c22ac8a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: f287c5cd0c43ace8fe0397bf237073b514b4b964
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235503"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684654"

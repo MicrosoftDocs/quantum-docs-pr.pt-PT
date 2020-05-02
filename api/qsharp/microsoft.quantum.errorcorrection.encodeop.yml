@@ -4,15 +4,15 @@ name: EncodeOp
 type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
 summary: >-
-  Representa uma operação que codifica um registro físico em um registro lógico, usando o qubits transitório fornecido.
+  Representa uma operação que codifica um registo físico num registo lógico, utilizando os qubits de risco fornecidos.
 
 
-  O primeiro argumento é usado para ser o registro físico que será codificado, enquanto o segundo argumento é utilizado para ser o registro transitório que será usado.
+  O primeiro argumento é tomado como o registo físico que será codificado, enquanto o segundo argumento é tomado como o registo de riscos que será usado.
 syntax: newtype EncodeOp = ((Qubit[], Qubit[]) => Microsoft.Quantum.ErrorCorrection.LogicalRegister);
 metadata:
-  ms.openlocfilehash: c078fe4b308d0d2aea7d5046b399fb31191d9ed7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 610b9de9ccf236855c8669ac7df41fde6c297533
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231729"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684967"

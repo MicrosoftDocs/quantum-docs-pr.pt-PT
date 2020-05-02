@@ -3,31 +3,31 @@ uid: microsoft.quantum.measurement.measurewithscratch
 name: MeasureWithScratch
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Mede o operador Pauli fornecido usando um qubit de rascunho explícito para executar a medição.
+summary: Mede o operador Pauli dado utilizando um qubit de risco explícito para efetuar a medição.
 syntax: 'operation MeasureWithScratch (pauli : Pauli[], target : Qubit[]) : Result'
 input:
   content: '(pauli : Pauli[], target : Qubit[])'
   types:
   - name: pauli
-    summary: Um operador qubit Pauli especificado como uma matriz de operadores de Pauli de qubit único.
+    summary: Um operador pauli multiqubit especificado como um conjunto de operadores pauli de qubit único.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: target
-    summary: Qubit o registro a ser medido.
+    summary: Registo qubit a medir.
     isArray: true
     isPrimitive: true
     uid: Qubit
 output:
   content: Result
   types:
-  - summary: O resultado da medição do operador Pauli fornecido no registro de `target`.
+  - summary: O resultado da medição do operador `target` Pauli dada no registo.
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 4b302c21dac11fbf33138555371ded2c7f43a409
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1ef0f8d0c9d52c9ec6fe6976dc10733930c31f6e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231355"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685171"

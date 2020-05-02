@@ -3,14 +3,14 @@ uid: microsoft.quantum.errorcorrection.syndromemeasop
 name: SyndromeMeasOp
 type: newtype
 namespace: Microsoft.Quantum.ErrorCorrection
-summary: Representa uma operação que é usada para medir a síndrome de um bloco de código com correção de erros.
+summary: Representa uma operação que é usada para medir a síndrome de um bloco de código de correção de erros.
 remarks: >-
-  A `(LogicalRegister => Syndrome)` de assinatura representa uma operação que atua em conjunto no qubits em `LogicalRegister` e auxiliar qubits seguido por uma medida do auxiliar qubits para extrair um valor de `Syndrome` que representa a `Result[]` dessas medidas.
+  A `(LogicalRegister => Syndrome)` assinatura representa uma operação que atua conjuntamente `LogicalRegister` sobre os qubits e alguns qubits auxiliários `Syndrome` seguidos de `Result[]` uma medição dos qubits auxiliários para extrair um valor que represente o destas medições.
 
 
   ### <a name="examples"></a>Exemplos
 
-  Meça os síndromes do código de inversão de bits $S = \langle ZZI, IZZ \rangle $ usando o rascunho qubits em uma maneira não tolerante a falhas:
+  Meça as síndromes para o código de flip bit $S = \langle ZZI, IZZ \rangle$ utilizando qubits de risco de forma tolerante sem culpa:
 
 
   ```qsharp
@@ -24,9 +24,9 @@ seeAlso:
 - logicalregister
 - syndrome
 metadata:
-  ms.openlocfilehash: 75f0fee569475e887b97d9969c9e92285809f1cb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: aa324e8e149ba9418082145ed982236c473c1a4d
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232239"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684817"

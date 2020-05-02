@@ -3,25 +3,25 @@ uid: microsoft.quantum.measurement.measurepaulis
 name: MeasurePaulis
 type: operation
 namespace: Microsoft.Quantum.Measurement
-summary: Dada uma matriz de operadores qubit Pauli, mede cada um deles usando um gadget de medida especificado e, em seguida, retorna a matriz de resultados.
+summary: Dado um conjunto de operadores pauli multiqubit, mede cada um usando um gadget de medição especificado e, em seguida, devolve a matriz de resultados.
 syntax: 'operation MeasurePaulis (paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result)) : Result[]'
 input:
   content: '(paulis : Pauli[][], target : Qubit[], gadget : ((Pauli[], Qubit[]) => Result))'
   types:
   - name: paulis
-    summary: Matriz de operadores qubit Pauli para medir.
+    summary: Conjunto de operadores pauli multiqubit para medir.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
   - name: target
-    summary: Registre-se para medir os operadores fornecidos.
+    summary: Registe-se no qual meça os operadores dado.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: gadget
-    summary: Operação que executa a medição de um determinado operador qubit.
+    summary: Funcionamento que efetue a medição de um determinado operador multiqubit.
     isOperation: true
     input:
       types:
@@ -38,14 +38,14 @@ input:
 output:
   content: Result[]
   types:
-  - summary: A matriz de resultados obtidos na medição de cada elemento de `paulis` em `target`.
+  - summary: A matriz de resultados obtidos `paulis` `target`a partir da medição de cada elemento de .
     isArray: true
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 97ad0beb222a6a6d11394499e0039c405a3be9e8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: de1f100a19cda847cfb253fe1dfa01079b9ba676
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231406"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685186"

@@ -3,7 +3,7 @@ uid: microsoft.quantum.logical.notequalc
 name: NotEqualC
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna true se e somente se duas entradas não forem iguais.
+summary: Retorna verdadeiro se e só se duas inputs não forem iguais.
 syntax: 'function NotEqualC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Bool'
 input:
   content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
@@ -12,18 +12,18 @@ input:
     summary: O primeiro valor a ser comparado.
     uid: microsoft.quantum.math.complex
   - name: b
-    summary: O segundo valor a ser comparado.
+    summary: O segundo valor a comparar.
     uid: microsoft.quantum.math.complex
 output:
   content: Bool
   types:
-  - summary: '`true` se `a` não for igual a `b`.'
+  - summary: '`true`se e `a` apenas se `b`não for igual a .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: eb4032ba6ac9beab677fbe20621856a5d6928ceb
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1047a12a676440e93f736df7d8220c23f3ac0a0c
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73235367"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82684567"
