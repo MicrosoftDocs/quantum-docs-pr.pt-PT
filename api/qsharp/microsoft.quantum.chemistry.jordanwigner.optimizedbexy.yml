@@ -3,21 +3,21 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedbexy
 name: OptimizedBEXY
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Um unitário $U $ que aplica a cadeia de caracteres Pauli em $ (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 $ em qubits $0.. p $ conditioned em um índice $z na\{0, 1\}$ e $p $. Ou seja, $ $ \begin{align} U\ket {z} \ ket {p} \ ket {\ psi} = \ket{z}\ket{p} (X ^ {z + 1}\_pY ^ {z}\_p) Z\_{p-1}... Z_0 \ket{\psi} \end{align} $ $
+summary: Um $U unitário que aplica a corda Pauli em $(X^{z+1}\_pY^{z}\_p)Z\_{p-1}... Z_0$ em qubits $0.p$ condicionado saqueado num índice $z\em\{0,1\}$ e $p$. Ou seja, $$ \begin{align} U\ket{z}\ket{p}\ket{\psi} = \ket{z}{{p}(X^{z+1}\_\_pY^{z} p)Z\_{p-1}... Z_0\ket{\psi} \end{align} $$
 syntax: 'operation OptimizedBEXY (pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[]) : Unit'
-references: '- Codificação eletrônica de Spectra em circuitos Quantum com complexidade T linear Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru fosco, Austin Fowler, Hartmut Neven https://arxiv.org/abs/1805.03662'
+references: '- Codificação de Espectros Eletrônicos em Circuitos Quânticos com Complexidade Linear T Ryan Babbush, Craig Gidney, Dominic W. Berry, Nathan Wiebe, Jarrod McClean, Alexandru Paler, Austin Fowler, Hartmut Nevenhttps://arxiv.org/abs/1805.03662'
 input:
   content: '(pauliBasis : Qubit, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian, targetRegister : Qubit[])'
   types:
   - name: pauliBasis
-    summary: Quando esse qubit está no estado $ \ket{0}$, $X $ é aplicado. Quando está no estado $ \ket{1}$, $Y $ é aplicado.
+    summary: Quando este qubit está no{0}estado $\ket $, $X$ é aplicado. Quando está no estado{1}$\ket $, $Y$ é aplicado.
     isPrimitive: true
     uid: Qubit
   - name: indexRegister
-    summary: O estado $ \ket{p} $ deste registro determina o qubit no qual $X $ ou $Y $ é aplicado.
+    summary: O estado $\ket{p}$ deste registo determina o qubit em que $X$ ou $Y$ é aplicado.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: targetRegister
-    summary: Registro de qubits em que os operadores Pauli são aplicados.
+    summary: Registo de qubits em que são aplicados os operadores Pauli.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e0ac3f2f050ed584053f7da7a310f1855e992141
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 2208efefe094c472d4f179e3a75dae721c4ff211
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228465"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665305"

@@ -3,22 +3,22 @@ uid: microsoft.quantum.chemistry.jordanwigner.optimizedqubitizationoracle
 name: OptimizedQubitizationOracle
 type: function
 namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Retorna a operação Qubitization otimizada para T-Count e os parâmetros necessários para executá-la.
+summary: Devolve a operação de quantificação otimizada da contagem T e os parâmetros necessários para executá-lo.
 syntax: 'function OptimizedQubitizationOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, targetError : Double) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, targetError : Double)'
   types:
   - name: qSharpData
-    summary: Hamiltonian descrito por `JordanWignerEncodingData` formato.
+    summary: Hamiltonian descrito `JordanWignerEncodingData` pelo formato.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: targetError
-    summary: Erro da etapa de preparação do estado auxiliar.
+    summary: Erro do passo de preparação do Estado auxilo.
     isPrimitive: true
     uid: Double
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Uma tupla em que: `Int` é o número de qubits alocados, `Double` é a norma de coeficientes de Hamiltonian e a operação é a Walk do Quantum criada pelo Qubitization.'
+  - summary: 'Uma tuple `Int` onde: é o número de `Double` qubits atribuídos, é a norma única dos coeficientes hamiltonianos, e a operação é a caminhada quântica criada pela Qubitização.'
     types:
     - isPrimitive: true
       uid: Int
@@ -39,9 +39,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: 541d4f2196bc9ba06d02b83c500d539932b62463
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: b6dff5ce49e6f0d106df31040c2e539fc1a24029
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73231899"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82665107"
