@@ -3,8 +3,8 @@ uid: microsoft.quantum.convert.doubleasstringwithformat
 name: DoubleAsStringWithFormat
 type: function
 namespace: Microsoft.Quantum.Convert
-summary: Converte um determinado número de ponto flutuante de precisão dupla em uma representação de cadeia de caracteres equivalente, usando o formato fornecido.
-remarks: Consulte [ C# Double. ToString](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_) para obter mais detalhes.
+summary: Converte um dado número de ponto flutuante de dupla precisão para uma representação de corda equivalente, utilizando o formato dado.
+remarks: Consulte [C# Double.ToString](https://docs.microsoft.com/dotnet/api/system.double.tostring?view=netframework-4.7.1#System_Double_ToString_System_String_) para mais detalhes.
 syntax: 'function DoubleAsStringWithFormat (a : Double, fmt : String) : String'
 input:
   content: '(a : Double, fmt : String)'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: 77ee195da86e00c017c7eca184a00d7fdf31f592
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7e1f1df7f43b2595345594dbfbddf7734f1cb709
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233684"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82659941"

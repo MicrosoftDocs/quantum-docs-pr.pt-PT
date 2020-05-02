@@ -7,8 +7,8 @@ summary: >-
   Chama uma função com uma determinada entrada.
 
 
-  Dada uma função e uma entrada para essa função, o chama a função e retorna sua saída.
-remarks: Essa operação é útil principalmente para forçar a chamada de uma função em um local específico dentro de uma operação ou para chamar uma função em que uma operação é esperada.
+  Dada uma função e uma entrada para essa função, liga para a função e devolve a sua saída.
+remarks: Esta operação é principalmente útil para forçar uma função a ser chamada num local específico dentro de uma operação, ou para chamar uma função onde se espera uma operação.
 syntax: "operation Call (fn : ('Input -> 'Output), input : 'Input) : 'Output"
 input:
   content: "(fn : ('Input -> 'Output), input : 'Input)"
@@ -31,13 +31,13 @@ input:
 output:
   content: "'Output"
   types:
-  - summary: O resultado da chamada de `fn`.
+  - summary: O resultado `fn`da chamada.
     uid: "'Output"
     isLocal: true
 metadata:
-  ms.openlocfilehash: a2cbb56ce70dbe3cbec0fbddffb5155a17704b84
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 407f1b1e3caf0740cca2eaae479dffdaf57fa614
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219336"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82660515"
