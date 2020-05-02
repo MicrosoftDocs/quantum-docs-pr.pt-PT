@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.math.signd
 name: SignD
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: A assinatura foi preterida. Em vez disso, use @"microsoft.quantum.math.signd".
+summary: O signd foi depreciado. Por @"microsoft.quantum.math.signd" favor, use em vez disso.
 syntax: 'function SignD (a : Double) : Int'
 input:
   content: '(a : Double)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f8331aa815e22d73f333e8f67ea4c8dadb30b1e5
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: d459b535e19ddcca60309bc363f51f10a0007474
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74863408"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686064"

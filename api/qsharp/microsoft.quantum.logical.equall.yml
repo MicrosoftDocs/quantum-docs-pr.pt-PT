@@ -3,9 +3,9 @@ uid: microsoft.quantum.logical.equall
 name: EqualL
 type: function
 namespace: Microsoft.Quantum.Logical
-summary: Retorna true se e somente se duas entradas forem iguais.
+summary: Retorna verdadeiro se e só se duas inputs forem iguais.
 remarks: >-
-  Os itens a seguir são equivalentes:
+  Os seguintes são equivalentes:
 
 
   ```Q#
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: O segundo valor a ser comparado.
+    summary: O segundo valor a comparar.
     isPrimitive: true
     uid: BigInt
 output:
   content: Bool
   types:
-  - summary: '`true` se `a` for igual a `b`.'
+  - summary: '`true`se e `a` apenas `b`se for igual a .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: c3e2dd73d95a8697bbb4216de6a0682569d103d9
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: d0ffa5d1c47b407fc2e62e73220bbcea40f16a78
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233123"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685920"

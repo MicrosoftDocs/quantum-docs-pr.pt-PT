@@ -3,29 +3,29 @@ uid: microsoft.quantum.math.iscoprimel
 name: IsCoprimeL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Retornará true se $a $ e $b $ forem coprimos e false caso contrário.
+summary: Devoluções verdadeiras se $a$ e $b$ são co-prime e falsos de outra forma.
 syntax: 'function IsCoprimeL (a : BigInt, b : BigInt) : Bool'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
   - name: a
-    summary: o primeiro número de que coprimality está sendo testado
+    summary: o primeiro número dos quais a co-primalidade está a ser testada
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: o segundo número do qual coprimality está sendo testado
+    summary: o segundo número dos quais a co-primalidade está a ser testada
     isPrimitive: true
     uid: BigInt
 output:
   content: Bool
   types:
-  - summary: True, se $a $ e $b $ forem coprimos (por exemplo, seu maior divisor comum é 1) e false caso contrário
+  - summary: É verdade, se $a$ e $b$ são co-prime (por exemplo, o seu maior divisor comum é 1 ), e falso de outra forma
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 8c96c49bd02f7601ba4851fdb81f33d01dfccfdd
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 17dd3812ad8cbe48ba7205c58217c24f08d8dd47
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232698"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82685333"
