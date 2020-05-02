@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.pulls
-ms.openlocfilehash: a4373a65688893c95e0475356c8f6fca0912f8c5
-ms.sourcegitcommit: 6ccea4a2006a47569c4e2c2cb37001e132f17476
+ms.openlocfilehash: 82af3b5123588cc06882f746ffcb0402ad3f0f2e
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "77907465"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82686840"
 ---
 # <a name="opening-pull-requests"></a>Abrir Pedidos Pull #
 
@@ -39,7 +39,7 @@ Dito o que precede, é útil tirar alguns momentos para dizer o que **é**um ped
 Ao trabalhar com Git, quaisquer alterações são representadas como _compromissos_ que descrevem como essas alterações estão relacionadas com o estado do repositório antes dessas alterações.
 Muitas vezes desenhamos diagramas em que os compromissos são desenhados como círculos com setas de compromissos anteriores.
 
-Suponha que tenha começado uma contribuição num _ramo_ chamado `feature`.
+Suponha que tenha começado `feature`uma contribuição num _ramo_ chamado.
 Então o seu garfo de **Microsoft/Quantum** pode parecer algo assim:
 
 ![Um ramo de trabalho em GitHub](~/media/git-workflow-step0.png)
@@ -60,9 +60,9 @@ A utilização deste processo ajuda-nos a usar a funcionalidade GitHub para melh
 
 ## <a name="how-to-make-a-pull-request"></a>Como fazer um pedido de puxar ##
 
-Há duas maneiras principais de fazer um pedido de atração.
-Para pequenas alterações que apenas afetam um único ficheiro, a interface web GitHub pode ser usada para fazer um pedido de pull inteiramente on-line.
-Para contribuições mais complicadas, é mais fácil usar o computador local para se preparar primeiro para um pedido de puxão.
+Há duas maneiras principais de fazer um pedido de atração.  
+Para pequenas alterações que apenas afetam um único ficheiro, a interface web GitHub pode ser usada para fazer um pedido de pull inteiramente on-line. Basta navegar para o ficheiro que pretende editar e utilizar o ícone de edição.  
+Para contribuições mais complicadas, é mais fácil clonar o repositório para o seu computador local para se preparar primeiro para um pedido de puxão.
 
 <!--
 ### Using the Web Interface ###

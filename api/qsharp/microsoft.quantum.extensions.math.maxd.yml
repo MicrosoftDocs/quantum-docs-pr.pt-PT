@@ -3,7 +3,7 @@ uid: microsoft.quantum.extensions.math.maxd
 name: MaxD
 type: function
 namespace: Microsoft.Quantum.Extensions.Math
-summary: MaxD foi preterido. Em vez disso, use @"microsoft.quantum.math.maxd".
+summary: MaxD foi depreciado. Por @"microsoft.quantum.math.maxd" favor, use em vez disso.
 syntax: 'function MaxD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
@@ -20,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 8a580eeec5d947b7444d2913ac05606b783b6ee3
-  ms.sourcegitcommit: 27c9bf1aae923527aa5adeaee073cb27d35c0ca1
+  ms.openlocfilehash: 9a140b40b5590ed3c3eab9906e7a9e601b577382
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74865244"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686238"

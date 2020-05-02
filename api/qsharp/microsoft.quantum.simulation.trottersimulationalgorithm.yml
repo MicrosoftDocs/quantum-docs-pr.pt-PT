@@ -3,28 +3,28 @@ uid: microsoft.quantum.simulation.trottersimulationalgorithm
 name: TrotterSimulationAlgorithm
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: '`SimulationAlgorithm` função que usa uma decomposição Trotter – Suzuki para aproximar o operador de tempo de evolução _exp (-IHT)_.'
+summary: '`SimulationAlgorithm`função que utiliza uma decomposição Trotter-Suzuki para aproximar o operador de evolução temporal _exp (-iHt)_.'
 syntax: 'function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.SimulationAlgorithm'
 input:
   content: '(trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: trotterStepSize
-    summary: Duração da evolução de tempo simulada em uma única etapa de Trotter.
+    summary: Duração da evolução do tempo simulada em um único passo de Trotter.
     isPrimitive: true
     uid: Double
   - name: trotterOrder
-    summary: Ordem do integrador Trotter. Deve ser 1 ou um número par.
+    summary: Ordem do integrador Trotter. Isto deve ser um ou um número par.
     isPrimitive: true
     uid: Int
 output:
   content: Microsoft.Quantum.Simulation.SimulationAlgorithm
   types:
-  - summary: Um tipo de `SimulationAlgorithm`.
+  - summary: Um `SimulationAlgorithm` tipo.
     uid: microsoft.quantum.simulation.simulationalgorithm
 metadata:
-  ms.openlocfilehash: 2daaeb3be5d73351797cb9f4efacb6e276b18e10
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 8f86dea6c3635b2428c30438fa3124094830888e
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73232001"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687246"

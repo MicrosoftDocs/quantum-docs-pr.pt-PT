@@ -3,8 +3,8 @@ uid: microsoft.quantum.math.modpowl
 name: ModPowL
 type: function
 namespace: Microsoft.Quantum.Math
-summary: Executa uma divisão modular em um número elevado à potência de outro número.
-remarks: Consulte [System. Numerics. BigInteger. ModPow](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.modpow) para obter mais detalhes.
+summary: Executa uma divisão modular num número elevado ao poder de outro número.
+remarks: Consulte [system.numerics.BigInteger.ModPow](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.modpow) para mais detalhes.
 syntax: 'function ModPowL (value : BigInt, exponent : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, exponent : BigInt, modulus : BigInt)'
@@ -24,9 +24,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: dff1a84cb5651857174f55b9561cd585672b9475
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 1c151bec017ded9fa4fba375e4d3332af25b0502
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73233701"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686653"

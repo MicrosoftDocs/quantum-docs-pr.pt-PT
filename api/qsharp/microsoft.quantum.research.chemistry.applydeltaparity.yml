@@ -3,28 +3,28 @@ uid: microsoft.quantum.research.chemistry.applydeltaparity
 name: ApplyDeltaParity
 type: operation
 namespace: Microsoft.Quantum.Research.Chemistry
-summary: Calcula a diferença na paridade entre um PQRS anterior... termos e o próximo PQRS... prazo. Essa diferença é calculada em um qubit auxiliar.
-remarks: Isso pressupõe que os índices de P < Q < R < S <... para prevPQ e nextPQ.
+summary: Diferença de cálculos na paridade entre um PQRS anterior... termos e os próximos PQRS... termo. Esta diferença é calculada num qubit auxiliar.
+remarks: Isto pressupõe que os índices de P < Q q < R < S < ... tanto para o prevPQ como para o próximo PQ.
 syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
 input:
   content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[])'
   types:
   - name: prevFermionicTerm
-    summary: Lista de índices para PQRS anteriores... termos.
+    summary: Lista de índices para PQRs anteriores... termos.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: nextFermionicTerm
-    summary: Lista de índices para o próximo PQRS... termos.
+    summary: Lista de índices para os próximos PQRS... termos.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: aux
-    summary: Qubit auxiliar no qual os resultados de computação de paridade são armazenados.
+    summary: Qubit auxiliar sobre os resultados da computação da paridade são armazenados.
     isPrimitive: true
     uid: Qubit
   - name: qubits
-    summary: Qubit atuou por todos os PQRS... termos.
+    summary: Qubit agido por todos os PQRS... termos.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 35ca6ae9ff6ac6db0d0a61cff9c89c7abf862f66
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 27d2ce22c9d7281682236b5214c39abf1d352eeb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228057"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82687129"

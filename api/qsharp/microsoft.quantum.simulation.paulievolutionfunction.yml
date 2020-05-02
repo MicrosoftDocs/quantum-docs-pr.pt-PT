@@ -3,23 +3,23 @@ uid: microsoft.quantum.simulation.paulievolutionfunction
 name: PauliEvolutionFunction
 type: function
 namespace: Microsoft.Quantum.Simulation
-summary: Representa um gerador dinâmico como um conjunto de Gates e uma expansão na base Pauli.
+summary: Representa um gerador dinâmico como um conjunto de portões simulativos e uma expansão na base pauli.
 syntax: 'function PauliEvolutionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex) : Microsoft.Quantum.Simulation.EvolutionUnitary'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: generatorIndex
-    summary: Um índice de gerador a ser representado como uma evolução unitário na base Pauli.
+    summary: Um índice gerador a ser representado como evolução unitária na base pauli.
     uid: microsoft.quantum.simulation.generatorindex
 output:
   content: Microsoft.Quantum.Simulation.EvolutionUnitary
   types:
-  - summary: Um `EvolutionUnitary` representando a evolução de tempo pelo termo referenciado em ' generatorIndex.
+  - summary: Uma `EvolutionUnitary` evolução temporal representativa pelo termo referenciado no 'generatorIndex.
     uid: microsoft.quantum.simulation.evolutionunitary
 metadata:
-  ms.openlocfilehash: 87434cc1cd78747e68c9ada990ef8173734641e8
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 3a5b01f86a29006e0f257250e6708f50bdf6b984
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216191"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686982"

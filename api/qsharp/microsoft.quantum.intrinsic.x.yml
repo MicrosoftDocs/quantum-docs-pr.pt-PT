@@ -4,18 +4,18 @@ name: X
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
 summary: >-
-  Aplica a porta Pauli $X $.
+  Aplica o portão Pauli $X$.
 
 
-  \begin{align} \ sigma_x \mathrel{: =} \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix}.
+  \begin{align} \sigma_x \mathrel{:=} \start{bmatrix} \\ \\ 0 & 1 1 & 0 \end{bmatrix}.
 
-  \end{align}
+  \fim{align}
 syntax: 'operation X (qubit : Qubit) : Unit'
 input:
   content: '(qubit : Qubit)'
   types:
   - name: qubit
-    summary: Qubit ao qual a portão deve ser aplicada.
+    summary: Qubit ao qual o portão deve ser aplicado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -27,9 +27,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 740541d3126bc3e1b245f4a09c951e78cde802c7
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 73fcf60bf676d9c25f09009fcaf13dda4237f01b
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73216327"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686791"

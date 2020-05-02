@@ -4,14 +4,14 @@ name: PrepareUniformSuperposition
 type: operation
 namespace: Microsoft.Quantum.Preparation
 summary: >-
-  Cria uma superposição uniforme em Estados que codificam 0 a `nIndices`.
+  Cria uma sobreposição uniforme sobre estados que codificam 0 através `nIndices`de .
 
 
-  Ou seja, esse unitário $U $ cria uma superposição uniforme em todos os Estados de número $0 $ para $M-$1, dado um estado de entrada $ \ket{0\cdots 0} $. Em outras palavras, $ $ \begin{align} U\ket{0}= \frac{1}{\sqrt{M}}\sum_{j = 0} ^ {M-1} \ket{j}.
+  Ou seja, este $U$ unitário cria uma sobreposição uniforme sobre todos os estados do número $0$ a $M-1$, dado um estado de entrada $\ket{0\cdots 0}$. Por outras palavras, $$ \begin{align} U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
 
-  \end{align} $ $.
+  \end{align} $$.
 examples: >-
-  O exemplo a seguir prepara o estado $ \frac{1}{\sqrt{6}} \sum_{j = 0} ^{5}\ket{j} $ em $3 $ qubits.
+  O exemplo seguinte prepara o{1}estado $\frac {\sqrt{6}{sum_{j=0}\{5}{j}$ em qubits de $3$.
 
 
   ```Q#
@@ -28,14 +28,14 @@ input:
   content: '(nIndices : Int, indexRegister : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: nIndices
-    summary: O número desejado de Estados $M $ na superposição uniforme.
+    summary: O número desejado de estados $M$ na sobreposição uniforme.
     isPrimitive: true
     uid: Int
   - name: indexRegister
     summary: >-
-      O registro qubit que armazena os Estados de número no formato `LittleEndian`.
+      O registo qubit que armazena o número indica em `LittleEndian` formato.
 
-      Esse registro deve ser capaz de armazenar o número $M-$1 e presume-se que seja inicializado no estado $ \ket{0\cdots 0} $.
+      Este registo deve ser capaz de armazenar o número $M-1$, e presume-se que seja inicializado no estado $\ket{0\cdots 0}$.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4bb7c83382f8d48f132fbd91acfd2184a570aea4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73226493"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82686530"
