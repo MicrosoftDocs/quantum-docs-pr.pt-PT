@@ -4,18 +4,18 @@ name: EstimateTermExpectation
 type: operation
 namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 summary: >-
-  Computa a energia associada a um determinado termo da Jordânia-Wigner Hamiltonian
+  Calcula a energia associada a um determinado termo Jordan-Wigner Hamiltonian
 
 
-  Esta operação estima o valor de expectativa associado a cada operador de medida e o multiplica pelo coeficiente correspondente, usando a amostragem.
+  Esta operação estima o valor de expectativa associado a cada operador de medição e multiplica-o pelo coeficiente correspondente, utilizando a amostragem.
 
-  Os resultados são agregados em uma variável que contém a energia do termo Jordânia-Wigner.
+  Os resultados são agregados numa variável que contém a energia do termo Jordan-Wigner.
 syntax: 'operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int) : Double'
 input:
   content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
   types:
   - name: inputStateUnitary
-    summary: O unitário usado para preparação do estado.
+    summary: O unitário usado para a preparação do Estado.
     isOperation: true
     input:
       types:
@@ -29,35 +29,35 @@ input:
     functors:
     - Adjoint
   - name: ops
-    summary: Os operadores de medição do termo Jordânia-Wigner.
+    summary: Os operadores de medição do termo Jordan-Wigner.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
   - name: coeffs
-    summary: Os coeficientes do termo Jordânia-Wigner.
+    summary: Os coeficientes do termo Jordan-Wigner.
     isArray: true
     isPrimitive: true
     uid: Double
   - name: nQubits
-    summary: O número de qubits necessárias para simular o sistema molecular.
+    summary: O número de qubits necessários para simular o sistema molecular.
     isPrimitive: true
     uid: Int
   - name: nSamples
-    summary: O número de amostras a serem usadas para a estimativa da expectativa de termo.
+    summary: O número de amostras a utilizar para a estimativa do termo expectativa.
     isPrimitive: true
     uid: Int
 output:
   content: Double
   types:
-  - summary: A energia associada ao termo Jordânia-Wigner.
+  - summary: A energia associada ao termo Jordan-Wigner.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 9efa1c2aaa66d4b35e3266f785f837cb5e4dba27
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 6ddaa0c9385815d878f23048ae4787d93f36beca
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73228448"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82662880"
