@@ -4,11 +4,11 @@ name: ApplyToFirstThreeQubitsA
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Aplica uma operação às três primeiras qubits no registro.
+  Aplica uma operação aos três primeiros qubits no registo.
 
-  O modificador `A` indica que a operação é de adjointable.
+  O modificador `A` indica que a operação é adcompável.
 remarks: >-
-  Isso é equivalente a:
+  Isto equivale a:
 
 
   ```qsharp
@@ -21,7 +21,7 @@ input:
   content: '(op : ((Qubit, Qubit, Qubit) => Unit is Adj), register : Qubit[])'
   types:
   - name: op
-    summary: Uma operação a ser aplicada aos três primeiros qubits
+    summary: Uma operação a aplicar aos três primeiros qubits
     isOperation: true
     input:
       types:
@@ -52,9 +52,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytofirstthreequbits
 metadata:
-  ms.openlocfilehash: 1915d304889509d90d8522a4aa92b70e757c3f27
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7f19681e6bec0af50bba497a97373ccb632871fb
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73213403"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82668074"
