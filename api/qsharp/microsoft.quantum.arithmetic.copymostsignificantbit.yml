@@ -3,19 +3,19 @@ uid: microsoft.quantum.arithmetic.copymostsignificantbit
 name: CopyMostSignificantBit
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Copia o bit mais significativo de um registro qubit `from` representando um inteiro não assinado no `target`de qubit.
+summary: Copia a parte mais significativa `from` de um registo qubit que `target`representa um inteiro não assinado no qubit .
 syntax: 'operation CopyMostSignificantBit (from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(from : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: from
     summary: >-
-      O número inteiro sem sinal do qual o bit mais alto é copiado.
+      O inteiro não assinado de onde a parte mais alta é copiada.
 
-      o inteiro é codificado no formato little-endian.
+      o inteiro é codificado em formato pequeno-endiano.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: O qubit no qual o bit mais alto está sendo copiado. A codificação de bits está em base computacional.
+    summary: O qubit em que a parte mais alta está a ser copiada. A codificação da broca está na base computacional.
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 seeAlso:
 - littleendian
 metadata:
-  ms.openlocfilehash: d397bd580600545c2a6f1c6ce0112b82087d99b4
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 55fba67f6f86f8b0b361c3b189d2b9d408010886
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73219132"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679713"

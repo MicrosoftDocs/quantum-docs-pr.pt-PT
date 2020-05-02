@@ -3,20 +3,20 @@ uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
 name: CompareGreaterThanFxP
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Compara dois números de ponto fixo armazenados em registros de Quantum e controla uma inversão no resultado.
-remarks: A implementação atual requer que os dois números de ponto fixo tenham a mesma posição de ponto e o mesmo número de qubits.
+summary: Compara dois números fixos armazenados em registos quânticos e controla uma inversão no resultado.
+remarks: A implementação atual exige que os dois números fixos tenham a mesma posição de ponto e o mesmo número de qubits.
 syntax: 'operation CompareGreaterThanFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint, result : Qubit)'
   types:
   - name: fp1
-    summary: Primeiro número de ponto fixo a ser comparado.
+    summary: Primeiro número fixo a comparar.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: fp2
-    summary: Segundo número de ponto fixo a ser comparado.
+    summary: Segundo número fixo a comparar.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: Resultado da comparação. Será invertida se `fp1 > fp2`.
+    summary: Resultado da comparação. Será virado se. `fp1 > fp2`
     isPrimitive: true
     uid: Qubit
 output:
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 6a7e87a53d91c928d45719dea8d7179ac347ec70
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 851baa02ebf746966b5534a96f1c1bc285632bc2
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221291"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679803"

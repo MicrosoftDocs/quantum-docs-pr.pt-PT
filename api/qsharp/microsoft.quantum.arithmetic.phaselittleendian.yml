@@ -4,19 +4,19 @@ name: PhaseLittleEndian
 type: newtype
 namespace: Microsoft.Quantum.Arithmetic
 summary: >-
-  Inteiros sem sinal de little endian na base QFT.
+  Os inteiros não assinados não assinados na base qFT.
 
 
-  Por exemplo, se $ \ket{x} $ for a codificação little-endian do inteiro $x $ na base computacional, $ \operatorname{QFTLE} \ket{x} $ será a codificação de $x $ na base QFT.
+  Por exemplo, se $\ket{x}$ é a codificação pouco endiana do inteiro $x$ na base computacional, então o nome de operador de $\{QFTLE} \ket{x}$ é a codificação de $x$ na base QFT.
 remarks: Abreviamos `PhaseLittleEndian` como `PhaseLE` na documentação.
 syntax: newtype PhaseLittleEndian = Qubit[];
 seeAlso:
 - qft
 - qftle
 metadata:
-  ms.openlocfilehash: 8efb8b58ff7ee5c0530abfb81792366f6990997e
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: a4c547a88ef49de180f68534f4f61fb1062a4764
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73218724"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679435"

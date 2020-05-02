@@ -3,21 +3,21 @@ uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
 name: EvaluateEvenPolynomialFxP
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Avalia um mesmo polinomial em uma representação de ponto fixo.
+summary: Avalia um mesmo polinómio numa representação fixa.
 syntax: 'operation EvaluateEvenPolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Coeficientes do mesmo polinomial como uma matriz Double, ou seja, a matriz $ [a_0, a_1,..., a_k] $ para o $P polinomial (x) = a_0 + a_1 x ^ 2 + \cdots + a_k x ^ {2K} $.
+    summary: Coeficientes do mesmo polinómio como uma matriz dupla, isto é, a matriz $[a_0, a_1, ..., a_k]$ para o mesmo polinómio $P(x) = a_0 + a_1 x^2 + \cdots + a_k x^{2k}$.
     isArray: true
     isPrimitive: true
     uid: Double
   - name: fpx
-    summary: Número de ponto fixo de entrada para o qual avaliar o polinomial.
+    summary: Número fixo de entrada para o qual avaliar o polinómio.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: O número de ponto fixo de saída que irá manter $P (x) $. Deve estar no estado $ \ket{0}$ inicialmente.
+    summary: Número de ponto fixo de saída que irá manter $P(x)$. Deve estar no estado{0}$\ket $$ inicialmente.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 4b0979dd2a0758bbefbb4b0456051a38e040ab5a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: dca40d385ca3f63d40e68db4e5cc8b4031990b9a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221036"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679672"

@@ -3,21 +3,21 @@ uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
 name: EvaluatePolynomialFxP
 type: operation
 namespace: Microsoft.Quantum.Arithmetic
-summary: Avalia um polinomial em uma representação de ponto fixo.
+summary: Avalia um polinómio numa representação fixa.
 syntax: 'operation EvaluatePolynomialFxP (coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(coefficients : Double[], fpx : Microsoft.Quantum.Arithmetic.FixedPoint, result : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: coefficients
-    summary: Coeficientes do polinomial como uma matriz Double, ou seja, a matriz $ [a_0, a_1,..., a_d] $ para o polinomial $P (x) = a_0 + a_1 x + \cdots + a_d x ^ d $.
+    summary: Coeficientes do polinómio como uma matriz dupla, ou seja, a matriz $[a_0, a_1, ..., a_d]$ para o $P polinómio(x) = a_0 + a_1 x + \cdots + a_d x^d$.
     isArray: true
     isPrimitive: true
     uid: Double
   - name: fpx
-    summary: Número de ponto fixo de entrada para o qual avaliar o polinomial.
+    summary: Número fixo de entrada para o qual avaliar o polinómio.
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: result
-    summary: O número de ponto fixo de saída que irá manter $P (x) $. Deve estar no estado $ \ket{0}$ inicialmente.
+    summary: Número de ponto fixo de saída que irá manter $P(x)$. Deve estar no estado{0}$\ket $$ inicialmente.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8a3531860001c09fa3dadd5ba4db276f0a20d06a
-  ms.sourcegitcommit: edcf15044d7bdf4f8b21fb8f6af4bde475eb13a0
+  ms.openlocfilehash: 7907702d8919060c630ce410d1cfcb995b4ed37a
+  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 11/05/2019
-  ms.locfileid: "73221002"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82679645"
