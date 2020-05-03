@@ -17,15 +17,7 @@
     - name: Introdução ao QDK
       href: welcome.md
     - name: Instalar o QDK
-      items:
-        - name: Descrição geral da instalação
-          href: install-guide/index.md
-        - name: 'Q# + C#'
-          href: install-guide/csinstall.md
-        - name: 'Q# + Python'
-          href: install-guide/pyinstall.md
-        - name: 'Blocos de notas do Jupyter em Q#'
-          href: install-guide/qjupyter.md
+      href: install-guide/toc.yml
     - name: Atualizar o QDK
       href: install-guide/update.md
     - name: 'Como criar um projeto Q#'
