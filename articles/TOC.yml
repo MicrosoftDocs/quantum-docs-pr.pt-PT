@@ -20,8 +20,6 @@
       href: install-guide/toc.yml
     - name: Atualizar o QDK
       href: install-guide/update.md
-    - name: 'Como criar um projeto Q#'
-      href: how-to-guides/create-qsharp-project.md
 - name: Tutoriais
   items:
     - name: Gerador de números aleatórios quântico
