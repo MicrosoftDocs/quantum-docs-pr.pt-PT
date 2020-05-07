@@ -1,6 +1,6 @@
 - name: Documentação do Microsoft Quantum
   href: index.yml
-- name: Introdução à computação quântica
+- name: Descrição geral
   items:
     - name: O que é a computação quântica?
       href: overview/what-is-quantum-computing.md
@@ -12,7 +12,7 @@
       href: overview/what-is-qsharp.md
     - name: Como posso saber mais?
       href: overview/how-to-learn-quantum-computing.md
-- name: Obter o Quantum Development Kit
+- name: Guias de Início Rápido
   items:
     - name: Introdução ao QDK
       href: welcome.md
@@ -22,21 +22,19 @@
       href: install-guide/update.md
     - name: 'Como criar um projeto Q#'
       href: how-to-guides/create-qsharp-project.md
-- name: 'Recursos de aprendizagem do Q#'
+- name: Tutoriais
   items:
-    - name: Guias de Início Rápido
-      items:
-        - name: Gerador de números aleatórios quântico
-          href: quickstarts/qrng.md
-        - name: 'Explorar o entrelaçamento com Q#'
-          href: quickstart.md
-        - name: Implementar o algoritmo de pesquisa de Grover
-          href: quickstarts/search.md
+    - name: Gerador de números aleatórios quântico
+      href: quickstarts/qrng.md
+    - name: 'Explorar o entrelaçamento com Q#'
+      href: quickstart.md
+    - name: Implementar o algoritmo de pesquisa de Grover
+      href: quickstarts/search.md
     - name: 'Aprender Q# com os Quantum Katas'
       href: intro-to-katas.md
     - name: 'Exemplos de código Q#'
       href: 'https://docs.microsoft.com/en-us/samples/browse/?languages=qsharp'
-- name: Descrição aprofundada do QDK
+- name: 'Guia de utilizador Q#'
   items:
     - name: Técnicas de desenvolvimento quântico
       topicHref: techniques/index.md
@@ -46,15 +44,21 @@
       href: language/toc.yml
     - name: Simuladores quânticos e avaliadores de recursos
       href: machines/toc.yml
-- name: 'Bibliotecas Q#'
-  href: libraries/toc.yml
-- name: Conceitos de computação quântica
-  href: concepts/toc.yml
-- name: Mais recursos
-  href: for-more-info.md
-- name: Contribuir para o QDK
-  href: contributing/toc.yml
-  topicHref: contributing/index.md
-- name: Notas de versão QDK
-  topicHref: relnotes/index.md
-  href: relnotes/toc.yml
+- name: Conceitos
+  items:
+    - name: Conceitos de computação quântica
+      href: concepts/toc.yml
+    - name: 'Bibliotecas Q#'
+      href: libraries/toc.yml
+- name: Recursos
+  items:
+    - name: Glossário
+      href: concepts/Glossary.md
+    - name: Contribuir para o QDK
+      href: contributing/toc.yml
+      topicHref: contributing/index.md
+    - name: Notas de versão QDK
+      topicHref: relnotes/index.md
+      href: relnotes/toc.yml
+    - name: Mais recursos
+      href: for-more-info.md
