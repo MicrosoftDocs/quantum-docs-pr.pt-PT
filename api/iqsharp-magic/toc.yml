@@ -1,0 +1,28 @@
+- href: chemistry.broombridge.md
+  name: Comando magic %chemistry.broombridge
+- href: chemistry.encode.md
+  name: Comando magic %chemistry.encode
+- href: chemistry.fh.add_terms.md
+  name: Comando magic %chemistry.fh.add_terms
+- href: chemistry.fh.load.md
+  name: Comando magic %chemistry.fh.load
+- href: chemistry.inputstate.load.md
+  name: Comando magic %chemistry.inputstate.load
+- href: config.md
+  name: Comando magic %config
+- href: estimate.md
+  name: Comando magic %estimate
+- href: lsmagic.md
+  name: Comando magic %lsmagic
+- href: package.md
+  name: Comando magic %package
+- href: performance.md
+  name: Comando magic %performance
+- href: simulate.md
+  name: Comando magic %simulate
+- href: toffoli.md
+  name: Comando magic %toffoli
+- href: who.md
+  name: Comando magic %who
+- href: workspace.md
+  name: Comando magic %workspace

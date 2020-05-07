@@ -7,12 +7,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install
-ms.openlocfilehash: 5fafb736f34d27f9233370a0a8a66c0613606048
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+ms.openlocfilehash: bca700660094b91f1c0dfa03f9bce1336073ca51
+ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "77904779"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82680198"
 ---
 # <a name="install-the-microsoft-quantum-development-kit-qdk"></a>Instalar o Microsoft Quantum Development Kit (QDK)
 
@@ -28,6 +28,7 @@ Além disso, o QDK oferece suporte de Q# para Jupyter Notebook com o kernel IQ# 
 
 O QDK está disponível para vários ambientes de desenvolvimento. Selecione a sua configuração preferida de entre as secções abaixo:
 
-- [Instalar Q# para C#:](xref:microsoft.quantum.install.cs) escolha este ambiente se quiser combinar C# e Q# para criar um programa anfitrião em C# que chame operações em Q#.
-- [Instalar Q# para Python:](xref:microsoft.quantum.install.python) escolha este ambiente se quiser combinar Python e Q# para criar um programa anfitrião em Python que chame operações em Q#.
-- [Instalar Q# para Jupyter Notebook:](xref:microsoft.quantum.install.jupyter) escolha este ambiente para executar código Q# em células que tenham texto incorporado ou para criar tutoriais interativos de computação quântica. Não o escolha se quiser combinar Q# com um programa anfitrião clássico externo.
+- [Aplicação de linha de comandos do Q#:](xref:microsoft.quantum.install.standalone) escolha esta abordagem se quiser trabalhar com o Q# a partir da linha de comandos. Não requer um controlador ou um programa anfitrião como acontece com as opções abaixo.
+- [Instalar Q# para Jupyter Notebook:](xref:microsoft.quantum.install.jupyter) escolha este ambiente para executar código Q# em células que tenham texto incorporado ou para criar tutoriais interativos de computação quântica. 
+- [Desenvolver com o Q# e Python:](xref:microsoft.quantum.install.python) se quiser combinar o Python e o Q# para criar um programa anfitrião em Python que chame operações do Q#.
+- [Desenvolver com o Q# e C# ou F#:](xref:microsoft.quantum.install.cs) se quiser combinar o C# ou F# e Q# para criar um programa anfitrião em .NET que chame operações do Q#.

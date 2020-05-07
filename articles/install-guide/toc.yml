@@ -1,0 +1,13 @@
+items:
+  - name: Descrição geral da instalação
+    href: index.md
+  - name: 'Aplicações de linha de comandos do Q#'
+    href: standalone.md
+  - name: 'Blocos de notas do Jupyter em Q#'
+    href: qjupyter.md
+  - name: 'Utilizar o Q# com outras linguagens'
+    items:
+      - name: 'Utilizar o Q# com o Python'
+        href: pyinstall.md
+      - name: 'Utilizar o Q# com o .NET'
+        href: csinstall.md
