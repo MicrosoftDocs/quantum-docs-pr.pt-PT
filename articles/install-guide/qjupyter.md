@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: b7276f9b273f601f30e4938018398353b6a9102d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 38db14ccc5f2406043ff4baee3f562385cdf47a8
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831074"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426384"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Desenvolver com cadernos Q# Jupyter
 
@@ -22,12 +22,12 @@ Os Cadernos Jupyter permitem a execução do código no local juntamente com ins
 IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyter e Python para o SDK de .NET Core que fornece a funcionalidade principal que permite compilar e simular operações Q#.
 
 > [!NOTE]
-> * Em Q# Jupyter Notebooks só pode executar o código Q# e as operações não C# podem ser chamadas de programas de acolhimento externos (por exemplo, Python ou ficheiros). Este ambiente não é apropriado se o seu objetivo é combinar um programa de anfitriões clássico seleto externo com o programa quântico.
+> * Em Q# Jupyter Notebooks só pode executar código Q# e as operações não podem ser chamadas a partir de programas de acolhimento externos (por exemplo, ficheiros Python ou C#). Este ambiente não é apropriado se o seu objetivo é combinar um programa de anfitriões clássico seleto externo com o programa quântico.
 
 1. Pré-requisitos
 
     - [Python](https://www.python.org/downloads/) 3.6 ou posterior
-    - [Bloco de Notas do Jupyter](https://jupyter.readthedocs.io/en/latest/install.html)
+    - [Caderno jupyter](https://jupyter.readthedocs.io/en/latest/install.html)
     - [.NET Core SDK 3.1 ou posterior](https://www.microsoft.com/net/download)
 
 1. Instalar o pacote `iqsharp`
@@ -62,12 +62,12 @@ IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyt
         Deverá ver `SayHello` na saída da célula. Ao executar em Jupyter Notebooks, o código Q# é compilado e o bloco de notas produz o nome das operações que encontra.
 
 
-    - Numa nova célula, execute a operação que acabou de criar (num simulador) utilizando o comando `%simulate`:
+    - Numa nova célula, execute a operação que acabou de criar (num simulador) utilizando o `%simulate` comando:
 
         ![Célula do Jupyter Notebook com o magic %simulate](~/media/install-guide-jupyter-simulate.png)
 
-        Deve ver a mensagem impressa no ecrã juntamente com o resultado da operação que invocou (aqui, vemos a `()` vazia porque a nossa operação simplesmente devolve um tipo `Unit`).
+        Deve ver a mensagem impressa no ecrã juntamente com o resultado da operação que invocou (aqui, vemos a tuple vazia porque a `()` nossa operação simplesmente devolve um `Unit` tipo).
 
-## <a name="whats-next"></a>O que se segue?
+## <a name="next-steps"></a>Passos seguintes
 
-Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.write-program).
+Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).

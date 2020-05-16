@@ -1,19 +1,19 @@
 ---
-title: Programar com Q# + Python
+title: Desenvolver com Q# e Python
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: e1b8a0c68b3ac0c059c6de6e478593321764ff88
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: a8c5b9c25c069f98ef8eefd6cfbc36bf3376931c
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680154"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426370"
 ---
-# <a name="develop-with-q--python"></a>Programar com Q# + Python
+# <a name="develop-with-q-and-python"></a>Desenvolver com Q# e Python
 
 Instale o QDK para desenvolver programas de anfitriões Python para ligar para as operações Q#.
 
@@ -24,7 +24,7 @@ Instale o QDK para desenvolver programas de anfitriões Python para ligar para a
     - [.NET Core SDK 3.1 ou posterior](https://www.microsoft.com/net/download)
 
 
-1. Instale `qsharp` o pacote, um pacote Python que permite o interop entre Q# e Python.
+1. Instale o `qsharp` pacote, um pacote Python que permite o interop entre Q# e Python.
 
     ```bash
     pip install qsharp
@@ -83,6 +83,6 @@ Instale o QDK para desenvolver programas de anfitriões Python para ligar para a
 > [!NOTE]
 > * Você também pode usar os cadernos Python Jupyter para escrever o programa clássico Python e chamar operações Q# a partir das células. O código Python é apenas um programa python normal.
 
-## <a name="whats-next"></a>Passos seguintes?
+## <a name="next-steps"></a>Passos seguintes
 
-Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.write-program).
+Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).

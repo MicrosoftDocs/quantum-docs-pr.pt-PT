@@ -1,19 +1,19 @@
 ---
-title: Execute programas Q# sem condutor e uma língua anfitriã
+title: Desenvolver com aplicações de linha de comando Q#
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: e83acaf10af952da06abf4737ad2ec91f1cf1b8e
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: e829862521951c50cb42eebf261c803071a95275
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706806"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426425"
 ---
-# <a name="q-command-line-applications"></a>Q# Aplicações da Linha de Comando
+# <a name="develop-with-q-command-line-applications"></a>Desenvolver com aplicações de linha de comando Q#
 
 Os programas Q# podem ser executados por conta própria, sem um condutor numa língua anfitriã como C#, F#, ou Python.
 
@@ -23,64 +23,67 @@ Os programas Q# podem ser executados por conta própria, sem um condutor numa l�
 
 ## <a name="installation"></a>Instalação
 
-Embora possa construir aplicações de linha de comando Q# em qualquer IDE, recomendamos vivamente a utilização de Código de Estúdio Visual (Código VS) ou Estúdio Visual IDE para as suas aplicações Q#. Ao utilizar o VS Code ou o Visual Studio e a extensão qDK Visual Studio Code, você tem acesso a funcionalidades mais ricas.
+Embora possa construir aplicações de linha de comando Q# em qualquer IDE, recomendamos a utilização de Código de Estúdio Visual (Código VS) ou Estúdio Visual IDE para as suas aplicações Q#. O desenvolvimento destas ferramentas proporciona acesso a funcionalidades ricas.
 
-- Instalar [código VS](https://code.visualstudio.com/download) (Windows, Linux e Mac)
-- Instale a [extensão QDK para o Código VS](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode) OU
-- [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3, com a carga de trabalho de desenvolvimento para várias plataformas .NET Core ativada
-- Descarregue e instale a [extensão do Estúdio Visual](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit)
+Para configurar o Código VS:
+
+1. Descarregue e instale [o Código VS](https://code.visualstudio.com/download) (Windows, Linux e Mac).
+2. Instale o [Microsoft QDK para o Código VS](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
+
+Para configurar o Estúdio Visual:
+
+1. Descarregue e instale o [Visual Studio](https://visualstudio.microsoft.com/downloads/) 16.3 ou superior, com a carga de trabalho de desenvolvimento de plataformas cruzadas .NET Core ativada.
+2. Descarregue e instale o [Microsoft QDK](https://marketplace.visualstudio.com/items?itemName=quantum.DevKit).
 
 
 ## <a name="develop-with-q-using-vs-code"></a>Desenvolver com Q# usando o Código VS
 
-Instalar os modelos de projeto Quantum:
+Instale os modelos do projeto Q#:
 
-- Ir **ver** -> **paleta** de comando
-- Selecione **Q#: Instale modelos de projeto**
+1. Código VS aberto.
+2. Clique em **ver**paleta de  ->  **comando**.
+3. Selecione **Q#: Instale modelos de projeto**.
 
-Agora, tem o Quantum Development Kit instalado e pronto para utilizar nas aplicações e bibliotecas.
-- Crie um novo projeto:
-  - Ir **ver** -> **paleta** de comando
-  - Selecione **Q#: Criar novo projeto**
-  - Selecione **aplicação** de consola autónoma
-  - Navegue para a localização no sistema de ficheiros onde quer criar a aplicação
-  - Clique no botão **Abrir novo projeto...**, após o projeto ser criado.
+Quando os modelos do **Projeto instalados com sucesso** são apresentados, o QDK está pronto a ser utilizado com as suas próprias aplicações e bibliotecas.
+
+Para criar um novo projeto:
+
+1. Clique em **Ver**Paleta de  ->  **Comando** e selecione **Q#: Criar novo projeto**.
+2. Clique na **aplicação**de consola autónoma .
+3. Navegue até ao local para salvar o projeto e clique em **Criar Projeto**.
+4. Quando o projeto for criado com sucesso, clique em **Abrir novo projeto...** na direita inferior.
         
-- Inspecione o projeto
-  - Deve ver que um `Program.qs` ficheiro chamado criado, que é um programa Q# que define uma simples operação para imprimir uma mensagem para a consola.
+Inspecione o projeto. Deve ver um ficheiro de origem chamado `Program.qs` , que é um programa Q# que define uma simples operação para imprimir uma mensagem para a consola.
 
-- Execute a aplicação:
-  - Ir para **terminal** -> **novo terminal novo**
-  - Entrar`dotnet run`
-  - Deverá ver o seguinte texto na janela de saída `Hello quantum world!`
+Para executar a aplicação:
+1. Clique no **terminal**  ->  **novo terminal**.
+2. No aviso de terminal, entre `dotnet run` .
+3. Deverá ver o seguinte texto na janela de saída `Hello quantum world!`
 
 
 > [!NOTE]
-> * As áreas de trabalho com várias pastas raiz não são atualmente suportadas pela extensão do Visual Studio Code. Se tiver vários projetos numa área de trabalho do VS Code, todos os projetos terão de estar na mesma pasta raiz.
+> Os espaços de trabalho com várias pastas de raiz não são atualmente suportados pela extensão VS Code Q# . Se tiver vários projetos numa área de trabalho do VS Code, todos os projetos terão de estar na mesma pasta raiz.
 
 ## <a name="develop-with-q-using-visual-studio"></a>Desenvolver com Q# usando o Estúdio Visual
 
-Verificar a instalação ao criar uma aplicação `Hello World`
+Verifique a instalação do Seu Estúdio Visual criando uma `Hello World` aplicação Q#.
 
-- Crie uma nova aplicação Q#
-  - Ir para **Arquivar** -> **Novo** -> **Projeto**
-  - Escreva `Q#` na caixa de pesquisa
-  - Selecione **Aplicação Q#**
-  - Selecione **Next**
-  - Escolha um nome e uma localização para a aplicação
-  - Selecione **Criar**
+Para criar uma nova aplicação Q#:
+1. Abra o Estúdio Visual e clique em **File**  ->  **New**  ->  **Project**.
+2. Digite na caixa de `Q#` pesquisa, selecione **Q# Application** e clique **em Next**.
+3. Insira um nome e localização para a sua aplicação e clique em **Criar**.
 
-- Inspecione o projeto
-  - Deve ver que foi `Program.qs` criado um ficheiro chamado, que é um programa Q# que define uma simples operação para imprimir uma mensagem para a consola.
 
-- Executar a aplicação
-  - Selecione **Debug** -> **Start Without Debugging**
-  - Deverá ver o texto `Hello quantum world!` impresso numa janela da consola.
+Inspecione o projeto. Deve ver um ficheiro de origem chamado `Program.qs` , que é um programa Q# que define uma simples operação para imprimir uma mensagem para a consola.
+
+Para executar a aplicação:
+1. Selecione **Debug**  ->  **Start Sem Depuração**.
+2. Deverá ver o texto `Hello quantum world!` impresso numa janela da consola.
 
 > [!NOTE]
-> * Se tiver vários projetos numa solução do Visual Studio, todos os projetos contidos na solução têm de estar na mesma pasta que a solução ou numa das suas subpastas.  
+> Se tiver vários projetos dentro de uma solução de Estúdio Visual, todos os projetos contidos na solução têm de estar na mesma pasta que a solução, ou numa das suas subpastas.  
 
 
-## <a name="whats-next"></a>Passos seguintes?
+## <a name="next-steps"></a>Passos seguintes
 
-Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.write-program).
+Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).

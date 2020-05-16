@@ -1,19 +1,19 @@
 ---
-title: Programar com Q# + C#
+title: Desenvolver com Q# e .NET
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 5bcb036b0b32e64d43f90e9a068d9dcc237890ba
-ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+ms.openlocfilehash: 155367dbb1373f00e2b0bd732a5319b32462c9f9
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82680169"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426494"
 ---
-# <a name="using-q-with-c-and-f"></a>Usando Q#\# com C e F\#
+# <a name="develop-with-q-and-net"></a>Desenvolver com Q# e .NET
 
 Q# é construído para jogar bem com .NET línguas como C# e F#.
 Neste guia, vamos demonstrar como usar o Q# com um programa de anfitriões escrito numa linguagem .NET.
@@ -26,10 +26,10 @@ Neste guia, vamos demonstrar como usar o Q# com um programa de anfitriões escri
 
 O primeiro passo é criar projetos para a sua biblioteca Q# e para o anfitrião .NET que irá chamar para as operações e funções definidas na sua biblioteca Q#.
 
-### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
+### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
 - Criar uma nova biblioteca Q#
-  - Ir para **Arquivar** -> **Novo** -> **Projeto**
+  - Ir para **Arquivar**  ->  **Novo**  ->  **Projeto**
   - Digite "Q#" na caixa de pesquisa
   - Selecione **Biblioteca Q#**
   - Selecione **Next**
@@ -84,9 +84,9 @@ Por exemplo, a [amostra de interoperabilidade .NET](https://github.com/microsoft
 
 :::code language="qsharp" source="~/quantum/samples/interoperability/dotnet/qsharp/Operations.qs" range="67-75":::
 
-Para chamar esta operação de .NET num simulador `Run` quântico, `RunAlgorithm` pode utilizar o método da classe .NET gerado pelo compilador Q#:
+Para chamar esta operação de .NET num simulador quântico, pode utilizar o `Run` método da `RunAlgorithm` classe .NET gerado pelo compilador Q#:
 
-### <a name="c"></a>[C #](#tab/tabid-csharp)
+### <a name="c"></a>[C#](#tab/tabid-csharp)
 
 :::code language="csharp" source="~/quantum/samples/interoperability/dotnet/csharp/Host.cs" range="4-":::
 
@@ -96,6 +96,6 @@ Para chamar esta operação de .NET num simulador `Run` quântico, `RunAlgorithm
 
 ***
     
-## <a name="whats-next"></a>Passos seguintes?
+## <a name="next-steps"></a>Passos seguintes
 
-Agora que tem o Quantum Development Kit configurado para ambos os programas de linha de comando Q# e para interoperabilidade com .NET, pode escrever e executar [o seu primeiro programa quântico](xref:microsoft.quantum.write-program).
+Agora que tem o Quantum Development Kit configurado para ambos os programas de linha de comando Q# e para interoperabilidade com .NET, pode escrever e executar [o seu primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).
