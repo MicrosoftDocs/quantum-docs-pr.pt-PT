@@ -6,48 +6,48 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: b7276f9b273f601f30e4938018398353b6a9102d
-ms.sourcegitcommit: f8d6d32d16c3e758046337fb4b16a8c42fb04c39
+ms.openlocfilehash: 38db14ccc5f2406043ff4baee3f562385cdf47a8
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76831074"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426384"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a><span data-ttu-id="2a0f3-102">Desenvolver com cadernos Q# Jupyter</span><span class="sxs-lookup"><span data-stu-id="2a0f3-102">Develop with Q# Jupyter notebooks</span></span>
+# <a name="develop-with-q-jupyter-notebooks"></a><span data-ttu-id="6b6c1-102">Desenvolver com cadernos Q# Jupyter</span><span class="sxs-lookup"><span data-stu-id="6b6c1-102">Develop with Q# Jupyter notebooks</span></span>
 
-<span data-ttu-id="2a0f3-103">Instale o QDK para desenvolver operações q# em Cadernos Q# Jupyter.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-103">Install the QDK for developing Q# operations on Q# Jupyter Notebooks.</span></span>
+<span data-ttu-id="6b6c1-103">Instale o QDK para desenvolver operações q# em Cadernos Q# Jupyter.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-103">Install the QDK for developing Q# operations on Q# Jupyter Notebooks.</span></span>
 
-<span data-ttu-id="2a0f3-104">Os Cadernos Jupyter permitem a execução do código no local juntamente com instruções, notas e outros conteúdos.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-104">Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content.</span></span> <span data-ttu-id="2a0f3-105">Este ambiente é ideal para escrever código Q# com explicações incorporadas ou tutoriais interativos de computação quântica.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-105">This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials.</span></span> <span data-ttu-id="2a0f3-106">Eis o que tem de fazer para começar a criar os seus próprios blocos de notas em Q#.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-106">Here's what you need to do to start creating your own Q# notebooks.</span></span>
+<span data-ttu-id="6b6c1-104">Os Cadernos Jupyter permitem a execução do código no local juntamente com instruções, notas e outros conteúdos.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-104">Jupyter Notebooks allow in-place code execution alongside instructions, notes, and other content.</span></span> <span data-ttu-id="6b6c1-105">Este ambiente é ideal para escrever código Q# com explicações incorporadas ou tutoriais interativos de computação quântica.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-105">This environment is ideal for writing Q# code with embedded explanations or quantum computing interactive tutorials.</span></span> <span data-ttu-id="6b6c1-106">Eis o que tem de fazer para começar a criar os seus próprios blocos de notas em Q#.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-106">Here's what you need to do to start creating your own Q# notebooks.</span></span>
 
-<span data-ttu-id="2a0f3-107">IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyter e Python para o SDK de .NET Core que fornece a funcionalidade principal que permite compilar e simular operações Q#.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-107">IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.</span></span>
+<span data-ttu-id="6b6c1-107">IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyter e Python para o SDK de .NET Core que fornece a funcionalidade principal que permite compilar e simular operações Q#.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-107">IQ# (pronounced i-q-sharp) is an extension primarily used by Jupyter and Python to the .NET Core SDK that provides the core functionality for compiling and simulating Q# operations.</span></span>
 
 > [!NOTE]
-> * <span data-ttu-id="2a0f3-108">Em Q# Jupyter Notebooks só pode executar o código Q# e as operações não C# podem ser chamadas de programas de acolhimento externos (por exemplo, Python ou ficheiros).</span><span class="sxs-lookup"><span data-stu-id="2a0f3-108">In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files).</span></span> <span data-ttu-id="2a0f3-109">Este ambiente não é apropriado se o seu objetivo é combinar um programa de anfitriões clássico seleto externo com o programa quântico.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-109">This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.</span></span>
+> * <span data-ttu-id="6b6c1-108">Em Q# Jupyter Notebooks só pode executar código Q# e as operações não podem ser chamadas a partir de programas de acolhimento externos (por exemplo, ficheiros Python ou C#).</span><span class="sxs-lookup"><span data-stu-id="6b6c1-108">In Q# Jupyter Notebooks you can only run Q# code, and the operations cannot be called from external host programs (e.g. Python or C# files).</span></span> <span data-ttu-id="6b6c1-109">Este ambiente não é apropriado se o seu objetivo é combinar um programa de anfitriões clássico seleto externo com o programa quântico.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-109">This environment is not appropriate if your goal is to combine an external classical host program with the quantum program.</span></span>
 
-1. <span data-ttu-id="2a0f3-110">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="2a0f3-110">Pre-requisites</span></span>
+1. <span data-ttu-id="6b6c1-110">Pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="6b6c1-110">Pre-requisites</span></span>
 
-    - <span data-ttu-id="2a0f3-111">[Python](https://www.python.org/downloads/) 3.6 ou posterior</span><span class="sxs-lookup"><span data-stu-id="2a0f3-111">[Python](https://www.python.org/downloads/) 3.6 or later</span></span>
-    - [<span data-ttu-id="2a0f3-112">Bloco de Notas do Jupyter</span><span class="sxs-lookup"><span data-stu-id="2a0f3-112">Jupyter Notebook</span></span>](https://jupyter.readthedocs.io/en/latest/install.html)
-    - [<span data-ttu-id="2a0f3-113">.NET Core SDK 3.1 ou posterior</span><span class="sxs-lookup"><span data-stu-id="2a0f3-113">.NET Core SDK 3.1 or later</span></span>](https://www.microsoft.com/net/download)
+    - <span data-ttu-id="6b6c1-111">[Python](https://www.python.org/downloads/) 3.6 ou posterior</span><span class="sxs-lookup"><span data-stu-id="6b6c1-111">[Python](https://www.python.org/downloads/) 3.6 or later</span></span>
+    - [<span data-ttu-id="6b6c1-112">Caderno jupyter</span><span class="sxs-lookup"><span data-stu-id="6b6c1-112">Jupyter Notebook</span></span>](https://jupyter.readthedocs.io/en/latest/install.html)
+    - [<span data-ttu-id="6b6c1-113">.NET Core SDK 3.1 ou posterior</span><span class="sxs-lookup"><span data-stu-id="6b6c1-113">.NET Core SDK 3.1 or later</span></span>](https://www.microsoft.com/net/download)
 
-1. <span data-ttu-id="2a0f3-114">Instalar o pacote `iqsharp`</span><span class="sxs-lookup"><span data-stu-id="2a0f3-114">Install the `iqsharp` package</span></span>
+1. <span data-ttu-id="6b6c1-114">Instalar o pacote `iqsharp`</span><span class="sxs-lookup"><span data-stu-id="6b6c1-114">Install the `iqsharp` package</span></span>
 
     ```bash
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-1. <span data-ttu-id="2a0f3-115">Verificar a instalação ao criar uma aplicação `Hello World`</span><span class="sxs-lookup"><span data-stu-id="2a0f3-115">Verify the installation by creating a `Hello World` application</span></span>
+1. <span data-ttu-id="6b6c1-115">Verificar a instalação ao criar uma aplicação `Hello World`</span><span class="sxs-lookup"><span data-stu-id="6b6c1-115">Verify the installation by creating a `Hello World` application</span></span>
 
-    - <span data-ttu-id="2a0f3-116">Execute o comando seguinte para iniciar o servidor de blocos de notas:</span><span class="sxs-lookup"><span data-stu-id="2a0f3-116">Run the following command to start the notebook server:</span></span>
+    - <span data-ttu-id="6b6c1-116">Execute o comando seguinte para iniciar o servidor de blocos de notas:</span><span class="sxs-lookup"><span data-stu-id="6b6c1-116">Run the following command to start the notebook server:</span></span>
 
         ```bash
         jupyter notebook
         ```
 
-    - <span data-ttu-id="2a0f3-117">Para abrir a cópia do portátil jupyter e colar o URL fornecido pela linha de comando no seu navegador.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-117">To open the Jupyter notebook copy and paste the URL provided by the command line into your browser.</span></span>
+    - <span data-ttu-id="6b6c1-117">Para abrir a cópia do portátil jupyter e colar o URL fornecido pela linha de comando no seu navegador.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-117">To open the Jupyter notebook copy and paste the URL provided by the command line into your browser.</span></span>
 
-    - <span data-ttu-id="2a0f3-118">Crie um Jupyter Notebook com um kernel Q# e adicione o seguinte código à primeira célula do bloco de notas:</span><span class="sxs-lookup"><span data-stu-id="2a0f3-118">Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:</span></span>
+    - <span data-ttu-id="6b6c1-118">Crie um Jupyter Notebook com um kernel Q# e adicione o seguinte código à primeira célula do bloco de notas:</span><span class="sxs-lookup"><span data-stu-id="6b6c1-118">Create a Jupyter notebook with a Q# kernel, and add the following code to the first notebook cell:</span></span>
 
         ```qsharp
         operation SayHello () : Unit {
@@ -55,19 +55,19 @@ ms.locfileid: "76831074"
         }
         ```
 
-    - <span data-ttu-id="2a0f3-119">Execute esta célula do bloco de notas:</span><span class="sxs-lookup"><span data-stu-id="2a0f3-119">Run this cell of the notebook:</span></span>
+    - <span data-ttu-id="6b6c1-119">Execute esta célula do bloco de notas:</span><span class="sxs-lookup"><span data-stu-id="6b6c1-119">Run this cell of the notebook:</span></span>
 
         ![Célula do Jupyter Notebook com código Q#](~/media/install-guide-jupyter.png)
 
-        <span data-ttu-id="2a0f3-121">Deverá ver `SayHello` na saída da célula.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-121">You should see `SayHello` in the output of the cell.</span></span> <span data-ttu-id="2a0f3-122">Ao executar em Jupyter Notebooks, o código Q# é compilado e o bloco de notas produz o nome das operações que encontra.</span><span class="sxs-lookup"><span data-stu-id="2a0f3-122">When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.</span></span>
+        <span data-ttu-id="6b6c1-121">Deverá ver `SayHello` na saída da célula.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-121">You should see `SayHello` in the output of the cell.</span></span> <span data-ttu-id="6b6c1-122">Ao executar em Jupyter Notebooks, o código Q# é compilado e o bloco de notas produz o nome das operações que encontra.</span><span class="sxs-lookup"><span data-stu-id="6b6c1-122">When running in jupyter notebooks, the Q# code is compiled, and the notebook outputs the name of the operation(s) that it finds.</span></span>
 
 
-    - <span data-ttu-id="2a0f3-123">Numa nova célula, execute a operação que acabou de criar (num simulador) utilizando o comando `%simulate`:</span><span class="sxs-lookup"><span data-stu-id="2a0f3-123">In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:</span></span>
+    - <span data-ttu-id="6b6c1-123">Numa nova célula, execute a operação que acabou de criar (num simulador) utilizando o `%simulate` comando:</span><span class="sxs-lookup"><span data-stu-id="6b6c1-123">In a new cell, execute the operation you just created (in a simulator) by using the `%simulate` command:</span></span>
 
         ![Célula do Jupyter Notebook com o magic %simulate](~/media/install-guide-jupyter-simulate.png)
 
-        <span data-ttu-id="2a0f3-125">Deve ver a mensagem impressa no ecrã juntamente com o resultado da operação que invocou (aqui, vemos a `()` vazia porque a nossa operação simplesmente devolve um tipo `Unit`).</span><span class="sxs-lookup"><span data-stu-id="2a0f3-125">You should see the message printed on the screen along with the result of the operation you invoked (here, we see the empty tuple `()` because our operation simply returns a `Unit` type).</span></span>
+        <span data-ttu-id="6b6c1-125">Deve ver a mensagem impressa no ecrã juntamente com o resultado da operação que invocou (aqui, vemos a tuple vazia porque a `()` nossa operação simplesmente devolve um `Unit` tipo).</span><span class="sxs-lookup"><span data-stu-id="6b6c1-125">You should see the message printed on the screen along with the result of the operation you invoked (here, we see the empty tuple `()` because our operation simply returns a `Unit` type).</span></span>
 
-## <a name="whats-next"></a><span data-ttu-id="2a0f3-126">O que se segue?</span><span class="sxs-lookup"><span data-stu-id="2a0f3-126">What's next?</span></span>
+## <a name="next-steps"></a><span data-ttu-id="6b6c1-126">Passos seguintes</span><span class="sxs-lookup"><span data-stu-id="6b6c1-126">Next steps</span></span>
 
-<span data-ttu-id="2a0f3-127">Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.write-program).</span><span class="sxs-lookup"><span data-stu-id="2a0f3-127">Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.write-program).</span></span>
+<span data-ttu-id="6b6c1-127">Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).</span><span class="sxs-lookup"><span data-stu-id="6b6c1-127">Now that you have installed the Quantum Development Kit in your preferred environment, you can write and run [your first quantum program](xref:microsoft.quantum.quickstarts.qrng).</span></span>
