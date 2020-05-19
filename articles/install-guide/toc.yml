@@ -5,9 +5,9 @@ items:
     href: standalone.md
   - name: 'Blocos de notas do Jupyter em Q#'
     href: qjupyter.md
-  - name: 'Utilizar o Q# com outras linguagens'
+  - name: 'Q# com outras linguagens'
     items:
-      - name: 'Utilizar o Q# com o Python'
+      - name: 'Q# com Python'
         href: pyinstall.md
-      - name: 'Utilizar o Q# com o .NET'
+      - name: 'Q# com .NET'
         href: csinstall.md
