@@ -1,19 +1,19 @@
 ---
-title: Desenvolver com cadernos Q# Jupyter
+title: Programar com Q# Jupyter Notebooks
 author: natke
 ms.author: nakersha
 ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 3302a9bd0652b2dea86b844058bf8303ee7a4a7f
-ms.sourcegitcommit: c85c1b439807ac576d3a11aadca307d57b059673
+ms.openlocfilehash: 0c4dc856c94b0a694fb99607eda64cec4d5c221d
+ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551044"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83660766"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Desenvolver com cadernos Q# Jupyter
+# <a name="develop-with-q-jupyter-notebooks"></a>Programar com Q# Jupyter Notebooks
 
 Instale o QDK para desenvolver operações q# em Cadernos Q# Jupyter.
 
@@ -45,9 +45,9 @@ IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyt
         jupyter notebook
         ```
 
-    - Para abrir a cópia do portátil jupyter e colar o URL fornecido pela linha de comando no seu navegador.
+    - Para abrir o Caderno Jupyter, copie e cole o URL fornecido pela linha de comando no seu navegador.
 
-    - Crie um Jupyter Notebook com um kernel Q# e adicione o seguinte código à primeira célula do bloco de notas:
+    - Crie um Caderno Jupyter com um núcleo Q# e adicione o seguinte código à primeira célula de caderno:
 
         ```qsharp
         operation SayHello () : Unit {
@@ -57,17 +57,21 @@ IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyt
 
     - Execute esta célula do bloco de notas:
 
-        ![Célula do Jupyter Notebook com código Q#](~/media/install-guide-jupyter.png)
+        ![Célula de caderno jupyter com código Q#](~/media/install-guide-jupyter.png)
 
-        Deverá ver `SayHello` na saída da célula. Ao executar em Jupyter Notebooks, o código Q# é compilado e o bloco de notas produz o nome das operações que encontra.
+        Deverá ver `SayHello` na saída da célula. Ao ser recorrido no Caderno Jupyter, o código Q# é compilado e o caderno produz o nome da operação(s) que encontra.
 
 
     - Numa nova célula, execute a operação que acabou de criar (num simulador) utilizando o `%simulate` comando:
 
-        ![Célula do Jupyter Notebook com o magic %simulate](~/media/install-guide-jupyter-simulate.png)
+        ![Célula de caderno jupyter com %simulamagia](~/media/install-guide-jupyter-simulate.png)
 
         Deve ver a mensagem impressa no ecrã juntamente com o resultado da operação que invocou (aqui, vemos a tuple vazia porque a `()` nossa operação simplesmente devolve um `Unit` tipo).
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).
+Agora que instalou o QDK para Os Cadernos Q# Jupyter, pode escrever e executar [o seu primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng) escrevendo o seu código Q# diretamente dentro do ambiente jupyter Notebook.
+
+Para mais exemplos do que pode fazer com os Cadernos Q# Jupyter, por favor dê uma olhada em:
+- [Introdução a Q# e Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Lá você encontrará um Caderno Q# Jupyter que mostra como usar Q# neste ambiente.
+- [Quantum Katas](xref:microsoft.quantum.overview.katas), uma coleção de tutoriais auto-pacatos e conjuntos de exercícios de programação sob a forma de Cadernos Q# Jupyter. Os [cadernos tutoriais Quantum Katas](https://github.com/microsoft/QuantumKatas#tutorial-topics) são um bom ponto de partida. Os Quantum Katas destinam-se a ensinar-lhe elementos de computação quântica e programação Q# ao mesmo tempo. São um excelente exemplo do tipo de conteúdo que se pode criar com os Cadernos Q# Jupyter.
