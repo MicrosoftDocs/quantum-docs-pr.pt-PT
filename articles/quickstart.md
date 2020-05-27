@@ -1,23 +1,25 @@
 ---
-title: Noções básicas dos programas quânticos com Q#
+title: Explorar o entrelaçamento com Q#
 description: Saiba como escrever um programa quântico em Q#. Desenvolver uma aplicação de Estado de Bell com o Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
 ms.date: 10/07/2019
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 8d3b2d7c8da39a961f4eedcc5989ad3a1e134ade
-ms.sourcegitcommit: 7d350db4b5e766cd243633aee7d0a839b6274bd6
+ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
+ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "77906734"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426833"
 ---
-# <a name="quantum-basics-with-q"></a>Noções básicas dos programas quânticos com Q#
+# <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Explorar o entrelaçamento com Q\#
 
-Neste Início Rápido, mostramos como escrever um programa em Q# que manipula e mede qubits, além de demonstrar os efeitos da sobreposição e do entrelaçamento.  Este guia vai orientá-lo na instalação do QDK, na compilação do programa e na execução desse programa num simulador quântico.  
+Neste tutorial, mostramos como escrever um programa em Q# que manipula e mede qubits e demonstra os efeitos da sobreposição e do entrelaçamento.
+Este guia vai orientá-lo na instalação do QDK, na compilação do programa e na execução desse programa num simulador quântico.  
 
-Vai escrever uma aplicação denominada Bell para demonstrar o entrelaçamento quântico.  O nome Bell refere-se aos estados de Bell, que são estados quânticos específicos de dois qubits, utilizados para representar os exemplos mais simples de sobreposição e de entrelaçamento quântico. 
+Vai escrever uma aplicação denominada Bell para demonstrar o entrelaçamento quântico.
+O nome Bell refere-se aos estados de Bell, que são estados quânticos específicos de dois qubits, utilizados para representar os exemplos mais simples de sobreposição e de entrelaçamento quântico.
 
 ## <a name="pre-requisites"></a>Pré-requisitos
 
@@ -30,7 +32,7 @@ Também pode acompanhar a narrativa sem instalar o QDK e rever as descrições g
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Demonstrar o comportamento dos qubits com Q#
 
-Lembre-se da nossa [definição de qubit](xref:microsoft.quantum.overview.what#the-qubit) simples.  Enquanto os bits clássicos contêm um único valor binário como 0 ou 1, o estado de um qubit pode estar numa **sobreposição** de 0 e 1 simultaneamente.  Conceitualmente, um qubit pode ser pensado como uma direção no espaço (também conhecido como um vetor).  Um qubit pode estar em qualquer uma das possíveis direções. Os dois **estados clássicos** são as duas direções, que representam 100% de probabilidade de medir 0 e 100% de probabilidade de medir 1.  Esta representação também é visualizada mais formalmente pela [Esfera de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
+Lembre-se da nossa [definição de qubit](xref:microsoft.quantum.overview.understanding) simples.  Enquanto os bits clássicos contêm um único valor binário como 0 ou 1, o estado de um qubit pode estar numa **sobreposição** de 0 e 1 simultaneamente.  Conceitualmente, um qubit pode ser pensado como uma direção no espaço (também conhecido como um vetor).  Um qubit pode estar em qualquer uma das possíveis direções. Os dois **estados clássicos** são as duas direções, que representam 100% de probabilidade de medir 0 e 100% de probabilidade de medir 1.  Esta representação também é visualizada mais formalmente pela [Esfera de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 
 O ato de medição produz um resultado binário e altera o estado de um qubit. A medição produz um valor binário de 0 ou 1.  O qubit vai do estado de sobreposição (qualquer direção) até um dos estados clássicos.  Depois disso, repetir a mesma medição sem nenhuma operação intermediária produz o mesmo resultado binário.  
@@ -498,7 +500,7 @@ Parabéns! Acabou de escrever o primeiro programa quântico.
 
 ## <a name="whats-next"></a>Passos seguintes?
 
-O Início Rápido [Pesquisa de Grover](xref:microsoft.quantum.quickstarts.search) mostra como compilar e executar a pesquisa de Grover, um dos algoritmos de computação quântica mais populares e dá um ótimo exemplo de um programa Q# que pode ser utilizado para resolver problemas reais através de computação quântica.  
+O tutorial [Pesquisa de Grover](xref:microsoft.quantum.quickstarts.search) mostra como compilar e executar a pesquisa de Grover, um dos algoritmos de computação quântica mais populares e dá um ótimo exemplo de um programa Q# que pode ser utilizado para resolver problemas reais através da computação quântica.  
 
 A [Introdução ao Quantum Development Kit](xref:microsoft.quantum.welcome) recomenda mais formas de aprender a linguagem Q# e a programação quântica.
 
