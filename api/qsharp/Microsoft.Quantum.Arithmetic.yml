@@ -1,51 +1,51 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.arithmetic
 name: Microsoft.Quantum.Arithmetic
-summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações usadas para computação coerente aritmética."
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações usadas para aritmética de computação coerente."
 functions:
 - uid: microsoft.quantum.arithmetic.bigendianaslittleendian
-  summary: Converte `BigEndian` um registo qubit para um `LittleEndian` registo qubit invertendo a encomenda qubit.
+  summary: Converte um `BigEndian` registo de qubits num `LittleEndian` registo qubit invertendo o pedido de qubit.
 - uid: microsoft.quantum.arithmetic.identicalformatfactfxp
-  summary: Afirme que todos os números de pontofixo na matriz fornecida têm posições de ponto idênticas e números qubit.
+  summary: Afirma que todos os números de pontos fixos na matriz fornecida têm posições de ponto idênticas e números de qubit.
 - uid: microsoft.quantum.arithmetic.identicalpointposfactfxp
-  summary: Afirme que todos os números de pontos fixos na matriz fornecida têm posições de ponto idênticas ao contar da parte menos significativa. Ou seja, o número de bits menos posição de ponto deve ser constante para todos os números fixos da matriz.
+  summary: Afirma que todos os números de pontos fixos na matriz fornecida têm posições de ponto idênticas quando contam a partir da parte menos significativa. Ou seja, o número de bits menos posição de ponto deve ser constante para todos os números de ponto fixo na matriz.
 - uid: microsoft.quantum.arithmetic.littleendianasbigendian
-  summary: Converte `LittleEndian` um registo qubit para um `BigEndian` registo qubit invertendo a encomenda qubit.
+  summary: Converte um `LittleEndian` registo de qubits num `BigEndian` registo qubit invertendo o pedido de qubit.
 - uid: microsoft.quantum.arithmetic.reversedopbe
-  summary: Dada uma operação que requer uma entrada de grande fim, devolve uma nova operação que requer uma entrada pouco endiana.
+  summary: Dada uma operação que requer uma entrada de grande ponta, devolve uma nova operação que requer uma entrada pouco endiana.
 - uid: microsoft.quantum.arithmetic.reversedopbea
-  summary: Dada uma operação que requer uma entrada de grande fim, devolve uma nova operação que requer uma entrada pouco endiana.
+  summary: Dada uma operação que requer uma entrada de grande ponta, devolve uma nova operação que requer uma entrada pouco endiana.
 - uid: microsoft.quantum.arithmetic.reversedopbec
-  summary: Dada uma operação que requer uma entrada de grande fim, devolve uma nova operação que requer uma entrada pouco endiana.
+  summary: Dada uma operação que requer uma entrada de grande ponta, devolve uma nova operação que requer uma entrada pouco endiana.
 - uid: microsoft.quantum.arithmetic.reversedopbeca
-  summary: Dada uma operação que requer uma entrada de grande fim, devolve uma nova operação que requer uma entrada pouco endiana.
+  summary: Dada uma operação que requer uma entrada de grande ponta, devolve uma nova operação que requer uma entrada pouco endiana.
 - uid: microsoft.quantum.arithmetic.reversedople
-  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma entrada de grande fim.
+  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma grande entrada de luxo.
 - uid: microsoft.quantum.arithmetic.reversedoplea
-  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma entrada de grande fim.
+  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma grande entrada de luxo.
 - uid: microsoft.quantum.arithmetic.reversedoplec
-  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma entrada de grande fim.
+  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma grande entrada de luxo.
 - uid: microsoft.quantum.arithmetic.reversedopleca
-  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma entrada de grande fim.
+  summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma grande entrada de luxo.
 operations:
 - uid: microsoft.quantum.arithmetic.addconstantfxp
   summary: Adiciona uma constante clássica a um número de ponto fixo quântico.
 - uid: microsoft.quantum.arithmetic.addfxp
-  summary: Adiciona dois números fixos armazenados em registos quânticos.
+  summary: Adiciona dois números de ponto fixo armazenados em registos quânticos.
 - uid: microsoft.quantum.arithmetic.addi
-  summary: Escolhe automaticamente entre a adição com transporte e sem `ys`transporte, dependendo da dimensão do registo de .
+  summary: Escolhe automaticamente entre adição com transporte e sem, dependendo do tamanho do registo de `ys` .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphasele
-  summary: Aplica uma operação que <xref:microsoft.quantum.arithmetic.phaselittleendian> toma um registo como entrada <xref:microsoft.quantum.arithmetic.littleendian>num registo-alvo de tipo .
+  summary: Aplica uma operação que toma um <xref:microsoft.quantum.arithmetic.phaselittleendian> registo como entrada num registo-alvo do tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselea
-  summary: Aplica uma operação que <xref:microsoft.quantum.arithmetic.phaselittleendian> toma um registo como entrada <xref:microsoft.quantum.arithmetic.littleendian>num registo-alvo de tipo .
+  summary: Aplica uma operação que toma um <xref:microsoft.quantum.arithmetic.phaselittleendian> registo como entrada num registo-alvo do tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaselec
-  summary: Aplica uma operação que <xref:microsoft.quantum.arithmetic.phaselittleendian> toma um registo como entrada <xref:microsoft.quantum.arithmetic.littleendian>num registo-alvo de tipo .
+  summary: Aplica uma operação que toma um <xref:microsoft.quantum.arithmetic.phaselittleendian> registo como entrada num registo-alvo do tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applyleoperationonphaseleca
-  summary: Aplica uma operação que <xref:microsoft.quantum.arithmetic.phaselittleendian> toma um registo como entrada <xref:microsoft.quantum.arithmetic.littleendian>num registo-alvo de tipo .
+  summary: Aplica uma operação que toma um <xref:microsoft.quantum.arithmetic.phaselittleendian> registo como entrada num registo-alvo do tipo <xref:microsoft.quantum.arithmetic.littleendian> .
 - uid: microsoft.quantum.arithmetic.applymajorityinplace
-  summary: Aplica a operação maioritária de três qubits em vigor num registo de qubits.
+  summary: Aplica a operação por maioria de três qubits no local num registo de qubits.
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
-  summary: Aplica uma operação que <xref:microsoft.quantum.arithmetic.littleendian> toma um registo como entrada <xref:microsoft.quantum.arithmetic.phaselittleendian>num registo-alvo de tipo .
+  summary: Aplica uma operação que toma um <xref:microsoft.quantum.arithmetic.littleendian> registo como entrada num registo-alvo do tipo <xref:microsoft.quantum.arithmetic.phaselittleendian> .
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlea
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonlec
@@ -53,135 +53,130 @@ operations:
 - uid: microsoft.quantum.arithmetic.applyphaseleoperationonleca
   summary: ''
 - uid: microsoft.quantum.arithmetic.applyreversedopbe
-  summary: Aplica uma operação que leva a entrada de grande endiano a um registo codificando um inteiro não assinado usando formato pouco endiano.
+  summary: Aplica uma operação que leva a entrada de grande ponta a um registo que codifica um número inteiro não assinado usando um formato de pequena ponta.
 - uid: microsoft.quantum.arithmetic.applyreversedopbea
-  summary: Aplica uma operação que leva a entrada de grande endiano a um registo codificando um inteiro não assinado usando formato pouco endiano.
+  summary: Aplica uma operação que leva a entrada de grande ponta a um registo que codifica um número inteiro não assinado usando um formato de pequena ponta.
 - uid: microsoft.quantum.arithmetic.applyreversedopbec
-  summary: Aplica uma operação que leva a entrada de grande endiano a um registo codificando um inteiro não assinado usando formato pouco endiano.
+  summary: Aplica uma operação que leva a entrada de grande ponta a um registo que codifica um número inteiro não assinado usando um formato de pequena ponta.
 - uid: microsoft.quantum.arithmetic.applyreversedopbeca
-  summary: Aplica uma operação que leva a entrada de grande endiano a um registo codificando um inteiro não assinado usando formato pouco endiano.
+  summary: Aplica uma operação que leva a entrada de grande ponta a um registo que codifica um número inteiro não assinado usando um formato de pequena ponta.
 - uid: microsoft.quantum.arithmetic.applyreversedople
-  summary: Aplica uma operação que leva a entrada de pouco endiano a um registo codificando um inteiro não assinado usando o formato big endian.
+  summary: Aplica uma operação que leva a entrada pouco endiana a um registo que codifica um número inteiro não assinado usando o formato de grande ponta.
 - uid: microsoft.quantum.arithmetic.applyreversedoplea
-  summary: Aplica uma operação que leva a entrada de pouco endiano a um registo codificando um inteiro não assinado usando o formato big endian.
+  summary: Aplica uma operação que leva a entrada pouco endiana a um registo que codifica um número inteiro não assinado usando o formato de grande ponta.
 - uid: microsoft.quantum.arithmetic.applyreversedoplec
-  summary: Aplica uma operação que leva a entrada de pouco endiano a um registo codificando um inteiro não assinado usando o formato big endian.
+  summary: Aplica uma operação que leva a entrada pouco endiana a um registo que codifica um número inteiro não assinado usando o formato de grande ponta.
 - uid: microsoft.quantum.arithmetic.applyreversedopleca
-  summary: Aplica uma operação que leva a entrada de pouco endiano a um registo codificando um inteiro não assinado usando o formato big endian.
+  summary: Aplica uma operação que leva a entrada pouco endiana a um registo que codifica um número inteiro não assinado usando o formato de grande ponta.
 - uid: microsoft.quantum.arithmetic.applyxorinplace
-  summary: Aplica uma operação bitwise-XOR entre um inteiro clássico e um inteiro representado por um registo de qubits.
+  summary: Aplica uma operação pouco-XOR entre um inteiro clássico e um inteiro representado por um registo de qubits.
 - uid: microsoft.quantum.arithmetic.assertallzerofxp
-  summary: Função auxiliar para afirmar que um número de ponto fixo quântico é inicializado para zero,{0}ou seja, todos os qubits estão no estado $\ket $.
+  summary: Função do ajudante para afirmar que um número de ponto fixo quântico é inicializado para zero, ou seja, todos os qubits estão no estado $\ket {0} $.
 - uid: microsoft.quantum.arithmetic.assertmostsignificantbit
-  summary: Afirma que o qubit mais significativo de um registo qubit que representa um inteiro não assinado está num determinado estado.
+  summary: Afirma que o qubit mais significativo de um registo qubit que representa um número inteiro não assinado está num determinado estado.
 - uid: microsoft.quantum.arithmetic.assertphaselessthan
-  summary: Afirma que `number` o codificado em PhaseLittleEndian `value`é inferior a .
+  summary: Afirma que o `number` codificado na FaseLittleEndian é inferior `value` a .
 - uid: microsoft.quantum.arithmetic.assertprobint
   summary: Afirma que a probabilidade de um estado específico de um registo quântico tem o valor esperado.
 - uid: microsoft.quantum.arithmetic.carry
-  summary: Implementa um portão de transporte reversível. `carryIn` Dada uma broca de transporte codificada em qubit e dois pedaços de soma codificados e, `summand1` `summand2` `summand2` `carryOut` `summand1` `summand2`calcula o bitwise xor de, `carryIn`e no qubit e na execução é xored ao qubit .
-- uid: microsoft.quantum.arithmetic.cascadeccnot
-  summary: >-
-    Implementa uma cascata de portões CCNOT controladas em bits correspondentes de dois registos qubit, atuando no próximo qubit de um dos registos.
-
-    Partindo dos qubits da posição 0 em ambos os registos como controlos, o CCNOT é aplicado ao qubit na posição 1 do registo-alvo, e depois controlado pelos qubits `Length(nQubits)-1`na posição 1, atuando no qubit na posição 2 no registo-alvo, etc., terminando com uma ação sobre o qubit-alvo na posição .
+  summary: Implementa um portão de transporte reversível. Dado um bit de transporte codificado em qubit `carryIn` e dois bits resumidos `summand1` `summand2` e, calcula o bitwise xor de `carryIn` , e no `summand1` `summand2` qubit e na `summand2` execução é xored para o qubit `carryOut` .
 - uid: microsoft.quantum.arithmetic.comparegreaterthanfxp
-  summary: Compara dois números fixos armazenados em registos quânticos e controla uma inversão no resultado.
+  summary: Compara dois números de pontos fixos armazenados em registos quânticos e controla uma inversão do resultado.
 - uid: microsoft.quantum.arithmetic.comparegti
-  summary: 'Invólucro para comparação `result = x > y`de inteiros: .'
+  summary: 'Invólucro para comparação de inteiros: `result = x > y` .'
 - uid: microsoft.quantum.arithmetic.comparegtsi
-  summary: 'Invólucro para comparação de `result = xs > ys`inteiroassinado: .'
+  summary: 'Invólucro para comparação de inteiros assinado: `result = xs > ys` .'
 - uid: microsoft.quantum.arithmetic.compareusingripplecarry
-  summary: Esta operação testa se um inteiro representado por um registo de qubits for maior do que outro inteiro, aplicando um XOR do resultado num qubit de saída.
+  summary: Esta operação testa se um número inteiro representado por um registo de qubits for maior do que outro número inteiro, aplicando um XOR do resultado num qubit de saída.
 - uid: microsoft.quantum.arithmetic.computereciprocalfxp
-  summary: Calcula $1/x$ por um número de ponto fixo $x$.
+  summary: Calcula $1/x$ para um número de ponto fixo $x$.
 - uid: microsoft.quantum.arithmetic.computereciprocali
-  summary: Calcula o 1/x recíproco para um inteiro não assinado x usando divisão inteiro. O resultado, interpretado como um inteiro, `floor(2^(2*n-1) / x)`será.
+  summary: Calcula o 1/x recíproco para um inteiro inteiro não assinado x usando a divisão inteiro. O resultado, interpretado como um inteiro, `floor(2^(2*n-1) / x)` será.
 - uid: microsoft.quantum.arithmetic.copymostsignificantbit
-  summary: Copia a parte mais significativa `from` de um registo qubit que `target`representa um inteiro não assinado no qubit .
+  summary: Copia a parte mais significativa de um registo qubit `from` que representa um número inteiro não assinado no qubit `target` .
 - uid: microsoft.quantum.arithmetic.dividei
   summary: Divide dois inteiros quânticos.
 - uid: microsoft.quantum.arithmetic.evaluateevenpolynomialfxp
-  summary: Avalia um mesmo polinómio numa representação fixa.
+  summary: Avalia um polinómio uniforme numa representação de ponto fixo.
 - uid: microsoft.quantum.arithmetic.evaluateoddpolynomialfxp
-  summary: Avalia um polinómio estranho numa representação fixa.
+  summary: Avalia um polinômio ímpar numa representação de ponto fixo.
 - uid: microsoft.quantum.arithmetic.evaluatepolynomialfxp
-  summary: Avalia um polinómio numa representação fixa.
+  summary: Avalia um polinómio numa representação de ponto fixo.
 - uid: microsoft.quantum.arithmetic.greaterthan
-  summary: Aplica uma comparação maior do que duas inteiros codificadas em registos qubit, lançando um qubit-alvo com base no resultado da comparação.
+  summary: Aplica uma comparação maior do que a comparação entre dois inteiros codificados em registos qubit, lançando um qubit alvo com base no resultado da comparação.
 - uid: microsoft.quantum.arithmetic.incrementbyinteger
-  summary: Incrementa um registo quântico não assinado por um inteiro clássico, utilizando rotações de fase.
+  summary: Incrementa um registo quântico não assinado por um inteiro clássico, usando rotações de fase.
 - uid: microsoft.quantum.arithmetic.incrementbymodularinteger
   summary: Executa um incremento modular de um registo qubit por uma constante de inteiro.
 - uid: microsoft.quantum.arithmetic.incrementphasebyinteger
-  summary: Incrementa um registo quântico não assinado por um inteiro clássico, utilizando rotações de fase.
+  summary: Incrementa um registo quântico não assinado por um inteiro clássico, usando rotações de fase.
 - uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
   summary: Executa um incremento modular de um registo qubit por uma constante de inteiro.
 - uid: microsoft.quantum.arithmetic.invert2ssi
-  summary: Inverte um dado complemento de modulo 2 inteiro.
+  summary: Inverte um determinado complemento inteiro de modulo 2.
 - uid: microsoft.quantum.arithmetic.maj
-  summary: Isto aplica a operação maioritária em vigor a 3 qubits.
+  summary: Isto aplica a operação de maioria no local a 3 qubits.
 - uid: microsoft.quantum.arithmetic.measurefxp
-  summary: Meça um número fixo, devolve o seu valor como Duplo e repõe todo o registo para zero.
+  summary: Meça um número de ponto fixo, devolva o seu valor como Double, e repõe todo o registo para zero.
 - uid: microsoft.quantum.arithmetic.measureinteger
-  summary: Mede o conteúdo de um registo quântico e converte-o num inteiro. A medição é efetuada no que diz respeito à base computacional `PauliZ`padrão, ou seja, a base eigende de .
+  summary: Mede o conteúdo de um registo quântico e converte-o num inteiro. A medição é efetuada no que diz respeito à base computacional padrão, ou seja, a eigenbasis de `PauliZ` .
 - uid: microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
-  summary: Executa uma multiplicação modular e adicione por constantes de inteiros num registo qubit.
+  summary: Executa uma multiplicação modular multiplicadora e adiciona por constantes de número inteiro num registo qubit.
 - uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
-  summary: O mesmo que MultiplyAndAddByModularInteger, mas assume que o resumo codifica os inteiros na base QFT.
+  summary: O mesmo que MultiplyAndAddByModularInteger, mas assume que os sumários e codificam inteiros em QFT.
 - uid: microsoft.quantum.arithmetic.multiplybymodularinteger
-  summary: Executa multiplicação modular por uma constante de inteiro num registo qubit.
+  summary: Executa a multiplicação modular por uma constante de número inteiro num registo qubit.
 - uid: microsoft.quantum.arithmetic.multiplyfxp
-  summary: Multiplica dois números fixos nos registos quânticos.
+  summary: Multiplica dois números de pontos fixos nos registos quânticos.
 - uid: microsoft.quantum.arithmetic.multiplyi
-  summary: Multiplique o `xs` inteiro por `ys` inteiro e `result`guarde o resultado em , que deve ser zero inicialmente.
+  summary: Multiplique o inteiro `xs` por inteiro `ys` e guarde o resultado em , `result` que deve ser zero inicialmente.
 - uid: microsoft.quantum.arithmetic.multiplysi
-  summary: Multiplique o `xs` inteiro assinado por `ys` inteiro assinado `result`e guarde o resultado em , que deve ser zero inicialmente.
+  summary: Multiplique o inteiro assinado `xs` por inteiro assinado e `ys` guarde o resultado em , que deve `result` ser zero inicialmente.
 - uid: microsoft.quantum.arithmetic.preparefxp
-  summary: Inicialize um número quântico fixo para uma constante clássica.
+  summary: Inicialize um número de ponto fixo quântico para uma constante clássica.
 - uid: microsoft.quantum.arithmetic.reflectaboutinteger
-  summary: Reflete um registo quântico sobre um dado inteiro clássico.
+  summary: Reflete um registo quântico sobre um dado número inteiro clássico.
 - uid: microsoft.quantum.arithmetic.ripplecarryaddercdkm
-  summary: Reversível, no lugar ondulação-carry adição de dois inteiros.
+  summary: Reversível, adição de dois inteiros.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderd
   summary: >-
-    Reversível, no lugar ondulação-carry adição de dois inteiros.
+    Reversível, adição de dois inteiros.
 
-    Tendo em conta duas $n inteiros codificados nos `xs` registos `ys`littleEndian e , e um transporte qubit, a operação calcula a soma dos dois inteiros `ys` onde os $n$ menos significativos `carry`do resultado são mantidos e a broca de execução é xored ao qubit .
+    Tendo em conta dois inteiros $n de $-bit codificados nos registos de LittleEndian `xs` e , e um transporte `ys` qubit, a operação calcula a soma dos dois inteiros onde os $n$ menos significativos do resultado são mantidos `ys` e a broca de execução é recortada ao qubit `carry` .
 - uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
-  summary: Reversível, no lugar, a adição de dois inteiros sem realizar.
+  summary: Adição reversível e ondulante de dois inteiros sem realização.
 - uid: microsoft.quantum.arithmetic.ripplecarryadderttk
   summary: >-
-    Reversível, no lugar ondulação-carry adição de dois inteiros.
+    Reversível, adição de dois inteiros.
 
-    Tendo em conta duas $n inteiros codificados nos `xs` registos `ys`littleEndian e , e um transporte qubit, a operação calcula a soma dos dois inteiros `ys` onde os $n$ menos significativos `carry`do resultado são mantidos e a broca de execução é xored ao qubit .
+    Tendo em conta dois inteiros $n de $-bit codificados nos registos de LittleEndian `xs` e , e um transporte `ys` qubit, a operação calcula a soma dos dois inteiros onde os $n$ menos significativos do resultado são mantidos `ys` e a broca de execução é recortada ao qubit `carry` .
 - uid: microsoft.quantum.arithmetic.squarefxp
-  summary: Quadrados um número fixo.
+  summary: Quadrados um número de ponto fixo.
 - uid: microsoft.quantum.arithmetic.squarei
-  summary: Computa o quadrado do `xs` inteiro, `result`que deve ser zero inicialmente.
+  summary: Calcula o quadrado do inteiro `xs` em , que deve ser zero `result` inicialmente.
 - uid: microsoft.quantum.arithmetic.squaresi
-  summary: Quadrado assinado inteiro `xs` e armazenar `result`o resultado em , que deve ser zero inicialmente.
+  summary: A Praça assinou o inteiro `xs` e armazena o resultado em , que deve ser zero `result` inicialmente.
 - uid: microsoft.quantum.arithmetic.sum
-  summary: Implementa um portão de soma reversível. Dada uma `carryIn` broca de transporte codificada em qubit e dois pedaços de soma codificados e, `summand1` `summand2` `summand2` `summand1` `summand2`calcula o bitwise xor de `carryIn`, e no qubit .
+  summary: Implementa um portão de soma reversível. Dado um bit de transporte codificado em qubit `carryIn` e dois bits resumidos `summand1` `summand2` e, calcula o bitwise xor de `carryIn` , e no `summand1` `summand2` qubit `summand2` .
 newtypes:
 - uid: microsoft.quantum.arithmetic.bigendian
-  summary: Registe-se que codifica um inteiro não assinado por ordem grande. O qubit `0` com índice codifica a parte mais alta de um inteiro não assinado.
+  summary: Registe-se que codifica um inteiro não assinado em ordem de grande ponta. O qubit com índice `0` codifica a parte mais alta de um inteiro não assinado.
 - uid: microsoft.quantum.arithmetic.fixedpoint
-  summary: Representa um registo de qubits que codificam um número fixo. Consiste num inteiro que é igual ao número de qubits à esquerda do ponto binário, ou seja, qubits de peso superior ou igual a 1, e um registo quântico.
+  summary: Representa um registo de qubits codificando um número de ponto fixo. Consiste num número inteiro que é igual ao número de qubits à esquerda do ponto binário, ou seja, qubits de peso superior ou igual a 1, e um registo quântico.
 - uid: microsoft.quantum.arithmetic.littleendian
-  summary: Registe-se que codifica um inteiro não assinado por ordem pequena. O qubit `0` com índice codifica a parte mais baixa de um inteiro não assinado.
+  summary: Registe-se que codifica um número inteiro não assinado em ordem de pequeno-endian. O qubit com índice `0` codifica a parte mais baixa de um número inteiro não assinado.
 - uid: microsoft.quantum.arithmetic.phaselittleendian
   summary: >-
-    Os inteiros não assinados não assinados na base qFT.
+    Pequenos inteiros não assinados na base QFT.
 
 
-    Por exemplo, se $\ket{x}$ é a codificação pouco endiana do inteiro $x$ na base computacional, então o nome de operador de $\{QFTLE} \ket{x}$ é a codificação de $x$ na base QFT.
+    Por exemplo, se $\ket{x}$ é a codificação pouco-endiana do inteiro $x$ na base computacional, então $\operatorname{QFTLE} \ket{x}$ é a codificação de $x$ na base QFT.
 - uid: microsoft.quantum.arithmetic.signedlittleendian
-  summary: Tipo de inteiro assinado armazenado em pequeno endiano (ver LittleEndian).
+  summary: Tipo de inteiro assinado armazenado em pequeno endian (ver LittleEndian).
 metadata:
-  ms.openlocfilehash: eda1d6d9037caecd7a2f0d91acdc0e59d34efe41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e43f31c738b48413ead40e16fbbfe4185b8a57d
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675499"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326732"
