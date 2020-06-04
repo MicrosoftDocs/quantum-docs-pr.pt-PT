@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: 55ac946aa935d3748b36ac99096a89d0db686835
-ms.sourcegitcommit: a03d79ca3f0774161a9f86a15528d36e1291acce
+ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433032"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327714"
 ---
 # <a name="what-are-the-q-programming-language-and-qdk"></a>O que é a linguagem de programação Q# e o QDK?
 
@@ -71,5 +71,4 @@ O Q# é uma linguagem de programação open-source para desenvolver programas qu
 
 ## <a name="next-steps"></a>Passos Seguintes
 
-> [!div class="nextstepaction"]
-> [Álgebra linear para computação quântica](xref:microsoft.quantum.overview.algebra)
+[Álgebra linear para computação quântica](xref:microsoft.quantum.overview.algebra)
