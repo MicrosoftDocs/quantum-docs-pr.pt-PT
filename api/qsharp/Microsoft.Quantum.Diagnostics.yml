@@ -6,24 +6,26 @@ functions:
   summary: Afirma que duas matrizes de valores booleanos são iguais.
 - uid: microsoft.quantum.diagnostics.allequalityfacti
   summary: Afirma que duas matrizes de valores inteiros são iguais.
+- uid: microsoft.quantum.diagnostics.contradiction
+  summary: Declara que uma condição clássica é falsa.
 - uid: microsoft.quantum.diagnostics.dumpmachine
-  summary: Despeja o estado da máquina-alvo atual.
+  summary: Despeja o estado atual da máquina alvo.
 - uid: microsoft.quantum.diagnostics.dumpregister
-  summary: Despeja o estado atual da máquina-alvo associado aos qubits dado.
+  summary: Despeja o estado atual da máquina-alvo associada aos qubits dados.
 - uid: microsoft.quantum.diagnostics.equalityfactb
-  summary: Afirma que uma variável clássica de Bool tem o valor esperado.
+  summary: Afirma que uma variável bool clássica tem o valor esperado.
 - uid: microsoft.quantum.diagnostics.equalityfactc
   summary: Afirma que um número complexo tem o valor esperado.
 - uid: microsoft.quantum.diagnostics.equalityfactcp
   summary: Afirma que um número complexo tem o valor esperado.
 - uid: microsoft.quantum.diagnostics.equalityfacti
-  summary: Afirma que uma variável clássica do Int tem o valor esperado.
+  summary: Afirma que uma variável int clássica tem o valor esperado.
 - uid: microsoft.quantum.diagnostics.equalityfactl
   summary: Afirma que uma variável clássica bigint tem o valor esperado.
 - uid: microsoft.quantum.diagnostics.equalityfactr
-  summary: Afirma que uma variável clássica de Resultado tem o valor esperado.
+  summary: Afirma que uma variável de Resultado clássico tem o valor esperado.
 - uid: microsoft.quantum.diagnostics.equalitywithintolerancefact
-  summary: Representa a alegação de que um valor de ponto flutuante clássico tem o valor esperado até uma determinada tolerância absoluta.
+  summary: Representa a alegação de que um valor clássico do ponto flutuante tem o valor esperado até uma certa tolerância absoluta.
 - uid: microsoft.quantum.diagnostics.fact
   summary: Declara que uma condição clássica é verdadeira.
 - uid: microsoft.quantum.diagnostics.nearequalityfactc
@@ -31,60 +33,60 @@ functions:
 - uid: microsoft.quantum.diagnostics.nearequalityfactcp
   summary: Afirma que um número complexo clássico tem o valor esperado até uma pequena tolerância de 1e-10.
 - uid: microsoft.quantum.diagnostics.nearequalityfactd
-  summary: Afirma que um valor de ponto flutuante clássico tem o valor esperado até uma pequena tolerância de 1e-10.
+  summary: Afirma que um valor clássico do ponto flutuante tem o valor esperado até uma pequena tolerância de 1e-10.
 operations:
 - uid: microsoft.quantum.diagnostics.assertallzero
-  summary: Afirma que dado que os qubits estão todos em $\ket{0}$$ estado.
+  summary: Afirma que os qubits dados estão todos em estado de $\ket$ {0}
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
-  summary: Afirma que dado que os qubits estão todos em $\ket{0}$ estado até uma determinada tolerância.
+  summary: Afirma que os qubits dados estão todos em estado de $\ket {0} $ até uma certa tolerância.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
-    Tendo em conta duas operações, afirma que agem de forma idêntica para todos os Estados inputs.
+    Tendo em conta duas operações, afirma que agem de forma idêntica para todos os estados de entrada.
 
 
-    Esta afirmação é implementada verificando a ação das operações em todos os estados do formulário $V_0 \otimes... \otimes V_{n-1}$, onde $V_k$ é um dos estados $\ket{0}$, $\ket{1}{+}$ e $\ket{}} e $\ket{i}$ (+1 eigenstate do operador Pauli Y).
+    Esta afirmação é implementada verificando a ação das operações em todos os estados do formulário $V_0 \otimes ... \otimes V_{n-1}$, onde $V_k$ é um dos estados $\ket {0} $,$ket {1} $, $\ket{+}$ e $\ket{i}$ (+1 eigenstate do operador Pauli Y).
 
 
-    Esta afirmação utiliza qubits $n$ e requer múltiplas chamadas das operações a serem comparadas.
+    Esta afirmação utiliza $n$ qubits e requer múltiplas chamadas das operações a serem comparadas.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
   summary: >-
-    Verifica se `givenU` a operação é `expectedU` igual à operação no tamanho da entrada dada, verificando a ação das operações apenas nos vetores a partir da base computacional.
+    Verifica se a operação `givenU` é igual à operação no tamanho de entrada `expectedU` dado, verificando a ação das operações apenas nos vetores a partir da base computacional.
 
-    Esta é uma condição necessária, mas não suficiente, para a igualdade de dois unitários.
+    Esta é uma condição necessária, mas não suficiente, para a igualdade de duas unitárias.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
   summary: >-
-    Tendo em conta duas operações, afirma que agem de forma idêntica para todos os Estados inputs.
+    Tendo em conta duas operações, afirma que agem de forma idêntica para todos os estados de entrada.
 
 
-    Esta afirmação é implementada usando o isomorfismo Choi-Jamiłkowski para reduzir a afirmação a uma de uma afirmação do Estado qubit em dois registos emaranhados.
+    Esta afirmação é implementada usando o isomorfismo Choi-Jamiłkowski para reduzir a afirmação a uma afirmação de estado qubit em dois registos emaranhados.
 
     Assim, esta operação necessita apenas de uma única chamada para cada operação que está a ser testada, mas requer o dobro dos qubits a serem atribuídos.
 
-    Esta afirmação pode ser usada para garantir, por exemplo, que uma versão otimizada de uma operação age de forma idêntica à sua implementação ingénua, ou que uma operação que atua numa série de inputs não quânticos concorda com casos conhecidos.
+    Esta afirmação pode ser usada para garantir, por exemplo, que uma versão otimizada de uma operação age de forma idêntica à sua implementação ingénua, ou que uma operação que atua numa série de entradas não quânticas concorda com casos conhecidos.
 - uid: microsoft.quantum.diagnostics.assertqubit
-  summary: Afirma que o `q` qubit está no eigenstate esperado do operador Pauli Z.
+  summary: Afirma que o qubit `q` está no estado esperado do operador Pauli Z.
 - uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
   summary: >-
     Afirma que um qubit no estado esperado.
 
 
-    `expected`representa um vetor complexo, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.
+    `expected`representa um vetor complexo, $\ket{\psi} = \start{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}}$.
 
-    O primeiro elemento das tuples que representam cada um dos $a$, $b$ é a parte real do número complexo, enquanto o segundo é a parte imaginária.
+    O primeiro elemento dos tuples que representam cada um dos $a$, $b$ é a parte real do número complexo, enquanto o segundo é a parte imaginária.
 
     O último argumento define a tolerância com que a afirmação é feita.
 - uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
-  summary: Afirma que o `q` qubit está no eigenstate esperado do operador Pauli Z até uma determinada tolerância.
+  summary: Afirma que o qubit `q` está no estado esperado do operador Pauli Z até uma certa tolerância.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: Compilador reconhecido atributo através do qual pode ser definido um nome alternativo que pode ser usado ao carregar um tipo ou callable para fins de teste.
+  summary: O compilador reconheceu o atributo através do qual pode ser definido um nome alternativo que pode ser usado ao carregar um tipo ou ser chamado para fins de teste.
 - uid: microsoft.quantum.diagnostics.test
-  summary: Compilador reconhecido atributo usado para marcar um teste de unidade.
-summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações úteis para fins de diagnóstico, incluindo operações de afirmação e funções de reivindicação."
+  summary: Atributo reconhecido pelo compilador usado para marcar um teste de unidade.
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações úteis para fins de diagnóstico, incluindo operações de assert e funções de reivindicação."
 metadata:
-  ms.openlocfilehash: 5e580bb50983d5c0e65d3284408bae04a5e92756
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676946"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326596"

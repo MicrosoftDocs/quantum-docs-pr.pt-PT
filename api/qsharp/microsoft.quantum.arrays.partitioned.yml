@@ -7,7 +7,7 @@ summary: Divide uma matriz em várias partes.
 examples: >-
   ```qsharp
 
-  // The following returns [[1,5],[3],[7]];
+  // The following returns [[1, 5], [3], [7]];
 
   let split = Partitioned([2,1], [1,5,3,7]);
 
@@ -22,23 +22,23 @@ input:
     isPrimitive: true
     uid: Int
   - name: arr
-    summary: Conjunto de entrada a ser dividido.
+    summary: Matriz de entrada a ser dividida.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[][]"
   types:
-  - summary: Múltiplas matrizes onde a `nElements[0]` `arr` primeira matriz é `nElements[1]` a `arr` primeira e a segunda matriz são as próximas de etc. A última matriz conterá todos os elementos restantes.
+  - summary: Múltiplas matrizes onde a primeira matriz é a primeira `nElements[0]` e a segunda matriz são as `arr` `nElements[1]` próximas `arr` etc. A última matriz conterá todos os elementos restantes.
     isArray: true
     types:
     - isArray: true
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: 319147f72f0ef13a942ab5440a51f60d6f2bae1f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 431c62538c9d7c165c570d680c7d4c14974e294c
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680887"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84326528"

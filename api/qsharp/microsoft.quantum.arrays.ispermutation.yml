@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.ispermutation
+name: IsPermutation
+type: function
+namespace: Microsoft.Quantum.Arrays
+summary: >-
+  Saídas verdadeiras se e somente se uma determinada matriz representar uma permutação.
+
+
+  Dada uma matriz `array` de `n` comprimento, retorna verdadeira se e somente se cada inteiro de `0` aparecer `n - 1` exatamente uma vez dentro , tal que `array` pode ser interpretado como uma `array` permutação em `n` elementos.
+remarks: Uma matriz de comprimento zero é trivialmente uma permutação.
+examples: >-
+  O seguinte código Q# imprime a mensagem "Todos os diagnósticos concluídos com sucesso":
+
+
+  ```Q#
+
+  Fact(IsPermutation([2, 0, 1], "");
+
+  Contradiction(IsPermutation([5, 0, 1], "[5, 0, 1] isn't a permutation");
+
+  Message("All diagnostics completed successfully.");
+
+  ```
+syntax: 'function IsPermutation (permuation : Int[]) : Bool'
+input:
+  content: '(permuation : Int[])'
+  types:
+  - name: permuation
+    isArray: true
+    isPrimitive: true
+    uid: Int
+output:
+  content: Bool
+  types:
+  - isPrimitive: true
+    uid: Bool
+metadata:
+  ms.openlocfilehash: 259c7a073a02b8cae196853e66cd30d7fe3a9436
+  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84328413"
