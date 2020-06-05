@@ -6,12 +6,12 @@ ms.author: v-edsanc@microsoft.com
 ms.date: 02/16/2020
 ms.topic: article
 uid: microsoft.quantum.libraries.machine-learning.basics
-ms.openlocfilehash: ddd889fdfabb505d7118c1eff551a6fbfa757309
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1d2538fd164c4c61c2712978d3b5c57b0eb766e6
+ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327650"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84422177"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Classificação básica: Classificar os dados com o QDK
 
@@ -86,9 +86,9 @@ Guardamos o seguinte código num ficheiro chamado `Training.qs` .
 As funções e operações mais importantes definidas no código acima são:
 
 - `ClassifierStructure() : ControlledRotation[]`: nesta função definimos a estrutura do nosso modelo de circuito adicionando as camadas dos portões controlados que consideramos. Este passo é análogo à declaração de camadas de neurónios num modelo sequencial de aprendizagem profunda.
-- `TrainHalfMoonModel() : TrainWineModel() : (Double[], Double)`: esta operação é a parte central do código e define a formação. Aqui carregamos as amostras do conjunto de dados incluído na biblioteca, definimos os hipermetrões e os parâmetros iniciais para o treino e começamos a formação chamando a operação `TrainSequentialClassifier` incluída na biblioteca. Produz os parâmetros e o enviesamento que determina o classificador.
+- `TrainHalfMoonModel() : (Double[], Double)`: esta operação é a parte central do código e define a formação. Aqui carregamos as amostras do conjunto de dados incluído na biblioteca, definimos os hipermetrões e os parâmetros iniciais para o treino e começamos a formação chamando a operação `TrainSequentialClassifier` incluída na biblioteca. Produz os parâmetros e o enviesamento que determina o classificador.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int`: esta operação define o processo de validação para avaliar o modelo. Aqui carregamos as amostras para validação, o número de medições por amostra e a tolerância. Produz o número de classificações erradas no lote escolhido de amostras para validação.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Primeiro, podes jogar com o código e tentar alterar alguns parâmetros para ver como isso afeta o treino. Em seguida, no próximo tutorial, [desenhe o seu próprio classificador,](xref:microsoft.quantum.libraries.machine-learning.design)aprenderá a definir a estrutura do classificador.
