@@ -3,15 +3,15 @@ title: Explorar o entrelaçamento com Q#
 description: Saiba como escrever um programa quântico em Q#. Desenvolver uma aplicação de Estado de Bell com o Quantum Development Kit (QDK)
 author: natke
 ms.author: nakersha
-ms.date: 10/07/2019
+ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
-ms.openlocfilehash: 7836e39227fa2282c6e2faa039f6e625103d5403
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 989080e7d9979bb87d14b2580d28732bb1092eb1
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426833"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327378"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Explorar o entrelaçamento com Q\#
 
@@ -25,28 +25,27 @@ O nome Bell refere-se aos estados de Bell, que são estados quânticos específi
 
 Se estiver preparado para começar a programar, siga estes passos antes de continuar: 
 
-* [Instalar](xref:microsoft.quantum.install) o Quantum Development Kit com o ambiente de desenvolvimento e a linguagem da sua preferência
+* Instale o Quantum Development Kit para [Python](xref:microsoft.quantum.install.python) ou [.NET](xref:microsoft.quantum.install.cs).
 * Se já tiver o QDK instalado, confirme que o [atualizou](xref:microsoft.quantum.update) para a versão mais recente
 
 Também pode acompanhar a narrativa sem instalar o QDK e rever as descrições gerais da linguagem de programação Q# e os conceitos iniciais da computação quântica.
 
 ## <a name="demonstrating-qubit-behavior-with-q"></a>Demonstrar o comportamento dos qubits com Q#
 
-Lembre-se da nossa [definição de qubit](xref:microsoft.quantum.overview.understanding) simples.  Enquanto os bits clássicos contêm um único valor binário como 0 ou 1, o estado de um qubit pode estar numa **sobreposição** de 0 e 1 simultaneamente.  Conceitualmente, um qubit pode ser pensado como uma direção no espaço (também conhecido como um vetor).  Um qubit pode estar em qualquer uma das possíveis direções. Os dois **estados clássicos** são as duas direções, que representam 100% de probabilidade de medir 0 e 100% de probabilidade de medir 1.  Esta representação também é visualizada mais formalmente pela [Esfera de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
-
+Lembre-se da nossa [definição de qubit](xref:microsoft.quantum.overview.understanding) simples.  Enquanto os bits clássicos contêm um único valor binário como 0 ou 1, o estado de um [qubit](xref:microsoft.quantum.glossary#qubit) pode estar numa **sobreposição** de 0 e 1.  Conceitualmente, um qubit pode ser pensado como uma direção no espaço (também conhecido como um vetor).  Um qubit pode estar em qualquer uma das possíveis direções. Os dois **estados clássicos** são as duas direções, que representam 100% de probabilidade de medir 0 e 100% de probabilidade de medir 1.  Esta representação também é visualizada mais formalmente pela [Esfera de Bloch](/quantum/concepts/the-qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere).
 
 O ato de medição produz um resultado binário e altera o estado de um qubit. A medição produz um valor binário de 0 ou 1.  O qubit vai do estado de sobreposição (qualquer direção) até um dos estados clássicos.  Depois disso, repetir a mesma medição sem nenhuma operação intermediária produz o mesmo resultado binário.  
 
-É possível **entrelaçar** vários qubits. Quando fazemos a medição de um qubit entrelaçado, o nosso conhecimento do estado do(s) outro(s) também é atualizado.
+É possível [**entrelaçar**](xref:microsoft.quantum.glossary#entanglement) vários qubits. Quando fazemos a medição de um qubit entrelaçado, o nosso conhecimento do estado do(s) outro(s) também é atualizado.
 
 Agora, estamos prontos para demonstrar de que forma o Q# expressa este comportamento.  Vai começar com o programa mais simples possível e compilá-lo para demonstrar a sobreposição quântica e o entrelaçamento quântico.
 
 ## <a name="setup"></a>Configuração
 
-As aplicações desenvolvidas com o Microsoft Quantum Development Kit consiste em duas partes:
+Este tutorial utiliza um programa anfitrião e consiste em duas partes:
 
-1. Um ou mais algoritmos quânticos, implementados com a linguagem de programação quântica Q#.
-1. Um programa anfitrião, implementado numa linguagem de programação como Python ou C# e que serve como ponto de entrada principal e invoca operações Q# para executar um algoritmo quântico.
+1. Uma série de algoritmos quânticos, implementados com a linguagem de programação quântica Q#.
+1. Um programa anfitrião, implementado em Python ou C#, que serve como ponto de entrada principal e invoca operações em Q# para executar os algoritmos quânticos.
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
 
@@ -498,9 +497,8 @@ Conforme mencionado na descrição geral, as nossas estatísticas para o primeir
 
 Parabéns! Acabou de escrever o primeiro programa quântico.
 
-## <a name="whats-next"></a>Passos seguintes?
+## <a name="next-steps"></a>Passos seguintes
 
 O tutorial [Pesquisa de Grover](xref:microsoft.quantum.quickstarts.search) mostra como compilar e executar a pesquisa de Grover, um dos algoritmos de computação quântica mais populares e dá um ótimo exemplo de um programa Q# que pode ser utilizado para resolver problemas reais através da computação quântica.  
 
 A [Introdução ao Quantum Development Kit](xref:microsoft.quantum.welcome) recomenda mais formas de aprender a linguagem Q# e a programação quântica.
-

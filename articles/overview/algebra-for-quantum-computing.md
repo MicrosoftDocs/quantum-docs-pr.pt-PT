@@ -6,12 +6,12 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.algebra
-ms.openlocfilehash: 9f156a3cc092e295317061dda5e8aa29e9d5ca1e
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+ms.openlocfilehash: 4750643d16ad8af6240df42c1b93353565561429
+ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430854"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84327599"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Álgebra linear para computação quântica
 
@@ -67,7 +67,7 @@ $$
 
 O resultado é uma matriz quadridimensional, em que cada elemento representa uma probabilidade. Por exemplo, $ac$ é a probabilidade de ambos os qubits colapsarem para 0 e 0, $ad$ é a probabilidade de 0 e 1, e assim sucessivamente. 
 
-Tal como um estado de qubit único $\begin{bmatrix} a \\\\  b \end{bmatrix}$ tem de cumprir o requisito em que $|a|^2 + |b|^2 = 1$ de modo a representar um estado quântico, um estado de dois qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ tem de cumprir o requisito em que $|a|^2 + |b|^2 + |c|^2+ |d|^2 = 1$.
+Tal como um estado de qubit único $\begin{bmatrix} a \\\\  b \end{bmatrix}$ tem de cumprir o requisito em que $|a|^2 + |b|^2 = 1$ de modo a representar um estado quântico, um estado de dois qubits $\begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}$ tem de cumprir o requisito em que $|ac|^2 + |ad|^2 + |bc|^2+ |bd|^2 = 1$.
 
 ## <a name="summary"></a>Resumo
 
@@ -75,5 +75,4 @@ A álgebra linear é a linguagem padrão para a descrição de computação quâ
 
 ## <a name="next-steps"></a>Passos seguintes
 
-> [!div class="nextstepaction"]
-> [Instalar o QDK](xref:microsoft.quantum.install)
+[Instalar o QDK](xref:microsoft.quantum.install)
