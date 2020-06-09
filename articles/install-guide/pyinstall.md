@@ -6,16 +6,16 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: 35499daae0cd0ae329e39b43b0d8dd5a00183871
-ms.sourcegitcommit: 328f45a0b64cb6b325fa9d3b3ddb74a6a7a97ee9
+ms.openlocfilehash: f18d005012dc1c52aab456f1c7b194d182cab786
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83660723"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578169"
 ---
 # <a name="develop-with-q-and-python"></a>Desenvolver com Q# e Python
 
-Instale o QDK para desenvolver programas de anfitriões Python para ligar para as operações Q#.
+Instale o QDK para desenvolver programas de anfitrião Python para ligar para as operações Q#.
 
 1. Pré-requisitos
 
@@ -26,18 +26,18 @@ Instale o QDK para desenvolver programas de anfitriões Python para ligar para a
 
 1. Instale o `qsharp` pacote, um pacote Python que permite o interop entre Q# e Python.
 
-    ```bash
+    ```
     pip install qsharp
     ```
 
-1. Instale o IQ#, um núcleo utilizado pela Jupyter e python que fornece a funcionalidade central para a compilação e execução de operações Q#.
+1. Instale o IQ#, um núcleo utilizado pela Jupyter e pela Python que fornece a funcionalidade principal para compilar e executar operações Q#.
 
-    ```bash
+    ```dotnetcli
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
   
-1. Embora possa utilizar Q# com Python em qualquer IDE, recomendamos vivamente a utilização do Código do Estúdio Visual (Código VS) IDE para as suas aplicações Q# + Python. Ao utilizar o Visual Studio Code e a extensão qDK Visual Studio Code, você tem acesso a uma funcionalidade mais rica.
+1. Enquanto pode utilizar Q# com Python em qualquer IDE, recomendamos vivamente a utilização do Código de Estúdio Visual (Código VS) IDE para as suas aplicações Q# + Python. Ao utilizar o Código do Estúdio Visual e a extensão QDK Visual Studio Code, você tem acesso a funcionalidades mais ricas.
 
     - Instalar [código VS](https://code.visualstudio.com/download) (Windows, Linux e Mac)
     - Instale a [extensão QDK para o Código VS](https://marketplace.visualstudio.com/items?itemName=quantum.quantum-devkit-vscode).
@@ -69,20 +69,20 @@ Instale o QDK para desenvolver programas de anfitriões Python para ligar para a
 
     - Execute o programa:
 
-        ```bash
+        ```
         python hello_world.py
         ```
 
     - Verifique o resultado. O programa deverá produzir as seguintes linhas:
 
-        ```bash
+        ```
         Hello from quantum world!
-       ```
+        ```
 
 
 > [!NOTE]
-> * Você também pode usar os cadernos Python Jupyter para escrever o programa clássico Python e chamar operações Q# a partir das células. O código Python é apenas um programa python normal.
+> * Você também pode usar os cadernos Python Jupyter para escrever o programa python clássico e chamar as operações Q# das células. O código Python é apenas um programa piton normal.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Agora que instalou o Quantum Development Kit no ambiente pretendido, pode escrever e executar [o primeiro programa quântico](xref:microsoft.quantum.quickstarts.qrng).
