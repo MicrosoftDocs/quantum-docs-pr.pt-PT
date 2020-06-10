@@ -6,12 +6,12 @@ ms.date: 9/30/2019
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: 9117794d6cf6f05fa34e05c21fad8977d0e76505
-ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
+ms.openlocfilehash: b80d95a160b5f46c1132d3428ba32ad6dcd5656e
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 06/09/2020
-ms.locfileid: "84577825"
+ms.locfileid: "84630338"
 ---
 # <a name="develop-with-q-jupyter-notebooks"></a>Programar com Q# Jupyter Notebooks
 
@@ -36,6 +36,15 @@ IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyt
     dotnet tool install -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
+
+    > [!NOTE]
+    > Se tiver um erro durante o `dotnet iqsharp install` passo, abra uma nova janela do terminal e tente novamente.
+    > Se isto ainda não funcionar, tente localizar a ferramenta instalada `dotnet-iqsharp` (no Windows, `dotnet-iqsharp.exe` ) e em execução:
+    > ```
+    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+    > ```
+    > onde `/path/to/dotnet-iqsharp` deve ser substituído pelo caminho absoluto para a ferramenta no seu sistema de `dotnet-iqsharp` ficheiros.
+    > Normalmente, isto será na `.dotnet/tools` pasta do perfil do utilizador.
 
 1. Verificar a instalação ao criar uma aplicação `Hello World`
 

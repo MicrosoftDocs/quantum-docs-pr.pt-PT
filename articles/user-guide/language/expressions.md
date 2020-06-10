@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: c4b2cc0bed44ffdfb191ba522d6526959e7c6708
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: b32644382bb88fb11da00d0d7d78bbd797a0eaaa
+ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327310"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84630003"
 ---
 # <a name="type-expressions-in-q"></a>Expressãos tipo em Q #
 
@@ -201,7 +201,7 @@ Além das literais, as únicas expressões de um tipo definido pelo utilizador s
 Em Q#, o operador de desembrulhar é um ponto de exclamação em fuga `!` .
 Por exemplo, se `IntPair` for um tipo definido pelo utilizador com tipo `(Int, Int)` subjacente, e fosse uma `s` variável com `IntPair(2, 3)` valor, então `s!` seria `(2, 3)` .
 
-Para os tipos definidos pelo utilizador definidos em termos de outros tipos definidos pelo utilizador. o operador de desembrulhar pode ser repetido; por exemplo, `s!!` indica o valor duplamente desembrulhado de `s` .
+Para os tipos definidos pelo utilizador definidos em termos de outros tipos definidos pelo utilizador, o operador de desembrulhá-lo pode ser repetido; por exemplo, `s!!` indica o valor duplamente desembrulhado de `s` .
 Assim, se `WrappedPair` for um tipo definido pelo utilizador com tipo `IntPair` subjacente, e é uma `t` variável com `WrappedPair(IntPair(1,2))` valor, então `t!!` seria `(1,2)` .
 
 O `!` operador tem uma precedência mais elevada do que todos os outros operadores que não para a `[]` indexação e corte de matrizes.
@@ -474,7 +474,7 @@ Os parênteses para a invocação de funcionamento e função também se ligam p
 
 Operadores por ordem de precedência, da mais alta para a mais baixa:
 
-Operador | Arity | Description | Tipos operand
+Operador | Arity | Descrição | Tipos operand
 ---------|----------|---------|---------------
  trailing`!` | Unária | Desembrulhar | Qualquer tipo definido pelo utilizador
  `-`, `~~~`, `not` | Unária | Numérico negativo, complemento bitwise, negação lógica | `Int`, `BigInt` ou `Double` `-` para, ou para `Int` `BigInt` `~~~` , `Bool``not`
