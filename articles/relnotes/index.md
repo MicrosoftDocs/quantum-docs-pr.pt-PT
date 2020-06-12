@@ -6,12 +6,12 @@ ms.author: nakersha
 ms.date: 09/30/2019
 ms.topic: article
 uid: microsoft.quantum.relnotes
-ms.openlocfilehash: 9a54c1d7a4403a98f945181fdad8ba8a7fdb1175
-ms.sourcegitcommit: 8d9d392bf5e114ae223e6f689ba80d25866ff586
+ms.openlocfilehash: 6b24ebe9f0b5fd3318e8adfe1a62bafaf9d1961e
+ms.sourcegitcommit: c8ebc5d7d8581444754f5d7bfaca2f25601f1b14
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84422228"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84578139"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de Versão do Microsoft Quantum Development Kit
 
@@ -25,6 +25,12 @@ Para obter as instruções de atualização, veja o [guia de atualização](xref
 
 *Data da versão: 4 de junho de 2020*
 
+Esta versão corrige um bug que afeta a compilação de projetos Q#.
+
+## <a name="version-0112006207"></a>Versão 0.11.2006.207
+
+*Data da versão: 3 de junho de 2020*
+
 Esta versão contém o seguinte:
 
 - Os blocos de notas em Q# e os programas anfitrião em Python deixarão de falhar quando estiver presente um ponto de entrada em Q#
@@ -33,6 +39,9 @@ Esta versão contém o seguinte:
 - Várias funções e operações preteridas foram removidas de acordo com a agenda descrita nos nossos [princípios de API](xref:microsoft.quantum.contributing.api-design). Os programas e bibliotecas em Q# que compilam sem avisos na versão 0.11.2004.2825 continuarão a funcionar sem modificações.
 
 Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [exemplos](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed), [IQ#](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
+
+> [!NOTE]
+> Esta versão tem um bug que afeta a compilação de projetos Q#. Recomendamos a atualização para uma versão mais recente.
 
 ## <a name="version-01120042825"></a>Versão 0.11.2004.2825
 
