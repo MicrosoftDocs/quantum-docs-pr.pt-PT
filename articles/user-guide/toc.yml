@@ -1,12 +1,14 @@
 - name: Descrição geral/Índice
   href: index.md
-- name: 'Noções básicas de Q#'
+- name: Noções básicas de Q#
   href: basics.md
-- name: 'Linguagem Q#'
+- name: Linguagem Q#
   href: language/toc.yml
-- name: 'Utilizar Q#'
+- name: Utilizar Q#
   href: using-qsharp/toc.yml
 - name: Simuladores e avaliadores de recursos
-  href: ../machines/toc.yml
+  href: machines/toc.yml
+- name: Bibliotecas Q#
+  href: libraries/toc.yml
 - name: Referência rápida
   href: quickref/toc.yml

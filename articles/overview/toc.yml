@@ -1,0 +1,12 @@
+- name: Introdução à computação quântica
+  href: overview.md
+- name: Conceitos-chave
+  items:
+    - name: Compreender a computação quântica
+      href: understanding-quantum-computing.md
+    - name: Computadores e simuladores quânticos
+      href: quantum-computers-and-simulators.md
+    - name: O que é Q# e o QDK?
+      href: what-is-qsharp-and-qdk.md
+    - name: Álgebra linear para computação quântica
+      href: algebra-for-quantum-computing.md

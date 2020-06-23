@@ -1,0 +1,86 @@
+---
+title: Simulador de rastreio do computador quântico
+description: Aprenda a utilizar o simulador de rastreio de computador quântico da Microsoft para depurar código clássico e para calcular os requisitos de recursos de um programa quântico.
+author: vadym-kl
+ms.author: vadym@microsoft.com
+ms.date: 12/11/2017
+ms.topic: article
+uid: microsoft.quantum.machines.qc-trace-simulator.intro
+ms.openlocfilehash: 4cec688da35951271d87396d9b6a8fed744defc6
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.translationtype: HT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85273773"
+---
+# <a name="quantum-trace-simulator"></a>Simulador de Rastreio Quântico
+
+O simulador de rastreio do computador quântico da Microsoft executa um programa quântico sem simular verdadeiramente o estado de um computador quântico.  Por esse motivo, o simulador de rastreio pode executar programas quânticos que utilizam milhares de qubits.  É útil para duas finalidades principais: 
+
+* Depuração de código clássico que faz parte de um programa quântico. 
+* Estimativa dos recursos necessários para executar uma determinada instância de um programa quântico num computador quântico.
+
+O simulador de rastreio recorre a informações adicionais fornecidas pelo utilizador quando têm de ser executadas medições. Veja a secção [Fornecer a probabilidade de resultados de medição](#providing-the-probability-of-measurement-outcomes) para obter mais detalhes. 
+
+## <a name="providing-the-probability-of-measurement-outcomes"></a>Fornecer a Probabilidade de Resultados de Medição
+
+Existem dois tipos de medições que aparecem em algoritmos quânticos. O primeiro tipo desempenha uma função auxiliar, na qual o utilizador costuma saber a probabilidade dos resultados. Neste caso, o utilizador pode escrever <xref:microsoft.quantum.intrinsic.assertprob> no espaço de nomes <xref:microsoft.quantum.intrinsic> para expressar esse mesmo conhecimento. O exemplo seguinte ilustra isso mesmo:
+
+```qsharp
+operation TeleportQubit(source : Qubit, target : Qubit) : Unit {
+    using (qubit = Qubit()) {
+        H(qubit);
+        CNOT(qubit, target);
+        CNOT(source, qubit);
+        H(source);
+
+        AssertProb([PauliZ], [source], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+        AssertProb([PauliZ], [q], Zero, 0.5, "Outcomes must be equally likely", 1e-5);
+
+        if (M(source) == One)  { Z(target); X(source); }
+        if (M(q) == One) { X(target); X(q); }
+    }
+}
+```
+
+Quando o simulador de rastreio executar `AssertProb`, vai registar que a medição de `PauliZ` em `source` e `q` deve receber um resultado de `Zero` com uma probabilidade de 0,5. Quando o simulador executar `M` mais tarde, detetará que os valores registados das probabilidades de resultado e `M` devolverão `Zero` ou `One` com uma probabilidade de 0,5. Quando o mesmo código for executado num simulador que monitoriza o estado quântico, esse simulador verificará se as probabilidades fornecidas em `AssertProb` estão corretas.
+
+## <a name="running-your-program-with-the-quantum-computer-trace-simulator"></a>Executar o Programa com o Simulador de Rastreio do Computador Quântico 
+
+O simulador de rastreio do computador quântico pode ser visualizado tal como outro computador de destino. O programa do controlador C# para o utilizar é muito semelhante ao de qualquer outro Simulador quântico: 
+
+```csharp
+using Microsoft.Quantum.Simulation.Core;
+using Microsoft.Quantum.Simulation.Simulators;
+using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
+
+namespace Quantum.MyProgram
+{
+    class Driver
+    {
+        static void Main(string[] args)
+        {
+            QCTraceSimulator sim = new QCTraceSimulator();
+            var res = MyQuantumProgram.Run(sim).Result;
+            System.Console.WriteLine("Press any key to continue...");
+            System.Console.ReadKey();
+        }
+    }
+}
+```
+
+Note que, se houver pelo menos uma medição não anotada com `AssertProb`, o simulador lançará `UnconstrainedMeasurementException` a partir do espaço de nomes `Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators`. Veja a documentação da API em [UnconstrainedMeasurementException](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.UnconstrainedMeasurementException) para obter mais detalhes.
+
+Além de executar programas quânticos, o simulador de rastreio inclui cinco componentes para detetar erros em programas e executar estimativas de recursos de programas quânticos: 
+
+* [Verificador de Entradas Distintas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs)
+* [Verificador de Utilização de Qubits Invalidados](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)
+* [Contador de Operações Primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)
+* [Contador de Profundidade de Circuitos](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)
+* [Contador de Largura de Circuitos](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)
+
+Cada um destes componentes pode ser ativado ao definir os sinalizadores adequados em `QCTraceSimulatorConfiguration`. Mais detalhes sobre como utilizar cada um desses componentes são fornecidos nos ficheiros de referência correspondentes. Veja a documentação da API sobre [QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) para obter detalhes específicos.
+
+## <a name="see-also"></a>Consulte também
+Referência C# do [simulador de rastreio](xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) do computador quântico 
+
