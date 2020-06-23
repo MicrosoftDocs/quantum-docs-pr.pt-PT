@@ -1,0 +1,11 @@
+- name: Descrição geral
+  href: index.md
+- name: Simulador de estado completo
+  href: full-state-simulator.md
+- name: Simulador de recursos
+  href: resources-estimator.md
+- name: Simulador de rastreio
+  topicHref: qc-trace-simulator/index.md
+  href: qc-trace-simulator/toc.yml
+- name: Simulador Toffoli
+  href: toffoli-simulator.md

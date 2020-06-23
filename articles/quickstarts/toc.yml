@@ -1,0 +1,20 @@
+expanded: true
+items:
+  - name: Introdução ao QDK
+    href: get-started.md
+  - name: Instalar o QDK
+    items:
+      - name: Descrição geral da instalação
+        href: index.md
+      - name: Aplicações de linha de comandos do Q#
+        href: install-command-line.md
+      - name: Q# Jupyter Notebooks
+        href: install-jupyter.md
+      - name: Q# com outras linguagens
+        items:
+          - name: Q# com Python
+            href: install-python.md
+          - name: Q# com .NET
+            href: install-cs.md
+  - name: Atualizar o QDK
+    href: update.md

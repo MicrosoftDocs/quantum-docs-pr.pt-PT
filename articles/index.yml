@@ -10,12 +10,12 @@ metadata:
   author: cjgronlund
   ms.author: cgronlun
   ms.date: 5/10/2020
-  ms.openlocfilehash: e36a289f17d56a4a8edae71b9a3194a144767dd4
-  ms.sourcegitcommit: 4da99168479f96f408b984279a5a7eabcda752db
+  ms.openlocfilehash: 313ee49f4e6ad25e57c47a9d95a1617326af3bec
+  ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
   ms.translationtype: HT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/20/2020
-  ms.locfileid: "83708706"
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85269529"
 landingContent:
 - title: Computação quântica
   linkLists:
@@ -40,13 +40,13 @@ landingContent:
   - linkListType: get-started
     links:
     - text: Quantum Development Kit
-      url: welcome.md
+      url: quickstarts/get-started.md
   - linkListType: download
     links:
     - text: Instalar o QDK
-      url: install-guide/index.md
+      url: quickstarts/index.md
     - text: Atualizar o QDK
-      url: install-guide/update.md
+      url: quickstarts/update.md
 - title: Linguagem de programação Q#
   linkLists:
   - linkListType: how-to-guide
@@ -54,19 +54,19 @@ landingContent:
     - text: Guia de utilizador Q#
       url: user-guide/index.md
     - text: Simuladores quânticos e aplicações anfitriãs
-      url: machines/index.md
+      url: user-guide/machines/index.md
   - linkListType: tutorial
     links:
     - text: Criar um gerador de números aleatórios quântico
-      url: quickstarts/qrng.md
+      url: tutorials/quantum-random-number-generator.md
     - text: Explorar o entrelaçamento com Q#
-      url: quickstart.md
+      url: tutorials/explore-entanglement.md
     - text: 'Aceleração quântica: algoritmo de pesquisa de Grover'
-      url: quickstarts/search.md
+      url: tutorials/search.md
   - linkListType: learn
     links:
     - text: Aprender com os Quantum Katas
-      url: intro-to-katas.md
+      url: tutorials/intro-to-katas.md
     - text: Procurar exemplos de código Q#
       url: https://docs.microsoft.com/samples/browse/?languages=qsharp
 - title: Comunidade e contribuição
@@ -74,7 +74,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Contribuir para o QDK
-      url: contributing/index.md
+      url: resources/contributing/index.md
     - text: Ler o blogue do Microsoft Quantum
       url: https://cloudblogs.microsoft.com/quantum
 - title: Bibliotecas Q#
@@ -82,10 +82,10 @@ landingContent:
   - linkListType: reference
     links:
     - text: Bibliotecas padrão
-      url: libraries/standard/index.md
+      url: user-guide/libraries/standard/index.md
     - text: Biblioteca de química
-      url: libraries/chemistry/index.md
+      url: user-guide/libraries/chemistry/index.md
     - text: Biblioteca de machine learning
-      url: libraries/machine-learning/index.md
+      url: user-guide/libraries/machine-learning/index.md
     - text: Biblioteca numérica
-      url: libraries/numerics/index.md
+      url: user-guide/libraries/numerics/index.md
