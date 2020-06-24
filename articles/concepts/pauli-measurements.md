@@ -9,6 +9,10 @@ ms.topic: article
 no-loc:
 - $
 - $
+- $
+- $
+- $
+- $
 - '\cdots'
 - bmatrix
 - '\ddots'
@@ -77,12 +81,15 @@ no-loc:
 - '\geq'
 - ~~
 - "~"
-ms.openlocfilehash: 115c1703e433f24930e4be61b545048c95da28d1
-ms.sourcegitcommit: e23178d32b316d05784a02ba3cd6166dad177e89
+- "\begin{bmatrix}"
+- "\end{bmatrix}"
+- '\_'
+ms.openlocfilehash: 7f10c4ad5eb325da97552d60ff47ea89a699f08d
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84630307"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269478"
 ---
 # <a name="pauli-measurements"></a>Medições Pauli
 
@@ -161,7 +168,7 @@ Em Q#, dizemos o resultado---é, a informação clássica extraída de interagir
 
 As medições dos operadores de Pauli multi-qubit são definidas da mesma forma, como visto a partir de:
 
-$$ Z \otimes Z = \start} bmatrix }1 &0 &0&\\\\ 0 & 0 -1&0&0 \\\\ 0&0 & -1&0 \\\\&0&0&1 { \end bmatrix } .
+$$ Z \otimes Z = \start} bmatrix }1 &0 &0&\\\\ 0 & 0 -1&0&0 \\\\ 0&0-1 &&0&\\\\ 0&0&1 \end{bmatrix} .
 $$
 
 Assim, os produtos de tensor de dois operadores Pauli-$Z $ formam uma matriz composta por dois espaços compostos por $+1 $ e $-1 $ egévaues.

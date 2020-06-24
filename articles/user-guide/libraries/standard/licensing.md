@@ -1,0 +1,36 @@
+---
+title: Licenciamento de código aberto para o QDK
+description: Conheça o licenciamento para usar e contribuir para as bibliotecas padrão Microsoft Q# - licenciamento e contribuição.
+author: martinro
+ms.author: martinro@microsoft.com
+ms.date: 2/16/2018
+ms.topic: article
+uid: microsoft.quantum.libraries.licensing
+ms.openlocfilehash: 4bc0fb7fbeb4a71b891619218905d509e50911c9
+ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.translationtype: MT
+ms.contentlocale: pt-PT
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85275652"
+---
+# <a name="licensing"></a>Licensing #
+
+O Kit de Desenvolvimento Quântico é dotado de uma extensa coleção de funções e operações de código aberto, licenciados sob a licença do [MIT.](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)
+As partes da biblioteca padrão que são portáteis através de máquinas-alvo podem ser obtidas a partir do repositório [Microsoft/QuantumLibraries](https://github.com/Microsoft/QuantumLibraries) no GitHub, juntamente com outras bibliotecas, como a [biblioteca de química quântica.](xref:microsoft.quantum.chemistry.concepts.intro)
+
+O Kit de Desenvolvimento Quântico da Microsoft também fornece funções e operações de biblioteca especializadas que são licenciadas sob uma [licença microsoft Research](https://github.com/Microsoft/Quantum-NC/blob/master/LICENSE).
+Estes podem ser obtidos a partir do repositório [Microsoft/Quantum-NC](https://github.com/microsoft/quantum-nc) no GitHub.
+
+Há também muitas amostras que explicam e ilustram o uso de funções e operações da biblioteca padrão e de outras bibliotecas.
+Estas amostras são licenciadas sob a licença do [MIT.](https://github.com/Microsoft/Quantum/blob/master/LICENSE.txt)
+As amostras podem ser obtidas a partir do repositório [Microsoft/Quantum](https://github.com/Microsoft/Quantum) no GitHub.
+
+## <a name="contributing"></a>Contribuir ##
+
+Agradecemos todas as contribuições e sugestões para este projeto.
+A maioria das contribuições requerem que celebre um Contrato de Licença de Contribuição (CLA) no qual se declare que tem o direito de conceder e que, na verdade, concede-nos os direitos para utilizar a sua contribuição. Para mais detalhes, visite [a CLA](https://cla.microsoft.com).
+
+Quando submete um pedido Pull, um bot do CLA determina automaticamente se tem de fornecer um CLA e decorar o PR de forma adequada (por exemplo, etiqueta, comentário). Só tem de seguir as instruções fornecidas pelo bot. Apenas terá de fazer isto uma vez em todos os repositórios com o nosso CLA.
+
+Este projeto adotou o [Microsoft Open Source Code of Conduct (Código de Conduta do Microsoft Open Source)](https://opensource.microsoft.com/codeofconduct/).
+Para mais informações consulte o [Código de Conduta FAQ](https://opensource.microsoft.com/codeofconduct/faq/) ou contacte [opencode@microsoft.com](mailto:opencode@microsoft.com) com quaisquer perguntas ou comentários adicionais.
