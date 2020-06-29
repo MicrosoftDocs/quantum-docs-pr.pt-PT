@@ -6,17 +6,17 @@ ms.author: vadym@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: d532a9f512b8c87d83d62ed26e3bb67e1b6f668b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 0029a00e6a3563dc542daeda2afa7cabf42441fb
+ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275627"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85415272"
 ---
 # <a name="depth-counter"></a>Contador de profundidade
 
 Faz `Depth Counter` parte do [simulador](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de rastreio de computador quântico.
-É usado para recolher contagens da profundidade de cada operação invocada num programa quântico. Todas as operações <xref:microsoft.quantum.intrinsic> são expressas em termos de rotações de qubit único, portões T, portões de Clifford de qubit único, portões CNOT e medições de observáveis Pauli multi-qubit. Os utilizadores podem definir a profundidade para cada uma das operações primitivas através do `gateTimes` campo de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
+É usado para recolher contagens que representam o limite inferior da profundidade de cada operação invocada num programa quântico. Todas as operações <xref:microsoft.quantum.intrinsic> são expressas em termos de rotações de qubit único, portões T, portões de Clifford de qubit único, portões CNOT e medições de observáveis Pauli multi-qubit. Os utilizadores podem definir a profundidade para cada uma das operações primitivas através do `gateTimes` campo de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .
 
 Por predefinição, todas as operações têm profundidade 0, exceto o portão T que tem profundidade 1. Isto significa que, por defeito, apenas a profundidade T das operações é calculada (o que é muitas vezes desejável). As estatísticas recolhidas são agregadas em todas as bordas do gráfico de chamadas de operações. 
 
