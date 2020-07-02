@@ -4,7 +4,7 @@
   href: explore-entanglement.md
 - name: Implementar o algoritmo de pesquisa de Grover
   href: search.md
-- name: Programação com níveis Qubit
+- name: Programação ao nível do Qubit
   href: qubit-level.md
 - name: Aprender Q# com os Quantum Katas
   href: intro-to-katas.md
