@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.repeat
+name: Repeat
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Repete uma operação um dado número de vezes.
+examples: >-
+  Os seguintes são equivalentes:
+
+
+  ```Q#
+
+  Repeat(U, 17, target);
+
+  (Bound(ConstantArray(17, U)))(target);
+
+  ```
+syntax: "operation Repeat (op : ('TInput => Unit), nTimes : Int, input : 'TInput) : Unit"
+input:
+  content: "(op : ('TInput => Unit), nTimes : Int, input : 'TInput)"
+  types:
+  - name: op
+    summary: A operação a ser convocada repetidamente.
+    isOperation: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+  - name: nTimes
+    summary: O número de vezes para `op` ligar.
+    isPrimitive: true
+    uid: Int
+  - name: input
+    summary: A entrada a passar para `op` .
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: TInput
+  summary: O tipo de entrada esperada por `op` .
+seeAlso:
+- microsoft.quantum.arrays.drawmany
+- microsoft.quantum.canon.repeata
+- microsoft.quantum.canon.repeatc
+- microsoft.quantum.canon.repeatca
+metadata:
+  ms.openlocfilehash: faf0526bd71cfa809bac5fdf06a6b72684ac8bbe
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887336"

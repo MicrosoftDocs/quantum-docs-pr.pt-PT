@@ -9,23 +9,23 @@ input:
   content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, power : Int, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
   types:
   - name: oracle
-    summary: Operação agindo num inteiro e num registo, de modo a que $U^m$ seja aplicada ao registo dado, onde $U$ é o unitário cuja fase deve ser estimada, e onde $m$ é o poder inteiro dado ao oráculo
+    summary: Operação agindo num número inteiro e num registo, de tal forma que $U^m$ é aplicado ao registo dado, onde $U$ é o unitário cuja fase deve ser estimada, e onde $m$ é o poder inteiro dado ao oráculo
     uid: microsoft.quantum.oracles.discreteoracle
   - name: power
     summary: Número de vezes para aplicar o oráculo unitário dado.
     isPrimitive: true
     uid: Int
   - name: theta
-    summary: Ângulo pelo qual inverter a fase do qubit de controlo antes de agir sobre o estado-alvo.
+    summary: Ângulo para inverter a fase do qubit de controlo antes de agir no estado-alvo.
     isPrimitive: true
     uid: Double
   - name: targetState
-    summary: Registo de Estado agido pelo oráculo unitário dado.
+    summary: Registo de estado agido pelo oráculo unitário dado.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: controlQubit
-    summary: Um qubit auxiliário usado para controlar a aplicação do oráculo dado.
+    summary: Um qubit auxiliar usado para controlar a aplicação do oráculo dado.
     isPrimitive: true
     uid: Qubit
 output:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 111f40d91365d24228b657ab3f2533e2fb4d7133
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2551bbd6a48c0d1b6b9f5b56d44b834989a8d13c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677746"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885340"

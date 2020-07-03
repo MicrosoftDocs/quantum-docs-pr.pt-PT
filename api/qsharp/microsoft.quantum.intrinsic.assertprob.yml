@@ -3,42 +3,26 @@ uid: microsoft.quantum.intrinsic.assertprob
 name: AssertProb
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: Afirma que medir os qubits dado na base pauli dada terá o resultado dado com a probabilidade dada, dentro de alguma tolerância.
-remarks: Note que as versões Adjoint e Controlled desta operação não verificarão a condição.
-examples: >-
-  ```qsharp
-
-  using (register = Qubit()) {
-      H(register);
-      AssertProb([PauliZ], [register], One, 0.5,
-          "Measuring in conjugate basis did not give 50/50 results.", 1e-5);
-  }
-
-  ```
+summary: A AssertProb foi depreocada. Por favor, use @"microsoft.quantum.diagnostics.assertmeasurementprobability" em vez disso.
 syntax: 'operation AssertProb (bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double) : Unit'
 input:
   content: '(bases : Pauli[], qubits : Qubit[], result : Result, prob : Double, msg : String, tol : Double)'
   types:
   - name: bases
-    summary: Um efeito de medição para afirmar a probabilidade de, expresso como um operador de Pauli multiqubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: qubits
-    summary: Um registo para fazer a afirmação.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: result
-    summary: Um resultado `Measure(bases, qubits)`esperado de .
     isPrimitive: true
     uid: Result
   - name: prob
-    summary: A probabilidade com que se espera o resultado dado.
     isPrimitive: true
     uid: Double
   - name: msg
-    summary: Uma mensagem a ser relatada se a afirmação falhar.
     isPrimitive: true
     uid: String
   - name: tol
@@ -52,12 +36,10 @@ output:
 functors:
 - Adjoint
 - Controlled
-seeAlso:
-- assert
 metadata:
-  ms.openlocfilehash: 6317476e89feb3a5fecac15afd52541859fc2f21
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db29d52b79b1e7b5a980f3e3196c5b2547132103
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674166"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885717"

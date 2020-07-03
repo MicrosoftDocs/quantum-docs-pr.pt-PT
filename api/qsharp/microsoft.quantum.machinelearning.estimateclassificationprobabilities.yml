@@ -9,7 +9,7 @@ input:
   content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Double[][], nMeasurements : Int)'
   types:
   - name: tolerance
-    summary: A tolerância para permitir a codificação da amostra numa operação de preparação estatal.
+    summary: A tolerância para permitir a codificação da amostra numa operação de preparação do Estado.
     isPrimitive: true
     uid: Double
   - name: model
@@ -23,20 +23,20 @@ input:
       isPrimitive: true
       uid: Double
   - name: nMeasurements
-    summary: O número de measusrements a utilizar na estimativa da probabilidade de classificação.
+    summary: O número de medições a utilizar na estimativa da probabilidade de classificação.
     isPrimitive: true
     uid: Int
 output:
   content: Double[]
   types:
-  - summary: Uma série de estimativas da probabilidade de classificação para cada amostra.
+  - summary: Uma série de estimativas da probabilidade de classificação para cada amostra dada.
     isArray: true
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: c1d36298d9c8e765980b026478bbd2f84f8ef6a6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 811f832a57a14e85c5713ce986175e496e623794
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685395"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885221"

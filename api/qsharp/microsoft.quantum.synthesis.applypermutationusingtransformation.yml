@@ -1,0 +1,61 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.synthesis.applypermutationusingtransformation
+name: ApplyPermutationUsingTransformation
+type: operation
+namespace: Microsoft.Quantum.Synthesis
+summary: >-
+  Permuta as amplitudes num estado quântico dada uma permutação usando a síntese baseada na transformação.
+
+
+  Este procedimento implementa a abordagem de síntese baseada na transformação unidirecional.  A entrada é uma permutação $\pi$ acima de $2^n$ elementos $ \{ 0, \dots, 2^n-1 \} $, o que representa uma função boolean reversível reversível $n$-variável.
+
+  O algoritmo executa iterativamente os seguintes passos:
+
+
+  1. Encontre o menor $x$ de tal forma que $x \ne \pi(x) = y$.
+
+  2. Encontre operações Toffoli com vários controlos, que se aplicam às saídas fazem $\pi(x) = x$ e não mudem $\pi(x')$ para todos os $x' < x$
+examples: >-
+  Para sintetizar uma `SWAP` operação:
+
+
+  ```Q#
+
+  using (qubits = Qubit[2]) {
+    ApplyPermutationUsingTransformation([0, 2, 1, 3], LittleEndian(qubits));
+  }
+
+  ```
+syntax: 'operation ApplyPermutationUsingTransformation (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
+references: >-
+  - [*D. Michael Miller*, *Dmitri Maslov*, *Gerhard W. Dueck,* Proc. DAC 2003, IEEE, pp. 318-323, 2003](https://doi.org/10.1145/775832.775915)
+
+  - [*Mathias Soeken*, *Gerhard W. Dueck*, *D. Michael Miller*, Proc. RC 2016, Springer, pp. 307-321, 2016](https://doi.org/10.1007/978-3-319-40578-0_22)
+input:
+  content: '(perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian)'
+  types:
+  - name: perm
+    summary: Uma permutação de elementos de $2^n$ a partir de 0.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: qubits
+    summary: Uma lista de $n$ qubits aos quais a permutação é aplicada.
+    uid: microsoft.quantum.arithmetic.littleendian
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+seeAlso:
+- microsoft.quantum.synthesis.applypermutationusingdecomposition
+metadata:
+  ms.openlocfilehash: e611197ba2fbfc0271c17664acc23b4de2c90ff6
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887089"

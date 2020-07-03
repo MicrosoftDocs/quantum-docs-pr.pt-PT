@@ -3,25 +3,25 @@ uid: microsoft.quantum.machinelearning.estimateclassificationprobability
 name: EstimateClassificationProbability
 type: operation
 namespace: Microsoft.Quantum.MachineLearning
-summary: Dada uma amostra e um classificador sequencial, estima a probabilidade de classificação dessa amostra medindo repetidamente a saída do classificador na dada amostra.
+summary: Dada uma amostra e um classificador sequencial, estima a probabilidade de classificação dessa amostra medindo repetidamente a saída do classificador na amostra dada.
 syntax: 'operation EstimateClassificationProbability (tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, sample : Double[], nMeasurements : Int) : Double'
 input:
   content: '(tolerance : Double, model : Microsoft.Quantum.MachineLearning.SequentialModel, sample : Double[], nMeasurements : Int)'
   types:
   - name: tolerance
-    summary: A tolerância para permitir a codificação da amostra numa operação de preparação estatal.
+    summary: A tolerância para permitir a codificação da amostra numa operação de preparação do Estado.
     isPrimitive: true
     uid: Double
   - name: model
     summary: O modelo sequencial a utilizar para estimar a probabilidade de classificação para a amostra dada.
     uid: microsoft.quantum.machinelearning.sequentialmodel
   - name: sample
-    summary: O vetor de recurso para a amostra ser classificada.
+    summary: O vetor de recurso para a amostra ser classificado.
     isArray: true
     isPrimitive: true
     uid: Double
   - name: nMeasurements
-    summary: O número de measusrements a utilizar na estimativa da probabilidade de classificação.
+    summary: O número de medições a utilizar na estimativa da probabilidade de classificação.
     isPrimitive: true
     uid: Int
 output:
@@ -31,9 +31,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5a726a02b3f56168ca6a6f2ad1c980018e0bea3d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e46269c83fb4343918c0154819631df1fde4279f
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685393"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885868"
