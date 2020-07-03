@@ -6,27 +6,33 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.qubits
-ms.openlocfilehash: 0deb0729a88c49798f32a22a943b935d383c570b
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+ms.openlocfilehash: 1655d18ab9d8638ad356e6fb90994b5c1fd76a25
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327548"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885303"
 ---
 # <a name="working-with-qubits"></a>Trabalhar com qubits
 
-Tendo visto agora uma variedade de diferentes partes da língua Q#, vamos entrar no espesso dela e ver como usar os próprios qubits.
+Qubits são o objeto fundamental da informação na computação quântica. Para uma introdução geral aos qubits, consulte [a computação quântica,](xref:microsoft.quantum.overview.understanding)e mergulhe mais profundamente na sua representação matemática, consulte [O Qubit](xref:microsoft.quantum.concepts.qubit). 
 
-Note que nenhuma destas declarações é permitida dentro do corpo de uma função.
-Só são válidos dentro das operações.
+Este artigo explora como usar e trabalhar com qubits num programa Q#. 
+
+> [!IMPORTANT]
+>Nenhuma das declarações discutidas neste artigo é válida dentro do corpo de uma função. Só são válidos dentro das operações.
 
 ## <a name="allocating-qubits"></a>Atribuição de Qubits
 
+Como os qubits físicos são um recurso precioso num computador quântico, parte do trabalho do compilador é garantir que estão a ser usados o mais eficientemente possível.
+Como tal, você precisa dizer Q# para *alocar* qubits para uso dentro de um bloco de declaração particular.
+Você pode alocar qubits como um único qubit, ou como uma variedade de qubits, conhecido como um *registo*. 
+
 ### <a name="clean-qubits"></a>Qubits limpos
 
-A `using` declaração é usada para *alocar* novos qubits para uso durante um bloco de declaração.
+Utilize a `using` declaração para alocar novos qubits para utilização durante um bloco de declaração.
 
-A declaração consiste na palavra-chave `using` , seguida de um parênteses aberto , uma `(` ligação, um parênteses `)` próximos , e o bloco de declaração dentro do qual os qubits estarão disponíveis.
+A declaração consiste na `using` palavra-chave, seguida de uma ligação em parênteses e do bloco de declaração dentro do qual os `( )` qubits estão disponíveis.
 A ligação segue o mesmo padrão que `let` as declarações: ou um único símbolo ou um tuple de símbolos, seguido de um sinal de iguais `=` , e um único valor ou um tuple de *inicializadores correspondentes*.
 
 Os inicializadores estão disponíveis para um único qubit, indicado como `Qubit()` , ou uma matriz de qubits, onde é uma `Qubit[n]` `n` `Int` expressão.
@@ -41,24 +47,24 @@ using ((auxiliary, register) = (Qubit(), Qubit[5])) {
 }
 ```
 
-Quaisquer qubits atribuídos desta forma começam no estado de $\ket {0} $; no exemplo acima, `register` está assim no estado $\ket = {00000} \ket {0} \otimes {0} \otimes \otimes \otimes \otimes \otimes \ket {0} $.
+Quaisquer qubits atribuídos desta forma começam no estado $\ket$ {0} Assim, no exemplo anterior, `auxiliary` é um único qubit no estado $\ket {0} $, e está no estado de `register` cinco qubits $\ket {00000} = \ket {0} \otimes {0} \otimes \otimes \otimes \otimes \ket {0} $.
 No final do `using` bloco, quaisquer qubits atribuídos por esse bloco são imediatamente transcilhados e não podem ser usados mais.
 
 > [!WARNING]
-> As máquinas-alvo esperam que os qubits estejam no estado de $\ket {0} $ imediatamente antes da negociação, para que possam ser reutilizados e oferecidos a outros `using` blocos para alocação.
+> As máquinas-alvo podem reutilizar qubits deallocados e oferecê-los a outros `using` blocos para alocação. Como tal, a máquina-alvo espera que os qubits estejam no estado de $\ket {0} $ imediatamente antes da negociação.
 > Sempre que possível, utilize operações unitárias para devolver quaisquer qubits atribuídos a $\ket {0} $.
-> Se necessário, a @"microsoft.quantum.intrinsic.reset" operação pode ser usada para medir um qubit em vez disso, e para utilizar esse resultado de medição para garantir que o qubit medido seja devolvido a $\ket {0} $. Tal medição destruirá qualquer emaranhado com os qubits restantes e poderá, assim, impactar a computação.
+> Se necessário, pode utilizar a @"microsoft.quantum.intrinsic.reset" operação, que devolve o qubit a $\ket {0} $ medindo-o e realizando condicionalmente uma operação com base no resultado. Tal medição destrói qualquer emaranhado com os qubits restantes e pode, assim, impactar a computação.
 
 
 ### <a name="borrowed-qubits"></a>Qubits emprestados
 
-A `borrowing` declaração é utilizada para disponibilizar qubits para uso temporário, que não precisam de estar num determinado estado.
+Utilize a `borrowing` declaração para alocar qubits para uso temporário, que não precisam de estar num estado específico.
 
-O mecanismo de empréstimo permite a atribuição de qubits que podem ser usados como espaço de risco durante um cálculo.
-Estes qubits geralmente não estão em estado limpo, ou seja, não são necessariamente inicializados num estado conhecido como $\ket {0} $.
+Você pode usar qubits emprestados como espaço de arranhão durante uma computação.
+Estes qubits geralmente não estão em um estado limpo, isto é, eles não são necessariamente inicializados em um estado conhecido como $\ket {0} $.
 Estes são muitas vezes referidos como qubits "sujos" porque o seu estado é desconhecido e pode mesmo ser enredado com outras partes da memória do computador quântico.
 
-A ligação segue o mesmo padrão e regras que a de um `using` comunicado.
+A ligação segue o mesmo padrão e regras que a `using` declaração.
 Por exemplo,
 ```qsharp
 borrowing (qubit = Qubit()) {
@@ -69,26 +75,27 @@ borrowing ((auxiliary, register) = (Qubit(), Qubit[5])) {
 }
 ```
 Os qubits emprestados estão num estado desconhecido e ficam fora de alcance no final do bloco de declaração.
-O mutuário compromete-se a deixar os qubits no mesmo estado em que estavam quando foram emprestados, ou seja, o seu estado no início e no final do bloco de declaração deverá ser o mesmo.
-Este Estado, em particular, não é necessariamente um estado clássico, tal como, na maioria dos casos, os âmbitos de empréstimo não devem conter medições. 
+O mutuário compromete-se a deixar os qubits no mesmo estado em que estavam quando os pediram emprestado; isto é, o seu estado no início e no fim do bloco de declaração deve ser o mesmo.
+Como este estado não é necessariamente um estado clássico, na maioria dos casos, os âmbitos de empréstimo não devem conter medições. 
 
-Ao pedir qubits emprestados, o sistema tentará primeiro preencher o pedido de qubits que estão em uso mas que não são acedidos durante o corpo da `borrowing` declaração.
-Se não houver qubits suficientes, então irá alocar novos qubits para completar o pedido.
-
+Ao pedir qubits emprestados, o sistema tenta primeiro preencher o pedido de qubits que estão em uso mas não acedidos durante o corpo da `borrowing` declaração.
+Se não houver qubits suficientes, então atribui novos qubits para completar o pedido.
 
 Entre os casos de uso conhecido de qubits sujos estão implementações de portas CNOT multi-controladas que requerem apenas muito poucos qubits e implementação de incrementadores.
-Veja o [Exemplo de Qubits Emprestado](#borrowing-qubits-example) abaixo para ver um exemplo da sua utilização em Q#, ou o papel [*Factoring usando 2n+2 qubits com multiplicação modular baseada em Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler e Svore 2017) para um algoritmo que utiliza qubits emprestados.
-
+Para um exemplo da sua utilização em Q#, consulte [Borrowing Qubits Exemplo](#borrowing-qubits-example) neste artigo, ou o papel [*Factoring usando 2n+2 qubits com multiplicação modular baseada em Toffoli*](https://arxiv.org/abs/1611.07995) (Haner, Roetteler e Svore 2017) para um algoritmo que utiliza qubits emprestados.
 
 ## <a name="intrinsic-operations"></a>Operações Intrínsecas
 
-Uma vez atribuído, um qubit pode então ser passado para funções e operações.
+Uma vez atribuído, pode passar um qubit para funções e operações.
 Em certo sentido, isto é tudo o que um programa Q# pode fazer com um qubit, uma vez que as ações que podem ser tomadas são todas definidas como operações.
-Veremos estas operações com mais detalhes em [Operações e Funções Intrínsecas,](xref:microsoft.quantum.libraries.standard.prelude)mas por enquanto, mencionamos algumas operações úteis que podem ser usadas para interagir com qubits.
 
-Em primeiro lugar, os operadores de Pauli de um único qubit $X$, $Y$, e $Z$ são representados em Q# pelas operações intrínsecas, `X` e , cada um dos quais tem tipo `Y` `Z` `(Qubit => Unit is Adj + Ctl)` .
-Como descrito em [Operações e Funções Intrínsecas, podemos](xref:microsoft.quantum.libraries.standard.prelude)pensar em $X$ e, portanto, `X` como uma operação de inversão de marcha ou portão NÃO.
-A `X` operação permite-nos preparar estados do formulário $\ket{s_0 s_1 \dots s_n}$ para uma corda clássica $s$:
+Este artigo discute algumas operações úteis q# que você pode usar para interagir com qubits.
+Para obter mais detalhes sobre estes e outros, consulte [Operações e Funções Intrínsecas.](xref:microsoft.quantum.libraries.standard.prelude) 
+
+Em primeiro lugar, os operadores de Pauli de um único qubit $X$, $Y$, e $Z$ são representados em Q# pelas operações intrínsecas, [`X`](xref:microsoft.quantum.intrinsic.x) e , cada um dos quais tem tipo [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) `(Qubit => Unit is Adj + Ctl)` .
+
+Como descrito em [Operações e Funções Intrínsecas,](xref:microsoft.quantum.libraries.standard.prelude)pense em $X$ e, portanto, `X` como uma operação de inversão de marcha ou portão NÃO.
+Você pode usar a `X` operação para preparar estados do formulário $\ket{s_0 s_1 \dots s_n}$ para algum fio de bit clássico $s$:
 
 ```qsharp
 operation PrepareBitString(bitstring : Bool[], register : Qubit[]) : Unit
@@ -108,24 +115,24 @@ operation RunExample() : Unit {
             register
         );
         // At this point, register now has the state |11001001〉.
-        // Resetting the qubits will allow us to deallocate them properly.
+        // Remember to reset the qubits before deallocation:
         ResetAll(register);
     }
 }
 ```
 
 > [!TIP]
-> Mais tarde, veremos formas mais compactas de escrever esta operação que não requerem controlo manual do fluxo.
+> Mais tarde, verá formas mais compactas de escrever esta operação que não requerem fluxo manual de controlo.
 
-Também podemos preparar estados como $\ket{+} = \left(\ket {0} + \ket {1} \ket \right) / \sqrt {2} $ e $\ket {-} = \left (\ket {0} - \ket {1} \right) / \sqrt {2} $ usando a transformação Hadamard $H$, que é representada em Q# pela operação intrínseca `H : (Qubit => Unit is Adj + Ctl)` :
+Também pode preparar estados como $\ket{+} = \left(\ket {0} + \ket {1} \ket \right) / \sqrt {2} $ e $\ket = {-} \left(\ket {0} {1} \ket \right) / \sqrt {2} $ usando a transformação Hadamard $H$, que é representada em Q# pela operação intrínseca [`H`](xref:microsoft.quantum.intrinsic.h) (também do tipo (Qubit => Unidade é Aj + Ctl)):)
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
     // First, get a computational basis state of the form
-    // |s_0 s_1 ... s_n〉 by using PrepareBitString, above.
+    // |s_0 s_1 ... s_n〉 by using PrepareBitString in the earlier example.
     PrepareBitString(bitstring, register);
-    // Next, we use that |+〉 = H|0〉 and |-〉 = H|1〉 to
-    // prepare the state we want.
+    // Next, use that |+〉 = H|0〉 and |-〉 = H|1〉 to
+    // prepare the desired state.
     for (idxQubit in IndexRange(register)) {
         H(register[idxQubit]);
     }
@@ -134,8 +141,13 @@ operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
 
 ## <a name="measurements"></a>Medições
 
-Utilizando a `Measure` operação, que é uma operação não-unitária intrínseca incorporada, podemos extrair informação clássica de um objeto de tipo `Qubit` e atribuir um valor clássico como resultado, que tem um tipo `Result` reservado, indicando que o resultado já não é um estado quântico.
-A entrada `Measure` é um eixo Pauli na esfera Bloch, representado por um valor de tipo `Pauli` (por `PauliX` exemplo) e um valor de tipo `Qubit` .
+As medições de qubits individuais podem ser realizadas em diferentes bases, cada uma representada por um eixo Pauli na [esfera bloch.](xref:microsoft.quantum.glossary#bloch-sphere)
+A *base computacional* refere-se à `PauliZ` base, e é a base mais comum utilizada para a medição.
+
+### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Meça um único qubit na `PauliZ` base
+
+Utilize a [`M`](xref:microsoft.quantum.intrinsic.m) operação, que é uma operação não unitária incorporada, para medir um único qubit na `PauliZ` base e atribuir um valor clássico ao resultado.
+`M`tem um tipo de retorno reservado, `Result` que só pode tomar valores ou corresponder aos `Zero` `One` estados medidos $\ket {0} $ ou $\ket {1} $ - indicando que o resultado já não é um estado quântico.
 
 Um exemplo simples é a seguinte operação, que atribui um qubit no estado $\ket {0} $, em seguida, aplica uma operação Hadamard `H` a ele e mede o resultado na `PauliZ` base.
 
@@ -144,19 +156,25 @@ operation MeasureOneQubit() : Result {
     // The following using block creates a fresh qubit and initializes it
     // in the |0〉 state.
     using (qubit = Qubit()) {
-        // We apply a Hadamard operation H to the state, thereby preparing the
+        // Apply a Hadamard operation H to the state, thereby preparing the
         // state 1 / sqrt(2) (|0〉 + |1〉).
         H(qubit);
-        // Now we measure the qubit in Z-basis.
+        // Now measure the qubit in Z-basis.
         let result = M(qubit);
         // As the qubit is now in an eigenstate of the measurement operator,
-        // we reset the qubit before releasing it.
+        // reset the qubit before releasing it.
         if (result == One) { X(qubit); }
-        // Finally, we return the result of the measurement.
+        // Finally, return the result of the measurement.
         return result;
     }
 }
 ```
+
+### <a name="measure-one-or-more-qubits-in-specific-bases"></a>Medir um ou mais qubits em bases específicas
+
+Para medir um conjunto de um ou mais qubits em bases específicas, pode utilizar a [`Measure`](xref:microsoft.quantum.intrinsic.measure) operação.
+
+As entradas `Measure` são uma matriz de `Pauli` tipos (por exemplo, `[PauliX, PauliZ, PauliZ]` ) e uma matriz de qubits.
 
 Um exemplo um pouco mais complicado é dado pela seguinte operação, que devolve o valor Boolean `true` se todos os qubits num registo de tipo `Qubit[]` estiverem no estado zero quando medidos numa base Pauli especificada, e que retorna `false` de outra forma.
 
@@ -172,10 +190,11 @@ operation MeasureIfAllQubitsAreZero(qubits : Qubit[], pauli : Pauli) : Bool {
 }
 ```
 
+Note que este exemplo ainda só funciona `Measure` em qubits individuais um de cada vez, mas a operação pode ser estendida a medições articulares em múltiplos qubits.
+
 ## <a name="borrowing-qubits-example"></a>Exemplo de Qubits emprestado
 
-No cânone existem exemplos que usam a `borrowing` palavra-chave, por exemplo a função `MultiControlledXBorrow` definida abaixo.
-Se `controls` denotar os qubits de controlo que devem ser adicionados a uma `X` operação, então um total de `Length(controls)-2` muitas ancillas sujas serão adicionados por esta implementação.
+Existem exemplos no cânone que usam a `borrowing` palavra-chave, como a seguinte função `MultiControlledXBorrow` . Se `controls` denotar os qubits de controlo para adicionar a uma `X` operação, então o número de [ancillas sujas adicionadas](xref:microsoft.quantum.glossary#ancilla) por esta implementação é `Length(controls)-2` .
 
 ```qsharp
 operation MultiControlledXBorrow ( controls : Qubit[] , target : Qubit ) : Unit
@@ -214,13 +233,13 @@ is Adj + Ctl {
 }
 ```
 
-Note-se que o uso extensivo do `With` combinador--- na sua forma aplicável para operações que suportam adjacentes, ou seja, `WithA` ---foi feito neste exemplo.
+Note-se que este exemplo utilizou extensivamente o `With` combinador, na sua forma aplicável às operações que suportam, por exemplo, `WithA` .
 Este é um bom estilo de programação, porque adicionar controlo às estruturas que envolvem `With` o controlo de propagações apenas para o funcionamento interno.
-Além disso, note-se que aqui, para além `body` da operação, foi explicitamente fornecida uma implementação `controlled` do corpo da operação, em vez de recorrer a um `controlled auto` comunicado.
-A razão para isso é que sabemos pela estrutura do circuito como adicionar facilmente mais controlos que são benéficos em comparação com a adição de controlo a cada portão individual do `body` . 
+Note-se ainda que, para além `body` da operação, foi explicitamente fornecida uma implementação `controlled` do corpo da operação, em vez de recorrer a um `controlled auto` comunicado.
+A razão para isso é que, devido à estrutura do circuito, é fácil adicionar mais controlos, o que é benéfico em comparação com a adição de controlo a cada portão do `body` . 
 
 É instrutivo comparar este código com outra função canónica `MultiControlledXClean` que alcança o mesmo objetivo de implementar uma operação controlada por multi-animais, no `X` entanto, que utiliza vários qubits limpos usando o `using` mecanismo. 
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Saiba mais sobre [o Control Flow](xref:microsoft.quantum.guide.controlflow) em Q#.
