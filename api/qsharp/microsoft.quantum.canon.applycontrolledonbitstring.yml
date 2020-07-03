@@ -1,0 +1,60 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonbitstring
+name: ApplyControlledOnBitString
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Aplica uma operação unitária no registo-alvo, controlada num estado especificado por uma determinada máscara de bit.
+remarks: >-
+  O padrão dado pode `bits` ser mais curto do `controlRegister` que, caso em que os qubits de controlo adicionais são ignorados (isto é, nem controlados em $\ket {0} $ nem $\ket {1} $).
+
+  Se `bits` for mais longo do que , um erro é `controlRegister` levantado.
+
+
+  Por exemplo, `bits = [0,1,0,0,1]` significa que é aplicado se e `oracle` somente se estiver no estado `controlRegister` {0} $\ket {1} \ket {0} \ket {0} \ket \ket {1} \ket \ket $.
+syntax: "operation ApplyControlledOnBitString (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: bits
+    summary: O fio da broca para controlar a operação unitária dada.
+    isArray: true
+    isPrimitive: true
+    uid: Bool
+  - name: oracle
+    summary: A operação unitária a aplicar no registo-alvo.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: Um registo quântico que controla a aplicação de `oracle` .
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: O registo-alvo a ser passado `oracle` como entrada.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: cb0aaffb9710f98a3ed22d7a7c97828b05f6ae2c
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887276"

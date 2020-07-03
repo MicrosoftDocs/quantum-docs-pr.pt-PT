@@ -4,11 +4,11 @@ name: Microsoft.Quantum.Core
 summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome inclui funções e operações do núcleo Q#.\n\n # <a name=\"remarks\"></a>Observações\n Este espaço de nome é aberto automaticamente pelo compilador Q#, pelo que todos os elementos deste espaço de nome estão sempre disponíveis."
 functions:
 - uid: microsoft.quantum.core.default
-  summary: Devolve uma instância predefinida do tipo especificado.
+  summary: Devolve uma instância padrão do tipo especificado.
 - uid: microsoft.quantum.core.length
   summary: Devolve o número de elementos numa matriz.
 - uid: microsoft.quantum.core.rangeend
-  summary: Devolve o valor final definido da gama dada, que não é necessariamente o último elemento da sequência.
+  summary: Devolve o valor final definido da gama dada, que não é necessariamente o último elemento na sequência.
 - uid: microsoft.quantum.core.rangereverse
   summary: Devolve uma nova gama que é o inverso da gama de entrada.
 - uid: microsoft.quantum.core.rangestart
@@ -17,15 +17,15 @@ functions:
   summary: Devolve o inteiro que especifica como o próximo valor de uma gama é calculado.
 newtypes:
 - uid: microsoft.quantum.core.attribute
-  summary: Compilador reconhecido atributo usado para marcar tipos definidos do utilizador como atributos.
+  summary: Atributo reconhecido pelo compilador usado para marcar tipos definidos pelo utilizador como atributos.
 - uid: microsoft.quantum.core.deprecated
-  summary: Compilador reconhecido atributo usado para marcar um tipo ou calivel como precatilado.
+  summary: Atributo reconhecido pelo compilador usado para marcar um tipo ou calável como precado.
 - uid: microsoft.quantum.core.entrypoint
-  summary: Compilador reconhecido atributo usado para marcar o ponto de entrada de um executável.
+  summary: Atributo reconhecido pelo compilador usado para marcar o ponto de entrada de um executável.
 metadata:
-  ms.openlocfilehash: c9125849d8ed04613c92b66823917e468725981c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7533708473cff8902745ed67c235244ea9b2234b
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676986"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885263"

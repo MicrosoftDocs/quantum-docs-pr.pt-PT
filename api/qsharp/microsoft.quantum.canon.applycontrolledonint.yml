@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applycontrolledonint
+name: ApplyControlledOnInt
+type: operation
+namespace: Microsoft.Quantum.Canon
+summary: Aplica uma operação unitária no registo-alvo se o estado do registo de controlo corresponder a um número inteiro positivo especificado.
+remarks: >-
+  O valor `numberState` é interpretado usando uma codificação pouco endiana.
+
+
+  `numberState`deve ser no máximo $2^\texttt{Comprimento (controlRegister)} - 1$.
+
+  Por exemplo, `numberState = 537` significa que é aplicado se e `oracle` somente se estiver no estado `controlRegister` $\ket {537} $.
+syntax: "operation ApplyControlledOnInt (numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit"
+input:
+  content: "(numberState : Int, oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T)"
+  types:
+  - name: numberState
+    summary: Um inteiro não-alemão em que a operação `oracle` deve ser controlada.
+    isPrimitive: true
+    uid: Int
+  - name: oracle
+    summary: Uma operação unitária a ser controlada.
+    isOperation: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+    - Controlled
+  - name: controlRegister
+    summary: Um registo quântico que controla a aplicação de `oracle` .
+    isArray: true
+    isPrimitive: true
+    uid: Qubit
+  - name: targetRegister
+    summary: Um registo sobre o qual se `oracle` candidatará.
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+functors:
+- Adjoint
+- Controlled
+metadata:
+  ms.openlocfilehash: 468886684513035d24b3b4881944f2c18fa65e18
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85887263"

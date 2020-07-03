@@ -3,12 +3,12 @@ uid: microsoft.quantum.core.deprecated
 name: Deprecated
 type: newtype
 namespace: Microsoft.Quantum.Core
-summary: Compilador reconhecido atributo usado para marcar um tipo ou calivel como precatilado.
+summary: Atributo reconhecido pelo compilador usado para marcar um tipo ou calável como precado.
 syntax: newtype Deprecated = String;
 metadata:
-  ms.openlocfilehash: 397ca9a4223db808dff2d38efb08c3e9f72e7674
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9a23655237abefaecec1dc3f1be0a511191a9205
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82658758"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885365"

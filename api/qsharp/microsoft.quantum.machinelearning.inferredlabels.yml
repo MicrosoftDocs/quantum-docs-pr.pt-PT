@@ -3,31 +3,31 @@ uid: microsoft.quantum.machinelearning.inferredlabels
 name: InferredLabels
 type: function
 namespace: Microsoft.Quantum.MachineLearning
-summary: Dado um conjunto de probabilidades de classificação e um enviesamento, devolve o rótulo inferido de cada probabilidade.
+summary: Dada uma série de probabilidades de classificação e um enviesamento, devolve o rótulo inferido de cada probabilidade.
 syntax: 'function InferredLabels (bias : Double, probabilities : Double[]) : Int[]'
 input:
   content: '(bias : Double, probabilities : Double[])'
   types:
   - name: bias
-    summary: O enviesamento entre duas classes, tipicamente o resultado do treino de um classificador.
+    summary: O preconceito entre duas classes, normalmente o resultado do treino de um classificador.
     isPrimitive: true
     uid: Double
   - name: probabilities
-    summary: Uma série de probabilidades de classificação para um conjunto de amostras, tipicamente resultantes da estimativa de frequências de classificação.
+    summary: Uma série de probabilidades de classificação para um conjunto de amostras, normalmente resultantes da estimativa de frequências de classificação.
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Int[]
   types:
-  - summary: A etiqueta inferida de cada probabilidade de classificação.
+  - summary: O rótulo deduzido de cada probabilidade de classificação.
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: f2b45d4db7b25aecf6dae470011f2895c9e16ca3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f51e41cad897db06297af4ca0e7c0d71ed4cc632
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683507"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885836"

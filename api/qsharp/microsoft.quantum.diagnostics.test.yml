@@ -3,12 +3,12 @@ uid: microsoft.quantum.diagnostics.test
 name: Test
 type: newtype
 namespace: Microsoft.Quantum.Diagnostics
-summary: Compilador reconhecido atributo usado para marcar um teste de unidade.
+summary: Atributo reconhecido pelo compilador usado para marcar um teste de unidade.
 syntax: newtype Test = String;
 metadata:
-  ms.openlocfilehash: 3fc7b25d8d01ee2687ca6af33ca02c059f01d69f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c859042b4c27b6b11c6aab51232939bd45a9db91
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682420"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884533"

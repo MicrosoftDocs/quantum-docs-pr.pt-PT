@@ -3,7 +3,7 @@ uid: microsoft.quantum.machinelearning.validatesequentialclassifier
 name: ValidateSequentialClassifier
 type: operation
 namespace: Microsoft.Quantum.MachineLearning
-summary: Valida um dado classificador sequencial contra um conjunto de amostras pré-rotuladas.
+summary: Valida um determinado classificador sequencial contra um determinado conjunto de amostras pré-etiquetadas.
 syntax: 'operation ValidateSequentialClassifier (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : Microsoft.Quantum.MachineLearning.ValidationResults'
 input:
   content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], tolerance : Double, nMeasurements : Int, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
@@ -16,7 +16,7 @@ input:
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: tolerance
-    summary: A tolerância de aproximação à utilização na codificação de cada amostra como entrada para o classificador sequencial.
+    summary: A tolerância de aproximação a utilizar na codificação de cada amostra como entrada para o classificador sequencial.
     isPrimitive: true
     uid: Double
   - name: nMeasurements
@@ -24,16 +24,17 @@ input:
     isPrimitive: true
     uid: Int
   - name: validationSchedule
-    summary: O calendário pelo qual as amostras devem ser retiradas do conjunto de validação.
+    summary: O calendário através do qual as amostras devem ser retiradas do conjunto de validação.
     uid: microsoft.quantum.machinelearning.samplingschedule
 output:
   content: Microsoft.Quantum.MachineLearning.ValidationResults
   types:
-  - uid: microsoft.quantum.machinelearning.validationresults
+  - summary: Os resultados da validação dada.
+    uid: microsoft.quantum.machinelearning.validationresults
 metadata:
-  ms.openlocfilehash: d43cb6e30a193a2fbae65567a15f2e9e9fab57dc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e031630fd11ae7f230343513d3d5fc8d2b25a9c3
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684301"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885851"

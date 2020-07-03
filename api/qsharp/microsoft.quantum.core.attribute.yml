@@ -3,12 +3,12 @@ uid: microsoft.quantum.core.attribute
 name: Attribute
 type: newtype
 namespace: Microsoft.Quantum.Core
-summary: Compilador reconhecido atributo usado para marcar tipos definidos do utilizador como atributos.
+summary: Atributo reconhecido pelo compilador usado para marcar tipos definidos pelo utilizador como atributos.
 syntax: newtype Attribute = Unit;
 metadata:
-  ms.openlocfilehash: 9fa1d42ae8951913190fb351445149706f0f9d1f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 914a6931955c5f4afb0c7b751bc7bd3687a9d2a3
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82658844"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885796"

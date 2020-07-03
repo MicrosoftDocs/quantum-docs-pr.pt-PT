@@ -4,28 +4,28 @@ name: ApplyLowDepthAnd
 type: operation
 namespace: Microsoft.Quantum.Canon
 summary: >-
-  Inverte um determinado qubit-alvo se e apenas se ambos os qubits de controlo estiverem no estado 1, com a profundidade T 1, utilizando a medição para executar a operação adjoint.
+  Inverte um dado qubit de alvo se e somente se ambos os qubits de controlo estiverem no estado 1, com profundidade T 1, utilizando a medição para efetuar a operação adjacente.
 
 
-  Inverte `target` se e apenas se ambos os controlos `target` forem 1, mas assume que está no estado 0.  A operação tem contagem T 4, profundidade T 1 e requer um qubit auxiliar, podendo, `target` portanto, ser preferível a uma operação CCNOT, se se souber que é 0.  O adjoint desta operação é baseado em medição e não requer portões T, e nenhum qubit auxiliar.
+  Inverta `target` se e somente se ambos os controlos forem 1, mas assume que `target` está no estado 0.  A operação tem contagem T 4, profundidade T 1 e requer um qubit de ajudante, podendo, portanto, ser preferível a uma operação CCNOT, se `target` se sabe que é 0.  O adjacente desta operação é baseado em medição e não requer portões T, e nenhum qubit ajudante.
 syntax: 'operation ApplyLowDepthAnd (control1 : Qubit, control2 : Qubit, target : Qubit) : Unit'
 references: >-
-  - Cody Jones: "Construções novas para o portão de Toffoli tolerante com falhas", Phys. Rev. A 87, 022328, 2013 [arXiv:1212.5069](https://arxiv.org/abs/1212.5069) doi:10.1103/PhysRevA.87.022328
+  - Cody Jones: "Novas construções para o portão toffoli tolerante a falhas", Phys. Rev. A 87, 022328, 2013 [arXiv:1212.5069](https://arxiv.org/abs/1212.5069) doi:10.1103/PhysRevA.87.022328
 
-  - Peter Selinger: "Circuitos quânticos de profundidade T", Phys. Rev. A 87, 042302, 2013 [arXiv:1210.0974](https://arxiv.org/abs/1210.0974) doi:10.1103/PhysRevA.87.042302
+  - Peter Selinger: "Circuitos quânticos de profundidade T um", Phys. Rev. A 87, 042302, 2013 [arXiv:1210.0974](https://arxiv.org/abs/1210.0974) doi:10.1103/PhysRevA.87.042302
 input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
   - name: control1
-    summary: Qubit de primeiro controlo
+    summary: Primeiro qubit de controlo
     isPrimitive: true
     uid: Qubit
   - name: control2
-    summary: Qubit de segundo controlo
+    summary: Segundo qubit de controlo
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Qubit auxillary alvo; deve estar no estado 0
+    summary: Qubit auxiliar de destino; deve estar no estado 0
     isPrimitive: true
     uid: Qubit
 output:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 14f70cf11cad542f137cee99d5d2a62cedeb4e72
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7c0858443420741968865298e6179c81b8d23ef4
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672556"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85885825"

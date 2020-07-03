@@ -39,6 +39,10 @@ operations:
   summary: Afirma que os qubits dados estão todos em estado de $\ket$ {0}
 - uid: microsoft.quantum.diagnostics.assertallzerowithintolerance
   summary: Afirma que os qubits dados estão todos em estado de $\ket {0} $ até uma certa tolerância.
+- uid: microsoft.quantum.diagnostics.assertmeasurement
+  summary: Afirma que medir os qubits dado na dada base Pauli terá sempre o resultado dado.
+- uid: microsoft.quantum.diagnostics.assertmeasurementprobability
+  summary: Afirma que medir os qubits dado na dada base Pauli terá o resultado dado com a dada probabilidade, dentro de alguma tolerância.
 - uid: microsoft.quantum.diagnostics.assertoperationsequalinplace
   summary: >-
     Tendo em conta duas operações, afirma que agem de forma idêntica para todos os estados de entrada.
@@ -79,14 +83,14 @@ operations:
   summary: Afirma que o qubit `q` está no estado esperado do operador Pauli Z até uma certa tolerância.
 newtypes:
 - uid: microsoft.quantum.diagnostics.enabletestingvianame
-  summary: O compilador reconheceu o atributo através do qual pode ser definido um nome alternativo que pode ser usado ao carregar um tipo ou ser chamado para fins de teste.
+  summary: Atributo reconhecido pelo compilador através do qual pode ser definido um nome alternativo que pode ser usado ao carregar um tipo ou ser chamado para fins de teste.
 - uid: microsoft.quantum.diagnostics.test
   summary: Atributo reconhecido pelo compilador usado para marcar um teste de unidade.
 summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções e operações úteis para fins de diagnóstico, incluindo operações de assert e funções de reivindicação."
 metadata:
-  ms.openlocfilehash: 2c619ac283653d87f2917d7c780ed9fe6ccfa965
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: c8e1cd7f3458e736a47749dd057174eb4961c31d
+  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326596"
+  ms.lasthandoff: 07/02/2020
+  ms.locfileid: "85884574"
