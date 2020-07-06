@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 8d39716c4d4c96ad87862b4b185895aab66cd210
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274141"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885147"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Atualizar o Microsoft Quantum Development kit (QDK)
 
@@ -151,14 +151,32 @@ Com os projetos Q# já atualizados, siga as instruções abaixo para atualizar o
 O processo de atualização do QDK varia de acordo com a linguagem e o ambiente de desenvolvimento.
 Selecione o seu ambiente de desenvolvimento abaixo:
 
-* [Python: atualizar a extensão IQ#](#update-iq-for-python)
-* [Jupyter Notebook: atualizar a extensão IQ#](#update-iq-for-jupyter-notebooks)
+* [Python: atualizar o pacote `qsharp`](#update-the-qsharp-python-package)
+* [Jupyter Notebook: atualizar o kernel do IQ#](#update-the-iq-jupyter-kernel)
 * [Visual Studio: atualizar a extensão QDK](#update-visual-studio-qdk-extension)
 * [VS Code: atualizar a extensão QDK](#update-vs-code-qdk-extension)
 * [Linha de comandos e C#: atualizar os modelos de projetos](#c-using-the-dotnet-command-line-tool)
 
 
-### <a name="update-iq-for-python"></a>Atualizar o IQ# para Python
+### <a name="update-the-qsharp-python-package"></a>Atualize o pacote `qsharp` do Python
+
+O procedimento de atualização depende se instalou originalmente com o conda ou o .NET CLI e o pip.
+
+#### <a name="update-using-conda-recommended"></a>[Atualize com o conda (recomendado)](#tab/tabid-conda)
+
+1. Ative o ambiente conda onde instalou o pacote `qsharp` e, em seguida, execute este comando para atualizá-lo:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. Execute o seguinte comando a partir da localização dos ficheiros `.qs`:
+
+    ```
+    python -c "import qsharp; qsharp.reload()"
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[Atualize com o .NET CLI e o pip (avançado)](#tab/tabid-dotnetcli)
 
 1. Atualize o kernel `iqsharp` 
 
@@ -167,7 +185,7 @@ Selecione o seu ambiente de desenvolvimento abaixo:
     dotnet iqsharp install
     ```
 
-2. Verifique a versão de `iqsharp`
+1. Verifique a versão de `iqsharp`
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -176,19 +194,19 @@ Selecione o seu ambiente de desenvolvimento abaixo:
     Deverá ver o resultado seguinte:
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    Não se preocupe se a versão de `iqsharp` for superior; deverá corresponder à [versão mais recente](xref:microsoft.quantum.relnotes).
+    Não se preocupe se a sua versão de `iqsharp` for superior. Deve corresponder à [versão mais recente](xref:microsoft.quantum.relnotes).
 
-3. Atualize o pacote `qsharp`
+1. Atualize o pacote `qsharp`:
 
     ```
     pip install qsharp --upgrade
     ```
 
-4. Verifique a versão de `qsharp`
+1. Verifique a versão de `qsharp`:
 
     ```
     pip show qsharp
@@ -198,29 +216,49 @@ Selecione o seu ambiente de desenvolvimento abaixo:
 
     ```
     Name: qsharp
-    Version: 0.10.1912.501
+    Version: 0.12.20070124
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
 
-5. Execute o seguinte comando a partir da localização dos ficheiros `.qs`
+1. Execute o seguinte comando a partir da localização dos ficheiros `.qs`:
 
     ```
     python -c "import qsharp; qsharp.reload()"
     ```
 
-6. Agora, pode utilizar a versão atualizada do QDK para executar os seus programas quânticos já existentes.
+***
 
-### <a name="update-iq-for-jupyter-notebooks"></a>Atualizar o IQ# para Jupyter Notebook
+Agora, pode utilizar o pacote `qsharp` do Python para executar os seus programas quânticos já existentes.
 
-1. Atualize o kernel `iqsharp`
+### <a name="update-the-iq-jupyter-kernel"></a>Atualize o kernel do IQ# Jupyter
+
+O procedimento de atualização depende se instalou originalmente com o conda ou o .NET CLI e o pip.
+
+#### <a name="update-using-conda-recommended"></a>[Atualize com o conda (recomendado)](#tab/tabid-conda)
+
+1. Ative o ambiente conda onde instalou o pacote `qsharp` e, em seguida, execute este comando para atualizá-lo:
+
+    ```
+    conda update -c quantum-engineering qsharp
+    ```
+
+1. Execute o seguinte comando a partir de uma célula em cada Q# Jupyter Notebook existente:
+
+    ```
+    %workspace reload
+    ```
+
+#### <a name="update-using-net-cli-and-pip-advanced"></a>[Atualize com o .NET CLI e o pip (avançado)](#tab/tabid-dotnetcli)
+
+1. Atualize o pacote `Microsoft.Quantum.IQSharp`:
 
     ```dotnetcli
     dotnet tool update -g Microsoft.Quantum.IQSharp
     dotnet iqsharp install
     ```
 
-2. Verifique a versão de `iqsharp`
+1. Verifique a versão de `iqsharp`:
 
     ```dotnetcli
     dotnet iqsharp --version
@@ -229,19 +267,21 @@ Selecione o seu ambiente de desenvolvimento abaixo:
     A saída deve ser semelhante ao seguinte:
 
     ```
-    iqsharp: 0.10.1912.501
-    Jupyter Core: 1.2.20112.0
+    iqsharp: 0.12.20070124
+    Jupyter Core: 1.4.0.0
     ```
 
-    Não se preocupe se a versão de `iqsharp` for superior; deverá corresponder à [versão mais recente](xref:microsoft.quantum.relnotes).
+    Não se preocupe se a sua versão de `iqsharp` for superior. Deve corresponder à [versão mais recente](xref:microsoft.quantum.relnotes).
 
-3. Execute o seguinte comando a partir de uma célula no Jupyter Notebook:
+1. Execute o seguinte comando a partir de uma célula em cada Q# Jupyter Notebook existente:
 
     ```
     %workspace reload
     ```
 
-4. Agora, já pode abrir um bloco de notas do Jupyter existente e executá-lo com o QDK atualizado.
+***
+
+Agora, pode utilizar o kernel do IQ# atualizado para executar cada Q# Jupyter Notebook existente.
 
 ### <a name="update-visual-studio-qdk-extension"></a>Atualizar a extensão QDK do Visual Studio
 

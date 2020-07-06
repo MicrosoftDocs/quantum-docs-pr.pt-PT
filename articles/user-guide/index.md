@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: c5611f3e2907791f2dfc1644be0a45515d50dfd7
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
+ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415374"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885017"
 ---
 # <a name="the-q-user-guide"></a>Guia de Utilizador Q#
 
@@ -22,6 +22,8 @@ Nos diferentes tópicos deste guia, apresentamos em detalhe os conceitos fundame
 ## <a name="user-guide-contents"></a>Índice do Guia de Utilizador
 
 - [Noções Básicas de Q#](xref:microsoft.quantum.guide.basics): descrição geral introdutória da finalidade e funcionalidade da linguagem de programação Q#. 
+
+- [Formas de executar um programa Q#](xref:microsoft.quantum.guide.host-programs): descreve como um programa Q# é executado e fornece uma descrição geral das várias formas de chamar o programa: a partir da linha de comandos, no Q# Jupyter Notebook ou a partir de um programa anfitrião clássico escrito em Python ou numa linguagem .NET.
 
 ### <a name="q-language"></a>Linguagem Q#
 
