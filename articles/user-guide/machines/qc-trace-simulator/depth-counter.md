@@ -1,26 +1,42 @@
 ---
-title: Contador de profundidade
-description: Conheça o Contador de Profundidade QDK da Microsoft, que reúne contagens da profundidade de cada operação invocada num programa quântico.
+title: Contador de profundidade - Kit de Desenvolvimento Quântico
+description: Conheça o contador de profundidade microsoft QDK, que utiliza o simulador de traços Quânticos para recolher contagens da profundidade de cada operação invocada num programa Q#.
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 0029a00e6a3563dc542daeda2afa7cabf42441fb
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: 811e387fedf547d2681518ae0bb525c13dc84ff4
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415272"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871132"
 ---
-# <a name="depth-counter"></a><span data-ttu-id="981ac-103">Contador de profundidade</span><span class="sxs-lookup"><span data-stu-id="981ac-103">Depth Counter</span></span>
+# <a name="quantum-trace-simulator-depth-counter"></a><span data-ttu-id="4fcd9-103">Simulador de vestígios quânticos: contador de profundidade</span><span class="sxs-lookup"><span data-stu-id="4fcd9-103">Quantum trace simulator: depth counter</span></span>
 
-<span data-ttu-id="981ac-104">Faz `Depth Counter` parte do [simulador](xref:microsoft.quantum.machines.qc-trace-simulator.intro)de rastreio de computador quântico.</span><span class="sxs-lookup"><span data-stu-id="981ac-104">The `Depth Counter` is a part of the quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span>
-<span data-ttu-id="981ac-105">É usado para recolher contagens que representam o limite inferior da profundidade de cada operação invocada num programa quântico.</span><span class="sxs-lookup"><span data-stu-id="981ac-105">It is used to gather counts that represent the lower bound of the depth of every operation invoked in a quantum program.</span></span> <span data-ttu-id="981ac-106">Todas as operações <xref:microsoft.quantum.intrinsic> são expressas em termos de rotações de qubit único, portões T, portões de Clifford de qubit único, portões CNOT e medições de observáveis Pauli multi-qubit.</span><span class="sxs-lookup"><span data-stu-id="981ac-106">All operations from <xref:microsoft.quantum.intrinsic> are expressed in terms of single qubit rotations, T gates, single qubit Clifford gates, CNOT gates and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="981ac-107">Os utilizadores podem definir a profundidade para cada uma das operações primitivas através do `gateTimes` campo de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .</span><span class="sxs-lookup"><span data-stu-id="981ac-107">Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>.</span></span>
+<span data-ttu-id="4fcd9-104">O contador de profundidade faz parte do simulador de [traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do Kit de Desenvolvimento Quântico.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-104">The depth counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span>
+<span data-ttu-id="4fcd9-105">Pode usá-lo para recolher contagens que representam o limite inferior da profundidade de cada operação invocada num programa quântico.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-105">You can use it to gather counts that represent the lower bound of the depth of every operation invoked in a quantum program.</span></span> 
 
-<span data-ttu-id="981ac-108">Por predefinição, todas as operações têm profundidade 0, exceto o portão T que tem profundidade 1.</span><span class="sxs-lookup"><span data-stu-id="981ac-108">By default, all operations have depth 0 except the T gate which has depth 1.</span></span> <span data-ttu-id="981ac-109">Isto significa que, por defeito, apenas a profundidade T das operações é calculada (o que é muitas vezes desejável).</span><span class="sxs-lookup"><span data-stu-id="981ac-109">This means that by default, only the T depth of operations is computed (which is often desirable).</span></span> <span data-ttu-id="981ac-110">As estatísticas recolhidas são agregadas em todas as bordas do gráfico de chamadas de operações.</span><span class="sxs-lookup"><span data-stu-id="981ac-110">Collected statistics are aggregated over all the edges of the operations call graph.</span></span> 
+## <a name="depth-values"></a><span data-ttu-id="4fcd9-106">Valores de profundidade</span><span class="sxs-lookup"><span data-stu-id="4fcd9-106">Depth values</span></span>
 
-<span data-ttu-id="981ac-111">Vamos agora calcular a <xref:microsoft.quantum.intrinsic.t> profundidade da <xref:microsoft.quantum.intrinsic.ccnot> operação.</span><span class="sxs-lookup"><span data-stu-id="981ac-111">Let us now compute the <xref:microsoft.quantum.intrinsic.t> depth of the <xref:microsoft.quantum.intrinsic.ccnot> operation.</span></span> <span data-ttu-id="981ac-112">Utilizaremos o seguinte código de amostra Q#:</span><span class="sxs-lookup"><span data-stu-id="981ac-112">We will use the following Q# sample code:</span></span>
+<span data-ttu-id="4fcd9-107">Por predefinição, todas as operações têm uma profundidade de **0,** exceto a `T` operação, que tem uma profundidade de **1**.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-107">By default, all operations have a depth of **0** except the `T` operation, which has a depth of **1**.</span></span> <span data-ttu-id="4fcd9-108">Isto significa que, por defeito, apenas a `T` profundidade das operações é calculada (o que é muitas vezes desejável).</span><span class="sxs-lookup"><span data-stu-id="4fcd9-108">This means that by default, only the `T` depth of operations is computed (which is often desirable).</span></span> <span data-ttu-id="4fcd9-109">O contador de profundidade agrega e recolhe estatísticas sobre todas as bordas do gráfico de chamada da [operação](https://en.wikipedia.org/wiki/Call_graph).</span><span class="sxs-lookup"><span data-stu-id="4fcd9-109">The depth counter aggregates and collects statistics over all the edges of the operation's [call graph](https://en.wikipedia.org/wiki/Call_graph).</span></span>
+
+<span data-ttu-id="4fcd9-110">Todas as <xref:microsoft.quantum.intrinsic> operações são expressas em termos de rotações de um único qubit, <xref:microsoft.quantum.intrinsic.t> operações, operações <xref:microsoft.quantum.intrinsic.cnot> e medições de observações pauli multi-qubit.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-110">All <xref:microsoft.quantum.intrinsic> operations are expressed in terms of single-qubit rotations, <xref:microsoft.quantum.intrinsic.t> operations, single-qubit Clifford operations, <xref:microsoft.quantum.intrinsic.cnot> operations, and measurements of multi-qubit Pauli observables.</span></span> <span data-ttu-id="4fcd9-111">Os utilizadores podem definir a profundidade para cada uma das operações primitivas através do `gateTimes` campo de <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> .</span><span class="sxs-lookup"><span data-stu-id="4fcd9-111">Users can set the depth for each of the primitive operations via the `gateTimes` field of <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration>.</span></span>
+
+## <a name="invoking-the-depth-counter"></a><span data-ttu-id="4fcd9-112">Invocando o contador de profundidade</span><span class="sxs-lookup"><span data-stu-id="4fcd9-112">Invoking the depth counter</span></span>
+
+<span data-ttu-id="4fcd9-113">Para executar o simulador de traços quânticos com o contador de profundidade, você deve criar um <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> exemplo, definir a sua `UseDepthCounter` propriedade para **verdade**, e, em seguida, criar um novo exemplo com como <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> o `QCTraceSimulatorConfiguration` parâmetro.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-113">To run the quantum trace simulator with the depth counter, you must create a <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instance, set its `UseDepthCounter` property to **true**, and then create a new <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> instance with `QCTraceSimulatorConfiguration` as the parameter.</span></span> 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseDepthCounter = true;
+var sim = new QCTraceSimulator(config);
+```
+
+## <a name="using-the-depth-counter-in-a-c-host-program"></a><span data-ttu-id="4fcd9-114">Usando o contador de profundidade num programa de anfitrião C#</span><span class="sxs-lookup"><span data-stu-id="4fcd9-114">Using the depth counter in a C# host program</span></span>
+
+<span data-ttu-id="4fcd9-115">O exemplo C# que segue nesta secção calcula a `T` profundidade da `CCNOT` operação, com base no seguinte código de amostra Q#:</span><span class="sxs-lookup"><span data-stu-id="4fcd9-115">The C# example that follows in this section computes the `T` depth of the `CCNOT` operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;
@@ -33,15 +49,13 @@ operation ApplySampleWithCCNOT() : Unit {
 }
 ```
 
-## <a name="using-depth-counter-within-a-c-program"></a><span data-ttu-id="981ac-113">Utilização do Contador de Profundidade dentro de um programa C#</span><span class="sxs-lookup"><span data-stu-id="981ac-113">Using Depth Counter within a C# Program</span></span>
-
-<span data-ttu-id="981ac-114">Para verificar se `CCNOT` tem `T` profundidade 5 e tem profundidade `ApplySampleWithCCNOT` `T` 6, podemos usar o seguinte código C#:</span><span class="sxs-lookup"><span data-stu-id="981ac-114">To check that `CCNOT` has `T` depth 5 and `ApplySampleWithCCNOT` has `T` depth 6 we can use the following C# code:</span></span>
+<span data-ttu-id="4fcd9-116">Para verificar se `CCNOT` tem `T` profundidade **5** e `ApplySampleWithCCNOT` tem profundidade `T` **6,** utilize o seguinte código C#:</span><span class="sxs-lookup"><span data-stu-id="4fcd9-116">To check that `CCNOT` has `T` depth **5** and `ApplySampleWithCCNOT` has `T` depth **6**, use the following C# code:</span></span>
 
 ```csharp
 using Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators;
 using System.Diagnostics;
 var config = new QCTraceSimulatorConfiguration();
-config.useDepthCounter = true;
+config.UseDepthCounter = true;
 var sim = new QCTraceSimulator(config);
 var res = ApplySampleWithCCNOT.Run(sim).Result;
 
@@ -49,18 +63,16 @@ double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounte
 double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
 ```
 
-<span data-ttu-id="981ac-115">A primeira parte do programa `ApplySampleWithCCNOT` executa.</span><span class="sxs-lookup"><span data-stu-id="981ac-115">The first part of the program executes `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="981ac-116">Na segunda parte, usamos o método `QCTraceSimulator.GetMetric` para obter a profundidade de `T` `CCNOT` `ApplySampleWithCCNOT` e:</span><span class="sxs-lookup"><span data-stu-id="981ac-116">In the second part, we use the method `QCTraceSimulator.GetMetric` to get the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`:</span></span> 
+<span data-ttu-id="4fcd9-117">A primeira parte do programa `ApplySampleWithCCNOT` é.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-117">The first part of the program runs `ApplySampleWithCCNOT`.</span></span> <span data-ttu-id="4fcd9-118">A segunda parte utiliza o [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) método para recuperar a profundidade de e `T` `CCNOT` `ApplySampleWithCCNOT` .</span><span class="sxs-lookup"><span data-stu-id="4fcd9-118">The second part uses the [`GetMetric`](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulator.getmetric) method to retrieve the `T` depth of `CCNOT` and `ApplySampleWithCCNOT`.</span></span> 
 
-```csharp
-double tDepth = sim.GetMetric<Intrinsic.CCNOT, ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
-double tDepthAll = sim.GetMetric<ApplySampleWithCCNOT>(DepthCounter.Metrics.Depth);
-```
-
-<span data-ttu-id="981ac-117">Finalmente, para obter todas as estatísticas `Depth Counter` recolhidas em formato CSV podemos utilizar o seguinte:</span><span class="sxs-lookup"><span data-stu-id="981ac-117">Finally, to output all the statistics collected by `Depth Counter` in CSV format we can use the following:</span></span>
+<span data-ttu-id="4fcd9-119">Finalmente, pode descodutar todas as estatísticas recolhidas pelo contador de profundidade no formato CSV utilizando o seguinte:</span><span class="sxs-lookup"><span data-stu-id="4fcd9-119">Finally, you can output all the statistics collected by the depth counter in CSV format using the following:</span></span>
 ```csharp
 string csvSummary = sim.ToCSV()[MetricsCountersNames.depthCounter];
 ```
 
-## <a name="see-also"></a><span data-ttu-id="981ac-118">Ver também</span><span class="sxs-lookup"><span data-stu-id="981ac-118">See also</span></span> ##
+## <a name="see-also"></a><span data-ttu-id="4fcd9-120">Ver também</span><span class="sxs-lookup"><span data-stu-id="4fcd9-120">See also</span></span>
 
-- <span data-ttu-id="981ac-119">A visão geral [do Trace Simulator do](xref:microsoft.quantum.machines.qc-trace-simulator.intro) computador quântico.</span><span class="sxs-lookup"><span data-stu-id="981ac-119">The quantum computer [Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="4fcd9-121">A visão geral do [simulador de traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do Kit de Desenvolvimento Quântico.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-121">The Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) overview.</span></span>
+- <span data-ttu-id="4fcd9-122">A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-122">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> API reference.</span></span>
+- <span data-ttu-id="4fcd9-123">A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> referência da API.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-123">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> API reference.</span></span>
+- <span data-ttu-id="4fcd9-124">A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter> referência da API.</span><span class="sxs-lookup"><span data-stu-id="4fcd9-124">The <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.MetricsNames.DepthCounter> API reference.</span></span>
