@@ -6,14 +6,14 @@ ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: 820ad885e7134aa723116d4c9f853d88210a5514
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: ab069c496d89a57f979732da6ccdfbe673b79726
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273815"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870588"
 ---
-# <a name="introduction-to-the-q-standard-libraries"></a>Introdução às Bibliotecas Padrão Q# #
+# <a name="introduction-to-the-q-standard-libraries"></a>Introdução às Bibliotecas Padrão Q#
 
 A linguagem Q# é suportada por uma série de diferentes operações, funções e tipos definidos pelo utilizador úteis que constituem as *bibliotecas padrão* Q#.
 O [pacote NuGet `Microsoft.Quantum.Development.Kit`](https://www.nuget.org/packages/microsoft.quantum.development.kit) instalado durante a [instalação e validação](xref:microsoft.quantum.install) fornece o compilador Q# e partes da biblioteca padrão que são implementadas pelos computadores de destino.
