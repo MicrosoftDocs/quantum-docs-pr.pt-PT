@@ -6,12 +6,12 @@ ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: 0cf62a128170bd0c28ff77f00fc23414567b1ea4
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415308"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86870996"
 ---
 # <a name="control-flow-in-q"></a>Fluxo de controlo em Q #
 
@@ -278,9 +278,9 @@ Finalmente, aqui está um exemplo de um padrão RUS para preparar um estado quâ
 As notáveis características programáticas mostradas nesta operação são:
 
 * Uma parte mais complexa `fixup` do ciclo, que envolve operações quânticas. 
-* O uso de `AssertProb` declarações para determinar a probabilidade de medir o estado quântico em certos pontos especificados no programa.
+* O uso de `AssertMeasurementProbability` declarações para determinar a probabilidade de medir o estado quântico em certos pontos especificados no programa.
 
-Para obter mais informações sobre o [`Assert`](xref:microsoft.quantum.intrinsic.assert) e [`AssertProb`](xref:microsoft.quantum.intrinsic.assertprob) operações, consulte [Testes e depuragem.](xref:microsoft.quantum.guide.testingdebugging)
+Para obter mais informações sobre o [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) e [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operações, consulte [Testes e depuragem.](xref:microsoft.quantum.guide.testingdebugging)
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {
@@ -289,10 +289,10 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
         repeat {
             // We expect the target and auxiliary qubits to each be in
             // the |+> state.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [target], Zero, 1.0,
                 "target qubit should be in the |+> state", 1e-10 );
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 1.0,
                 "auxiliary qubit should be in the |+> state", 1e-10 );
 
@@ -302,7 +302,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 
             // The probability of measuring |+> state on the auxiliary qubit
             // is 3/4.
-            AssertProb(
+            AssertMeasurementProbability(
                 [PauliX], [auxiliary], Zero, 3. / 4.,
                 "Error: the probability to measure |+> in the first
                 auxiliary must be 3/4",

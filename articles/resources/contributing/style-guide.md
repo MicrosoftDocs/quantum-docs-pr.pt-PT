@@ -6,12 +6,12 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.style
-ms.openlocfilehash: 3ddb5d67b972f69df1774b476a10e74dd16d97b7
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 26de7d5f639ea1b4df24232127b6f95cee3a041e
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884198"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871387"
 ---
 # <a name="q-style-guide"></a>Guia de estilo Q# #
 ## <a name="general-conventions"></a>Convenções Gerais ##
@@ -64,7 +64,7 @@ Outros verbos podem ser úteis também neste caso, como em `IterateThroughCartes
 | ---- | ------ |
 | Aplicar | Uma operação fornecida como entrada é chamada |
 | Declarar | Uma hipótese sobre o resultado de uma possível medição quântica é verificada por um simulador |
-| Estimativa | Um valor clássico é devolvido, representando uma estimativa extraída de uma ou mais medições |
+| Obter estimativa | Um valor clássico é devolvido, representando uma estimativa extraída de uma ou mais medições |
 | Medir | Uma medição quântica é realizada, e o seu resultado é devolvido ao utilizador |
 | Preparação | Um dado registo de qubits é inicializado num determinado estado |
 | Sample | Um valor clássico é devolvido aleatoriamente de alguma distribuição |
@@ -93,7 +93,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Name | Description |
+|   | Nome | Descrição |
 |---|------|-------------|
 | ☑ | `operation ReflectAboutStart` | Utilização clara de um verbo ("refletir") para indicar o efeito da operação. |
 | ☒ | <s>`operation XRotation`</s> | A utilização da frase substantivo sugere função, em vez de funcionar. |
@@ -126,7 +126,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Name | Description |
+|   | Nome | Descrição |
 |---|------|-------------|
 | ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente o propósito do ponto de entrada através do nome de operação. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | O uso não `Main` comunica claramente o propósito do ponto de entrada, e é redundante com `@EntryPoint()` atributo. |
@@ -168,7 +168,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Name | Description |
+|   | Nome | Descrição |
 |---|------|-------------|
 | ☑ | `X` | Abreviatura bem entendida para "aplicar uma transformação de $X$" |
 | ☑ | `CNOT` | Abreviatura bem entendida para "controlled-NOT" |
@@ -225,7 +225,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Name | Description |
+|   | Nome | Descrição |
 |---|------|-------------|
 | ☒ | <s>`ToDouble`</s> | A preposição "a" resulta numa frase verbo, indicando uma operação e não uma função. |
 | ☒ | <s>`AsDouble`</s> | O tipo de entrada não é claro a partir do nome da função. |
@@ -248,7 +248,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Name | Description |
+|   | Nome | Descrição |
 |---|------|-------------|
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Não utilize um sublinhado `_` que indique que esta operação é apenas para uso interno. |
 | ☑ | `internal operation ApplyDecomposedOperation` | A `internal` palavra-chave no início indica claramente que esta operação é apenas para uso interno. |
@@ -320,7 +320,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Fragmento de código | Description |
+|   | Fragmento de código | Descrição |
 |---|---------|-------------|
 | ☑ | `newtype Oracle = (Apply : Qubit[] => Unit is Adj + Ctl)` | O nome `Apply` é uma `CamelCase` frase verbo formatada, sugerindo que o item nomeado é uma operação. |
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Os itens nomeados devem começar com uma letra maiúscula inicial. |
@@ -386,9 +386,8 @@ O compilador fornecido com o Kit de Desenvolvimento Quântico extrai estes comen
 Da mesma forma, o servidor de idiomas fornecido com o Kit de Desenvolvimento Quântico utiliza estes comentários para fornecer ajuda aos utilizadores quando pairam sobre símbolos no seu código Q#.
 Fazer uso de comentários documentais pode, assim, ajudar os utilizadores a dar sentido ao código, fornecendo uma referência útil para detalhes que não são facilmente expressos usando as outras convenções neste documento.
 
-<div class="nextstepaction">
-    [Referência de sintaxe de comentário de documentação](xref:microsoft.quantum.guide.filestructure#documentation-comments)
-</div>
+> [!div class="nextstepaction"]
+> [Referência de sintaxe de comentário de documentação](xref:microsoft.quantum.guide.filestructure#documentation-comments).
 
 Para utilizar eficazmente esta funcionalidade para ajudar os utilizadores, recomendamos ter algumas coisas em mente enquanto escreve comentários de documentação.
 
@@ -477,7 +476,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-|   | Fragmento de código | Description |
+|   | Fragmento de código | Descrição |
 |---|---------|-------------|
 | ☒ | <s>`2+3`</s> | Use espaços em torno de operadores binários. |
 | ☒ | <s>`target:Qubit`</s> | Use espaços em torno de cólons de anotação tipo. |

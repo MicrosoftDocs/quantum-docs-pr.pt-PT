@@ -1,21 +1,25 @@
 ---
-title: Verificador de utilização de qubits invalidados
-description: Saiba mais sobre o Verificador de Utilização de Qubits invalidados do Microsoft QDK, que verifica o seu código Q# para qubits potencialmente inválidos.
+title: Qubits invalidados usam verificador - Kit de Desenvolvimento Quântico
+description: Saiba mais sobre os qubits invalidados do Microsoft QDK, que utiliza o simulador de traços Quânticos para verificar se o seu código Q# é potencialmente inválido.
 author: vadym-kl
 ms.author: vadym@microsoft.com
-ms.date: 12/11/2017
+ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: e2bbb12448e27f28db030a0084302fb24f46f26b
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275572"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871098"
 ---
-# <a name="invalidated-qubits-use-checker"></a>Qubits invalidados usam verificador
+# <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulador de vestígios quânticos: qubits invalidados usam verificador
 
-É `Invalidated Qubits Use Checker` uma parte do computador quântico [TraceSimulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro) projetado para detetar potenciais bugs no código. Considere o seguinte pedaço de código Q# para ilustrar as questões detetadas pelo `Invalidated Qubits Use Checker` .
+O verificador de qubits invalidado faz parte do simulador de [traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do Kit de Desenvolvimento Quântico. Pode usá-lo para detetar potenciais erros no código causados por qubits inválidos. 
+
+## <a name="invalid-qubits"></a>Qubits inválidos
+
+Considere o seguinte pedaço do código Q# para ilustrar as questões detetadas pelo verificador de utilização de qubits invalidados:
 
 ```qsharp
 operation UseReleasedQubit() : Unit {
@@ -27,12 +31,22 @@ operation UseReleasedQubit() : Unit {
 }
 ```
 
-Quando `H` é aplicado a ele aponta para um `q[0]` qubit já lançado. Isto pode causar um comportamento indefinido. Quando a `Invalidated Qubits Use Checker` ativação estiver ativada, a exceção `InvalidatedQubitsUseCheckerException` será lançada se uma operação for aplicada a um qubit já libertado. Consulte a documentação da API sobre [invalidadoQubitsUseCheckerException](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException) para obter mais detalhes.
+Quando aplica a `H` `q[0]` operação, aponta para um qubit já lançado, que pode causar um comportamento indefinido. Quando o Verificador de Utilização de Qubits invalidado está ativado, lança a exceção `InvalidatedQubitsUseCheckerException` se o programa aplicar uma operação a um qubit já lançado. Para obter mais informações, consulte <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException>.
 
-## <a name="using-the-invalidated-qubits-use-checker-in-your-c-program"></a>Utilizando o verificador de utilização de qubits invalidados no seu programa C#
+## <a name="invoking-the-invalidated-qubits-use-checker"></a>Invocando os qubits invalidados usam verificador
 
-Segue-se um exemplo do código do controlador C# para a utilização do computador quântico `Trace
-Simulator` com o `Invalidated Qubits Use Checker` ativado: 
+Para executar o simulador de traços quânticos com os qubits invalidados use o verificador deve criar uma <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> instância, definir a `UseInvalidatedQubitsUseChecker` propriedade como **verdadeira**, e, em seguida, criar um novo exemplo com como <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> o `QCTraceSimulatorConfiguration` parâmetro. 
+
+```csharp
+var config = new QCTraceSimulatorConfiguration();
+config.UseInvalidatedQubitsUseChecker = true;
+var sim = new QCTraceSimulator(config);
+```
+
+
+## <a name="using-the-invalidated-qubits-use-checker-in-a-c-host-program"></a>Utilizando os qubits invalidados, utilize o verificador num programa de anfitrião C#
+
+Segue-se um exemplo de programas de anfitrião C# que utilizam o simulador de traços quânticos com o verificador de qubits invalidado ativado: 
 
 ```csharp
 using Microsoft.Quantum.Simulation.Core;
@@ -46,7 +60,7 @@ namespace Quantum.MyProgram
         static void Main(string[] args)
         {
             var traceSimCfg = new QCTraceSimulatorConfiguration();
-            traceSimCfg.useInvalidatedQubitsUseChecker = true; // enables useInvalidatedQubitsUseChecker
+            traceSimCfg.UseInvalidatedQubitsUseChecker = true; // enables UseInvalidatedQubitsUseChecker
             QCTraceSimulator sim = new QCTraceSimulator(traceSimCfg);
             var res = MyQuantumProgram.Run().Result;
             System.Console.WriteLine("Press any key to continue...");
@@ -56,8 +70,9 @@ namespace Quantum.MyProgram
 }
 ```
 
-A classe `QCTraceSimulatorConfiguration` armazena a configuração do simulador de traços de computador quântico e pode ser fornecida como um argumento para o `QCTraceSimulator` construtor. Quando `useInvalidatedQubitsUseChecker` é definido para verdadeiro o está `Invalidated Qubits Use Checker` ativado. Consulte a documentação da API sobre [o QCTraceSimulator](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator) e [a QCTraceSimulatorConfiguration](https://docs.microsoft.com/dotnet/api/Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration) para mais detalhes.
+## <a name="see-also"></a>Ver também
 
-## <a name="see-also"></a>Ver também ##
-
-- A visão geral [do Trace Simulator do](xref:microsoft.quantum.machines.qc-trace-simulator.intro) computador quântico.
+- A visão geral do [simulador de traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do Kit de Desenvolvimento Quântico.
+- A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.
+- A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> referência da API.
+- A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.InvalidatedQubitsUseCheckerException> referência da API.
