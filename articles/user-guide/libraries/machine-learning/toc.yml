@@ -1,5 +1,5 @@
 - name: Introdução ao machine learning quântico
-  href: introduction.md
+  href: intro.md
 - name: Classificação básica
   href: basic-classification.md
 - name: Desenhe o seu próprio classificador
