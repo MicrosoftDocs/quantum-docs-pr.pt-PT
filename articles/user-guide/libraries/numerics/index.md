@@ -6,12 +6,12 @@ ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.intro
-ms.openlocfilehash: efd1a712616534ac281433fc008f0983271881d7
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9552f3683e1df8cb10d19d0b3f85223df056f83d
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273969"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871353"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>Introdução à Biblioteca Numérica Quântica
 
@@ -33,9 +33,10 @@ Tendo em conta que são necessários vários passos para chegar a uma implementa
 
 Além da aritmética de números inteiros mencionada até agora, a biblioteca numérica fornece:
 
- - A funcionalidade de números inteiros com e sem sinal (multiplicação, quadrado, divisão com resto, inversão,etc.) com um ou dois números inteiros quânticos como entrada
- - A funcionalidade de vírgula fixa (adição/subtração, multiplicação, quadrado, 1/x, avaliação polinomial) com um ou dois números quânticos de vírgula fixa como entrada
+- A funcionalidade de números inteiros com e sem sinal (multiplicação, quadrado, divisão com resto, inversão,etc.) com um ou dois números inteiros quânticos como entrada
+- A funcionalidade de vírgula fixa (adição/subtração, multiplicação, quadrado, 1/x, avaliação polinomial) com um ou dois números quânticos de vírgula fixa como entrada
 
 ## <a name="getting-started"></a>Introdução
 
-Para começar a utilizar a Biblioteca Numérica, veja o [guia de instalação](xref:microsoft.quantum.numerics.installation) e obtenha mais informações sobre como [utilizar a Biblioteca Numérica](xref:microsoft.quantum.numerics.usage).
+> [!div class="nextstepaction"]
+> [Saiba como utilizar a biblioteca numérica](xref:microsoft.quantum.numerics.usage)

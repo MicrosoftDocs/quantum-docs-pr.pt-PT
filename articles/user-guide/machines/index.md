@@ -1,160 +1,54 @@
 ---
-title: Simuladores quânticos e aplicações anfitriãs | Microsoft Docs
-description: Descreve como controlar simuladores quânticos com uma linguagem de computação .NET clássica, normalmente C# ou Q#.
+title: Simuladores quânticos e programas Q#
+description: Descreve os simuladores quânticos disponíveis como máquinas de destino para programas Q#.
 author: QuantumWriter
 ms.author: Alan.Geller@microsoft.com
-ms.date: 12/11/2017
+ms.date: 6/17/2020
 ms.topic: article
 uid: microsoft.quantum.machines
-ms.openlocfilehash: 14aed75ed0ed192f88699b1c7dbacfae23f74642
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: c81226ba3e50b65cb1012e885866bd6fcc3764d7
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85273806"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871166"
 ---
-# <a name="quantum-simulators-and-host-applications"></a>Simuladores quânticos e aplicações anfitriãs
+# <a name="quantum-simulators"></a>Simuladores quânticos
 
-## <a name="what-youll-learn"></a>O que irá aprender
-
-> [!div class="checklist"]
-> * Como se executam algoritmos quânticos
-> * Simuladores quânticos incluídos nesta versão
-> * Como escrever um controlador em C# para o algoritmo quântico
-
-## <a name="the-quantum-development-kit-execution-model"></a>O Modelo de Execução do Quantum Development Kit
-
-Em [Escrever um programa quântico](xref:microsoft.quantum.write-program), executámos o nosso algoritmo quântico ao transmitir um objeto `QuantumSimulator` para o método `Run` da classe de algoritmo.
-A classe `QuantumSimulator` executa o algoritmo quântico ao simular na íntegra o vetor de estado quântico, que é ideal para executar e testar `Teleport`.
-Veja o [Guia de conceitos](xref:microsoft.quantum.concepts.intro) para obter mais informações sobre os vetores quânticos.
-
-Outros computadores de destino podem ser utilizados para executar um algoritmo quântico.
-O computador é responsável por fornecer implementações de primitivos quânticos para o algoritmo.
-Tal inclui operações primitivas como H, CNOT e Medição, bem como gestão e monitorização de qubits.
-Classes diferentes de computadores quânticos representam diferentes modelos de execução para o mesmo algoritmo quântico.
-
-Cada tipo de computador quântico pode fornecer diferentes implementações desses primitivos.
-Por exemplo, o simulador de rastreio do computador quântico incluído no development kit não faz nenhuma simulação.
-Em vez disso, rastreia a porta, o qubit e outras utilizações dos recursos para o algoritmo.
-
-### <a name="quantum-machines"></a>Computadores Quânticos
-
-Posteriormente, vamos definir classes adicionais de computadores quânticos para suportar outros tipos de simulações e para suportar a execução em computadores quânticos topológicos.
-Permitir que o algoritmo se mantenha constante enquanto se varia a implementação do computador subjacente facilita testar e depurar um algoritmo na simulação e, em seguida, executá-lo em hardware real com a confiança de que o algoritmo não mudou.
-
-### <a name="whats-included-in-this-release"></a>O que está Incluído nesta Versão
-
-Esta versão do kit de programador quântico inclui diversas classes de computadores quânticos.
-Todas estão definidas no espaço de nomes `Microsoft.Quantum.Simulation.Simulators`.
-
-* Um [simulador de vetor de estado completo](xref:microsoft.quantum.machines.full-state-simulator), a classe `QuantumSimulator`.
-* Um [simulador de recursos simples](xref:microsoft.quantum.machines.resources-estimator), a classe `ResourcesEstimator`, permite uma análise de nível superior dos recursos necessários para executar um algoritmo quântico.
-* Um [simulador de recursos baseado em rastreio](xref:microsoft.quantum.machines.qc-trace-simulator.intro), a classe `QCTraceSimulator`, que permite uma análise avançada doe consumos de recursos para todo o grafo de chamada do algoritmo.
-* Um [simulador Toffoli](xref:microsoft.quantum.machines.toffoli-simulator), a classe `ToffoliSimulator`.
-
-## <a name="writing-a-host-application"></a>Escrever uma aplicação anfitriã
-
-Em [Escrever um programa quântico](xref:microsoft.quantum.write-program), escrevemos um controlador C# simples para o nosso algoritmo teleport. Um controlador C# tem quatro objetivos principais:
-
-* Construir o computador de destino
-* Calcular todos os argumentos necessários do algoritmo quântico
-* Executar o algoritmo quântico com o simulador
-* Processar o resultado da operação
-
-Aqui, vamos falar de cada passo mais detalhadamente.
-
-### <a name="constructing-the-target-machine"></a>Construir o Computador de Destino
-
-Os computadores quânticos são instâncias de classes .NET normais, por isso, são criados ao invocar o construtor, como em qualquer classe .NET.
-Alguns simuladores, como o `QuantumSimulator`, implementam a interface .NET <xref:System.IDisposable?displayProperty=nameWithType> e por isso devem ser encapsulados numa instrução C# `using`.
-
-### <a name="computing-arguments-for-the-algorithm"></a>Argumentos de Computação para o Algoritmo
-
-No nosso exemplo `Teleport`, calculámos alguns argumentos relativamente artificiais para transmitir para o nosso algoritmo quântico.
-No entanto, é mais frequente que o algoritmo requeira dados significativos, e o mais fácil é fornecê-los do controlador clássico.
-
-Por exemplo, ao trabalhar em soluções químicas, o algoritmo quântico requer uma grande tabela de integrantes de interação orbital molecular.
-Geralmente, são lidos a partir de um ficheiro fornecido ao executar o algoritmo.
-Uma vez que o Q# não tem um mecanismo para aceder ao sistema de ficheiros, a melhor forma de recolher este tipo de dados é utilizar o controlador clássico e transmitir para o método `Run` do algoritmo quântico.
-
-Outro caso em que o controlador clássico desempenha um papel fundamental é em métodos de variação.
-Nesta classe de algoritmos, um estado quântico é preparado com base em parâmetros clássicos e esse estado utiliza-se para calcular um valor de interesse.
-Os parâmetros ajustam-se com base num tipo de algoritmo de aprendizagem automática ou “hill climbing” e o algoritmo quântico é executado novamente.
-Nestes algoritmos, o algoritmo “hill climbing” propriamente dito é mais bem implementado como uma função estritamente clássica que é chamada pelo controlador clássico; os resultados do “hill climbing” são depois transmitidos para a execução seguinte do algoritmo quântico.
-
-### <a name="running-the-quantum-algorithm"></a>Executar o Algoritmo Quântico
-
-Esta parte é geralmente muito simples.
-Todas as operações Q# são compiladas numa classe que fornece um método `Run` estático.
-Os argumentos deste método são dados pela cadeia de identificação de argumento aplanado da operação propriamente dita, além de um primeiro argumento adicional, que é o simulador com o qual executar. Para uma operação que espera a cadeia de identificação com nome do tipo `(a: String, (b: Double, c: Double))`, o seu equivalente aplanado é do tipo `(String a, Double b, Double c)`.
+Os simuladores quânticos são programas de software que funcionam em computadores clássicos e que atuam como o *computador de destino* de um programa Q#, possibilitando a execução e a testagem de programas quânticos num ambiente que prevê a reação dos qubits a diferentes operações. Este artigo descreve que simuladores quânticos estão incluídos no Quantum Development kit (QDK) e as várias formas através das quais pode transmitir um programa Q# para os simuladores quânticos, como, por exemplo, com a linha de comandos ou com código de controlador escrito numa linguagem clássica.  
 
 
-Existem determinadas nuances ao transmitir argumentos para o método `Run`:
 
-* As matrizes têm de ser encapsuladas num objeto `Microsoft.Quantum.Simulation.Core.QArray<T>`.
-    Uma classe `QArray` tem um construtor que pode assumir qualquer coleção ordenada (`IEnumerable<T>`) de objetos apropriados.
-* A cadeia de identificação, `()` em Q#, é representada por `QVoid.Instance` em C#.
-* As cadeias de identificação não vazias são representadas como instâncias .NET `ValueTuple`.
-* Os tipos definidos pelo utilizador Q# são transmitidos como o respetivo tipo de base.
-* Para transmitir uma operação ou função para um método `Run`, tem de obter uma instância da classe da função ou operação através do método `Get<>` do simulador.
+## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Os simuladores do Quantum Development kit (QDK)
 
-### <a name="processing-the-results"></a>Processar os Resultados
-
-Os resultados do algoritmo quântico são devolvidos do método `Run`.
-O método `Run` é executado de forma assíncrona, pelo que devolve uma instância de <xref:System.Threading.Tasks.Task`1>.
-Existem várias formas de obter os resultados reais da operação. A forma mais simples é utilizar, em `Task`, a propriedade [`Result`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1.result):
-
-```csharp
-    var res = BellTest.Run(sim, 1000, initial).Result;
-```
-Mas outras técnicas, como utilizar o método [`Wait`](https://docs.microsoft.com/dotnet/api/system.threading.tasks.task.wait) ou a palavra-chave C# [`await`](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) também funcionam.
-
-Como acontece em argumentos, as cadeias de identificação Q# são representadas como instâncias `ValueTuple` e as matrizes Q# são representadas como instâncias `QArray`.
-Os tipos definidos pelo utilizador são devolvidos como o respetivo tipo de base.
-A cadeia de identificação vazia, `()`, é devolvida como uma instância da classe `QVoid`.
-
-Muitos algoritmos quânticos requerem uma quantidade substancial de pós-processamento para gerar respostas úteis.
-Por exemplo, a parte quântica do algoritmo de Shor é apenas o início de um cálculo que obtém os fatores de um número.
-
-Na maioria dos casos, o mais simples e fácil é fazer este tipo de pós-processamento no controlador clássico.
-Apenas o controlador clássico pode reportar resultados ao utilizador ou escrever os mesmos no disco.
-O controlador clássico terá acesso a bibliotecas analíticas e outras funções matemáticas que não estão expostas em Q#.
+O simulador quântico é responsável por fornecer implementações de primitivos quânticos para um algoritmo. Essas implementações incluem operações primitivas como `H`, `CNOT` e `Measure`, bem como gestão e monitorização de qubits. O QDK inclui diferentes classes de simuladores quânticos que representam modelos de execução distintos para o mesmo algoritmo quântico. 
 
 
-## <a name="failures"></a>Falhas
+Cada tipo de simulador quântico pode fornecer diferentes implementações desses primitivos. Por exemplo, o [simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator) executa o algoritmo quântico ao simular na íntegra o [vetor de estado quântico](xref:microsoft.quantum.glossary#quantum-state), ao passo que o [simulador de rastreio de computador quântico](xref:microsoft.quantum.machines.qc-trace-simulator.intro) não tem minimamente em conta o estado quântico atual. Em vez disso, rastreia a porta, o qubit e outras utilizações dos recursos para o algoritmo.
 
-Quando a instrução Q# `fail` for atingida durante a execução de uma operação, será lançada uma `ExecutionFailException`.
+### <a name="quantum-machine-classes"></a>Classes de computadores quânticos
 
-Devido à utilização de `System.Task` no método `Run`, a exceção lançada como resultado de uma instrução `fail` será encapsulada num `System.AggregateException`.
-Para descobrir o verdadeiro motivo da falha, terá de iterar em `AggregateException` 
-`InnerExceptions`, por exemplo:
+No futuro, o QDK vai definir classes adicionais de computadores quânticos para suportar outros tipos de simulações e para suportar a execução em hardware quântico. Permitir que o algoritmo se mantenha constante enquanto se varia a implementação do computador subjacente facilita testar e depurar um algoritmo na simulação e, em seguida, executá-lo em hardware real com a confiança de que o algoritmo não mudou.
 
-```csharp
+O QDK inclui várias classes de computadores quânticos, todas definidas no espaço de nomes `Microsoft.Quantum.Simulation.Simulators`.
 
-            try
-            {
-                using(var sim = new QuantumSimulator())
-                {
-                    /// call your operations here...
-                }
-            }
-            catch (AggregateException e)
-            {
-                // Unwrap AggregateException to get the message from Q# fail statement.
-                // Go through all inner exceptions.
-                foreach (Exception inner in e.InnerExceptions)
-                {
-                    // If the exception of type ExecutionFailException
-                    if (inner is ExecutionFailException failException)
-                    {
-                        // Print the message it contains
-                        Console.WriteLine($" {failException.Message}");
-                    }
-                }
-            }
-```
+|Simulador |Classe|Descrição|
+|-----|------|---|
+|[Simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator)| `QuantumSimulator` | Executa e depura os algoritmos quânticos e está limitado a cerca de 30 qubits. |
+|[Avaliador de recursos simples](xref:microsoft.quantum.machines.resources-estimator)| `ResourcesEstimator` | Realiza uma análise de nível superior dos recursos necessários para executar um algoritmo quântico e suporta milhares de qubits.|
+|[Avaliador de recursos com base em rastreio](xref:microsoft.quantum.machines.qc-trace-simulator.intro)|  `QCTraceSimulator` |Executa uma análise avançada dos consumos de recursos para todo o grafo de chamada do algoritmo e suporta milhares de qubits.|
+|[Simulador Toffoli](xref:microsoft.quantum.machines.toffoli-simulator)| `ToffoliSimulator` |Simula os algoritmos quânticos que estão limitados a operações quânticas `X`, `CNOT` e multicontroladas `X` e suporta milhões de qubits. |
 
-## <a name="other-classical-languages"></a>Outras Linguagens Clássicas
+## <a name="invoking-the-quantum-simulator"></a>Invocar o simulador quântico
 
-Apesar de os exemplos que fornecemos estarem em C#, F# e Python, o Development Kit Quantum suporta também a escrita de programas anfitriões clássicos noutras linguagens.
-Por exemplo, se quiser escrever um programa anfitrião no Visual Basic, [este deverá funcionar bem](https://github.com/tcNickolas/MiscQSharp/blob/master/Quantum_VBNet/README.md#using-q-with-visual-basic-net).
+Em [Formas de executar programas Q#](xref:microsoft.quantum.guide.host-programs), são demonstradas três formas de transmitir o código Q# ao simulador quântico: 
+
+* Através da linha de comandos
+* Através de um programa anfitrião Python
+* Através de um programa anfitrião C#
+
+Os computadores quânticos são instâncias de classes .NET normais, por isso, são criados ao invocar o construtor, como em qualquer classe .NET. A forma como o faz depende de como o programa Q# é executado.
+
+## <a name="next-steps"></a>Passos seguintes
+
+* Para obter detalhes relativos à invocação de computadores de destino para programas Q# em diferentes ambientes, veja [Formas de executar programas Q#](xref:microsoft.quantum.guide.host-programs).
