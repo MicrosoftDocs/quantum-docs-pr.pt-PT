@@ -7,12 +7,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.update
-ms.openlocfilehash: 457083ea4756d64375834e5a276c2d91031138fe
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+ms.openlocfilehash: 69b83997773896583258a4996a61b6f334edf407
+ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885147"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86871404"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Atualizar o Microsoft Quantum Development kit (QDK)
 
@@ -53,7 +53,7 @@ Independentemente de utilizar C# ou Python para alojar operações Q#, siga esta
 5. Em cada ficheiro .csproj, defina o SDK com `Microsoft.Quantum.Sdk`, conforme indicado na linha abaixo. Tenha em conta que o número da versão deve ser o último disponível. Para saber qual é, reveja as [notas de versão](https://docs.microsoft.com/quantum/relnotes/).
 
     ```xml
-    <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+    <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
     ```
 
 6. Guarde e feche todos os ficheiros da solução.
@@ -93,7 +93,7 @@ Agora, pode avançar para a [atualização da extensão QDK do Visual Studio](#u
     dotnet clean [project_name].csproj
     ```
 
-3. Determine a versão atual do QDK. Para isso, reveja as [notas de versão](https://docs.microsoft.com/quantum/relnotes/). A versão estará num formato semelhante a `0.11.2006.207`.
+3. Determine a versão atual do QDK. Para isso, reveja as [notas de versão](https://docs.microsoft.com/quantum/relnotes/). A versão estará num formato semelhante a `0.12.20072031`.
 
 4. Em cada ficheiro `.csproj`, percorra os passos abaixo:
 
@@ -108,7 +108,7 @@ Agora, pode avançar para a [atualização da extensão QDK do Visual Studio](#u
     - Substitua a referência ao SDK na definição do projeto. Confirme que o número da versão corresponde ao valor determinado no **passo 3**.
 
         ```xml
-        <Project Sdk="Microsoft.Quantum.Sdk/0.11.2006.207">
+        <Project Sdk="Microsoft.Quantum.Sdk/0.12.20072031">
         ```
 
     - Se presente, remova a referência ao pacote `Microsoft.Quantum.Development.Kit`, que será especificada na seguinte entrada:
@@ -127,7 +127,7 @@ Agora, pode avançar para a [atualização da extensão QDK do Visual Studio](#u
         As referências aos pacotes têm o formato seguinte:
 
         ```xml
-        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.11.2006.207" />
+        <PackageReference Include="Microsoft.Quantum.Compiler" Version="0.12.20072031" />
         ```
 
     - Guarde o ficheiro atualizado.
@@ -194,7 +194,7 @@ O procedimento de atualização depende se instalou originalmente com o conda ou
     Deverá ver o resultado seguinte:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -216,7 +216,7 @@ O procedimento de atualização depende se instalou originalmente com o conda ou
 
     ```
     Name: qsharp
-    Version: 0.12.20070124
+    Version: 0.12.2007.2031
     Summary: Python client for Q#, a domain-specific quantum programming language
     ...
     ```
@@ -267,7 +267,7 @@ O procedimento de atualização depende se instalou originalmente com o conda ou
     A saída deve ser semelhante ao seguinte:
 
     ```
-    iqsharp: 0.12.20070124
+    iqsharp: 0.12.20072031
     Jupyter Core: 1.4.0.0
     ```
 
@@ -302,16 +302,19 @@ Agora, pode utilizar o kernel do IQ# atualizado para executar cada Q# Jupyter No
     - Selecione a extensão **Microsoft Quantum Development Kit for Visual Studio Code**
     - Recarregue a extensão
 
-2. Atualize os modelos de projetos quânticos:
-
-   - Aceda a **Ver** -> **Paleta de Comandos**
-   - Selecione **Q#: Instalar modelos de projetos**
-   - Ao fim de alguns segundos, deverá receber um pop-up com a mensagem "project templates installed successfully" ("modelos de projetos instalados com êxito")
-
 ### <a name="c-using-the-dotnet-command-line-tool"></a>C# com a ferramenta de linha de comandos `dotnet`
 
 1. Atualize os modelos de projetos quânticos para .NET
 
+    Da linha de comandos:
+
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
+
+   Em alternativa, se quiser utilizar os modelos da linha de comandos e já tiver a extensão QDK do VS Code instalada, pode atualizar os modelos do projeto a partir da própria extensão:
+
+   - [Atualizar a extensão QDK](#update-vs-code-qdk-extension)
+   - No VS Code, vá para **Ver** -> **Paleta de Comandos**
+   - Selecione **Q#: Instalar modelos de projeto da linha de comandos**
+   - Ao fim de alguns segundos, deverá receber um pop-up com a mensagem "project templates installed successfully" ("modelos de projetos instalados com êxito")
