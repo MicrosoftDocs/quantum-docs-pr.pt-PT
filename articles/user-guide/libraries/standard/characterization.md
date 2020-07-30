@@ -6,12 +6,12 @@ uid: microsoft.quantum.libraries.characterization
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 7ed92c29020ccf389faa099f5bd80516af525578
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+ms.openlocfilehash: 9d763d11ef9c08cc0941cade217dbb2942ef4bf9
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275764"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436537"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização quântica e Estatística #
 
@@ -96,7 +96,7 @@ A inferência bayesiana exata é, na prática, intratável.
 Para ver esta imagem, queremos aprender uma variável $n$-bit $x$.
 A distribuição prévia $\Pr(x)$ tem suporte superior a $2^n$ valores hipotéticos de $x$.
 Isto significa que se precisarmos de uma estimativa muito precisa de $x$ então a estimativa da fase bayesiana pode precisar de memória proibitiva e tempo de processamento.
-Embora para algumas aplicações, como a simulação quântica, a precisão limitada necessária não impeça tais métodos de outras aplicações, tais como o algoritmo de Shor, não podem usar a inferência bayesiana exata dentro do seu passo de estimativa de fase.  Por esta razão, também fornecemos implementações para métodos aproximados bayesianos, tais como [estimativa aleatória de fase de caminhada (RWPE)](xref:microsoft.quantum.research.randomwalkphaseestimation.randomwalkphaseestimation) e também abordagens não-bayesianas, tais como estimativa de fase [robusta.](xref:microsoft.quantum.characterization.robustphaseestimation)
+Embora para algumas aplicações, como a simulação quântica, a precisão limitada necessária não impeça tais métodos de outras aplicações, tais como o algoritmo de Shor, não podem usar a inferência bayesiana exata dentro do seu passo de estimativa de fase.  Por esta razão, também fornecemos implementações para métodos aproximados bayesianos, tais como [estimativa aleatória de fase de caminhada (RWPE)](xref:microsoft.quantum.research.characterization.randomwalkphaseestimation) e também abordagens não-bayesianas, tais como estimativa de fase [robusta.](xref:microsoft.quantum.characterization.robustphaseestimation)
 
 ### <a name="robust-phase-estimation"></a>Estimativa de fase robusta ###
 
