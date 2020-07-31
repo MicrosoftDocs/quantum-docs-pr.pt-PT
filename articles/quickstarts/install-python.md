@@ -6,12 +6,12 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.python
-ms.openlocfilehash: ec5e66e0c85d89888a8ff1e7d6bf18bf89ff44ac
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: 4d148435f01d975e690828dd02335758fc71dfe4
+ms.sourcegitcommit: 2f4c637e194dc2b5d18539469ed37444e2800199
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871591"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87436543"
 ---
 # <a name="develop-with-q-and-python"></a>Programar com Q# e Python
 
@@ -97,7 +97,7 @@ Agora, está preparado para verificar a instalação do pacote `qsharp` do Pytho
     import qsharp
     from Qrng import SampleQuantumRandomNumberGenerator
 
-    SampleQuantumRandomNumberGenerator.simulate()
+    print(SampleQuantumRandomNumberGenerator.simulate())
     ```
 
 1. A partir do ambiente que criou durante a instalação (ou seja, o ambiente conda ou Python onde instalou `qsharp`), execute o programa:
@@ -106,7 +106,7 @@ Agora, está preparado para verificar a instalação do pacote `qsharp` do Pytho
     python host.py
     ```
 
-1. Deverá ver o resultado da operação que invocou. Neste caso, como a operação gera um resultado aleatório, verá `Zero` ou `One` impressos no ecrã. Se executar o programa repetidamente, deverá ver cada resultado aproximadamente metade do tempo.
+1. Deverá ver o resultado da operação que invocou. Neste caso, como a operação gera um resultado aleatório, verá `0` ou `1` impressos no ecrã. Se executar o programa repetidamente, deverá ver cada resultado aproximadamente metade do tempo.
 
 > [!NOTE]
 > * O código Python é um programa Python normal. Pode utilizar qualquer ambiente Python, incluindo Jupyter Notebooks baseados em Python, para escrever o programa Python e chamar as operações Q#. O programa Python pode importar operações Q# a partir de quaisquer ficheiros .qs localizados na mesma pasta do próprio código Python.
