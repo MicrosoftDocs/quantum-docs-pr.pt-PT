@@ -1,17 +1,20 @@
 ---
-title: Correção de erros nas bibliotecas padrão Q#
-description: Aprenda a utilizar códigos de correção de erros nos seus programas Q# enquanto protege o estado dos qubits.
+title: Correção de erros nas Q# bibliotecas padrão
+description: Aprenda a usar códigos de correção de erros nos seus Q# programas enquanto protege o estado dos qubits.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 514fe68f603b9a3a0b4607390719b08a43fe4967
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275723"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868496"
 ---
 # <a name="error-correction"></a>Correção de Erros #
 
@@ -48,7 +51,7 @@ Note que $Z_0 Z_1 {000} \ket = \ket {000} $ e que $Z_0 Z_1 \ket {111} = \ket {11
 Por outro lado, $Z_0 Z_1 \ket {100} = - \ket {100} $ e $Z_0 Z_1 \ket {011} = -\ket {011} $, pelo que o resultado da medição de $Z_0 Z_1$ revela informações úteis sobre que erro ocorreu.
 
 Para enfatizar isto, repetimos a tabela acima, mas adicionamos os resultados da medição $Z_0 Z_1$ e $Z_1 Z_2$ em cada linha.
-Denotamos os resultados de cada medição pelo sinal do valor eigen que é observado, ou $+$ ou $-$, correspondentes aos valores Q# `Result` de `Zero` `One` e, respectivamente.
+Denotamos os resultados de cada medição pelo sinal do valor eigen que é observado, ou $+$ ou $-$, correspondente aos Q# `Result` valores de `Zero` `One` e, respectivamente.
 
 | Erro $E$ | $E\ket{\overline {0} }$ | $E\ket{\overline {1} }$ | Resultado de $Z_0 Z_1$ | Resultado de $Z_1 Z_2$ |
 | --- | --- | --- | --- | --- |
@@ -68,16 +71,16 @@ Em particular, salientamos que a recuperação é um procedimento de inferência
 > De uma forma mais geral, podem ser criados códigos para lidar com um maior número de erros e para lidar com erros de $Z$, bem como $X$ erros.
 
 A perceção de que podemos descrever medições na correção de erros quânticos que atuam da mesma forma em todos os estados de código, é a essência do *formalismo estabilizador.*
-O cânone Q# fornece uma estrutura para descrever a codificação e descodificamento dos códigos estabilizadores, e para descrever como se recupera de erros.
+O Q# cânone fornece um quadro para descrever a codificação e descodificamento dos códigos estabilizadores, e para descrever como se recupera de erros.
 Nesta secção, descrevemos este quadro e a sua aplicação a alguns simples códigos de correção de erros quânticos.
 
 > [!TIP]
 > Uma introdução completa ao formalismo estabilizador está fora do âmbito desta secção.
 > Referimos leitores interessados em aprender mais com [Gottesman 2009.](https://arxiv.org/abs/0904.2557)
 
-## <a name="representing-error-correcting-codes-in-q"></a>Representando códigos de correção de erros em Q # ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Representando códigos de correção de erros emQ# ##
 
-Para ajudar a especificar códigos de correção de erros, o cânone Q# fornece vários tipos distintos definidos pelo utilizador:
+Para ajudar a especificar códigos de correção de erros, o Q# cânone fornece vários tipos distintos definidos pelo utilizador:
 
 - <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Denota que um registo de qubits deve ser interpretado como o bloco de código de um código de correção de erros.
 - <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Denota que uma série de resultados de medição deve ser interpretada como a síndrome medida num bloco de código.
@@ -119,4 +122,4 @@ using (scratch = Qubit[nScratch]) {
 
 Exploramos isto mais detalhadamente na amostra de [código bit flip.](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)
 
-Além do código bit-flip, o cânone Q# é fornecido com implementações do [código perfeito de cinco qubits](https://arxiv.org/abs/quant-ph/9602019), e o código de sete [qubits](https://arxiv.org/abs/quant-ph/9705052), ambos podem corrigir um erro arbitar de um único qubit.
+Além do código bit-flip, o Q# cânone é fornecido com implementações do [código perfeito de cinco qubits](https://arxiv.org/abs/quant-ph/9602019), e o código de sete [qubits](https://arxiv.org/abs/quant-ph/9705052), ambos podem corrigir um erro arbitar de um único qubit.

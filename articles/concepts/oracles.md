@@ -1,6 +1,8 @@
 ---
 título: Descrição dos oráculos quânticos: Aprenda a trabalhar e a definir oráculos quânticos, operações de caixa preta que são usadas como entrada para outro algoritmo.
 autor: cgranade uid: microsoft.quantum.concepts.oracles ms.author: Christopher.Granade@microsoft.com ms.date: 07/11/2018 ms.topic: article no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -105,7 +107,7 @@ $$
 Agora $ = O O^ \dagger $ por construção, assim resolvemos ambos os problemas anteriores.
 
 > [!TIP]
->Para ver que $ O = O^ { \dagger } $ , note que $ O^2 = \boldone $ desde $ um \oplus b \oplus b = a para todos $ $ a, b \in \[ ! OP. NO-LOC({)]0, 1 \[ ! OP. NO-LOC(})] $ .
+>Para ver que $ O = O^ { \dagger } $ , note que $ O^2 = \boldone $ desde $ um \oplus b \oplus b = a para todos $ $ a, b \in \: ::no-loc({):::0, 1 \: :no-loc(}:: $ .
 >Como resultado, $ O \ket { x } \ket { y \oplus f(x) x } = \ket { } \ket { y \oplus f(x) \oplus f(x) x } = \ket { } \ket { y } $ .
 
 Importante, definir um oráculo desta forma para cada estado computacional $ \ket { x } \ket { y } $ também define como O age $ para qualquer $ outro estado.

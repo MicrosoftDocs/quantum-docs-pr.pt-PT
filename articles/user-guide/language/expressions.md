@@ -1,29 +1,32 @@
 ---
-title: 'Expressãos tipo em Q #'
-description: Entenda como especificar, referenciar e combinar constantes, variáveis, operadores, operações e funções como expressões em Q#.
+title: Expressões emQ#
+description: Compreender como especificar, referenciar e combinar constantes, variáveis, operadores, operações e funções como expressões em Q# .
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.expressions
-ms.openlocfilehash: 1821df6a3a51a62b44f3ccd96b127577c5db990a
-ms.sourcegitcommit: af10179284967bd7a72a52ae7e1c4da65c7d128d
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: b6cc97dfee05dc843e213e84f17043714a8a9656
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85415393"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869618"
 ---
-# <a name="type-expressions-in-q"></a>Expressãos tipo em Q #
+# <a name="expressions-in-no-locq"></a>Expressões emQ#
 
 ## <a name="numeric-expressions"></a>Expressões numéricas
 
 Expressões numéricas são expressões do `Int` `BigInt` tipo, ou `Double` .
 Ou seja, ou são números inteiros ou de pontos flutuantes.
 
-`Int`literais em Q# são escritos como uma sequência de dígitos.
+`Int`literais Q# são escritos como uma sequência de dígitos.
 Os inteiros hexadecimais e binários são suportados e escritos com um `0x` `0b` prefixo, respectivamente.
 
-`BigInt`literais em Q# têm um rasto `l` ou `L` sufixo.
+`BigInt`literais em Q# ter um rasto ou `l` `L` sufixo.
 Os grandes inteiros hexadecimais são suportados e escritos com um prefixo "0x".
 Assim, todas são utilizações válidas de `BigInt` literais:
 
@@ -33,7 +36,7 @@ let bigHex = 0x123456789abcdef123456789abcdefL;
 let bigOne = bigZero + 1L;
 ```
 
-`Double`literais em Q# são números de ponto flutuante escritos usando dígitos decimais.
+`Double`literais são Q# números de ponto flutuante escritos usando dígitos decimais.
 Podem ser escritos com ou sem ponto decimal, `.` ou uma parte exponencial indicada com 'e' ou 'E' (após o qual apenas são válidos um possível sinal negativo e dígitos decimais).
 Seguem-se `Double` literais válidos: `0.0` . . . `1.2e5` `1e-5` .
 
@@ -86,7 +89,7 @@ Os dois `Bool` valores literais são `true` `false` e.
 Tendo em conta duas expressões do mesmo tipo primitivo, os `==` `!=` operadores binários podem ser utilizados para construir uma `Bool` expressão.
 A expressão é verdadeira se as duas expressões forem iguais e falsas se não.
 
-Os valores dos tipos definidos pelo utilizador não podem ser comparados, apenas os seus valores desembrulhados podem ser comparados. Por exemplo, utilizando o operador "desembrulhar" `!` (explicado em pormenor nos [tipos em Q#](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
+Os valores dos tipos definidos pelo utilizador não podem ser comparados, apenas os seus valores desembrulhados podem ser comparados. Por exemplo, utilizando o operador "desembrulhar" `!` (explicado em pormenor na [Types Q# in ](xref:microsoft.quantum.guide.types#access-anonymous-items-with-the-unwrap-operator)),
 
 ```qsharp
 newtype WrappedInt = Int;     // Yes, this is a contrived example
@@ -110,9 +113,9 @@ Dada qualquer expressão booleana, o `not` operador unary pode ser usado para co
 
 ## <a name="string-expressions"></a>Expressões de cadeia
 
-Q# permite que as cordas sejam utilizadas na `fail` declaração (explicada no [Fluxo de Controlo)](xref:microsoft.quantum.guide.controlflow#fail-statement)e na [`Message`](xref:microsoft.quantum.intrinsic.message) função padrão. O comportamento específico deste último depende do simulador utilizado, mas normalmente escreve uma mensagem para a consola anfitriã quando é chamado durante um programa Q#.
+Q#permite que as cordas sejam utilizadas na `fail` declaração (explicada no [Fluxo de Controlo)](xref:microsoft.quantum.guide.controlflow#fail-statement)e na [`Message`](xref:microsoft.quantum.intrinsic.message) função padrão. O comportamento específico deste último depende do simulador utilizado, mas normalmente escreve uma mensagem para a consola anfitriã quando é chamado durante um Q# programa.
 
-As cordas em Q# são literais ou cordas interpoladas.
+As cordas Q# são literais ou cordas interpoladas.
 
 As letras de corda são semelhantes às simples cordas literais na maioria das línguas: uma sequência de caracteres Unicode incluídos em citações duplas `" "` .
 Dentro de uma corda, use o personagem de backslash `\` para escapar a um personagem de dupla citação `\"` (), ou para inserir uma nova linha ( ), um retorno de `\n` transporte ( ) ou um `\r` separador ( ). `\t`
@@ -123,11 +126,11 @@ Por exemplo:
 ```
 ### <a name="interpolated-strings"></a>Cordas interpoladas
 
-A sintaxe Q# para interpolações de cordas é um subconjunto da sintaxe C#. Seguem-se os pontos-chave que dizem respeito a Q#:
+A Q# sintaxe para interpolações de cordas é um subconjunto da sintaxe C#. Seguem-se os pontos-chave que dizem respeito Q# a:
 
 * Para identificar uma corda literal como uma corda interpolada, prepare-a com o `$` símbolo. Não pode haver espaço branco entre o `$` e o que começa uma corda `"` literal.
 
-* O seguinte é um exemplo básico usando a [`Message`](xref:microsoft.quantum.intrinsic.message) função para escrever o resultado de uma medição para a consola, ao lado de outras expressões Q#.
+* O seguinte é um exemplo básico usando a [`Message`](xref:microsoft.quantum.intrinsic.message) função para escrever o resultado de uma medição para a consola, ao lado de Q# outras expressões.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -135,9 +138,9 @@ A sintaxe Q# para interpolações de cordas é um subconjunto da sintaxe C#. Seg
     Message($"Number: {num}, Result: {res}");
 ```
 
-* Qualquer expressão Q# válida pode aparecer numa corda interpolada.
+* Qualquer expressão válida Q# pode aparecer numa corda interpolada.
 
-* Expressões dentro de uma corda interpolada seguem a sintaxe Q#, não a sintaxe C#. A distinção mais notável é que Q# não suporta cordas interpoladas verbatim (multi-line).
+* Expressões dentro de uma corda interpolada seguem Q# a sintaxe, não a sintaxe C#. A distinção mais notável é que Q# não suporta cordas interpoladas verbatim (multi-line).
 
 Para obter mais detalhes sobre a sintaxe C#, consulte [*As Cordas Interpoladas*](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/interpolated-strings).
 
@@ -197,7 +200,7 @@ Além das literais, as únicas expressões de um tipo definido pelo utilizador s
 
 ## <a name="unwrap-expressions"></a>Desembrulhar expressões
 
-Em Q#, o operador de desembrulhar é um ponto de exclamação em fuga `!` .
+Em Q# , o operador de desembrulhamento é um ponto de exclamação de fuga `!` .
 Por exemplo, se `IntPair` for um tipo definido pelo utilizador com o tipo subjacente e é uma `(Int, Int)` `s` variável com `IntPair(2, 3)` valor, então `s!` é `(2, 3)` .
 
 Para os tipos definidos pelo utilizador definidos em termos de outros tipos definidos pelo utilizador, pode repetir o operador de desembrulhá-lo. Por exemplo, `s!!` indica o valor duplamente desembrulhado de `s` .
@@ -270,7 +273,7 @@ Por exemplo, se `a` e `b` são ambas matrizes do `Int` tipo, um elemento da conc
 (a + b)[13]
 ```
 
-Todos os arrays em Q# são baseados em zero.
+Todos os conjuntos são baseados em Q# zero.
 Ou seja, o primeiro elemento de uma matriz `a` é `a[0]` sempre.
 
 
@@ -318,7 +321,7 @@ let slice10 = arr[...];       // slice10 is [1,2,3,4,5,6];
 
 ### <a name="copy-and-update-expressions"></a>Expressões de cópia e atualização
 
-Uma vez que todos os tipos Q# são tipos de valor (com os qubits a assumirem um papel um pouco especial), formalmente é criada uma "cópia" quando um valor está ligado a um símbolo ou quando um símbolo é recuperado. Ou seja, o comportamento de Q# é o mesmo que se uma cópia fosse criada usando um operador de atribuição. 
+Uma vez que todos os Q# tipos são tipos de valor (com os qubits a assumirem um papel um pouco especial), formalmente é criada uma "cópia" quando um valor está ligado a um símbolo ou quando um símbolo é recuperado. Ou seja, o comportamento Q# é o mesmo que se uma cópia fosse criada usando um operador de atribuição. 
 
 Claro que, na prática, apenas as peças relevantes são recriadas conforme necessário. Isto afeta a forma como copia os arrays porque não é possível atualizar itens de matriz. Modificar uma matriz existente requer uma alavancagem de um mecanismo *de cópia e atualização.*
 
@@ -381,7 +384,7 @@ No entanto, embora as operações `(Qubit[] => Unit is Adj)` e tenham o tipo de 
 
 Por exemplo, `[[Op1], [Op2]]` atualmente levantaria um erro porque tenta criar um conjunto dos dois tipos de matrizes incompatíveis `(Qubit[] => Unit is Adj)[]` e `(Qubit[] => Unit is Ctl)[]` .
 
-Para obter mais informações sobre chamadas, consulte [expressões callable](#callable-expressions) nesta página ou [Operações e Funções em Q#](xref:microsoft.quantum.guide.operationsfunctions).
+Para obter mais informações sobre chamadas, consulte [expressões calláveis](#callable-expressions) nesta página ou [Operações e Funções em Q# ](xref:microsoft.quantum.guide.operationsfunctions).
 
 ## <a name="conditional-expressions"></a>Expressões Condicionais
 
@@ -446,7 +449,7 @@ Assim, para invocar o resultado da chamada `Builder` do parágrafo anterior, a s
 ```
 
 Ao invocar uma chamada [tipo-parametrizada,](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables) pode especificar os parâmetros reais do tipo dentro dos suportes angulares `< >` após a expressão callable.
-Esta ação é geralmente desnecessária, uma vez que o compilador Q# infere os tipos reais.
+Esta ação é geralmente desnecessária, uma vez que o Q# compilador infere os tipos reais.
 No entanto, *é* necessário para [a aplicação parcial](xref:microsoft.quantum.guide.operationsfunctions#partial-application) se um argumento porontose de tipo não for especificado.
 Também é útil ao passar operações com diferentes suportes de functor para um callable.
 
@@ -469,7 +472,7 @@ A especificação do tipo é necessária porque `Op3` e `Op1` tem diferentes tip
 
 * Os parênteses para a invocação de funcionamento e função também se ligam perante qualquer operador, mas após a indexação de matrizes e funtores.
 
-Operadores Q# por ordem de precedência, da mais alta para a mais baixa:
+Q#Operadores por ordem de precedência, da mais alta para a mais baixa:
 
 Operador | Arity | Descrição | Tipos operand
 ---------|----------|---------|---------------
@@ -492,4 +495,4 @@ Operador | Arity | Descrição | Tipos operand
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Agora que pode trabalhar com expressões em Q#, passe para [Operações e Funções em Q#](xref:microsoft.quantum.guide.operationsfunctions) para aprender a definir e chamar operações e funções.
+Agora que pode trabalhar com expressões Q# em, passe para [Operações Q# e Funções](xref:microsoft.quantum.guide.operationsfunctions) para aprender a definir e chamar operações e funções.

@@ -1,17 +1,20 @@
 ---
 title: Contador de profundidade - Kit de Desenvolvimento Quântico
-description: Conheça o contador de profundidade microsoft QDK, que utiliza o simulador de traços Quânticos para recolher contagens da profundidade de cada operação invocada num programa Q#.
+description: Conheça o contador de profundidade microsoft QDK, que utiliza o simulador de traços Quânticos para recolher contagens da profundidade de cada operação invocada num Q# programa.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.depth-counter
-ms.openlocfilehash: 811e387fedf547d2681518ae0bb525c13dc84ff4
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 5c54f6fc479203d30c68c4958329605d4323f9ea
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871132"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868326"
 ---
 # <a name="quantum-trace-simulator-depth-counter"></a>Simulador de vestígios quânticos: contador de profundidade
 
@@ -36,7 +39,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-depth-counter-in-a-c-host-program"></a>Usando o contador de profundidade num programa de anfitrião C#
 
-O exemplo C# que segue nesta secção calcula a `T` profundidade da `CCNOT` operação, com base no seguinte código de amostra Q#:
+O exemplo C# que segue nesta secção calcula a `T` profundidade da `CCNOT` operação, com base no seguinte Q# código de amostra:
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

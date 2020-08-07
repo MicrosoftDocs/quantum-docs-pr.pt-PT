@@ -1,19 +1,22 @@
 ---
-title: 'Fluxo de controlo em Q #'
+title: Fluxo de controlo emQ#
 description: Laços, condicional, etc.
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
-ms.openlocfilehash: b652736168a71b905deaf7c4fdb29a8751b3dfaf
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870996"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867952"
 ---
-# <a name="control-flow-in-q"></a>Fluxo de controlo em Q #
+# <a name="control-flow-in-no-locq"></a>Fluxo de controlo emQ#
 
 Dentro de uma operação ou função, cada declaração funciona em ordem, semelhante a outras línguas clássicas imperativas comuns.
 No entanto, pode modificar o fluxo de controlo de três formas distintas:
@@ -104,12 +107,12 @@ Note que no final, utilizamos o operador binário aritmético-esquerdo, `<<<` . 
 
 ## <a name="repeat-until-success-loop"></a>Loop de repetição até ao sucesso
 
-A linguagem Q# permite que o fluxo de controlo clássico dependa dos resultados da medição de qubits.
+A Q# linguagem permite que o fluxo de controlo clássico dependa dos resultados da medição de qubits.
 Esta capacidade, por sua vez, permite implementar poderosos gadgets probabilísticos que podem reduzir o custo computacional para implementar unitárias.
-Exemplos disso são os padrões *de repetição até ao sucesso* (RUS) em Q#.
+Exemplos disso são os padrões *de repetição até ao sucesso* (RUS) em Q# .
 Estes padrões RUS são programas probabilísticos que têm um custo baixo *esperado* em termos de portões elementares; o custo incorrido depende da execução real e da interligagem das múltiplas ramificações possíveis.
 
-Para facilitar os padrões de repetição até ao sucesso (RUS), Q# suporta as construções
+Para facilitar os padrões de repetição até ao sucesso (RUS), Q# apoia as construções
 
 ```qsharp
 repeat {
@@ -147,7 +150,7 @@ Para mais exemplos e detalhes, consulte [exemplos de repetição até ao sucesso
 
 ## <a name="while-loop"></a>Enquanto loop
 
-Os padrões de repetição até ao sucesso têm uma conotação muito quântica específica. Eles são amplamente utilizados em classes particulares de algoritmos quânticos - daí a construção de linguagem dedicada em Q#. No entanto, os laços que quebram com base numa condição e cujo comprimento de execução é, portanto, desconhecido no tempo de compilação, são tratados com especial cuidado num tempo de execução quântica. No entanto, a sua utilização dentro das funções não é problemática, uma vez que estes loops contêm apenas código que funciona em hardware convencional (não quântico). 
+Os padrões de repetição até ao sucesso têm uma conotação muito quântica específica. São amplamente utilizados em determinadas classes de algoritmos quânticos - daí a construção dedicada da linguagem em Q# . No entanto, os laços que quebram com base numa condição e cujo comprimento de execução é, portanto, desconhecido no tempo de compilação, são tratados com especial cuidado num tempo de execução quântica. No entanto, a sua utilização dentro das funções não é problemática, uma vez que estes loops contêm apenas código que funciona em hardware convencional (não quântico). 
 
 Q#, portanto, suporta a utilização de loops apenas dentro de funções. Uma `while` declaração consiste na palavra-chave , uma expressão `while` booleana em parênteses, e um bloco de declaração.
 O bloco de declaração (o corpo do laço) é executado desde que a condição avalie para `true` .
@@ -205,7 +208,7 @@ fail $"Syndrome {syn} is incorrect";
 
 ### <a name="rus-pattern-for-single-qubit-rotation-about-an-irrational-axis"></a>Padrão RUS para rotação de um único qubit sobre um eixo irracional 
 
-Num caso de uso típico, a seguinte operação Q# implementa uma rotação em torno de um eixo irracional de $(I + 2i Z)/\sqrt {5} $ na esfera Bloch. A implementação utiliza um padrão RUS conhecido:
+Num caso de uso típico, a seguinte Q# operação implementa uma rotação em torno de um eixo irracional de $(I + 2i Z)/\sqrt {5} $ na esfera Bloch. A implementação utiliza um padrão RUS conhecido:
 
 ```qsharp
 operation ApplyVRotationUsingRUS(qubit : Qubit) : Unit {
@@ -331,4 +334,4 @@ Para obter mais informações, consulte [a amostra de teste de unidade fornecida
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Saiba mais [sobre Testes e Debugging](xref:microsoft.quantum.guide.testingdebugging) em Q#.
+Saiba mais [sobre testes e depuragem](xref:microsoft.quantum.guide.testingdebugging) em Q# .

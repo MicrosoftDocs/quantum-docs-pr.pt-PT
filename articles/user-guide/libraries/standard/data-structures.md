@@ -1,17 +1,20 @@
 ---
-title: Estruturas de dados nas bibliotecas padrão Q#
-description: Conheça as estruturas de dados, oráculos e geradores dinâmicos nas bibliotecas padrão Microsoft Q.
+title: Estruturas de dados nas Q# bibliotecas padrão
+description: Conheça as estruturas de dados, oráculos e geradores dinâmicos nas Q# bibliotecas padrão da Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: 46ac6794d1e21e111aa1d98e11a6f83194f8d54e
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275732"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868528"
 ---
 # <a name="data-structures-and-modeling"></a>Estruturas de Dados e Modelação #
 
@@ -34,7 +37,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 ### <a name="arrays"></a>Matrizes ###
 
 O cânone fornece várias funções para manipular matrizes.
-Estas funções são de tipo parametrizado, e assim podem ser usadas com matrizes de qualquer tipo Q#.
+Estas funções são de tipo parametrizado, e assim podem ser usadas com matrizes de qualquer Q# tipo.
 Por exemplo, a <xref:microsoft.quantum.arrays.reversed> função devolve uma nova matriz cujos elementos estão em ordem inversa a partir da sua entrada.
 Isto pode ser usado para alterar a forma como um registo quântico é representado ao chamar operações:
 
@@ -72,7 +75,7 @@ Na [fase de estimativa](https://en.wikipedia.org/wiki/Quantum_phase_estimation_a
 Aqui o termo oráculo refere-se a uma blackbox subbroutina quântica que age sobre um conjunto de qubits e devolve a resposta como uma fase.
 Esta sub-rotina pode muitas vezes ser considerada como uma entrada para um algoritmo quântico que aceita o oráculo, além de alguns outros parâmetros, e aplica uma série de operações quânticas e tratando uma chamada para esta subbroutina quântica como se fosse um portão fundamental.
 Obviamente, para implementar o algoritmo maior, deve ser fornecida uma decomposição concreta do oráculo em portões fundamentais, mas tal decomposição não é necessária para entender o algoritmo que chama o oráculo.
-Em Q#, esta abstração é representada por usar que as operações são valores de primeira classe, de modo que as operações podem ser passadas para implementações de algoritmos quânticos de forma de caixa preta.
+Em Q# , esta abstração é representada por usar que as operações são valores de primeira classe, de modo que as operações podem ser passadas para implementações de algoritmos quânticos de forma de caixa preta.
 Além disso, os tipos definidos pelo utilizador são utilizados para rotular as diferentes representações do oráculo de uma forma tipo segura, dificultando a conflação acidental de diferentes tipos de operações de caixa preta.
 
 Tais oráculos aparecem em vários contextos diferentes, incluindo exemplos famosos como [a pesquisa de Grover](https://en.wikipedia.org/wiki/Grover%27s_algorithm) e algoritmos de simulação quântica.
@@ -189,7 +192,7 @@ O unitário que descreve tal dinâmica quântica é $U(t)=R_z (2\omega t)$ para 
 Neste contexto, podemos simular $U(t)$ para qualquer $t$ usando um único portão de $R_z$ e, como tal, não precisamos de nos restringir apenas a consultas discretas ao unitário.
 Tal modelo contínuo também tem a propriedade que frequências superiores a $2\pi$ podem ser aprendidas a partir de processos de estimativa de fase que usam consultas contínuas porque informações de fase que de outra forma seriam mascaradas pelos cortes de ramo da função logaritmo podem ser reveladas a partir dos resultados de experiências realizadas em valores não proporcionais de $t$.
 Assim, para problemas como este modelo de consulta contínua para a estimativa de fase oráculo não só são adequados, como também são preferíveis ao modelo de consulta discreta.
-Por esta razão, q# tem funcionalidade para ambas as formas de consultas e deixa ao utilizador decidir sobre um algoritmo de estimativa de fase para se adaptar às suas necessidades e ao tipo de oráculo que está disponível.
+Por esta razão Q# tem funcionalidade para ambas as formas de consultas e deixa ao utilizador decidir sobre um algoritmo de estimativa de fase para adequar as suas necessidades e o tipo de oráculo que está disponível.
 
 ## <a name="dynamical-generator-modeling"></a>Modelação dinâmica do gerador ##
 

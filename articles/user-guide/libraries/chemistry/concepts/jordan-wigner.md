@@ -6,12 +6,15 @@ ms.author: nawiebe@microsoft.com
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
-ms.openlocfilehash: 17cb473c6d33e3356d5da886f47985c3828d4d1f
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 9f1455ebbecf6a3500ec11a5196e7662455c9a78
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275922"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869516"
 ---
 # <a name="jordan-wigner-representation"></a>Representação Jordan-Wigner
 
@@ -28,7 +31,7 @@ Temos então que $a^\dagger_j \ket {0} _j = \ket {1} _j$ e $a^\\dagger_j\ket _j 
 É fácil verificar se \start{align} a^\dagger_j &= \start{bmatrix}0 & 0 \\ \ 1 &0\end{bmatrix}=\frac{X_j - iY_j} {2} , \nonumber \\ \\ a_j &= \start{bmatrix}0 & iY_j 1 \\ \ 0 &0 \end{bmatrix}=\frac{X_j + iY_j} {2} , \end{align} onde $X_j$ e $Y_j$ são os operadores Pauli-$X$ e -$Y$ agindo em qubit $j$.
 
 >[!NOTE]
-> Em Q# o estado de $\ket {0} $ representa o estado de +1 do operador $Z$. Em algumas áreas da física $\ket {0} $ representa o estado terrestre de baixa energia e, portanto, o estado -1 do operador de $Z$. Portanto, algumas fórmulas podem diferir da literatura popular.
+> No Q# estado de $\ket {0} $ representa o estado de +1 do operador $Z$. Em algumas áreas da física $\ket {0} $ representa o estado terrestre de baixa energia e, portanto, o estado -1 do operador de $Z$. Portanto, algumas fórmulas podem diferir da literatura popular.
 
 Na biblioteca de química usamos $\ket {0} $ para representar um spin-orbital desocupado.
 Isto mostra que para um único giro orbital é fácil representar operadores de criação e aniquilação em termos de matrizes unitárias que os computadores quânticos entendem.

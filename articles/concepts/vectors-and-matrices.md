@@ -1,6 +1,8 @@
 ---
 título: Vetores e matrizes na descrição da computação quântica: Aprenda os fundamentos de como trabalhar com vetores e matrizes.
 autor: QuantumWriter uid: microsoft.quantum.concepts.vectors ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -87,7 +89,7 @@ Alguma familiaridade com vetores e matrizes é essencial para entender a computa
 
 Um vetor de coluna (ou simplesmente [*vetor)*](https://en.wikipedia.org/wiki/Vector_(mathematics_and_physics)) $ v de $ dimensão (ou tamanho) $ n é uma coleção de $ $ $ números n complexos $ (v_1,v_2,\ldots,v_n) $ dispostos como uma coluna:
 
-$$v=\begin{bmatrix}
+$$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\

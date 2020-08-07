@@ -1,22 +1,25 @@
 ---
-title: Controlos de fluxo nos libares padrão Q#
-description: Saiba mais sobre as operações e funções de controlo de fluxo na biblioteca padrão Microsoft Q.
+title: Controlos de fluxo nos Q# libarries padrão
+description: Saiba mais sobre as operações e funções de controlo de fluxo na biblioteca padrão da Q# Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: b41b3edd7a3e3ac13dbda106a869f4cba8183600
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275755"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868581"
 ---
 # <a name="higher-order-control-flow"></a>Fluxo de controlo de ordem superior #
 
 Um dos principais papéis da biblioteca padrão é facilitar a expressão de ideias algorítmicas de alto nível como [programas quânticos.](https://en.wikipedia.org/wiki/Quantum_programming)
-Assim, o cânone Q# fornece uma variedade de diferentes construções de controlo de fluxo, cada uma implementada usando a aplicação parcial de funções e operações.
+Assim, o Q# cânone fornece uma variedade de diferentes construções de controlo de fluxo, cada uma implementada usando a aplicação parcial de funções e operações.
 Saltando imediatamente para um exemplo, considere o caso em que se quer construir uma "escada CNOT" num registo:
 
 ```qsharp
@@ -47,7 +50,7 @@ No resto desta secção, forneceremos uma série de exemplos de como usar as vá
 
 Uma das abstrações primárias fornecidas pelo cânone é a da iteração.
 Por exemplo, considere um unitário do formulário $U \otimes U \otimes \cdots \otimes U$ para um único qubit unitário $U$.
-Em Q#, podemos usar <xref:microsoft.quantum.arrays.indexrange> para representar isto como um loop sobre um `for` registo:
+Em Q# , podemos usar <xref:microsoft.quantum.arrays.indexrange> para representar isto como um loop sobre um `for` registo:
 
 ```qsharp
 /// # Summary
@@ -88,7 +91,7 @@ Da mesma forma, <xref:microsoft.quantum.canon.applytoeachindex> é útil para re
 > Em seguida, `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` aplicará o código de correção de `code` erros e a função de recuperação `recoveryFn` a cada bloco de forma independente.
 > Isto mantém-se mesmo para entradas clássicas: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` aplicará uma rotação de $\pi / 2$ cerca de $X$ seguido de uma rotação de $pi / 3$ cerca de $Y$.
 
-O cânone Q# também fornece suporte para padrões clássicos de enumeração familiares à programação funcional.
+O Q# cânone também fornece suporte para padrões clássicos de enumeração familiares à programação funcional.
 Por exemplo, <xref:microsoft.quantum.arrays.fold> implementa o padrão $f(f(f(s \_ {\text{initial}, x \_ 0), x \_ 1), \pontos)$ para reduzir uma função sobre uma lista.
 Este padrão pode ser usado para implementar somas, produtos, minima, maxima e outras funções:
 
@@ -100,7 +103,7 @@ function Sum(xs : Int[]) {
 }
 ```
 
-Da mesma forma, funções como <xref:microsoft.quantum.arrays.mapped> e <xref:microsoft.quantum.arrays.mappedbyindex> podem ser usadas para expressar conceitos de programação funcional em Q#.
+Da mesma forma, funções como <xref:microsoft.quantum.arrays.mapped> e <xref:microsoft.quantum.arrays.mappedbyindex> podem ser usadas para expressar conceitos de programação funcional em Q# .
 
 ## <a name="composing-operations-and-functions"></a>Composição de Operações e Funções ##
 
@@ -170,7 +173,7 @@ Este padrão de iteração é implementado <xref:microsoft.quantum.canon.decompo
 DecomposeIntoTimeStepsCA((2, U), 1);
 ```
 
-A assinatura segue `DecomposeIntoTimeStepsCA` um padrão comum em Q#, onde coleções que podem ser apoiadas quer por matrizes quer por algo que computa os elementos na mosca são representadas por tuples cujos primeiros elementos são `Int` valores que indicam os seus comprimentos.
+A assinatura `DecomposeIntoTimeStepsCA` segue um padrão comum em , onde Q# coleções que podem ser apoiadas quer por matrizes quer por algo que os elementos computativos na mosca são representados por tuples cujos primeiros elementos são `Int` valores que indicam os seus comprimentos.
 
 ## <a name="putting-it-together-controlling-operations"></a>Junção: Controlo de Operações ##
 

@@ -1,17 +1,20 @@
 ---
 title: Qubits invalidados usam verificador - Kit de Desenvolvimento Quântico
-description: Saiba mais sobre os qubits invalidados do Microsoft QDK, que utiliza o simulador de traços Quânticos para verificar se o seu código Q# é potencialmente inválido.
+description: Saiba mais sobre os qubits invalidados do Microsoft QDK use o verificador, que utiliza o simulador de traços Quânticos para verificar se o seu Q# código existe para qubits potencialmente inválidos.
 author: vadym-kl
 ms.author: vadym@microsoft.com
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits
-ms.openlocfilehash: fccf6d5784b587f4ad9b659e23027619acd06ffa
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: c451747badba03801bd4ecd419420f131ac502d6
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871098"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868292"
 ---
 # <a name="quantum-trace-simulator-invalidated-qubits-use-checker"></a>Simulador de vestígios quânticos: qubits invalidados usam verificador
 
@@ -19,7 +22,7 @@ O verificador de qubits invalidado faz parte do simulador de [traços quânticos
 
 ## <a name="invalid-qubits"></a>Qubits inválidos
 
-Considere o seguinte pedaço do código Q# para ilustrar as questões detetadas pelo verificador de utilização de qubits invalidados:
+Considere o seguinte pedaço de Q# código para ilustrar as questões detetadas pelo verificador de utilização de qubits invalidados:
 
 ```qsharp
 operation UseReleasedQubit() : Unit {

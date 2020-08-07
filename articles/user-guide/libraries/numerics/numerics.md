@@ -1,17 +1,20 @@
 ---
-title: Utilizando a Biblioteca Dos Numéricos Microsoft Q#
+title: Utilização da Q# Biblioteca Dos Numéricos da Microsoft
 description: Saiba mais sobre os tipos e operações disponíveis na biblioteca dos Numericos Quânticos da Microsoft.
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
 ms.topic: article
 uid: microsoft.quantum.numerics.usage
-ms.openlocfilehash: 10d5675e0ef182211a38db4d09347b05afe109c3
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 474fc74b9c92fbf28c0618a3090905d025699d32
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85276120"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868802"
 ---
 # <a name="using-the-numerics-library"></a>Usando a biblioteca numérica
 
@@ -64,7 +67,7 @@ Para cada um dos três tipos acima, está disponível uma variedade de operaçõ
     - Recíproco (1/x)
     - Medição (duplo clássico)
 
-Para obter mais informações e documentação detalhada para cada uma destas operações, consulte os docs de referência da biblioteca Q# no [docs.microsoft.com](https://docs.microsoft.com/quantum)
+Para obter mais informações e documentação detalhada para cada uma destas operações, consulte os documentos de referência da Q# biblioteca em [docs.microsoft.com](https://docs.microsoft.com/quantum)
 
 ## <a name="sample-integer-addition"></a>Amostra: Adição de inteiros
 
@@ -99,7 +102,7 @@ EvaluatePolynomialFxP([1.0, 2.0], x, y);
 O resultado, $P(x)=1+2x$, será armazenado em `yFxP` .
 
 A segunda, `EvaluateEvenPolynomialFxP` e a `EvaluateOddPolynomialFxP` terceira, são especializações para os casos de funções par e ímpares, respectivamente. Isto é, para uma função par/ímpar $f(x)$ e $$ P_{even}(x)=a_0 + a_1 x^2 + a_2 x^4 + \cdots + a_d x^{2d}, $$ $f(x)$ é aproximadamente bem por $P_{even}(x)$ ou $P_{odd}(x) := x\cdot P_{even}(x)$, respectivamente.
-Em Q#, estes dois casos podem ser tratados da seguinte forma:
+Em Q# , estes dois casos podem ser tratados da seguinte forma:
 ```qsharp
 EvaluateEvenPolynomialFxP([1.0, 2.0], x, y);
 ```

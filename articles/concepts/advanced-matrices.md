@@ -1,6 +1,8 @@
 ---
 título: Descrição de conceitos de matriz avançada: Saiba mais sobre eigenvectors, eigenvalues e exponencials da matriz, as ferramentas fundamentais usadas para descrever e simular algoritmos quânticos.
 autor: QuantumWriter uid: microsoft.quantum.concepts.matrix-advanced ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:
+- "Q#"
+- "$$v"
 - "$$"
 - "$$"
 - "$"
@@ -124,7 +126,7 @@ $$
 e^A = \boldone + A + \frac { A^2 } { 2! } + \frac { A^3 } { 3!}+\cdots
 $$
 
-Isto é importante porque a evolução do tempo mecânico quântico é descrita por uma matriz unitária da forma $ e^ { iB } $ para a matriz hermitiana $ B $ .  Por esta razão, a realização de exponencials da matriz é uma parte fundamental da computação quântica e, como tal, q# oferece rotinas intrínsecas para descrever estas operações.
+Isto é importante porque a evolução do tempo mecânico quântico é descrita por uma matriz unitária da forma $ e^ { iB } $ para a matriz hermitiana $ B $ .  Por esta razão, a realização de exponencials da matriz é uma parte fundamental da computação quântica e, como tal, Q# oferece rotinas intrínsecas para descrever estas operações.
 Existem muitas maneiras na prática de calcular uma matriz exponencial em um computador clássico, e em geral numericamente aproximando tal exponencial está cheio de perigo.  Ver [*Cleve Moler e Charles Van Loan. "Dezanove formas duvidosas de calcular o exponencial de uma matriz." Revisão do SIAM 20.4 (1978): 801-836*](https://doi.org/10.1137/S00361445024180) para mais informações sobre os desafios envolvidos.
 
 A maneira mais fácil de entender como calcular o exponencial de uma matriz é através dos eigenvalues e eigenvectors dessa matriz.  Especificamente, o teorema espectral discutido acima diz que para cada matriz hermitiana ou unitária $ A existe uma matriz $ unitária U e uma matriz $ $ diagonal $ D tal que A $ $ = U^ D U \dagger $ .  Devido às propriedades da unitaridade temos que $ A^2 = U^ \dagger D^2 U $ e similarmente para qualquer potência $ p $ $ A^p = U^ \dagger D^p U $ .  Se substituirmos isto na definição do operador exponencial, obtemos:

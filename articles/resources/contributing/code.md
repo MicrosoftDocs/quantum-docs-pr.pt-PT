@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.code
-ms.openlocfilehash: edc52dc4434e91258bece28812fd76b66329c6f9
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275483"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866914"
 ---
 # <a name="contributing-code"></a>Contribuir no Código
 
@@ -28,10 +31,10 @@ Assim, é útil quando a funcionalidade adicionada por uma contribuição é bem
 
 ### <a name="unit-tests"></a>Testes de Unidade
 
-As funções Q#, operações e tipos definidos pelo utilizador que compõem bibliotecas como o cânone são automaticamente testados como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries.**](https://github.com/Microsoft/QuantumLibraries/)
+As Q# funções, operações e tipos definidos pelo utilizador que compõem bibliotecas como o cânone são automaticamente testados como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries.**](https://github.com/Microsoft/QuantumLibraries/)
 Quando um novo pedido de puxar é aberto, por exemplo, a nossa configuração [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações no pedido de puxar não quebram qualquer funcionalidade existente de que a comunidade de programação quântica dependa.
 
-Com a versão Q# mais recente, o teste de unidade é definido usando o `@Test("QuantumSimulator")` atributo. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", ou qualquer nome totalmente qualificado especificando o alvo de execução. Vários atributos que definem diferentes alvos de execução podem ser ligados à mesma chamada. Alguns dos nossos testes ainda usam o pacote deprecado [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) que expõe todas as funções e operações Q# que terminam no `Test` quadro [xUnit.](https://xunit.github.io/) Este pacote já não é necessário para definir os testes unitários. 
+Com a versão mais recente, o Q# teste de unidade é definido usando o `@Test("QuantumSimulator")` atributo. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", ou qualquer nome totalmente qualificado especificando o alvo de execução. Vários atributos que definem diferentes alvos de execução podem ser ligados à mesma chamada. Alguns dos nossos testes ainda usam o pacote deprecado [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) que expõe todas as Q# funções e operações que terminam no `Test` quadro [xUnit.](https://xunit.github.io/) Este pacote já não é necessário para definir os testes unitários. 
 
 A função seguinte é utilizada para garantir que <xref:microsoft.quantum.canon.fst> as e <xref:microsoft.quantum.canon.snd> as funções retornam as saídas certas num exemplo representativo.
 Se a saída de `Fst` ou `Snd` estiver incorreta, a declaração é utilizada `fail` para fazer com que o teste falhe.
@@ -92,7 +95,7 @@ Pode ser difícil fazer tudo, por isso planeamos quais as características em qu
 Este pode ser outro caso em que a libertação de uma funcionalidade como biblioteca de terceiros pode fazer muito sentido.
 Em alternativa, podemos pedir a sua ajuda para modificar uma funcionalidade que se encaixe melhor no nosso roteiro para que possamos fazer o melhor trabalho possível com ele.
 
-Também pediremos alterações a um pedido de puxar se necessitar de mais documentação ou testes de unidade para nos ajudar a utilizá-lo, ou se diferir o suficiente em estilo do resto das bibliotecas Q# que dificultará aos utilizadores encontrar a sua funcionalidade.
+Também pediremos alterações a um pedido de puxar se necessitar de mais documentação ou testes de unidade para nos ajudar a utilizá-lo, ou se diferir o suficiente em estilo do resto das Q# bibliotecas que irá dificultar aos utilizadores encontrar a sua funcionalidade.
 Nestes casos, tentaremos oferecer alguns conselhos em análises de código sobre o que pode ser adicionado ou alterado para facilitar a sua contribuição para nós.
 
 Finalmente, não podemos aceitar contribuições que causem danos à comunidade de computação quântica, tal como delineado no [Código de Conduta microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
@@ -102,10 +105,10 @@ Agradecemos a sua ajuda na concretização deste objetivo.
 ## <a name="next-steps"></a>Passos seguintes
 
 Obrigado por ajudar a fazer do Kit de Desenvolvimento Quântico um grande recurso para toda a comunidade de programação quântica!
-Para saber mais, continue com o seguinte guia sobre o estilo Q#.
+Para saber mais, continue com o seguinte guia sobre Q# estilo.
 
 > [!div class="nextstepaction"]
-> [Saiba mais sobre as diretrizes de estilo Q#](xref:microsoft.quantum.contributing.style)
+> [Saiba mais Q# sobre diretrizes de estilo](xref:microsoft.quantum.contributing.style)
 
 Dependendo do tipo de código que está a contribuir, pode haver coisas adicionais a ter em mente que podem ajudá-lo a fazer a sua contribuição fazer o melhor possível para a comunidade.
 

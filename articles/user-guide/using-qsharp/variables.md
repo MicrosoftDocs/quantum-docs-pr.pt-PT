@@ -1,28 +1,31 @@
 ---
-title: 'Variáveis em Q #'
+title: Variáveis emQ#
 description: preencher descrição
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
-ms.openlocfilehash: 08301f408dcb2211ba25c582a5e5aa43310b714a
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885285"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867850"
 ---
-# <a name="variables-in-q"></a>Variáveis em Q #
+# <a name="variables-in-no-locq"></a>Variáveis emQ#
 
-Q# distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas*a expressões.
+Q#distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas*a expressões.
 Em geral, o uso de símbolos imutáveis é encorajado porque permite que o compilador execute mais otimizações.
 
 O lado esquerdo de uma ligação consiste de um tuple de símbolo e do lado direito de uma expressão.
 
 ## <a name="immutable-variables"></a>Variáveis Imutáveis
 
-Pode atribuir um valor de qualquer tipo em Q# a uma variável para reutilização dentro de uma operação ou função utilizando a `let` palavra-chave. 
+Pode atribuir um valor de qualquer tipo Q# a uma variável para reutilização dentro de uma operação ou função utilizando a `let` palavra-chave. 
 
 Uma ligação imutável consiste na palavra-chave, `let` seguida de um símbolo ou tuple de símbolo, um sinal `=` igual, uma expressão para ligar o símbolo(s) e um semicolon de terminante.
 
@@ -107,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-No caso das matrizes, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) na biblioteca padrão Q# fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matrizes, ajudando assim a evitar ter de atualizar os itens de matriz em primeiro lugar. 
+No caso das matrizes, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) na Q# biblioteca padrão fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matrizes, ajudando assim a evitar ter de atualizar os itens de matriz em primeiro lugar. 
 
 As declarações de atualização e reatribuição fornecem uma alternativa, se necessário:
 
@@ -236,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a>Passos seguintes
 
-Saiba mais [sobre trabalhar com qubits](xref:microsoft.quantum.guide.qubits) em Q#.
+Saiba como [trabalhar com qubits](xref:microsoft.quantum.guide.qubits) em Q# .

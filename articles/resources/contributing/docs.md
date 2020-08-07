@@ -6,12 +6,15 @@ ms.author: chgranad
 ms.date: 10/12/2018
 ms.topic: article
 uid: microsoft.quantum.contributing.docs
-ms.openlocfilehash: ed5ab5df9de5d71ccd922cd430cf15779806dd6a
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85275499"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866881"
 ---
 # <a name="improving-documentation"></a>Melhorar a documentação
 
@@ -25,7 +28,7 @@ Também adotamos a biblioteca [MathJax](https://www.mathjax.org/) para permitir 
 Dito isto, cada forma de documentação varia um pouco nos detalhes:
 
 - A **documentação conceptual** consiste num conjunto de artigos que são publicados para https://docs.microsoft.com/quantum , e que descrevem tudo, desde os fundamentos da computação quântica até às especificações técnicas para formatos de intercâmbio. Estes artigos são escritos em [DocFX-Flavored Markdown (DFM)](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html), uma variante de Markdown usada para criar conjuntos de documentação ricos.
-- A **referência API** é um conjunto de páginas para cada função Q#, operação e tipo definido pelo utilizador, publicado para https://docs.microsoft.com/qsharp/api/ . Estas páginas documentam as entradas e operações a cada chamada, juntamente com exemplos e links para mais informações. A referência API é extraída automaticamente a partir de pequenos documentos DFM no código fonte Q# como parte de cada libertação.
+- A **referência API** é um conjunto de páginas para cada Q# função, operação e tipo definido pelo utilizador, publicado para https://docs.microsoft.com/qsharp/api/ . Estas páginas documentam as entradas e operações a cada chamada, juntamente com exemplos e links para mais informações. A referência API é extraída automaticamente a partir de pequenos documentos DFM em Q# código fonte como parte de cada libertação.
 - Os ficheiros **README <!----> .md** incluídos em cada amostra e kata descrevem como usar essa amostra ou kata é usado, o que cobre e como se relaciona com o resto do Kit de Desenvolvimento Quântico. Estes ficheiros são escritos usando [GitHub Flavored Markdown (GFM)](https://github.github.com/gfm/), uma alternativa mais leve ao DFM que é popular para anexar documentação diretamente aos repositórios de código.
 
 ## <a name="contributing-to-the-conceptual-documentation"></a>Contribuindo para a Documentação Conceptual
@@ -49,7 +52,7 @@ Se quiser incluir o código do [repositório de amostras,](https://github.com/Mi
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Este comando importará as linhas 4 a 8 [ `Game.qs` do ficheiro da `chsh-game` amostra,](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)marcando-as como código Q# para efeitos de realce de sintaxe.
+Este comando importará as linhas 4 a 8 [ `Game.qs` do ficheiro da `chsh-game` amostra,](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)marcando-as como Q# código para efeitos de prostaxe.
 Utilizando este comando, pode evitar duplicar o código entre os artigos conceptuais e o repositório de amostras, de modo que o código de amostra na documentação esteja sempre o mais atualizado possível.
 
 ## <a name="contributing-to-the-api-references"></a>Contribuindo para as Referências da API
@@ -64,7 +67,7 @@ Quando compilamos cada lançamento do Kit de Desenvolvimento Quântico, estes co
 
 Por exemplo, considere a função `ControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl)) : ((Qubit[], 'T) => Unit is Adj + Ctl)` .
 Um comentário de documentação deve ajudar um utilizador a aprender a interpretar `bits` e a qual é a `oracle` função.
-Cada uma destas diferentes informações pode ser fornecida ao compilador Q# por uma secção especialmente denominada Markdown no comentário da documentação.
+Cada uma destas diferentes informações pode ser fornecida ao Q# compilador por uma secção especialmente denominada Markdown no comentário da documentação.
 Para o exemplo `ControlledOnBitString` de, podemos escrever algo como:
 
 ```qsharp
@@ -139,7 +142,7 @@ Pode ver a versão renderizada do código acima na documentação da [API para a
 
 Para além da prática geral da escrita de documentação, por escrito a documentação da API comenta que ajuda a ter algumas coisas em mente:
 
-- O formato de cada comentário de documentação tem de corresponder ao que o compilador Q# espera que a sua documentação apareça corretamente. Algumas secções, tais como `/// # Remarks` permitir o conteúdo da forma livre, enquanto secções como a secção são mais `/// # See Also` restritivas.
+- O formato de cada comentário de documentação tem de corresponder ao que o Q# compilador espera que a sua documentação apareça corretamente. Algumas secções, tais como `/// # Remarks` permitir o conteúdo da forma livre, enquanto secções como a secção são mais `/// # See Also` restritivas.
 - Um leitor pode ler a sua documentação da API no site de referência da API principal, no resumo de cada espaço de nome, ou mesmo dentro do seu IDE através da utilização de informações sobre hover. Certificar-se de que `/// # Summary` não é mais do que uma frase ajuda o leitor a resolver rapidamente se precisa de ler mais ou procurar em outro lugar, e pode ajudar a digitalizar rapidamente através de resumos de espaço de nome.
 - A sua documentação pode muito bem acabar por ser muito mais longa do que o código em si, mas tudo bem! Mesmo um pequeno pedaço de código pode ter efeitos inesperados para os utilizadores que não sabem o contexto em que esse código existe. Ao fornecer exemplos concretos e explicações claras, pode ajudar os utilizadores a fazer o melhor uso do código que está disponível para eles.
 
