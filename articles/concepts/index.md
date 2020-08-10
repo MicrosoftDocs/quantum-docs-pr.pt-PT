@@ -6,12 +6,15 @@ ms.author: nawiebe
 uid: microsoft.quantum.concepts.intro
 ms.date: 12/11/2017
 ms.topic: article
-ms.openlocfilehash: fb1df9e3460c18d0cdc0ff430fa236192b3aa2fa
-ms.sourcegitcommit: 9d1c045cf1a2c3e19030cb38dbc7496dbd24ab58
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: f62317cd32068319f15c15ae1fa0775ea3fb00b2
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "73442311"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866830"
 ---
 # <a name="quantum-computing-history-and-background"></a>Histórico e informações da computação quântica
 

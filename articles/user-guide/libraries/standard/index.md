@@ -1,19 +1,22 @@
 ---
-title: Introdução às bibliotecas padrão de Q# da Microsoft
-description: Saiba mais sobre as bibliotecas padrão de Q# da Microsoft que definam as operações, as funções e os tipos de dados que são utilizados em programas quânticos.
+title: Introdução às bibliotecas padrão Q# da Microsoft
+description: Saiba mais sobre as bibliotecas padrão Q# da Microsoft que definam as operações, as funções e os tipos de dados que são utilizados em programas quânticos.
 author: QuantumWriter
 ms.author: martinro@microsoft.com
 ms.date: 12/11/2017
 ms.topic: article
 uid: microsoft.quantum.libraries.standard.intro
-ms.openlocfilehash: ab069c496d89a57f979732da6ccdfbe673b79726
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4db227fcf159331f9f8456c474ce6d64111c21df
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870588"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87868479"
 ---
-# <a name="introduction-to-the-q-standard-libraries"></a>Introdução às Bibliotecas Padrão Q#
+# <a name="introduction-to-the-no-locq-standard-libraries"></a>Introdução às Bibliotecas Padrão Q#
 
 A linguagem Q# é suportada por uma série de diferentes operações, funções e tipos definidos pelo utilizador úteis que constituem as *bibliotecas padrão* Q#.
 O [pacote NuGet `Microsoft.Quantum.Development.Kit`](https://www.nuget.org/packages/microsoft.quantum.development.kit) instalado durante a [instalação e validação](xref:microsoft.quantum.install) fornece o compilador Q# e partes da biblioteca padrão que são implementadas pelos computadores de destino.

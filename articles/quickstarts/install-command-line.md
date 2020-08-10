@@ -6,14 +6,17 @@ ms.date: 4/24/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.standalone
-ms.openlocfilehash: 3d70838289e72afdd0a48bbdff0bec407428d125
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871438"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867612"
 ---
-# <a name="develop-with-q-command-line-applications"></a>Programar com aplicações de linha de comandos Q#
+# <a name="develop-with-no-locq-command-line-applications"></a>Programar com aplicações de linha de comandos Q#
 
 Os programas Q# podem ser executados sozinhos, sem um controlador numa linguagem anfitriã, como C#, F# ou Python.
 
@@ -48,7 +51,7 @@ Para instalar o QDK para outro ambiente, introduza na linha de comandos:
 dotnet new -i Microsoft.Quantum.ProjectTemplates
 ```
 
-## <a name="develop-with-q"></a>Programar com Q#
+## <a name="develop-with-no-locq"></a>Programar com Q#
 
 Siga as instruções no separador correspondente ao seu ambiente.
 
@@ -78,7 +81,7 @@ Crie uma aplicação `Hello World` Q# para verificar a instalação do Visual St
 
 Para criar uma aplicação Q# nova:
 1. Abra o Visual Studio e clique em **File** (Ficheiro)  -> **New** (Novo)  -> **Project** (Projeto).
-2. Escreva `Q#` na caixa de pesquisa, selecione **Q# Application** (Aplicação Q#) e clique em **Next** (Seguinte).
+2. Escreva `Q#` na caixa de pesquisa, selecione **Q# Application (Aplicação Q#)**  e clique em **Next** (Seguinte).
 3. Introduza um nome e uma localização para a aplicação e clique em **Create** (Criar).
 
 

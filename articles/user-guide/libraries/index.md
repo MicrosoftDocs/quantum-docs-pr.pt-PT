@@ -6,14 +6,17 @@ ms.author: chgranad@microsoft.com
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries
-ms.openlocfilehash: 09fc723d27f2e026430b358c62b817c106c135c2
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: d61fe459362fdb5f3550768a26b34656a8a538a7
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871506"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869108"
 ---
-# <a name="overview-of-q-libraries"></a>Descrição geral das Bibliotecas Q#
+# <a name="overview-of-no-locq-libraries"></a>Descrição geral das Bibliotecas Q#
 O Quantum Development Kit é fornecido com várias bibliotecas para facilitar o desenvolvimento de aplicações quânticas em Q#.
 Nesta seção da documentação, vamos descrever estas bibliotecas e como as pode utilizar nos seus programas.
 

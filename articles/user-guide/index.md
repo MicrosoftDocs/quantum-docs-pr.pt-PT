@@ -1,19 +1,22 @@
 ---
-title: Guia de Utilizador Q#
+title: Guia do Utilizador Q#
 description: Descrição geral da finalidade e índice do Guia de Utilizador
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide
-ms.openlocfilehash: 078d86c808b26c7f0b7b2577020cd9cef9491a9d
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 4fae2949bdcab0c3735b40ef029d70bf7ea3fb9f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885017"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87869635"
 ---
-# <a name="the-q-user-guide"></a>Guia de Utilizador Q#
+# <a name="the-no-locq-user-guide"></a>Guia do Utilizador Q#
 
 Bem-vindo ao Guia de Utilizador Q#! 
 
@@ -21,17 +24,17 @@ Nos diferentes tópicos deste guia, apresentamos em detalhe os conceitos fundame
 
 ## <a name="user-guide-contents"></a>Índice do Guia de Utilizador
 
-- [Noções Básicas de Q#](xref:microsoft.quantum.guide.basics): descrição geral introdutória da finalidade e funcionalidade da linguagem de programação Q#. 
+- [Noções básicas de Q#](xref:microsoft.quantum.guide.basics): descrição geral introdutória da finalidade e funcionalidade da linguagem de programação Q#. 
 
 - [Formas de executar um programa Q#](xref:microsoft.quantum.guide.host-programs): descreve como um programa Q# é executado e fornece uma descrição geral das várias formas de chamar o programa: a partir da linha de comandos, no Q# Jupyter Notebook ou a partir de um programa anfitrião clássico escrito em Python ou numa linguagem .NET.
 
-### <a name="q-language"></a>Linguagem Q#
+### <a name="no-locq-language"></a>Linguagem Q#
 
 - [Tipos em Q#](xref:microsoft.quantum.guide.types): destaca o modelo de tipos em Q# e descreve a sintaxe para especificar e trabalhar com tipos.
 
 - [Expressões de Tipos](xref:microsoft.quantum.guide.expressions): detalha como especificar, referenciar, combinar e operar nos valores de cada tipo em Q#. 
 
-### <a name="using-q"></a>Utilizar o Q#
+### <a name="using-no-locq"></a>Ao utilizar Q#
 
 - [Estrutura de Ficheiros Q#](xref:microsoft.quantum.guide.filestructure): descreve a estrutura e a sintaxe de um ficheiro Q# `*.qs`.
 
@@ -41,7 +44,7 @@ Nos diferentes tópicos deste guia, apresentamos em detalhe os conceitos fundame
 - [Variáveis](xref:microsoft.quantum.guide.variables): descreve a função das variáveis nos programas de Q# e como tirar partido das mesmas eficazmente. 
     Por exemplo, pode encontrar informações sobre âmbitos de enlace, bem como a diferença entre variáveis imutáveis e mutáveis e como as atribuir ou reatribuir.
 
-- [Trabalhar com qubits](xref:microsoft.quantum.guide.qubits): descreve as funcionalidades de Q# que pode utilizar para trabalhar com qubits individuais e sistemas de qubits, em particular, para os alocar, realizar operações nos mesmos e medi-los. 
+- [Trabalhar com qubits](xref:microsoft.quantum.guide.qubits): descreve as funcionalidades de Q# que pode utilizar para trabalhar com qubits individuais e sistemas de qubits, em particular, para os alocar, realizar operações nos mesmos e para os medir. 
 
 - [Fluxo de Controlo](xref:microsoft.quantum.guide.controlflow): detalha os padrões do fluxo de controlo de programação disponíveis em Q#, o que inclui muitas técnicas padrão (tais como execução condicional, para ciclos, durante ciclos), bem como o padrão "Repeat-Until-Success" (RUS) quântico específico.
 
@@ -64,4 +67,4 @@ Nos diferentes tópicos deste guia, apresentamos em detalhe os conceitos fundame
 
 ### <a name="quick-reference-pages"></a>Páginas de Referência Rápida
 
-- [Comandos Magic do IQ#](xref:microsoft.quantum.guide.quickref.iqsharp): página de referência rápida para comandos Magic do IQ# em Blocos de Notas do Jupyter em Q#.
+- [Comandos Magic do IQ#](xref:microsoft.quantum.guide.quickref.iqsharp): página de referência rápida para comandos Magic do IQ# no Jupyter Notebook em Q#.
