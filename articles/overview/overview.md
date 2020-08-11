@@ -6,12 +6,15 @@ ms.author: bradben
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
-ms.openlocfilehash: 7c55420bd35f9b6e0e7ec80ddffe8a861cb7df39
-ms.sourcegitcommit: 2317473fdf2b80de58db0f43b9fcfb57f56aefff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83430786"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866983"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Introdução à computação quântica e ao Quantum Development kit
 
@@ -62,7 +65,7 @@ O machine learning nos computadores clássicos está a revolucionar o mundo das 
 
 O Quantum Development kit inclui a [biblioteca de machine learning quântico](xref:microsoft.quantum.machine-learning.concepts.intro) que lhe permite executar experimentações de machine learning quânticas/clássicas híbridas. A biblioteca inclui exemplos e tutoriais e disponibiliza as ferramentas necessárias para implementar um novo algoritmo quântico/clássico híbrido, o classificador quântico centrado em circuitos, para resolver problemas de classificação supervisionados.
 
-## <a name="q-and-the-microsoft-quantum-development-kit-qdk"></a>Q# e Microsoft Quantum Development Kit (QDK)
+## <a name="no-locq-and-the-microsoft-quantum-development-kit-qdk"></a>Q# e Microsoft Quantum Development Kit (QDK)
 
 O Q# é a linguagem de programação open-source da Microsoft para desenvolver e executar algoritmos quânticos. Faz parte do [QDK](https://docs.microsoft.com/quantum/), um development kit completo para Q# que pode ser utilizado com ferramentas e linguagens padrão para o desenvolvimento de aplicações quânticas que pode executar em vários ambientes, incluindo no simulador quântico de estado completo incorporado.
 

@@ -1,28 +1,31 @@
 ---
-title: Programar com Q# Jupyter Notebook
+title: Programar com o Q# Jupyter Notebook
 author: bradben
 ms.author: bradben
 ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
-ms.openlocfilehash: bbd1f58ba7de205e452be7bac72b5fd78e7acd56
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86871455"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866813"
 ---
-# <a name="develop-with-q-jupyter-notebooks"></a>Programar com Q# Jupyter Notebook
+# <a name="develop-with-no-locq-jupyter-notebooks"></a>Programar com o Q# Jupyter Notebook
 
-Instale o QDK para desenvolver operações Q# em blocos de notas Q# Jupyter Notebook.
+Instale o QDK para desenvolver operações Q# no Q# Jupyter Notebook.
 
 O Jupyter Notebook permitem executar código no local juntamente com instruções, notas e outros conteúdos. Este ambiente é ideal para escrever código Q# com explicações incorporadas ou tutoriais interativos de computação quântica. Eis o que tem de fazer para começar a criar os seus próprios blocos de notas em Q#.
 
 > [!NOTE]
 > * No Q# Jupyter Notebook, só pode executar código Q# e as operações não podem ser chamadas a partir de programas anfitriões externos (por exemplo, ficheiros Python ou C#). Se o seu objetivo for combinar um programa anfitrião clássico externo com o programa quântico, este ambiente não é o indicado.
 
-## <a name="install-the-iq-jupyter-kernel"></a>Instale o kernel do IQ# Jupyter
+## <a name="install-the-ino-locq-jupyter-kernel"></a>Instale o kernel do IQ# Jupyter
 
 IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyter e Python para o SDK de .NET Core que fornece a funcionalidade principal que permite compilar e simular operações Q#.
 
@@ -72,7 +75,7 @@ IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyt
 
 Já está! Tem agora o kernel do IQ# para Jupyter, que fornece a principal funcionalidade para compilar e executar operações Q# a partir do Q# Jupyter Notebook.
 
-## <a name="create-your-first-q-notebook"></a>Crie o seu primeiro bloco de notas Q#
+## <a name="create-your-first-no-locq-notebook"></a>Crie o seu primeiro bloco de notas Q#
 
 Agora, está preparado para verificar a instalação do Q# Jupyter Notebook ao escrever e executar uma operação Q# simples.
 
@@ -90,7 +93,7 @@ Agora, está preparado para verificar a instalação do Q# Jupyter Notebook ao e
 
 1. Execute esta célula do bloco de notas:
 
-    ![Célula do bloco de notas do Jupyter Notebook com código Q#](~/media/install-guide-jupyter.png)
+    ![Célula do Jupyter Notebook com código Q#](~/media/install-guide-jupyter.png)
 
     Deverá ver `SampleQuantumRandomNumberGenerator` na saída da célula. Ao executar no Jupyter Notebook, o código Q# é compilado e a célula produz o nome das operações que encontra.
 
@@ -106,5 +109,5 @@ Agora que instalou o QDK para o Q# Jupyter Notebook, pode escrever e executar [o
 
 Para obter mais exemplos do que pode fazer com o Q# Jupyter Notebook, veja:
 
-- [Introdução a Q# e ao Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Aqui, encontrará um Q# Jupyter Notebook que mostra mais detalhes sobre como utilizar o Q# no ambiente do Jupyter.
-- [Quantum Katas](xref:microsoft.quantum.overview.katas), uma coleção open-source de tutoriais ao seu ritmo e de conjuntos de exercícios de programação na forma de blocos de notas do Q# Jupyter Notebook. Os [blocos de notas de tutoriais do Quantum Katas](https://github.com/microsoft/QuantumKatas#tutorial-topics) são um bom ponto de partida. Os Quantum katas têm como objetivo ensinar-lhe elementos de computação quântica e programação em Q# ao mesmo tempo. São um excelente exemplo dos tipos de conteúdos que pode criar com o Q# Jupyter Notebook.
+- [Introdução ao Q# e ao Jupyter Notebook](https://docs.microsoft.com/samples/microsoft/quantum/intro-to-qsharp-jupyter/). Aqui, encontrará um Q# Jupyter Notebook que mostra mais detalhes sobre como utilizar o Q# no ambiente do Jupyter.
+- [Quantum Katas](xref:microsoft.quantum.overview.katas), uma coleção open-source de tutoriais ao seu ritmo e de conjuntos de exercícios de programação na forma de blocos de notas do Q# Jupyter Notebook. Os [blocos de notas de tutoriais do Quantum Katas](https://github.com/microsoft/QuantumKatas#tutorial-topics) são um bom ponto de partida. Os Quantum Katas têm como objetivo ensinar-lhe elementos de computação quântica e programação em Q# ao mesmo tempo. São um excelente exemplo dos tipos de conteúdos que pode criar com o Q# Jupyter Notebook.

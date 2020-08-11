@@ -6,16 +6,19 @@ ms.author: bradben
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.q-sharp
-ms.openlocfilehash: ede4ad005090e4ac8ffd9b05d27edfa91f8c50ab
-ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 3ee9e897eb142bbc9503a617cc3e25c1a665ff35
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84327714"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87866949"
 ---
-# <a name="what-are-the-q-programming-language-and-qdk"></a>O que é a linguagem de programação Q# e o QDK?
+# <a name="what-are-the-no-locq-programming-language-and-qdk"></a>O que é a linguagem de programação Q# e o QDK?
 
-O Q# é a linguagem de programação open-source da Microsoft para desenvolver e executar algoritmos quânticos. Faz parte do Quantum Development Kit (QDK), que inclui [bibliotecas de Q#](xref:microsoft.quantum.libraries), [simuladores quânticos](xref:microsoft.quantum.machines), [extensões para outros ambientes de programação](xref:microsoft.quantum.install) e [documentação de API](xref:microsoft.quantum.standardlibsintro). Além da biblioteca Q# padrão, o QDK inclui bibliotecas de Química, Machine Learning e Numéricas
+O Q# é a linguagem de programação open-source da Microsoft para desenvolver e executar algoritmos quânticos. Faz parte do Quantum Development Kit (QDK), que inclui [bibliotecas Q#](xref:microsoft.quantum.libraries), [simuladores quânticos](xref:microsoft.quantum.machines), [extensões para outros ambientes de programação](xref:microsoft.quantum.install) e [documentação de API](xref:microsoft.quantum.standardlibsintro). Além da biblioteca Q# padrão, o QDK inclui bibliotecas de Química, Machine Learning e Numéricas.
 
 Enquanto linguagem de programação, o Q# tem elementos familiares de Python, C# e F# e suporte um modelo procedimental básico para escrever programas com ciclos, instruções if/then e tipos de dados comuns. Também introduz operações e estruturas de dados específicas da computação quântica.
 
@@ -43,7 +46,7 @@ Execute os seus programas quânticos num simulador quântico de estado completo,
 | **Quero perceber melhor a linguagem Q#** | Explore tipos, expressões, variáveis e a estrutura dos programas quânticos no [Guia do Utilizador do Q#](xref:microsoft.quantum.guide).|
 | **Quero simplesmente começar a escrever programas quânticos** | Configure o seu ambiente Q# e comece a escrever programas quânticos nos [Inícios Rápidos](xref:microsoft.quantum.install).|
 
-## <a name="how-does-q-work"></a>Como é que a Q# funciona?
+## <a name="how-does-no-locq-work"></a>Como funciona o Q#?
 
 Os programas em Q# podem ser compilados numa aplicação de linha de comandos autónoma ou ser chamados por um programa anfitrião escrito nas linguagens Python ou .NET.
 
@@ -55,11 +58,11 @@ Isolar o código Q# no simulador garante que os algoritmos seguem as leis da fí
 
 ## <a name="how-do-i-use-the-qdk"></a>Como utilizo o QDK?
 
-Tudo aquilo de que precisa para escrever e executar programas em Q#, incluindo o compilador de Q#, as bibliotecas de Q# e os simuladores quânticos, pode ser instalado e executado no seu computador local. Chegará o momento em que poderá executar os programas em Q# remotamente num computador quântico real; contudo, até lá, os simuladores quânticos disponibilizados com o QDK dão resultados precisos e fiáveis.
+Tudo aquilo de que precisa para escrever e executar programas em Q#, incluindo o compilador de Q#, as bibliotecas Q# e os simuladores quânticos, pode ser instalado e executado no seu computador local. Chegará o momento em que poderá executar os programas em Q# remotamente num computador quântico real; contudo, até lá, os simuladores quânticos disponibilizados com o QDK dão resultados precisos e fiáveis.
 
 - A forma mais rápida de começar é executar o [Q# a partir da linha de comandos](xref:microsoft.quantum.install.standalone).
 
-- Execute [blocos de notas Jupyter com o IQ#](xref:microsoft.quantum.install.jupyter), uma extensão do Jupyter para compilar, simular e visualizar programas em Q#.
+- Execute o [Jupyter Notebook com o IQ#](xref:microsoft.quantum.install.jupyter), uma extensão do Jupyter para compilar, simular e visualizar programas em Q#.
 
 - Se estiver familiarizado com [Python](xref:microsoft.quantum.install.python), pode utilizá-lo como plataforma de programação anfitriã para começar. O Python é muito utilizado não só entre os programadores, mas também por cientistas, investigadores e professores.
 

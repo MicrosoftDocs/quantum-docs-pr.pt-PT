@@ -6,12 +6,15 @@ author: bradben
 ms.author: bradben
 ms.date: 5/10/2020
 ms.topic: overview
-ms.openlocfilehash: ff4a3dc829423525e18d89d5ed3d621079d1a524
-ms.sourcegitcommit: 0181e7c9e98f9af30ea32d3cd8e7e5e30257a4dc
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: ff5eb9984da0b22a65f3919599ee18605a206fa0
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85274202"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867525"
 ---
 # <a name="get-started-with-the-quantum-development-kit-qdk"></a>Introdução ao Quantum Development Kit (QDK)
 
@@ -54,12 +57,12 @@ Se só agora conheceu o desenvolvimento quântico, percebemos que se sinta um po
 
 A documentação atual inclui os seguintes tópicos adicionais.
 
-### <a name="q-developer-guides"></a>Guias para programadores de Q#
+### <a name="no-locq-developer-guides"></a>Guias para programadores de Q#
 
 * O [Guia do Utilizador do Q#](xref:microsoft.quantum.guide) mostra em detalhe os principais conceitos utilizados na criação de programas quânticos em Q#.
 * Os [simuladores quânticos e aplicações anfitriãs](xref:microsoft.quantum.machines) descrevem como os algoritmos quânticos são executados, que computadores quânticos estão disponíveis e como escrever um controlador não Q# para o programa quântico.
 
-### <a name="q-libraries"></a>Bibliotecas Q#
+### <a name="no-locq-libraries"></a>Bibliotecas Q#
 
 * As [bibliotecas padrão Q#](xref:microsoft.quantum.libraries.standard.intro) descrevem as operações e funções que suportam tanto o requisito de controlo de linguagem clássica como os algoritmos quânticos Q#. 
     Os tópicos incluem o fluxo de controlo, estruturas de dados, correção de erros, testes e depuração. 
@@ -79,7 +82,7 @@ A documentação atual inclui os seguintes tópicos adicionais.
 * [Notas de versão do Microsoft Quantum Development Kit](xref:microsoft.quantum.relnotes).
 
 
-## <a name="be-a-part-of-the-q-open-source-community"></a>Faça parte da Comunidade Open-Source do Q#
+## <a name="be-a-part-of-the-no-locq-open-source-community"></a>Faça parte da Comunidade Open-Source do Q#
 
 O Quantum Development Kit é um development kit open-source que confere aos programadores as capacidades necessárias para fazer com que a computação quântica seja mais acessível a todos, para que possamos superar alguns dos desafios mais prementes do mundo.  As instituições académicas que necessitem de software open-source poderão implementar o Q# para os seus processos de aprendizagem e desenvolvimento quânticos. Disponibilizar o development kit em open-source também dá aos programadores e especialistas em domínios a oportunidade de contribuir com melhorias e ideias através do respetivo código.
 

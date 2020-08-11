@@ -6,14 +6,17 @@ ms.date: 5/30/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.cs
-ms.openlocfilehash: 714c15d9589095f0fe395fcd6941672167879dca
-ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+no-loc:
+- Q#
+- $$v
+ms.openlocfilehash: 13d73bdf0287941c89e03ba63869095e5fca4e70
+ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885495"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87867561"
 ---
-# <a name="develop-with-q-and-net"></a>Desenvolver com Q# e .NET
+# <a name="develop-with-no-locq-and-net"></a>Desenvolver com Q# e .NET
 
 O Q# foi criado para funcionar bem com linguagens .NET, como C# e F#.
 Neste guia, vamos demonstrar como utilizar o Q# com um programa anfitrião escrito numa linguagem .NET.
@@ -24,16 +27,16 @@ Primeiro, vamos criar a aplicação Q# e o anfitrião .NET e, em seguida, demons
 
 - Instale o Quantum Development kit [para utilização com projetos de linha de comandos Q#](xref:microsoft.quantum.install.standalone).
 
-## <a name="creating-a-q-library-and-a-net-host"></a>Criar uma biblioteca de Q# e um anfitrião .NET
+## <a name="creating-a-no-locq-library-and-a-net-host"></a>Criar uma biblioteca Q# e um anfitrião .NET
 
-O primeiro passo é criar projetos para a biblioteca de Q# e para o anfitrião .NET que vai chamar as operações e as funções definidas na biblioteca.
+O primeiro passo é criar projetos para a biblioteca Q# e para o anfitrião .NET que vai chamar as operações e as funções definidas na biblioteca Q#.
 
 Siga as instruções no separador correspondente ao seu ambiente de desenvolvimento.
 Se estiver a utilizar um editor diferente do Visual Studio ou do VS Code, basta seguir os passos da linha de comandos.
 
 ### <a name="visual-studio-code-or-command-line"></a>[Visual Studio Code ou Linha de Comandos](#tab/tabid-cmdline)
 
-- Criar uma biblioteca de Q# nova
+- Criar uma nova biblioteca Q#
 
   ```dotnetcli
   dotnet new classlib -lang Q# -o quantum
@@ -45,7 +48,7 @@ Se estiver a utilizar um editor diferente do Visual Studio ou do VS Code, basta 
   dotnet new console -lang C# -o host  
   ```
 
-- Adicionar a biblioteca de Q# como referência a partir do programa anfitrião
+- Adicionar a biblioteca Q# como referência a partir do programa anfitrião
 
   ```dotnetcli
   cd host
@@ -62,10 +65,10 @@ Se estiver a utilizar um editor diferente do Visual Studio ou do VS Code, basta 
 
 ### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-- Criar uma biblioteca de Q# nova
+- Criar uma nova biblioteca Q#
   - Aceda a **Ficheiro** -> **Novo** -> **Projeto**
   - Escreva "Q#" na caixa de pesquisa
-  - Selecione **Q# Library** (Biblioteca de Q#)
+  - Selecione **Biblioteca Q#**
   - Selecione **Seguinte**
   - Escolha um nome e uma localização para a biblioteca
   - Confirme que "place project and solution in same directory" ("pôr projeto e solução no mesmo diretório") está **desmarcado**
@@ -80,7 +83,7 @@ Se estiver a utilizar um editor diferente do Visual Studio ou do VS Code, basta 
 
 ***
 
-## <a name="calling-into-q-from-net"></a>Chamar o Q# a partir de .NET
+## <a name="calling-into-no-locq-from-net"></a>Chamar o Q# a partir de .NET
 
 Quando os projetos estiverem configurados de acordo com as instruções acima, pode chamar o Q# a partir da aplicação de consola .NET.
 O compilador Q# vai criar classes .NET para cada operação e função Q# que lhe permitem executar os seus programas quânticos num simulador.
