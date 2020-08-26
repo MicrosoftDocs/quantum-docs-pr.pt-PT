@@ -1,0 +1,50 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.transformedcontinuousdistribution
+name: TransformedContinuousDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: Dada uma distribuição contínua, devolve uma nova distribuição que transforma o original por uma determinada função.
+examples: >-
+  As duas seguintes distribuições são idênticas:
+
+
+  ```Q#
+
+  let dist1 = ContinuousUniformDistribution(1.0, 2.0);
+
+  let dist2 = TransformedContinuousDistribution(
+      PlusD(1.0, _),
+      ContinuousUniformDistribution(0.0, 1.0)
+  );
+
+  ```
+syntax: 'function TransformedContinuousDistribution (transform : (Double -> Double), distribution : Microsoft.Quantum.Random.ContinuousDistribution) : Microsoft.Quantum.Random.ContinuousDistribution'
+input:
+  content: '(transform : (Double -> Double), distribution : Microsoft.Quantum.Random.ContinuousDistribution)'
+  types:
+  - name: transform
+    summary: Uma função que transforma variações da distribuição original à distribuição transformada.
+    isFunction: true
+    input:
+      types:
+      - isPrimitive: true
+        uid: Double
+    output:
+      types:
+      - isPrimitive: true
+        uid: Double
+  - name: distribution
+    summary: A distribuição original a ser transformada.
+    uid: microsoft.quantum.random.continuousdistribution
+output:
+  content: Microsoft.Quantum.Random.ContinuousDistribution
+  types:
+  - summary: Uma nova distribuição relacionada com `distribution` a transformação dada `transform` por.
+    uid: microsoft.quantum.random.continuousdistribution
+metadata:
+  ms.openlocfilehash: 033e852fa0c536d51a62b93c9cf71d03d2fcb959
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864512"

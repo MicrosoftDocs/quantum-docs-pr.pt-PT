@@ -1,0 +1,41 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.categoricaldistribution
+name: CategoricalDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: Devolve uma distribuição categórica discreta, na qual a probabilidade de cada uma das listas finitas de determinados resultados é explicitamente especificada.
+examples: >-
+  O seguinte código Q# mostrará 0 com probabilidade 30% e 1 com probabilidade de 70%:
+
+
+  ```Q#
+
+  let dist = CategoricalDistribution([0.3, 0.7]);
+
+  Message($"Got sample: {dist::Sample()}");
+
+  ```
+syntax: 'function CategoricalDistribution (probs : Double[]) : Microsoft.Quantum.Random.DiscreteDistribution'
+input:
+  content: '(probs : Double[])'
+  types:
+  - name: probs
+    summary: >-
+      As probabilidades de cada resultado a partir da distribuição categórica.
+
+      Estas probabilidades podem não ser normalizadas, mas devem ser todas não negativas.
+    isArray: true
+    isPrimitive: true
+    uid: Double
+output:
+  content: Microsoft.Quantum.Random.DiscreteDistribution
+  types:
+  - summary: O índice `i` com `probs[i] / sum` probabilidade, onde está a soma `sum` dada por `probs` `Fold(PlusD, 0.0, probs)` .
+    uid: microsoft.quantum.random.discretedistribution
+metadata:
+  ms.openlocfilehash: e81b286a1268e9ad1819a8f77bb375760f95af71
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864572"

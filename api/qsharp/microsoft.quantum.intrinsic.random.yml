@@ -3,31 +3,24 @@ uid: microsoft.quantum.intrinsic.random
 name: Random
 type: operation
 namespace: Microsoft.Quantum.Intrinsic
-summary: >-
-  A operação aleatória leva uma série de duplos como entrada, e devolve `Int`um índice selecionado aleatoriamente na matriz como um .
-
-  A probabilidade de selecionar um índice específico é proporcional ao valor do elemento matriz nesse índice.
-
-  Elementos matrizes que são iguais a zero são ignorados e os seus índices nunca são devolvidos. Se qualquer elemento de matriz for inferior a zero, ou se nenhum elemento de matriz for superior a zero, então a operação falha.
+summary: O Random foi deprecado. Por favor, use @"microsoft.quantum.random.drawcategorical" em vez disso.
 syntax: 'operation Random (probs : Double[]) : Int'
 input:
   content: '(probs : Double[])'
   types:
   - name: probs
-    summary: Uma série de números de pontos flutuantes proporcional à probabilidade de selecionar cada índice.
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Int
   types:
-  - summary: Um $i de inteiros$ com probabilidade $\Pr(i) = p_i / \sum_i p_i$, onde `probs`$p_i$ é o elemento $i$th de .
-    isPrimitive: true
+  - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: b269b780b5e8ad048d1563e3dca98524a5ed63d2
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb8c26f5085dc728c558bb996ebc6cf068fa6cb4
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686813"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863360"

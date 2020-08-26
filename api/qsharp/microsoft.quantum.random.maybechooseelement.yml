@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.maybechooseelement
+name: MaybeChooseElement
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: Dada uma série de dados e uma distribuição sobre os seus índices, tenta escolher um elemento ao acaso.
+examples: >-
+  O seguinte corte Q# escolhe um elemento aleatoriamente a partir de uma matriz:
+
+
+  ```Q#
+
+  let (succeeded, element) = MaybeChooseElement(
+      data,
+      DiscreteUniformDistribution(0, Length(data) - 1)
+  );
+
+  Fact(succeeded, "Index chosen by MaybeChooseElement was not valid.");
+
+  ```
+syntax: "operation MaybeChooseElement (data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution) : (Bool, 'T)"
+input:
+  content: "(data : 'T[], indexDistribution : Microsoft.Quantum.Random.DiscreteDistribution)"
+  types:
+  - name: data
+    summary: A matriz a partir da qual um elemento deve ser escolhido.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: indexDistribution
+    summary: Uma distribuição sobre os índices `data` de.
+    uid: microsoft.quantum.random.discretedistribution
+output:
+  content: (Bool, 'T)
+  types:
+  - types:
+    - isPrimitive: true
+      uid: Bool
+    - uid: "'T"
+      isLocal: true
+metadata:
+  ms.openlocfilehash: bbbb821e5826e7722c80010b534a38a828db5630
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864459"

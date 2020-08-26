@@ -1,0 +1,43 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.drawrandomint
+name: DrawRandomInt
+type: operation
+namespace: Microsoft.Quantum.Random
+summary: Desenha um inteiro aleatório numa determinada gama inclusiva.
+remarks: Falha se `max <= min` . .
+examples: >-
+  O seguinte corte Q# rola aleatoriamente um die de seis lados:
+
+
+  ```Q#
+
+  let roll = DrawRandomInt(1, 6);
+
+  ```
+syntax: 'operation DrawRandomInt (min : Int, max : Int) : Int'
+input:
+  content: '(min : Int, max : Int)'
+  types:
+  - name: min
+    summary: O menor número inteiro a ser desenhado.
+    isPrimitive: true
+    uid: Int
+  - name: max
+    summary: O maior inteiro a ser desenhado.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Int
+  types:
+  - summary: Um inteiro na gama inclusiva de `min` até `max` com probabilidade uniforme.
+    isPrimitive: true
+    uid: Int
+seeAlso:
+- microsoft.quantum.discreteuniformdistribution
+metadata:
+  ms.openlocfilehash: cb80cacff95dac9e4cecc5717124c20909a56ca0
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864479"
