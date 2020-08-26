@@ -1,4 +1,4 @@
-- name: 'Tipos em Q#'
+- name: Tipos em Q#
   href: types.md
-- name: Expressões de tipos
+- name: Expressões
   href: expressions.md
