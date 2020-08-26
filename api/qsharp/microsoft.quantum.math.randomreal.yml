@@ -3,19 +3,12 @@ uid: microsoft.quantum.math.randomreal
 name: RandomReal
 type: operation
 namespace: Microsoft.Quantum.Math
-summary: Devolve um número real aleatório no intervalo maior ou igual a zero e inferior a um.
-remarks: Esta função chama, <xref:microsoft.quantum.intrinsic.random>pelo que a sua `Random`aleatoriedade depende da implementação de .
+summary: RandomReal foi depreciado. Por favor, use @"microsoft.quantum.random.drawrandomdouble" em vez disso.
 syntax: 'operation RandomReal (bitsRandom : Int) : Double'
 input:
   content: '(bitsRandom : Int)'
   types:
   - name: bitsRandom
-    summary: >-
-      O número de pedaços de precisão com que o número aleatório deve ser amostrado.
-
-          # Output
-
-      Um número real $x = k / 2^{\texttt{bitsRandom}}$para um inteiro $k$ amostrado do intervalo $[0, 2^{{{bitsRandom}}})$ com probabilidade $\Pr(k) = 1 / 2^{\texttt{bitsRandom}}$.
     isPrimitive: true
     uid: Int
 output:
@@ -24,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: b3974f5b12f8d49cc7920021caad98f6e2f3a60c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2cb70e92b47d9233d241eee730337c5fcf709ca8
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681530"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863578"

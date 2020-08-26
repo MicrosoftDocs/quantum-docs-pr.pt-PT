@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8db892091794cb1166e41744572d8938d975abf2
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869771"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863629"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementar um Gerador de Números Aleatórios Quântico em Q\#
 
@@ -23,11 +23,11 @@ Um exemplo simples de um algoritmo quântico escrito Q# é um gerador de número
 ## <a name="prerequisites"></a>Pré-requisitos
 
 - O Microsoft [Quantum Development Kit](xref:microsoft.quantum.install).
-- Crie um Q# projeto para utilizar a partir da linha de [ Q# comando,](xref:microsoft.quantum.install.standalone)ou com um [programa de anfitrião Python](xref:microsoft.quantum.install.python) ou com um programa de [anfitrião C#](xref:microsoft.quantum.install.cs).
+- Crie um Q# projeto para uma [ Q# aplicação,](xref:microsoft.quantum.install.standalone)com um [programa de anfitrião Python,](xref:microsoft.quantum.install.python)ou um [programa de anfitrião C#](xref:microsoft.quantum.install.cs).
 
 ## <a name="write-a-no-locq-operation"></a>Escrever uma Q# operação
 
-### <a name="no-locq-operation-code"></a>Q#código de operação
+### <a name="no-locq-operation-code"></a>Q# código de operação
 
 1. Substitua o conteúdo do ficheiro Program.qs pelo seguinte código:
 
@@ -64,13 +64,13 @@ Como o resultado da medição é completamente aleatório, obtivemos um bit alea
 
 ## <a name="creating-a-complete-random-number-generator"></a>Criar um gerador de números aleatórios completo
 
-Agora que temos uma Q# operação que gera bits aleatórios, podemos usá-lo para construir um gerador de números quânticos aleatórios. Podemos usar as aplicações da Q# linha de comando ou usar um programa de anfitrião.
+Agora que temos uma Q# operação que gera bits aleatórios, podemos usá-lo para construir um gerador de números quânticos aleatórios. Podemos usar uma Q# aplicação ou usar um programa de anfitrião.
 
 
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>[Q#aplicações de linha de comando com Visual Studio ou Visual Studio Code](#tab/tabid-qsharp)
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>[Q# aplicações com Visual Studio ou Visual Studio Code](#tab/tabid-qsharp)
 
-Para criar a aplicação completa da Q# linha de comando, adicione o seguinte ponto de entrada ao seu Q# programa: 
+Para criar a Q# aplicação completa, adicione o seguinte ponto de entrada ao seu Q# programa: 
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
@@ -92,13 +92,13 @@ Para as execuções subsequentes, não há necessidade de o criar novamente. Par
 dotnet run --no-build
 ```
 
-### <a name="python-with-visual-studio-code-or-the-command-line"></a>[Python com o Visual Studio Code ou a Linha de Comandos](#tab/tabid-python)
+### <a name="python-with-visual-studio-code-or-the-command-prompt"></a>[Python com Código de Estúdio Visual ou o pedido de comando](#tab/tabid-python)
 
 Para executar o seu novo Q# programa a partir de Python, guarde o seguinte código `host.py` como:
 
 :::code language="python" source="~/quantum/samples/interoperability/qrng/host.py" range="11-30":::
 
-Em seguida, pode executar o programa anfitrião do Python na linha de comandos:
+Em seguida, pode executar o seu programa de anfitrião Python a partir da solicitação de comando:
 
 ```bash
 $ python host.py
@@ -112,7 +112,7 @@ Para executar o seu novo Q# programa a partir de C#, modifique para incluir o se
 
 :::code language="csharp" source="~/quantum/samples/interoperability/qrng/Host.cs" range="4-39":::
 
-Em seguida, pode executar o programa anfitrião de C# na linha de comandos (no Visual Studio, deve premir F5):
+Em seguida, pode executar o seu programa de anfitrião C# a partir da indicação de comando (no Estúdio Visual deve premir F5):
 
 ```bash
 $ dotnet run

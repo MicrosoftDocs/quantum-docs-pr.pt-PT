@@ -1,5 +1,5 @@
 ---
-title: Escrever e simular programas de nível qubit emQ#
+title: Escrever e simular programas de nível qubit em Q#
 description: Tutorial passo a passo sobre a escrita e simulação de um programa quântico que opera ao nível do qubit individual
 author: gillenhaalb
 ms.author: a-gibec@microsoft.com
@@ -9,12 +9,12 @@ ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 22c79e4e01db1a0d0c291d0dcff81dbfa8df5cd3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869720"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863341"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: Escreva e simula programas de nível qubit em Q\#
 
@@ -41,17 +41,17 @@ No nosso caso, vamos definir uma Q# operação para executar a transformação c
 ## <a name="in-this-tutorial-youll-learn-how-to"></a>Neste tutorial, irá aprender a:
 
 > [!div class="checklist"]
-> * Definir operações quânticas emQ#
-> * Ligue Q# para operações diretamente da linha de comando ou usando um programa de anfitrião clássico
+> * Definir operações quânticas em Q#
+> * Ligue Q# as operações diretamente a partir do pedido de comando ou usando um programa de anfitrião clássico
 > * Simular uma operação quântica da alocação de qubits à saída de medição
 > * Observe como a simulação de função de onda do sistema quântico evolui ao longo da operação
 
 Executar um programa quântico com o Kit de Desenvolvimento Quântico da Microsoft é normalmente composto por duas partes:
 1. O programa em si, que é implementado usando a Q# linguagem de programação quântica, e depois invocado para funcionar em um computador quântico ou simulador quântico. Estes consistem de 
-    - Q#operações: sub-rotinas que atuam nos registos quânticos, e 
-    - Q#funções: sub-rotinas clássicas utilizadas dentro do algoritmo quântico.
+    - Q# operações: sub-rotinas que atuam nos registos quânticos, e 
+    - Q# funções: sub-rotinas clássicas utilizadas dentro do algoritmo quântico.
 2. O ponto de entrada utilizado para chamar o programa quântico e especificar a máquina-alvo na qual deve ser executado.
-    Isto pode ser feito diretamente a partir da linha de comando, ou através de um programa de anfitrião escrito em uma linguagem de programação clássica como Python ou C#.
+    Isto pode ser feito diretamente a partir do pedido de comando, ou através de um programa de anfitrião escrito em uma linguagem de programação clássica como Python ou C#.
     Este tutorial inclui instruções para o método que preferir.
 
 ## <a name="allocate-qubits-and-define-quantum-operations"></a>Alocar qubits e definir operações quânticas
@@ -92,7 +92,7 @@ Em seguida, definimos a `Perform3qubitQFT` operação:
 Para já, a operação não aceita argumentos e não devolve nada--- neste caso escrevemos que devolve um `Unit` objeto, que é semelhante a `void` C# ou um tuple vazio, `Tuple[()]` em Python.
 Mais tarde, vamos modificá-lo para devolver uma série de resultados de medição, altura em que `Unit` será substituído por `Result[]` . 
 
-### <a name="allocate-qubits-with-using"></a>Alocar qubits com`using`
+### <a name="allocate-qubits-with-using"></a>Alocar qubits com `using`
 No âmbito da nossa Q# operação, atribuímos primeiro um registo de três qubits com a `using` declaração:
 
 ```qsharp
@@ -114,7 +114,7 @@ Com `using` , os qubits são automaticamente atribuídos no estado $\ket {0} $. 
 ### <a name="applying-single-qubit-and-controlled-gates"></a>Aplicação de portões mono-qubit e controlados
 
 Em seguida, aplicamos os portões que compõem a própria operação.
-Q#já contém muitos portões quânticos básicos como operações no [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) espaço de nome, e estes não são exceção. 
+Q# já contém muitos portões quânticos básicos como operações no [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) espaço de nome, e estes não são exceção. 
 
 Dentro de uma Q# operação, as declarações invocando callables serão, naturalmente, executadas por ordem sequencial.
 Assim, o primeiro portão a aplicar é o [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) ao primeiro qubit:
@@ -134,10 +134,10 @@ Uma `R1(θ, <qubit>)` operação em geral deixa inalterado o componente $\ket {0
 
 #### <a name="controlled-operations"></a>Operações controladas
 
-Q#torna extremamente fácil condicionar a execução de uma operação em um ou múltiplos qubits de controlo.
+Q# torna extremamente fácil condicionar a execução de uma operação em um ou múltiplos qubits de controlo.
 Em geral, limitamo-nos a prefaciar a chamada `Controlled` com, e os argumentos da operação mudam como:
 
- `Op(<normal args>)`$\a$ `Controlled Op([<control qubits>], (<normal args>))` a$ .
+ `Op(<normal args>)` $\a$ `Controlled Op([<control qubits>], (<normal args>))` a$ .
 
 Note que os qubits de controlo devem ser fornecidos como uma matriz, mesmo que seja um único qubit.
 
@@ -157,7 +157,7 @@ Note que usamos a [`PI()`](xref:microsoft.quantum.math.pi) função do [`Microso
 Além disso, dividimo-nos por um `Double` (por `2.0` exemplo) porque dividir por um inteiro `2` lançaria um erro tipo. 
 
 > [!TIP]
-> `R1(π/2)`e `R1(π/4)` são equivalentes às `S` `T` operações (também em `Microsoft.Quantum.Intrinsic` ).
+> `R1(π/2)` e `R1(π/4)` são equivalentes às `S` `T` operações (também em `Microsoft.Quantum.Intrinsic` ).
 
 
 Após a aplicação das `H` operações pertinentes e das rotações controladas ao segundo e terceiro qubits:
@@ -249,11 +249,11 @@ Com o Q# ficheiro e a operação completos, o nosso programa quântico está pro
 Tendo definido a nossa Q# operação num `.qs` ficheiro, precisamos agora ligar para essa operação e observar quaisquer dados clássicos devolvidos.
 Para já, não há nada devolvido (lembre-se que a nossa operação definida acima de `Unit` voltas), mas quando mais tarde modificarmos a Q# operação para devolver uma série de resultados de medição `Result[]` (), iremos abordar esta questão.
 
-Embora o Q# programa seja omnipresente em todos os ambientes usados para chamá-lo, a maneira de fazê-lo vai naturalmente variar. Como tal, basta seguir as instruções no separador correspondente à sua configuração: trabalhar a partir da aplicação da linha de Q# comando ou utilizar um programa de anfitrião em Python ou C#.
+Embora o Q# programa seja omnipresente em todos os ambientes usados para chamá-lo, a maneira de fazê-lo vai naturalmente variar. Como tal, basta seguir as instruções no separador correspondente à sua configuração: trabalhar a partir da Q# aplicação ou utilizar um programa de anfitrião em Python ou C#.
 
-#### <a name="command-line"></a>[Linha de comandos](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Pedido de comando](#tab/tabid-cmdline)
 
-Executar o Q# programa a partir da linha de comando requer apenas uma pequena alteração no Q# ficheiro.
+Executar o Q# programa a partir da origem do comando requer apenas uma pequena alteração no Q# ficheiro.
 
 Basta adicionar `@EntryPoint()` a uma linha anterior à definição de operação:
 
@@ -445,7 +445,7 @@ Cada tipo medido `Result` `Zero` (ou `One` ou ) é adicionado à posição de í
 
 A palavra-chave `set` é sempre usada para reatribuir variáveis ligadas através da utilização `mutable` .
 
-#### <a name="return-resultarray"></a>Retorno`resultArray`
+#### <a name="return-resultarray"></a>Retorno `resultArray`
 
 Com os três qubits medidos e os resultados `resultArray` adicionados, estamos seguros para repor e negociar os qubits como antes.
 Depois do `using` fecho do quarteirão, insira
@@ -499,10 +499,10 @@ O código de operação final deve parecer:
 }
 ```
 
-Se estiver a trabalhar a partir da linha de comando, a matriz devolvida será simplesmente impressa diretamente para a consola no final da execução.
+Se estiver a trabalhar a partir da indicação de comando, a matriz devolvida será simplesmente impressa diretamente para a consola no final da execução.
 Caso contrário, atualize o seu programa de anfitrião para processar a matriz devolvida.
 
-#### <a name="command-line"></a>[Linha de comandos](#tab/tabid-cmdline)
+#### <a name="command-prompt"></a>[Pedido de comando](#tab/tabid-cmdline)
 
 Para termos mais compreensão da matriz devolvida que será impressa na consola, podemos adicionar outra `Message` no ficheiro pouco antes da Q# `return` declaração:
 

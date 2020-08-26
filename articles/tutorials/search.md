@@ -9,12 +9,12 @@ uid: microsoft.quantum.quickstarts.search
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5c23d71209eb484a510f102e8b581ba4ec21829a
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f2ae56bdca893e8a317c16d0a993da15b9f021b5
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869669"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863109"
 ---
 # <a name="tutorial-implement-grovers-search-algorithm-in-q"></a>Tutorial: implementar o algoritmo de pesquisa de Grover em Q\#
 
@@ -42,7 +42,7 @@ O número de aumentos incrementais é inferior ao número de itens contidos na l
 
 ## <a name="write-the-code"></a>Escrever o código
 
-1. Utilizando o Kit de Desenvolvimento Quântico, [crie um novo projeto para a Q# aplicação da linha de comando.](xref:microsoft.quantum.install.standalone) Dê um título ao projeto `Grover`.
+1. Utilizando o Kit de Desenvolvimento Quântico, [crie um novo projeto para a Q# aplicação.](xref:microsoft.quantum.install.standalone) Dê um título ao projeto `Grover`.
 
 1. Adicione o seguinte código ao ficheiro `Program.qs` no novo projeto:
 
@@ -56,7 +56,7 @@ O número de aumentos incrementais é inferior ao número de itens contidos na l
 
 1. Em seguida, execute o seu novo Q# programa para encontrar o item marcado por `ReflectAboutMarked` .
 
-### <a name="no-locq-command-line-applications-with-visual-studio-or-visual-studio-code"></a>Q#aplicações de linha de comando com Visual Studio ou Visual Studio Code
+### <a name="no-locq-applications-with-visual-studio-or-visual-studio-code"></a>Q# aplicações com Visual Studio ou Visual Studio Code
 
 O executável executará a operação ou função marcada com o atributo `@EntryPoint()` num simulador ou estimador de recursos, consoante a configuração do projeto e as opções da linha de comandos.
 

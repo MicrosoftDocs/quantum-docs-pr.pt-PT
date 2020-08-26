@@ -1,0 +1,44 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.random.discreteuniformdistribution
+name: DiscreteUniformDistribution
+type: function
+namespace: Microsoft.Quantum.Random
+summary: Devolve uma distribuição uniforme sobre uma determinada gama inclusiva.
+remarks: Falha se `max <= min` . .
+examples: >-
+  O seguinte corte Q# rola aleatoriamente um die de seis lados:
+
+
+  ```Q#
+
+  let dieDistribution = DiscreteUniformDistribution(1, 6);
+
+  let dieRoll = dieDistribution::Sample();
+
+  ```
+syntax: 'function DiscreteUniformDistribution (min : Int, max : Int) : Microsoft.Quantum.Random.DiscreteDistribution'
+input:
+  content: '(min : Int, max : Int)'
+  types:
+  - name: min
+    summary: O menor número inteiro a ser desenhado.
+    isPrimitive: true
+    uid: Int
+  - name: max
+    summary: O maior inteiro a ser desenhado.
+    isPrimitive: true
+    uid: Int
+output:
+  content: Microsoft.Quantum.Random.DiscreteDistribution
+  types:
+  - summary: Uma distribuição cujas variações aleatórias são inteiros na gama inclusiva de `min` até `max` com probabilidade uniforme.
+    uid: microsoft.quantum.random.discretedistribution
+seeAlso:
+- microsoft.quantum.drawrandomdouble
+metadata:
+  ms.openlocfilehash: 3a74db8f7dec3050bd92cae3768760ca67c87002
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88864509"

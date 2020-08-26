@@ -91,8 +91,8 @@ Na verdade, existem outras medições comuns que ocorrem na computação quânti
 Nestes casos, é comum discutir a medição de um operador Pauli, em geral um operador como $ X,Y,Z $ ou $ Z \otimes Z, X \otimes X, X \otimes $ Y, etc.
 
 > [!TIP]
->Em Q# , os operadores de Pauli multi-qubit são geralmente representados por matrizes do tipo `Pauli[]` .
->Por exemplo, para representar $ X \otimes Z \otimes $ Y, pode utilizar a matriz `[PauliX, PauliZ, PauliY]` .
+> Em Q# , os operadores de Pauli multi-qubit são geralmente representados por matrizes do tipo `Pauli[]` .
+> Por exemplo, para representar $ X \otimes Z \otimes $ Y, pode utilizar a matriz `[PauliX, PauliZ, PauliY]` .
 
 Discutir a medição em termos de operadores pauli é especialmente comum no subcampo da correção de erros quânticos.
 Em Q# , seguimos uma convenção semelhante; agora explicamos esta visão alternativa das medições.
@@ -162,7 +162,7 @@ Em Q# , dizemos o resultado--- ou seja, a informação clássica extraída da in
 As medições dos operadores de Pauli multi-qubit são definidas da mesma forma, como visto a partir de:
 
 $$
-Z \otimes = \begin{bmatrix} Z 1 & 0 & & 0 \\\\ 0 0 & -1 & 0 & \\\\ 0 & 0 & -1 & 0 \\\\ & 0 & 0 0 0 & 0 0 1 \end{bmatrix} .
+Z \otimes = \begin{bmatrix} Z 1 & 0 & & 0 \\\\  0 0 & -1 & 0 & \\\\ 0 & 0 & -1 & 0 \\\\ & 0 & 0 0 0 & 0 0 1 \end{bmatrix} .
 $$
 
 Assim, os produtos tensores de dois $ operadores Pauli-Z $ formam uma matriz composta por dois espaços compostos por $ +1 $ e $ -1 $ valores.
@@ -173,10 +173,10 @@ Por exemplo,
 $$
 \begin{align}
     \otimes \boldone Z =\begin{bmatrix}
-        1 & 0 & 0 & 0\\\\
-        0 & & 10 & 0\\\\
+        1 &  0 &  0 &  0 \\\\
+        0 & &  10 &  0 \\\\
         & & 0-10 &\\\\
-        0 & 0 & & 0-1 \end{bmatrix} .
+        0 &  0 & & 0-1 \end{bmatrix} .
 \end{align}
 $$
 
@@ -189,16 +189,15 @@ Semelhante ao caso de um qubit, todas as medições de pauli de dois qubits pode
 > \begin{align}
 >     \operatorname{SWAP } &=
 >     \left\begin { (matriz}
->1 & 0 & 0 & 0\\\\
->0 & 0 & & 10\\\\
->0 & & 10 & 0\\\\
+>         1 & 0 & 0 & 0 \\\\
+>         0 & 0 & & 10 \\\\
+>         0 & & 10 & 0 \\\\
 >0 & 0 & 0 & 0 1 > \end { } \right matriz) >     \end{align}
 > $$
 >utilizado para simular a operação intrínseca. [`SWAP`](xref:microsoft.quantum.intrinsic)
 
 |Transformação unitária de medição de Pauli ||
 |----------------------|------------------------|
-|$ \otimes \boldone Z $ | $\boldone \otimes \boldone$|
 |$ \otimes \boldone Z $ | $\boldone\otimes \boldone$|
 |$ \otimes \boldone X $ | $ \otimes \boldone H $|
 |$ \otimes \boldone Y $ | $ HS^ \dagger \otimes \boldone $|
@@ -240,7 +239,7 @@ Assim, coincidem com os requisitos acima indicados.
 Em Q# , tais medições $ devolvem j se a $ medição render um resultado no eigenspace do sinal $ (-1)^j $ .
 Ter as medidas Pauli como uma característica incorporada Q# é útil porque a medição de tais operadores requer longas cadeias de portões NÃO controlados e transformações de base para descrever o portão U diagonalizado necessário para expressar a $ $ operação como um produto tensor de $ Z e . $ $ \id $ .
 Ao ser capaz de especificar que deseja fazer uma destas medições pré-definidas, não precisa de se preocupar em como transformar a sua base de modo a que uma medição de base computacional forneça as informações necessárias.
-Q#lida com todas as transformações de base necessárias para si automaticamente.
+Q# lida com todas as transformações de base necessárias para si automaticamente.
 Para mais informações, consulte as [`Measure`](xref:microsoft.quantum.intrinsic.measure) [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) operações e operações.
 
 ## <a name="the-no-cloning-theorem"></a>O Teorema da Não Clonagem
@@ -257,7 +256,7 @@ Embora uma prova completa do teorema da não clonagem seja um pouco técnica dem
 
 Para tal computador quântico, a operação de clonagem deve ser descrita por uma matriz unitária.
 Não permitimos a medição, uma vez que iria corromper o estado quântico que estamos a tentar clonar.
-Para simular a operação de clonagem, queremos que a matriz unitária tenha a propriedade que$$
+Para simular a operação de clonagem, queremos que a matriz unitária tenha a propriedade que $$
   U \ket { \psi } \ket { 0 } = \ket { \psi }\ket{\psi}
 $$
 para qualquer $ \ket { \psi } $ estado.

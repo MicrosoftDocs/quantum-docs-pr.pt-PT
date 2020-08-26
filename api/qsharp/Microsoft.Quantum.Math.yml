@@ -53,9 +53,9 @@ functions:
 - uid: microsoft.quantum.math.complexpolarascomplex
   summary: Converte um número complexo de tipos `ComplexPolar` para um número complexo de `Complex` tipos.
 - uid: microsoft.quantum.math.continuedfractionconvergenti
-  summary: Encontra a fração contínua convergente mais próxima `fraction` de com o denominador menos ou igual a`denominatorBound`
+  summary: Encontra a fração contínua convergente mais próxima `fraction` de com o denominador menos ou igual a `denominatorBound`
 - uid: microsoft.quantum.math.continuedfractionconvergentl
-  summary: Encontra a fração contínua convergente mais próxima `fraction` de com o denominador menos ou igual a`denominatorBound`
+  summary: Encontra a fração contínua convergente mais próxima `fraction` de com o denominador menos ou igual a `denominatorBound`
 - uid: microsoft.quantum.math.cos
   summary: Devolve o cosine do ângulo especificado.
 - uid: microsoft.quantum.math.cosh
@@ -243,17 +243,17 @@ newtypes:
 summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome contém funções matemáticas clássicas e tipos de dados."
 operations:
 - uid: microsoft.quantum.math.randomint
-  summary: Gera um número inteiro aleatório uniformemente amostrado maior ou igual a zero e inferior a um limite superior fornecido.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomInt foi depreciado. Por favor, use @\"microsoft.quantum.random.drawrandomint\" em vez disso."
 - uid: microsoft.quantum.math.randomintpow2
-  summary: Gera um número inteiro aleatório, uniformemente amostrado de todos os inteiros inteiros que podem ser representados num determinado número de bits.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomIntPow2 foi depreciado. Por favor, use @\"microsoft.quantum.random.drawrandomint\" em vez disso."
 - uid: microsoft.quantum.math.randomreal
-  summary: Devolve um número real aleatório no intervalo maior ou igual a zero e menos de um.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomReal foi depreciado. Por favor, use @\"microsoft.quantum.random.drawrandomdouble\" em vez disso."
 - uid: microsoft.quantum.math.randomsinglequbitpauli
-  summary: Devolve um dos operadores pauli de um único qubit de forma aleatória.
+  summary: "\n> [!WARNING]\n> Preterido\n\nRandomSingleQubitPauli foi depreciado. Por favor, use @\"microsoft.quantum.random.drawrandompauli\" em vez disso."
 metadata:
-  ms.openlocfilehash: 03b75e3dbaa8be699e58fcbcd13db4fbf1c82f12
-  ms.sourcegitcommit: a35498492044be4018b4d1b3b611d70a20e77ecc
+  ms.openlocfilehash: 9df4513399d0b2d1ac534c7ba106189483ef49cc
+  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 06/03/2020
-  ms.locfileid: "84326502"
+  ms.lasthandoff: 08/25/2020
+  ms.locfileid: "88863067"

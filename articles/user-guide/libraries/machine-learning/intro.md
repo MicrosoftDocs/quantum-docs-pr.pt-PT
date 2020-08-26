@@ -8,18 +8,18 @@ uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9a24d0b4145d0db2fd8c4e16be807165fff5fb32
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 65b0aa6a7f385765933d4d89ce34901f77cf76ec
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868921"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863107"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Introdução à Aprendizagem de Máquinas Quânticas
 
 ## <a name="framework-and-goals"></a>Enquadramento e metas
 
-A codificação quântica e o processamento da informação é uma poderosa alternativa à aprendizagem de máquinas clássicas Os classificadores quânticos, em particular, codificam dados em registos quânticos que são concisos em relação ao número de características, empregam sistematicamente o emaranhamento quântico como recurso computacional e empregam a medição quântica para a inferência da classe.
+A codificação quântica e o processamento da informação é uma poderosa alternativa aos classificadores quânticos de aprendizagem de máquinas clássicas. Em particular, permite-nos codificar dados em registos quânticos concisos em relação ao número de funcionalidades, empregando sistematicamente o emaranhamento quântico como recurso computacional e utilizando a medição quântica para a inferência da classe.
 O classificador quântico centrado em circuitos é uma solução quântica relativamente simples que combina codificação de dados com um circuito quântico emaranhamento/disentangling rápido seguido de medição para inferir rótulos de classe de amostras de dados.
 O objetivo é garantir a caracterização clássica e armazenamento de circuitos sujeitos, bem como o treino quântico/clássico híbrido dos parâmetros do circuito, mesmo para espaços de características extremamente grandes.
 
@@ -29,14 +29,18 @@ A classificação é uma tarefa de aprendizagem automática supervisionada, onde
 Um pouco semelhante aos métodos tradicionais, a classificação quântica consiste em três etapas:
 - codificação de dados
 - preparação de um estado classificador
-- medição Devido à natureza probabilística da medição, estes três passos devem ser repetidos várias vezes. A medição pode ser vista como um equivalente quântico de ativação não linear.
-Tanto a codificação como a computação do estado classificador são feitas através de *circuitos quânticos.* Embora o circuito de codificação seja normalmente orientado por dados e sem parâmetros, o circuito de classificação contém um conjunto suficiente de parâmetros aprecáveis. 
+- medição Devido à natureza probabilística da medição, estes três passos devem ser repetidos várias vezes. Tanto a codificação como a computação do estado classificador são feitas através de *circuitos quânticos.* Embora o circuito de codificação seja normalmente orientado por dados e sem parâmetros, o circuito de classificação contém um conjunto suficiente de parâmetros aprecáveis. 
 
 Na solução proposta, o circuito classificador é composto por rotações de um único qubit e rotações controladas de dois qubits. Os parâmetros apregáveis aqui são os ângulos de rotação. Os portões de rotação e rotação controlados são conhecidos por serem *universais* para a computação quântica, o que significa que qualquer matriz de peso unitário pode ser decomposta num circuito suficientemente longo, composto por tais portões.
 
+Na versão proposta, apenas é suportado um circuito seguido de uma estimativa de frequência única.
+Assim, a solução é um analógico quântico de uma máquina vetorial de suporte com um núcleo polinómio de baixo grau.
+
 ![Perceptron multicamacro contra o classificador centrado em circuito](~/media/DLvsQCC.png)
 
-Podemos comparar este modelo com um perceptron multicama para obter uma melhor compreensão da estrutura básica. No pertron o preditor $p(y/x, \theta)$ é parametrizado pelo conjunto de pesos $\theta$ que determinam as funções lineares que ligam as funções de ativação não linear (neurónios). Estes parâmetros podem ser treinados para criar o modelo. Na camada de saída podemos obter a probabilidade de uma amostra pertencente a uma classe usando funções de ativação não linear como softmax. No classificador centrado no circuito, o preditor é parametrizado pelos ângulos de rotação do monobit e das rotações controladas de dois qubits do circuito modelo. De forma semelhante, esses parâmetros podem ser treinados por uma versão quântica/clássica híbrida do algoritmo de descida de gradiente. Para calcular a saída, em vez de utilizar funções de ativação não lineares, a probabilidade da classe é obtida lendo medições repetidas sobre um qubit específico após as rotações controladas. Para codificar os dados clássicos num estado quântico, usamos um circuito de codificação controlável para a preparação do estado.
+Um design de classificador quântico simples pode ser comparado com uma solução tradicional de vetor de suporte (SVM). A inferência para uma amostra de dados $x$ no caso de SVM é feita usando um núcleo ideal $\sum \alpha_j k (x_j,x)$ onde $k$ é uma determinada função de kernel.
+
+Em contraste, um classificador quântico usa o previsão $p(y│x,U(\theta))=〈U(\theta)x/ M. U(\theta)x〉$, que é semelhante em espírito, mas tecnicamente bastante diferente. Assim, quando é utilizada uma codificação simples de amplitude, $p(y│x,U(\theta)$ é uma forma quadrática nas amplitudes de $x$, mas os coeficientes desta forma já não são aprendidos de forma independente; são, em vez disso, agregados a partir dos elementos matricias do circuito $U(\theta)$, que normalmente tem significativamente menos parâmetros apreitáveis $\theta$ do que a dimensão do vetor $x$. O grau polinómico de $p(y│x,U(\theta)$ nas características originais pode ser aumentado para $2^l$ usando um produto quântico codificando $l$ cópias de $x$.
 
 A nossa arquitetura explora circuitos relativamente rasos, que, portanto, devem ser *rapidamente emaranhados* para capturar todas as correlações entre as características dos dados em todas as gamas. Um exemplo do componente de circuito de enredar rápido mais útil é mostrado na figura abaixo. Mesmo que um circuito com esta geometria consista em apenas $3 n+1$ portões, a matriz de peso unitário que calcula garante conversas cruzadas significativas entre as características de $2^n$ .
 
@@ -69,3 +73,5 @@ Um caso de treino $(x,y) \in \mathcal{D}$ é considerado uma *classificação er
 ### <a name="reference"></a>Referência
 
 Esta informação deve ser suficiente para começar a brincar com o código. No entanto, se quiser saber mais sobre este modelo, leia a proposta original: [ *"Classificadores quânticos centrados em circuitos", Maria Schuld, Alex Bocharov, Krysta Svore e Nathan Wiebe*](https://arxiv.org/abs/1804.00633)
+
+Além da amostra de código que você verá nos próximos passos, você também pode começar a explorar a classificação quântica [neste tutorial](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/QuantumClassification) 
