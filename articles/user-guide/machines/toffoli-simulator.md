@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.toffoli-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8a981645703423856e667be7c3dccf5270a5885f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a0885035c12a99ae43533f04cdc95c5c529380a
+ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868105"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88992217"
 ---
 # <a name="quantum-development-kit-qdk-toffoli-simulator"></a>Kit de Desenvolvimento Quântico (QDK) Simulador toffoli
 
@@ -40,7 +40,7 @@ Tenha em conta que, ao contrário da classe `QuantumSimulator`, a classe `Toffol
 
 ### <a name="invoking-the-toffoli-simulator-from-python"></a>Invocando o simulador Toffoli de Python
 
-Utilize o método [toffoli_simulate](https://docs.microsoft.com/python/qsharp/qsharp.loader.qsharpcallable) da biblioteca Python com a Q# operação importada:
+Utilize o método [toffoli_simulate](https://docs.microsoft.com/python/qsharp-core/qsharp.loader.qsharpcallable) da biblioteca Python com a Q# operação importada:
 
 ```python
 qubit_result = myOperation.toffoli_simulate()
@@ -68,7 +68,7 @@ O simulador Toffoli suporta:
 
 * Rotações e Paulis exponencial, tais como `R` `Exp` e, quando a operação resultante é igual `X` ou a matriz identitária.
 * Medição e [afirmação](xref:microsoft.quantum.diagnostics.assertmeasurement) de operações, mas apenas na base de `Z` Pauli. Note que a probabilidade de uma operação de medição é sempre **0** ou **1;** não há aleatoriedade no simulador toffoli.
-* `DumpMachine`e `DumpRegister` funções.
+* `DumpMachine` e `DumpRegister` funções.
 Ambas as funções funcionam o estado de base atual `Z` de cada qubit, um qubit por linha.
 
 ## <a name="specifying-the-number-of-qubits"></a>Especificando o número de qubits
