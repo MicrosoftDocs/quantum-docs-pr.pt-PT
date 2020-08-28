@@ -3,14 +3,14 @@ title: Comandos Magic do IQ#
 author: rmshaffer
 uid: microsoft.quantum.iqsharp.magic-ref.index
 ms.author: rmshaffer
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.topic: article
-ms.openlocfilehash: 971787adae03af35d2e5b408fb88356a8b7df90a
-ms.sourcegitcommit: cdf67362d7b157254e6fe5c63a1c5551183fc589
+ms.openlocfilehash: d6bf8407e40be092689b38cf90514c88f798cc2f
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86870707"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862969"
 ---
 # <a name="iq-magic-commands"></a>Comandos Magic do IQ#
 | Comando Magic | Resumo |
@@ -35,7 +35,9 @@ ms.locfileid: "86870707"
 | [`%lsopen`](xref:microsoft.quantum.iqsharp.magic-ref.lsopen) | Apresenta os espaços de nomes atualmente abertos e respetivos aliases. |
 | [`%package`](xref:microsoft.quantum.iqsharp.magic-ref.package) | Fornece a capacidade de carregar um pacote NuGet. |
 | [`%performance`](xref:microsoft.quantum.iqsharp.magic-ref.performance) | Comunica as métricas de desempenho atuais deste kernel. |
+| [`%project`](xref:microsoft.quantum.iqsharp.magic-ref.project) | Fornece a capacidade de ver ou adicionar referências de projeto Q#. |
 | [`%simulate`](xref:microsoft.quantum.iqsharp.magic-ref.simulate) | Executa uma determinada função ou operação no computador de destino QuantumSimulator. |
 | [`%toffoli`](xref:microsoft.quantum.iqsharp.magic-ref.toffoli) | Executa uma determinada função ou operação no computador de destino ToffoliSimulator. |
+| [`%trace`](xref:microsoft.quantum.iqsharp.magic-ref.trace) | Visualiza o caminho de execução da operação especificada. |
 | [`%who`](xref:microsoft.quantum.iqsharp.magic-ref.who) | Lista as operações Q# disponíveis na sessão atual. |
 | [`%workspace`](xref:microsoft.quantum.iqsharp.magic-ref.workspace) | Fornece ações relacionadas com a área de trabalho atual. |

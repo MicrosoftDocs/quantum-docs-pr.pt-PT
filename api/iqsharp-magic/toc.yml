@@ -38,10 +38,14 @@
   name: Comando magic %package
 - href: performance.md
   name: Comando magic %performance
+- href: project.md
+  name: Comando magic %project
 - href: simulate.md
   name: Comando magic %simulate
 - href: toffoli.md
   name: Comando magic %toffoli
+- href: trace.md
+  name: Comando magic %trace
 - href: who.md
   name: Comando magic %who
 - href: workspace.md
