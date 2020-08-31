@@ -10,12 +10,12 @@ uid: microsoft.quantum.update
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dd7360961aa728a6aa63b8d8c4e4840f5bf2afe8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 84782d1628dd100c0939b2b12aa0a9aa8ab2b80e
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866762"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863649"
 ---
 # <a name="update-the-microsoft-quantum-development-kit-qdk"></a>Atualizar o Microsoft Quantum Development kit (QDK)
 
@@ -37,7 +37,7 @@ Independentemente de utilizar C# ou Python para alojar operações Q#, siga esta
     dotnet --version
     ```
 
-    Veja se a saída é `3.1.100` ou superior. Se não for, instale a [versão mais recente](https://dotnet.microsoft.com/download) e verifique novamente. Depois, consoante a sua configuração (Visual Studio, Visual Studio Code ou a linha de comandos diretamente), siga as instruções abaixo.
+    Veja se a saída é `3.1.100` ou superior. Se não for, instale a [versão mais recente](https://dotnet.microsoft.com/download) e verifique novamente. Depois, consoante a sua configuração (Visual Studio, Visual Studio Code ou diretamente na linha de comandos), siga as instruções abaixo.
 
 ### <a name="update-no-locq-projects-in-visual-studio"></a>Atualizar projetos Q# no Visual Studio
  
@@ -86,7 +86,7 @@ Agora, pode avançar para a [atualização da extensão QDK do Visual Studio](#u
 2. Selecione **Terminal** (Terminal) -> **New Terminal** (Novo Terminal).
 3. Siga as instruções de atualização com a linha de comandos (diretamente abaixo).
 
-### <a name="update-no-locq-projects-using-the-command-line"></a>Atualizar projetos Q# com a linha de comandos
+### <a name="update-no-locq-projects-using-the-command-prompt"></a>Atualizar projetos Q# com a linha de comandos
 
 1. Navegue para a pasta que contém o ficheiro de projeto principal.
 
@@ -158,7 +158,7 @@ Selecione o seu ambiente de desenvolvimento abaixo:
 * [Jupyter Notebook: atualizar o kernel do IQ#](#update-the-iq-jupyter-kernel)
 * [Visual Studio: atualizar a extensão QDK](#update-visual-studio-qdk-extension)
 * [VS Code: atualizar a extensão QDK](#update-vs-code-qdk-extension)
-* [Linha de comandos e C#: atualizar os modelos de projetos](#c-using-the-dotnet-command-line-tool)
+* [Linha de comandos e C#: atualizar modelos de projeto](#c-using-the-dotnet-command-line-tool)
 
 
 ### <a name="update-the-qsharp-python-package"></a>Atualize o pacote `qsharp` do Python
@@ -309,13 +309,13 @@ Agora, pode utilizar o kernel do IQ# atualizado para executar cada Q# Jupyter No
 
 1. Atualize os modelos de projetos quânticos para .NET
 
-    Da linha de comandos:
+    Na linha de comandos:
 
     ```dotnetcli
     dotnet new -i Microsoft.Quantum.ProjectTemplates
     ```
 
-   Em alternativa, se quiser utilizar os modelos da linha de comandos e já tiver a extensão QDK do VS Code instalada, pode atualizar os modelos do projeto a partir da própria extensão:
+   Em alternativa, se quiser utilizar os modelos da linha de comandos e já tiver a extensão QDK do VS Code instalada, pode atualizar os modelos de projeto a partir da própria extensão:
 
    - [Atualizar a extensão QDK](#update-vs-code-qdk-extension)
    - No VS Code, vá para **Ver** -> **Paleta de Comandos**

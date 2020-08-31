@@ -1,5 +1,5 @@
 ---
-title: Programar com aplicações de linha de comandos Q#
+title: Desenvolver com aplicações Q#
 author: KittyYeungQ
 ms.author: kitty
 ms.date: 4/24/2020
@@ -9,14 +9,14 @@ uid: microsoft.quantum.install.standalone
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 630dc7b8acf2dd8f258eb27dfbc367b812cd1c19
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 6a287dd76162a05d72af7e9d1e46533425283e2a
+ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867612"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88863652"
 ---
-# <a name="develop-with-no-locq-command-line-applications"></a>Programar com aplicações de linha de comandos Q#
+# <a name="develop-with-no-locq-applications"></a>Desenvolver com aplicações Q#
 
 Os programas Q# podem ser executados sozinhos, sem um controlador numa linguagem anfitriã, como C#, F# ou Python.
 
@@ -26,7 +26,7 @@ Os programas Q# podem ser executados sozinhos, sem um controlador numa linguagem
 
 ## <a name="installation"></a>Instalação
 
-Embora possa compilar aplicações de linha de comandos Q# em qualquer IDE, recomendamos que utilize o Visual Studio Code (VS Code) ou o Visual Studio IDE para desenvolver as suas aplicações Q# localmente. Para desenvolver na Cloud através do browser, recomendamos o Visual Studio Codespaces. O desenvolvimento nestes ambientes inclui a funcionalidade avançada da extensão QDK, que inclui avisos, realce de sintaxe, modelos de projeto e muito mais. 
+Embora possa criar aplicações Q# em qualquer IDE, recomendamos que utilize o Visual Studio Code (VS Code) ou o IDE do Visual Studio para desenvolver as suas aplicações Q# localmente. Para desenvolver na Cloud através do browser, recomendamos o Visual Studio Codespaces. O desenvolvimento nestes ambientes inclui a funcionalidade avançada da extensão QDK, que inclui avisos, realce de sintaxe, modelos de projeto e muito mais. 
 
 Para configurar o VS Code:
 
@@ -94,7 +94,7 @@ Para executar a aplicação:
 > [!NOTE]
 > Se tiver vários projetos numa solução do Visual Studio, todos os projetos contidos na solução têm de estar na mesma pasta que a solução ou numa das subpastas.  
 
-### <a name="other-editors-with-the-command-line"></a>[Outros editores com a linha de comandos](#tab/tabid-cmdline)
+### <a name="other-editors-with-the-command-prompt"></a>[Outros editores com a linha de comandos](#tab/tabid-cmdline)
 
 Crie uma aplicação `Hello World` Q# para verificar a sua instalação.
 
