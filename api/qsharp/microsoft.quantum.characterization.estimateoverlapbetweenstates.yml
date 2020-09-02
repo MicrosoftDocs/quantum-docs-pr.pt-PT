@@ -2,15 +2,15 @@
 uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
 name: EstimateOverlapBetweenStates
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Tendo em conta duas operações que cada uma prepara cópias de um estado, estima a sobreposição quadrada entre os Estados preparados por cada operação.
-remarks: Esta operação utiliza o teste SWAP para encontrar $$ \start{align} \left; \braket{00\cdots 0 / V^{\dagger} U [ 00\cdots 0} \right^2 \end{align} $$ onde $U$ é a `preparation1`representação unitária da `preparation2`ação de , e onde $V$ corresponde a .
+namespace: microsoft.quantum.characterization
+summary: Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a sobreposição quadrada entre os Estados preparados por cada operação.
+remarks: Esta operação utiliza o teste SWAP para encontrar $$ \start{align} \left/ \braket{00\cdots 0 / V^{\dagger} U / 00\cdots 0} \direita/^2 \end{} $$ onde $U$ é a representação unitária da ação de `preparation1` , e onde $V$ corresponde a `preparation2` .
 syntax: 'operation EstimateOverlapBetweenStates (preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation1 : (Qubit[] => Unit is Adj), preparation2 : (Qubit[] => Unit is Adj), nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation1
-    summary: A primeira das duas operações de preparação do Estado a comparar.
+    summary: A primeira das duas operações de preparação do Estado a ser comparada.
     isOperation: true
     input:
       types:
@@ -24,7 +24,7 @@ input:
     functors:
     - Adjoint
   - name: preparation2
-    summary: A segunda das duas operações de preparação do Estado a comparar.
+    summary: A segunda das duas operações de preparação do Estado deve ser comparada.
     isOperation: true
     input:
       types:
@@ -38,7 +38,7 @@ input:
     functors:
     - Adjoint
   - name: nQubits
-    summary: O número de qubits `preparation1`em `preparation2` que, `commonPreparation`e todos agiram.
+    summary: O número de qubits em que `commonPreparation` `preparation1` , e todos `preparation2` agem.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
@@ -54,9 +54,9 @@ seeAlso:
 - microsoft.quantum.characterization.estimaterealoverlapbetweenstates
 - microsoft.quantum.characterization.estimateimagoverlapbetweenstates
 metadata:
-  ms.openlocfilehash: 6eefd9b32b73d3f73bb31ff81509466e754e20d6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 968b8ec3ba5822475ffea0439a9c1cc84ac995ba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677677"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354489"

@@ -2,30 +2,30 @@
 uid: microsoft.quantum.arithmetic.greaterthan
 name: GreaterThan
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  Aplica uma comparação maior do que duas inteiros codificadas em registos qubit, lançando um qubit-alvo com base no resultado da comparação.
+  Aplica uma comparação maior do que a comparação entre dois inteiros codificados em registos qubit, lançando um qubit alvo com base no resultado da comparação.
 
 
-  Realiza uma comparação estritamente maior do que a comparação de dois inteiros $x$ e $y$, codificados em registos qubit xs e ys. Se $x > y$, então o qubit do resultado será invertido, caso contrário o qubit do resultado manterá o seu estado.
-remarks: Usa o truque que $x - y = (x'+y)''$, onde ' denota o complemento de um.
+  Realiza uma comparação estritamente maior do que a comparação de dois inteiros $x$ e $y$, codificados em qubit registers xs e ys. Se $x > y$, então o qubit do resultado será invertido, caso contrário o qubit de resultado manterá o seu estado.
+remarks: Usa o truque que $x - y = (x'+y)'$,'$, onde ' denota o complemento do outro.
 syntax: 'operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit) : Unit'
 references: >-
   - Steven A. Cuccaro, Thomas G. Draper, Samuel A. Kutin, David Petrie Moulton: "Um novo circuito de adição de ondas quânticas", 2004.
     https://arxiv.org/abs/quant-ph/0410184v1
 
-  - Thomas Haener, Martin Roetteler, Krysta M. Svore: "Factoring using 2n+2 qubits with Toffoli based modular multiplication", 2016https://arxiv.org/abs/1611.07995
+  - Thomas Haener, Martin Roetteler, Krysta M. Svore: "Factoring using 2n+2 qubits com multiplicação modular baseada em Toffoli", 2016 https://arxiv.org/abs/1611.07995
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Qubit)'
   types:
   - name: xs
-    summary: Registo qubit littleEndian codificando o primeiro inteiro $x$.
+    summary: Registo de qubit littleEndian codificando o primeiro inteiro $x$.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: Registo qubit littleEndian codificando o segundo inteiro $y$.
+    summary: Registo de qubit littleEndian codificando o segundo número inteiro $y$.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: Qubit único que será invertido se $x > y$.
+    summary: Um único qubit que será virado se $x > y$.
     isPrimitive: true
     uid: Qubit
 output:
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 64c96858ea4bf1449a5ddd18f0f7cca45d09fb17
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b6e2a3faab9db052cf77b987e5d7ba1578eb4081
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679598"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341943"

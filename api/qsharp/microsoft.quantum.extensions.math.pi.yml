@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.math.pi
 name: PI
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
-summary: Pi foi depreciado. Por @"microsoft.quantum.math.pi" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.math
+summary: Pi foi depreciado. Por favor, use @"microsoft.quantum.math.pi" em vez disso.
 syntax: 'function PI () : Double'
 input:
   content: ()
@@ -14,9 +14,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 24697b8c0e93074418818dac7df1f22e1f130a67
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 328c1bf12068c63f086ec4bdd96290e859a0a142
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686128"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347944"

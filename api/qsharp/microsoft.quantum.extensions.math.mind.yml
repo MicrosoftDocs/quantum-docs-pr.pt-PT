@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.math.mind
 name: MinD
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
-summary: O MinD foi depreciado. Por @"microsoft.quantum.math.mind" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.math
+summary: O MinD foi deprecado. Por favor, use @"microsoft.quantum.math.mind" em vez disso.
 syntax: 'function MinD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
@@ -20,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: ccd3404bb3150e915f7081895937438779f68e6e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fea4c6876526df10c3fe494d9bea2b081e4c6f1c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686188"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89348080"

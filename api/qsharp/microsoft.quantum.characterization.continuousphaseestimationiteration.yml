@@ -2,25 +2,25 @@
 uid: microsoft.quantum.characterization.continuousphaseestimationiteration
 name: ContinuousPhaseEstimationIteration
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativo (controlado clássicamente) usando poderes reais arbitrários de um oráculo unitário.
 syntax: 'operation ContinuousPhaseEstimationIteration (oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit) : Unit'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.ContinuousOracle, time : Double, theta : Double, targetState : Qubit[], controlQubit : Qubit)'
   types:
   - name: oracle
-    summary: Operação agindo com um duplo $t$ e um registo, de tal forma que $U^t$ é aplicado ao registo dado, onde $U$ é o unitário cuja fase deve ser estimada, e onde $t$ é o poder inteiro dado ao oráculo
+    summary: Operação agindo com duplo $t$ e registo, de tal forma que $U^t$ é aplicado no registo dado, onde $U$ é o unitário cuja fase deve ser estimada, e onde $t$ é o poder inteiro dado ao oráculo
     uid: microsoft.quantum.oracles.continuousoracle
   - name: time
     summary: Número de vezes para aplicar o oráculo unitário dado.
     isPrimitive: true
     uid: Double
   - name: theta
-    summary: Ângulo pelo qual inverter a fase do qubit de controlo antes de agir sobre o estado-alvo.
+    summary: Ângulo para inverter a fase do qubit de controlo antes de agir no estado-alvo.
     isPrimitive: true
     uid: Double
   - name: targetState
-    summary: Registo de Estado agido pelo oráculo unitário dado.
+    summary: Registo de estado agido pelo oráculo unitário dado.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 753daba20f1bb60e7044a9b6bf64bb22051e4549
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4623f2d881388b802f5bb543390d0de1fc655c7c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677768"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354659"

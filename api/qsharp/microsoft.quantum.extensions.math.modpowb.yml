@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.math.modpowb
 name: ModPowB
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
-summary: ModPowB foi depreciado. Por @"microsoft.quantum.math.modpowl" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.math
+summary: ModPowB foi depreciado. Por favor, use @"microsoft.quantum.math.modpowl" em vez disso.
 syntax: 'function ModPowB (value : BigInt, exponent : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(value : BigInt, exponent : BigInt, modulus : BigInt)'
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 039510ee26af1d6717d3af039bbcb67be440e84f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c3d8f5f468ef103de0c5a5c982e57631fff71c8f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686158"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347995"

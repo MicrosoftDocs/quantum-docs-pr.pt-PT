@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.carry
 name: Carry
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Implementa um portão de transporte reversível. `carryIn` Dada uma broca de transporte codificada em qubit e dois pedaços de soma codificados e, `summand1` `summand2` `summand2` `carryOut` `summand1` `summand2`calcula o bitwise xor de, `carryIn`e no qubit e na execução é xored ao qubit .
+namespace: microsoft.quantum.arithmetic
+summary: Implementa um portão de transporte reversível. Dado um bit de transporte codificado em qubit `carryIn` e dois bits resumidos `summand1` `summand2` e, calcula o bitwise xor de `carryIn` , e no `summand1` `summand2` qubit e na `summand2` execução é xored para o qubit `carryOut` .
 syntax: 'operation Carry (carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit) : Unit'
 input:
   content: '(carryIn : Qubit, summand1 : Qubit, summand2 : Qubit, carryOut : Qubit)'
   types:
   - name: carryIn
-    summary: Qubit de bagagem de mão.
+    summary: Qubit de transporte.
     isPrimitive: true
     uid: Qubit
   - name: summand1
@@ -17,11 +17,11 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: summand2
-    summary: Segundo resumo e qubit, é substituído pela parte inferior `summand1` `summand2`da soma de e .
+    summary: Segundo resumo e qubit, é substituído pela parte inferior da soma de `summand1` e `summand2` .
     isPrimitive: true
     uid: Qubit
   - name: carryOut
-    summary: O qubit de execução será xored com a parte mais alta da soma.
+    summary: Qubit de execução, será xored com a parte mais alta da soma.
     isPrimitive: true
     uid: Qubit
 output:
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 3fa18b56fb242e76a88a23af02b3ebe7e5cc57d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b620fa934d3e40772c9a55eda317449e3329a6d5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679842"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327424"

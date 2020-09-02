@@ -2,15 +2,15 @@
 uid: microsoft.quantum.arithmetic.applyphaseleoperationonle
 name: ApplyPhaseLEOperationOnLE
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Aplica uma operação que <xref:microsoft.quantum.arithmetic.littleendian> toma um registo como entrada <xref:microsoft.quantum.arithmetic.phaselittleendian>num registo-alvo de tipo .
-remarks: O registo é `PhaseLittleEndian` transformado pela <xref:microsoft.quantum.canon.qftle> utilização e é devolvido à `op`sua representação original após aplicação de .
+namespace: microsoft.quantum.arithmetic
+summary: Aplica uma operação que toma um <xref:microsoft.quantum.arithmetic.littleendian> registo como entrada num registo-alvo do tipo <xref:microsoft.quantum.arithmetic.phaselittleendian> .
+remarks: O registo é transformado `PhaseLittleEndian` pela utilização <xref:microsoft.quantum.canon.qftle> de e é devolvido à sua representação original após a aplicação de `op` .
 syntax: 'operation ApplyPhaseLEOperationOnLE (op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.PhaseLittleEndian => Unit), target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: op
-    summary: A operação a aplicar.
+    summary: A operação a ser aplicada.
     isOperation: true
     input:
       types:
@@ -20,7 +20,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: target
-    summary: O registo a que é aplicada a operação.
+    summary: O registo a que a operação é aplicada.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -32,9 +32,9 @@ seeAlso:
 - microsoft.quantum.canon.applyphaseleoperationonlea
 - microsoft.quantum.canon.applyphaseleoperationonleca
 metadata:
-  ms.openlocfilehash: c4923ffd3e0c2ad2321003fad592120b5dcb585f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4ff03eced84ef61914b2e9bef2ec2b92826e6149
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676888"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327833"
