@@ -2,8 +2,8 @@
 uid: microsoft.quantum.errorcorrection.bitfliprecoveryfn
 name: BitFlipRecoveryFn
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Função para recuperação As operações pauli para uma dada medição da síndrome por procura de mesa para o código de flip de 3, 1, 10 bit.
+namespace: microsoft.quantum.errorcorrection
+summary: Função para recuperação As operações de Pauli para a medição dada da síndrome por procura de tabela para o código de viragem ⟦3, 1, 1⟧ bit flip.
 syntax: 'function BitFlipRecoveryFn () : Microsoft.Quantum.ErrorCorrection.RecoveryFn'
 input:
   content: ()
@@ -11,14 +11,14 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.RecoveryFn
   types:
-  - summary: Função `RecoveryFn` do tipo que `Result[]` faz `Pauli[]` uma medição da síndrome e devolve as operações que corrigem o erro detetado.
+  - summary: Função do tipo `RecoveryFn` que faz uma medição da síndrome e `Result[]` devolve as `Pauli[]` operações que corrigem o erro detetado.
     uid: microsoft.quantum.errorcorrection.recoveryfn
 seeAlso:
 - microsoft.quantum.canon.recoveryfn
 metadata:
-  ms.openlocfilehash: aeb20fcef86b26fd61f3bbe2594547f1ae212b4c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fc6b353eaa67d82b2c49f8c795acd0dd11ab921b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683892"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336656"

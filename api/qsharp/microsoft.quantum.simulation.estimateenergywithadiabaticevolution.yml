@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.estimateenergywithadiabaticevolution
 name: EstimateEnergyWithAdiabaticEvolution
 type: operation
-namespace: Microsoft.Quantum.Simulation
-summary: Executa a preparação `statePrepUnitary` do Estado aplicando um estado de entrada automaticamente atribuído, `adiabaticUnitary`seguido de preparação do `qpeUnitary`Estado adiabático utilizando a , e, finalmente, estimativa de fase em relação ao estado resultante utilizando a `phaseEstAlgorithm`.
+namespace: microsoft.quantum.simulation
+summary: Realiza a preparação do Estado aplicando um num estado de `statePrepUnitary` entrada atribuído automaticamente, seguido da preparação do estado adiabático utilizando uma `adiabaticUnitary` estimativa de fase, e, finalmente, de fase, no que diz respeito `qpeUnitary` ao estado resultante utilizando a `phaseEstAlgorithm` .
 syntax: 'operation EstimateEnergyWithAdiabaticEvolution (nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double)) : Double'
 input:
   content: '(nQubits : Int, statePrepUnitary : (Qubit[] => Unit), adiabaticUnitary : (Qubit[] => Unit), qpeUnitary : (Qubit[] => Unit is Adj + Ctl), phaseEstAlgorithm : ((Microsoft.Quantum.Oracles.DiscreteOracle, Qubit[]) => Double))'
@@ -25,7 +25,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: adiabaticUnitary
-    summary: Um oráculo que representa o algoritmo de evolução adiabática a ser usado para implementar as varreduras para o estado final do algoritmo.
+    summary: Um oráculo que representa o algoritmo de evolução adiabática para ser usado para implementar as varreduras para o estado final do algoritmo.
     isOperation: true
     input:
       types:
@@ -37,7 +37,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: qpeUnitary
-    summary: Um oráculo que representa um operador unitário $U$ que representa a evolução por tempo $\delta t$ sob um\\gerador dinâmico com estado terrestre $\ket{\phi}$ e energia do estado terrestre $E = \phi ,\delta t$.
+    summary: Um oráculo que representa um operador unitário $U$ que representa a evolução para o tempo $\delta t$ sob um gerador dinâmico com estado de terra $\ket{\phi}$ e energia do estado do solo $E = \\ \phi,\delta t$.
     isOperation: true
     input:
       types:
@@ -53,9 +53,9 @@ input:
     - Controlled
   - name: phaseEstAlgorithm
     summary: >-
-      Uma operação que executa a estimativa de fase numa determinada operação unitária.
+      Uma operação que efetue a estimativa de fase numa determinada operação unitária.
 
-      Consulte a estimativa da [fase iterativa](/quantum/libraries/characterization#iterative-phase-estimation) para obter mais detalhes.
+      Consulte [a estimativa da fase iterativa](/quantum/libraries/characterization#iterative-phase-estimation) para mais detalhes.
     isOperation: true
     input:
       types:
@@ -70,13 +70,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Uma estimativa de $\hat{\phi}$ da energia do estado terrestre $\phi$ do gerador representado por $U$.
+  - summary: Uma estimativa de $\hat{\phi}$ da energia do estado do solo $\phi$ do gerador representado por $U$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: ffab30daf3028c12768d9c9f4cd16a8011a7931f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee69257bcde8ac8ed3afa34d520f9778bde0da91
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655192"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343283"

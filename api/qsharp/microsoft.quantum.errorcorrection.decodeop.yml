@@ -2,17 +2,17 @@
 uid: microsoft.quantum.errorcorrection.decodeop
 name: DecodeOp
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: >-
   Representa uma operação que descodifica um registo codificado num registo físico e os qubits de risco utilizados para registar uma síndrome.
 
 
-  O argumento de um DecodeOp é o mesmo que o retorno de um EncodeOp, e vice-versa.
+  O argumento para um DecodeOp é o mesmo que o retorno de um EncodeOp, e vice-versa.
 syntax: newtype DecodeOp = (Microsoft.Quantum.ErrorCorrection.LogicalRegister => (Qubit[], Qubit[]));
 metadata:
-  ms.openlocfilehash: d2afa788d4e443b94512b724bdb983af36f4c90e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 36511fd13213e9d7954075272732be7e53370f75
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685021"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336520"
