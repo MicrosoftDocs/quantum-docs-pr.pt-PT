@@ -2,35 +2,35 @@
 uid: microsoft.quantum.arithmetic.incrementphasebymodularinteger
 name: IncrementPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Executa um incremento modular de um registo qubit por uma constante de inteiro.
 
 
-  Notemos `increment` por $a$, `modulus` por $N$ e inteirocodificado `target` por $y$.
+  Vamos denotar `increment` por $a$, `modulus` por $N$ e inteiro codificado `target` por $y$.
 
-  Em seguida, a operação executa a seguinte transformação: \start{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} Os inteiros são codificados em formato pequeno-endian na base QFT.
+  Em seguida, a operação executa a seguinte transformação: \start{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} Os inteiros são codificados em formato pequeno-endiano na base QFT.
 remarks: >-
   Assume que `target` tem a parte mais alta definida para 0.
 
   Também assume que o valor do alvo é inferior a $N$.
 
 
-  Para o diagrama do circuito e explicação consulte a Figura 5 na [página 5 do arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
+  Para o diagrama do circuito e explicação consulte a figura 5 na [página 5 do arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=5).
 syntax: 'operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
   types:
   - name: increment
-    summary: O $a incremento de$ a ser adicionado a $y$.
+    summary: Incremento inteiro $a$ a ser adicionado a $y$.
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Integer $N$ que os mods $y + a$.
+    summary: Inteiro $N$ que mods $y + a$.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: O integer $y$ em formato pequeno e `increment` codificado faseado a que $a$ é adicionado.
+    summary: O inteiro $y$ em formato de pequena ponta-de-final codificado por fases a que `increment` $a$ é adicionado.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -43,9 +43,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementbymodularinteger
 metadata:
-  ms.openlocfilehash: e97f88d64d9188d18b10ed7f67adc0225167c466
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 92c20afa6753d80a10a38d8c787efab3a295fc2b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676858"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342844"

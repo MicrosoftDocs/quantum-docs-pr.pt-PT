@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.abscomplexpolar
 name: AbsComplexPolar
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Devolve o valor absoluto de `ComplexPolar`um número complexo de tipo.
+namespace: microsoft.quantum.math
+summary: Devolve o valor absoluto de um número complexo de `ComplexPolar` tipos.
 syntax: 'function AbsComplexPolar (input : Microsoft.Quantum.Math.ComplexPolar) : Double'
 input:
   content: '(input : Microsoft.Quantum.Math.ComplexPolar)'
@@ -14,13 +14,13 @@ input:
 output:
   content: Double
   types:
-  - summary: Valor absoluto $[c] = r$.
+  - summary: Valor absoluto $c. = r$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 07d4658e9c77475c7045c36bd881088313aaaf8a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: eb7648b627962e2ef068b638d120e37df6b9fa00
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685362"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335381"

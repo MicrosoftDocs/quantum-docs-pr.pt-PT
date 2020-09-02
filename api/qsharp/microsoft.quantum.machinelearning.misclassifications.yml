@@ -2,8 +2,8 @@
 uid: microsoft.quantum.machinelearning.misclassifications
 name: Misclassifications
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: Dado um conjunto de etiquetas inferidas e um conjunto de etiquetas corretas, os índices de devolução de devoluções para onde cada conjunto de etiquetas difere.
+namespace: microsoft.quantum.machinelearning
+summary: Dado um conjunto de etiquetas inferidas e um conjunto de etiquetas corretas, os índices de reposição para o local onde cada conjunto de rótulos difere.
 examples: >-
   ```Q#
 
@@ -17,7 +17,7 @@ input:
   content: '(inferredLabels : Int[], actualLabels : Int[])'
   types:
   - name: inferredLabels
-    summary: As etiquetas inferidas para um determinado conjunto de treino ou validação.
+    summary: As etiquetas inferidas para um determinado conjunto de formação ou validação.
     isArray: true
     isPrimitive: true
     uid: Int
@@ -29,14 +29,14 @@ input:
 output:
   content: Int[]
   types:
-  - summary: Uma série de `idx` índices de tal forma que. `inferredLabels[idx] != actualLabels[idx]`
+  - summary: Uma série de índices `idx` tal `inferredLabels[idx] != actualLabels[idx]` que.
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 62a99747a7e711ece041ee0d0d046ac78c0bb95e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3376caa295931db2817b3982854572d4d0c97b30
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684475"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335857"

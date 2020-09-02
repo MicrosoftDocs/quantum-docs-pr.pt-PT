@@ -2,8 +2,8 @@
 uid: microsoft.quantum.machinelearning.nmisclassifications
 name: NMisclassifications
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: Tendo em conta um conjunto de etiquetas inferidas e um conjunto de etiquetas corretas, devolve o número de índices em que cada conjunto de etiquetas difere.
+namespace: microsoft.quantum.machinelearning
+summary: Tendo em conta um conjunto de rótulos inferidos e um conjunto de etiquetas corretas, o número de índices em que cada conjunto de rótulos difere.
 examples: >-
   ```Q#
 
@@ -27,13 +27,13 @@ input:
 output:
   content: Int
   types:
-  - summary: O número de `idx` índices de tal forma que `inferredLabels[idx] != actualLabels[idx]`.
+  - summary: O número de índices `idx` tal que `inferredLabels[idx] != actualLabels[idx]` . .
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0fb65949c86d41412148ae9fc8cda993c518e9e9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6cdc97f48ed8ecca1d7d347b5fbfc6f36326ed55
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684443"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335823"

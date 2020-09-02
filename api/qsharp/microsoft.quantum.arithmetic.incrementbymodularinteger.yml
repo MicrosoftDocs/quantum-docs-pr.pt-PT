@@ -2,32 +2,32 @@
 uid: microsoft.quantum.arithmetic.incrementbymodularinteger
 name: IncrementByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Executa um incremento modular de um registo qubit por uma constante de inteiro.
 
 
-  Notemos `increment` por $a$, `modulus` por $N$ e inteirocodificado `target` por $y$.
+  Vamos denotar `increment` por $a$, `modulus` por $N$ e inteiro codificado `target` por $y$.
 
-  Em seguida, a operação executa a seguinte transformação: \start{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} Os integers são codificados em formato pequeno-endian.
+  Em seguida, a operação executa a seguinte transformação: \start{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} Os inteiros são codificados em formato pouco endiano.
 remarks: >-
   Assume que o valor inicial do alvo é inferior a $N$ e que o incremento $a$ é inferior a $N$.
 
-  Note <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> que implementa a `PhaseLittleEndian` mesma operação na base.
+  Note que <xref:microsoft.quantum.arithmetic.incrementphasebymodularinteger> implementa a mesma operação na `PhaseLittleEndian` base.
 syntax: 'operation IncrementByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: increment
-    summary: O $a incremento de$ a ser adicionado a $y$.
+    summary: Incremento inteiro $a$ a ser adicionado a $y$.
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: Integer $N$ que os mods $y + a$.
+    summary: Inteiro $N$ que mods $y + a$.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: O integer `LittleEndian` $y$ `increment` em formato a que $a$ é adicionado.
+    summary: O inteiro $y$ em `LittleEndian` formato a que `increment` $a$ é adicionado.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -40,9 +40,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.incrementphasebymodularinteger
 metadata:
-  ms.openlocfilehash: 53faa65d67629d0e4c73efc03724cb4b4b30675d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2f91365a06304e6e4e6b71783a941192f4a7121e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679532"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342878"
