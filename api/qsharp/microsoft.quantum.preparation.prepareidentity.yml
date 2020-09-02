@@ -2,12 +2,12 @@
 uid: microsoft.quantum.preparation.prepareidentity
 name: PrepareIdentity
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  Dado um registo, prepara esse registo no estado maximamente misto.
+  Dado um registo, prepara-se o registo no estado máximo misto.
 
 
-  O registo é preparado no estado $\boldone / 2^N$ aplicando o canal de despolarização completo a cada qubit, onde $N$ é o comprimento do registo.
+  O registo é preparado no estado $\boldone / 2^N$ aplicando o canal de despolarizante completo em cada qubit, onde $N$ é o comprimento do registo.
 syntax: 'operation PrepareIdentity (register : Qubit[]) : Unit'
 input:
   content: '(register : Qubit[])'
@@ -25,9 +25,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.preparesinglequbitidentity
 metadata:
-  ms.openlocfilehash: d6ff10bb6251b96e7a6ba58d1afa1e4ab8eaab0a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f772dfd3fc71cb82243b2c45264eb3d01eaeb689
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673471"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331420"

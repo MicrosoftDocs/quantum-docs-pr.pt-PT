@@ -2,16 +2,16 @@
 uid: microsoft.quantum.amplitudeamplification.obliviousamplitudeamplificationfromstatepreparation
 name: ObliviousAmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Amplificação de amplitude alheia por oráculos para reflexos parciais.
+namespace: microsoft.quantum.amplitudeamplification
+summary: Amplificação de amplitude alheia por oráculos para reflexões parciais.
 remarks: >-
-  Isto impõe condições mais rigorosas na forma dos estados-alvo auxiliares do que em `AmpAmpObliviousByReflectionPhases`.
+  Isto impõe condições mais rigorosas sob a forma dos estados auxiliares de início e alvo do que em `AmpAmpObliviousByReflectionPhases` .
 
-  Presume-se que $A\ket{0}\_\_{0}{0}a= \ket{\text{start}}\_{fa}$ prepara o estado auxiliar $\ket{\text{start}}\_{fa}$ da base computacional $\ket  \_f\ket{0}$.
+  Presume-se que $A\ket {0} \_ f\ket {0} \_ a= \ket{\text{start}} \_ {fa}$ prepara o estado de início auxiliar $\ket{\text{start}} \_ {fa}$ da base computacional $\ket {0} \_ f\ket {0} $.
 
-  Presume-se que o estado-alvo é marcado por{1}de $\ket \_f$.
+  Presume-se que o estado-alvo é marcado por $\ket {1} \_ f$.
 
-  Presume-se que \start{align} O\ket{\text{start}}\_{fa}\ket{\psi}\_s= \lambda\ket{1}\_f\ket{\text{anything}}\_a\ket{\text{target}}\_sU \ket{\psi}\_s + \sqrt{1-\lambda^2}\\_{0}\fim{align} para algumas $U$.
+  Presume-se que \start{align} O\ket{\text{start}} \_ {fa}\ket{\psi} \_ s= \lambda\ket {1} \_ f\ket f\ket{\text{anything}} \_ a\ket{text{target}} \_ u\ket{\psi} \_ s + \sqrt{1-\\lambda/^2}ket\f\f\cdots, {0} \_ \end{align} para alguns $U unitários$.
 syntax: 'function ObliviousAmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateOracle : Microsoft.Quantum.Oracles.DeterministicStateOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, idxFlagQubit : Int)'
@@ -20,19 +20,19 @@ input:
     summary: Fases de reflexões parciais
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: startStateOracle
-    summary: Oráculo unitário $A$ que prepara o estado de arranque auxiliar
+    summary: Oráculo unitário $A$ que prepara estado de arranque auxiliar
     uid: microsoft.quantum.oracles.deterministicstateoracle
   - name: signalOracle
-    summary: Oráculo unitário $O$ de tipo `ObliviousOracle` que atua em conjunto no registo auxiliar e do sistema
+    summary: Oráculo unitário $O$ do tipo `ObliviousOracle` que atua conjuntamente no registo auxiliar e do sistema
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: idxFlagQubit
-    summary: Índice para registo de bandeira de qubit único
+    summary: Índice para registo de bandeira de um único qubit
     isPrimitive: true
     uid: Int
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Uma operação que implementa a amplificação de amplitude alheia com base em reflexos parciais.
+  - summary: Uma operação que implementa amplificação de amplitude alheia baseada em reflexos parciais.
     isOperation: true
     input:
       types:
@@ -50,9 +50,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: fa44068c55a1bb92f8827095889f9c3b4d6f1011
-  ms.sourcegitcommit: ca5015fed409eaf0395a89c2e4bc6a890c360aa2
+  ms.openlocfilehash: 9c4bedaffafdbe0c7dfdda6a4a6ec3ded4a69bfd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 01/29/2020
-  ms.locfileid: "76872449"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340379"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.amplitudeamplification.amplitudeamplificationfromstatepreparation
 name: AmplitudeAmplificationFromStatePreparation
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Amplificação de amplitude por oráculos para reflexos parciais.
+namespace: microsoft.quantum.amplitudeamplification
+summary: Amplificação de amplitude por oráculos para reflexões parciais.
 remarks: >-
-  Isto impõe condições mais rigorosas sob a `AmpAmpByReflectionPhases`forma de estados-alvo e de partida do que em .
+  Isto impõe condições mais rigorosas na forma dos estados de partida e alvo do que em `AmpAmpByReflectionPhases` .
 
-  Presume-se que o estado-alvo está{1}\_marcado por $\ket f$.
+  Presume-se que o estado-alvo é marcado por $\ket {1} \_ f$.
 
-  Presume-se que \start{align}{0}\_{0}\_A\ket {f}\ket s={1}\_\lambda\ket f\ket{\text{target}}\_s + \sqrt{1-\lambda/^2}\ket{0}\_f\cdots, \end{align} Na maioria dos casos, `flagQubit` e `auxiliaryRegister` são{0}\_rubricados no estado $\ket {f}\ket{0}\_
+  Presume-se que \start{align} A\ket {0} \_ {f}\ket {0} \_ s= \lambda\ket {1} \_ f\ket{\text{target}} \_ s + \sqrt{1-\\lambda/^2}\ket {0} \_ f\cdots, \end{align} Na maioria dos casos, `flagQubit` e são `auxiliaryRegister` inicializados no estado $\ket {0} \_ {f\}ket$. {0} \_
 syntax: 'function AmplitudeAmplificationFromStatePreparation (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int) : (Qubit[] => Unit is Adj + Ctl)'
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, stateOracle : Microsoft.Quantum.Oracles.StateOracle, idxFlagQubit : Int)'
@@ -18,16 +18,16 @@ input:
     summary: Fases de reflexões parciais
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: stateOracle
-    summary: Oráculo unitário $A$ que prepara o estado de início
+    summary: Oráculo unitário $A dólar que prepara o estado de arranque
     uid: microsoft.quantum.oracles.stateoracle
   - name: idxFlagQubit
-    summary: Index to flag qubit
+    summary: Índice para qubit de bandeira
     isPrimitive: true
     uid: Int
 output:
   content: (Qubit[] => Unit is Adj + Ctl)
   types:
-  - summary: Uma operação que implementa a amplificação de amplitude por oráculos que são implementados por reflexos parciais.
+  - summary: Uma operação que implementa amplificação de amplitude por oráculos que são implementados por reflexões parciais.
     isOperation: true
     input:
       types:
@@ -42,9 +42,9 @@ output:
     - Adjoint
     - Controlled
 metadata:
-  ms.openlocfilehash: 2d29383db3cebfe1848a1fcee3115fcee0825d4d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de9059b0abc7eb8fd622c72561b8875e07a831ad
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676973"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340668"

@@ -2,17 +2,17 @@
 uid: microsoft.quantum.amplitudeamplification.reflectionphases
 name: ReflectionPhases
 type: newtype
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Fases para uma sequência de reflexos parciais na amplificação de amplitude.
+namespace: microsoft.quantum.amplitudeamplification
+summary: Fases para uma sequência de reflexos parciais na amplificação da amplitude.
 remarks: >-
-  O primeiro parâmetro é uma variedade de fases de reflexão sobre o estado de início. O segundo parâmetro é uma série de fases de reflexão sobre o estado-alvo.
+  O primeiro parâmetro é um conjunto de fases para reflexão sobre o estado de início. O segundo parâmetro é um conjunto de fases para reflexão sobre o estado-alvo.
 
-  Ambas as matrizes devem ter o mesmo comprimento. Note-se que, em muitos casos, a primeira fase sobre o estado de partida e a última fase sobre o estado-alvo introduz uma mudança de fase global e pode ser fixada em $0$.
+  Ambas as matrizes devem ter o mesmo comprimento. Note que em muitos casos, a primeira fase sobre o estado de início e última fase sobre o estado-alvo introduz uma mudança de fase global e pode ser definida para $0$.
 syntax: newtype ReflectionPhases = (Double[], Double[]);
 metadata:
-  ms.openlocfilehash: 84d2c006997f8a2a3c9b121581b5dd58804a806d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4a0ed1c01dc6cd14d2569064d769d7057087db48
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680119"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340362"

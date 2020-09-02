@@ -2,20 +2,20 @@
 uid: microsoft.quantum.errorcorrection.recover
 name: Recover
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Executa uma única rodada de correção de `QECC` erro por um código quântico descrito por um tipo.
+namespace: microsoft.quantum.errorcorrection
+summary: Executa uma única ronda de correção de erros por um código quântico descrito por um `QECC` tipo.
 syntax: 'operation Recover (code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister) : Unit'
 input:
   content: '(code : Microsoft.Quantum.ErrorCorrection.QECC, fn : Microsoft.Quantum.ErrorCorrection.RecoveryFn, logicalRegister : Microsoft.Quantum.ErrorCorrection.LogicalRegister)'
   types:
   - name: code
-    summary: Um código de correção de erros `QECC` quânticos embalado como um tipo descreve a codificação e descodificação de dados quânticos, e como as síndromes de erro devem ser medidas.
+    summary: Um código de correção de erros quânticos embalado como um `QECC` tipo descreve a codificação e descodificação dos dados quânticos e como as síndromes de erro devem ser medidas.
     uid: microsoft.quantum.errorcorrection.qecc
   - name: fn
-    summary: A `RecoveryFn` que mapeie `Pauli[]` cada síndrome de erro para as operações que corrigem o erro detetado.
+    summary: A `RecoveryFn` que mapeia cada síndrome de erro para as `Pauli[]` operações que corrigem o erro detetado.
     uid: microsoft.quantum.errorcorrection.recoveryfn
   - name: logicalRegister
-    summary: Uma variedade de qubits onde o código estabilizador é definido.
+    summary: Uma matriz de qubits onde o código estabilizador é definido.
     uid: microsoft.quantum.errorcorrection.logicalregister
 output:
   content: Unit
@@ -27,9 +27,9 @@ seeAlso:
 - microsoft.quantum.canon.recoveryfn
 - microsoft.quantum.canon.logicalregister
 metadata:
-  ms.openlocfilehash: 2a873e06c20bf62c998b1096d862d26ff89aa134
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b61c7255da3c8c22ffbbf7cd9a739ad4c9cca5d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682297"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349967"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.bitwise.zbits
 name: ZBits
 type: function
-namespace: Microsoft.Quantum.Extensions.Bitwise
-summary: Os ZBits foram depreciados. Por @"microsoft.quantum.bitwise.zbits" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.bitwise
+summary: ZBits foi depreciado. Por favor, use @"microsoft.quantum.bitwise.zbits" em vez disso.
 syntax: 'function ZBits (paulies : Pauli[]) : Int'
 input:
   content: '(paulies : Pauli[])'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: a4be75eda8cf28f50301bb254f876ec3568f6366
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b42589b0516fb0470cbb6d3d30ed605360aa2b94
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682141"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349338"

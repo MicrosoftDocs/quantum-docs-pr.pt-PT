@@ -2,18 +2,18 @@
 uid: microsoft.quantum.amplitudeamplification.applyfixedpointamplification
 name: ApplyFixedPointAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Algoritmo de amplificação amplitude de ponto fixo
-remarks: Os startQubits devem estar no estado de $\ket{0 \cdots 0}$ Esta operação itera sobre uma série de consultas em poderes de $2$ até que um número máximo de consultas seja alcançado, ou o estado-alvo é encontrado.
+namespace: microsoft.quantum.amplitudeamplification
+summary: Algoritmo de amplificação de amplitude de ponto fixo
+remarks: Os bits de arranque devem estar no estado $\ket{0 \cdots 0}$. Esta operação itera sobre uma série de consultas em poderes de $2$ até que um número máximo de consultas seja alcançado, ou o estado alvo é encontrado.
 syntax: 'operation ApplyFixedPointAmplification (statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[]) : Unit'
 input:
   content: '(statePrepOracle : Microsoft.Quantum.Oracles.StateOracle, startQubits : Qubit[])'
   types:
   - name: statePrepOracle
-    summary: Oráculo unitário que prepara o estado de início.
+    summary: Oráculo unitário que prepara o estado de partida.
     uid: microsoft.quantum.oracles.stateoracle
   - name: startQubits
-    summary: Registo Qubit
+    summary: Registo de qubits
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 097e3f67cdecfd0ee31bd48e4f64aec659353159
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2a2918e6b9e3cf64a3536a6cbecd7432f084494f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676943"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340549"

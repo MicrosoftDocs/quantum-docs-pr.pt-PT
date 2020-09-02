@@ -2,16 +2,16 @@
 uid: microsoft.quantum.preparation.prepareuniformsuperposition
 name: PrepareUniformSuperposition
 type: operation
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  Cria uma sobreposição uniforme sobre estados que codificam 0 através `nIndices`de .
+  Cria uma superposição uniforme sobre estados que codificam 0 a `nIndices` .
 
 
-  Ou seja, este $U$ unitário cria uma sobreposição uniforme sobre todos os estados do número $0$ a $M-1$, dado um estado de entrada $\ket{0\cdots 0}$. Por outras palavras, $$ \begin{align} U\ket{0}=\frac{1}{\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
+  Ou seja, este $U$ unitário cria uma superposição uniforme sobre todos os estados numerais $0$ a $M-1$, dado um estado de entrada $\ket{0\cdots 0}$. Por outras palavras, $$ \begin{align} U\ket {0} =\frac {1} {\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
 
   \end{align} $$.
 examples: >-
-  O exemplo seguinte prepara o{1}estado $\frac {\sqrt{6}{sum_{j=0}\{5}{j}$ em qubits de $3$.
+  O exemplo a seguir prepara o estado $\frac {1} {\sqrt {6} }\sum_{j=0}^ {5} \ket{j}$ em $3$ qubits.
 
 
   ```Q#
@@ -33,9 +33,9 @@ input:
     uid: Int
   - name: indexRegister
     summary: >-
-      O registo qubit que armazena o número indica em `LittleEndian` formato.
+      O registo qubit que armazena o número afirma em `LittleEndian` formato.
 
-      Este registo deve ser capaz de armazenar o número $M-1$, e presume-se que seja inicializado no estado $\ket{0\cdots 0}$.
+      Este registo deve ser capaz de armazenar o número $M-1$, e é assumido como inicializado no estado $\ket{0\cdots 0}$.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -46,9 +46,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a697f4d410ed47c8be3908e2206080a9393260f7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 442daa4affb6b59191af9117a8094f7bfbf71302
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686530"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331335"

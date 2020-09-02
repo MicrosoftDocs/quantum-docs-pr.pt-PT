@@ -2,9 +2,9 @@
 uid: microsoft.quantum.canon.applytosubregisterc
 name: ApplyToSubregisterC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma operação a um subregisto de um registo, com qubits especificados por uma série de índices.
+  Aplica uma operação a um subregister de um registo, com qubits especificados por um conjunto dos seus índices.
 
   O modificador `C` indica que a operação é controlável.
 syntax: 'operation ApplyToSubregisterC (op : (Qubit[] => Unit is Ctl), idxs : Int[], target : Qubit[]) : Unit'
@@ -12,7 +12,7 @@ input:
   content: '(op : (Qubit[] => Unit is Ctl), idxs : Int[], target : Qubit[])'
   types:
   - name: op
-    summary: Operação a aplicar ao subregisto.
+    summary: Operação a aplicar ao subrecípida.
     isOperation: true
     input:
       types:
@@ -26,12 +26,12 @@ input:
     functors:
     - Controlled
   - name: idxs
-    summary: Conjunto de índices, indicando a que qubits a operação será aplicada.
+    summary: Matriz de índices, indicando a que qubits será aplicada a operação.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Registe-se em que funciona a operação.
+    summary: Registe-se no qual a operação atua.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -45,9 +45,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applytosubregister
 metadata:
-  ms.openlocfilehash: 8fa221658eb4cd8d155ccc4c08ca31a7a335c480
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6cd39986779ca282207d66214e5cfa8eaf9fa90f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674538"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357260"

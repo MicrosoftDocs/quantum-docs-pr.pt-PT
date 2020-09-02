@@ -2,36 +2,36 @@
 uid: microsoft.quantum.amplitudeamplification.fixedpointreflectionphases
 name: FixedPointReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Calcula fases parciais de reflexão para amplificação de amplitude de ponto fixo.
+namespace: microsoft.quantum.amplitudeamplification
+summary: Calcula as fases de reflexão parcial para amplificação da amplitude de ponto fixo.
 syntax: 'function FixedPointReflectionPhases (nQueries : Int, successMin : Double) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 references: >-
-  Utilizamos as fases em "Amplificação amplitude de ponto fixo com um número ideal de consultas"
+  Utilizamos as fases em "Amplificação de Amplitude de Ponto Fixo com um Número Ideal de Consultas"
 
 
-  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) Ver também "Metodologia de portas quânticas compostas"
+  - [YoderLowChuang2014](https://arxiv.org/abs/1409.3305) Consulte também "Metodologia de portões quânticos compostos"
 
-  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) para fases `RotationPhases` no formato.
+  - [LowYoderChuang2016](https://arxiv.org/abs/1603.03996) para fases no `RotationPhases` formato.
 input:
   content: '(nQueries : Int, successMin : Double)'
   types:
   - name: nQueries
-    summary: Número de consultas ao oráculo de preparação do Estado. Deve ser uma inteiroímpar.
+    summary: Número de consultas ao oráculo de preparação do estado. Deve ser um número inteiro estranho.
     isPrimitive: true
     uid: Int
   - name: successMin
-    summary: Probabilidade de sucesso mínima alvo.
+    summary: Probabilidade mínima de sucesso.
     isPrimitive: true
     uid: Double
 output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
-  - summary: Conjunto de fases que podem ser usadas na implementação do algoritmo quântico de amplificação de amplitude de ponto fixo.
+  - summary: Conjunto de fases que podem ser usadas na implementação do algoritmo quântico de amplificação de amplitude fixa.
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: f1484b1f3bad5e5c6213919f0b95adcbc62f25c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88345904b92a4e16fc25e8faa73ccbde181b03dc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672993"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340481"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.canon.applytopartition
 name: ApplyToPartition
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: Aplica um par de operações a uma dada divisão de um registo em duas partes.
+namespace: microsoft.quantum.canon
+summary: Aplica um par de operações a uma determinada divisão de um registo em duas partes.
 syntax: 'operation ApplyToPartition (op : ((Qubit[], Qubit[]) => Unit), numberOfQubitsToFirstArgument : Int, target : Qubit[]) : Unit'
 input:
   content: '(op : ((Qubit[], Qubit[]) => Unit), numberOfQubitsToFirstArgument : Int, target : Qubit[])'
@@ -27,11 +27,11 @@ input:
     summary: >-
       Número de qubits do alvo para colocar na primeira parte da partição.
 
-      Os restantes qubits constituem a segunda parte da partição.
+      Os qubits restantes constituem a segunda parte da partição.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Um registo de qubits que estão a ser divididos e operados pela determinada operação.
+    summary: Um registo de qubits que estão a ser divididos e operados pela operação dada.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -45,9 +45,9 @@ seeAlso:
 - microsoft.quantum.canon.applytopartitionc
 - microsoft.quantum.canon.applytopartitionca
 metadata:
-  ms.openlocfilehash: 31b88fac027d0b5ce0cad944853a36032050c9f0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2d9e410ca4cf94a2326c3cce6ae9ccc73a0c3cd8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674630"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357362"
