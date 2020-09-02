@@ -2,14 +2,14 @@
 uid: microsoft.quantum.machinelearning.partialrotationslayer
 name: PartialRotationsLayer
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: Devolve uma série de rotações de qubit único ao longo de um determinado eixo, parametrizado por parâmetros de modelo distintos.
+namespace: microsoft.quantum.machinelearning
+summary: Devolve uma matriz de rotações de um único qubit ao longo de um determinado eixo, parametrizado por parâmetros de modelo distintos.
 syntax: 'function PartialRotationsLayer (idxsQubits : Int[], axis : Pauli) : Microsoft.Quantum.MachineLearning.ControlledRotation[]'
 input:
   content: '(idxsQubits : Int[], axis : Pauli)'
   types:
   - name: idxsQubits
-    summary: Índices para os qubits a utilizar como alvos para cada rotação.
+    summary: Índices para que os qubits sejam utilizados como alvos para cada rotação.
     isArray: true
     isPrimitive: true
     uid: Int
@@ -20,13 +20,13 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.ControlledRotation[]
   types:
-  - summary: Uma série de rotações controladas sobre o `nQubits` eixo dado, uma em cada qubits.
+  - summary: Uma matriz de rotações controladas sobre o eixo dado, uma em cada um dos `nQubits` qubits.
     isArray: true
     uid: microsoft.quantum.machinelearning.controlledrotation
 metadata:
-  ms.openlocfilehash: 1dd7b0309f257501119cd6039f16b3913e952950
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9264e2e76aecac2d49bd7e53098fcd19d58294d6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684426"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335789"

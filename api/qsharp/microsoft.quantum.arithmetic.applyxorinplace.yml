@@ -2,25 +2,25 @@
 uid: microsoft.quantum.arithmetic.applyxorinplace
 name: ApplyXorInPlace
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  Aplica uma operação bitwise-XOR entre um inteiro clássico e um inteiro representado por um registo de qubits.
+  Aplica uma operação pouco-XOR entre um inteiro clássico e um inteiro representado por um registo de qubits.
 
 
-  Aplica `X` operações a qubits num registo pouco endiano com base em 1 bits num inteiro.
+  Aplica `X` operações a qubits num registo de pequenas extremidades com base em 1 bits num inteiro.
 
 
-  Vamos notar `value` por a e deixar y ser um inteiro não `target`assinado `InPlaceXorLE` codificado, em seguida, executa uma operação dada pelo seguinte mapa: $\ket{y}\seta direita \ket {y\oplus a}$, onde $\oplus$ é o operador de OR exclusivo bitwise.
+  Vamos denotar `value` por um número inteiro não assinado codificado, em `target` seguida, executa uma `InPlaceXorLE` operação dada pelo seguinte mapa: $\ket{y}\rightarrow \ket{y\oplus a}, onde $\oplus$ é o operador exclusivo bitwise OR.
 syntax: 'operation ApplyXorInPlace (value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(value : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: value
-    summary: Um inteiro que se assume não ser negativo.
+    summary: Um inteiro que se assume não negativo.
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Um registo quântico que `value` é usado para armazenar em codificação de pouco endiano.
+    summary: Um registo quântico que é usado para armazenar `value` em codificação pouco endiana.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 27568274d343242f3b3bd0eef8de6e48d546de1f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7b4e125f76051b966ec65ca43c7edb1efd270ded
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679920"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342538"

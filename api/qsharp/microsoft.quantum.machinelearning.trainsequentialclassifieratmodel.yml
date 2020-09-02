@@ -2,35 +2,35 @@
 uid: microsoft.quantum.machinelearning.trainsequentialclassifieratmodel
 name: TrainSequentialClassifierAtModel
 type: operation
-namespace: Microsoft.Quantum.MachineLearning
+namespace: microsoft.quantum.machinelearning
 summary: Dada a estrutura de um classificador sequencial, treina o classificador num determinado conjunto de formação rotulado, a partir de um determinado modelo.
 syntax: 'operation TrainSequentialClassifierAtModel (model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule) : (Microsoft.Quantum.MachineLearning.SequentialModel, Int)'
 input:
   content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel, samples : Microsoft.Quantum.MachineLearning.LabeledSample[], options : Microsoft.Quantum.MachineLearning.TrainingOptions, trainingSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule, validationSchedule : Microsoft.Quantum.MachineLearning.SamplingSchedule)'
   types:
   - name: model
-    summary: O modelo sequencial a ser usado como ponto de partida para o treino.
+    summary: O modelo sequencial a ser utilizado como ponto de partida para o treino.
     uid: microsoft.quantum.machinelearning.sequentialmodel
   - name: samples
-    summary: Um conjunto de dados de formação rotulados que serão usados para realizar treinos.
+    summary: Um conjunto de dados de formação rotulados que serão utilizados para realizar treinos.
     isArray: true
     uid: microsoft.quantum.machinelearning.labeledsample
   - name: options
-    summary: Configuração a utilizar durante o treino; ver @"microsoft.quantum.machinelearning.trainingoptions" @"microsoft.quantum.machinelearning.defaulttrainingoptions" e para mais detalhes.
+    summary: Configuração a utilizar durante o treino; ver @"microsoft.quantum.machinelearning.trainingoptions" e para mais @"microsoft.quantum.machinelearning.defaulttrainingoptions" detalhes.
     uid: microsoft.quantum.machinelearning.trainingoptions
   - name: trainingSchedule
-    summary: Um horário de amostragem a utilizar ao selecionar amostras dos dados de treino durante as etapas de treino.
+    summary: Um calendário de amostragem a utilizar ao selecionar amostras dos dados de treino durante as etapas de treino.
     uid: microsoft.quantum.machinelearning.samplingschedule
   - name: validationSchedule
-    summary: Um calendário de amostragem a utilizar ao selecionar amostras dos dados de treino ao selecionar qual o ponto de partida resultou na melhor pontuação do classificador.
+    summary: Um calendário de amostragem a utilizar ao selecionar amostras dos dados de treino ao selecionar qual ponto de partida resultou na melhor pontuação do classificador.
     uid: microsoft.quantum.machinelearning.samplingschedule
 output:
   content: (Microsoft.Quantum.MachineLearning.SequentialModel, Int)
   types:
   - summary: >-
-      - Uma parametrização do classificador dado e um enviesamento entre as duas classes, correspondendo ao melhor resultado de cada um dos pontos de partida.
+      - Uma parametrização do classificador dado e um enviesamento entre as duas classes, correspondente ao melhor resultado de cada um dos pontos de partida dados.
 
-      - O número de falhas observadas no melhor modelo de classificação.
+      - O número de falhas observadas no melhor modelo de classificador.
     types:
     - uid: microsoft.quantum.machinelearning.sequentialmodel
     - isPrimitive: true
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.machinelearning.trainsequentialclassifier
 - microsoft.quantum.machinelearning.validatesequentialclassifier
 metadata:
-  ms.openlocfilehash: ab30be93a0a1e0b347d2adfe82dbcf07b12d6996
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 36666626d6fb6319fbc62d2d49d5975fe29f8d93
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684279"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335483"

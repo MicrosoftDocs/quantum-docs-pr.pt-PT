@@ -2,8 +2,8 @@
 uid: microsoft.quantum.machinelearning.nqubitsrequired
 name: NQubitsRequired
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: Devolve o número de qubits necessários para aplicar um dado classificador sequencial.
+namespace: microsoft.quantum.machinelearning
+summary: Devolve o número de qubits necessários para aplicar um determinado classificador sequencial.
 syntax: 'function NQubitsRequired (model : Microsoft.Quantum.MachineLearning.SequentialModel) : Int'
 input:
   content: '(model : Microsoft.Quantum.MachineLearning.SequentialModel)'
@@ -13,13 +13,13 @@ input:
 output:
   content: Int
   types:
-  - summary: O tamanho mínimo de um registo em que pode ser aplicado o classificador sequencial.
+  - summary: O tamanho mínimo de um registo no qual pode ser aplicado o classificador sequencial.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 262de523a51d87ffd9e1d7859e887780b8e97336
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6cdeb34cab82735ae64e7ba99dfbee2089b6bb80
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674024"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335806"

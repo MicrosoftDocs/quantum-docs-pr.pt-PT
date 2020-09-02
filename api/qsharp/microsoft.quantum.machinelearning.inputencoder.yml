@@ -2,26 +2,26 @@
 uid: microsoft.quantum.machinelearning.inputencoder
 name: InputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: Dado um conjunto de coeficientes e tolerância, devolve uma operação de preparação estatal que prepara cada coeficiente como a amplitude correspondente de um estado de base computacional.
+namespace: microsoft.quantum.machinelearning
+summary: Dado um conjunto de coeficientes e uma tolerância, devolve uma operação de preparação do Estado que prepara cada coeficiente como a amplitude correspondente de um estado de base computacional.
 syntax: 'function InputEncoder (coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
 input:
   content: '(coefficients : Double[])'
   types:
   - name: coefficients
-    summary: Os coeficientes a codificar num estado de entrada.
+    summary: Os coeficientes devem ser codificados num estado de entrada.
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Microsoft.Quantum.MachineLearning.StateGenerator
   types:
-  - summary: Uma operação de preparação estatal que prepara os coeficientes como um estado de entrada num determinado registo.
+  - summary: Uma operação de preparação do Estado que prepara os coeficientes dados como um estado de entrada num dado registo.
     uid: microsoft.quantum.machinelearning.stategenerator
 metadata:
-  ms.openlocfilehash: b1a45c2ce026ab15f1134167355fb131d9b0022e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88bb75d8e6e330cdc7d157b80581413333c9b371
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684519"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336061"
