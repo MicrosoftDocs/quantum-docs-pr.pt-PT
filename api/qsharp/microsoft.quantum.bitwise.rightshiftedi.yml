@@ -2,8 +2,8 @@
 uid: microsoft.quantum.bitwise.rightshiftedi
 name: RightShiftedI
 type: function
-namespace: Microsoft.Quantum.Bitwise
-summary: Muda a representação bitwise de um número direito por um dado número de bits.
+namespace: microsoft.quantum.bitwise
+summary: Muda a representação de um número direito por um determinado número de bits.
 remarks: >-
   Os seguintes são equivalentes:
 
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Int
   - name: amount
-    summary: O número de bits por que `value` deve ser deslocado para a direita.
+    summary: O número de bits pelos quais `value` deve ser deslocado para a direita.
     isPrimitive: true
     uid: Int
 output:
   content: Int
   types:
-  - summary: O valor `value`de. `amount`
+  - summary: O valor `value` de. `amount`
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 9bf08ce00efc1bc93397c25c1a3ddd4d2432721d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c7dc84cff910e641747327ef3cd6fd86e506041a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680601"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351157"

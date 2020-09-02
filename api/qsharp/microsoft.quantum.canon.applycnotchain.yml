@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applycnotchain
 name: ApplyCNOTChain
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Calcula a paridade de um registo de qubits no lugar.
 
 
-  Esta operação transforma o estado da sua entrada como $$ \start {align} \ket{q_0} \ket {q_1} \cdots \ket {q_{n - 1}} & \mapsto \q_0} \ket{q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots \ket {q_0 \oplus \oplus \o q_plus \oplus \oplus \oplus
+  Esta operação transforma o estado da sua entrada como $$ \start{align} \ket{q_0} \ket{q_1} \cdots \ket{q_{n - 1}} & \mapsto \ket{q_0} \000 {q_0 \oplus q_1} \ket{q_0 \oplus q_1 \oplus q_2} \cdots \ket{q_0 \oplus \cdots \oplus q_{n - 1}}}
 
   \end{align} $$
 syntax: 'operation ApplyCNOTChain (qubits : Qubit[]) : Unit'
@@ -15,7 +15,7 @@ input:
   content: '(qubits : Qubit[])'
   types:
   - name: qubits
-    summary: Conjunto de qubits cuja paridade deve ser calculada e armazenada.
+    summary: Matriz de qubits cuja paridade deve ser calculada e armazenada.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 9ba0318a28b5148fa4ad7dbeb4ad547190b1d0ab
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6c6f1685267f2bca583b9a64d04667639702c549
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680530"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350817"

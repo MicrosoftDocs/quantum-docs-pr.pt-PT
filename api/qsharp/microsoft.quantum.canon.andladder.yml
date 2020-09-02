@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.andladder
 name: AndLadder
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Executa um "And ladder" controlado num registo de qubits-alvo.
+  Executa uma "escada" controlada num registo de qubits-alvo.
 
 
-  Esta operação aplica uma transformação descrita pelo seguinte mapeamento da base computacional,\_$$ \begin{align}\_\ket{x\_1, \dots,\_x n} \ket{y 1,\_\dots, y\_{n -\_1}} \mapsto \ket{x 1, \dots, x n} \ket{ y 1\_\oplus (x 1 \land x\_2), \dots, y\_{n - 1} \oplus (x\_1 \land x\_2 \land \cdots \land x\_{n } }, \end{align} $$ where $\ket{x\_1, \dots, x\_n}$ refere-se aos estados de base computacional de `controls`\_\_ `targets`, e onde $\ket{y 1, \dots, y {n - 1}}
+  Esta operação aplica uma transformação descrita pelo seguinte mapeamento da base computacional, $$ \start{align} \ket{x \_ 1, \dots, x \_ n} \ket{y \_ 1, \pontos, y \_ {n - 1}} \mapsto \ket{x \_ 1, \dots, x \_ n} \ket{ \_ y 1 \oplus (x \_ 1 \land x \_ 2), \dots, y \_ {n - 1} \oplus (x \_ 1 \land x \_ 2 \land \land \land \land \land x \_ {n - 1} }, \end{align} $$ where $\ket{x \_ 1, \dots, x \_ n}$ refere-se aos estados de base computacional de `controls` , e onde $\ket{y \_ 1, \dots, y \_ {n - 1}}$ refere-se aos estados de base computacional de `targets` .
 remarks: >-
-  - Usado como parte <xref:microsoft.quantum.canon.applymulticontrolledc> <xref:microsoft.quantum.canon.applymulticontrolledca>de e .
+  - Usado como parte de <xref:microsoft.quantum.canon.applymulticontrolledc> e <xref:microsoft.quantum.canon.applymulticontrolledca> .
 
-  - Para a explicação e diagrama do circuito ver Figura 4.10, Secção 4.3 em Nielsen & Chuang.
+  - Para a explicação e diagrama do circuito consulte a Figura 4.10, Secção 4.3 em Nielsen & Chuang.
 syntax: 'operation AndLadder (ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit'
-references: '- [*Michael A. Nielsen, Isaac L. Chuang,* Computação Quântica e Informação Quântica](http://doi.org/10.1017/CBO9780511976667)'
+references: '- [*Michael A. Nielsen , Isaac L. Chuang,* Quantum Computation e Quantum Information](http://doi.org/10.1017/CBO9780511976667)'
 input:
   content: '(ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[])'
   types:
@@ -24,14 +24,14 @@ input:
     summary: >-
       Um registo de qubits a utilizar como controlos para a escada e escada.
 
-      Esta operação deixa os estados de base computacional de `controls` invariantes.
+      Esta operação deixa estados de base computacional `controls` invariantes.
 
-      O comprimento `controls` deve ser de pelo menos 2, e `targets`deve ser igual a um mais o comprimento de .
+      O comprimento `controls` deve ser de, pelo menos, 2, e deve ser igual a um mais o comprimento de `targets` .
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targets
-    summary: O comprimento `targets` deve ser de pelo menos `controls` 1 e igual ao comprimento de menos um.
+    summary: O comprimento `targets` deve ser de, pelo menos, 1 e igual ao comprimento de `controls` menos um.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -43,9 +43,9 @@ output:
 functors:
 - Adjoint
 metadata:
-  ms.openlocfilehash: 4cc74315145176fd3a2258a3d92b2f2dfb4d66d3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 194e562588a7ea244b39795ea1c489a07a7fbfba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676398"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350885"

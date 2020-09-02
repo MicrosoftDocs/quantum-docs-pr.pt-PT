@@ -2,15 +2,15 @@
 uid: microsoft.quantum.measurement.settobasisstate
 name: SetToBasisState
 type: operation
-namespace: Microsoft.Quantum.Measurement
-summary: Define um qubit para um determinado estado de base computacional medindo o qubit e aplicando um pouco de flip se necessário.
-remarks: Como invariante desta operação, `M(q)` a `SetToBasisState(result, q)` chamada `result`imediatamente a seguir regressará.
+namespace: microsoft.quantum.measurement
+summary: Define um qubit a um dado estado de base computacional medindo o qubit e aplicando um pouco de flip, se necessário.
+remarks: Como invariante desta operação, a chamada `M(q)` imediatamente a seguir `SetToBasisState(result, q)` `result` regressará.
 syntax: 'operation SetToBasisState (desired : Result, target : Qubit) : Unit'
 input:
   content: '(desired : Result, target : Qubit)'
   types:
   - name: desired
-    summary: A base diz que o qubit deve ser definido.
+    summary: A base diz que o qubit deve ser definido para.
     isPrimitive: true
     uid: Result
   - name: target
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 002ca4716f0aa57c0ddd4f33d421402c068ad244
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1bd8b8d83ff2bee3dfb1f4a696ddc3b493a2bb82
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681365"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332253"

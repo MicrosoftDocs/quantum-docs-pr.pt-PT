@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyoprepeatedlyovera
 name: ApplyOpRepeatedlyOverA
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: Aplica a mesma operação sobre um registo qubit várias vezes.
+namespace: microsoft.quantum.canon
+summary: Aplica a mesma operação num registo de qubits várias vezes.
 syntax: 'operation ApplyOpRepeatedlyOverA (op : (Qubit[] => Unit is Adj), targets : Int[][], register : Qubit[]) : Unit'
 input:
   content: '(op : (Qubit[] => Unit is Adj), targets : Int[][], register : Qubit[])'
   types:
   - name: op
-    summary: Uma operação a aplicar várias vezes no registo qubit
+    summary: Uma operação a ser aplicada várias vezes no registo qubit
     isOperation: true
     input:
       types:
@@ -23,14 +23,14 @@ input:
     functors:
     - Adjoint
   - name: targets
-    summary: Matrizes aninhadas descrevendo os alvos da operação. Cada matriz deve conter uma lista de ints que descrevem os qubits a utilizar.
+    summary: Matrizes aninhadas descrevendo os alvos da operação. Cada matriz deve conter uma lista de ints descrevendo os qubits a serem usados.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Int
   - name: register
-    summary: Registo qubit a ser agido.
+    summary: Registo qubit para ser agido.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -44,9 +44,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applyseriesofops
 metadata:
-  ms.openlocfilehash: 3d3ad2cd2e3fb1288f4497433aa1b00936b32a5a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2fe65e4f08bfd823ab82d912527743d430125901
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672502"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358059"

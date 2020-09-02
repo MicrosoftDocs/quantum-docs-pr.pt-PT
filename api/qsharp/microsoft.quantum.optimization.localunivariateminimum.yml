@@ -2,8 +2,8 @@
 uid: microsoft.quantum.optimization.localunivariateminimum
 name: LocalUnivariateMinimum
 type: function
-namespace: Microsoft.Quantum.Optimization
-summary: Devolve o mínimo local para uma função univariada sobre um intervalo limitado, utilizando uma pesquisa de intervalo dourado.
+namespace: microsoft.quantum.optimization
+summary: Devolve o mínimo local para uma função univariada durante um intervalo limitado, utilizando uma busca de intervalo dourado.
 syntax: 'function LocalUnivariateMinimum (fn : (Double -> Double), bounds : (Double, Double), tolerance : Double) : Microsoft.Quantum.Optimization.UnivariateOptimizationResult'
 input:
   content: '(fn : (Double -> Double), bounds : (Double, Double), tolerance : Double)'
@@ -36,12 +36,12 @@ input:
 output:
   content: Microsoft.Quantum.Optimization.UnivariateOptimizationResult
   types:
-  - summary: Um otimista local da função dada, localizado dentro dos limites dado.
+  - summary: Um optima local da função dada, localizada dentro dos limites dados.
     uid: microsoft.quantum.optimization.univariateoptimizationresult
 metadata:
-  ms.openlocfilehash: 50dd7031f1c2d0e6a582bf9fa0774e4e71c5fc44
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bd777d1a335a2a11acd269dde32d73764b68cf9c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681339"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332202"
