@@ -2,7 +2,7 @@
 uid: microsoft.quantum.diagnostics.assertmeasurement
 name: AssertMeasurement
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: Afirma que medir os qubits dado na dada base Pauli terá sempre o resultado dado.
 remarks: Note que as versões adjacentes e controladas desta operação não verificarão a condição.
 syntax: 'operation AssertMeasurement (bases : Pauli[], qubits : Qubit[], result : Result, msg : String) : Unit'
@@ -38,9 +38,9 @@ functors:
 seeAlso:
 - microsoft.quantum.diagnostics.assertmeasurementprobability
 metadata:
-  ms.openlocfilehash: e8c74cdeb9ba196b337b56ec377a1158cd331ac7
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: 8e48ecb3d430469fce3bf7571557f89db2d92b9e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85887324"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337710"

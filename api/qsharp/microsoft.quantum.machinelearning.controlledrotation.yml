@@ -2,15 +2,15 @@
 uid: microsoft.quantum.machinelearning.controlledrotation
 name: ControlledRotation
 type: newtype
-namespace: Microsoft.Quantum.MachineLearning
-summary: Descreve uma rotação controlada em termos dos índices de alvo e controlo, eixo de rotação e índice num vetor de parâmetros de modelo.
+namespace: microsoft.quantum.machinelearning
+summary: Descreve uma rotação controlada em termos dos seus índices de alvo e controlo, eixo de rotação e índice num vetor de parâmetros de modelo.
 remarks: >-
-  Uma rotação descontrolada pode ser `ControlIndices` representada através da fixação `new Int[0]`de uma gama vazia de índices, .
+  Uma rotação descontrolada pode ser representada por `ControlIndices` uma matriz vazia de índices, `new Int[0]` .
 
 
   ### <a name="examples"></a>Exemplos
 
-  O seguinte representa uma rotação sobre o $X eixo$do primeiro qubit num registo, controlado no segundo qubit, e com um ângulo dado pelo quarto parâmetro num modelo sequencial:
+  O seguinte representa uma rotação sobre o eixo $X$do primeiro qubit num registo, controlado no segundo qubit, e com um ângulo dado pelo quarto parâmetro num modelo sequencial:
 
 
   ```Q#
@@ -24,9 +24,9 @@ remarks: >-
   ```
 syntax: newtype ControlledRotation = ((Int, Int[]), Pauli, Int);
 metadata:
-  ms.openlocfilehash: 058c1dc75dd169971d0c542d0577d739327e4d56
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 132a69f35e1cbec57c15c3f362a25849e3d66c27
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681683"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344918"

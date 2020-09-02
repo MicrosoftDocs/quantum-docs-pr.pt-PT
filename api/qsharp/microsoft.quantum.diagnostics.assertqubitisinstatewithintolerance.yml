@@ -2,18 +2,18 @@
 uid: microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance
 name: AssertQubitIsInStateWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
   Afirma que um qubit no estado esperado.
 
 
-  `expected`representa um vetor complexo, $\ket{\psi} = \begin{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}$.
+  `expected` representa um vetor complexo, $\ket{\psi} = \start{bmatrix}a & b\end{bmatrix}^{\mathrm{T}}}$.
 
-  O primeiro elemento das tuples que representam cada um dos $a$, $b$ é a parte real do número complexo, enquanto o segundo é a parte imaginária.
+  O primeiro elemento dos tuples que representam cada um dos $a$, $b$ é a parte real do número complexo, enquanto o segundo é a parte imaginária.
 
   O último argumento define a tolerância com que a afirmação é feita.
 remarks: >-
-  O seguinte código matemático pode ser usado para verificar expressões para mi, mx, my, mz:
+  O seguinte código Mathematica pode ser usado para verificar expressões para mi, mx, my, mz:
 
 
   ```mathematica
@@ -37,11 +37,11 @@ remarks: >-
   ```
 
 
-  A tolerância é\_a distância $L {\infty}$ entre o vetor real tridimensional (x2,xé,x) definido\_por $\langle\psi\psi\rangle = x 1 I + x\_2 X + x\_3 Y + x\_4 Z$ e vetor real (y2,yy,y) definido por ρ = yi + y2X + yYY + yZ onde ρ é a matriz densidade correspondente ao estado do registo.
+  A tolerância é a distância $L \_ {\infty}$ entre vetor real 3 dimensional (x2,x₃,x₄) definido por $\langle\psi\\rangle = x \_ 1 I + x \_ 2 X + x \_ 3 Y + x \_ 4 Z vetor de $ e real (y2,y₃,y₄) definido por ρ = y₁I + y2X + y₃Y + y₄Z onde ρ é a matriz de densidade correspondente ao estado do registo.
 
-  Isto só é verdade sob o pressuposto de que Tr (ρ) e Tr são ambos 1 (por exemplo, x = 1/2, y = 1/2).
+  Isto só é verdade sob o pressuposto de que Tr(ρ) e Tr (/ψ⟩⟨ψ)) são ambos 1 (por exemplo, x₁ = 1/2, y₁ = 1/2).
 
-  Se não for esse o caso, a função afirma que a distância entre (x2-x, x0,xé,x0,x;x) e (y2-yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy) é menor do que o parâmetro de tolerância.
+  Se não for esse o caso, a função afirma que l∞ distância entre (x2-x₁,x₃-x₁,x₄-x₁,x₄+x₁) e (y2-y₁,y₃-y₁₄-y₁,y₄+y₁) é inferior ao parâmetro de tolerância.
 examples: >-
   ```Q#
 
@@ -60,7 +60,7 @@ input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: Amplitudes complexas esperadas{0}por $\ket $e $\ket{1}$, respectivamente.
+    summary: Amplitudes complexas esperadas para $\ket {0} $ e $\ket {1} $, respectivamente.
     types:
     - uid: microsoft.quantum.math.complex
     - uid: microsoft.quantum.math.complex
@@ -70,9 +70,9 @@ input:
     uid: Qubit
   - name: tolerance
     summary: >-
-      Tolerância aditiva pela qual as amplitudes reais são permitidas a desviar-se do esperado.
+      Tolerância adídria pela qual as amplitudes reais são permitidas a desviar-se do esperado.
 
-      Veja abaixo os comentários abaixo.
+      Consulte as observações abaixo para mais detalhes.
     isPrimitive: true
     uid: Double
 output:
@@ -81,9 +81,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 77d28c122a44f39924242dedb6bd6163974e18c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6517c96e87042948d3e6f235e64c7b3e0dc5d387
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656607"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337438"

@@ -2,11 +2,11 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalinplacecompbasis
 name: AssertOperationsEqualInPlaceCompBasis
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
-  Verifica se `givenU` a operação é `expectedU` igual à operação no tamanho da entrada dada, verificando a ação das operações apenas nos vetores a partir da base computacional.
+  Verifica se a operação `givenU` é igual à operação no tamanho de entrada `expectedU` dado, verificando a ação das operações apenas nos vetores a partir da base computacional.
 
-  Esta é uma condição necessária, mas não suficiente, para a igualdade de dois unitários.
+  Esta é uma condição necessária, mas não suficiente, para a igualdade de duas unitárias.
 syntax: 'operation AssertOperationsEqualInPlaceCompBasis (nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj)) : Unit'
 input:
   content: '(nQubits : Int, givenU : (Qubit[] => Unit), expectedU : (Qubit[] => Unit is Adj))'
@@ -16,7 +16,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: givenU
-    summary: Operação em qubits $n$ a verificar.
+    summary: Operação a $n dólares qubits a serem verificados.
     isOperation: true
     input:
       types:
@@ -28,7 +28,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: expectedU
-    summary: Operação de referência em qubits de $n$ que `givenU` deve ser comparado com.
+    summary: Operação de referência em $n$ qubits que `givenU` devem ser comparados.
     isOperation: true
     input:
       types:
@@ -47,9 +47,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: c3a98dee80b9e41ea3c27e1e52c3046751307912
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1c49d1e32852be40d94621da2a8c1fa53b6e666c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677281"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337523"

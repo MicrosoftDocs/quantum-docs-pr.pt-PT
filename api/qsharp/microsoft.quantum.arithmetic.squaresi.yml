@@ -2,18 +2,18 @@
 uid: microsoft.quantum.arithmetic.squaresi
 name: SquareSI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Quadrado assinado inteiro `xs` e armazenar `result`o resultado em , que deve ser zero inicialmente.
-remarks: A implementação depende da IntegerSquare.
+namespace: microsoft.quantum.arithmetic
+summary: A Praça assinou o inteiro `xs` e armazena o resultado em , que deve ser zero `result` inicialmente.
+remarks: A implementação baseia-se na IntegerSquare.
 syntax: 'operation SquareSI (xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.SignedLittleEndian, result : Microsoft.Quantum.Arithmetic.SignedLittleEndian)'
   types:
   - name: xs
-    summary: n-bit inteiro à quadrado (SignedLittleEndian)
+    summary: n-bit inteiro para quadrado (SignedLittleEndian)
     uid: microsoft.quantum.arithmetic.signedlittleendian
   - name: result
-    summary: Resultado de 2n-bit (SignedLittleEndian), deve{0}estar no estado $\ket $ inicialmente.
+    summary: Resultado de 2n-bit (SignedLittleEndian), deve estar no estado $\ket {0} $ inicialmente.
     uid: microsoft.quantum.arithmetic.signedlittleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e4a212094c38d370e2489b586ee8014131bef9dc
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee4e8a7ad27fdfb03f590f229a1c0e344a985ff6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676590"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352670"

@@ -2,20 +2,20 @@
 uid: microsoft.quantum.diagnostics.assertoperationsequalreferenced
 name: AssertOperationsEqualReferenced
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
+namespace: microsoft.quantum.diagnostics
 summary: >-
-  Tendo em conta duas operações, afirma que agem de forma idêntica para todos os Estados inputs.
+  Tendo em conta duas operações, afirma que agem de forma idêntica para todos os estados de entrada.
 
 
-  Esta afirmação é implementada usando o isomorfismo Choi-Jamiłkowski para reduzir a afirmação a uma de uma afirmação do Estado qubit em dois registos emaranhados.
+  Esta afirmação é implementada usando o isomorfismo Choi-Jamiłkowski para reduzir a afirmação a uma afirmação de estado qubit em dois registos emaranhados.
 
   Assim, esta operação necessita apenas de uma única chamada para cada operação que está a ser testada, mas requer o dobro dos qubits a serem atribuídos.
 
-  Esta afirmação pode ser usada para garantir, por exemplo, que uma versão otimizada de uma operação age de forma idêntica à sua implementação ingénua, ou que uma operação que atua numa série de inputs não quânticos concorda com casos conhecidos.
+  Esta afirmação pode ser usada para garantir, por exemplo, que uma versão otimizada de uma operação age de forma idêntica à sua implementação ingénua, ou que uma operação que atua numa série de entradas não quânticas concorda com casos conhecidos.
 remarks: >-
-  Esta operação requer que a operação que modele o comportamento esperado seja adjointável, de modo a que o inverso possa ser realizado apenas no registo-alvo.
+  Esta operação requer que a operação que modela o comportamento esperado seja adjacente, de modo a que o inverso possa ser realizado apenas no registo-alvo.
 
-  Formalmente, pode-se especificar uma operação de transposição, que relaxa esta exigência, mas a operação de transposição não é, em geral, fisicamente realizável para operações quânticas arbitrárias e, portanto, não está incluída aqui como opção.
+  Formalmente, pode especificar uma operação transposta, que relaxa este requisito, mas a operação de transposição não é fisicamente realizável para operações quânticas arbitrárias e, portanto, não está incluída aqui como uma opção.
 syntax: 'operation AssertOperationsEqualReferenced (nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj)) : Unit'
 input:
   content: '(nQubits : Int, actual : (Qubit[] => Unit), expected : (Qubit[] => Unit is Adj))'
@@ -56,9 +56,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 1d1711ee0c93aedca7731246cc8d12e813a7810b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2285a315056fac57bb025cf5a255a6381ea8af5e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82656658"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337625"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.preparation.quantumromqubitcount
 name: QuantumROMQubitCount
 type: function
-namespace: Microsoft.Quantum.Preparation
-summary: Devolve o número total de qubits que devem `QuantumROM`ser atribuídos à operação devolvida por .
+namespace: microsoft.quantum.preparation
+summary: Devolve o número total de qubits que devem ser atribuídos à operação devolvido por `QuantumROM` .
 syntax: 'function QuantumROMQubitCount (targetError : Double, nCoeffs : Int) : (Int, (Int, Int))'
 input:
   content: '(targetError : Double, nCoeffs : Int)'
@@ -13,7 +13,7 @@ input:
     isPrimitive: true
     uid: Double
   - name: nCoeffs
-    summary: Número de coeficientes `QuantumROM`especificados em .
+    summary: Número de coeficientes especificados em `QuantumROM` .
     isPrimitive: true
     uid: Int
 output:
@@ -23,7 +23,7 @@ output:
       ## <a name="first-parameter"></a>Primeiro parâmetro
 
 
-      `(x,(y,z))` Uma tuple `x = y + z` onde está o número total `y` de qubits atribuídos, `LittleEndian` é `z` o número de qubits para o registo, e é o Número de qubits de lixo.
+      Um tuple `(x,(y,z))` onde está o número total de `x = y + z` qubits atribuídos, `y` é o número de qubits para o `LittleEndian` registo, e é o número de `z` qubits de lixo.
     types:
     - isPrimitive: true
       uid: Int
@@ -33,9 +33,9 @@ output:
       - isPrimitive: true
         uid: Int
 metadata:
-  ms.openlocfilehash: 717de1097641dcbabf6441424e88d77b71e05738
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 897b91f985883ede77c3920c541bea53097d434c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685108"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331250"

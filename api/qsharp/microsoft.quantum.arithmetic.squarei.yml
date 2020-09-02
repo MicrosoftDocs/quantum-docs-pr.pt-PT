@@ -2,18 +2,18 @@
 uid: microsoft.quantum.arithmetic.squarei
 name: SquareI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Computa o quadrado do `xs` inteiro, `result`que deve ser zero inicialmente.
-remarks: Usa uma abordagem padrão de mudança e adição para calcular o quadrado. Poupa qubits $n-1$ em comparação com a solução para a frente que primeiro copia xs antes de aplicar um multiplicador regular e, em seguida, desfazer a operação de cópia.
+namespace: microsoft.quantum.arithmetic
+summary: Calcula o quadrado do inteiro `xs` em , que deve ser zero `result` inicialmente.
+remarks: Usa uma abordagem padrão de mudança e adição para calcular o quadrado. Poupa $n-1$ qubits em comparação com a solução straight-forward que primeiro copia xs antes de aplicar um multiplicador regular e, em seguida, desfazer a operação de cópia.
 syntax: 'operation SquareI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: $n número de bits de $bit para quadrado (LittleEndian)
+    summary: $n número de $-bit para quadrado (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: O resultado de $2n$-bit (LittleEndian),{0}deve estar no estado $\ket $$ inicialmente.
+    summary: Resultado de $2n$-bit (LittleEndian), deve estar no estado $\ket {0} $ inicialmente.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: eedc2536da0fd75712929af44f5167d3fc73add3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4b001663d1d4f863d0b597e31bec87c65871ebc1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676616"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352704"

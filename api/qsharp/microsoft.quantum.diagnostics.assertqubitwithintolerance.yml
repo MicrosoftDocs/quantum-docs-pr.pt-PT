@@ -2,15 +2,15 @@
 uid: microsoft.quantum.diagnostics.assertqubitwithintolerance
 name: AssertQubitWithinTolerance
 type: operation
-namespace: Microsoft.Quantum.Diagnostics
-summary: Afirma que o `q` qubit está no eigenstate esperado do operador Pauli Z até uma determinada tolerância.
-remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance>permite afirmar estados qubit arbitados em vez de apenas $Z eigenstates.
+namespace: microsoft.quantum.diagnostics
+summary: Afirma que o qubit `q` está no estado esperado do operador Pauli Z até uma certa tolerância.
+remarks: <xref:microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance> permite afirmar estados de qubit arbit arbit em vez de apenas $Z dólares.
 syntax: 'operation AssertQubitWithinTolerance (expected : Result, q : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : Result, q : Qubit, tolerance : Double)'
   types:
   - name: expected
-    summary: 'Em que estado o qubit `Zero` deve `One`estar em: ou .'
+    summary: 'Em que estado se espera que o qubit esteja: `Zero` ou `One` .'
     isPrimitive: true
     uid: Result
   - name: q
@@ -18,7 +18,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: tolerance
-    summary: Tolerância sobre a probabilidade de uma medição do qubit devolvendo o resultado esperado.
+    summary: Tolerância na probabilidade de uma medição do qubit devolvendo o resultado esperado.
     isPrimitive: true
     uid: Double
 output:
@@ -29,9 +29,9 @@ output:
 seeAlso:
 - assertqubitisinstatewithintolerance
 metadata:
-  ms.openlocfilehash: 2749c682128e7c67506c2291d7a9e6034998731d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e5212b307f6bf90b88194e6e4158f41a0febf059
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677237"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337404"

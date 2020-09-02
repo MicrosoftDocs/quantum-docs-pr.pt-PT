@@ -2,10 +2,10 @@
 uid: microsoft.quantum.machinelearning.defaulttrainingoptions
 name: DefaultTrainingOptions
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: Devolve um conjunto padrão de opções para classificadores de treino.
+namespace: microsoft.quantum.machinelearning
+summary: Devolve um conjunto predefinido de opções para classificadores de treino.
 examples: >-
-  Para utilizar as opções predefinidas, `w/` mas com medições adicionais, utilize o operador:
+  Para utilizar as opções predefinidos, mas com medições adicionais, utilize o `w/` operador:
 
 
   ```Q#
@@ -20,12 +20,12 @@ input:
 output:
   content: Microsoft.Quantum.MachineLearning.TrainingOptions
   types:
-  - summary: Um conjunto razoável de opções de treino padrão para uso quando os classificadores de treino.
+  - summary: Um conjunto razoável de opções de treino predefinidos para utilização quando os classificadores de treino.
     uid: microsoft.quantum.machinelearning.trainingoptions
 metadata:
-  ms.openlocfilehash: 87f056e336ca78881421e669b3d282af8e679353
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5f9882b1067851fc206e302310657f9bf64cea3f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685442"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344765"
