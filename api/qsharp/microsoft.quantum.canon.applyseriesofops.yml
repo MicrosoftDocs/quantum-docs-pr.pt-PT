@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.applyseriesofops
 name: ApplySeriesOfOps
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: Aplica uma lista de operações e seus alvos sequencialmente numa matriz.
+namespace: microsoft.quantum.canon
+summary: Aplica uma lista de operações e os seus alvos sequencialmente numa matriz.
 syntax: "operation ApplySeriesOfOps (listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[]) : Unit"
 input:
   content: "(listOfOps : ('T[] => Unit)[], targets : Int[][], register : 'T[])"
   types:
   - name: listOfOps
-    summary: Lista de operações, cada uma tomando uma matriz 'T, para ser aplicada. São aplicados sequencialmente, o índice mais baixo primeiro.
+    summary: Lista de ops, cada um tomando uma matriz 'T, a ser aplicado. São aplicados sequencialmente, o índice mais baixo primeiro.
     isArray: true
     isOperation: true
     input:
@@ -22,14 +22,14 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: targets
-    summary: Matrizes aninhadas descrevendo os alvos da operação. Cada matriz deve conter uma lista de ints que descrevem os índices a serem usados.
+    summary: Matrizes aninhadas descrevendo os alvos da operação. Cada matriz deve conter uma lista de ints descrevendo os índices a serem usados.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Int
   - name: register
-    summary: Registo qubit a ser agido.
+    summary: Registo qubit para ser agido.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -41,9 +41,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.applyoprepeatedlyover
 metadata:
-  ms.openlocfilehash: 62c4494fb60a69eb52eca2d3fa97b41eb9b7f020
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e998272cb0e34cd4d8e9b8b2af5bb528042a2d3b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82671154"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357804"

@@ -2,13 +2,13 @@
 uid: microsoft.quantum.canon.applytoeachc
 name: ApplyToEachC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma operação de qubit único a cada elemento num registo.
+  Aplica uma operação de um único qubit a cada elemento num registo.
 
-  O modificador `C` indica que a operação de qubit único é controlável.
+  O modificador `C` indica que a operação de um único qubit é controlável.
 examples: >-
-  Prepare um estado de três qubit $\ket{+}$:
+  Prepare um estado de três qubits $\ket{+}$ estado:
 
 
   ```qsharp
@@ -23,7 +23,7 @@ input:
   content: "(singleElementOperation : ('T => Unit is Ctl), register : 'T[])"
   types:
   - name: singleElementOperation
-    summary: Operação para aplicar a cada qubit.
+    summary: Operação a aplicar a cada qubit.
     isOperation: true
     input:
       types:
@@ -36,7 +36,7 @@ input:
     functors:
     - Controlled
   - name: register
-    summary: Conjunto de qubits sobre os quais aplicar a operação dada.
+    summary: Matriz de qubits para aplicar a operação dada.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -47,15 +47,15 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O alvo em que a operação age.
+  summary: O alvo no qual a operação atua.
 functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.applytoeach
 metadata:
-  ms.openlocfilehash: 66792660a304db918cbf158c969bd0a8896fbee7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2d8cc9ada97cbe1d6938148b2abfdd495c1a4ff9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674899"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357736"

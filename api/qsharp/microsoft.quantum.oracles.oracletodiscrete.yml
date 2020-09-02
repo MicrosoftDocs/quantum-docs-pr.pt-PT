@@ -2,15 +2,15 @@
 uid: microsoft.quantum.oracles.oracletodiscrete
 name: OracleToDiscrete
 type: function
-namespace: Microsoft.Quantum.Oracles
-summary: Dada uma operação que representa um oráculo "black-box", devolve um oráculo de tempo discreto que representa o oráculo "black-box" repetido várias vezes.
-examples: '`OracleToDiscrete(U)(3, target)`é equivalente `U(target)` a repetir três vezes.'
+namespace: microsoft.quantum.oracles
+summary: Dada uma operação que representa um oráculo "black-box", devolve um oráculo de tempo discreto que representa o oráculo "caixa preta" repetido várias vezes.
+examples: '`OracleToDiscrete(U)(3, target)` é equivalente a `U(target)` repetido três vezes.'
 syntax: 'function OracleToDiscrete (blackBoxOracle : (Qubit[] => Unit is Adj + Ctl)) : Microsoft.Quantum.Oracles.DiscreteOracle'
 input:
   content: '(blackBoxOracle : (Qubit[] => Unit is Adj + Ctl))'
   types:
   - name: blackBoxOracle
-    summary: A operação a ser exponenciada.
+    summary: A operação a ser exponencial.
     isOperation: true
     input:
       types:
@@ -27,12 +27,12 @@ input:
 output:
   content: Microsoft.Quantum.Oracles.DiscreteOracle
   types:
-  - summary: Uma operação parcialmente aplicada sobre o oráculo "black-box" que representa o oráculo de tempo discreto
+  - summary: Uma operação parcialmente aplicada sobre o oráculo "black-box" representando o oráculo de tempo discreto
     uid: microsoft.quantum.oracles.discreteoracle
 metadata:
-  ms.openlocfilehash: b7361693d14245fcb99be5fa36d20d2f332ded0a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b9cd2ae2554f070e79701c409ad24bc9314e002
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681219"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331930"
