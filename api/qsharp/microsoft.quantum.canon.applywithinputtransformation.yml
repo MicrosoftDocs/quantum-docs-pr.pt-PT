@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applywithinputtransformation
 name: ApplyWithInputTransformation
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: Dada uma operação que aceita alguma entrada, uma função que devolve uma saída compatível com essa operação, e uma entrada nessa função, aplica a operação utilizando a função para transformar a entrada numa forma esperada pela operação.
+namespace: microsoft.quantum.canon
+summary: Dada uma operação que aceita alguma entrada, uma função que devolve uma saída compatível com essa operação, e uma entrada para essa função, aplica a operação utilizando a função para transformar a entrada num formulário esperado pela operação.
 examples: >-
-  A chamada @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" seguinte utiliza-se @"Microsoft.Quantum.Arithmetic.BigEndian" para aplicar uma operação concebida @"Microsoft.Quantum.Arithmetic.LittleEndian"para entradas numa entrada de tipo:
+  A chamada a seguir @"Microsoft.Quantum.Arithmetic.LittleEndianAsBigEndian" utiliza-se para aplicar uma operação concebida para @"Microsoft.Quantum.Arithmetic.BigEndian" entradas numa entrada do @"Microsoft.Quantum.Arithmetic.LittleEndian" tipo:
 
 
   ```qsharp
@@ -18,7 +18,7 @@ input:
   content: "(fn : ('U -> 'T), op : ('T => Unit), input : 'U)"
   types:
   - name: fn
-    summary: Uma função que transforma a entrada dada numa forma esperada pela operação.
+    summary: Uma função que transforma a entrada dada num formulário esperado pela operação.
     isFunction: true
     input:
       types:
@@ -29,7 +29,7 @@ input:
       - uid: "'T"
         isLocal: true
   - name: op
-    summary: A operação a aplicar.
+    summary: A operação a ser aplicada.
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ seeAlso:
 - applywithinputtransformationca
 - transformedoperation
 metadata:
-  ms.openlocfilehash: 16a4fe250118c60a4ff6b206503baa1309b78bbd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4b01940550ac75b01044d94f2be037fed81be7bc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676285"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357158"

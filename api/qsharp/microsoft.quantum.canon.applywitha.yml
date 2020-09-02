@@ -2,19 +2,19 @@
 uid: microsoft.quantum.canon.applywitha
 name: ApplyWithA
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Dadas duas operações, aplica-se uma como conjugada com a outra.
+  Tendo em conta duas operações, aplica-se uma como conjugada com a outra.
 
 
   Tendo em conta duas operações, respectivamente descritas pelos operadores unitários $U$ e $V$, aplica-as na sequência $U^{\dagger} V U$. Ou seja, esta operação implementa o operador unitário dado por $V$ conjugado com $U$.
-remarks: A operação externa é sempre assumida como adjointável, mas não precisa de ser controlável para que a operação combinada seja controlável.
+remarks: Presume-se sempre que a operação exterior é contígua, mas não é necessário controlável para que a operação combinada seja controlável.
 syntax: "operation ApplyWithA (outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T) : Unit"
 input:
   content: "(outerOperation : ('T => Unit is Adj), innerOperation : ('T => Unit is Adj), target : 'T)"
   types:
   - name: outerOperation
-    summary: A operação $U$ que deve ser usada para conjugar $V$. Note que a operação externa $U$ precisa de ser adjointável, mas não precisa de ser controlável.
+    summary: A operação $U$ que deve ser usada para conjugar $V dólares. Note que a operação exterior $U$ tem de ser adjacente, mas não precisa de ser controlável.
     isOperation: true
     input:
       types:
@@ -27,7 +27,7 @@ input:
     functors:
     - Adjoint
   - name: innerOperation
-    summary: A operação $V$ a ser conjugado.
+    summary: A operação $V dólares a ser conjugada.
     isOperation: true
     input:
       types:
@@ -40,7 +40,7 @@ input:
     functors:
     - Adjoint
   - name: target
-    summary: A entrada a fornecer às operações exteriores e interiores.
+    summary: A entrada a fornecer às operações exteriores e internas.
     uid: "'T"
     isLocal: true
 output:
@@ -50,7 +50,7 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O alvo em que cada uma das operações internas e externas atua.
+  summary: O alvo em que cada uma das operações internas e exteriores atuam.
 functors:
 - Adjoint
 seeAlso:
@@ -58,9 +58,9 @@ seeAlso:
 - applywithc
 - applywithca
 metadata:
-  ms.openlocfilehash: 6852c035d778bd29da74008f13be13dff78138c0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 56776a0211977993f8d56b96db3c1cc5fd80d49d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674491"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357209"

@@ -2,15 +2,15 @@
 uid: microsoft.quantum.amplitudeamplification.applyobliviousamplitudeamplification
 name: ApplyObliviousAmplitudeAmplification
 type: operation
-namespace: Microsoft.Quantum.AmplitudeAmplification
+namespace: microsoft.quantum.amplitudeamplification
 summary: Amplificação de amplitude alheia especificando reflexos parciais.
 remarks: >-
-  Dado um determinado início auxiliar estado $\ket{\text{start}}\_a$, um estado-alvo auxiliar\_particular $\ket{\text{target}} a$,\_e qualquer estado de sistema $\ket{\psi}\_s$, suponha que \begin{align}\_O\ket{\text{start}} a\ket{\psi} s= \lambda\ket{{target}}\_a U \ket{\psi}\_s + \sqrt{1-\\lambda\^2}\ket{{{target}\\perp}\_a\cdots \end{align} para algumas $U
+  Dado um determinado estado de início auxiliar $\ket{\text{start}} \_ a$, um estado-alvo auxiliar específico $\ket{\text{target}} \_ a$, e qualquer estado do sistema $\ket{\psi} \_ s$, suponhamos que \begin{align} O\ket{\text{start}} \_ a\ket{\psi} \_ s= \lambda\ket{\text{target}} \_ a U\ket{\psi} \_ s + \sqrt{1-\lambda/^2}\ket{\text{target}\\perp} \_ a\cdots \end{} para alguns $U
 
-  Por uma sequência de reflexões sobre os estados de início e `signalOracle` alvo no registo auxiliar intercalada por aplicações e sua adjoint, a probabilidade de sucesso de aplicar U pode ser alterada.
+  Através de uma sequência de reflexões sobre os estados de início e alvo no registo auxiliar intercalado por aplicações de `signalOracle` e seus adjacentes, a probabilidade de sucesso da aplicação de U pode ser alterada.
 
 
-  Na maioria `auxiliaryRegister` dos casos, é inicializado no estado $\ket{\text{start}}\_a$.
+  Na maioria dos casos, `auxiliaryRegister` é inicializado no estado $\ket{\text{start}} \_ a$.
 syntax: 'operation ApplyObliviousAmplitudeAmplification (phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[]) : Unit'
 references: >-
   Consulte
@@ -18,7 +18,7 @@ references: >-
 
   - [ *D.W. Berry, A.M. Childs, R. Cleve, R. Kothari, R.D. Somma* ](https://arxiv.org/abs/1312.1414) para a versão padrão.
     Consulte
-  - [ *G.H. Low, I.L. Chuang* ](https://arxiv.org/abs/1610.06546) para uma generalização a reflexos parciais.
+  - [ *G.H. Low, I.L. Chuang* ](https://arxiv.org/abs/1610.06546) para uma generalização a reflexões parciais.
 input:
   content: '(phases : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases, startStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, targetStateReflection : Microsoft.Quantum.Oracles.ReflectionOracle, signalOracle : Microsoft.Quantum.Oracles.ObliviousOracle, auxiliaryRegister : Qubit[], systemRegister : Qubit[])'
   types:
@@ -26,13 +26,13 @@ input:
     summary: Fases de reflexões parciais
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
   - name: startStateReflection
-    summary: Operador de reflexão sobre o estado de início do registo auxiliar
+    summary: Operador de reflexão sobre o estado inicial do registo auxiliar
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: targetStateReflection
-    summary: Operador de reflexão sobre o estado-alvo do registo auxiliar
+    summary: Operador de reflexão sobre estado-alvo do registo auxiliar
     uid: microsoft.quantum.oracles.reflectionoracle
   - name: signalOracle
-    summary: Oorá unitário `ObliviousOracle` $O$ do tipo que atua conjuntamente nos registos auxiliares e do sistema.
+    summary: Oráculo unitário $O de$ de tipo `ObliviousOracle` que atua conjuntamente nos registos auxiliares e do sistema.
     uid: microsoft.quantum.oracles.obliviousoracle
   - name: auxiliaryRegister
     summary: Registo auxiliar
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 7452686a76d9ff89c0eb79290e7dae23347778ac
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 21bdb88716a07c32673425fd4f5276559b56d266
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672952"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340532"

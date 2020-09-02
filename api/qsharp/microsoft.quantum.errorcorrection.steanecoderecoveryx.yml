@@ -2,11 +2,11 @@
 uid: microsoft.quantum.errorcorrection.steanecoderecoveryx
 name: SteaneCodeRecoveryX
 type: function
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Descodificador para a parte X do grupo estabilizador do código quântico de 7, 1, 30 000.
-remarks: O descodificador escolhido utiliza a propriedade do código CSS do código 7, 1, 300, ou seja, corrige erros X e Erros Z separadamente. Uma propriedade do código é que a localização do X, respectivamente, a correção de Z a aplicar é a codificação de 3 bits do X, respectivamente, a síndrome de Z quando considerada uma inteiro.
+namespace: microsoft.quantum.errorcorrection
+summary: Descodificador para a parte X do grupo estabilizador do código quântico ⟦ 1, 3⟧ Steane.
+remarks: O descodificador escolhido utiliza a propriedade de código CSS do código ⟦7, 1, 3⟧ código Steane, ou seja, corrige erros X e Z separadamente. Uma propriedade do código é que a localização do X, respectivamente, a correção Z a aplicar é a codificação de 3 bits do X, respectivamente, síndrome de Z quando considerada um inteiro.
 syntax: 'function SteaneCodeRecoveryX (syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome) : Pauli[]'
-references: '- D. Gottesman, "Códigos Estabilizadores e Correção de Erros Quânticos", Ph.D. Tese, Caltech, 1997;https://arxiv.org/abs/quant-ph/9705052'
+references: '- D. Gottesman, "Códigos estabilizadores e Correção de Erros Quânticos", Tese de Doutoramento, Caltech, 1997; https://arxiv.org/abs/quant-ph/9705052'
 input:
   content: '(syndrome : Microsoft.Quantum.ErrorCorrection.Syndrome)'
   types:
@@ -16,7 +16,7 @@ input:
 output:
   content: Pauli[]
   types:
-  - summary: Um conjunto de operações pauli que, quando aplicadas ao sistema `syndrome`quântico codificado corrige o erro correspondente a .
+  - summary: Um conjunto de operações de Pauli que, quando aplicadas ao sistema quântico codificado, corrige o erro correspondente a `syndrome` .
     isArray: true
     isPrimitive: true
     uid: Pauli
@@ -24,9 +24,9 @@ seeAlso:
 - steanecoderecoveryx
 - steanecoderecoveryfns
 metadata:
-  ms.openlocfilehash: 7b644842eb7ddfe9d44d5288ee5e34e097c00f7b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 90b748d2652791e85ad8e8559ece91baca2c4ffc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682977"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349763"

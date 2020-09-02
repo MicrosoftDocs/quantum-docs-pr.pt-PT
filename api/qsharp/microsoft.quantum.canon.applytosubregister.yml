@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.applytosubregister
 name: ApplyToSubregister
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: Aplica uma operação a um subregisto de um registo, com qubits especificados por uma série de índices.
+namespace: microsoft.quantum.canon
+summary: Aplica uma operação a um subregister de um registo, com qubits especificados por um conjunto dos seus índices.
 examples: >-
-  Crie três estado{1}qubit $\frac{2}{\sqrt{0}\_}\ket{0}{1}\_{0}\_2 (\ket 1\ket _3+\ket 1\ket{1}_3)$:
+  Criar três qubit state $\frac {1} {\sqrt {2} }\ket {0} \_ 2(\ket {0} \_ 1\ket {0} _3+\ket {1} \_ 1\ket {1} _3)$:
 
 
   ```qsharp
@@ -18,7 +18,7 @@ input:
   content: '(op : (Qubit[] => Unit), idxs : Int[], target : Qubit[])'
   types:
   - name: op
-    summary: Operação a aplicar ao subregisto.
+    summary: Operação a aplicar ao subrecípida.
     isOperation: true
     input:
       types:
@@ -30,12 +30,12 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: idxs
-    summary: Conjunto de índices, indicando a que qubits a operação será aplicada.
+    summary: Matriz de índices, indicando a que qubits será aplicada a operação.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: target
-    summary: Registe-se em que funciona a operação.
+    summary: Registe-se no qual a operação atua.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -49,9 +49,9 @@ seeAlso:
 - applytosubregisterc
 - applytosubregisterca
 metadata:
-  ms.openlocfilehash: 89c488fd593e6f81a1c811e0b507a69a9f891be9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00e62624cf1bfc9460316a03c02770fb585df3ba
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674573"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357294"
