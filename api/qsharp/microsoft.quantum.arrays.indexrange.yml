@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.indexrange
 name: IndexRange
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: Dada uma matriz, devolve uma gama sobre os índices dessa matriz, adequada para ser usada num loop.
+namespace: microsoft.quantum.arrays
+summary: Dada uma matriz, devolve um intervalo sobre os índices dessa matriz, adequado para ser utilizado em loop.
 examples: >-
   Os `for` seguintes ciclos são equivalentes:
 
@@ -20,23 +20,23 @@ input:
   content: "(array : 'TElement[])"
   types:
   - name: array
-    summary: Uma matriz para a qual uma série de índices deve ser devolvido.
+    summary: Uma matriz para a qual uma série de índices deve ser devolvida.
     isArray: true
     uid: "'TElement"
     isLocal: true
 output:
   content: Range
   types:
-  - summary: Um intervalo sobre todos os índices da matriz.
+  - summary: Um alcance sobre todos os índices da matriz.
     isPrimitive: true
     uid: Range
 typeParameters:
 - uid: "'TElement"
   summary: O tipo de elementos da matriz.
 metadata:
-  ms.openlocfilehash: 6c3135e07c65ddf6b7c61a4b9f412f5156e48e73
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88b827a5fb9b0dcdaceb6392b14cce98bdd281f5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672777"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352092"

@@ -2,18 +2,18 @@
 uid: microsoft.quantum.math.expmodl
 name: ExpModL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  Devolve um inteiro elevado a um determinado poder, no que diz respeito a um determinado modulo.
+  Devolve um inteiro elevado a um dado poder, no que diz respeito a um dado módulo.
 
 
-  Denotemos expBase por $x$, potência $p$ e modulo por $N$.
+  Vamos denotar expBase em $x$, poder de $p$ e modulus por $N$.
 
-  A função devolve $x^p \nome de operador{mod} N$.
+  A função devolve $x^p \operatorname{mod} N$.
 
 
-  Assumimos que $N$, $x$ são positivos e o poder não é negativo.
-remarks: Leva tempo proporcional ao número `power`de bits dentro , não o `power` próprio.
+  Assumimos que $N dólares, $x dólares são positivos e o poder não é negativo.
+remarks: Leva tempo proporcional ao número de bits `power` dentro , não o `power` próprio.
 syntax: 'function ExpModL (expBase : BigInt, power : BigInt, modulus : BigInt) : BigInt'
 input:
   content: '(expBase : BigInt, power : BigInt, modulus : BigInt)'
@@ -33,9 +33,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: f694fa792e8aee5846ce6ec2393287eb64aca44d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f5f7d5c4a51055583f3c5fd04315af8ee0dfc0c4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673876"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344136"

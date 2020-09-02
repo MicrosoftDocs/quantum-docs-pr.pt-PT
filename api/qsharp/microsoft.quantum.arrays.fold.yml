@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.fold
 name: Fold
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: Iterates uma `f` função `array`através `f(f(f(initialState, array[0]), array[1]), ...)`de uma matriz, retornando .
+namespace: microsoft.quantum.arrays
+summary: Iterates uma função `f` através de uma `array` matriz, retornando `f(f(f(initialState, array[0]), array[1]), ...)` .
 examples: >-
   ```qsharp
 
@@ -21,7 +21,7 @@ input:
   content: "(folder : (('State, 'T) -> 'State), state : 'State, array : 'T[])"
   types:
   - name: folder
-    summary: Uma função a dobrar sobre a matriz.
+    summary: Uma função a ser dobrada sobre a matriz.
     isFunction: true
     input:
       types:
@@ -38,25 +38,25 @@ input:
     uid: "'State"
     isLocal: true
   - name: array
-    summary: Uma série de valores a dobrar.
+    summary: Uma variedade de valores a dobrar.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'State"
   types:
-  - summary: O estado final devolvido pela pasta depois de `array`iterar sobre todos os elementos de .
+  - summary: O estado final devolvido pela pasta depois de iterar sobre todos os elementos de `array` .
     uid: "'State"
     isLocal: true
 typeParameters:
 - uid: "'State"
-  summary: O tipo de `folder` estados em que a função funciona, ou seja, aceita como primeiro argumento e devoluções.
+  summary: O tipo de estados em que a `folder` função funciona, ou seja, aceita como primeiro argumento e regressa.
 - uid: "'T"
-  summary: O tipo `array` de elementos.
+  summary: O tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: d02d20c049e8b8d21214028efcd6a647067bf71f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 584344137b498a9c5348cb1f0a0cb85aeec127bd
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676451"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352313"

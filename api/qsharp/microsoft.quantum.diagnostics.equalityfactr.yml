@@ -2,8 +2,8 @@
 uid: microsoft.quantum.diagnostics.equalityfactr
 name: EqualityFactR
 type: function
-namespace: Microsoft.Quantum.Diagnostics
-summary: Afirma que uma variável clássica de Resultado tem o valor esperado.
+namespace: microsoft.quantum.diagnostics
+summary: Afirma que uma variável de Resultado clássico tem o valor esperado.
 syntax: 'function EqualityFactR (actual : Result, expected : Result, message : String) : Unit'
 input:
   content: '(actual : Result, expected : Result, message : String)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Result
   - name: message
-    summary: Cadeia de mensagens de falha a utilizar quando a afirmação é desencadeada.
+    summary: Cadeia de mensagem de falha a ser utilizada quando a afirmação é desencadeada.
     isPrimitive: true
     uid: String
 output:
@@ -26,9 +26,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 8adab24fb2c4161bbb8e23c77923fda09220641d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5b42d88cc17c2baaa7825d1edc815caa21c25ec3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677153"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337030"

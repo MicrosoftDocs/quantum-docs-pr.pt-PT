@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.padded
 name: Padded
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Devolve uma matriz acolchoada com valores especificados até um comprimento especificado.
 examples: >-
   ```qsharp
@@ -23,7 +23,7 @@ input:
   content: "(nElementsTotal : Int, defaultElement : 'T, inputArray : 'T[])"
   types:
   - name: nElementsTotal
-    summary: O comprimento da matriz acolchoada. Se isto for `inputArray` positivo, é acolchoado na cabeça. Se isto for `inputArray` negativo, é acolchoado na cauda.
+    summary: O comprimento da matriz acolchoada. Se isto for positivo, `inputArray` é acolchoado na cabeça. Se isto for negativo, `inputArray` é acolchoado na cauda.
     isPrimitive: true
     uid: Int
   - name: defaultElement
@@ -38,7 +38,7 @@ input:
 output:
   content: "'T[]"
   types:
-  - summary: Uma `output` matriz `inputArray` que é acolchoada na cabeça com `defaultElement`s até `output` ter comprimento`nElementsTotal`
+  - summary: Uma matriz `output` que é o `inputArray` acolchoado na cabeça com `defaultElement` s até ter `output` comprimento `nElementsTotal`
     isArray: true
     uid: "'T"
     isLocal: true
@@ -46,9 +46,9 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: 6fafc015026ca9b369e23fda702af172867444ca
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 37b2f4bae9b5f055762ac1d84fef30d13f35a741
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680898"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351922"
