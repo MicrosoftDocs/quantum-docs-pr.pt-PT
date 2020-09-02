@@ -2,9 +2,9 @@
 uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
 name: SingleQubitProcessTomographyMeasurement
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Efetua uma medição de tomografia de processo de um único qubit na base pauli, dado um determinado canal de interesse.
-remarks: A distribuição sobre os resultados devolvidos por esta operação é um caso especial de tomografia do estado de dois qubits. Deixe $\rho = J(\Lambda) / 2$ seja o estado Choi-Jamiłkowski por $\Lambda$. Em seguida, a distribuição acima é idêntica a $$ \begin{align} \Pr(\texttt{Zero} \ rho; M) = \nome de operador{Tr}(M \rho), \end{align} $$ onde $M = 2 (\boldone + P)^\mathrm{T} / 2 \cdot (\boldone + Q) / 2$ é a medida efetiva correspondente a $P$ e $Q$.
+namespace: microsoft.quantum.characterization
+summary: Realiza uma medição de tomografia de processo de um único qubit na base Pauli, dado um determinado canal de interesse.
+remarks: A distribuição sobre os resultados devolvidos por esta operação é um caso especial de tomografia estatal de dois qubits. Let $\rho = J(\Lambda) / 2$ seja o estado Choi-Jamiłkowski por $\Lambda$. Em seguida, a distribuição acima é idêntica a $$ \start{align} \Pr (\texttt{Zero} / \rho; M) = \operatorname{Tr}(M\rho), \end{align} $$ where $M = 2 (\boldone + P)^\mathrm{T} / 2 \cdot (\boldone + Q) / 2$ é a medida eficaz correspondente a $P$ e $Q$.
 syntax: 'operation SingleQubitProcessTomographyMeasurement (preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit)) : Result'
 input:
   content: '(preparation : Pauli, measurement : Pauli, channel : (Qubit => Unit))'
@@ -32,15 +32,15 @@ output:
   content: Result
   types:
   - summary: >-
-      O `Zero` Resultado com probabilidade $$ \begin{align} \Pr(\texttt{Zero} [ \Lambda; P, Q) = \nome de operador{Tr}\left( \frac{\boldone + Q}{2} \Lambda\left[ \frac{\boldone + P}{2} \right] \right).
+      O Resultado `Zero` com probabilidade $$ \begin{align} \Pr (\texttt{Zero} / \Lambda; P, Q) = \operatorname{Tr}\left\ frac{\boldone + Q} {2} \Lambda\left[ \frac{\boldone + P} {2} \direita).
 
       \end{align} $$
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: f554910a414666c6d61a96932a932b9320426360
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 030ca1ba45df6ea1fc37b994c30bd4f862a6b923
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677590"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354251"

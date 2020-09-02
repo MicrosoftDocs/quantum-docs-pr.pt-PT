@@ -2,22 +2,22 @@
 uid: microsoft.quantum.arithmetic.addfxp
 name: AddFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  Adiciona dois números fixos armazenados em registos quânticos.
+  Adiciona dois números de ponto fixo armazenados em registos quânticos.
 
 
-  Tendo em conta dois registos fixos, respectivamente nos estados $\ket{f_1}$ e $\ket{f_2}$, realiza a operação $\ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2}$.
-remarks: A implementação atual requer que os dois números fixos tenham a mesma posição de ponto contando com a parte menos significativa, ou seja, $n_i$ e $p_i$ devem ser iguais.
+  Tendo em conta dois registos de ponto fixo, respectivamente nos estados $\ket{f_1}$ e $\ket{f_2},, executa a operação $\ket{f_1} \ket{f_2} \mapsto \ket{f_1} \ket{f_1 + f_2}$.
+remarks: A implementação atual requer que os dois números de ponto fixo tenham a mesma posição de ponto contando a partir da parte menos significativa, ou seja, $n_i$ e $p_i$ devem ser iguais.
 syntax: 'operation AddFxP (fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint) : Unit'
 input:
   content: '(fp1 : Microsoft.Quantum.Arithmetic.FixedPoint, fp2 : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: fp1
-    summary: Primeiro número fixo
+    summary: Primeiro número de ponto fixo
     uid: microsoft.quantum.arithmetic.fixedpoint
   - name: fp2
-    summary: Segundo número fixo, será atualizado para conter a soma das duas inputs.
+    summary: O segundo número de ponto fixo será atualizado para conter a soma das duas entradas.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 75b6e15299b6e0394af8cb530ee7bc66dc07c336
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0f900cd3b7c6552064ec5a52a6d932ff106db0d0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672906"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341773"
