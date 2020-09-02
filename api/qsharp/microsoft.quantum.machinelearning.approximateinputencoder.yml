@@ -2,30 +2,30 @@
 uid: microsoft.quantum.machinelearning.approximateinputencoder
 name: ApproximateInputEncoder
 type: function
-namespace: Microsoft.Quantum.MachineLearning
-summary: Dado um conjunto de coeficientes e tolerância, devolve uma operação de preparação estatal que prepara cada coeficiente como a amplitude correspondente de um estado de base computacional, até à tolerância dada.
+namespace: microsoft.quantum.machinelearning
+summary: Dado um conjunto de coeficientes e uma tolerância, devolve uma operação de preparação do Estado que prepara cada coeficiente como a correspondente amplitude de um estado de base computacional, até à tolerância dada.
 syntax: 'function ApproximateInputEncoder (tolerance : Double, coefficients : Double[]) : Microsoft.Quantum.MachineLearning.StateGenerator'
 input:
   content: '(tolerance : Double, coefficients : Double[])'
   types:
   - name: tolerance
-    summary: A tolerância de aproximação a ser usada na codificação dos coeficientes em um estado de entrada.
+    summary: A tolerância de aproximação a ser utilizada na codificação dos coeficientes dados num estado de entrada.
     isPrimitive: true
     uid: Double
   - name: coefficients
-    summary: Os coeficientes a codificar num estado de entrada.
+    summary: Os coeficientes devem ser codificados num estado de entrada.
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Microsoft.Quantum.MachineLearning.StateGenerator
   types:
-  - summary: Uma operação de preparação estatal que prepara os coeficientes como um estado de entrada num determinado registo.
+  - summary: Uma operação de preparação do Estado que prepara os coeficientes dados como um estado de entrada num dado registo.
     uid: microsoft.quantum.machinelearning.stategenerator
 metadata:
-  ms.openlocfilehash: 1fa74b1e3af1e82e5558a45b8ed3e9d2862a3bef
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5fa25ec584d3a2103559afb25d7673606c8055f1
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681712"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345003"

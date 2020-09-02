@@ -2,13 +2,13 @@
 uid: microsoft.quantum.arithmetic.ripplecarryaddernocarryttk
 name: RippleCarryAdderNoCarryTTK
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  Reversível, no lugar, a adição de dois inteiros sem realizar.
+  Adição reversível e ondulante de dois inteiros sem realização.
 
 
-  Tendo em conta dois $n inteiros codificados nos `xs` registos `ys`littleEndian e, a operação calcula a soma dos dois inteiros modulo $2^n$, `xs` onde `ys`$n$ é o tamanho bit das inputs e . Não calcula a parte da execução.
-remarks: Esta operação tem a mesma funcionalidade que o RippleCarryAdderTTK, mas não devolve a parte de transporte.
+  Tendo em conta dois inteiros $n de $-bit codificados nos registos de LittleEndian `xs` `ys` e, a operação calcula a soma dos dois inteiros modulo $2^n$, onde $n$ é o tamanho bit das entradas `xs` e `ys` . Não calcula a parte da execução.
+remarks: Esta operação tem a mesma funcionalidade que a RippleCarryAdderTTK, mas não devolve a broca de transporte.
 syntax: 'operation RippleCarryAdderNoCarryTTK (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 references: >-
   - Yasuhiro Takahashi, Seiichiro Tani, Noboru Kunihiro: "Quantum Addition Circuits and Unbounded Fan-Out", Quantum Information and Computation, Vol. 10, 2010.
@@ -17,10 +17,10 @@ input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: Registo qubit littleEndian codificando a primeira soma inteiro.
+    summary: Registo de qubit littleEndian codificando o primeiro resumo inteiro.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: O registo de qubit sucadiviado da LittleEndian, codificando a segunda soma de inteiro, é modificado para manter os $n$ menos significativos da soma.
+    summary: O registo de qubits LittleEndian codificando o segundo resumo inteiro, é modificado para manter o $n$ menos significativo da soma.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -31,9 +31,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: cf6855325edc354d22b0324f5949a435a11ce8bb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 88ebe0e7799d446d4a3ff668a9abe8dd71601642
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676685"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352806"

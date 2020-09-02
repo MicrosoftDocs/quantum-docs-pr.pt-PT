@@ -2,9 +2,9 @@
 uid: microsoft.quantum.core.rangereverse
 name: RangeReverse
 type: function
-namespace: Microsoft.Quantum.Core
+namespace: microsoft.quantum.core
 summary: Devolve uma nova gama que é o inverso da gama de entrada.
-remarks: Note que o inverso de `end`uma gama não é simplesmente .. `-step`.. `start`, porque o último elemento de uma gama `end`pode não ser o mesmo que .
+remarks: Note que o inverso de uma gama não é simplesmente `end` `-step` ... . , porque o último elemento real de uma gama pode não ser o mesmo que . . . . . `start` . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . `end`
 syntax: 'function RangeReverse (r : Range) : Range'
 input:
   content: '(r : Range)'
@@ -20,9 +20,9 @@ output:
     isPrimitive: true
     uid: Range
 metadata:
-  ms.openlocfilehash: d6fbf120ecb9bff176857cf8d3c48d6f08da0bde
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 23af67d6107d954c40cacd16af81eb6d3acc61f2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657374"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337965"
