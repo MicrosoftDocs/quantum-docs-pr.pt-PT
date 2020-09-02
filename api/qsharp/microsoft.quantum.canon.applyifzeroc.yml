@@ -2,20 +2,20 @@
 uid: microsoft.quantum.canon.applyifzeroc
 name: ApplyIfZeroC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma operação controlável condicionada com um valor de resultado clássico nulo.
+  Aplica uma operação controlável condicionada a um valor de resultado clássico sendo zero.
 
 
-  Dada `op` uma operação `result`e um `op` valor `target` `result` de `Zero`resultado, aplica-se ao "se" é . Se, `One`nada acontece `target`com o.
+  Dada a operação `op` e o valor do `result` resultado, aplica-se `op` ao se é `target` `result` `Zero` . Se, `One` nada acontecer ao `target` .
 
-  O sufixo `C` indica que a operação a aplicar é controlável.
+  O `C` sufixo indica que a operação a aplicar é controlável.
 syntax: "operation ApplyIfZeroC (result : Result, (op : ('T => Unit is Ctl), target : 'T)) : Unit"
 input:
   content: "(result : Result, (op : ('T => Unit is Ctl), target : 'T))"
   types:
   - name: result
-    summary: Um resultado de medição que controla se a op é aplicada ou não.
+    summary: Um resultado de medição que controla se a operação é aplicada ou não.
     isPrimitive: true
     uid: Result
   - name: op
@@ -32,7 +32,7 @@ input:
     functors:
     - Controlled
   - name: target
-    summary: A entrada a que a operação é aplicada.
+    summary: A entrada à qual a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -50,9 +50,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifzeroa
 - microsoft.quantum.canon.applyifzeroca
 metadata:
-  ms.openlocfilehash: 12484848b3208dcb0a52e1f2084bbc3a5f4ec359
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e7963a6055306d00d6e7ec2d18f805f6e0fb3e11
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672605"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89358144"

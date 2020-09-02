@@ -2,19 +2,19 @@
 uid: microsoft.quantum.math.extendedgreatestcommondivisorl
 name: ExtendedGreatestCommonDivisorL
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Computa um tuple $(u,v)$ de tal forma que $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, onde o nome de operador de $\{GCD}$ é $a$ maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
+namespace: microsoft.quantum.math
+summary: Computa um tuple $(u,v)$ tal que $u \cdot a + v \cdot b = \operatorname{GCD}(a, b)$, onde $\operatorname{GCD}$ é $a$ maior divisor comum de $a$ e $b$. O GCD é sempre positivo.
 syntax: 'function ExtendedGreatestCommonDivisorL (a : BigInt, b : BigInt) : (BigInt, BigInt)'
-references: '- Esta implementação é de acordo comhttps://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
+references: '- Esta implementação é de acordo com https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm'
 input:
   content: '(a : BigInt, b : BigInt)'
   types:
   - name: a
-    summary: o primeiro número dos quais o maior divisor comum estendido está a ser calculado
+    summary: o primeiro número do qual o divisor mais alargado está a ser calculado
     isPrimitive: true
     uid: BigInt
   - name: b
-    summary: o segundo número dos quais o maior divisor comum estendido está a ser calculado
+    summary: o segundo número do qual o divisor mais alargado está a ser calculado
     isPrimitive: true
     uid: BigInt
 output:
@@ -27,9 +27,9 @@ output:
     - isPrimitive: true
       uid: BigInt
 metadata:
-  ms.openlocfilehash: ade2f3451a273b69bcabaeae06ef7b234816291b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe9049c6d886b7920706ba92b4e2a19bc33d5d8d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673841"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344102"

@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.applyifc
 name: ApplyIfC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma operação controlável condicionada numa parte clássica.
+  Aplica uma operação controlável condicionada a uma parte clássica.
 
 
-  Dada `op` uma operação `bit`e um `op` pouco `target` `bit` de `true`valor, aplica-se ao "se" é . Se, `false`nada acontece `target`com o.
+  Dada uma operação `op` e um pouco de `bit` valor, aplica-se `op` ao se é `target` `bit` `true` . Se, `false` nada acontecer ao `target` .
 
-  O sufixo `C` indica que a operação a aplicar é controlável.
+  O `C` sufixo indica que a operação a aplicar é controlável.
 examples: >-
-  O seguinte prepara um registo de qubits num estado de base computacional `Bool` representado por uma cadeia de bits clássica dada como uma variedade de valores:
+  O seguinte prepara um registo de qubits num estado de base computacional representado por uma corda clássica dada como uma matriz de `Bool` valores:
 
 
   ```Q#
@@ -43,11 +43,11 @@ input:
     functors:
     - Controlled
   - name: bit
-    summary: uma booleanque controla se a op é aplicada ou não.
+    summary: um booleano que controla se a operação é aplicada ou não.
     isPrimitive: true
     uid: Bool
   - name: target
-    summary: A entrada a que a operação é aplicada.
+    summary: A entrada à qual a operação é aplicada.
     uid: "'T"
     isLocal: true
 output:
@@ -65,9 +65,9 @@ seeAlso:
 - microsoft.quantum.canon.applyifa
 - microsoft.quantum.canon.applyifca
 metadata:
-  ms.openlocfilehash: a41eea8aafeabd5bda6bcc55b958598e58f52184
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0c4a650eabe75c3ab62556daf19647e63c1a2b46
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680498"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350528"

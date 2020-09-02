@@ -2,24 +2,24 @@
 uid: microsoft.quantum.oracles.deterministicstateoracle
 name: DeterministicStateOracle
 type: newtype
-namespace: Microsoft.Quantum.Oracles
+namespace: microsoft.quantum.oracles
 summary: >-
-  Representa um oráculo para a preparação do Estado determinístico.
+  Representa um oráculo para a preparação determinística do Estado.
 
 
   A entrada para o oráculo $O$ é:
 
 
-  - O registo que armazenará o estado quântico desejado\_$\ket{\psi} s$.
+  - O registo que irá armazenar o estado quântico desejado $\ket{\psi} \_ s$.
 remarks: >-
-  Este oráculo{0}definido por $O\ket =\ket {\psi}$ atua{0}na base computacional $\ket $ para criar o estado $\ket{\psi}$.
+  Este oráculo definido por $O\ket {0} =\ket{\psi}$ atua na base computacional estado $\ket {0} $ para criar o estado $\ket{\psi}$.
 
   O primeiro parâmetro é o registo qubit de $\ket{\psi}$.
 syntax: newtype DeterministicStateOracle = (Qubit[] => Unit is Adj + Ctl);
 metadata:
-  ms.openlocfilehash: 35d4b0243fac954c483a81ae1cccb46b44759ca0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 49a8342a6e8a0fcae7a7cdae05967187c98ec34c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681298"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332100"

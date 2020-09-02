@@ -2,15 +2,15 @@
 uid: microsoft.quantum.canon.applypaulifrombitstring
 name: ApplyPauliFromBitString
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Aplica um operador Pauli em cada qubit numa matriz se a parte correspondente de uma matriz Boolean corresponder a uma determinada entrada.
-remarks: A matriz booleana e o registo quântico devem ter igual comprimento.
+remarks: A matriz booleana e o registo quântico devem ter o mesmo comprimento.
 syntax: 'operation ApplyPauliFromBitString (pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[]) : Unit'
 input:
   content: '(pauli : Pauli, bitApply : Bool, bits : Bool[], qubits : Qubit[])'
   types:
   - name: pauli
-    summary: Operador Pauli para `qubits[idx]` se candidatar a onde`bitsApply == bits[idx]`
+    summary: Operador Pauli para aplicar a `qubits[idx]` onde `bitsApply == bits[idx]`
     isPrimitive: true
     uid: Pauli
   - name: bitApply
@@ -18,12 +18,12 @@ input:
     isPrimitive: true
     uid: Bool
   - name: bits
-    summary: Registo booleano especificando em `qubits` que qubit correspondente deve ser operado em
+    summary: Registo booleano especificando qual o qubit correspondente `qubits` em deve ser operado em
     isArray: true
     isPrimitive: true
     uid: Bool
   - name: qubits
-    summary: Registo quântico no qual aplicar seletivamente o operador Pauli especificado
+    summary: Registo quântico no qual aplicar seletivamente o operador pauli especificado
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -36,9 +36,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 5a65ec2aae17a1469e820e8cd14a0d50d0639015
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7efea4ea34ee1ae68695aa74142ebf6bce93d289
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672433"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357974"

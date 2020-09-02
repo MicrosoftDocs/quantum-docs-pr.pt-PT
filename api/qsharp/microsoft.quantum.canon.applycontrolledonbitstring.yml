@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.applycontrolledonbitstring
 name: ApplyControlledOnBitString
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Aplica uma operação unitária no registo-alvo, controlada num estado especificado por uma determinada máscara de bit.
 remarks: >-
   O padrão dado pode `bits` ser mais curto do `controlRegister` que, caso em que os qubits de controlo adicionais são ignorados (isto é, nem controlados em $\ket {0} $ nem $\ket {1} $).
@@ -52,9 +52,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: cb0aaffb9710f98a3ed22d7a7c97828b05f6ae2c
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: c7cb4d26d54091398fab19b029bc7e1d6c4affd9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85887276"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350749"

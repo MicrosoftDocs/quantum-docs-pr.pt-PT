@@ -2,19 +2,19 @@
 uid: microsoft.quantum.canon.applyfermionicswap
 name: ApplyFermionicSWAP
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica a TROCA Fermiónica.
+  Aplica o Permuta Fermionic.
 
 
-  Isto essencialmente troca os qubits ao aplicar uma fase global de -1 se ambos os qubits forem 1s. Preserva a anti-sinetrição dos orbitais.
+  Isto essencialmente troca os qubits ao aplicar uma fase global de -1 se ambos os qubits forem 1s. Preserva a anti-symmetrização dos orbitais.
 
   Consulte  para obter mais informações.
 
 
-  Esta operação é representada pelo operador unitário \start{align} f_{swap} \mathrel{:=} \start{bmatrix} 1 & 0 \\ \\ & 0 & 0 & & 0 & 1 & 0 \\ \\ & 1 & 0 & \\ \\ 0 & 0 & 0 0 & -1 \\ \\ \end{bmatrix}.
+  Esta operação é representada pelo operador unitário \start{align} f_{swap} \mathrel{:=} \start{bmatrix} 1 & 0 & 0 & 0 \\ \\ 0 & 0 & 1 & \\ \\ 0 0 & 1 & 0 & 0 \\ \\ & 0 & 0 & -1 \\ \\ \end{bmatrix}.
 
-  \fim{align}
+  \end{align}
 syntax: 'operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit'
 references: '- [*Ryan Babbush, Nathan Wiebe, Jarrod McClean, James McClain, Hartmut Neven, Garnet Kin-Lic Chan,* arXiv:1706.00023](https://arxiv.org/pdf/1706.00023.pdf)'
 input:
@@ -39,9 +39,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.swap
 metadata:
-  ms.openlocfilehash: c5e9a825d29bab3fa6b7a89e67f4cf5e40fec6d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 787fe0283d47c1bbfe1733d3a4ff15624a8c8370
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676369"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350579"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.applycnotchainwithtarget
 name: ApplyCNOTChainWithTarget
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Calcula a paridade de uma série de qubits num qubit alvo.
+  Calcula a paridade de uma matriz de qubits num qubit alvo.
 
 
-  Se a matriz estiver inicialmente no estado $\ket{q_0} \ket{q_1} \cdots \ket{{q_{{{{{{{target}}}},o estado final é dado por $\ket{q_0} \ket {q_1 \oplus q_0} \cdots \ket {q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{{{target}}}}.}.}.}}.}}.}.}.o estado final é dado por $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket {q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{{{target}}}}.}.}.}.}.}.o estado final é dado por $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket {q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{{{target}}}}.}.}.}.}.}.o
+  Se a matriz estiver inicialmente no estado $\ket{q_0} \ket{q_1} \cdots \ket{{q_{text{target}}}$, o estado final é dado por $\ket{q_0} \ket{q_1 \oplus q_0} \cdots \ket{q_{n - 1} \oplus \cdots \oplus q_0 \oplus q_{text{target}}}.}}..}$..} \oplus \cdots \oplus q_0 \oplus q_{text{target}}}..}..}.".
 remarks: >-
   Os seguintes são equivalentes:
 
@@ -32,12 +32,12 @@ input:
   content: '(qubits : Qubit[], targetQubit : Qubit)'
   types:
   - name: qubits
-    summary: Conjunto de qubits em que a paridade é calculada.
+    summary: Matriz de qubits em que a paridade é calculada.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: targetQubit
-    summary: Qubit final em que a paridade dos 'qubits' é XORed.
+    summary: Qubit final em que a paridade de 'qubits' é XORed.
     isPrimitive: true
     uid: Qubit
 output:
@@ -49,9 +49,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 631ef98fe43c0c3ca6b5e17ac67e9c9c717dc6d4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 156721c0e5f61dc9761e53d08342cbab3d815e75
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680499"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350800"
