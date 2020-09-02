@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.multiplygeneratorindex
 name: MultiplyGeneratorIndex
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Multiplica o coeficiente `GeneratorIndex`em .
+namespace: microsoft.quantum.simulation
+summary: Multiplica o coeficiente num `GeneratorIndex` .
 examples: >-
   ```qsharp
 
@@ -19,7 +19,7 @@ input:
   content: '(multiplier : Double, generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex)'
   types:
   - name: multiplier
-    summary: O multiplicador no coeficiente.
+    summary: O multiplicador do coeficiente.
     isPrimitive: true
     uid: Double
   - name: generatorIndex
@@ -28,14 +28,14 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: Um `GeneratorIndex` termo representando um termo `multiplier` com coeficiente um fator maior.
+  - summary: Um `GeneratorIndex` termo representando um termo com coeficiente um fator `multiplier` maior.
     uid: microsoft.quantum.simulation.generatorindex
 seeAlso:
 - microsoft.quantum.canon.generatorindex
 metadata:
-  ms.openlocfilehash: 37a7981f62881e1b8f1a6874508df87c042c6382
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a39adc439e4e7712458695869296aaefff4760b9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682580"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329771"

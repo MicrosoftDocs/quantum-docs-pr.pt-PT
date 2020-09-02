@@ -2,16 +2,16 @@
 uid: microsoft.quantum.arithmetic.assertprobint
 name: AssertProbInt
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Afirma que a probabilidade de um estado específico de um registo quântico tem o valor esperado.
 
 
-  Dado um estado quântico $n$-qubit $\ket{\psi}=\sum^{2^n-1}_{j=0}\alpha_j \ket{j}$, afirma que a probabilidade de $\alpha_j^^2$ do estado $\ket{j}$ indexado por $j$ tem o valor esperado.
+  Dado um $n$-qubit estado quântico $\ket{\psi}=\sum^{2^n-1}___j=0}\alpha_j \ket{j}$, afirma que a probabilidade $\alpha_j^2$ do estado $\ket{j}$ indexado por $j$ tem o valor esperado.
 examples: >-
-  Suponha `qubits` que o registo codifica um estado quântico de 3 qubit $\ket{\psi}=\sqrt{1/8}\ket{0}{6}+\sqrt{7/8}\ket $ em formato pequeno-endiano.
+  Suponha que o `qubits` registo codifica um estado quântico de 3 qubits $\ket{\psi}=\sqrt{1/8}\ket {0} +\sqrt{7/8}\ket {6} $ em formato pequeno-endian.
 
-  Isto significa que o número{0}indica $\ket{0}\equiv\ket{0}\ket \ket{0}$ket $ e $\ket{6}\equiv\ket{0}\ket{1}\ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket \ket{1} Em seguida, as seguintes afirmações bem sucedidas:
+  Isto significa que o número diz $\ket {0} \equiv\ket {0} {0} \ket \ket {0} \ket $ e $\ket {6} \equiv\ket {0} {1} \ket \ket \ket {1} \ket $. Em seguida, as seguintes afirmações sucedem- se:
 
 
   - `AssertProbInt(0,0.125,qubits,10e-10);`
@@ -22,15 +22,15 @@ input:
   content: '(stateIndex : Int, expected : Double, qubits : Microsoft.Quantum.Arithmetic.LittleEndian, tolerance : Double)'
   types:
   - name: stateIndex
-    summary: O índice $j$ do Estado $\ket{j}$ `LittleEndian` representado por um registo.
+    summary: O índice $j$ do estado $\ket{j}$ representado por um `LittleEndian` registo.
     isPrimitive: true
     uid: Int
   - name: expected
-    summary: O valor esperado de $\alpha_j^^^2$.
+    summary: O valor esperado de $\alpha_j^2$.
     isPrimitive: true
     uid: Double
   - name: qubits
-    summary: O registo qubit que armazena $\ket{\psi}$ em formato pequeno endiano.
+    summary: O registo qubit que armazena $\ket{\psi}$ em formato pequeno-endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: tolerance
     summary: Tolerância absoluta na diferença entre real e esperado.
@@ -42,9 +42,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 247dcb78921bfe5df96c56b74e251d0413cfab3d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e5269b46849da17602447491e77e756e999cb3d9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675253"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342334"

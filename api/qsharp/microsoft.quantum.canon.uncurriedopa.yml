@@ -2,11 +2,11 @@
 uid: microsoft.quantum.canon.uncurriedopa
 name: UncurriedOpA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Dada uma função que devolve as operações, devolve uma nova operação que toma ambas as inputs como uma tuple.
+  Dada a função que devolve as operações, devolve uma nova operação que toma ambas as entradas como tuple.
 
-  O modificador `A` indica que as operações são adjointáveis.
+  O modificador `A` indica que as operações são adjacentes.
 syntax: "function UncurriedOpA (curriedOp : ('T -> ('U => Unit is Adj))) : (('T, 'U) => Unit is Adj)"
 input:
   content: "(curriedOp : ('T -> ('U => Unit is Adj)))"
@@ -34,7 +34,7 @@ input:
 output:
   content: (('T, 'U) => Unit is Adj)
   types:
-  - summary: Uma nova `op` operação `op(t, u)` que `(curriedOp(t))(u)`equivale a .
+  - summary: Uma nova operação `op` tal que `op(t, u)` equivale `(curriedOp(t))(u)` a.
     isOperation: true
     input:
       types:
@@ -56,9 +56,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.uncurryop
 metadata:
-  ms.openlocfilehash: 92ec8c1ae333bcd319c7d63f89fb8614f0793d79
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b85c0be304b8c0fcc2cfa1912445fe45b1347c44
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677990"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354846"

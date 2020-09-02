@@ -2,8 +2,8 @@
 uid: microsoft.quantum.simulation.identitytimedependentgeneratorsystem
 name: IdentityTimeDependentGeneratorSystem
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Devolve um sistema gerador dependente do `H(s) = 0`tempo consistente com o Hamiltonian.
+namespace: microsoft.quantum.simulation
+summary: Devolve um sistema gerador dependente do tempo consistente com o `H(s) = 0` Hamiltonian.
 syntax: 'function IdentityTimeDependentGeneratorSystem () : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
   content: ()
@@ -11,12 +11,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
-  - summary: Um sistema gerador dependente do tempo que representa a evolução sob os $H(s) hamiltonianos = 0$ para todos os $s$.
+  - summary: Um sistema gerador dependente do tempo que representa a evolução sob o $H(s) Hamiltonian = 0$ para todos os $s$.
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 metadata:
-  ms.openlocfilehash: e181d778ec0a7fdd3961780f27259a2501d5697e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9575abb8d8ffbe505cd1d299fe4aae411a9d1f74
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683015"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329958"
