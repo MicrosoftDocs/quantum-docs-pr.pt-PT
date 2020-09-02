@@ -2,18 +2,18 @@
 uid: microsoft.quantum.arithmetic.computereciprocali
 name: ComputeReciprocalI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Calcula o 1/x recíproco para um inteiro não assinado x usando divisão inteiro. O resultado, interpretado como um inteiro, `floor(2^(2*n-1) / x)`será.
-remarks: Para a entrada x=0, a saída será de todos.
+namespace: microsoft.quantum.arithmetic
+summary: Calcula o 1/x recíproco para um inteiro inteiro não assinado x usando a divisão inteiro. O resultado, interpretado como um inteiro, `floor(2^(2*n-1) / x)` será.
+remarks: Para a entrada x=0, a saída será só uma.
 syntax: 'operation ComputeReciprocalI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: n-bit não assinado inteiro
+    summary: inteiro não assinado n-bit
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: A saída de 2n-bit,{0}deve estar em $\ket $ inicialmente.
+    summary: Saída de 2n bit, deve estar em $\ket {0} $ inicialmente.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -24,9 +24,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: b371c7c1e7442e49aab01793fdaa9c99bcafa35d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 824bc89e8d6290c98d505b0b17d4521edaa36384
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679728"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342300"

@@ -2,26 +2,26 @@
 uid: microsoft.quantum.amplitudeamplification.standardreflectionphases
 name: StandardReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: Calcula fases parciais de reflexão para amplificação de amplitude padrão.
-remarks: Todas as fases são $\pi$, exceto a primeira reflexão sobre o estado de início e a última reflexão sobre o estado alvo, que são $0$.
+namespace: microsoft.quantum.amplitudeamplification
+summary: Calcula as fases de reflexão parcial para amplificação de amplitude padrão.
+remarks: Todas as fases são $\pi$, exceto para o primeiro reflexo sobre o estado de início e a última reflexão sobre o estado alvo, que são $0$.
 syntax: 'function StandardReflectionPhases (nIterations : Int) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 input:
   content: '(nIterations : Int)'
   types:
   - name: nIterations
-    summary: Número de iterações de amplificação de amplitude para gerar fases parciais de reflexão para.
+    summary: Número de iterações de amplificação de amplitude para gerar fases de reflexão parcial para.
     isPrimitive: true
     uid: Int
 output:
   content: Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases
   types:
-  - summary: Uma operação que implementa fases especificadas como reflexos parciais
+  - summary: Uma operação que implementa fases especificadas como reflexões parciais
     uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: bbe128a674348d09cec2b1583bcdf60e1d7d8418
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c02770bc2968e53d4bc13dd0c66f1bf6598e860e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676898"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342198"

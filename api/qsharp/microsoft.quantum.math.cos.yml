@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.cos
 name: Cos
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Devolve o cosseno do ângulo especificado.
-remarks: Consulte [system.math.cos](https://docs.microsoft.com/dotnet/api/system.math.cos) para mais detalhes.
+namespace: microsoft.quantum.math
+summary: Devolve o cosine do ângulo especificado.
+remarks: Consulte [System.Math.Cos](https://docs.microsoft.com/dotnet/api/system.math.cos) para mais detalhes.
 syntax: 'function Cos (theta : Double) : Double'
 input:
   content: '(theta : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 66d95b487e1de42c68f1cb6623577c74a1f2e418
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: db4fb9ab902bfeebf2eb43b2f1fcbb6e066fd32f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685698"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334973"

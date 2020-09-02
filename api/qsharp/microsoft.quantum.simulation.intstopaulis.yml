@@ -2,28 +2,28 @@
 uid: microsoft.quantum.simulation.intstopaulis
 name: IntsToPaulis
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Converte uma série de inteiros para uma variedade de operadores pauli de qubit único.
+namespace: microsoft.quantum.simulation
+summary: Converte uma variedade de inteiros para uma variedade de operadores Pauli de um único qubit.
 syntax: 'function IntsToPaulis (ints : Int[]) : Pauli[]'
 input:
   content: '(ints : Int[])'
   types:
   - name: ints
-    summary: Conjunto de inteiros na `0..3` gama a converter para operadores Pauli.
+    summary: Conjunto de inteiros na gama `0..3`  a converter para operadores Pauli.
     isArray: true
     isPrimitive: true
     uid: Int
 output:
   content: Pauli[]
   types:
-  - summary: Uma `paulis` série de `Pauli[]` operadores Pauli `paulis[idxPauli]` com o mesmo `[PauliI, PauliX, PauliY, PauliZ]` comprimento `ints[idxPauli]`que `ints` tal que é igual ao elemento dado por .
+  - summary: Uma matriz `paulis` de operadores Pauli `Pauli[]` com o mesmo comprimento que tal que é igual ao elemento dado por `ints` `paulis[idxPauli]` `[PauliI, PauliX, PauliY, PauliZ]` `ints[idxPauli]` .
     isArray: true
     isPrimitive: true
     uid: Pauli
 metadata:
-  ms.openlocfilehash: 1159e3db02663b0588d12ea9d297e055be84ac4a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: f4d7e34cc7555fab89c6fd4d8371837da2296015
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682621"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329820"

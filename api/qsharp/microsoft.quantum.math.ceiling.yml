@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.ceiling
 name: Ceiling
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Devolve o menor inteiro maior ou igual ao número especificado.
-remarks: Consulte [system.math.Ceiling](https://docs.microsoft.com/dotnet/api/system.math.ceiling) para mais detalhes.
+namespace: microsoft.quantum.math
+summary: Devolve o número inteiro mais pequeno maior ou igual ao número especificado.
+remarks: Consulte [System.Math.Ceiling](https://docs.microsoft.com/dotnet/api/system.math.ceiling) para mais detalhes.
 syntax: 'function Ceiling (value : Double) : Int'
 input:
   content: '(value : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 97ba849c2216c116c0151fd2605646f674860227
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5b8aae1805360a21e936ec0b5d10eef6daaf5d98
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683382"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89335075"

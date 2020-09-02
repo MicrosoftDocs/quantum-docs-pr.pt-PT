@@ -2,30 +2,30 @@
 uid: microsoft.quantum.simulation.interpolategeneratorsystems
 name: InterpolateGeneratorSystems
 type: function
-namespace: Microsoft.Quantum.Simulation
-summary: Devolve `TimeDependentGeneratorSystem` uma representação da interpolação linear entre dois `GeneratorSystem`s.
+namespace: microsoft.quantum.simulation
+summary: Devolve um `TimeDependentGeneratorSystem` representante da interpolação linear entre dois `GeneratorSystem` s.
 syntax: 'function InterpolateGeneratorSystems (generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem) : Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem'
 input:
   content: '(generatorSystemStart : Microsoft.Quantum.Simulation.GeneratorSystem, generatorSystemEnd : Microsoft.Quantum.Simulation.GeneratorSystem)'
   types:
   - name: generatorSystemStart
-    summary: O `GeneratorSystem`início.
+    summary: O `GeneratorSystem` início.
     uid: microsoft.quantum.simulation.generatorsystem
   - name: generatorSystemEnd
-    summary: O `GeneratorSystem`fim.
+    summary: O `GeneratorSystem` fim.
     uid: microsoft.quantum.simulation.generatorsystem
 output:
   content: Microsoft.Quantum.Simulation.TimeDependentGeneratorSystem
   types:
-  - summary: Um `TimeDependentGeneratorSystem` sistema que representa um sistema que é a soma dos sistemas geradores `generatorSystemStart` de entrada, `generatorSystemEnd`com peso $(1-s)$(1-s)$ on e peso $s$ em .
+  - summary: Um `TimeDependentGeneratorSystem` sistema que representa um sistema que é a soma dos sistemas geradores de entrada, com peso $(1-s)$ `generatorSystemStart` e peso $s$ em `generatorSystemEnd` .
     uid: microsoft.quantum.simulation.timedependentgeneratorsystem
 seeAlso:
 - microsoft.quantum.canon.generatorsystem
 - microsoft.quantum.canon.timedependentgeneratorsystem
 metadata:
-  ms.openlocfilehash: ba7fdf0d9c2a08e8a330700fcab7b54f9347e9cb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: adced7798e4bdcf9a73cb3a68f6b26302ec8ae5c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682639"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329839"

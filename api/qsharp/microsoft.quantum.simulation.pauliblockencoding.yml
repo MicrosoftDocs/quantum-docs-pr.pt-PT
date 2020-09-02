@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.pauliblockencoding
 name: PauliBlockEncoding
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Cria um bloqueio de codificação unitário para um Hamiltonian.
+  Cria uma unidade de codificação de blocos para um Hamiltonian.
 
 
   O hamiltoniano $H=\sum_{j}\alpha_j P_j$ é descrito por uma soma de termos Pauli $P_j$, cada um com coeficiente real $\alpha_j$.
-remarks: Isto é obtido preparando e despreparando o estado $\sum_{j}\sqrt{\alpha_j/\alpha}\ket{j}$, <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator>e construindo um unitário controlado por multiplicação e .
+remarks: Isto obtém-se preparando e despreparando o estado $\sum_{j}sqrt{\alpha_j/\alpha}\ket{j}$, e construindo uma unidade unitária controlada por multiplicássi <xref:microsoft.quantum.preparation.statepreparationpositivecoefficients> e <xref:microsoft.quantum.canon.multiplexoperationsfromgenerator> .
 syntax: 'function PauliBlockEncoding (generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem) : (Double, Microsoft.Quantum.Simulation.BlockEncodingReflection)'
 input:
   content: '(generatorSystem : Microsoft.Quantum.Simulation.GeneratorSystem)'
@@ -23,21 +23,21 @@ output:
       ## <a name="first-parameter"></a>Primeiro parâmetro
 
 
-      A norma única dos coeficientes $\alpha=\sum_{j}\alpha_j[$].
+      A norma única dos coeficientes $\alpha=\sum_{j}[alpha_j
 
 
       ## <a name="second-parameter"></a>Segundo parâmetro
 
 
-      Um `BlockEncodingReflection` $U unitário$ do Hamiltonian $H$. Como este unitário satisfaz $U^2 = I$, é também uma reflexão.
+      Um `BlockEncodingReflection` $U de dólar unitário do Hamiltonian $H dólares. Como este unitário satisfaz $U^2 = I$, é também uma reflexão.
     types:
     - isPrimitive: true
       uid: Double
     - uid: microsoft.quantum.simulation.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 75b614fa23f2e00a3a960224d79905106fb06070
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a7d259a2d09cb26d46976132589ab6693530cb63
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682551"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89329720"

@@ -2,28 +2,28 @@
 uid: microsoft.quantum.arithmetic.dividei
 name: DivideI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
   Divide dois inteiros quânticos.
 
 
-  `xs`irá segurar `xs - floor(xs/ys) * ys` o `result` restante `floor(xs/ys)`e irá manter .
+  `xs` irá segurar o restante `xs - floor(xs/ys) * ys` e `result` irá aguentar `floor(xs/ys)` .
 remarks: >-
-  Usa uma abordagem padrão de mudança e subtração para implementar a divisão.
+  Usa uma abordagem padrão de mudança e subtraição para implementar a divisão.
 
-  A versão controlada é especializada de tal forma que a subtração não requer controlos adicionais.
+  A versão controlada é especializada de modo a que a subtração não exija controlos adicionais.
 syntax: 'operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: $n dividendo de $bit, será substituído pelo restante.
+    summary: $n dividendo de $-bit, será substituído pelo restante.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: divisor $n$-bit
+    summary: divisor de $n de dólares
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: $n resultado de $-bit, deve{0}estar no estado $\ket $ inicialmente e será substituído pelo resultado da divisão de inteiros.
+    summary: $n resultado de $-bit, deve estar no estado $\ket {0} $ inicialmente e será substituído pelo resultado da divisão inteiro.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -34,9 +34,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 05f4b6766910af24a956bfa14bca615633ed1031
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1a426cc92da9db4c1155d2653451031ca37e3965
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679684"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89342164"
