@@ -2,13 +2,13 @@
 uid: microsoft.quantum.errorcorrection.css
 name: CSS
 type: newtype
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Representa um código Calderbank-Shor-Steane (CSS) definido pelo seu codificador, descodificador, `X` `Z` e os seus procedimentos de medição da síndrome para e erros, respectivamente.
+namespace: microsoft.quantum.errorcorrection
+summary: Representa um código Calderbank-Shor-Steane (CSS) definido pelo seu codificador, descodificador e seus procedimentos de medição de síndrome para `X` e `Z` erros, respectivamente.
 syntax: newtype CSS = (Microsoft.Quantum.ErrorCorrection.EncodeOp, Microsoft.Quantum.ErrorCorrection.DecodeOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp, Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp);
 metadata:
-  ms.openlocfilehash: b1bedcc35249997229cb7d6615df0ad756b4f5ca
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee80335b929e9c1e4ef5fc67dee03ad9dc99bd29
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685602"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336639"

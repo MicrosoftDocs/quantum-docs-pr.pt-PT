@@ -2,8 +2,8 @@
 uid: microsoft.quantum.errorcorrection.encodeintosteanecode
 name: EncodeIntoSteaneCode
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
-summary: Uma operação de codificação que mapeia um registo quântico não codificado para um registo quântico codificado ao abrigo do código quântico de 7, 1, 30 000.
+namespace: microsoft.quantum.errorcorrection
+summary: Uma operação de codificação que mapeia um registo quântico não codificado para um registo quântico codificado sob o código quântico de 1, 3 ⟧ ⟦.
 syntax: 'operation EncodeIntoSteaneCode (physRegister : Qubit[], auxQubits : Qubit[]) : Microsoft.Quantum.ErrorCorrection.LogicalRegister'
 input:
   content: '(physRegister : Qubit[], auxQubits : Qubit[])'
@@ -21,15 +21,15 @@ input:
 output:
   content: Microsoft.Quantum.ErrorCorrection.LogicalRegister
   types:
-  - summary: Um registo quântico que mantém o estado após a aplicação do codificador Steane
+  - summary: Um registo quântico que mantém o estado após a aplicação do codificar Steane
     uid: microsoft.quantum.errorcorrection.logicalregister
 seeAlso:
 - logicalregister
 - steanecodedecoder
 metadata:
-  ms.openlocfilehash: 57ed5c1f8d9d39feb884bc31520fc556d96153c5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e68ce42d439af4c15e61d49ebeb7ed3657a4d4e5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684982"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336401"

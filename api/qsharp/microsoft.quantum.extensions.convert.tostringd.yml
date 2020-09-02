@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.convert.tostringd
 name: ToStringD
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
-summary: O ToStringD foi depreciado. Por @"microsoft.quantum.convert.doubleasstring" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.convert
+summary: ToStringD foi depreciado. Por favor, use @"microsoft.quantum.convert.doubleasstring" em vez disso.
 syntax: 'function ToStringD (a : Double) : String'
 input:
   content: '(a : Double)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: e846c9bc8f0eecfef3f46d54787e417f246f92a9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 8b97842a152e4d794ca6fd3c77b460b68a005f9f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682019"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349032"

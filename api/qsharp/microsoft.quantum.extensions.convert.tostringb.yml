@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.convert.tostringb
 name: ToStringB
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
-summary: O ToStringB foi depreciado. Por @"microsoft.quantum.convert.boolasstring" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.convert
+summary: ToStringB foi depreciado. Por favor, use @"microsoft.quantum.convert.boolasstring" em vez disso.
 syntax: 'function ToStringB (a : Bool) : String'
 input:
   content: '(a : Bool)'
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: 5e12856b9037304d93cb0b0312205e6cb1614851
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 848f8a3a76bd2bf6b8321f6c6deba8da3eae727c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682043"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349049"

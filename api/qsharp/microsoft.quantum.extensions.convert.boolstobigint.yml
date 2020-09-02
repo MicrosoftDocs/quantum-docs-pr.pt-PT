@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.convert.boolstobigint
 name: BoolsToBigInt
 type: function
-namespace: Microsoft.Quantum.Extensions.Convert
-summary: BoolsToBigInt foi depreciado. Por @"microsoft.quantum.convert.boolarrayasbigint" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.convert
+summary: BoolsToBigInt foi depreciado. Por favor, use @"microsoft.quantum.convert.boolarrayasbigint" em vez disso.
 syntax: 'function BoolsToBigInt (a : Bool[]) : BigInt'
 input:
   content: '(a : Bool[])'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: 3b76f8db681d2978060e7ac1ca8fc3c5b84ae20b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6c471f2b5d38f873212105a1ee47d079d0cf0778
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682098"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89349287"
