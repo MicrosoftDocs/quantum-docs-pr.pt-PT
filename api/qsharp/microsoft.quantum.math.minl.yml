@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.minl
 name: MinL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Devolve o menor de dois números especificados.
-remarks: Consulte [system.numerics.BigInteger.Min](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.min) para mais detalhes.
+remarks: Consulte [System.Numerics.BigInteger.Min](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.min) para mais detalhes.
 syntax: 'function MinL (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: fd156a2b7383b179abd215f4e363f319fa1d5879
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3109a60bd398ead85bc9d857e522545ccc7521f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673618"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343575"

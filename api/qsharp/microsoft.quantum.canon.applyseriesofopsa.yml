@@ -2,17 +2,17 @@
 uid: microsoft.quantum.canon.applyseriesofopsa
 name: ApplySeriesOfOpsA
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: Aplica uma lista de operações e seus alvos sequencialmente numa matriz. (Adjoint)
+namespace: microsoft.quantum.canon
+summary: Aplica uma lista de operações e os seus alvos sequencialmente numa matriz. (Adjacente)
 syntax: "operation ApplySeriesOfOpsA (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit"
 input:
   content: "(listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[])"
   types:
   - name: listOfOps
     summary: >-
-      Lista de operações, cada uma tomando uma matriz 'T, para ser aplicada. São aplicados sequencialmente, o índice mais baixo primeiro.
+      Lista de ops, cada um tomando uma matriz 'T, a ser aplicado. São aplicados sequencialmente, o índice mais baixo primeiro.
 
-      Cada um deve ter um functor adjoint
+      Cada um deve ter um functor adjacente
     isArray: true
     isOperation: true
     input:
@@ -27,14 +27,14 @@ input:
     functors:
     - Adjoint
   - name: targets
-    summary: Matrizes aninhadas descrevendo os alvos da operação. Cada matriz deve conter uma lista de ints que descrevem os índices a serem usados.
+    summary: Matrizes aninhadas descrevendo os alvos da operação. Cada matriz deve conter uma lista de ints descrevendo os índices a serem usados.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Int
   - name: register
-    summary: Registo qubit a ser agido.
+    summary: Registo qubit para ser agido.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -48,9 +48,9 @@ functors:
 seeAlso:
 - microsoft.quantum.canon.applyoprepeatedlyover
 metadata:
-  ms.openlocfilehash: 0dc453358d10f8b35d0a5885ab451930dc19e6a9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3789950fffa3717faa9340e5f6ed5a0a5bbd3e17
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680397"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89357787"

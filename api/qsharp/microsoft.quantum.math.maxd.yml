@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.maxd
 name: MaxD
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Devolve o maior de dois números especificados.
-remarks: Consulte [system.math.Max](https://docs.microsoft.com/dotnet/api/system.math.max) para mais detalhes.
+remarks: Consulte [System.Math.Max](https://docs.microsoft.com/dotnet/api/system.math.max) para mais detalhes.
 syntax: 'function MaxD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
@@ -21,9 +21,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 70571b66d0a02dd3134b877c2436f668aacc7140
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bb145a69aedaf6f8e4ac30150483931168bb102a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673725"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343830"

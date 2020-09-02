@@ -2,7 +2,7 @@
 uid: microsoft.quantum.errorcorrection.measurestabilizergenerators
 name: MeasureStabilizerGenerators
 type: operation
-namespace: Microsoft.Quantum.ErrorCorrection
+namespace: microsoft.quantum.errorcorrection
 summary: Mede o conjunto de geradores de um grupo estabilizador.
 remarks: >-
   Isto não verifica se o conjunto de geradores está a deslocar-se.
@@ -14,19 +14,19 @@ input:
   types:
   - name: stabilizerGroup
     summary: >-
-      Uma série de operadores de Pauli multiqubit.
+      Uma variedade de operadores de Pauli multiqubit.
 
-      Por exemplo, `stabilizerGroup[0]` é uma lista de matrizes pauli de um único qubit, o produto tensor do qual é um gerador estabilizador.
+      Por exemplo, `stabilizerGroup[0]` é uma lista de matrizes Pauli de um único qubit, o produto tensor do qual é um gerador estabilizador.
     isArray: true
     types:
     - isArray: true
       isPrimitive: true
       uid: Pauli
   - name: logicalRegister
-    summary: Uma variedade de qubits onde o código estabilizador é definido.
+    summary: Uma matriz de qubits onde o código estabilizador é definido.
     uid: microsoft.quantum.errorcorrection.logicalregister
   - name: gadget
-    summary: Uma operação que especifica como medir um operador multiqubit Pauli.
+    summary: Uma operação que especifica como medir um operador pauli multiqubit.
     isOperation: true
     input:
       types:
@@ -46,9 +46,9 @@ output:
   - summary: O resultado das medições.
     uid: microsoft.quantum.errorcorrection.syndrome
 metadata:
-  ms.openlocfilehash: d89455e8341d053053e110a6cfccd19e206d38d8
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fe7e1d75d6108d3f1c8288560c011af14bf6529b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682301"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89350018"

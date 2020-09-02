@@ -2,13 +2,13 @@
 uid: microsoft.quantum.simulation.blockencodingreflectionbylcu
 name: BlockEncodingReflectionByLCU
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Codifica um operador de interesse `BlockEncodingReflection`em .
+  Codifica um operador de interesse em `BlockEncodingReflection` um .
 
 
-  Isto constrói `BlockEncodingReflection` um $U unitário=P\cdot V\cdot P^\dagger$ que codifica algum operador $H=\sum_{j}\alpha_j; U_j de interesse que é uma combinação linear de unitários. Tipicamente, $P$ é uma preparação estatal{0}\_unitária que $P\ket\|a\sum_j\sqrt{\alpha_j/ \vec\alpha\|\_2}\ket{j}\_a$, e $V=\sum_{j}\ket{j}\bra{j}\_a\otimes U_j$.
-remarks: Esta `BlockEncoding` implementação confere-lhe as propriedades de a `BlockEncodingReflection`.
+  Isto constrói um `BlockEncodingReflection` $U unitário=P\cdot V\cdot P^\dagger$ que codifica algum operador $H=\sum_{j}/\alpha_j/ U_j de juros que é uma combinação linear de unitários. Tipicamente, $P$ é um unitário de preparação de estado tal que $P\ket {0} \_ a\sum_j\sqrt{\alpha_j/ \| \vec\alpha \| \_ 2}\ket{j} \_ a$, e $V=\sum_{j}ket{j}\bra{j} \_ a\otimes U_j$.
+remarks: Esta `BlockEncoding` implementação confere-lhe as propriedades de um `BlockEncodingReflection` .
 syntax: 'function BlockEncodingReflectionByLCU (statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)) : Microsoft.Quantum.Simulation.BlockEncodingReflection'
 input:
   content: '(statePreparation : (Qubit[] => Unit is Adj + Ctl), selector : ((Qubit[], Qubit[]) => Unit is Adj + Ctl))'
@@ -29,7 +29,7 @@ input:
     - Adjoint
     - Controlled
   - name: selector
-    summary: Um $V unitário que codifica os componentes unitários de $H$.
+    summary: Um $V$ unitário que codifica as unidades componentes de $H$.
     isOperation: true
     input:
       types:
@@ -49,15 +49,15 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.BlockEncodingReflection
   types:
-  - summary: Um $U unitário$ agindo conjuntamente em registos `a` e `s` que bloqueia códigos{-1} $H$, e satisfaz $U'^ = U$.
+  - summary: Um $U$ unitário agindo conjuntamente em registos `a` e `s` que codifica $H$, e satisfaz $U'^ {-1} = U$.
     uid: microsoft.quantum.simulation.blockencodingreflection
 seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: 8fe23d346a09e245d41f2a0c242462b5300561e1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: de3a86598d62960d71fa205dc20507fa59cf9cf7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687104"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89343405"

@@ -2,26 +2,26 @@
 uid: microsoft.quantum.preparation.blochspherecoordinates
 name: BlochSphereCoordinates
 type: function
-namespace: Microsoft.Quantum.Preparation
+namespace: microsoft.quantum.preparation
 summary: >-
-  Computa a esfera bloch coordena para um estado de um único qubit.
+  Calcula as coordenadas da esfera Bloch para um estado de um único qubit.
 
 
-  Tendo em conta dois números complexos $a0, a1$ que representam o estado qubit, computa coordenadas na esfera do Bloch de tal forma que $a0{0} \ket + a1 \ket{1} = r e^{it}(e^{-i \phi /2}\cos{(\theta/2)}\ket{0}+e^{i \phi /2}\sin{(\theta/2)\}{1}
+  Dado dois números complexos $a0, a1$ que representam o estado qubit, calcula as coordenadas na esfera bloch de tal forma que $a0 \ket {0} + a1 \ket {1} = r e^{it}(e^{-i \phi /2}\cos{(\theta/2)}\ket {0} +e^{i \phi /2}\infry(\theta/2}).ket {1}
 syntax: 'function BlochSphereCoordinates (a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar) : (Microsoft.Quantum.Math.ComplexPolar, Double, Double)'
 input:
   content: '(a0 : Microsoft.Quantum.Math.ComplexPolar, a1 : Microsoft.Quantum.Math.ComplexPolar)'
   types:
   - name: a0
-    summary: Coeficiente complexo do Estado{0}$\ket $.
+    summary: Coeficiente complexo de estado $\ket {0} $.
     uid: microsoft.quantum.math.complexpolar
   - name: a1
-    summary: Coeficiente complexo do Estado{1}$\ket $.
+    summary: Coeficiente complexo de estado $\ket {1} $.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: (Microsoft.Quantum.Math.ComplexPolar, Double, Double)
   types:
-  - summary: Uma tuple `(ComplexPolar(r, t), phi, theta)`contendo.
+  - summary: Uma tuple `(ComplexPolar(r, t), phi, theta)` contendo.
     types:
     - uid: microsoft.quantum.math.complexpolar
     - isPrimitive: true
@@ -29,9 +29,9 @@ output:
     - isPrimitive: true
       uid: Double
 metadata:
-  ms.openlocfilehash: 98d543849be177941a0c346c1de6b5b6930e783e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a1bf578d2dc6c45d553bff503385f7760a08458d
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683227"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89331709"
