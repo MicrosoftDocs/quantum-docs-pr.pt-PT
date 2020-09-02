@@ -2,7 +2,7 @@
 uid: microsoft.quantum.random.transformedcontinuousdistribution
 name: TransformedContinuousDistribution
 type: function
-namespace: Microsoft.Quantum.Random
+namespace: microsoft.quantum.random
 summary: Dada uma distribuição contínua, devolve uma nova distribuição que transforma o original por uma determinada função.
 examples: >-
   As duas seguintes distribuições são idênticas:
@@ -42,9 +42,9 @@ output:
   - summary: Uma nova distribuição relacionada com `distribution` a transformação dada `transform` por.
     uid: microsoft.quantum.random.continuousdistribution
 metadata:
-  ms.openlocfilehash: 033e852fa0c536d51a62b93c9cf71d03d2fcb959
-  ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+  ms.openlocfilehash: 515cb4bd06fe5dd4d6c3c5dae9f7d51d616be5fb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 08/25/2020
-  ms.locfileid: "88864512"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330655"

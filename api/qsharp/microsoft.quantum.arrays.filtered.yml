@@ -2,13 +2,13 @@
 uid: microsoft.quantum.arrays.filtered
 name: Filtered
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dada uma matriz e um predicado que é definido para os elementos da matriz, devolve uma matriz que consiste nos elementos que satisfazem o predicado.
-remarks: A função é definida para tipos genéricos, ou `'T[]` seja, sempre `'T -> Bool` que temos uma matriz e um predicado podemos filtrar elementos.
+remarks: A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e um predicado `'T -> Bool` podemos filtrar elementos.
 examples: >-
-  O código que se segue demonstra a função "Filtrada".
+  O seguinte código demonstra a função "Filtrado".
 
-  Um predicado é @"microsoft.quantum.logical.greaterthani" definido usando a função:
+  Um predicado é definido usando a @"microsoft.quantum.logical.greaterthani" função:
 
 
   ```qsharp
@@ -44,24 +44,24 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Uma série de `'T`elementos sobre .
+    summary: Uma série de elementos sobre `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma `'T[]` variedade de elementos que satisfazem o predicado.
+  - summary: Uma variedade `'T[]` de elementos que satisfazem o predicado.
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo `array` de elementos.
+  summary: O tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 6aa19a279425672675182f3c8098e7c47fb5cce6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3b586b356e18c71f1721fbce0ec26e2ea37bfd73
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676453"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352296"

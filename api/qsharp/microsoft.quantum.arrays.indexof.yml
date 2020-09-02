@@ -2,10 +2,10 @@
 uid: microsoft.quantum.arrays.indexof
 name: IndexOf
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: Devolve o primeiro índice do primeiro elemento numa matriz que satisfaz um determinado predicado. Se não existir tal elemento, retorna -1.
+namespace: microsoft.quantum.arrays
+summary: Devolve o primeiro índice do primeiro elemento numa matriz que satisfaz um dado predicado. Se não existir tal elemento, de volta -1.
 examples: >-
-  Suponha que `IsEven : Int -> Bool` essa `true` é uma função que retorna se e só se a sua entrada for igual. Em seguida, isto `IndexOf` pode ser usado com para encontrar o primeiro elemento uniforme em uma matriz:
+  Suponha que `IsEven : Int -> Bool` esta é uma função que retorna `true` se e somente se a sua entrada for uniforme. Então, isto pode ser usado `IndexOf` para encontrar o primeiro elemento par em uma matriz:
 
 
   ```Q#
@@ -20,7 +20,7 @@ input:
   content: "(predicate : ('T -> Bool), arr : 'T[])"
   types:
   - name: predicate
-    summary: Uma função predicada agindo sobre elementos da matriz.
+    summary: Uma função predicado agindo sobre elementos da matriz.
     isFunction: true
     input:
       types:
@@ -38,13 +38,13 @@ input:
 output:
   content: Int
   types:
-  - summary: Ou o menor `idx` índice `predicate(arr[idx])` tal é verdade, ou -1 se não existir tal elemento.
+  - summary: Ou o menor índice `idx` que `predicate(arr[idx])` é verdade, ou -1 se tal elemento não existir.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 6fb95357096751e53f601a9c855ff656e2dd1b34
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6b0097c4feb41a00f0d9c1fcb4c2b5dbcaa186ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681008"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352126"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.bitsizel
 name: BitSizeL
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
-  Para um inteiro não `a`negativo, devolve o número de `a`bits necessários para representar .
+  Para um número inteiro não `a` negativo, devolve o número de bits necessários para representar `a` .
 
 
   Ou seja, devolve o menor $n$ de tal forma que $a < 2^n$.
@@ -13,19 +13,19 @@ input:
   content: '(a : BigInt)'
   types:
   - name: a
-    summary: O inteiro cujo tamanho é para ser calculado.
+    summary: O inteiro cujo tamanho bit deve ser calculado.
     isPrimitive: true
     uid: BigInt
 output:
   content: Int
   types:
-  - summary: O tamanho de `a`.
+  - summary: O tamanho `a` de.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 70293cfdf4beb784e379632d2e7dc193300d4b52
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6f3e3219e62cf1c51153185ef9a78d710f4fd60f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683389"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89344391"

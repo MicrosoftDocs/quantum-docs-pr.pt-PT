@@ -2,8 +2,8 @@
 uid: microsoft.quantum.diagnostics.equalityfacti
 name: EqualityFactI
 type: function
-namespace: Microsoft.Quantum.Diagnostics
-summary: Afirma que uma variável clássica do Int tem o valor esperado.
+namespace: microsoft.quantum.diagnostics
+summary: Afirma que uma variável int clássica tem o valor esperado.
 syntax: 'function EqualityFactI (actual : Int, expected : Int, message : String) : Unit'
 input:
   content: '(actual : Int, expected : Int, message : String)'
@@ -17,7 +17,7 @@ input:
     isPrimitive: true
     uid: Int
   - name: message
-    summary: Cadeia de mensagens de falha a utilizar quando a afirmação é desencadeada.
+    summary: Cadeia de mensagem de falha a ser utilizada quando a afirmação é desencadeada.
     isPrimitive: true
     uid: String
 output:
@@ -26,9 +26,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: ae9eb90c63a15c814d23ed4850f322bb358922c5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9cf398d689c7393e605cebe8f5345e830520a337
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82655429"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337098"

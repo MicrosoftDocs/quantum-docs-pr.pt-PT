@@ -2,14 +2,14 @@
 uid: microsoft.quantum.research.chemistry.jwoptimizedfermionevolutionfunction
 name: JWOptimizedFermionEvolutionFunction
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
-summary: Representa um gerador dinâmico como um conjunto de portões simulativos e uma expansão na base JWOptimized.
+namespace: microsoft.quantum.research.chemistry
+summary: Representa um gerador dinâmico como um conjunto de portões simulados e uma expansão na base JWOptimizada.
 syntax: 'function JWOptimizedFermionEvolutionFunction (generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionUnitary'
 input:
   content: '(generatorIndex : Microsoft.Quantum.Simulation.GeneratorIndex, parityQubit : Qubit)'
   types:
   - name: generatorIndex
-    summary: Um índice gerador a ser representado como evolução unitária na base JWOptimized.
+    summary: Um índice gerador a ser representado como evolução unitária na base JWOptimizada.
     uid: microsoft.quantum.simulation.generatorindex
   - name: parityQubit
     summary: Qubit que determina o sinal da evolução do tempo.
@@ -18,12 +18,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.EvolutionUnitary
   types:
-  - summary: Uma `EvolutionUnitary` evolução temporal representativa pelo termo referenciado no 'generatorIndex.
+  - summary: Uma `EvolutionUnitary` evolução temporal representando o termo referenciado em 'generatorIndex.
     uid: microsoft.quantum.simulation.evolutionunitary
 metadata:
-  ms.openlocfilehash: ae5796c80198bd7e02940d978eeaebb3e2fcd814
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 17ba8059bc425bb01a06759606b537541db8e0eb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683119"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330502"

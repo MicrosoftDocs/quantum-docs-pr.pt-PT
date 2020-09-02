@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.exclude
 name: Exclude
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Devolve uma matriz contendo os elementos de outra matriz, excluindo elementos numa determinada lista de índices.
 examples: >-
   ```qsharp
@@ -19,19 +19,19 @@ input:
   content: "(remove : Int[], array : 'T[])"
   types:
   - name: remove
-    summary: Uma série de índices que denotam quais os elementos que devem ser excluídos da saída.
+    summary: Um conjunto de índices que denotam quais os elementos que devem ser excluídos da saída.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Matriz dos quais os valores na matriz de saída são tomados.
+    summary: Matriz dos quais são tomados os valores na matriz de saída.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma `output` matriz `output[0]` que é `array` o primeiro elemento `remove`cujo índice `output[1]` não aparece, tal que é o segundo elemento desse tipo, e assim por diante.
+  - summary: Um conjunto `output` tal que é o primeiro elemento de cujo índice não aparece em , tal que `output[0]` é o segundo `array` `remove` `output[1]` elemento, e assim por diante.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -39,9 +39,9 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: 715610f2e8d0932a22d6dfdd0232e981a495fd6f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7e0f978f711962247c08c1b367f3ca62e16cad2c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676484"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352347"

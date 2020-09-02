@@ -2,21 +2,21 @@
 uid: microsoft.quantum.arrays.most
 name: Most
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Cria uma matriz que é igual a uma matriz de entrada, exceto que o último elemento de matriz é largado.
 syntax: "function Most (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: Uma matriz cujos elementos de primeiro a último são para formar a matriz de saída.
+    summary: Uma matriz cujos primeiros e últimos elementos são para formar a matriz de saída.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma matriz que `array[0..Length(array) - 2]`contém os elementos.
+  - summary: Uma matriz contendo os `array[0..Length(array) - 2]` elementos.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: 352e0eb9931b47e14f549828aa2a1c34af8ad901
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3580525b0f5851138110c9be2eb09e8deb16379
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680915"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351905"

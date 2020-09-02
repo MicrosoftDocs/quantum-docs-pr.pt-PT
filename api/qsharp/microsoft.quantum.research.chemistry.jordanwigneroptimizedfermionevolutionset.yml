@@ -2,8 +2,8 @@
 uid: microsoft.quantum.research.chemistry.jordanwigneroptimizedfermionevolutionset
 name: JordanWignerOptimizedFermionEvolutionSet
 type: function
-namespace: Microsoft.Quantum.Research.Chemistry
-summary: Representa um gerador dinâmico como um conjunto de portões simulativos e uma expansão na base pauli.
+namespace: microsoft.quantum.research.chemistry
+summary: Representa um gerador dinâmico como um conjunto de portões simulados e uma expansão na base Pauli.
 syntax: 'function JordanWignerOptimizedFermionEvolutionSet (parityQubit : Qubit) : Microsoft.Quantum.Simulation.EvolutionSet'
 input:
   content: '(parityQubit : Qubit)'
@@ -15,12 +15,12 @@ input:
 output:
   content: Microsoft.Quantum.Simulation.EvolutionSet
   types:
-  - summary: Um `EvolutionSet` que `GeneratorIndex` mapeia uma base JWOptimized para um 'EvolutionUnitary.
+  - summary: Um `EvolutionSet` que mapeia uma `GeneratorIndex` base JWOptimed para um 'EvolutionUnitary.
     uid: microsoft.quantum.simulation.evolutionset
 metadata:
-  ms.openlocfilehash: fe39873929fa625aa97bb882f78933ed4309450f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 91c351eaf2977f15d308edfbc482977477c17959
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673423"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330519"

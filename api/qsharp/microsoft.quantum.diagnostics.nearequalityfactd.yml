@@ -2,9 +2,9 @@
 uid: microsoft.quantum.diagnostics.nearequalityfactd
 name: NearEqualityFactD
 type: function
-namespace: Microsoft.Quantum.Diagnostics
-summary: Afirma que um valor de ponto flutuante clássico tem o valor esperado até uma pequena tolerância de 1e-10.
-remarks: Isto equivale <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact> a uma tolerância codificada de{-10}$10^ $.
+namespace: microsoft.quantum.diagnostics
+summary: Afirma que um valor clássico do ponto flutuante tem o valor esperado até uma pequena tolerância de 1e-10.
+remarks: Isto equivale a <xref:microsoft.quantum.diagnostics.equalitywithintolerancefact> uma tolerância codificada de $10^ {-10} $.
 syntax: 'function NearEqualityFactD (actual : Double, expected : Double) : Unit'
 input:
   content: '(actual : Double, expected : Double)'
@@ -23,9 +23,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 539dfc449493e5a6a2392572d5a7b7184b67f1f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fd26b3640d6205acff8b5a64c97ea4e0ac331520
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682447"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89336911"

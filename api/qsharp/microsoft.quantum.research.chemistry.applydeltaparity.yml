@@ -2,25 +2,25 @@
 uid: microsoft.quantum.research.chemistry.applydeltaparity
 name: ApplyDeltaParity
 type: operation
-namespace: Microsoft.Quantum.Research.Chemistry
-summary: Diferença de cálculos na paridade entre um PQRS anterior... termos e os próximos PQRS... termo. Esta diferença é calculada num qubit auxiliar.
-remarks: Isto pressupõe que os índices de P < Q q < R < S < ... tanto para o prevPQ como para o próximo PQ.
+namespace: microsoft.quantum.research.chemistry
+summary: Computa a diferença de paridade entre um PQRS anterior... termos e o próximo PQRS... termo. Esta diferença é calculada num qubit auxiliar.
+remarks: Isto pressupõe que os índices de P < Q < R < S < ... tanto para o prevPQ como para o próximoPQ.
 syntax: 'operation ApplyDeltaParity (prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[]) : Unit'
 input:
   content: '(prevFermionicTerm : Int[], nextFermionicTerm : Int[], aux : Qubit, qubits : Qubit[])'
   types:
   - name: prevFermionicTerm
-    summary: Lista de índices para PQRs anteriores... termos.
+    summary: Lista de índices para PQRS anteriores... termos.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: nextFermionicTerm
-    summary: Lista de índices para os próximos PQRS... termos.
+    summary: Lista de índices para o próximo PQRS... termos.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: aux
-    summary: Qubit auxiliar sobre os resultados da computação da paridade são armazenados.
+    summary: Qubit auxiliar sobre os resultados do cálculo da paridade são armazenados.
     isPrimitive: true
     uid: Qubit
   - name: qubits
@@ -37,9 +37,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 27d2ce22c9d7281682236b5214c39abf1d352eeb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a953418f97a2883d12eb9d415943b8e3f3b24e44
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82687129"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89330553"

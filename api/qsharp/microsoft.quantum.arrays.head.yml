@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arrays.head
 name: Head
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Devolve o primeiro elemento da matriz.
 syntax: "function Head (array : 'A[]) : 'A"
 input:
   content: "(array : 'A[])"
   types:
   - name: array
-    summary: Conjunto do qual o primeiro elemento é tomado. A matriz deve ter comprimento pelo menos 1.
+    summary: Matriz do qual o primeiro elemento é tomado. A matriz deve ter comprimento mínimo de 1.
     isArray: true
     uid: "'A"
     isLocal: true
@@ -23,9 +23,9 @@ typeParameters:
 - uid: "'A"
   summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: 5fd4fbcc82cb685490fab3d2b88da0d087678ab9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: dd5e6e431d6cd1fdcc398ba263ed47b6195b1359
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681022"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89352245"
