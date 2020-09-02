@@ -2,14 +2,14 @@
 uid: microsoft.quantum.characterization.estimatefrequency
 name: EstimateFrequency
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Dada a preparação e a medição, estima a `Zero`frequência com que essa medição é bem sucedida (devoluções) através da realização de um determinado número de ensaios.
+namespace: microsoft.quantum.characterization
+summary: Dada a preparação e medição, estima a frequência com que essa medição sucede (devoluções) `Zero` através da realização de um determinado número de ensaios.
 syntax: 'operation EstimateFrequency (preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int) : Double'
 input:
   content: '(preparation : (Qubit[] => Unit), measurement : (Qubit[] => Result), nQubits : Int, nMeasurements : Int)'
   types:
   - name: preparation
-    summary: Uma operação $P$ que prepara um determinado estado $\rho$ no seu registo de entrada.
+    summary: Uma operação $P$ que prepara um dado estado $\rho$ no seu registo de entradas.
     isOperation: true
     input:
       types:
@@ -21,7 +21,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: measurement
-    summary: Uma operação $M$ que representa a medição de interesses.
+    summary: Uma operação $M$ representando a medição de juros.
     isOperation: true
     input:
       types:
@@ -33,27 +33,27 @@ input:
       - isPrimitive: true
         uid: Result
   - name: nQubits
-    summary: O número de qubits em que a preparação e a medição de cada ato são.
+    summary: O número de qubits em que a preparação e a medição de cada ato.
     isPrimitive: true
     uid: Int
   - name: nMeasurements
-    summary: O número de vezes que a medição deve ser efetuada para estimar a frequência de interesses.
+    summary: O número de vezes que a medição deve ser efetuada para estimar a frequência de juros.
     isPrimitive: true
     uid: Int
 output:
   content: Double
   types:
   - summary: >-
-      Uma estimativa $\hat{p}$ da frequência com que $M (P(\ket{00 \cdots 0}\bra{00 \cdots 0})})$} devoluções, `Zero`obtidas usando o\_estimador binomial imparcial $\hat{p} =\_n {\uparrow} / `Zero` n\_{\text{measurements}}}},onde $n {\uparrow}
+      Uma estimativa $\hat{p}$ da frequência com a qual $M(P(\ket{00 \cdots 0}\bra{00 \cdots 0})$ `Zero` devoluções, obtidas usando o estimador binomial imparcial $\hat{p} = \_ n{\uparrow} / \_ {{text{s}}}}}}}}}}}} onde $n \_ {\uparrow}$ é o número de `Zero` resultados observados.
 
 
       Isto é particularmente importante para as máquinas-alvo que respeitam as limitações físicas, de modo a que as probabilidades não possam ser medidas.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 973ab328d11410fee400659f18a99d50c1883156
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 008a3276e0df9c587f3262f4b5358a0831260ae4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677739"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354591"

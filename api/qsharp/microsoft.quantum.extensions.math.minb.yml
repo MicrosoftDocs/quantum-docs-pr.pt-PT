@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.math.minb
 name: MinB
 type: function
-namespace: Microsoft.Quantum.Extensions.Math
-summary: MinB foi depreciado. Por @"microsoft.quantum.math.minl" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.math
+summary: O MinB foi precotado. Por favor, use @"microsoft.quantum.math.minl" em vez disso.
 syntax: 'function MinB (a : BigInt, b : BigInt) : BigInt'
 input:
   content: '(a : BigInt, b : BigInt)'
@@ -20,9 +20,9 @@ output:
   - isPrimitive: true
     uid: BigInt
 metadata:
-  ms.openlocfilehash: c2f6bb3b7d4569153e1cb02103bf69918a193c5c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0ac6d9e0cd8961c64052142d9e884ae8ba03968c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686213"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89348097"

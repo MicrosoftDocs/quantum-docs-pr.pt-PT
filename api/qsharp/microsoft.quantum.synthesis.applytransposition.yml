@@ -2,7 +2,7 @@
 uid: microsoft.quantum.synthesis.applytransposition
 name: ApplyTransposition
 type: operation
-namespace: Microsoft.Quantum.Synthesis
+namespace: microsoft.quantum.synthesis
 summary: Esta operação troca a amplitude em índice `a` com a amplitude no índice no dado `b` estado-vector `register` de comprimento $n$.  Se `a` for `b` igual, o vetor do estado não é alterado.
 examples: >-
   Prepare uma superposição uniforme dos estados de números $1\rangle$, $2\rangle$, e $3\rangle$ em 2 qubits.
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: de888c27a7d897492283c7285c6d2d828fe5821b
-  ms.sourcegitcommit: a3775921db1dc5c653c97b8fa8fe2c0ddd5261ff
+  ms.openlocfilehash: caffae137e4e1fa23ef087c4fbb30179a43dd8c0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 07/02/2020
-  ms.locfileid: "85887080"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89327998"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.simulation.quantumwalkbyqubitization
 name: QuantumWalkByQubitization
 type: function
-namespace: Microsoft.Quantum.Simulation
+namespace: microsoft.quantum.simulation
 summary: >-
-  Converte um reflexo de codificação de blocos numa caminhada quântica.
+  Converte uma reflexão de codificação de blocos numa caminhada quântica.
 
 
-  Dado `BlockEncodingReflection` um representado por um $U unitário$ que codifica algum operador $H$ de juros, converte-o numa caminhada quântica $W${-1}contendo o espectro de $\pm e^{\pm i\sin^ (H)}$.
+  Dado um `BlockEncodingReflection` representado por um $U$ unitário que codifica algum operador $H$ de juros, converte-o numa caminhada quântica $W$ contendo o espectro de $\pm e^\pm i\sin^ {-1} (H)}$.
 syntax: 'function QuantumWalkByQubitization (blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection) : ((Qubit[], Qubit[]) => Unit is Adj + Ctl)'
-references: '- Simulação hamiltoniana por Qubitization Guang Hao Low, Isaac L. Chuanghttps://arxiv.org/abs/1610.06546'
+references: '- Simulação Hamiltonian por Qubitization Guang Hao Low, Isaac L. Chuang https://arxiv.org/abs/1610.06546'
 input:
   content: '(blockEncoding : Microsoft.Quantum.Simulation.BlockEncodingReflection)'
   types:
@@ -18,7 +18,7 @@ input:
 output:
   content: ((Qubit[], Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Uma caminhada quântica $W$ agindo `a` conjuntamente em registos e `s` que bloqueia os códigos $H$, e contém o{-1}espectro de $\pm e^{\pm i\sin^ (H)}$.
+  - summary: Uma caminhada quântica $W$ agindo conjuntamente em registos `a` e que codifica o `s` $H$, e contém o espectro de $\pm e^{\pm i\sin^ {-1} (H)}$.
     isOperation: true
     input:
       types:
@@ -39,9 +39,9 @@ seeAlso:
 - microsoft.quantum.canon.blockencoding
 - microsoft.quantum.canon.blockencodingreflection
 metadata:
-  ms.openlocfilehash: e2a6c0469b730140b8584e8cff2aad2d68254793
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cbe89f5020c50fc653db7d629e618c317d528d94
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682490"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89328411"
