@@ -2,23 +2,23 @@
 uid: microsoft.quantum.characterization.robustphaseestimation
 name: RobustPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Executa o robusto algoritmo de estimativa de fase `U` quântica não iterativa para um determinado oráculo e eigenstate, e fornece uma única estimativa real da fase com variação de escala no limite de Heisenberg.
-remarks: No limite de um grande número de consultas, Cramer-Rao limites inferiores para o desvio padrão da estimativa de $\phi$ satisfaz $\sigma \ge 2 \pi / \text{# de consultas}$.
+namespace: microsoft.quantum.characterization
+summary: Executa o robusto algoritmo de estimativa de fase quântica não iterativa para um dado oráculo `U` e eigenstate, e fornece uma única estimativa real da fase com escala de variação no limite de Heisenberg.
+remarks: No limite de um grande número de consultas, Cramer-Rao limites inferiores para o desvio padrão da estimativa de $\phi$ satisfazer $\sigma \ge 2 \pi / \text{# de consultas}$.
 syntax: 'operation RobustPhaseEstimation (bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[]) : Double'
-references: '- Calibração robusta de um portão single-qubit universal através da estimativa robusta de fase Shelby Kimmel, Guang Hao Low, Theodore J. Yoderhttps://arxiv.org/abs/1502.02677'
+references: '- Calibração robusta de um conjunto universal de portão de qubit único através de estimativa de fase robusta Shelby Kimmel, Guang Hao Low, Theodore J. Yoder https://arxiv.org/abs/1502.02677'
 input:
   content: '(bitsPrecision : Int, oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[])'
   types:
   - name: bitsPrecision
-    summary: Isto fornece uma estimativa de $\phi$ com desvio padrão $\sigma \le 2\pi / 2^\text{bitsPrecision}$ usando uma série de consultas de escala como $\sigma \le 10,7 \pi / \text{# de consultas}$.
+    summary: Isto fornece uma estimativa de $\phi$ com desvio padrão $\sigma \le 2\pi / 2^\text{bitsPrecision}$ usando uma série de consultas que escalam como $\sigma \le 10,7 \pi / \text{# de queries}$.
     isPrimitive: true
     uid: Int
   - name: oracle
-    summary: Uma operação de implementação $U^m$ por poderes inteiros $m$.
+    summary: Uma operação que implementa $U^m$ para os poderes inteiros $m$.
     uid: microsoft.quantum.oracles.discreteoracle
   - name: targetState
-    summary: Um registo quântico em que $U$ atua. Se armazena um eigenstate $\ket{\phi}$ de $U$, então $U\ket{\phi} = e^{i\phi} \ket{\phi}$ for $\phi\in(-\pi,\pi]$ uma fase desconhecida.
+    summary: Um registo quântico em que $U$ atua. Se armazena um eigenstate $\ket{\phi}$ de $U$, então $U\ket{\phi} = e^{i\phi} \ket{\phi}$ por $\phi\in(\pi,\pi]$ uma fase desconhecida.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -28,9 +28,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5fa87e4da621871685501d58fa4a70b172f973b7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 098cb9bbf804d93d2e03d4f776bd0e88cb5b25bb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677607"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354268"

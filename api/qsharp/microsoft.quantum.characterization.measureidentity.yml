@@ -2,10 +2,10 @@
 uid: microsoft.quantum.characterization.measureidentity
 name: MeasureIdentity
 type: operation
-namespace: Microsoft.Quantum.Characterization
+namespace: microsoft.quantum.characterization
 summary: Mede o operador de identidade num registo de qubits.
 remarks: >-
-  Uma vez que $\boldone$ tem apenas o valor eigenvalue $1$, e `Zero`não tem um valor eigen negativo, esta operação sempre retorna , correspondendo `register`ao eigenvalue $+1 = (-1)^0$, e não causa um colapso do estado de .
+  Uma vez que $\boldone$ tem apenas o valor de $1$, e não tem um valor de eigen negativo, esta operação volta sempre `Zero` , correspondente ao eigenvalue $+1 = (-1)^0$, e não causa um colapso do estado de `register` .
 
 
   Por si só, esta operação não é útil, mas é útil no contexto da tomografia do processo, uma vez que fornece informações sobre a preservação de vestígios de um processo quântico.
@@ -23,13 +23,13 @@ input:
 output:
   content: Result
   types:
-  - summary: O valor `Zero`do resultado .
+  - summary: O valor do resultado `Zero` .
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: 28dd3655c883c02b798e6e4cdf39c70100c6535b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9b6b8bfbf8d13bf1415afadd0b520551201cd3d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677626"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354303"

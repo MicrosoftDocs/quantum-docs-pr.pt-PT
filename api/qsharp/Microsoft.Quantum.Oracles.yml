@@ -1,37 +1,37 @@
 ### YamlMime:QSharpNamespace
 uid: microsoft.quantum.oracles
 name: Microsoft.Quantum.Oracles
-summary: " # <a name=\"summary\"></a>Resumo\n Estes espaços de nome fornecem tipos definidos pelo utilizador para decorar vários tipos de oráculos pelo uso pretendido em algoritmos quânticos, tais como a estimativa de fase e amplificação de amplitude."
+summary: " # <a name=\"summary\"></a>Resumo\n Este espaço de nome fornece tipos definidos pelo utilizador para decorar vários tipos de oráculos pelo seu uso pretendido em algoritmos quânticos, tais como estimativa de fase e amplificação de amplitude."
 functions:
 - uid: microsoft.quantum.oracles.deterministicstateoraclefromstateoracle
-  summary: Converte um oráculo de tipo `StateOracle` para `DeterministicStateOracle`.
+  summary: Converte um oráculo de tipo `StateOracle` para `DeterministicStateOracle` .
 - uid: microsoft.quantum.oracles.obliviousoraclefromdeterministicstateoracle
-  summary: Combina os oráculos `DeterministicStateOracle` e. `ObliviousOracle`
+  summary: Combina os oráculos `DeterministicStateOracle` `ObliviousOracle` e.
 - uid: microsoft.quantum.oracles.oracletodiscrete
-  summary: Dada uma operação que representa um oráculo "black-box", devolve um oráculo de tempo discreto que representa o oráculo "black-box" repetido várias vezes.
+  summary: Dada uma operação que representa um oráculo "black-box", devolve um oráculo de tempo discreto que representa o oráculo "caixa preta" repetido várias vezes.
 - uid: microsoft.quantum.oracles.reflectionoraclefromdeterministicstateoracle
-  summary: Constrói reflexão sobre um dado estado de um oráculo.
+  summary: Constrói reflexão sobre um dado estado a partir de um oráculo.
 - uid: microsoft.quantum.oracles.stateoraclefromdeterministicstateoracle
-  summary: Converte um oráculo de tipo `DeterministicStateOracle` para `StateOracle`.
+  summary: Converte um oráculo de tipo `DeterministicStateOracle` para `StateOracle` .
 newtypes:
 - uid: microsoft.quantum.oracles.continuousoracle
   summary: >-
     Representa um oráculo contínuo.
 
 
-    Este é um oráculo que implementa $U (\delta t) : \ket{\psi(t)} \mapsto \ket{\psi(t + \delta t)}$ para todos os tempos $t$, onde $U$ é uma operação fixa, e onde $\delta t$ é um número real não negativo.
+    Este é um oráculo que implementa $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi (t + \delta t)}} para todos os tempos $t$, onde $U$ é uma operação fixa, e onde $\delta t$ é um número real não negativo.
 - uid: microsoft.quantum.oracles.deterministicstateoracle
   summary: >-
-    Representa um oráculo para a preparação do Estado determinístico.
+    Representa um oráculo para a preparação determinística do Estado.
 
 
     A entrada para o oráculo $O$ é:
 
 
-    - O registo que armazenará o estado quântico desejado\_$\ket{\psi} s$.
+    - O registo que irá armazenar o estado quântico desejado $\ket{\psi} \_ s$.
 - uid: microsoft.quantum.oracles.discreteoracle
   summary: >-
-    Representa um oráculo de tempo discreto.
+    Representa um oráculo discreto.
 
 
     Este é um oráculo que implementa $U^m$ para uma operação fixa $U$ e um inteiro não negativo $m$.
@@ -40,38 +40,38 @@ newtypes:
     Representa um oráculo para amplificação de amplitude alheia.
 
 
-    As inputs para o oráculo $O$ são:
+    As entradas para o oráculo $O$ são:
 
 
-    - O registo de $a$ que $O$ atua.
+    - O registo da Ancilla $a dólares em que $O$ atua.
 
-    - O registo do sistema $s$ em que é aplicado o $U desejado, selecionado no registo\_$a$ estando no estado $\ket{t} a$.
+    - O registo do sistema $s$ em que é aplicado o $U$ unitário desejado, pós-seleccionado no registo $a$ estando no estado $\ket{t} \_ a$.
 - uid: microsoft.quantum.oracles.reflectionoracle
   summary: >-
     Representa um oráculo de reflexão.
 
 
-    Um oráculo de reflexão, $O$, tem inputs:
+    Um oráculo de reflexão, $O$, tem entradas:
 
 
     - A fase $\phi$ para rodar o subespaço refletido.
 
-    - O registo qubit sobre o qual realizar a reflexão dada.
+    - O registo de qubits para realizar a reflexão dada.
 - uid: microsoft.quantum.oracles.stateoracle
   summary: >-
-    Representa um oráculo para a preparação do Estado.
+    Representa um oráculo para a preparação do estado.
 
 
-    As inputs para o oráculo $O$ são:
+    As entradas para o oráculo $O$ são:
 
 
     - Um inteiro a indexar o qubit da bandeira $f$.
 
-    - O registo do sistema $s$ que armazenará o estado\_quântico desejado $\ket{\psi} s$.
+    - O registo do sistema $s$ que armazenará o estado quântico desejado $\ket{\psi} \_ s$.
 metadata:
-  ms.openlocfilehash: c1f364d74aab6d318e7b6db078d5532aeae57bcd
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 100ea34895b343c8b24ef4f584bbf534acd9d6ff
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673111"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89340957"

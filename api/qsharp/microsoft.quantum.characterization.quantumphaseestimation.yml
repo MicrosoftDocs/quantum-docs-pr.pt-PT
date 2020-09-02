@@ -2,22 +2,22 @@
 uid: microsoft.quantum.characterization.quantumphaseestimation
 name: QuantumPhaseEstimation
 type: operation
-namespace: Microsoft.Quantum.Characterization
-summary: Executa o algoritmo de estimativa `U` de `targetState`fase quântica para um determinado oráculo e, lendo a fase num registo quântico de grande endiano.
+namespace: microsoft.quantum.characterization
+summary: Executa o algoritmo de estimativa da fase quântica para um dado oráculo `U` `targetState` e, lendo a fase num registo quântico de grande ponta.
 syntax: 'operation QuantumPhaseEstimation (oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian) : Unit'
 input:
   content: '(oracle : Microsoft.Quantum.Oracles.DiscreteOracle, targetState : Qubit[], controlRegister : Microsoft.Quantum.Arithmetic.BigEndian)'
   types:
   - name: oracle
-    summary: Uma operação de implementação $U^m$ para dado poderes inteiros m.
+    summary: Uma operação que implementa $U^m$ para dados poderes inteiros m.
     uid: microsoft.quantum.oracles.discreteoracle
   - name: targetState
-    summary: Um registo quântico que representa o estado $\ket{\phi}$ agiu por $U$. If $\ket{\phi}$ is a eigenstate of $U$, $U\ket{\phi} = e^{i\phi} \ket{\phi}$ for $\phi \in [0, 2\pi)$ uma fase desconhecida.
+    summary: Um registo quântico que representa o estado $\ket{\phi}$ agido por $U$. Se $\ket{\phi}$ é um eigenstate de $U$, $U\ket{\phi} = e^{i\phi} \ket{\phi}$ por $\phi \in [0, 2\pi)$ uma fase desconhecida.
     isArray: true
     isPrimitive: true
     uid: Qubit
   - name: controlRegister
-    summary: Um registo inteiro de representação de grande endiano que pode ser usado para controlar o oráculo fornecido, e que conterá uma representação de $\phi$ após a aplicação desta operação. O controlRegister é assumido para começar no estado inicial $\ket{00\cdots 0}$, onde o comprimento do registo indica a precisão desejada.
+    summary: Um registo inteiro de representação de grande ponta que pode ser usado para controlar o oráculo fornecido, e que conterá a representação de $\phi$ após a aplicação desta operação. Presume-se que o controlRegister comece no estado inicial $\ket{00\cdots 0}$, onde o comprimento do registo indica a precisão desejada.
     uid: microsoft.quantum.arithmetic.bigendian
 output:
   content: Unit
@@ -28,9 +28,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: adbaf8af437a7067e8d2e6076b1a48c9000be3eb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6e6168df8419f7219e9165592fc37ba293f34231
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677617"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354285"

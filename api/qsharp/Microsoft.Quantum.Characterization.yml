@@ -8,29 +8,29 @@ operations:
 - uid: microsoft.quantum.characterization.discretephaseestimationiteration
   summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativo (controlado clássicamente) usando poderes inteiros de um oráculo unitário.
 - uid: microsoft.quantum.characterization.estimatefrequency
-  summary: Dada a preparação e a medição, estima a `Zero`frequência com que essa medição é bem sucedida (devoluções) através da realização de um determinado número de ensaios.
+  summary: Dada a preparação e medição, estima a frequência com que essa medição sucede (devoluções) `Zero` através da realização de um determinado número de ensaios.
 - uid: microsoft.quantum.characterization.estimatefrequencya
-  summary: Dada uma preparação adjointável e a medição, estima a `Zero`frequência com que essa medição é bem sucedida (devoluções) através da realização de um determinado número de ensaios.
+  summary: Dada uma preparação que é adjacente e medição, estima a frequência com que essa medição sucede (devoluções) `Zero` através da realização de um determinado número de ensaios.
 - uid: microsoft.quantum.characterization.estimateimagoverlapbetweenstates
-  summary: Tendo em conta duas operações que cada um prepara cópias de um estado, estima a parte imaginária da sobreposição entre os Estados preparados por cada operação.
+  summary: Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a parte imaginária da sobreposição entre os Estados preparados por cada operação.
 - uid: microsoft.quantum.characterization.estimateoverlapbetweenstates
-  summary: Tendo em conta duas operações que cada uma prepara cópias de um estado, estima a sobreposição quadrada entre os Estados preparados por cada operação.
+  summary: Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a sobreposição quadrada entre os Estados preparados por cada operação.
 - uid: microsoft.quantum.characterization.estimaterealoverlapbetweenstates
-  summary: Tendo em conta duas operações que cada um prepara cópias de um estado, estima a parte real da sobreposição entre os Estados preparados por cada operação.
+  summary: Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a parte real da sobreposição entre os Estados preparados por cada operação.
 - uid: microsoft.quantum.characterization.measureallz
-  summary: "\n> [!WARNING]\n> Preterido\n\nA MedidaAllZ foi depreciada. Por @\"microsoft.quantum.measurement.measureallz\" favor, use em vez disso.\nPor @\"microsoft.quantum.measurement.measureAllZ\"favor, use ."
+  summary: "\n> [!WARNING]\n> Preterido\n\nMeasureAllZ foi depreciada. Por favor, use @\"microsoft.quantum.measurement.measureallz\" em vez disso.\nUtilize @\"microsoft.quantum.measurement.measureAllZ\"."
 - uid: microsoft.quantum.characterization.measureidentity
   summary: Mede o operador de identidade num registo de qubits.
 - uid: microsoft.quantum.characterization.quantumphaseestimation
-  summary: Executa o algoritmo de estimativa `U` de `targetState`fase quântica para um determinado oráculo e, lendo a fase num registo quântico de grande endiano.
+  summary: Executa o algoritmo de estimativa da fase quântica para um dado oráculo `U` `targetState` e, lendo a fase num registo quântico de grande ponta.
 - uid: microsoft.quantum.characterization.robustphaseestimation
-  summary: Executa o robusto algoritmo de estimativa de fase `U` quântica não iterativa para um determinado oráculo e eigenstate, e fornece uma única estimativa real da fase com variação de escala no limite de Heisenberg.
+  summary: Executa o robusto algoritmo de estimativa de fase quântica não iterativa para um dado oráculo `U` e eigenstate, e fornece uma única estimativa real da fase com escala de variação no limite de Heisenberg.
 - uid: microsoft.quantum.characterization.singlequbitprocesstomographymeasurement
-  summary: Efetua uma medição de tomografia de processo de um único qubit na base pauli, dado um determinado canal de interesse.
+  summary: Realiza uma medição de tomografia de processo de um único qubit na base Pauli, dado um determinado canal de interesse.
 metadata:
-  ms.openlocfilehash: 2ae4ee28cf6e87a3fde1f8107194760c388b462c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: b8b7c1b7e6fc3dad00e62d7722ef4cb38b96b82f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673364"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89341484"
