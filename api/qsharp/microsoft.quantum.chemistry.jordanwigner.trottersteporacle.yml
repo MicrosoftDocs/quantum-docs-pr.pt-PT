@@ -2,17 +2,17 @@
 uid: microsoft.quantum.chemistry.jordanwigner.trottersteporacle
 name: TrotterStepOracle
 type: function
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Devolve a operação de etapa trotter e os parâmetros necessários para executá-lo.
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: Devolve a operação do passo Trotter e os parâmetros necessários para executá-lo.
 syntax: 'function TrotterStepOracle (qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int) : (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))'
 input:
   content: '(qSharpData : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerEncodingData, trotterStepSize : Double, trotterOrder : Int)'
   types:
   - name: qSharpData
-    summary: Hamiltonian descrito `JordanWignerEncodingData` pelo formato.
+    summary: Hamiltonian descrito por `JordanWignerEncodingData` formato.
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerencodingdata
   - name: trotterStepSize
-    summary: Tamanho do tamanho do integrador Trotter.
+    summary: Tamanho do passo do integrador Trotter.
     isPrimitive: true
     uid: Double
   - name: trotterOrder
@@ -22,7 +22,7 @@ input:
 output:
   content: (Int, (Double, (Qubit[] => Unit is Adj + Ctl)))
   types:
-  - summary: 'Uma tuple `Int` onde: é o número de `Double` `1.0/trotterStepSize`qubits atribuídos, é , e a operação é o passo Trotter.'
+  - summary: 'Um tuple onde: `Int` é o número de qubits atribuídos, é , e a `Double` `1.0/trotterStepSize` operação é o passo Trotter.'
     types:
     - isPrimitive: true
       uid: Int
@@ -43,9 +43,9 @@ output:
         - Adjoint
         - Controlled
 metadata:
-  ms.openlocfilehash: d78cac1e2f1a3b95007a3572aa7257d1938b97f4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bdbe6cd51902f66f732ba4f2d5a86e350f18d9b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82662978"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339104"

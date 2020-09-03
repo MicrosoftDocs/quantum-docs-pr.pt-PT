@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.multiplexz
 name: MultiplexZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma rotação Pauli Z condicionada numa série de qubits.
+  Aplica uma rotação Pauli Z condicionada a uma matriz de qubits.
 
 
-  Isto aplica a operação unitária controlada multiplicada que executa rotações por ângulo $\theta_j$ sobre o operador pauli de um único qubit $Z$ quando controlado pelo estado de número de $n$-qubit $\ket{j}$.
+  Isto aplica a operação unitária controlada por multiplicação que executa rotações por ângulo $\theta_j$ sobre o operador pauli de um único qubit $Z$ quando controlado pelo estado do número de $n$-qubit $\ket{j}$.
 
   Em particular, esta operação pode ser representada pelo unitário
 
@@ -15,22 +15,22 @@ summary: >-
   $$ \begin{align} U = \sum^{2^n-1}_{j=0} \ket{j}\bra{j} \otimes e^{i Z \theta_j}.
 
   \end{align} $$
-remarks: '`coefficients`será acolchoado com elementos $\theta_j = 0,0$ se forem especificados menos de $2^n$.'
+remarks: '`coefficients` serão acolchoados com elementos $\theta_j = 0,0$ se forem especificados menos de $2^n$ .'
 syntax: 'operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
-references: '- Síntese dos Circuitos Lógicos Quânticos Vivek V. Shende, Stephen S. Bullock, Igor L. Markovhttps://arxiv.org/abs/quant-ph/0406176'
+references: '- Síntese dos Circuitos Quânticos Da Lógica Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176'
 input:
   content: '(coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: Um conjunto de coeficientes de $2^n$ $theta_j$. O coeficiente de $j$th indexa o estado número $\ket{j}$ codificado em formato pequeno endiano.
+    summary: Matriz de até $2^n$ coeficientes $\theta_j$. O coeficiente de $j$th indexa o estado numérico $\ket{j}$ codificado em formato pequeno-endiano.
     isArray: true
     isPrimitive: true
     uid: Double
   - name: control
-    summary: $n registo de controlo de qubit que codifica o número indica $\ket{j}$ em formato pequeno endiano.
+    summary: $n registo de controlo de $-qubit que codifica o número diz $\ket{j}$ em formato pequeno-endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registo qubit único que é rodado por $e^{i P \theta_j}$.
+    summary: Registo de qubit único que é rodado por $e^{i P \theta_j}$.
     isPrimitive: true
     uid: Qubit
 output:
@@ -44,9 +44,9 @@ functors:
 seeAlso:
 - approximatelymultiplexz
 metadata:
-  ms.openlocfilehash: 3549830aeeca9aa6254a203261245e4c0e356a41
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 2049e27565cc02dba5e698ddc32a76522e20a8ef
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678748"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355928"

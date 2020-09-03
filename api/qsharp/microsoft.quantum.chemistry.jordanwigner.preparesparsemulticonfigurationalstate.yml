@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.preparesparsemulticonfigurationalstate
 name: PrepareSparseMultiConfigurationalState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Escassa preparação do estado multi-configuracional do estado experimental adicionando excitações ao estado de julgamento inicial.
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: Preparação estatal multi-configuracional escassa do estado experimental adicionando excitações ao estado experimental inicial.
 syntax: 'operation PrepareSparseMultiConfigurationalState (initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[]) : Unit'
 input:
   content: '(initialStatePreparation : (Qubit[] => Unit), excitations : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], qubits : Qubit[])'
   types:
   - name: initialStatePreparation
-    summary: Unitário para preparar o estado de julgamento inicial.
+    summary: Unitário para preparar o estado inicial do julgamento.
     isOperation: true
     input:
       types:
@@ -21,7 +21,7 @@ input:
       - isPrimitive: true
         uid: Unit
   - name: excitations
-    summary: Excitações do estado experimental inicial representadas pela amplitude da excitação e pelos índices qubit em que a excitação age.
+    summary: Excitações do estado experimental inicial representadas pela amplitude da excitação e os índices qubit sobre os atos de excitação.
     isArray: true
     uid: microsoft.quantum.chemistry.jordanwigner.jordanwignerinputstate
   - name: qubits
@@ -35,9 +35,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 54d7bbbc0909279d9617b9e7cd523e998db5874a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: cb4a90a4686c26139f956ae7438fd1da6b38897b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82664905"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339308"

@@ -2,7 +2,7 @@
 uid: microsoft.quantum.chemistry.jordanwigner.vqe.estimatetermexpectation
 name: EstimateTermExpectation
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+namespace: microsoft.quantum.chemistry.jordanwigner.vqe
 summary: >-
   Calcula a energia associada a um determinado termo Jordan-Wigner Hamiltonian
 
@@ -15,7 +15,7 @@ input:
   content: '(inputStateUnitary : (Qubit[] => Unit is Adj), ops : Pauli[][], coeffs : Double[], nQubits : Int, nSamples : Int)'
   types:
   - name: inputStateUnitary
-    summary: O unitário usado para a preparação do Estado.
+    summary: O unitário usado para a preparação do estado.
     isOperation: true
     input:
       types:
@@ -55,9 +55,9 @@ output:
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 6ddaa0c9385815d878f23048ae4787d93f36beca
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d39089e9d517d9f0abb701b92914f773523310e7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82662880"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339019"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.convert.boolasstring
 name: BoolAsString
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: Converte um dado valor booleano para uma representação de cordas equivalente.
-remarks: Consulte [C# Converte.ToString](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Boolean_) para mais detalhes.
+namespace: microsoft.quantum.convert
+summary: Converte um valor de boolean para uma representação de cordas equivalente.
+remarks: Consulte [C# Convert.ToString](https://docs.microsoft.com/dotnet/api/system.convert.tostring?view=netframework-4.7.1#System_Convert_ToString_System_Boolean_) para mais detalhes.
 syntax: 'function BoolAsString (a : Bool) : String'
 input:
   content: '(a : Bool)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: String
 metadata:
-  ms.openlocfilehash: d315f5a20820f722afdc5a01b6a4724d355d2b55
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 53417d9d3226725896698e8658f35248307de01f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82660687"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338747"

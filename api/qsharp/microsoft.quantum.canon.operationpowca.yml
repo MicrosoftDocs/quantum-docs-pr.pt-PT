@@ -2,20 +2,20 @@
 uid: microsoft.quantum.canon.operationpowca
 name: OperationPowCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Eleva uma operação a uma potência.
 
-  O modificador `A` indica que a operação é controlável e adjointável.
+  O modificador `A` indica que a operação é controlável e adjacente.
 
 
-  Isto é, dada uma operação que representa um portão $U$, devolve uma nova operação $U^m$ por uma potência $m$.
+  Ou seja, dada uma operação que representa um portão $U$, devolve uma nova operação $U^m$ por uma potência $m$.
 syntax: "function OperationPowCA (op : ('T => Unit is Ctl + Adj), power : Int) : ('T => Unit is Ctl + Adj)"
 input:
   content: "(op : ('T => Unit is Ctl + Adj), power : Int)"
   types:
   - name: op
-    summary: Uma operação $U$ representando o portão a repetir.
+    summary: Uma operação $U$ representando o portão a ser repetido.
     isOperation: true
     input:
       types:
@@ -35,7 +35,7 @@ input:
 output:
   content: ('T => Unit is Ctl + Adj)
   types:
-  - summary: Uma nova operação que represente $U^m$, onde $m = \texttt{power}$.
+  - summary: Uma nova operação que representa $U^m$, onde $m = \texttt{power}$.
     isOperation: true
     input:
       types:
@@ -54,9 +54,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: 896d142da1075eb282ef7889c26b9874ca478d16
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bec7e61813934efcb50e2a4c0e1c8a776c281571
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678647"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355832"

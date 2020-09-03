@@ -2,8 +2,8 @@
 uid: microsoft.quantum.canon.integerincrementphasele
 name: IntegerIncrementPhaseLE
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: O integerIncrementPhaseLE foi depreciado. Por @"microsoft.quantum.arithmetic.incrementphasebyinteger" favor, use em vez disso.
+namespace: microsoft.quantum.canon
+summary: O IntegerIncrementPhaseLE foi depreciado. Por favor, use @"microsoft.quantum.arithmetic.incrementphasebyinteger" em vez disso.
 syntax: 'operation IntegerIncrementPhaseLE (increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(increment : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -22,9 +22,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f2baeddd13f9598638bf2d43fa6be617b45bad96
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 30516a6a523488225165f986ee3b4b85dad8e5f3
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679158"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356240"
