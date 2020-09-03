@@ -2,14 +2,14 @@
 uid: microsoft.quantum.intrinsic.rz
 name: Rz
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Aplica uma rotação sobre o $z eixo$por um determinado ângulo.
+  Aplica uma rotação sobre o eixo $z$por um determinado ângulo.
 
 
-  \start{align} R_z(\theta) \mathrel{:=} e^{-i \theta \sigma_z / 2} = \start{bmatrix} e{^-i \theta / 2} & 0 \\ \\ & e^{i \theta / 2} \end{bmatrix}.
+  \start{align} R_z(\theta) \mathrel{:=} e^{-i \theta \sigma_z / 2} = \start{bmatrix} e^{-i \theta / 2} & \\ \\ 0 0 & e{i \theta / 2} \end{bmatrix}.
 
-  \fim{align}
+  \end{align}
 remarks: >-
   Equivalente a:
 
@@ -40,9 +40,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 8ab20bd25777abfcdef4ce79b112173d7de9ba4c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5d88af70316ca85299b5c141ebbfd9d071ed320e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674102"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346482"

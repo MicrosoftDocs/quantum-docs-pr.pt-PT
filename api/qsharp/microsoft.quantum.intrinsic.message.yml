@@ -2,15 +2,15 @@
 uid: microsoft.quantum.intrinsic.message
 name: Message
 type: function
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: Regista uma mensagem.
-remarks: O comportamento específico desta função é dependente de simulador, mas na maioria dos casos a mensagem será escrita para a consola.
+remarks: O comportamento específico desta função é dependente do simulador, mas na maioria dos casos a mensagem dada será escrita para a consola.
 syntax: 'function Message (msg : String) : Unit'
 input:
   content: '(msg : String)'
   types:
   - name: msg
-    summary: A mensagem a ser relatada.
+    summary: A mensagem a ser reportada.
     isPrimitive: true
     uid: String
 output:
@@ -19,9 +19,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: b089c79752d13d9b35c4d212a5ffeeed49d100e5
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 807ab3fa3b305f9ddf5afec2c4a84921ccb2b7aa
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674147"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346822"

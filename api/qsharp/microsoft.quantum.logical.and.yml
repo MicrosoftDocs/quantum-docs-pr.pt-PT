@@ -2,13 +2,13 @@
 uid: microsoft.quantum.logical.and
 name: And
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: Devolve a junção booleana de dois valores.
+namespace: microsoft.quantum.logical
+summary: Devolve a conjunção Booleana de dois valores.
 remarks: >-
-  Ao `and` contrário do operador, esta função não faz curto-circuito, de modo a que ambas as inputs sejam totalmente avaliadas.
+  Ao contrário do `and` operador, esta função não faz um curto-circuito, de modo a que ambas as entradas sejam totalmente avaliadas.
 
 
-  Até o comportamento de curto-circuito, os seguintes são equivalentes:
+  Até um comportamento de curto-circuito, os seguintes são equivalentes:
 
 
   ```Q#
@@ -33,13 +33,13 @@ input:
 output:
   content: Bool
   types:
-  - summary: '`true`se e `a` só `b` se `true`e forem ambos.'
+  - summary: '`true` se e somente se `a` e `b` são ambos `true` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 01c26ef3804d484d2cfbd6f54261ad80b8f66594
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 79d3e2fb5499e10a73c4ead1c19d36f09b721f98
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674097"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346278"

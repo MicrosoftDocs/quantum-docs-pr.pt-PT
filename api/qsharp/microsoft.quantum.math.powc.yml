@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.powc
 name: PowC
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Devolve um número elevado a um determinado poder.
+namespace: microsoft.quantum.math
+summary: Devolve um número elevado a um dado poder.
 syntax: 'function PowC (base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(base_ : Microsoft.Quantum.Math.Complex, power : Microsoft.Quantum.Math.Complex)'
@@ -11,17 +11,17 @@ input:
   - name: base_
     uid: microsoft.quantum.math.complex
   - name: power
-    summary: O poder $b$ para o qual $a dólares devem ser aumentados.
+    summary: A energia $b dólares para a qual $a dólar deve ser aumentado.
     uid: microsoft.quantum.math.complex
 output:
   content: Microsoft.Quantum.Math.Complex
   types:
-  - summary: O poder $a^b$
+  - summary: A potência $a^b$
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: cccd8bcbdf64cb8b514b341e7ab318fcdb1dba8a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e919f836891404668ac478599ac491eb7f0272eb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82681594"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333460"

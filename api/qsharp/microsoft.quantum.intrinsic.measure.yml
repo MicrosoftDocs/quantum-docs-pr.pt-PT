@@ -2,21 +2,21 @@
 uid: microsoft.quantum.intrinsic.measure
 name: Measure
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Efetua uma medição articular de um ou mais qubits nas bases pauli especificadas.
+  Realiza uma medição articular de um ou mais qubits nas bases pauli especificadas.
 
 
-  O resultado da saída é dado pela distribuição: \start{align} \Pr(\texttt{Zero} \ ket{\psi}) = \frac12 \braket{ \psi \mid\ \left, \boldone + P_0 \otimes P_1 \otimes \cdots \otimes P_ {N-1} `bases`\right) \mid\ \psi } \end{align} onde $P_i$ é o elemento $i$th de , e onde $N = \texttt{Length}(\texttt{bases})$.
+  O resultado da saída é dado pela distribuição: \start{align} \Pr(\texttt{Zero} / \ket{\psi}) = \frac12 \braket\ \psi \mid\ \boldone + P_0 \otimes P_1 \otimes \otimes \otimes \otimes P_{N-1} \right \) \\end{align} onde $P_i$ é o elemento $i$th de `bases` , e onde $N = \texttt{Length}(\texttt{bases})$.
 
-  Ou seja, a `Result` medição devolve uma $d$ de tal forma que o valor eigendo do efeito de medição observado é $(-1)^d$.
-remarks: Se a matriz base e a matriz qubit forem comprimentos diferentes, então a operação falhará.
+  Ou seja, a medição devolve um `Result` $d$ de modo a que o valor do efeito de medição observado seja $(-1)^d$.
+remarks: Se a matriz de base e a matriz de qubits forem diferentes comprimentos, então a operação falhará.
 syntax: 'operation Measure (bases : Pauli[], qubits : Qubit[]) : Result'
 input:
   content: '(bases : Pauli[], qubits : Qubit[])'
   types:
   - name: bases
-    summary: Conjunto de valores pauli de monoqubit indicando os fatores do produto tensor em cada qubit.
+    summary: Matriz de valores pauli de um único qubit indicando os fatores do produto tensor em cada qubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
@@ -28,13 +28,13 @@ input:
 output:
   content: Result
   types:
-  - summary: '`Zero`se o valor eigenvalue de $+1$ for observado, e `One` se o eigenvalue de $1$ for observado.'
+  - summary: '`Zero` se o $+1$ eigenvalue for observado, e `One` se o $-1$ eigenvalue for observado.'
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: a2f89d1eea48ac0a4dab7e35ef661d89a40ae84a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 24392c0995ca21931d4fa80663f72398c7a9937b
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682860"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346839"
