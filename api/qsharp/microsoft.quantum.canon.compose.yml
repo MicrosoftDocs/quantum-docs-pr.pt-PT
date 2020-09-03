@@ -2,18 +2,18 @@
 uid: microsoft.quantum.canon.compose
 name: Compose
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Devolve a composição de duas funções.
 
 
-  Tendo em conta duas funções $f$ e $g$, devolve uma nova função representando $f \circ g$.
+  Tendo em conta duas funções $f$ e $g$, devolve uma nova função que representa $f \circ g$.
 syntax: "function Compose (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> 'V)"
 input:
   content: "(outer : ('U -> 'V), inner : ('T -> 'U))"
   types:
   - name: outer
-    summary: A segunda função a aplicar.
+    summary: A segunda função a ser aplicada.
     isFunction: true
     input:
       types:
@@ -24,7 +24,7 @@ input:
       - uid: "'V"
         isLocal: true
   - name: inner
-    summary: A primeira função a aplicar.
+    summary: A primeira função a ser aplicada.
     isFunction: true
     input:
       types:
@@ -37,7 +37,7 @@ input:
 output:
   content: ('T -> 'V)
   types:
-  - summary: Uma nova função $h$ de tal forma que para todas as inputs $x$, $f (g(x)) = h(x)$.
+  - summary: Uma nova função $h$ tal que para todas as entradas $x$, $f(g(x)= h(x)$.
     isFunction: true
     input:
       types:
@@ -55,9 +55,9 @@ typeParameters:
 - uid: "'V"
   summary: O tipo de saída da segunda função a aplicar.
 metadata:
-  ms.openlocfilehash: 77037411aace0f69850b62322f3e63d6a34358ed
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e62937fd42cb4067ca7a7947cac29a9ef539da6c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675820"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356750"

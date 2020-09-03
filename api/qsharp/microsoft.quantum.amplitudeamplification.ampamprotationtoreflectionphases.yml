@@ -2,8 +2,8 @@
 uid: microsoft.quantum.amplitudeamplification.ampamprotationtoreflectionphases
 name: AmpAmpRotationToReflectionPhases
 type: function
-namespace: Microsoft.Quantum.AmplitudeAmplification
-summary: As fases de reflexão da AmpAmpRotationToReflect foram depreciadas. Por @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases" favor, use em vez disso.
+namespace: microsoft.quantum.amplitudeamplification
+summary: AmpAmpRotationToReflectionPhases foi depreciado. Por favor, use @"microsoft.quantum.amplitudeamplification.rotationphasesasreflectionphases" em vez disso.
 syntax: 'function AmpAmpRotationToReflectionPhases (rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases) : Microsoft.Quantum.AmplitudeAmplification.ReflectionPhases'
 input:
   content: '(rotPhases : Microsoft.Quantum.AmplitudeAmplification.RotationPhases)'
@@ -15,9 +15,9 @@ output:
   types:
   - uid: microsoft.quantum.amplitudeamplification.reflectionphases
 metadata:
-  ms.openlocfilehash: 54392ba3ad8eb98ad63f8c9f465716099b4ec289
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e0b27c371f3b203793772a5a7ffa40362fc20b35
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673042"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339682"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.curriedop
 name: CurriedOp
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Devolve uma versão curried de uma operação em duas inputs.
+  Devolve uma versão cosidada de uma operação em duas entradas.
 
 
-  Ou seja, dada uma operação com duas inputs, esta função aplica o isomorfismo da Curry $f(x, y) \equiv f(x)(y)$para devolver uma operação de uma entrada que devolve uma operação de uma entrada.
+  Ou seja, dada uma operação com duas entradas, esta função aplica o isomorfismo de Curry $f(x, y) \equiv f(x)(y)$ para devolver uma operação de uma entrada que devolve uma operação de uma entrada.
 remarks: >-
   Os seguintes são equivalentes:
 
@@ -44,7 +44,7 @@ input:
 output:
   content: ('T -> ('U => Unit))
   types:
-  - summary: Uma operação que aceita o primeiro elemento de um par e devolve uma operação que aceita como entrada o segundo elemento da entrada da operação original.
+  - summary: Uma operação que aceite o primeiro elemento de um par e devolva uma operação que aceite como entrada o segundo elemento da entrada da operação original.
     isFunction: true
     input:
       types:
@@ -63,13 +63,13 @@ output:
             uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo do primeiro componente de uma função definida nos pares.
+  summary: O tipo de primeiro componente de uma função definida em pares.
 - uid: "'U"
-  summary: O tipo do segundo componente de uma função definida nos pares.
+  summary: O tipo do segundo componente de uma função definida em pares.
 metadata:
-  ms.openlocfilehash: b89dbef2ff8d28656cae7f527fb3d94d869381f0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 97b800f064737d0c53bc7c90853cfe9c91a74aa9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675690"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356614"

@@ -2,14 +2,14 @@
 uid: microsoft.quantum.canon.delayedc
 name: DelayedC
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: Devolve uma operação que se aplica a uma operação dada com o dado argumento.
+namespace: microsoft.quantum.canon
+summary: Devolve uma operação que se aplica a uma determinada operação com um argumento dado.
 syntax: "function DelayedC (op : ('T => Unit is Ctl), arg : 'T) : (Unit => Unit is Ctl)"
 input:
   content: "(op : ('T => Unit is Ctl), arg : 'T)"
   types:
   - name: op
-    summary: Uma operação a aplicar em resultado da aplicação do valor de devolução
+    summary: Uma operação a aplicar como resultado da aplicação do valor de retorno
     isOperation: true
     input:
       types:
@@ -22,13 +22,13 @@ input:
     functors:
     - Controlled
   - name: arg
-    summary: A entrada a que `op` a operação é aplicada.
+    summary: A entrada à qual a operação `op` é aplicada.
     uid: "'T"
     isLocal: true
 output:
   content: (Unit => Unit is Ctl)
   types:
-  - summary: Uma nova operação `op` que se aplica com entrada`arg`
+  - summary: Uma nova operação que se aplica `op` com a entrada `arg`
     isOperation: true
     input:
       types:
@@ -42,14 +42,14 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação deve ser adiado.
+  summary: O tipo de entrada da operação a ser adiado.
 seeAlso:
 - microsoft.quantum.canon.delayed
 - microsoft.quantum.canon.delay
 metadata:
-  ms.openlocfilehash: 909d645e2567e92ca8943188c580e6d942cefcda
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 5824fa31157b2e6b2cf8c1ea6ad3f69593f2be81
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675621"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356393"
