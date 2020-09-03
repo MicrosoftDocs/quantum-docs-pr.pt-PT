@@ -2,35 +2,35 @@
 uid: microsoft.quantum.arithmetic.multiplybymodularinteger
 name: MultiplyByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  Executa multiplicação modular por uma constante de inteiro num registo qubit.
+  Executa a multiplicação modular por uma constante de número inteiro num registo qubit.
 
 
-  Notemos `modulus` por $N$ `constMultiplier` e por $a$.
+  Vamos `modulus` denotar $N$ e `constMultiplier` por $a$.
 
-  Em seguida, esta operação implementa uma operação unitária definida pelo seguinte mapa na base computacional: $$ \begin {align} \ket{y} \mapsto \ket{(a \cdot y) \operatorname{mod} N} \end{align} $$ para todos os $y$ entre $0$ e $N - 1$.
+  Em seguida, esta operação implementa uma operação unitária definida pelo seguinte mapa na base computacional: $$ \start{align} \ket{y} \mapsto \ket{(a\cdot y) \operatorname{mod} N} \end{align} $$ por todas as $y$ entre $0$ e $N - 1$.
 remarks: >-
-  - Para o diagrama do circuito e explicação consulte a Figura 7 na [página 8 do arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
+  - Para o diagrama do circuito e explicação consulte a figura 7 na [página 8 do arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)
 
-  - Esta operação corresponde a Uin in [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
+  - Esta operação corresponde a Uₐ em [arXiv:quant-ph/0205095v3](https://arxiv.org/pdf/quant-ph/0205095v3.pdf)
 syntax: 'operation MultiplyByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: constMultiplier
-    summary: Constante pela qual multiplicador está a ser multiplicado. Deve ser co-prime para o modulo.
+    summary: Constante pela qual multiplicador está a ser multiplicado. Deve ser co-prime para modulus.
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: A operação de multiplicação `modulus`é executada modulo .
+    summary: A operação de multiplicação é realizada `modulus` modulo.
     isPrimitive: true
     uid: Int
   - name: multiplier
     summary: >-
       O número a ser multiplicado por uma constante.
 
-      Esta é uma variedade de qubits codificando um inteiro em formato pequeno endiano.
+      Esta é uma variedade de qubits codificando um inteiro em formato pouco endiano.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 48a0f19334f65a6b80003d90dc4dc216dc8dee98
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 4ebbe9808772f51b1a7b2b3caf47379e74bd823e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676726"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353520"
