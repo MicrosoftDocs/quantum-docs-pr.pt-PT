@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.timesc
 name: TimesC
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Devolve o produto de duas inputs.
+namespace: microsoft.quantum.math
+summary: Devolve o produto de duas entradas.
 syntax: 'function TimesC (a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex) : Microsoft.Quantum.Math.Complex'
 input:
   content: '(a : Microsoft.Quantum.Math.Complex, b : Microsoft.Quantum.Math.Complex)'
@@ -12,7 +12,7 @@ input:
     summary: A primeira entrada $a$ a ser multiplicada.
     uid: microsoft.quantum.math.complex
   - name: b
-    summary: A segunda entrada $b$ a ser multiplicada.
+    summary: A segunda entrada $b$ a ser multiplicado.
     uid: microsoft.quantum.math.complex
 output:
   content: Microsoft.Quantum.Math.Complex
@@ -20,9 +20,9 @@ output:
   - summary: O produto $a \vezes b$.
     uid: microsoft.quantum.math.complex
 metadata:
-  ms.openlocfilehash: 8d4bf6e21a66eb51cefa2d666ba691d3d4daeaf6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 16a93255d7bd98fd8b67a3caf585e8d7b845cf3e
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685283"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332780"

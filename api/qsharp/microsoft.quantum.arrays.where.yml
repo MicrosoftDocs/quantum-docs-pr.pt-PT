@@ -2,7 +2,7 @@
 uid: microsoft.quantum.arrays.where
 name: Where
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Dado um predicado e uma matriz, devolve os índices daquela matriz onde o predicado é verdadeiro.
 syntax: "function Where (predicate : ('T -> Bool), array : 'T[]) : Int[]"
 input:
@@ -20,24 +20,24 @@ input:
       - isPrimitive: true
         uid: Bool
   - name: array
-    summary: Uma série de `'T`elementos sobre .
+    summary: Uma série de elementos sobre `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: Int[]
   types:
-  - summary: Uma série de `predicate` índices onde é verdade.
+  - summary: Uma série de índices onde `predicate` é verdade.
     isArray: true
     isPrimitive: true
     uid: Int
 typeParameters:
 - uid: "'T"
-  summary: O tipo `array` de elementos.
+  summary: O tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 2d62fcf97bcd72d2327aeb13db3600324ce6661f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: bdee40c5a3b275077c8d0846b169327d3d2edd66
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680754"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351480"

@@ -2,31 +2,31 @@
 uid: microsoft.quantum.math.squarednorm
 name: SquaredNorm
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: >-
   Devolve a norma quadrada de 2 de um vetor.
 
 
-  Devolve a norma quadrada 2 de um vetor; isto é, dado um input $\vec{x}$, devolve $\sum_i x_i^2$.
+  Devolve a 2-norma quadrada de um vetor; ou seja, dada uma entrada $\vec{x}$, devolve $\sum_i x_i^2$.
 syntax: 'function SquaredNorm (array : Double[]) : Double'
 input:
   content: '(array : Double[])'
   types:
   - name: array
-    summary: O vetor cuja norma quadrada 2 é para ser devolvida.
+    summary: O vetor cujo quadrado 2-norma é para ser devolvido.
     isArray: true
     isPrimitive: true
     uid: Double
 output:
   content: Double
   types:
-  - summary: A norma quadrada de `array`2.
+  - summary: A norma de 2 000 quadrados de `array` .
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: e370d6d5f21d459bbe37e969776e3722bf14bd9e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a10001eb154b19bacf10fa846ceee8c5c093f1e6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673559"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332831"

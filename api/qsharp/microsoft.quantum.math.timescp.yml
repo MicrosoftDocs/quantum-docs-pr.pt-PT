@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.timescp
 name: TimesCP
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Devolve o produto de duas inputs.
+namespace: microsoft.quantum.math
+summary: Devolve o produto de duas entradas.
 syntax: 'function TimesCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Microsoft.Quantum.Math.ComplexPolar'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
@@ -12,7 +12,7 @@ input:
     summary: A primeira entrada $a$ a ser multiplicada.
     uid: microsoft.quantum.math.complexpolar
   - name: b
-    summary: A segunda entrada $b$ a ser multiplicada.
+    summary: A segunda entrada $b$ a ser multiplicado.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Microsoft.Quantum.Math.ComplexPolar
@@ -20,9 +20,9 @@ output:
   - summary: O produto $a \vezes b$.
     uid: microsoft.quantum.math.complexpolar
 metadata:
-  ms.openlocfilehash: 6ada5bfe0155332a3dc4da12f0e88d4bcf76277e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fcd3f2375b48fe01b81e6cb56e36c17cbf1c37a0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685270"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332729"

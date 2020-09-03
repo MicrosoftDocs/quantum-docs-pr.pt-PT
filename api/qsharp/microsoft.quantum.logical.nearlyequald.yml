@@ -2,8 +2,8 @@
 uid: microsoft.quantum.logical.nearlyequald
 name: NearlyEqualD
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: Retorna verdadeiro se e apenas se duas inputs forem quase iguais (isto é, dentro de uma tolerância de 1e-12).
+namespace: microsoft.quantum.logical
+summary: Retorna verdadeira se e somente se duas entradas forem quase iguais (isto é, dentro de uma tolerância de 1e-12).
 remarks: >-
   Os seguintes são equivalentes:
 
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Double
   - name: b
-    summary: O segundo valor a comparar.
+    summary: O segundo valor a ser comparado.
     isPrimitive: true
     uid: Double
 output:
   content: Bool
   types:
-  - summary: '`true`se e `a` apenas se `b`for quase igual a .'
+  - summary: '`true` se e somente se `a` for quase igual a `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: dc752d914306cfb4f4bca481af3e6cd7006b644e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3f11baf79c830a9fb85063cd7dc86fbfcd06b07a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684616"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345462"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.measurement.measureallz
 name: MeasureAllZ
 type: operation
-namespace: Microsoft.Quantum.Measurement
+namespace: microsoft.quantum.measurement
 summary: >-
-  Em conjunto, mede um registo de qubits na base Pauli Z.
+  Mede conjuntamente um registo de qubits na base Pauli Z.
 
 
-  Mede um registo de qubits no $Z \otimes Z \otimes \cdots \otimes Z$ base, representando a paridade de todo o registo.
+  Mede um registo de qubits na base $Z \otimes Z \otimes \cdots \otimes Z$ base, representando a paridade de todo o registo.
 syntax: 'operation MeasureAllZ (register : Qubit[]) : Result'
 input:
   content: '(register : Qubit[])'
@@ -24,9 +24,9 @@ output:
     isPrimitive: true
     uid: Result
 metadata:
-  ms.openlocfilehash: a553a01d583cca9fcf5eb1e2c75896450990892a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 62cda639138f90d15ea591808af3b904864126dc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685198"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332508"

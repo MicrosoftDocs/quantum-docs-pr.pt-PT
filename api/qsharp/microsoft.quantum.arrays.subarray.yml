@@ -2,17 +2,17 @@
 uid: microsoft.quantum.arrays.subarray
 name: Subarray
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: Pega numa matriz e numa lista de locais e produz uma nova matriz formada a partir dos elementos da matriz original que correspondem aos locais dado.
+namespace: microsoft.quantum.arrays
+summary: Pega numa matriz e numa lista de locais e produz uma nova matriz formada a partir dos elementos da matriz original que combinam com os locais dados.
 remarks: >-
-  A função é definida para tipos genéricos, ou `'T[]` seja, sempre `Int[]` que temos uma matriz e uma lista de locais que definem a subarray.
+  A função é definida para tipos genéricos, ou seja, sempre que temos uma matriz `'T[]` e uma lista de locais que `Int[]` definem a subarray.
 
-  A construção do subarray baseia-se na geração de uma nova cópia profunda da dada matriz em oposição à manutenção de referências.
+  A construção da subarray baseia-se na geração de uma nova cópia profunda da matriz dada em oposição à manutenção de referências.
 
 
-  Se, `Length(indices) < Length(array)`esta função devolverá `array`um subconjunto de . Por outro lado, `indices` se contiver elementos repetidos, os elementos correspondentes de `array` vontade também serão repetidos.
+  Se `Length(indices) < Length(array)` esta função devolver um subconjunto de `array` . Por outro lado, se `indices` contiver elementos repetidos, os elementos correspondentes `array` serão igualmente repetidos.
 
-  Se `indices` `array` e tiverem o mesmo comprimento, esta `array`função proporciona permutações de .
+  Se `indices` e tiver o mesmo `array` comprimento, esta função fornece permutações de `array` .
 syntax: "function Subarray (indices : Int[], array : 'T[]) : 'T[]"
 input:
   content: "(indices : Int[], array : 'T[])"
@@ -23,24 +23,24 @@ input:
     isPrimitive: true
     uid: Int
   - name: array
-    summary: Uma série de `'T`elementos sobre .
+    summary: Uma série de elementos sobre `'T` .
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma `out` série de elementos cujos índices correspondem `out[idx] == array[indices[idx]]`à subarray, de tal forma que.
+  - summary: Uma série `out` de elementos cujos índices correspondem à subarray, de tal forma que `out[idx] == array[indices[idx]]` . .
     isArray: true
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo `array` de elementos.
+  summary: O tipo de `array` elementos.
 metadata:
-  ms.openlocfilehash: 2740a39d1b7c1c56aed4f9107c65d339c5fb4c1a
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1d5739f49e32ec4548cb24df2106dec0866a94cb
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675119"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351633"
