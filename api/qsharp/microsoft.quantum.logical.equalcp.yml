@@ -2,8 +2,8 @@
 uid: microsoft.quantum.logical.equalcp
 name: EqualCP
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: Retorna verdadeiro se e só se duas inputs forem iguais.
+namespace: microsoft.quantum.logical
+summary: Retorna verdadeira se e somente se duas entradas forem iguais.
 syntax: 'function EqualCP (a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar) : Bool'
 input:
   content: '(a : Microsoft.Quantum.Math.ComplexPolar, b : Microsoft.Quantum.Math.ComplexPolar)'
@@ -12,18 +12,18 @@ input:
     summary: O primeiro valor a ser comparado.
     uid: microsoft.quantum.math.complexpolar
   - name: b
-    summary: O segundo valor a comparar.
+    summary: O segundo valor a ser comparado.
     uid: microsoft.quantum.math.complexpolar
 output:
   content: Bool
   types:
-  - summary: '`true`se e `a` apenas `b`se for igual a .'
+  - summary: '`true` se e somente se `a` for igual a `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 4c22fc92aea12e145da4c680fb23bee1e1fbc76f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6421bacfd375e846848b37ecf45d3b80685c2480
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82685951"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346074"

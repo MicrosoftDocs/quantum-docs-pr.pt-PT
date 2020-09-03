@@ -2,8 +2,8 @@
 uid: microsoft.quantum.logical.lessthanorequald
 name: LessThanOrEqualD
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: Retorna verdadeiro se e apenas se um número for inferior ou igual a outro número.
+namespace: microsoft.quantum.logical
+summary: Retorna verdadeira se e somente se um número for inferior ou igual a outro número.
 remarks: >-
   Os seguintes são equivalentes:
 
@@ -24,19 +24,19 @@ input:
     isPrimitive: true
     uid: Double
   - name: b
-    summary: O segundo valor a comparar.
+    summary: O segundo valor a ser comparado.
     isPrimitive: true
     uid: Double
 output:
   content: Bool
   types:
-  - summary: '`true`se e `a` apenas se for `b`inferior ou igual a .'
+  - summary: '`true` se e somente se `a` for inferior ou igual a `b` .'
     isPrimitive: true
     uid: Bool
 metadata:
-  ms.openlocfilehash: 54ecd29273391dd51a605f6adaff264fbacbb035
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a4720ffc71a5f22d0e6600ce57a4b8767bd33932
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684677"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89345599"

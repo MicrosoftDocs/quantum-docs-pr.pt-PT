@@ -2,21 +2,21 @@
 uid: microsoft.quantum.arrays.reversed
 name: Reversed
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Crie uma matriz que contenha os mesmos elementos que uma matriz de entrada, mas em ordem invertida.
 syntax: "function Reversed (array : 'T[]) : 'T[]"
 input:
   content: "(array : 'T[])"
   types:
   - name: array
-    summary: Uma matriz cujos elementos devem ser copiados por ordem invertida.
+    summary: Uma matriz cujos elementos devem ser copiados por ordem inversa.
     isArray: true
     uid: "'T"
     isLocal: true
 output:
   content: "'T[]"
   types:
-  - summary: Uma matriz contendo `array[Length(array) - 1]` os elementos .. `array[0]`.
+  - summary: Uma matriz contendo os `array[Length(array) - 1]` elementos.. `array[0]`.
     isArray: true
     uid: "'T"
     isLocal: true
@@ -24,9 +24,9 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de elementos de matriz.
 metadata:
-  ms.openlocfilehash: f7424045ae518a2ea4c91724a0811d1ce5aaabd9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee68cb5aa0207b5a09fd02146cda4c0067c79130
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680852"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351718"

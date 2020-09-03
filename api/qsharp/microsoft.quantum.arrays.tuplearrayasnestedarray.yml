@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arrays.tuplearrayasnestedarray
 name: TupleArrayAsNestedArray
 type: function
-namespace: Microsoft.Quantum.Arrays
+namespace: microsoft.quantum.arrays
 summary: Transforma uma lista de 2 tuples numa matriz aninhada.
 syntax: "function TupleArrayAsNestedArray (tupleList : ('T, 'T)[]) : 'T[][]"
 input:
   content: "(tupleList : ('T, 'T)[])"
   types:
   - name: tupleList
-    summary: Lista de 2 tuples a ser transformado numa matriz aninhada.
+    summary: Lista de 2 tuples para ser transformado em uma matriz aninhada.
     isArray: true
     types:
     - uid: "'T"
@@ -20,7 +20,7 @@ output:
   content: "'T[][]"
   types:
   - summary: >-
-      Uma matriz aninhada com comprimento correspondente ao tupleList.
+      Uma matriz aninhada com comprimento correspondente à tupleList.
 
 
       ## <a name="example"></a>Exemplo
@@ -39,9 +39,9 @@ output:
       uid: "'T"
       isLocal: true
 metadata:
-  ms.openlocfilehash: b583defde468b808cf8b77347bcf37384577b0f9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9ef220228f28579791757b371f66a881f537cf4c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675100"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351497"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.sqrt
 name: Sqrt
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Devolve a raiz quadrada de um número especificado.
-remarks: Consulte [o System.Math.Sqrt](https://docs.microsoft.com/dotnet/api/system.math.sqrt) para obter mais detalhes.
+remarks: Consulte [System.Math.Sqrt](https://docs.microsoft.com/dotnet/api/system.math.sqrt) para mais detalhes.
 syntax: 'function Sqrt (d : Double) : Double'
 input:
   content: '(d : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 8d9ecefeedfc263cf7c1d143b052ef12c900beb4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1360333a3dd20d8882eae8acd1b21bf7fe866b65
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683251"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332865"

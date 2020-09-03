@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.tan
 name: Tan
 type: function
-namespace: Microsoft.Quantum.Math
+namespace: microsoft.quantum.math
 summary: Devolve a tangente do ângulo especificado.
-remarks: Consulte [system.math.Tan](https://docs.microsoft.com/dotnet/api/system.math.tan) para mais detalhes.
+remarks: Consulte [System.Math.Tan](https://docs.microsoft.com/dotnet/api/system.math.tan) para mais detalhes.
 syntax: 'function Tan (d : Double) : Double'
 input:
   content: '(d : Double)'
@@ -18,9 +18,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 43d55386584dac788dcc0a6bc8fac79fd9028504
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6c7f960d28aca33f54b0922669df992886231f03
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82673524"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89332797"

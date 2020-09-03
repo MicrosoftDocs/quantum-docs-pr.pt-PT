@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arrays.sequencei
 name: SequenceI
 type: function
-namespace: Microsoft.Quantum.Arrays
-summary: Obter uma variedade de inteiros num determinado intervalo.
+namespace: microsoft.quantum.arrays
+summary: Obtenha uma série de inteiros num dado intervalo.
 examples: >-
   ```qsharp
 
@@ -28,20 +28,20 @@ input:
     isPrimitive: true
     uid: Int
   - name: to
-    summary: Um índice final inclusivo do intervalo que `from`não é menor do que .
+    summary: Um índice final inclusivo do intervalo que não é menor que `from` .
     isPrimitive: true
     uid: Int
 output:
   content: Int[]
   types:
-  - summary: Uma matriz que `from`contém `from + 1`a `to`sequência de números, ......, ....
+  - summary: Uma matriz contendo a sequência de `from` `from + 1` números, ... ..., `to` .
     isArray: true
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 0efe1b4c3980c808cd89e56fd4948e06218cab66
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 079ea7c2082f541c89bfee1f7edd8bc2ed670751
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680838"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89351684"
