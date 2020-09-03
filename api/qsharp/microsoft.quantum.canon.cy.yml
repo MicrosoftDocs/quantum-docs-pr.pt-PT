@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.cy
 name: CY
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica o portão de Y (CY) controlado a um par de qubits.
+  Aplica o portão controlado-Y (CY) a um par de qubits.
 
 
-  $$ \start{align} 1 & 0 \\ \\ & 0 & \\ \\ 0 & 1 & \\ \\ 0 & & 0 & 0 & -i 0 & 0 & i & 0 \end{align}, $$ onde as filas e colunas são organizadas como no guia de conceitos quânticos.
+  $$ \start{align} 1 & 0 & 0 & \\ \\ 0 & 1 & 0 & \\ \\ 0 & 0 & 0 & -i \\ \\ 0 & 0 & i & 0\end{align}, $$ onde as linhas e colunas são organizadas como nos conceitos quânticos.
 remarks: >-
   Equivalente a:
 
@@ -22,7 +22,7 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: Qubit de controlo para o portão CY.
+    summary: Controlo qubit para o portão CY.
     isPrimitive: true
     uid: Qubit
   - name: target
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: c7d7d0fb5413051ec7a654c04e01b6ffc02903e6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 6d2934f6e8b2f5b286d70eb773ae3fdaf8a3ba65
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680293"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356580"

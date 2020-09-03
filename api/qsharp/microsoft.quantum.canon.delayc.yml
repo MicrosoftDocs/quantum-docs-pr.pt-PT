@@ -2,16 +2,16 @@
 uid: microsoft.quantum.canon.delayc
 name: DelayC
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Aplica uma determinada operação com um atraso.
 
 
-  Dada uma operação e uma entrada nessa operação, aplica-se a operação assim que for fornecida uma entrada adicional.
+  Dada a operação e uma entrada para essa operação, aplica a operação assim que for fornecida uma entrada adicional.
 
-  Em particular, `Delay(op, arg, _)` a expressão é `op` uma `arg` operação que se aplica a quando chamada.
+  Em particular, a expressão `Delay(op, arg, _)` é uma operação que se aplica `op` quando é `arg` chamada.
 
-  A `Delay(op,arg,_)` expressão permite atrasar `op`a aplicação de .
+  A expressão `Delay(op,arg,_)` permite atrasar a aplicação de `op` .
 syntax: "operation DelayC (op : ('T => Unit is Ctl), arg : 'T, aux : Unit) : Unit"
 input:
   content: "(op : ('T => Unit is Ctl), arg : 'T, aux : Unit)"
@@ -30,7 +30,7 @@ input:
     functors:
     - Controlled
   - name: arg
-    summary: A entrada a que a operação é aplicada.
+    summary: A entrada à qual a operação é aplicada.
     uid: "'T"
     isLocal: true
   - name: aux
@@ -44,16 +44,16 @@ output:
     uid: Unit
 typeParameters:
 - uid: "'T"
-  summary: O tipo de entrada da operação deve ser adiado.
+  summary: O tipo de entrada da operação a ser adiado.
 functors:
 - Controlled
 seeAlso:
 - microsoft.quantum.canon.delay
 - microsoft.quantum.canon.delayed
 metadata:
-  ms.openlocfilehash: 48648958e013058a14ba2bd4a6f751019cf70d61
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: a52c40abcea7f0923fad50eecf18ef0ec99384a5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675732"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356478"

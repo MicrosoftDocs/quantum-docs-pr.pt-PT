@@ -2,29 +2,29 @@
 uid: microsoft.quantum.canon.decomposedintotimestepsca
 name: DecomposedIntoTimeStepsCA
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Devolve uma operação de implementação do integrador Trotter-Suzuki para uma determinada operação.
 remarks: >-
-  Quando chamada `order` com `1`igual a , esta função devolve uma operação que pode ser simulada pelo integrador Trotter-Suzuki de menor ordem $$ \begin{align} S_1(\lambda) = \prod_{j = 1}^{m} e^{H_j \lambda}, \end{align} $$ onde acompanhámos a notação de [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) e deixarmos que o tempo de evolução (representado pela primeira entrada da operação devolvida), e tenhamos deixado que $\{H_j\}_{j = 1}^{m}$ seja o conjunto de geradores dinâmicos (skew-Hermitiano) integrados de forma que `op(j, lambda, _)` é simulada pelo operador unitário$e.{{H_j
+  Quando chamado com `order` igual a , esta `1` função devolve uma operação que pode ser simulada pelo integrador Trotter-Suzuki de menor ordem $$ \start{align} S_1(\lambda) = \prod_{j = 1}^{m} e^{{{H_j \lambda}, \end{align}08139 e deixe $\lambda$ ser o tempo de evolução (representado pela primeira entrada da operação devolvida), e deixe $ H_j [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) \{ \} _{j = 1}^{m}$ seja o conjunto de geradores dinâmicos (skew-Hermitian) sendo integrados de tal forma que `op(j, lambda, _)` é simulado pelo operador unitário $e^{{H_j \lambda$}
 
 
-  Da mesma `order` forma, um de `2` devoluções o integrador simétrico trotter-Suzuki de segunda ordem $$ \begin {align} S_2(\lambda) = \prod_{j = 1}^{m} e^{H_k \lambda / 2} \prod_{j' = m}^{1} e^{{H_{{j'} \lambda / 2}.
+  Da mesma forma, um `order` dos `2` retornos do integrador simétrico trotter-Suzuki de segunda ordem $$ \start{align} S_2(\lambda) = \prod_{j = 1}^{m} e^{{{H_k \lambda / 2} \prod_{j' = m}^ {1} e^{H_{j'}
 
   \end{align} $$
 
 
-  Valores mais `order` elevados são implementados utilizando a construção recursiva de [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139).
+  Valores partivos mais `order` elevados são implementados utilizando a construção recursiva de [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139).
 syntax: "function DecomposedIntoTimeStepsCA ((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int) : ((Double, 'T) => Unit is Adj + Ctl)"
-references: '- [*D. W. Berry, G. Ahokas, R. Cleve, B. C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
+references: '- [*D. W. Berry, G. Ahokas, R. Cleve, B.C. Sanders*](https://arxiv.org/abs/quant-ph/0508139)'
 input:
   content: "((nSteps : Int, op : ((Int, Double, 'T) => Unit is Adj + Ctl)), trotterOrder : Int)"
   types:
   - name: nSteps
-    summary: O número de operações a decompor em etapas temporais.
+    summary: O número de operações a decompor-se em etapas temporais.
     isPrimitive: true
     uid: Int
   - name: op
-    summary: Uma operação que aceite uma entrada `Int`de índice (tipo) `Double`e uma entrada de tempo (tipo) para decomposição.
+    summary: Uma operação que aceita uma entrada de índice `Int` (tipo) e uma entrada de tempo (tipo ) para `Double` decomposição.
     isOperation: true
     input:
       types:
@@ -43,15 +43,15 @@ input:
     - Controlled
   - name: trotterOrder
     summary: >-
-      Seleciona a ordem do integrador Trotter-Suzuki a utilizar.
+      Selecione a ordem do integrador Trotter-Suzuki a utilizar.
 
-      Ordem 1 e até ordens 2, 4, 6,... são atualmente apoiados.
+      Encomenda 1 e até encomendas 2, 4, 6,... são atualmente apoiados.
     isPrimitive: true
     uid: Int
 output:
   content: ((Double, 'T) => Unit is Adj + Ctl)
   types:
-  - summary: Devolve um integrador unitário que implementa o integrador `Double` Trotter-Suzuki, onde o primeiro parâmetro é o tamanho do passo de integração, e o segundo parâmetro é o alvo agido.
+  - summary: Devolve um integrador unitário de implementação do integrador Trotter-Suzuki, onde o primeiro parâmetro `Double` é o tamanho do passo de integração, e o segundo parâmetro é o alvo acionado.
     isOperation: true
     input:
       types:
@@ -68,11 +68,11 @@ output:
     - Controlled
 typeParameters:
 - uid: "'T"
-  summary: O tipo que cada passo deve agir; tipicamente, `Qubit[]` `Qubit`ou.
+  summary: O tipo que cada passo deve ser pisado; tipicamente, ou `Qubit[]` ou `Qubit` . .
 metadata:
-  ms.openlocfilehash: 1fdb15e9a28c24ac58f026a89779951b982edb27
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e3febe45478ca86a36844d6af75884872cb12680
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680259"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356546"

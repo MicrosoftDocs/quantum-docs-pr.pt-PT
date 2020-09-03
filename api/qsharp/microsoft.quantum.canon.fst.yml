@@ -2,7 +2,7 @@
 uid: microsoft.quantum.canon.fst
 name: Fst
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Dado um par, devolve o seu primeiro elemento.
 syntax: "function Fst (pair : ('T, 'U)) : 'T"
 input:
@@ -18,18 +18,18 @@ input:
 output:
   content: "'T"
   types:
-  - summary: O primeiro `pair`elemento de .
+  - summary: O primeiro elemento `pair` de.
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo do primeiro membro do casal.
+  summary: O tipo do primeiro membro do par.
 - uid: "'U"
   summary: O tipo do segundo membro do par.
 metadata:
-  ms.openlocfilehash: e2479e03c87722a34315257966821827aa3cc72e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: fcba34781aa3a39a0d1318f63e00291fff7883b8
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679342"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356359"

@@ -2,12 +2,12 @@
 uid: microsoft.quantum.canon.cz
 name: CZ
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica o portão de Z (CZ) controlado a um par de qubits.
+  Aplica o portão controlado-Z (CZ) a um par de qubits.
 
 
-  $$ \start{align} 1 & 0 \\ \\ & 0 & \\ \\ 0 & 1 & \\ \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 & -1 \end{align}, $$ onde as linhas e colunas são organizadas como no guia de conceitos quânticos.
+  $$ \start{align} 1 & 0 & 0 & \\ \\ 0 & 0 & 0 & \\ \\ 0 & 0 & 1 & \\ \\ 0 & 0 & 0 & -1 \end{}, $$ onde as linhas e colunas são organizadas como guia no conceito quântico.
 remarks: >-
   Equivalente a:
 
@@ -22,7 +22,7 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: Qubit de controlo para o portão CZ.
+    summary: Controlo qubit para o portão CZ.
     isPrimitive: true
     uid: Qubit
   - name: target
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: ebece418cac216516b6c34ca22ead35275ac37c7
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 56173b63ca5d5da72a350315213671fbb1cf7367
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82680272"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356563"
