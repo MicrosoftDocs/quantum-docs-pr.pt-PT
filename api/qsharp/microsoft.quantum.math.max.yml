@@ -2,8 +2,8 @@
 uid: microsoft.quantum.math.max
 name: Max
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Dado um leque de inteiros, devolve o maior elemento.
+namespace: microsoft.quantum.math
+summary: Dada uma variedade de inteiros, devolve o maior elemento.
 syntax: 'function Max (values : Int[]) : Int'
 input:
   content: '(values : Int[])'
@@ -16,13 +16,13 @@ input:
 output:
   content: Int
   types:
-  - summary: O maior elemento `values`de .
+  - summary: O maior elemento `values` de.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: ef6ae2738eac5c0422038a1f6bfa08ef6f503d4e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ba661aee2a4db3402449330316d344405a8399f5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683271"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334242"

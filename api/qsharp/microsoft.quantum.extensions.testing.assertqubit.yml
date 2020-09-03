@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.testing.assertqubit
 name: AssertQubit
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
-summary: O AssertQubit foi depreceed. Por @"microsoft.quantum.diagnostics.assertqubit" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.testing
+summary: AssertQubit foi depreciado. Por favor, use @"microsoft.quantum.diagnostics.assertqubit" em vez disso.
 syntax: 'operation AssertQubit (expected : Result, q : Qubit) : Unit'
 input:
   content: '(expected : Result, q : Qubit)'
@@ -20,9 +20,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: c5582735cd083a8467bf0ed1935523e310c06f53
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 15acf3f2f86fa20de9e9953672ab17be3cfa907c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682890"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347366"

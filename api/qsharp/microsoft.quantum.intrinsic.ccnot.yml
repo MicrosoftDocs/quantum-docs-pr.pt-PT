@@ -2,8 +2,8 @@
 uid: microsoft.quantum.intrinsic.ccnot
 name: CCNOT
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
-summary: Aplica o portão duplamente controlado -NOT (CCNOT) a três qubits.
+namespace: microsoft.quantum.intrinsic
+summary: Aplica o portão duplamente controlado -NÃO (CCNOT) a três qubits.
 remarks: >-
   Equivalente a:
 
@@ -18,11 +18,11 @@ input:
   content: '(control1 : Qubit, control2 : Qubit, target : Qubit)'
   types:
   - name: control1
-    summary: Qubit de primeiro controlo para o portão CCNOT.
+    summary: Primeiro qubit de controlo para o portão CCNOT.
     isPrimitive: true
     uid: Qubit
   - name: control2
-    summary: Qubit de segundo controlo para o portão CCNOT.
+    summary: Segundo qubit de controlo para o portão CCNOT.
     isPrimitive: true
     uid: Qubit
   - name: target
@@ -38,9 +38,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 54c2fd68454505187152269e65e827e35cc1a249
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: ee04b3d049bef28e2fbf83e1403e6efd1bf163b0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683854"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347145"

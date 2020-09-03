@@ -2,8 +2,8 @@
 uid: microsoft.quantum.extensions.testing.assertqubitstate
 name: AssertQubitState
 type: operation
-namespace: Microsoft.Quantum.Extensions.Testing
-summary: O AssertQubitState foi depreceed. Por @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance" favor, use em vez disso.
+namespace: microsoft.quantum.extensions.testing
+summary: AssertQubitState foi depreciado. Por favor, use @"microsoft.quantum.diagnostics.assertqubitisinstatewithintolerance" em vez disso.
 syntax: 'operation AssertQubitState (expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double) : Unit'
 input:
   content: '(expected : (Microsoft.Quantum.Math.Complex, Microsoft.Quantum.Math.Complex), register : Qubit, tolerance : Double)'
@@ -24,9 +24,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: d8514fb37ada09f6eea7e38dac7b4bc9b6d41f69
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 119cc63ed5f09f767f6b1952bae24fa1953930d2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82682863"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347332"

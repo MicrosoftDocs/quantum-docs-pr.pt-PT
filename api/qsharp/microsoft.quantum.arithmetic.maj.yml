@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.maj
 name: MAJ
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
+namespace: microsoft.quantum.arithmetic
 summary: >-
-  Isto aplica a operação maioritária em vigor a 3 qubits.
+  Isto aplica a operação de maioria no local a 3 qubits.
 
 
-  Se denotarmos o estado do qubit alvo como $\ket{z}$, e os estados de entrada dos qubits de entrada como $\ket{x}$ e $\ket{y}$, então esta operação realiza a seguinte transformação: $\ket{xyz} \seta direita \ket {x \oplus z}} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y,z)..
+  Se denotarmos o estado do qubit alvo como $\ket{z}$, e os estados de entrada dos qubits de entrada como $\ket{x}$ e $\ket{y}$, então esta operação executa a seguinte transformação: $\ket{xyz} \rightarrow \ket{x \oplus z} \ket{y \oplus z} \ket{\operatorname{MAJ} (x, y, z)}}
 syntax: 'operation MAJ (input0 : Qubit, input1 : Qubit, target : Qubit) : Unit'
 input:
   content: '(input0 : Qubit, input1 : Qubit, target : Qubit)'
@@ -21,7 +21,7 @@ input:
     isPrimitive: true
     uid: Qubit
   - name: target
-    summary: Um qubit sobre o qual a função maioritária será aplicada.
+    summary: Um qubit no qual será aplicada a função maioritária.
     isPrimitive: true
     uid: Qubit
 output:
@@ -33,9 +33,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 946ac81b0673cb7ea65aac0bc1a6df26ba09d8eb
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 0046b358890a1272947317c8b706ccd89aef8b6c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676801"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353690"

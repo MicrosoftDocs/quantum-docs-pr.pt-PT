@@ -2,9 +2,9 @@
 uid: microsoft.quantum.math.pi
 name: PI
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Representa a relação entre a circunferência de um círculo e o seu diâmetro, especificada pela constante, π.
-remarks: Consulte [system.math.PI](https://docs.microsoft.com/dotnet/api/system.math.pi) para mais detalhes.
+namespace: microsoft.quantum.math
+summary: Representa a relação da circunferência de um círculo ao seu diâmetro, especificada pela constante, π.
+remarks: Consulte [System.Math.PI](https://docs.microsoft.com/dotnet/api/system.math.pi) para mais detalhes.
 syntax: 'function PI () : Double'
 input:
   content: ()
@@ -15,9 +15,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 692fd1dc9f4801098ab2e2c97362af9fa24603ec
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 249f21d8b8e3d62dc68fa36b03c88b23eab8f3d7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82684156"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89333817"

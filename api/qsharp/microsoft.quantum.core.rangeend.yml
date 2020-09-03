@@ -2,13 +2,13 @@
 uid: microsoft.quantum.core.rangeend
 name: RangeEnd
 type: function
-namespace: Microsoft.Quantum.Core
-summary: Devolve o valor final definido da gama dada, que não é necessariamente o último elemento da sequência.
+namespace: microsoft.quantum.core
+summary: Devolve o valor final definido da gama dada, que não é necessariamente o último elemento na sequência.
 remarks: >-
-  O primeiro elemento de `start`uma expressão de `start+step`alcance é `start+step+step`, o `end` seu segundo elemento é , o terceiro elemento é , etc., até que seja passado.
+  O primeiro elemento de uma expressão de alcance é `start` , o seu segundo elemento é , terceiro elemento é , `start+step` `start+step+step` etc., até `end` ser passado.
 
 
-  Note que o valor final definido de uma gama pode diferir do último elemento na sequência especificada pela gama; por exemplo, num intervalo 0 .. 2 .. 5 o último elemento é 4 mas o valor final é 5.
+  Note-se que o valor final definido de uma gama pode diferir do último elemento na sequência especificada pela gama; por exemplo, num intervalo de 0 .. 2 .. 5 o último elemento é 4, mas o valor final é 5.
 syntax: 'function RangeEnd (range : Range) : Int'
 input:
   content: '(range : Range)'
@@ -23,9 +23,9 @@ output:
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 85e9006f73cd5f7b5a78b57148cbd7ad5b764878
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 08a7e70a8e12ef85902f03d7e24f99d3b5082f38
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82657645"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89337999"

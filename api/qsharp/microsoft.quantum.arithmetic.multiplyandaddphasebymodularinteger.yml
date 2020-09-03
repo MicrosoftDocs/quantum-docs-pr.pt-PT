@@ -2,12 +2,12 @@
 uid: microsoft.quantum.arithmetic.multiplyandaddphasebymodularinteger
 name: MultiplyAndAddPhaseByModularInteger
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: O mesmo que MultiplyAndAddByModularInteger, mas assume que o resumo codifica os inteiros na base QFT.
+namespace: microsoft.quantum.arithmetic
+summary: O mesmo que MultiplyAndAddByModularInteger, mas assume que os sumários e codificam inteiros em QFT.
 remarks: >-
   Assume que `phaseSummand` tem a parte mais alta definida para 0.
 
-  Também assume que o `phaseSummand` valor é inferior a $N$.
+  Também assume que o valor `phaseSummand` é inferior a $N$.
 syntax: 'operation MultiplyAndAddPhaseByModularInteger (constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit'
 input:
   content: '(constMultiplier : Int, modulus : Int, multiplier : Microsoft.Quantum.Arithmetic.LittleEndian, phaseSummand : Microsoft.Quantum.Arithmetic.PhaseLittleEndian)'
@@ -16,14 +16,14 @@ input:
     isPrimitive: true
     uid: Int
   - name: modulus
-    summary: O modulo $N$ a que adição e multiplicação é tomado em relação a.
+    summary: O módulo $N$ que adição e multiplicação é tomada no que diz respeito.
     isPrimitive: true
     uid: Int
   - name: multiplier
-    summary: Um registo quântico que represente um inteiro não assinado cujo valor `summand`deve ser adicionado a cada rótulo de estado base de .
+    summary: Um registo quântico que represente um número inteiro não assinado cujo valor deve ser adicionado a cada rótulo de estado de base de `summand` .
     uid: microsoft.quantum.arithmetic.littleendian
   - name: phaseSummand
-    summary: Um registo quântico que representa um inteiro não assinado para usar como alvo para esta operação.
+    summary: Um registo quântico que representa um número inteiro não assinado para usar como alvo para esta operação.
     uid: microsoft.quantum.arithmetic.phaselittleendian
 output:
   content: Unit
@@ -36,9 +36,9 @@ functors:
 seeAlso:
 - microsoft.quantum.arithmetic.multiplyandaddbymodularinteger
 metadata:
-  ms.openlocfilehash: 029ff8fb767ae018b7462f19a5fe09e83e606c6e
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c1a7fd9523ee9056215cfbd5f2c89134f250bf1c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82672803"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353554"

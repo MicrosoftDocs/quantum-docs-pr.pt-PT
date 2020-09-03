@@ -2,9 +2,9 @@
 uid: microsoft.quantum.intrinsic.i
 name: I
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
-summary: Executa a operação de identidade (sem op) num único qubit.
-remarks: Isto é uma não-operação. Está prevista para a completude e porque às vezes é útil chamar a identidade num algoritmo ou passá-la como parâmetro.
+namespace: microsoft.quantum.intrinsic
+summary: Executa a operação de identidade (no-op) num único qubit.
+remarks: Isto é um não-op. Está previsto para a completude e porque às vezes é útil chamar a identidade num algoritmo ou passá-la como parâmetro.
 syntax: 'operation I (target : Qubit) : Unit'
 input:
   content: '(target : Qubit)'
@@ -21,9 +21,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: f3403e33b859c8fd0943c02126f45327d341be52
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7cd0e0a0cb2f477216c3f85902ce27f65285c82c
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683777"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347009"

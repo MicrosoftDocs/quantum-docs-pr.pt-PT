@@ -2,12 +2,12 @@
 uid: microsoft.quantum.convert.maybebigintasint
 name: MaybeBigIntAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
+namespace: microsoft.quantum.convert
 summary: >-
-  Converte um inteiro grande em equivalente, se possível.
+  Converte um dado grande inteiro para um inteiro equivalente, se possível.
 
-  A função devolve um par de inteiros resultantes e uma bandeira booleana que é verdade, se e apenas se a conversão fosse possível.
-remarks: Consulte [c# BigInteger construtor](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) para mais detalhes.
+  A função devolve um par do inteiro resultante e uma bandeira booleana que é verdade, se e somente se a conversão for possível.
+remarks: Consulte [c# Grande Construtor de BigInteger](https://docs.microsoft.com/dotnet/api/system.numerics.biginteger.-ctor?view=netframework-4.7.2#System_Numerics_BigInteger__ctor_System_Int64_) para mais detalhes.
 syntax: 'function MaybeBigIntAsInt (a : BigInt) : (Int, Bool)'
 input:
   content: '(a : BigInt)'
@@ -24,9 +24,9 @@ output:
     - isPrimitive: true
       uid: Bool
 metadata:
-  ms.openlocfilehash: 98bd88315e9a1cbce2770ba82fd0eed18eac73c3
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3764633cf18bb0f8a3bf0d1ebe4619d25a9b80dc
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677408"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338373"

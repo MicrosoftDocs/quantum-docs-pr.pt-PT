@@ -2,12 +2,12 @@
 uid: microsoft.quantum.intrinsic.cnot
 name: CNOT
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Aplica o portão anti-não (CNOT) a um par de qubits.
+  Aplica o portão NÃO controlado (CNOT) a um par de qubits.
 
 
-  \begin{align} \operatorname{CNOT} \mathrel{:=} \start{bmatrix} 1 & \\ \\ 0 & 0 \\ \\ & & 0 & \\ \\ 0 & & 0 & 0 & 0 & 1 0 & 0 & 1 & 0 \end{bmatrix}, \end{align}
+  \start{align} \operatorname{CNOT} \mathrel{:=} \start{bmatrix} 1 & 0 & 0 & \\ \\ 0 0 & 1 & 0 & 0 \\ \\ 0 & 0 & 0 & 10 \\ \\ & 0 & 1 & 0 \end{bmatrix}, \end{align}
 
 
   onde as linhas e colunas são ordenadas como no guia de conceitos quânticos.
@@ -25,7 +25,7 @@ input:
   content: '(control : Qubit, target : Qubit)'
   types:
   - name: control
-    summary: Qubit de controlo para o portão CNOT.
+    summary: Controlo qubit para o portão CNOT.
     isPrimitive: true
     uid: Qubit
   - name: target
@@ -41,9 +41,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: a690d324f8449a953f59eded299547b354da6417
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 76be7211917c6422beb17c1ca4fccb32c4594d17
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683844"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347128"

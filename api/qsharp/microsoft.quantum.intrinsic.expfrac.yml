@@ -2,23 +2,23 @@
 uid: microsoft.quantum.intrinsic.expfrac
 name: ExpFrac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Aplica o exponencial de um operador pauli multiqubit com um argumento dado por uma fração dyadica.
+  Aplica o exponencial de um operador pauli multi-qubit com um argumento dado por uma fração diádica.
 
 
-  \begin{align} e^{i \pi k [P_0 \otimes P_1 \cdots P_{N-1}] / 2^n}, \end{align} `paulis`onde $P_i$`Length(paulis)`é o elemento $i$th de , e onde $N = $ .
+  \start{align} e^{i \pi k [P_0 \otimes P_1 \cdots P_{N-1}] / 2^n}, \end{align} onde $P_i$ é o elemento $i$th de `paulis` , e onde $N = $ `Length(paulis)` .
 syntax: 'operation ExpFrac (paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[]) : Unit'
 input:
   content: '(paulis : Pauli[], numerator : Int, power : Int, qubits : Qubit[])'
   types:
   - name: paulis
-    summary: Conjunto de valores pauli de monoqubit indicando os fatores do produto tensor em cada qubit.
+    summary: Matriz de valores pauli de um único qubit indicando os fatores do produto tensor em cada qubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
   - name: numerator
-    summary: Numerador ($k$) na representação da fração disadica do ângulo pelo qual o registo qubit deve ser rodado.
+    summary: Numerador ($k$) na representação da fração dedódica do ângulo pelo qual o registo qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: power
@@ -39,9 +39,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 61bd52b3bcce87c6bcbf61ebeb52f720e96fe0f0
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9873cc2a15cb458baba9c6984c050974ad4b17d4
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683812"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89347060"
