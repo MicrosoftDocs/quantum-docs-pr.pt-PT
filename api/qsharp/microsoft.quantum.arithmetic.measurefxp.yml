@@ -2,14 +2,14 @@
 uid: microsoft.quantum.arithmetic.measurefxp
 name: MeasureFxP
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Meça um número fixo, devolve o seu valor como Duplo e repõe todo o registo para zero.
+namespace: microsoft.quantum.arithmetic
+summary: Meça um número de ponto fixo, devolva o seu valor como Double, e repõe todo o registo para zero.
 syntax: 'operation MeasureFxP (fp : Microsoft.Quantum.Arithmetic.FixedPoint) : Double'
 input:
   content: '(fp : Microsoft.Quantum.Arithmetic.FixedPoint)'
   types:
   - name: fp
-    summary: Número fixo a medir.
+    summary: Número de ponto fixo para medir.
     uid: microsoft.quantum.arithmetic.fixedpoint
 output:
   content: Double
@@ -17,9 +17,9 @@ output:
   - isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: e75aedffc516bda5d39358f1b629545d50195fce
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 85efdf3e7c46ea0997d439a03317cfb3f7a9cd16
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82676791"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353622"

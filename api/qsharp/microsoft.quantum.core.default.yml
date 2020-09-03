@@ -2,8 +2,8 @@
 uid: microsoft.quantum.core.default
 name: Default
 type: function
-namespace: Microsoft.Quantum.Core
-summary: Devolve uma instância predefinida do tipo especificado.
+namespace: microsoft.quantum.core
+summary: Devolve uma instância padrão do tipo especificado.
 syntax: "function Default () : 'T"
 input:
   content: ()
@@ -11,16 +11,16 @@ input:
 output:
   content: "'T"
   types:
-  - summary: Valor padrão.
+  - summary: Valor predefinido.
     uid: "'T"
     isLocal: true
 typeParameters:
 - uid: "'T"
-  summary: O tipo do valor padrão a devolver.
+  summary: O tipo de valor padrão a devolver.
 metadata:
-  ms.openlocfilehash: e7e2177965f247b66cb13a0a033208ad1a4700e9
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 83f08955dc060c29c8033e52a6dd31ccd638abd6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82658816"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338237"

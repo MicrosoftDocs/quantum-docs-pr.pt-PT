@@ -2,34 +2,34 @@
 uid: microsoft.quantum.convert.pauliarrayasint
 name: PauliArrayAsInt
 type: function
-namespace: Microsoft.Quantum.Convert
-summary: Codifica um operador pauli multiqubit representado como uma variedade de operadores pauli de monoqubit em um inteiro.
+namespace: microsoft.quantum.convert
+summary: Codifica um operador pauli multi-qubit representado como uma matriz de operadores pauli de um único qubit em um inteiro.
 remarks: >-
-  Cada operador pauli pode ser codificado usando dois bits: $$ \begin {{align} \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11, \quad Z \mapsto 10.
+  Cada operador Pauli pode ser codificado usando dois bits: $$ \start{align} \boldone \mapsto 00, \quad X \mapsto 01, \quad Y \mapsto 11, \quad Z \mapsto 10.
 
   \end{align} $$
 
 
-  Dado um conjunto `[P0, ..., Pn]`de operadores Pauli , esta função devolve um inteiro com expansão binária formada `bits(Pn) ... bits(P0)`pela concatenação dos mapeamentos de cada operador Pauli em ordem grande-endiana.
+  Dada uma série de operadores `[P0, ..., Pn]` Pauli, esta função devolve um inteiro com expansão binária formada pela concatenação dos mapeamentos de cada operador Pauli em ordem de grande `bits(Pn) ... bits(P0)` ponta.
 syntax: 'function PauliArrayAsInt (paulis : Pauli[]) : Int'
 input:
   content: '(paulis : Pauli[])'
   types:
   - name: paulis
-    summary: Uma série de 31 operadores de Moqubit Pauli.
+    summary: Uma série de, no máximo, 31 operadores de Pauli de um único qubit.
     isArray: true
     isPrimitive: true
     uid: Pauli
 output:
   content: Int
   types:
-  - summary: Um inteiro identificando-se `paulis`exclusivamente, como descrito abaixo.
+  - summary: Um inteiro identificando `paulis` exclusivamente, como descrito abaixo.
     isPrimitive: true
     uid: Int
 metadata:
-  ms.openlocfilehash: 170218ccf1ec4ee1183a7a69ff1e0969f595cac4
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: e0ec584f77489d019a501ff31074e730152218f7
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677398"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89338300"

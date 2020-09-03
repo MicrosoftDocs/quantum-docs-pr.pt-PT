@@ -2,30 +2,30 @@
 uid: microsoft.quantum.math.minusd
 name: MinusD
 type: function
-namespace: Microsoft.Quantum.Math
-summary: Devolve a diferença entre duas inputs.
+namespace: microsoft.quantum.math
+summary: Devolve a diferença entre duas entradas.
 syntax: 'function MinusD (a : Double, b : Double) : Double'
 input:
   content: '(a : Double, b : Double)'
   types:
   - name: a
-    summary: A primeira entrada $a$ a ser subtraída.
+    summary: A primeira entrada $a$ a ser subtraído.
     isPrimitive: true
     uid: Double
   - name: b
-    summary: A segunda entrada $b$ a ser subtraída.
+    summary: A segunda entrada $b$ a ser subtraído.
     isPrimitive: true
     uid: Double
 output:
   content: Double
   types:
-  - summary: A diferença $a- b$.
+  - summary: A diferença $a - b$.
     isPrimitive: true
     uid: Double
 metadata:
-  ms.openlocfilehash: 5b12a7d44fb3709a65732fca63f26e86586ee033
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 44bd530c8186a3330c7f07e48e7761ce5645983a
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82686747"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89334208"
