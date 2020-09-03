@@ -2,8 +2,8 @@
 uid: microsoft.quantum.arithmetic.reversedopleca
 name: ReversedOpLECA
 type: function
-namespace: Microsoft.Quantum.Arithmetic
-summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma entrada de grande fim.
+namespace: microsoft.quantum.arithmetic
+summary: Dada uma operação que requer uma entrada pouco endiana, devolve uma nova operação que requer uma grande entrada de luxo.
 syntax: 'function ReversedOpLECA (op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl)) : (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj + Ctl)'
 input:
   content: '(op : (Microsoft.Quantum.Arithmetic.LittleEndian => Unit is Adj + Ctl))'
@@ -24,7 +24,7 @@ input:
 output:
   content: (Microsoft.Quantum.Arithmetic.BigEndian => Unit is Adj + Ctl)
   types:
-  - summary: Uma nova operação que aceita a sua entrada como um grande registo endiano.
+  - summary: Uma nova operação que aceita a sua entrada como um registo de grandes pontas.
     isOperation: true
     input:
       types:
@@ -42,9 +42,9 @@ seeAlso:
 - reversedoplea
 - reversedoplec
 metadata:
-  ms.openlocfilehash: 9faee33430152e635b73526ec3637294e1f33f8b
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c2a35c36125b3055511ed35597294a2a9e13b37f
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82675145"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353027"

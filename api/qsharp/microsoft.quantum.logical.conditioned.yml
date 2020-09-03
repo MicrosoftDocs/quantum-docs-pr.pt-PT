@@ -2,13 +2,13 @@
 uid: microsoft.quantum.logical.conditioned
 name: Conditioned
 type: function
-namespace: Microsoft.Quantum.Logical
-summary: Devolve um de dois valores, dependendo do valor de uma condição booleana.
+namespace: microsoft.quantum.logical
+summary: Devolve um de dois valores, dependendo do valor de uma condição Booleana.
 remarks: >-
-  Ao `?|` contrário do operador, esta função não faz curto-circuito, de modo a que ambas as inputs sejam totalmente avaliadas.
+  Ao contrário do `?|` operador, esta função não faz um curto-circuito, de modo a que ambas as entradas sejam totalmente avaliadas.
 
 
-  Até o comportamento de curto-circuito, os seguintes são equivalentes:
+  Até um comportamento de curto-circuito, os seguintes são equivalentes:
 
 
   ```Q#
@@ -23,27 +23,27 @@ input:
   content: "(condition : Bool, ifTrue : 'T, ifFalse : 'T)"
   types:
   - name: condition
-    summary: Uma condição usada para controlar a entrada devolvida.
+    summary: Uma condição usada para controlar a entrada que é devolvida.
     isPrimitive: true
     uid: Bool
   - name: ifTrue
-    summary: O valor a `condition` ser `true`devolvido quando é.
+    summary: O valor a devolver quando `condition` `true` for.
     uid: "'T"
     isLocal: true
   - name: ifFalse
-    summary: O valor a `condition` ser `false`devolvido quando é.
+    summary: O valor a devolver quando `condition` `false` for.
     uid: "'T"
     isLocal: true
 output:
   content: "'T"
   types:
-  - summary: '`ifTrue`se `condition` `true`for, `ifFalse` e de outra forma.'
+  - summary: '`ifTrue` se `condition` `true` for, e `ifFalse` de outra forma.'
     uid: "'T"
     isLocal: true
 metadata:
-  ms.openlocfilehash: c5a255fe0434c7dfc9bf49f1a1c9c6be03cd8055
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 98d1cf77257fc79ba12fe383c0c2e49a25bdee10
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82674069"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346159"

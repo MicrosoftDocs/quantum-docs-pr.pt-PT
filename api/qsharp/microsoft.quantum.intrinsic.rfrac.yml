@@ -2,17 +2,17 @@
 uid: microsoft.quantum.intrinsic.rfrac
 name: RFrac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Aplica uma rotação sobre o eixo Pauli dado por um ângulo especificado como uma fração disadica.
+  Aplica uma rotação sobre o eixo Pauli dado por um ângulo especificado como uma fração diádica.
 
 
-  \start{align} R_{\mu}(n, k) \mathrel{:=} e^i \pi n \sigma_{\mu} / 2^k}, \end{align} onde $\mu \in \{I, X, Y, Z\}$.
+  \start{align} R_{\mu}(n, k) \mathrel{:=} e^{i \pi \n \sigma_{\mu} / 2^k}, \end{align} onde $\mu \in \{ I, X, Y, Z \} $.
 
 
   > [!WARNING]
 
-  > Esta operação utiliza a @"microsoft.quantum.intrinsic.r"convenção de sinalização **oposta** de .
+  > Esta operação utiliza a convenção de sinais **oposto** de @"microsoft.quantum.intrinsic.r" .
 remarks: >-
   Equivalente a:
 
@@ -29,11 +29,11 @@ input:
   content: '(pauli : Pauli, numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: pauli
-    summary: O operador Pauli deve ser exponenciado para formar a rotação.
+    summary: Operador Pauli a ser exponencial para formar a rotação.
     isPrimitive: true
     uid: Pauli
   - name: numerator
-    summary: Numerador na representação da fração disadica do ângulo pelo qual o qubit deve ser rodado.
+    summary: Numerador na representação da fração dedódica do ângulo pelo qual o qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: power
@@ -53,9 +53,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: dc9f0ca68e1528ee7a36ef1503785cf60c08567c
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 00baacab18c2fa77946abf1f0220da6016b688e6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683689"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346652"

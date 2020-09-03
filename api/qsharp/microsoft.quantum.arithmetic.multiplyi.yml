@@ -2,24 +2,24 @@
 uid: microsoft.quantum.arithmetic.multiplyi
 name: MultiplyI
 type: operation
-namespace: Microsoft.Quantum.Arithmetic
-summary: Multiplique o `xs` inteiro por `ys` inteiro e `result`guarde o resultado em , que deve ser zero inicialmente.
+namespace: microsoft.quantum.arithmetic
+summary: Multiplique o inteiro `xs` por inteiro `ys` e guarde o resultado em , `result` que deve ser zero inicialmente.
 remarks: >-
   Usa uma abordagem padrão de mudança e adição para implementar a multiplicação.
 
-  A versão controlada foi melhorada copiando $x_i$ para um qubit de oscilação condicionado nos qubits de controlo e, em seguida, controlando a adição no qubit de oscilação.
+  A versão controlada foi melhorada copiando $x_i$ para um qubit de ancilla condicionado nos qubits de controlo e, em seguida, controlando a adição no qubit de ancilla.
 syntax: 'operation MultiplyI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian)'
   types:
   - name: xs
-    summary: $n multiplicand de bit $-bit (LittleEndian)
+    summary: multiplicand $n$-bit (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: ys
-    summary: multiplicador $n$-bit (LittleEndian)
+    summary: multiplicador de $n$-bit (LittleEndian)
     uid: microsoft.quantum.arithmetic.littleendian
   - name: result
-    summary: O resultado de $2n$-bit (LittleEndian),{0}deve estar no estado $\ket $$ inicialmente.
+    summary: Resultado de $2n$-bit (LittleEndian), deve estar no estado $\ket {0} $ inicialmente.
     uid: microsoft.quantum.arithmetic.littleendian
 output:
   content: Unit
@@ -30,9 +30,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: fcb55b47c0d5ca82736e8c3da14190daffd2b414
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 67e1ef577bf36cf524d2468bc191d2b381c800df
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679493"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89353384"

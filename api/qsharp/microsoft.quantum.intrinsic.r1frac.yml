@@ -2,19 +2,19 @@
 uid: microsoft.quantum.intrinsic.r1frac
 name: R1Frac
 type: operation
-namespace: Microsoft.Quantum.Intrinsic
+namespace: microsoft.quantum.intrinsic
 summary: >-
-  Aplica uma rotação sobre o{1}estado $\ket $ por um ângulo especificado como uma fração disadica.
+  Aplica uma rotação sobre o estado $\ket {1} $ por um ângulo especificado como uma fração dedídica.
 
 
-  \begin{align} R_1(n, k) \mathrel{:=} \operatorname{diag}(1, e^{i \pi k / 2^n}).
+  \start{align} R_1(n, k) \mathrel{:=} \operatorname{diag}(1, e^{i \pi k / 2^n}).
 
-  \fim{align}
+  \end{align}
 
 
   > [!WARNING]
 
-  > Esta operação utiliza a @"microsoft.quantum.intrinsic.r"convenção de sinalização **oposta** de , e @"microsoft.quantum.intrinsic.r1"não inclui o fator de $1/ 2$ incluído por .
+  > Esta operação utiliza a convenção de sinais **oposto** de @"microsoft.quantum.intrinsic.r" , e não inclui o fator de $1/ 2$ incluído por @"microsoft.quantum.intrinsic.r1" .
 remarks: >-
   Equivalente a:
 
@@ -31,7 +31,7 @@ input:
   content: '(numerator : Int, power : Int, qubit : Qubit)'
   types:
   - name: numerator
-    summary: Numerador na representação da fração disadica do ângulo pelo qual o qubit deve ser rodado.
+    summary: Numerador na representação da fração dedódica do ângulo pelo qual o qubit deve ser rodado.
     isPrimitive: true
     uid: Int
   - name: power
@@ -51,9 +51,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 45fa756e94be8b580c909004016e0f40861111c1
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1cfaf195a3c811d43df50548771759f6dbf3fdc6
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82683737"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89346754"
