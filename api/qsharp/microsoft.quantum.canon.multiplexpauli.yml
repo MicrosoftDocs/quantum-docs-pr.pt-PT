@@ -2,41 +2,41 @@
 uid: microsoft.quantum.canon.multiplexpauli
 name: MultiplexPauli
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma rotação Pauli condicionada numa série de qubits.
+  Aplica uma rotação Pauli condicionada a uma matriz de qubits.
 
 
-  Isto aplica uma operação unitária controlada multiplicada que executa rotações por ângulo $\theta_j$ sobre o operador de Pauli de um único qubit $P$ quando controlado pelo estado de número de $n$-qubit $\ket{j}$.
+  Isto aplica uma operação unitária controlada por multiplique que executa rotações por ângulo $\theta_j$ sobre o operador pauli de um único qubit $P$ quando controlado pelo estado de número de $n$-qubit $\ket{j}$.
 
   Em particular, a ação desta operação é representada pelo unitário
 
 
   $$ \begin{align} U = \sum^{2^n - 1}_{j=0} \ket{j}\bra{j} \otimes e^{i P \theta_j}.
 
-  \fim{align}
+  \end{align}
 
 
   ##
-remarks: '`coefficients`será acolchoado com elementos $\theta_j = 0,0$ se forem especificados menos de $2^n$.'
+remarks: '`coefficients` serão acolchoados com elementos $\theta_j = 0,0$ se forem especificados menos de $2^n$ .'
 syntax: 'operation MultiplexPauli (coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit'
 input:
   content: '(coefficients : Double[], pauli : Pauli, control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit)'
   types:
   - name: coefficients
-    summary: Um conjunto de coeficientes de $2^n$ $theta_j$. O coeficiente de $j$th indexa o estado número $\ket{j}$ codificado em formato pequeno endiano.
+    summary: Matriz de até $2^n$ coeficientes $\theta_j$. O coeficiente de $j$th indexa o estado numérico $\ket{j}$ codificado em formato pequeno-endiano.
     isArray: true
     isPrimitive: true
     uid: Double
   - name: pauli
-    summary: O operador Pauli $P$ que determina o eixo de rotação.
+    summary: O operador pauli $P$ que determina o eixo de rotação.
     isPrimitive: true
     uid: Pauli
   - name: control
-    summary: $n registo de controlo de qubit que codifica o número indica $\ket{j}$ em formato pequeno endiano.
+    summary: $n registo de controlo de $-qubit que codifica o número diz $\ket{j}$ em formato pequeno-endian.
     uid: microsoft.quantum.arithmetic.littleendian
   - name: target
-    summary: Registo qubit único que é rodado por $e^{i P \theta_j}$.
+    summary: Registo de qubit único que é rodado por $e^{i P \theta_j}$.
     isPrimitive: true
     uid: Qubit
 output:
@@ -50,9 +50,9 @@ functors:
 seeAlso:
 - approximatelymultiplexpauli
 metadata:
-  ms.openlocfilehash: 202a1caec428d83027de127b08f05a8e07a63caa
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 53905a1537a81a3abbab32f350e748dd674cdebf
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678769"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355894"

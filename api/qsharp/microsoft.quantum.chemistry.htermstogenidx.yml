@@ -2,34 +2,34 @@
 uid: microsoft.quantum.chemistry.htermstogenidx
 name: HTermsToGenIdx
 type: function
-namespace: Microsoft.Quantum.Chemistry
-summary: Converte um índice para um `HTerm[]` termo Hamiltonian em formato de dados para um GeneratorIndex.
+namespace: microsoft.quantum.chemistry
+summary: Converte um índice para um termo Hamiltonian em `HTerm[]` formato de dados para um GeneratorIndex.
 syntax: 'function HTermsToGenIdx (data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int) : Microsoft.Quantum.Simulation.GeneratorIndex'
 input:
   content: '(data : Microsoft.Quantum.Chemistry.HTerm[], termType : Int[], idx : Int)'
   types:
   - name: data
-    summary: Input dados `HTerm[]` em formato.
+    summary: Inserir dados em `HTerm[]` formato.
     isArray: true
     uid: microsoft.quantum.chemistry.hterm
   - name: termType
-    summary: Informações adicionais adicionadas ao GeneratorIndex.
+    summary: Informação adicional adicionada ao GeneratorIndex.
     isArray: true
     isPrimitive: true
     uid: Int
   - name: idx
-    summary: Índice para um termo do Hamiltonian
+    summary: Índice a um termo do Hamiltonian
     isPrimitive: true
     uid: Int
 output:
   content: Microsoft.Quantum.Simulation.GeneratorIndex
   types:
-  - summary: Um GeneratorIndex que representa um termo `data[idx]`Hamiltoniano representado `termType`por, juntamente com informações adicionais adicionadas por .
+  - summary: Um GeneratorIndex que representa um termo Hamiltoniano representado `data[idx]` por, juntamente com informações adicionais adicionadas por `termType` .
     uid: microsoft.quantum.simulation.generatorindex
 metadata:
-  ms.openlocfilehash: 6c7c235cc1d3ccb5ea0b739c22a5d2c5c33129ce
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 451332a2ad0ade4871920a7da34d8af0afd990c9
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82677571"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89354217"

@@ -2,19 +2,19 @@
 uid: microsoft.quantum.canon.noop
 name: NoOp
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Executa a operação de identidade (sem op) num argumento.
+  Executa a operação de identidade (no-op) num argumento.
 
 
   Esta operação tem um valor de qualquer tipo e não lhe faz nada.
 
   Isto pode ser útil sempre que se espera uma entrada de um tipo de operação, mas não devem ser tomadas medidas.
 
-  Por exemplo, se uma determinada síndrome de correção `NoOp<Qubit[]>` de erros indicar que não ocorreu nenhum erro, pode ser o procedimento correto de recuperação.
+  Por exemplo, se uma síndrome de correção de erros específica indicar que não ocorreu nenhum erro, `NoOp<Qubit[]>` pode ser o procedimento correto de recuperação.
 
-  Da mesma forma, se uma operação espera `NoOp<Qubit[]>` um procedimento de preparação do Estado como entrada, pode ser usado para preparar o estado $\ket {0 \cdots 0}$.
-remarks: Em quase todos os casos, o parâmetro do tipo para `NoOp` deve ser especificado explicitamente. Por exemplo, `NoOp<Qubit>` é <xref:microsoft.quantum.intrinsic.i>idêntico a .
+  Da mesma forma, se uma operação espera um procedimento de preparação do estado como entrada, `NoOp<Qubit[]>` pode ser usado para preparar o estado $\ket{0 \cdots 0}$.
+remarks: Em quase todos os casos, o parâmetro do tipo `NoOp` para deve ser especificado explicitamente. Por exemplo, `NoOp<Qubit>` é idêntico a <xref:microsoft.quantum.intrinsic.i> .
 syntax: "operation NoOp (input : 'T) : Unit"
 input:
   content: "(input : 'T)"
@@ -34,9 +34,9 @@ functors:
 seeAlso:
 - microsoft.quantum.intrinsic.i
 metadata:
-  ms.openlocfilehash: 74c85340e065929feabb81d7e97339f80255c0f6
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 9af76ff7f2c559aef0f940ff3c56e6f8d8cdbb60
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678725"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355985"

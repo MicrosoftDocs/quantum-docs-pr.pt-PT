@@ -2,14 +2,14 @@
 uid: microsoft.quantum.chemistry.jordanwigner.prepareunitarycoupledclusterstate
 name: PrepareUnitaryCoupledClusterState
 type: operation
-namespace: Microsoft.Quantum.Chemistry.JordanWigner
-summary: Preparação do Estado do Estado de agrupamento unitário do estado experimental
+namespace: microsoft.quantum.chemistry.jordanwigner
+summary: Preparação unitária do estado de agrupamento de agrupamentos do estado experimental
 syntax: 'operation PrepareUnitaryCoupledClusterState (initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], trotterStepSize : Double, qubits : Qubit[]) : Unit'
 input:
   content: '(initialStatePreparation : (Qubit[] => Unit), clusterOperator : Microsoft.Quantum.Chemistry.JordanWigner.JordanWignerInputState[], trotterStepSize : Double, qubits : Qubit[])'
   types:
   - name: initialStatePreparation
-    summary: Unitário para preparar o estado de julgamento inicial.
+    summary: Unitário para preparar o estado inicial do julgamento.
     isOperation: true
     input:
       types:
@@ -37,9 +37,9 @@ output:
   - isPrimitive: true
     uid: Unit
 metadata:
-  ms.openlocfilehash: 9f9f3ae3be33e1ec85524acf13b74b9cf60dc99f
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 1f4308a112aa9855836c038ec061570dcc166ed0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82663813"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89339274"

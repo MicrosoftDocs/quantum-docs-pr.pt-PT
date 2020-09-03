@@ -2,10 +2,10 @@
 uid: microsoft.quantum.canon.permutequbits
 name: PermuteQubits
 type: operation
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: Permutes qubits utilizando a operação SWAP.
 examples: >-
-  Dada a encomenda = [2, 1,0] e registar $\ket{\alpha_0} \ket{\alpha_1} \ket{\alpha_2}$, PermuteQubits muda o registo em $\ket{\alpha_2} \ket{\alpha_1} \ket{\alpha_0}$
+  Dado o pedido = [2, 1, 0] e registar $\ket{\alpha_0} \ket{\alpha_1} \ket{\alpha_2}$, PermuteQubits altera o registo em $\ket{{\alpha_2} \ket{\alpha_1} \ket{\alpha_0}$
 
 
   ```qsharp
@@ -22,12 +22,12 @@ input:
   content: '(ordering : Int[], register : Qubit[])'
   types:
   - name: ordering
-    summary: Descreve a nova ordem dos qubits, onde o qubit no índice i agora vou encomendar[i].
+    summary: Descreve a nova encomenda dos qubits, onde o qubit no índice i estará agora a encomendar[i].
     isArray: true
     isPrimitive: true
     uid: Int
   - name: register
-    summary: Registo qubit a ser agido.
+    summary: Registo qubit para ser agido.
     isArray: true
     isPrimitive: true
     uid: Qubit
@@ -40,9 +40,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: e6f0db4538980d47c26a6947223546c4beb3a180
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 017fd0ec49bc9bb0b7f823a942cf6df02a37ce87
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678606"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355815"

@@ -2,9 +2,9 @@
 uid: microsoft.quantum.canon.multiplexerfromgenerator
 name: MultiplexerFromGenerator
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
-  Devolve uma operação unitária controlada por multiplicação $U$ que aplica um $V_j$ unitário quando controlado pelo estado n-qubit número $\ket{j}$.
+  Devolve uma operação unitária controlada por multiplicões $U$ que aplica uma $V_j$ unitária quando controlada pelo estado do número n-qubit $\ket{j}$.
 
 
   $U = \sum^{2^n-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
@@ -13,7 +13,7 @@ input:
   content: '(unitaryGenerator : (Int, (Int -> (Qubit[] => Unit is Adj + Ctl))))'
   types:
   - name: unitaryGenerator
-    summary: Uma túnica onde `Int` o primeiro elemento é o número de `(Int -> ('T => () is Adj + Ctl))` unitários $N$, e o segundo elemento é uma função que leva um inteiro $j$ em $[0,N-1]$ e produz a operação unitária $V_j$.
+    summary: Um tuple onde o primeiro elemento `Int` é o número de unitários $N$, e o segundo elemento é uma `(Int -> ('T => () is Adj + Ctl))` função que leva um inteiro $j$ em $[0,N-1]$ e produz a operação unitária $V_j$.
     types:
     - isPrimitive: true
       uid: Int
@@ -40,7 +40,7 @@ input:
 output:
   content: ((Microsoft.Quantum.Arithmetic.LittleEndian, Qubit[]) => Unit is Adj + Ctl)
   types:
-  - summary: Uma operação unitária com controlo multiplicado $U$ `unitaryGenerator`que aplica unitários descritos por .
+  - summary: Uma operação unitária controlada por multiplicásscimento $U$ que aplica unitários descritos por `unitaryGenerator` .
     isOperation: true
     input:
       types:
@@ -58,9 +58,9 @@ output:
 seeAlso:
 - microsoft.quantum.canon.multiplexoperationsfromgenerator
 metadata:
-  ms.openlocfilehash: 1000e7606b7afed988687839cc85442a0dd9ff30
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: d48b87b9b2e2aea6f49503290a1ac372f33c46a2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678835"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356053"

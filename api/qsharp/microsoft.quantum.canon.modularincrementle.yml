@@ -2,8 +2,8 @@
 uid: microsoft.quantum.canon.modularincrementle
 name: ModularIncrementLE
 type: operation
-namespace: Microsoft.Quantum.Canon
-summary: ModularIncrementLE foi depreciado. Por @"microsoft.quantum.arithmetic.modularincrementbyinteger" favor, use em vez disso.
+namespace: microsoft.quantum.canon
+summary: ModularIncrementLE foi depreciado. Por favor, use @"microsoft.quantum.arithmetic.modularincrementbyinteger" em vez disso.
 syntax: 'operation ModularIncrementLE (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit'
 input:
   content: '(increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -25,9 +25,9 @@ functors:
 - Adjoint
 - Controlled
 metadata:
-  ms.openlocfilehash: 1fa8bf5f3f7f2f3fd69d13e1f94dea728e8036cf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: c32b421cd9398d022b61d105685a10648ba5ddd5
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678934"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356087"

@@ -2,8 +2,8 @@
 uid: microsoft.quantum.canon.littleendiantobigendian
 name: LittleEndianToBigEndian
 type: function
-namespace: Microsoft.Quantum.Canon
-summary: LittleEndianToBigEndian foi depreciado. Por @"microsoft.quantum.arithmetic.littleendianasbigendian" favor, use em vez disso.
+namespace: microsoft.quantum.canon
+summary: LittleEndianToBigEndian foi depreciado. Por favor, use @"microsoft.quantum.arithmetic.littleendianasbigendian" em vez disso.
 syntax: 'function LittleEndianToBigEndian (input : Microsoft.Quantum.Arithmetic.LittleEndian) : Microsoft.Quantum.Arithmetic.BigEndian'
 input:
   content: '(input : Microsoft.Quantum.Arithmetic.LittleEndian)'
@@ -15,9 +15,9 @@ output:
   types:
   - uid: microsoft.quantum.arithmetic.bigendian
 metadata:
-  ms.openlocfilehash: 0e3b283d7bfecf2c67ed590bb7cb3582e9d3dc6d
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 3f671fa70841bcc4997f0d75c29f728c38536ab2
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82679027"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89356146"

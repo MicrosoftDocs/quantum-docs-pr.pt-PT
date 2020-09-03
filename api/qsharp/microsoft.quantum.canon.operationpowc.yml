@@ -2,20 +2,20 @@
 uid: microsoft.quantum.canon.operationpowc
 name: OperationPowC
 type: function
-namespace: Microsoft.Quantum.Canon
+namespace: microsoft.quantum.canon
 summary: >-
   Eleva uma operação a uma potência.
 
   O modificador `C` indica que a operação é controlável.
 
 
-  Isto é, dada uma operação que representa um portão $U$, devolve uma nova operação $U^m$ por uma potência $m$.
+  Ou seja, dada uma operação que representa um portão $U$, devolve uma nova operação $U^m$ por uma potência $m$.
 syntax: "function OperationPowC (op : ('T => Unit is Ctl), power : Int) : ('T => Unit is Ctl)"
 input:
   content: "(op : ('T => Unit is Ctl), power : Int)"
   types:
   - name: op
-    summary: Uma operação $U$ representando o portão a repetir.
+    summary: Uma operação $U$ representando o portão a ser repetido.
     isOperation: true
     input:
       types:
@@ -34,7 +34,7 @@ input:
 output:
   content: ('T => Unit is Ctl)
   types:
-  - summary: Uma nova operação que represente $U^m$, onde $m = \texttt{power}$.
+  - summary: Uma nova operação que representa $U^m$, onde $m = \texttt{power}$.
     isOperation: true
     input:
       types:
@@ -52,9 +52,9 @@ typeParameters:
 seeAlso:
 - microsoft.quantum.canon.operationpow
 metadata:
-  ms.openlocfilehash: b3714baaa9eb0f0769b5e141e9ba3f0dce7c70cf
-  ms.sourcegitcommit: db23885adb7ff76cbf8bd1160d401a4f0471e549
+  ms.openlocfilehash: 7e787866975b179d08ca713e229c48634212cca0
+  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 05/01/2020
-  ms.locfileid: "82678675"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89355849"
