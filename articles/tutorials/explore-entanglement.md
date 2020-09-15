@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d815a9a25b8ba5e9489b6d3d27fb0d64ab4aaa1d
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
+ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863446"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90063245"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Explorar o entrelaçamento com Q\#
 
@@ -112,7 +112,7 @@ Uma Q# operação é uma sub-rotina quântica. Ou seja, é uma rotina callable q
 
 Os argumentos para uma operação são especificados como uma cadeia de identificação, entre parênteses.
 
-O tipo de retorno da operação é especificado após os dois pontos. Neste caso, a operação `SetQubitState` não tem retorno, pelo qual é marcada como `Unit` de retorno. Este é o Q# equivalente `unit` a em F#, que é aproximadamente análogo a `void` em C#, e um tuple vazio `Tuple[()]` () em Python.
+O tipo de retorno da operação é especificado após os dois pontos. Neste caso, a operação `SetQubitState` não tem retorno, pelo qual é marcada como `Unit` de retorno. Este é o Q# equivalente `unit` a em F#, que é aproximadamente análogo a `void` em C#, e um tuple vazio em Python `()` (, representado pelo tipo de sugestão). `Tuple[()]`
 
 Usaste duas operações quânticas na tua primeira Q# operação:
 
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Conforme mencionado na descrição geral, as nossas estatísticas para o primeiro qubit não foram alteradas (uma probabilidade de 50-50 de um 0 ou de um 1), mas quando medirmos o segundo qubit, este será __sempre__ igual ao que medimos para o primeiro qubit, uma vez que estão entrelaçados!
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 A [pesquisa do](xref:microsoft.quantum.quickstarts.search) tutorial Grover mostra-lhe como construir e executar a pesquisa grover, um dos algoritmos de computação quântica mais populares e oferece um bom exemplo de um Q# programa que pode ser usado para resolver problemas reais com computação quântica.  
 
