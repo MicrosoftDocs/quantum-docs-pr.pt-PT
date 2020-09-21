@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1110f32a6486de1a346b115fa928a098749b6690
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 20e9f8126a290f52701b6b0e525d7669a605d4c9
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866881"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759684"
 ---
 # <a name="improving-documentation"></a>Melhorar a documentação
 
@@ -52,7 +52,7 @@ Se quiser incluir o código do [repositório de amostras,](https://github.com/Mi
 :::code language="qsharp" source="~/quantum/samples/algorithms/chsh-game/Game.qs" range="4-8":::
 ```
 
-Este comando importará as linhas 4 a 8 [ `Game.qs` do ficheiro da `chsh-game` amostra,](https://github.com/microsoft/Quantum/blob/master/samples/algorithms/chsh-game/Game.qs)marcando-as como Q# código para efeitos de prostaxe.
+Este comando importará as linhas 4 a 8 [ `Game.qs` do ficheiro da `chsh-game` amostra,](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)marcando-as como Q# código para efeitos de prostaxe.
 Utilizando este comando, pode evitar duplicar o código entre os artigos conceptuais e o repositório de amostras, de modo que o código de amostra na documentação esteja sempre o mais atualizado possível.
 
 ## <a name="contributing-to-the-api-references"></a>Contribuindo para as Referências da API

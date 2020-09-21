@@ -1,22 +1,22 @@
 ---
-title: Q#Estrutura de Arquivos
+title: Q# Estrutura de Arquivos
 description: Descreve a estrutura e a sintaxe de um Q# ficheiro.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.filestructure
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ac73962b1a718cd04aa87ee3476c66781fe3ac2b
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 98b3a2e35186989b8191cc566a5d5310bc26eafc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867935"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833315"
 ---
-# <a name="no-locq-file-structure"></a>Q#Estrutura de Arquivos
+# <a name="no-locq-file-structure"></a>Q# Estrutura de Arquivos
 
 Um Q# ficheiro consiste numa sequência de *declarações de espaço de nome*.
 Cada declaração de espaço de nome contém declarações para tipos, operações e funções definidos pelo utilizador, e pode conter qualquer número de cada tipo de declaração e em qualquer ordem.
@@ -76,7 +76,7 @@ Por exemplo, dada uma operação denominada `Op` a partir do espaço de `X.Y` no
 Normalmente, é melhor incluir um espaço de nome através de uma `open` diretiva.
 A utilização de um nome totalmente qualificado é necessária se dois espaços de nome definirem construções com o mesmo nome, e a fonte atual utiliza construções de ambos.
 
-Q#segue as mesmas regras para nomear como outras línguas .NET.
+Q# segue as mesmas regras para nomear como outras línguas .NET.
 No entanto, Q# não suporta referências relativas a espaços de nome.
 Por exemplo, se o espaço de nome `a.b` estiver aberto, uma referência a uma operação nomeada `c.d` *não* se resolve a uma operação com nome completo `a.b.c.d` .
 
@@ -91,7 +91,7 @@ Evite colocar várias declarações numa única linha.
 
 ## <a name="statement-blocks"></a>Blocos de Declaração
 
-Q#as declarações são agrupadas em blocos de declaração, que são contidos com aparelhos `{ }` . Um bloco de declaração começa com uma abertura `{` e termina com um fecho `}` .
+Q# as declarações são agrupadas em blocos de declaração, que são contidos com aparelhos `{ }` . Um bloco de declaração começa com uma abertura `{` e termina com um fecho `}` .
 
 Um bloco de declaração que seja lexicamente fechado dentro de outro bloco é considerado um sub-bloco do bloco contendo; contendo e sub-blocos também são chamados blocos exteriores e internos.
 

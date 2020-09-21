@@ -4,18 +4,18 @@ description: Microsoft Quantum Development Kit avisos e informações de softwar
 services: service-name-with-dashes-AZURE-ONLY
 keywords: Não adicione nem edite as palavras-chave sem consultar o perito em SEO.
 author: QuantumWriter
-ms.author: MSFT-alias-person-or-DL
+ms.author: v-benbra
 ms.date: 10/09/2017
 ms.topic: article-type-from-white-list
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d76e9c8532dd7818941d182773a8f85a86becee
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 939dc681d6b9a89f02fd1f392b7fd84067d98e8f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869754"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834130"
 ---
 # <a name="third-party-software-notices-and-information"></a>AVISOS E INFORMAÇÕES DE SOFTWARE DE TERCEIROS
 
@@ -268,7 +268,7 @@ O SOFTWARE É FORNECIDO "COMO ESTÁ", SEM GARANTIA DE QUALQUER TIPO, EXPRESSO OU
 
 Salvo indicação em contrário, a biblioteca FParsec em forma de origem e binária é distribuída sob a Licença BSD Simplificada. A Licença BSD Simplificada (também conhecida como BSD). "Licença BSD de 2 cláusulas") é uma licença simples e permissiva que é compatível com a OSI. 
 
-A FParsec incorpora dados derivados da Base de Dados de Caracteres Unicode v. 8.0.0, Copyright (c) 1991\u20122015 Unicode, Inc., que é distribuído nos seguintes termos:http://www.unicode.org/terms_of_use.html#Exhibit1 
+A FParsec incorpora dados derivados da Base de Dados de Caracteres Unicode v. 8.0.0, Copyright (c) 1991\u20122015 Unicode, Inc., que é distribuído nos seguintes termos: http://www.unicode.org/terms_of_use.html#Exhibit1 
 
 A documentação na pasta Doc é licenciada ao abrigo da Licença Não Comercial 3.0 da Creative Commons Attribution‐NonCommercial 3.0. Esta licença Creative Commons não permite que você use a documentação para fins comerciais sem permissão. Isto significa, por exemplo, que não pode vender a documentação em forma de livro para lucro ou colocá-la numa quinta de conteúdos web para ganhar dinheiro com anúncios. No entanto, é claro que pode utilizar a documentação num contexto comercial (por exemplo, colocá-la na intranet de uma sociedade comercial), desde que não esteja a tentar ganhar dinheiro diretamente com o texto da documentação. 
 
@@ -284,6 +284,6 @@ Este software é fornecido pelos detentores de direitos autorais "como está" e 
 
 2.2 Creative Commons Atribuição‐NonCommercial 3.0 Licença não declarada
 
-Resumo:https://creativecommons.org/licenses/by-nc/3.0/
+Resumo: https://creativecommons.org/licenses/by-nc/3.0/
 
-O texto da licença completa:https://creativecommons.org/licenses/by-nc/3.0/legalcode 
+O texto da licença completa: https://creativecommons.org/licenses/by-nc/3.0/legalcode 

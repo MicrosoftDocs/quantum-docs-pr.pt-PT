@@ -8,12 +8,12 @@ uid: microsoft.quantum.chemistry.examples.endtoend
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 78d6488ed5e3972f85f1e6cf1ba2d197596c4cc3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 528c34ea9b28b2f9b8f9a8bad681557f44bfcdaa
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869312"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759720"
 ---
 # <a name="end-to-end-with-nwchem"></a>Ponto a ponto com NWChem #
 
@@ -22,7 +22,7 @@ Antes de prosseguir com este exemplo, certifique-se de que instalou o Docker, se
 
 Para obter mais informações:
 - [Estrutura dos decks de entrada NWChem](https://github.com/nwchemgit/nwchem/wiki/Getting-Started#input-file-structure)
-    - [Comandos do deck de entrada para uso com o Kit de Desenvolvimento Quântico](https://github.com/nwchemgit/nwchem/tree/master/contrib/quasar)
+    - [Comandos do deck de entrada para uso com o Kit de Desenvolvimento Quântico](https://github.com/nwchemgit/nwchem/tree/main/contrib/quasar)
 - [Instalação da biblioteca de química e dependências](xref:microsoft.quantum.chemistry.concepts.installation)
 - [Contagem de recursos](xref:microsoft.quantum.chemistry.examples.resourcecounts)
 
@@ -65,7 +65,7 @@ Get-Command -Module InvokeNWChem
 ```
 
 Em seguida, importaremos o `Get-GateCount` comando fornecido com a amostra **GetGateCount.**
-Para obter todos os detalhes, consulte as [instruções fornecidas com a amostra](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/GetGateCount).
+Para obter todos os detalhes, consulte as [instruções fornecidas com a amostra](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/GetGateCount).
 Em seguida, executar o seguinte, substituindo `<runtime>` por qualquer `win10-x64` , `osx-x64` `linux-x64` ou, dependendo do seu sistema operativo:
 
 ```powershell
@@ -95,7 +95,7 @@ Primeiro, clone o [repositório nwchemgit/nwchem:](https://github.com/nwchemgit/
 git clone https://github.com/nwchemgit/nwchem --depth 1
 ```
 
-O `nwchemgit/nwchem` repositório vem com uma variedade de decks de entrada destinados a ser utilizados com o Kit de Desenvolvimento Quântico, listados sob a [ `QA/chem_library_tests` pasta](https://github.com/nwchemgit/nwchem/tree/master/QA/chem_library_tests).
+O `nwchemgit/nwchem` repositório vem com uma variedade de decks de entrada destinados a ser utilizados com o Kit de Desenvolvimento Quântico, listados sob a [ `QA/chem_library_tests` pasta](https://github.com/nwchemgit/nwchem/tree/main/QA/chem_library_tests).
 Para este exemplo, usaremos o `H4` deck de entrada:
 
 ```powershell
@@ -167,7 +167,7 @@ Há muitas coisas a fazer a partir daqui:
 - Experimente diferentes decks de entrada predefinidos, por exemplo, variando o parâmetro `alpha` em `h4_sto6g_alpha.nw` , 
 - Tente modificar os decks editando diretamente os decks NWChem, por exemplo, explorando `STO-nG` modelos para várias escolhas de n, 
 - Experimente outros decks de entrada NWChem pré-definidos que estão disponíveis em `nwchem/qa/chem_library_tests` ,
-- Experimente um conjunto de referências YAML pré-definidas de Broombridge que foram geradas a partir da NWChem e estão disponíveis como parte do [repositório Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML). Estes critérios de referência incluem: 
+- Experimente um conjunto de referências YAML pré-definidas de Broombridge que foram geradas a partir da NWChem e estão disponíveis como parte do [repositório Microsoft/Quantum](https://github.com/Microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML). Estes critérios de referência incluem: 
     - pequenas moléculas como o hidrogénio molecular (H2), Beryllium (Be), o hino de lítio (LiH),
     - moléculas maiores como o ozono (O3), beta-caroteno, citosina, e muito mais. 
 - Experimente as [setas EMSL](https://arrows.emsl.pnnl.gov/api/qsharp_chem) frontais gráficas que apresentam uma interface com o Microsoft Quantum Development Kit. 
@@ -180,7 +180,7 @@ Para começar com as setas EMSL da frente baseadas na Web, navegue por um navega
 > [!NOTE]
 > Executar Setas EMSL num navegador web requer que o JavaScript seja ativado. Consulte estas [instruções](https://www.enable-javascript.com/) sobre como ativar o JavaScript no seu navegador. 
 
-Primeiro, introduza uma molécula na caixa de consulta que diz``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
+Primeiro, introduza uma molécula na caixa de consulta que diz ``Enter an esmiles, esmiles reaction, or other Arrows input, then push the "Run Arrows" button.`` 
 
 Pode introduzir muitas moléculas pelo seu nome coloquial, como "cafeína" em vez de "1,3,7-Trimethylxanthine". 
 

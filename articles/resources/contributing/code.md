@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 956b0957a5261b8a77bf18d776fbcc2853bfbfe7
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866914"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834895"
 ---
 # <a name="contributing-code"></a>Contribuir no Código
 
@@ -34,7 +34,7 @@ Assim, é útil quando a funcionalidade adicionada por uma contribuição é bem
 As Q# funções, operações e tipos definidos pelo utilizador que compõem bibliotecas como o cânone são automaticamente testados como parte do desenvolvimento no repositório [**Microsoft/QuantumLibraries.**](https://github.com/Microsoft/QuantumLibraries/)
 Quando um novo pedido de puxar é aberto, por exemplo, a nossa configuração [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/) verificará se as alterações no pedido de puxar não quebram qualquer funcionalidade existente de que a comunidade de programação quântica dependa.
 
-Com a versão mais recente, o Q# teste de unidade é definido usando o `@Test("QuantumSimulator")` atributo. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", ou qualquer nome totalmente qualificado especificando o alvo de execução. Vários atributos que definem diferentes alvos de execução podem ser ligados à mesma chamada. Alguns dos nossos testes ainda usam o pacote deprecado [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) que expõe todas as Q# funções e operações que terminam no `Test` quadro [xUnit.](https://xunit.github.io/) Este pacote já não é necessário para definir os testes unitários. 
+Com a versão mais Q# recente, os testes unitários são definidos usando o `@Test("QuantumSimulator")` atributo. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", ou qualquer nome totalmente qualificado especificando o alvo de execução. Vários atributos que definem diferentes alvos de execução podem ser ligados à mesma chamada. Alguns dos nossos testes ainda usam o pacote deprecado [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) que expõe todas as Q# funções e operações que terminam no `Test` quadro [xUnit.](https://xunit.github.io/) Este pacote já não é necessário para definir os testes unitários. 
 
 A função seguinte é utilizada para garantir que <xref:microsoft.quantum.canon.fst> as e <xref:microsoft.quantum.canon.snd> as funções retornam as saídas certas num exemplo representativo.
 Se a saída de `Fst` ou `Snd` estiver incorreta, a declaração é utilizada `fail` para fazer com que o teste falhe.

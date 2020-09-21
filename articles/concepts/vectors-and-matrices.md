@@ -1,6 +1,6 @@
 ---
 título: Vetores e matrizes na descrição da computação quântica: Aprenda os fundamentos de como trabalhar com vetores e matrizes.
-autor: QuantumWriter uid: microsoft.quantum.concepts.vectors ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: QuantumWriter uid: microsoft.quantum.concepts.vectors ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -93,7 +93,7 @@ $$v =\begin{bmatrix}
 v_1\\\\
 v_2\\\\
 \vdots\\\\
-v_n\end{bmatrix}$$
+v_n \end{bmatrix}$$
 
 A norma de um vetor $ v é definida como i v $ i $ \sqrt { \sum \_ | \_ | ^2 } $ . Diz-se que um vetor é de norma unitária (ou, em alternativa, é chamado de [*vetor unitário)*](https://en.wikipedia.org/wiki/Unit_vector)se a sua norma for $ 1 $ . O [*adjacente de um vetor*](https://en.wikipedia.org/wiki/Adjoint_matrix) v é $ $ denotado $ v^ e é definido como o \dagger $ vetor de linha seguinte onde $ \* $ denota o conjugado complexo,
 
@@ -114,12 +114,12 @@ u_1\\\\
 u_2\\\\
 \vdots\\\\
 u_n \end{bmatrix} ~ \mathrm { e}~
-v=\begin{bmatrix}
+v =\begin{bmatrix}
     v_1\\\\
     v_2\\\\
     \vdots\\\\
     v_n, \end{bmatrix} ~ \mathrm { então}~
-au+bv=\begin{bmatrix}
+au+bv =\begin{bmatrix}
 au_1+bv_1\\\\
 au_2+bv_2\\\\
 \vdots\\\\
@@ -128,7 +128,7 @@ $$
 
 Uma [*matriz*](https://en.wikipedia.org/wiki/Matrix_(mathematics)) de tamanho $ m n é uma coleção de \times $ $ números complexos mn $ dispostos em $ linhas m $ e n $ $ colunas como mostrado abaixo:
 
-$$M= 
+$$M = 
 \begin{bmatrix}
 M_ { 11 } ~~ M_ { 12 } ~~ \cdots ~~ M_ { 1n}\\\\
 M_ { 21 } ~~ M_ { 22 } ~~ \cdots ~~ M_ { 2n}\\\\
@@ -183,7 +183,7 @@ Diz-se que uma matriz $ M $ é [*eremita*](https://en.wikipedia.org/wiki/Hermiti
 Finalmente, o [*produto tensor*](https://en.wikipedia.org/wiki/Tensor_product) (ou produto Kronecker) de duas matrizes $ M de tamanho m n e N de tamanho p $ q é uma matriz maior P $ M \times N de tamanho $ $ mp $ $ \times $ $ = \otimes $ $ \times nq , e é obtido a $ partir de M e N da seguinte $ $ $ $ forma:
 
 \begin{align}
-    M \otimes N&=
+    M \otimes N &=
     \begin{bmatrix}
         M_ { 11 } ~~ \cdots ~~ M_ { 1n }\\\\
         \ddots\\\\
@@ -211,7 +211,7 @@ $$
     \begin{bmatrix}
         a \\\\ b c d \end{bmatrix} \otimes \begin{bmatrix} \\\\ \\\\ e \end{bmatrix}=
     \begin{bmatrix}
-        a \begin{bmatrix} \\\\ c d \\\\ e\end{bmatrix}
+        a \begin{bmatrix} \\\\ c d \\\\ e \end{bmatrix}
         \\\\[1.5em] b \begin{bmatrix} \\\\ c d \\\\ e\end{bmatrix}
     \end{bmatrix}
     =\begin{bmatrix}a c \\\\ a d a e b b d \\\\ \\\\ \\\\ \\\\ ser\end{bmatrix}
@@ -221,26 +221,26 @@ e
 
 $$
     \begin{bmatrix}
-        a\ b \\\\ c\ d\end{bmatrix}
+        a\ b \\\\ c\ d \end{bmatrix}
     \otimes 
     \begin{bmatrix}
-        e\ f \\\\ g\ h\end{bmatrix}
+        e\ f \\\\ g\ h \end{bmatrix}
      =
     \begin{bmatrix}
     um\begin{bmatrix}
-    e\ f \\\\ g\ h\end{bmatrix}
+    e\ f \\\\ g\ h \end{bmatrix}
     b\begin{bmatrix}
-    e\ f \\\\ g\ h\end{bmatrix}
+    e\ f \\\\ g\ h \end{bmatrix}
     \\\\[1em] c\begin{bmatrix}
-    e\ f \\\\ g\ h\end{bmatrix}
+    e\ f \\\\ g\ h \end{bmatrix}
     d\begin{bmatrix}
-    e\ f \\\\ g\ h\end{bmatrix}
+    e\ f \\\\ g\ h \end{bmatrix}
     \end{bmatrix}
     =
     \begin{bmatrix}
-    ae\ af\ ser\ bf\\\\
-    ag\ ah\ bg\ bh\\\\
-    ce\ cf\ de\ df\\\\
+    ae\ af\ ser\ bf \\\\
+    ag\ ah\ bg\ bh \\\\
+    ce\ cf\ de\ df \\\\
     cg\ ch\ dg\ dh \end{bmatrix} .
 $$
 

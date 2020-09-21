@@ -2,19 +2,19 @@
 title: Escrever e simular programas de nível qubit em Q#
 description: Tutorial passo a passo sobre a escrita e simulação de um programa quântico que opera ao nível do qubit individual
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 10/06/2019
 uid: microsoft.quantum.circuit-tutorial
 ms.topic: tutorial
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39b2d762c0efbfa4bb3a60a1dcee6bcbe2bd91a9
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 0dbeee8e092c830576ba8f79733035cdeeac11de
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863341"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834963"
 ---
 # <a name="tutorial-write-and-simulate-qubit-level-programs-in-q"></a>Tutorial: Escreva e simula programas de nível qubit em Q\#
 
@@ -116,7 +116,7 @@ Com `using` , os qubits são automaticamente atribuídos no estado $\ket {0} $. 
 Em seguida, aplicamos os portões que compõem a própria operação.
 Q# já contém muitos portões quânticos básicos como operações no [`Microsoft.Quantum.Intrinsic`](xref:microsoft.quantum.intrinsic) espaço de nome, e estes não são exceção. 
 
-Dentro de uma Q# operação, as declarações invocando callables serão, naturalmente, executadas por ordem sequencial.
+No âmbito de uma Q# operação, as declarações invocando os callables serão, naturalmente, executadas por ordem sequencial.
 Assim, o primeiro portão a aplicar é o [`H`](xref:microsoft.quantum.intrinsic.h) (Hadamard) ao primeiro qubit:
 
 <br/>
@@ -134,7 +134,7 @@ Uma `R1(θ, <qubit>)` operação em geral deixa inalterado o componente $\ket {0
 
 #### <a name="controlled-operations"></a>Operações controladas
 
-Q# torna extremamente fácil condicionar a execução de uma operação em um ou múltiplos qubits de controlo.
+Q# torna extremamente fácil condicionar o funcionamento de uma operação em um ou múltiplos qubits de controlo.
 Em geral, limitamo-nos a prefaciar a chamada `Controlled` com, e os argumentos da operação mudam como:
 
  `Op(<normal args>)` $\a$ `Controlled Op([<control qubits>], (<normal args>))` a$ .
@@ -244,7 +244,7 @@ namespace NamespaceQFT {
 
 Com o Q# ficheiro e a operação completos, o nosso programa quântico está pronto para ser chamado e simulado.
 
-## <a name="execute-the-program"></a>Executar o programa
+## <a name="run-the-program"></a>Execute o programa
 
 Tendo definido a nossa Q# operação num `.qs` ficheiro, precisamos agora ligar para essa operação e observar quaisquer dados clássicos devolvidos.
 Para já, não há nada devolvido (lembre-se que a nossa operação definida acima de `Unit` voltas), mas quando mais tarde modificarmos a Q# operação para devolver uma série de resultados de medição `Result[]` (), iremos abordar esta questão.
@@ -269,7 +269,7 @@ Para executar o programa, abra o terminal na pasta do seu projeto e insira
 dotnet run
 ```
 
-Após a execução, deverá ver as `Message` saídas e `DumpMachine` saídas abaixo impressas na sua consola.
+Após a conclusão, deverá ver as `Message` saídas e `DumpMachine` saídas abaixo impressas na sua consola.
 
 
 #### <a name="python"></a>[Python](#tab/tabid-python)
@@ -314,8 +314,8 @@ O anfitrião C# tem quatro partes:
     Não há nenhum neste exemplo.
 3. Execute o algoritmo quântico. 
     Cada Q# operação gera uma classe C# com o mesmo nome. 
-    Esta classe possui um método `Run` que de forma **assíncrona** executa a operação.
-    A execução é assíncrona porque a execução no hardware real será assíncrona. 
+    Esta classe tem um `Run` método que executa a operação **assíncroneamente**.
+    A corrida é assíncronea porque executá-la em hardware real será assíncronea. 
     Como o `Run` método é assíncrona, chamamos o `Wait()` método; isto bloqueia a execução até que a tarefa complete e retorne o resultado de forma sincronizada. 
 4. Processe o resultado devolvido da operação.
     Por enquanto, a operação não devolve nada.
@@ -499,7 +499,7 @@ O código de operação final deve parecer:
 }
 ```
 
-Se estiver a trabalhar a partir da indicação de comando, a matriz devolvida será simplesmente impressa diretamente para a consola no final da execução.
+Se estiver a trabalhar a partir da indicação de comando, a matriz devolvida será simplesmente exibida diretamente na consola no final da execução.
 Caso contrário, atualize o seu programa de anfitrião para processar a matriz devolvida.
 
 #### <a name="command-prompt"></a>[Pedido de comando](#tab/tabid-cmdline)

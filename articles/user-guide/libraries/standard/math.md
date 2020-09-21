@@ -3,17 +3,17 @@ title: Matemática nas Q# bibliotecas padrão
 description: Conheça as funções matemáticas clássicas nas Q# bibliotecas padrão que são usadas com os tipos de dados incorporados.
 author: cgranade
 uid: microsoft.quantum.libraries.math
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a3747eaa2c91e482ded3af1279a0e40d922bfb3
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 55b1ef70eed1eb47ab0c6b30e2b8203c38c9a67a
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868428"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833593"
 ---
 # <a name="classical-mathematical-functions"></a>Funções Matemáticas Clássicas #
 

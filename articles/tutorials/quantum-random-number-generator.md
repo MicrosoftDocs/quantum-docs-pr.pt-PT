@@ -2,19 +2,19 @@
 title: Criar um Gerador de Números Aleatórios Quântico
 description: Construir um Q# projeto que demonstre conceitos quânticos fundamentais como a superposição criando um gerador de números aleatórios quânticos.
 author: bromeg
-ms.author: megbrow@microsoft.com
+ms.author: megbrow
 ms.date: 10/25/2019
 ms.topic: article
 uid: microsoft.quantum.quickstarts.qrng
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: d80f1c640ac7ddb0104ccbbb6de6d0e26ba05fd6
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: a0e8933e6a77d017db914e4bb969ea05f760a443
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863629"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834045"
 ---
 # <a name="tutorial-implement-a-quantum-random-number-generator-in-q"></a>Tutorial: Implementar um Gerador de Números Aleatórios Quântico em Q\#
 
@@ -33,7 +33,7 @@ Um exemplo simples de um algoritmo quântico escrito Q# é um gerador de número
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-15,34":::
 
-Conforme mencionado no nosso artigo [Compreender a computação quântica](xref:microsoft.quantum.overview.understanding), um qubit é uma unidade de informações quânticas que pode estar em sobreposição. Quando medido, um qubit só pode ser 0 ou 1. No entanto, durante a execução, o estado do qubit representa a probabilidade de ler um 0 ou um 1 com uma medição. Este estado de probabilidade é conhecido como sobreposição. Podemos utilizar esta probabilidade para gerar números aleatórios.
+Conforme mencionado no nosso artigo [Compreender a computação quântica](xref:microsoft.quantum.overview.understanding), um qubit é uma unidade de informações quânticas que pode estar em sobreposição. Quando medido, um qubit só pode ser 0 ou 1. No entanto, quando uma operação está em funcionamento, o estado do qubit representa a probabilidade de ler um 0 ou um 1 com uma medição. Este estado de probabilidade é conhecido como sobreposição. Podemos utilizar esta probabilidade para gerar números aleatórios.
 
 Na nossa Q# operação, introduzimos o `Qubit` tipo de dados, nativo Q# de. Apenas podemos alocar um `Qubit` com uma instrução `using`. Depois de alocados, os qubits estão sempre no estado `Zero`. 
 
@@ -74,7 +74,7 @@ Para criar a Q# aplicação completa, adicione o seguinte ponto de entrada ao se
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="17-33":::
 
-O executável executará a operação ou função marcada com o atributo `@EntryPoint()` num simulador ou estimador de recursos, consoante a configuração do projeto e as opções da linha de comandos.
+O programa executará a operação ou função marcada com o `@EntryPoint()` atributo num simulador ou estimador de recursos, dependendo da configuração do projeto e das opções de linha de comando.
 
 :::code language="qsharp" source="~/quantum/samples/getting-started/qrng/Qrng.qs" range="3-34":::
 

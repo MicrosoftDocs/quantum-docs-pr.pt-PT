@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 60e694e9f7c2f01a6679ef960f5a7774c8bd6a62
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c87a84654cda04f81115a83684f0e125d23a77bc
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868950"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759226"
 ---
 # <a name="design-your-own-classifier"></a>Desenhe o seu próprio classificador
 
@@ -30,7 +30,7 @@ Tal como na aprendizagem profunda clássica, não existe uma regra geral para es
 
 Para construir um classificador vamos concatenar rotações controladas parametricadas no nosso modelo de circuito. Para fazê-lo podemos usar o tipo [`ControlledRotation`](xref:microsoft.quantum.machinelearning.controlledrotation) definido na biblioteca Quantum Machine Learning. Este tipo aceita quatro argumentos que determinam: o índice do qubit-alvo, a matriz de índices dos qubits de controlo, o eixo de rotação e o índice do parâmetro associado na matriz de parâmetros que definem o modelo.
 
-Vamos ver um exemplo de um classificador. Na [amostra de meias-luas, podemos](https://github.com/microsoft/Quantum/tree/master/samples/machine-learning/half-moons)encontrar o seguinte classificador definido no ficheiro `Training.qs` .
+Vamos ver um exemplo de um classificador. Na [amostra de meias-luas, podemos](https://github.com/microsoft/Quantum/tree/main/samples/machine-learning/half-moons)encontrar o seguinte classificador definido no ficheiro `Training.qs` .
 
 ```qsharp
     function ClassifierStructure() : ControlledRotation[] {

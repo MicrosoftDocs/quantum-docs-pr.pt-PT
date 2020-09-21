@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b06eba9cadce84aca6f87e4451026ca2ffc794f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: d7a8dff8d491a9ce6451148d2d27121f1c190ed0
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867646"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759327"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Álgebra linear para computação quântica
 
@@ -22,8 +22,8 @@ A álgebra linear é a linguagem da computação quântica. Embora não a tenha 
 
 Da mesma forma que conhecer os [conceitos básicos da física quântica](xref:microsoft.quantum.overview.understanding) pode ajudar a compreender a computação quântica, também saber um mínimo de álgebra linear pode esclarecer o modo de funcionamento dos algoritmos quânticos. Deverá, pelo menos, familiarizar-se com os **vetores** e a **multiplicação de matrizes**. Se precisar de rever os seus conhecimentos destes conceitos de álgebra, pode ver estes tutoriais, que abordam as noções básicas:
 
-- [Tutorial do Jupyter Notebook sobre álgebra linear](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/LinearAlgebra)
-- [Tutorial do Jupyter Notebook sobre aritmética complexa](https://github.com/microsoft/QuantumKatas/tree/master/tutorials/ComplexArithmetic)
+- [Tutorial do Jupyter Notebook sobre álgebra linear](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
+- [Tutorial do Jupyter Notebook sobre aritmética complexa](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
 - [Álgebra Linear para Computação Quântica](https://cds.cern.ch/record/1522001/files/978-1-4614-6336-8_BookBackMatter.pdf)
 - [Introdução à Álgebra Linear](https://www.math.ubc.ca/~carrell/NB.pdf)
 - [Instruções Básicas da Computação Quântica ](https://www.codeproject.com/Articles/5155638/Quantum-Computation-Primer-Part-1#exploring-quantum-superposition)

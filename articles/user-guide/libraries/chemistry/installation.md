@@ -9,16 +9,16 @@ uid: microsoft.quantum.chemistry.concepts.installation
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5fe973d24ceffd413cdbd3c543013dcc7ee379c0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: f1a7d1d041dab73980d8debc179d6c79acac6d33
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869346"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759804"
 ---
 # <a name="chemistry-library-installation"></a>Instalação da Biblioteca de Química
 
-A amostra [ **molecular de hidrogénio** ](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/MolecularHydrogen) usa dados de entrada molecular que são configurados manualmente.
+A amostra [ **molecular de hidrogénio** ](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) usa dados de entrada molecular que são configurados manualmente.
 Embora isto seja bom para pequenos exemplos, a química quântica em escala requer hamiltonianos com milhões ou biliões de termos.
 Estes hamiltonianos, gerados por pacotes de química computacional escalável, são demasiado grandes para serem importados à mão.
 
@@ -33,7 +33,7 @@ Esta secção detalha como usar o Kit de Desenvolvimento Quântico com NWChem e 
 
 Para se levantar e funcionar usando o NWChem juntamente com o Kit de Desenvolvimento Quântico, utilize um dos seguintes métodos:
 
-- Começar a utilizar os ficheiros broombridge existentes fornecidos com as amostras no [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML).
+- Começar a utilizar os ficheiros broombridge existentes fornecidos com as amostras no [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML).
 - Utilize o [construtor de setas EMSL para o Microsoft Quantum Development Kit,](https://arrows.emsl.pnnl.gov/api/qsharp_chem) que é um frontend baseado na web para NWChem, para gerar novos ficheiros de entrada molecular formato broombridge.  
 - Use a [imagem Docker](https://hub.docker.com/r/nwchemorg/nwchem-qc/) fornecida pela PNNL para executar NWChem, ou
 - [Compilar NWChem](http://www.nwchem-sw.org/index.php/Compiling_NWChem) para a sua plataforma.
@@ -42,9 +42,9 @@ Consulte [end-to-end com a NWChem](xref:microsoft.quantum.chemistry.examples.end
 
 ### <a name="getting-started-using-broombridge-files-provided-with-the-samples"></a>Começar a usar ficheiros broombridge fornecidos com as amostras
 
-A pasta [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/IntegralData/YAML) no repositório de amostras de kit de desenvolvimento quântico contém ficheiros de dados de moléculas formatados por Broombridge.  
+A pasta [IntegralData/YAML](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/IntegralData/YAML) no repositório de amostras de kit de desenvolvimento quântico contém ficheiros de dados de moléculas formatados por Broombridge.  
 
-Como um exemplo simples, use a amostra da biblioteca de química, [GetGateCount](https://github.com/microsoft/Quantum/tree/master/samples/chemistry/GetGateCount) para carregar o Hamiltonian de um dos ficheiros de Broombridge e executar estimativas de porta de algorítmicos de simulação quântica:
+Como um exemplo simples, use a amostra da biblioteca de química, [GetGateCount](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/GetGateCount) para carregar o Hamiltonian de um dos ficheiros de Broombridge e executar estimativas de porta de algorítmicos de simulação quântica:
 
 ```bash
 cd Quantum/Chemistry/GetGateCount
@@ -124,7 +124,7 @@ Convert-NWChemToBroombridge -?
 Get-Help Convert-NWChemToBroombridge -Full
 ```
 
-## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>Usando o Kit de Desenvolvimento Quântico com`qdk-chem`
+## <a name="using-the-quantum-development-kit-with-qdk-chem"></a>Usando o Kit de Desenvolvimento Quântico com `qdk-chem`
 
 Para `qdk-chem` instalar, pode utilizar o .NET Core SDK na linha de comando:
 

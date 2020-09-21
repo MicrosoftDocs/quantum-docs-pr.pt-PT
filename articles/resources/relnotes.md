@@ -2,19 +2,19 @@
 title: Notas de versão do Quantum Development kit
 description: Fique a par das mais recentes atualizações à pré-visualização do Microsoft Quantum Development kit.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/30/2020
 ms.topic: article
 uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 70d0c9b61e49d4ee6142edbe2767310403885f01
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 5036b4d401bb775a7fee2252ca26e7725bc19004
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992263"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834147"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de Versão do Microsoft Quantum Development Kit
 
@@ -48,7 +48,7 @@ Consulte a lista completa de PRs fechados para [bibliotecas,](https://github.com
 
 Esta versão contém o seguinte:
 
-- Espaços de nome abertos em Q# cadernos estão agora disponíveis para todas as futuras execuções celulares. Isto permite, por exemplo, que os espaços de nomes sejam abertos uma vez numa célula no topo do caderno, em vez de precisarem de abrir espaços de nome relevantes em cada célula de código. Um novo `%lsopen` comando mágico exibe a lista de espaços de nomes atualmente abertos.
+- Espaços de nome abertos em Q# cadernos já estão disponíveis para todos os futuros cálculos celulares. Isto permite, por exemplo, que os espaços de nomes sejam abertos uma vez numa célula no topo do caderno, em vez de precisarem de abrir espaços de nome relevantes em cada célula de código. Um novo `%lsopen` comando mágico exibe a lista de espaços de nomes atualmente abertos.
 
 Consulte a lista completa de PRs fechados para [bibliotecas,](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) [compilador,](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed) [tempo de execução,](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed) [amostras,](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+is%3Aclosed) e [Katas.](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed)  
 
@@ -132,7 +132,7 @@ Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Micros
 
 Esta versão contém o seguinte:
 
-- Nova biblioteca de Machine Learning Quântico; para obter mais informações, aceda à nossa [página de documentos de QML](https://docs.microsoft.com/quantum/libraries/machine-learning/?view=qsharp-preview).
+- Nova biblioteca de Machine Learning Quântico; para obter mais informações, aceda à nossa [página de documentos de QML](xref:microsoft.quantum.machine-learning.concepts.intro).
 - Eu Q# bug corre, resultando num aumento de desempenho de 10-20x ao carregar pacotes NuGet
 
 Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -144,7 +144,7 @@ Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Micros
 Esta versão contém o seguinte:
 
 - O novo pacote NuGet Microsoft.Quantum.SDK, que substituirá o pacote NuGet Microsoft.Quantum.Development.Kit quando forem criados projetos novos. O pacote NuGet Microsoft.Quantum.Development.Kit continuará a ser suportado para os projetos existentes. 
-- Suporte para Q# extensões de compilador, ativado pelo novo packge Microsoft.Quantum.SDK NuGet, para obter mais informações consulte a [documentação no Github,](https://github.com/microsoft/qsharp-compiler/tree/master/src/QuantumSdk#extending-the-q-compiler)a amostra de extensões do [compilador](https://github.com/microsoft/qsharp-compiler/tree/master/examples/CompilerExtensions) e o [ Q# Dev Blog](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
+- Suporte para Q# extensões de compilador, ativado pelo novo packge Microsoft.Quantum.SDK NuGet, para obter mais informações consulte a [documentação no Github,](https://github.com/microsoft/qsharp-compiler/tree/main/src/QuantumSdk#extending-the-q-compiler)a amostra de extensões do [compilador](https://github.com/microsoft/qsharp-compiler/tree/main/examples/CompilerExtensions) e o [ Q# Dev Blog](https://devblogs.microsoft.com/qsharp/extending-the-q-compiler/)
 - Suporte adicionado para .NET Core 3.1; recomenda-se vivamente ter instalada a versão 3.1.100, uma vez que compilar com versões mais antigas do SDK de .NET Core pode provocar problemas
 - Novas transformações de compilador disponíveis em Microsoft.Quantum.QsCompiler.Experimental
 - Nova funcionalidade para expor vetores do estado de saída como HTML em IQ#
@@ -160,7 +160,7 @@ Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Micros
 Esta versão contém o seguinte:
 
 - Novo atributo de teste para Q# testes de unidade, consulte [a](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) documentação atualizada da API aqui e testes atualizados & guia de depuração [aqui](xref:microsoft.quantum.guide.testingdebugging)
-- Vestígios de pilha adicionados no caso de um erro de Q# execução do programa
+- Vestígios de pilha adicionados no caso de um Q# erro de execução do programa
 - Suporte para pontos de interrupção no Visual Studio Code devido a uma atualização na [extensão OmniSharp C# Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
@@ -182,7 +182,7 @@ Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Micros
 
 Esta versão contém o seguinte:
 
-- Atualizações para as extensões do Visual Studio Code e Visual Studio para implementar o servidor de linguagem como executável autónomo, eliminando a dependência da versão do SDK de .NET Core  
+- Atualizações para Visual Studio Code & extensões do Visual Studio para implementar servidor de linguagem como um ficheiro executável autossuficiente, eliminando a dependência da versão .NET Core SDK  
 - Migração para o .NET Core 3.0
 - Alteração interruptiva ao Microsoft.Quantum.Simulation.Core.IOperationFactory com a introdução do novo método `Fail`. Apenas afeta os simuladores personalizados que não abrangem o SimulatorBase. Para obter mais detalhes, [veja o pedido Pull no GitHub](https://github.com/microsoft/qsharp-runtime/pull/59).
 - Novo suporte para atributos Preteridos
@@ -224,7 +224,7 @@ As alterações estão resumidas aqui, bem como as instruções para atualizar o
 Esta versão contém o seguinte:
 
 - Novos locais de indexação para segmentar as matrizes; [veja a referência de linguagem](xref:microsoft.quantum.guide.expressions#array-slices) para obter mais informações.
-- Added Dockerfile hospedado no [Registo de Contentores](https://github.com/microsoft/ContainerRegistry)da Microsoft , consulte o [ Q# repositório I para obter mais informações](https://github.com/microsoft/iqsharp/blob/master/README.md)
+- Added Dockerfile hospedado no [Registo de Contentores](https://github.com/microsoft/ContainerRegistry)da Microsoft , consulte o [ Q# repositório I para obter mais informações](https://github.com/microsoft/iqsharp/blob/main/README.md)
 - Alteração interruptiva do [simulador de rastreio](xref:microsoft.quantum.machines.qc-trace-simulator.intro), atualização das definições de configuração, alterações de nome; veja o [Browser da API .NET para obter os nomes atualizados](https://docs.microsoft.com/dotnet/api/microsoft.quantum.simulation.simulators.qctracesimulators.qctracesimulatorconfiguration).
 
 Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) e [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
@@ -252,14 +252,14 @@ Esta versão adiciona uma nova Q# sintaxe linguística:
 
 ### <a name="library"></a>Biblioteca 
 
-Esta versão adiciona uma biblioteca numérica: Saiba mais sobre como [utilizar a nova biblioteca numérica](xref:microsoft.quantum.numerics.usage) e experimente as [novas amostras](https://github.com/microsoft/quantum/tree/master/Numerics).  [PR 102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
+Esta versão adiciona uma biblioteca numérica: Saiba mais sobre como [utilizar a nova biblioteca numérica](xref:microsoft.quantum.numerics.usage) e experimente as [novas amostras](https://github.com/microsoft/quantum/tree/main/Numerics).  [PR 102](https://github.com/Microsoft/QuantumLibraries/pull/102).  
 
 Esta versão reorganiza as extensões e atualiza a biblioteca de química:
 * Melhora a modularidade dos componentes, a extensibilidade e a limpeza de código geral.  [PR 58](https://github.com/microsoft/QuantumLibraries/pull/58).
 * Adicione suporte para [wavefunctions de várias referências](xref:microsoft.quantum.chemistry.concepts.multireference), wavefunctions de várias referências dispersas e cluster conjugado unitário.  [PR 110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 * (Obrigado!) Contribuidor do [1QBit](https://1qbit.com) ([@valentinS4t1qbit](https://github.com/ValentinS4t1qbit)): avaliação energética com ansatz de variação. [PR 120](https://github.com/Microsoft/QuantumLibraries/pull/120).
 * Atualização do esquema [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) para a nova [versão 0.2](xref:microsoft.quantum.libraries.chemistry.schema.spec_v_0_2), ao adicionar a especificação de cluster conjugado unitário. [Problema 65](https://github.com/microsoft/QuantumLibraries/issues/65).
-* Adicione interoperabilidade Python às funções da biblioteca de química. Experimente esta [amostra](https://github.com/microsoft/Quantum/tree/master/Chemistry/PythonIntegration). [Problema 53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
+* Adicione interoperabilidade Python às funções da biblioteca de química. Experimente esta [amostra](https://github.com/microsoft/Quantum/tree/main/Chemistry/PythonIntegration). [Problema 53](https://github.com/microsoft/QuantumLibraries/issues/53) [PR #110](https://github.com/Microsoft/QuantumLibraries/pull/110).
 
 ## <a name="version-061905"></a>Versão 0.6.1905
 
@@ -349,7 +349,7 @@ Esta versão contém o seguinte:
 
 - Adiciona suporte ao Jupyter Notebook, que oferece uma ótima maneira de aprender Q# sobre.  [Veja os novos exemplos do Jupyter Notebook e saiba como escrever os seus próprios Notebooks](xref:microsoft.quantum.install). 
 
-- Adiciona aritmética de somador de números inteiros à biblioteca Quantum Canon.  Veja também um Jupyter Notebook que [descreve como utilizar os novos somadores de números inteiros](https://github.com/microsoft/Quantum/blob/master/samples/arithmetic/AdderExample.ipynb).
+- Adiciona aritmética de somador de números inteiros à biblioteca Quantum Canon.  Veja também um Jupyter Notebook que [descreve como utilizar os novos somadores de números inteiros](https://github.com/microsoft/Quantum/blob/main/samples/arithmetic/AdderExample.ipynb).
 
 - Correção de bug para o problema do DumpRegister comunicado pela Comunidade ([148](https://github.com/Microsoft/Quantum/issues/148)).
 
@@ -635,7 +635,7 @@ Esta versão corrige alguns problemas denunciados pela comunidade. Nomeadamente:
 
 #### <a name="testing"></a>Testar
 
-- Os testes devem ser executados no modo de 64 bits. Se os testes estiverem a falhar com um BadImageFormatException, aceda ao menu Teste e selecione Definições de Teste > (Arquitetura do Processador Predefinida) > x64.
+- Os testes devem ser efetuados em modo de 64 bits. Se os testes estiverem a falhar com um BadImageFormatException, aceda ao menu Teste e selecione Definições de Teste > (Arquitetura do Processador Predefinida) > x64.
 - Alguns testes demoram muito tempo (possivelmente até cinco minutos, dependendo do computador) a ser executados. Tal é normal, pois alguns utilizam mais de 20 qubits; o nosso maior teste atualmente é executado em 23 qubits.
 
 #### <a name="samples"></a>Amostras

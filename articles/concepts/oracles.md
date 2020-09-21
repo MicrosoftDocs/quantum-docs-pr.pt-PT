@@ -1,6 +1,6 @@
 ---
 título: Descrição dos oráculos quânticos: Aprenda a trabalhar e a definir oráculos quânticos, operações de caixa preta que são usadas como entrada para outro algoritmo.
-autor: cgranade uid: microsoft.quantum.concepts.oracles ms.author: Christopher.Granade@microsoft.com ms.date: 07/11/2018 ms.topic: article no-loc:
+autor: cgranade uid: microsoft.quantum.concepts.oracles ms.author: chgranad ms.date: 07/11/2018 ms.topic: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -140,7 +140,7 @@ O \ket { \psi } & = O O \sum _ { X \in \\ { 0, 1 \\ } ^n, \in \\ { \\ } } \alpha
 $$
 
 ## <a name="phase-oracles"></a>Oráculos de fase
-Em alternativa, podemos codificar $ f $ em um oráculo $ O $ aplicando uma _fase_ com base na entrada para $ O $ . Por exemplo, podemos definir $ O $ tal que$$
+Em alternativa, podemos codificar $ f $ em um oráculo $ O $ aplicando uma _fase_ com base na entrada para $ O $ . Por exemplo, podemos definir $ O $ tal que $$
 \begin{align}
     O \ket { x } = (-1)^ { f(x) } \ket { x } .
 \end{align}
@@ -148,9 +148,9 @@ $$
 Se uma fase oráculo agir num registo inicialmente numa base computacional estado $ \ket { x } $ , então esta fase é uma fase global e, portanto, não observável.
 Mas tal oráculo pode ser um recurso muito poderoso se aplicado a uma superposição ou como uma operação controlada.
 Por exemplo, considere uma fase $ O_f $ para uma função de um único qubit $ f $ .
-Então,$$
+Então, $$
 \begin{align}
-    O_f\ket{+}
+    O_f \ket{+}
         &=O_f \ket { (0 }  +  \ket { } 1) / \sqrt { 2 }\\\\
         &=((-1)^ { f(0) } \ket { 0 } + (-1)^ { f(1) } \ket { 1 } ) / \sqrt { 2 }\\\\
         &=(-1)^ { f(0) } \ket { (0 } + (-1)^ { f(1) - f(0) } \ket { 1 } ) / \sqrt { 2 }\\\\

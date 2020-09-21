@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.samples
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 20da0e1765a242c172cc595f03d7791a0e8b8d2d
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: ae29614cc9c8bf965ea3cb373dc17470aec21252
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867520"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759191"
 ---
 # <a name="contributing-samples-to-the-quantum-development-kit"></a>Amostras contribuindo para o Kit de Desenvolvimento Quântico
 
@@ -46,12 +46,12 @@ Dentro da pasta para cada área de assunto, cada amostra é constituída por uma
 
 ## <a name="how-samples-are-structured"></a>Como as amostras são estruturadas
 
-Olhando para os ficheiros que compõem cada pasta, vamos mergulhar na [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/master/samples/algorithms/chsh-game) amostra.
+Olhando para os ficheiros que compõem cada pasta, vamos mergulhar na [`algorithms/chsh-game/`](https://github.com/microsoft/Quantum/tree/main/samples/algorithms/chsh-game) amostra.
 
 | Ficheiro              | Descrição                                                |
 |-------------------|------------------------------------------------------------|
-| `CHSHGame.csproj` | Q#projeto usado para construir a amostra com o .NET Core SDK |
-| `Game.qs`         | Q#operações e funções para a amostra                 |
+| `CHSHGame.csproj` | Q# projeto usado para construir a amostra com o .NET Core SDK |
+| `Game.qs`         | Q# operações e funções para a amostra                 |
 | `Host.cs`         | C# programa de anfitrião usado para executar a amostra                     |
 | `host.py`         | Programa de anfitrião python usado para executar a amostra                 |
 | `README.md`       | Documentação sobre o que a amostra faz e como usá-la    |

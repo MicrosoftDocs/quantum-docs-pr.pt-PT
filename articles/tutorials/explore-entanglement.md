@@ -2,19 +2,19 @@
 title: Explore o emaranhado com Q#
 description: Aprenda a escrever um programa quântico em Q# . Desenvolver uma aplicação de Estado de Bell com o Quantum Development Kit (QDK)
 author: geduardo
-ms.author: v-edsanc@microsoft.com
+ms.author: v-edsanc
 ms.date: 05/29/2020
 ms.topic: tutorial
 uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 3e95f142572e104fe1e133b109d197ed5bb01d9a
-ms.sourcegitcommit: af2e9691c1900ced7e09d6320255617c9939ed55
+ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90063245"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834028"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Explorar o entrelaçamento com Q\#
 
@@ -104,7 +104,7 @@ Substitua o conteúdo do `Program.qs` seguinte código:
 Esta operação agora pode ser chamada para definir um qubit para um estado clássico, ao devolver `Zero` ou `One` 100% do tempo.
 `Zero` e `One` são constantes que representam os dois únicos resultados possíveis da medição de um qubit.
 
-A operação `SetQubitState` mede o qubit. Se o qubit estiver no estado pretendido, `SetQubitState` não fará nada. Caso contrário, ao executar a operação `X`, alteramos o estado do qubit para o estado pretendido.
+A operação `SetQubitState` mede o qubit. Se o qubit está no estado que `SetQubitState` queremos, deixa-o em paz; caso contrário, ao executar a `X` operação, mudamos o estado qubit para o estado desejado.
 
 #### <a name="about-no-locq-operations"></a>Sobre Q# operações
 
@@ -300,7 +300,7 @@ o quer é conhecido como **sobreposição** e dá-nos a nossa primeira vista rea
 ## <a name="prepare-entanglement"></a>Preparar o entrelaçamento
 
 Agora vamos ver como Q# expressa formas de envolver qubits.
-Primeiro, definimos o primeiro qubit para o estado inicial e utilizamos a operação `H` para colocá-lo em sobreposição.  Depois, antes de medirmos o primeiro qubit, usamos uma nova operação ( `CNOT` , que significa Controlled-NOT.  O resultado da execução desta operação em dois qubits é inverter o segundo qubit se o primeiro qubit for `One`.  Agora, os dois qubits estão entrelaçados.  As nossas estatísticas para o primeiro qubit não foram alteradas (uma probabilidade de 50-50 de um `Zero` ou de um `One` após a medição), mas quando medirmos o segundo qubit, este será __sempre__ igual ao que medimos para o primeiro qubit. O nosso `CNOT` entrelaçou os dois qubits, de modo a que aquilo que acontecer a um deles, aconteça também ao outro. Se as medições fossem invertidas (a medição do segundo qubit antes do primeiro), aconteceria a mesma coisa. A primeira medida seria aleatória e a segunda estaria num passo bloqueado para a medição que tivesse sido detetada primeiro.
+Primeiro, definimos o primeiro qubit para o estado inicial e utilizamos a operação `H` para colocá-lo em sobreposição.  Depois, antes de medirmos o primeiro qubit, usamos uma nova operação ( `CNOT` , que significa *Controlled-NOT*.  O resultado da execução desta operação em dois qubits é virar o segundo qubit se o primeiro qubit for `One` .  Agora, os dois qubits estão entrelaçados.  As nossas estatísticas para o primeiro qubit não foram alteradas (uma probabilidade de 50-50 de um `Zero` ou de um `One` após a medição), mas quando medirmos o segundo qubit, este será __sempre__ igual ao que medimos para o primeiro qubit. O nosso `CNOT` entrelaçou os dois qubits, de modo a que aquilo que acontecer a um deles, aconteça também ao outro. Se as medições fossem invertidas (a medição do segundo qubit antes do primeiro), aconteceria a mesma coisa. A primeira medida seria aleatória e a segunda estaria num passo bloqueado para a medição que tivesse sido detetada primeiro.
 
 A primeira coisa que temos de fazer é alocar dois qubits em vez de um `TestBellState` em:
 
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Conforme mencionado na descrição geral, as nossas estatísticas para o primeiro qubit não foram alteradas (uma probabilidade de 50-50 de um 0 ou de um 1), mas quando medirmos o segundo qubit, este será __sempre__ igual ao que medimos para o primeiro qubit, uma vez que estão entrelaçados!
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 A [pesquisa do](xref:microsoft.quantum.quickstarts.search) tutorial Grover mostra-lhe como construir e executar a pesquisa grover, um dos algoritmos de computação quântica mais populares e oferece um bom exemplo de um Q# programa que pode ser usado para resolver problemas reais com computação quântica.  
 

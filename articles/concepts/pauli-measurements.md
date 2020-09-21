@@ -1,6 +1,6 @@
 ---
 título: Descrição das medições Pauli: Aprenda a trabalhar com operações de medição de Pauli de um só e multi-qubit.
-autor: QuantumWriter uid: microsoft.quantum.concepts.pauli ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: bradben uid: microsoft.quantum.concepts.pauli ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -143,8 +143,8 @@ $$
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {
-        H(q);
         Adjoint S(q);
+        H(q);
     } apply {
         set result = M(q);
     }
@@ -230,7 +230,7 @@ Embora ambos os tipos de medições sejam igualmente valiosos na computação qu
 Revela que na computação quântica, muitas vezes a informação que deseja aprender não é armazenada em qualquer qubit, mas sim armazenada não localmente em todos os qubits ao mesmo tempo, e, portanto, apenas olhando para ela através de uma medição conjunta (por $ exemplo, Z \otimes $ Z) esta informação torna-se manifesta.
 
 Por exemplo, na correção de erros, muitas vezes queremos saber que erro ocorreu enquanto não aprendemos nada sobre o estado que estamos a tentar proteger.
-A [amostra de código bit-flip](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code) mostra um exemplo de como você pode fazê-lo usando medidas como Z Z e $ Z Z \otimes . \otimes \id $ $ \id \otimes \otimes $ < ! -- TODO: altere isto para um link para o navegador de amostras assim que a amostra de código bit-flip estiver a bordo. -->
+A [amostra de código bit-flip](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code) mostra um exemplo de como você pode fazê-lo usando medidas como Z Z e $ Z Z \otimes . \otimes \id $ $ \id \otimes \otimes $ < ! -- TODO: altere isto para um link para o navegador de amostras assim que a amostra de código bit-flip estiver a bordo. -->
 
 Os operadores arbitrários de Pauli, como $ X \otimes Y \otimes \otimes \boldone $ Z, também podem ser medidos.
 Todos estes produtos de tensor dos operadores pauli têm apenas dois eigenvalues $ \pm 1 $ e ambos os espaços eigen constituem meio espaço de todo o espaço vetorial.

@@ -1,38 +1,39 @@
 ---
-title: Fluxo de controlo emQ#
+title: Fluxo de controlo em Q#
 description: Laços, condicional, etc.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fc619d64bfebfc27d7feac6dafb2dd4cf22825d6
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867952"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833510"
 ---
-# <a name="control-flow-in-no-locq"></a>Fluxo de controlo emQ#
+# <a name="control-flow-in-no-locq"></a>Fluxo de controlo em Q#
 
 Dentro de uma operação ou função, cada declaração funciona em ordem, semelhante a outras línguas clássicas imperativas comuns.
 No entanto, pode modificar o fluxo de controlo de três formas distintas:
 
-* `if`declarações
-* `for`loops
-* `repeat-until-success`loops
+* `if` declarações
+* `for` loops
+* `repeat-until-success` loops
+* conjugações `apply-within` (declarações)
 
-As `if` construções de fluxo e `for` controlo prosseguem num sentido familiar à maioria das linguagens clássicas de programação. [`Repeat-until-success`](#repeat-until-success-loop)loops são discutidos mais tarde neste artigo.
+As `if` construções de fluxo e `for` controlo prosseguem num sentido familiar à maioria das linguagens clássicas de programação. [`Repeat-until-success`](#repeat-until-success-loop) loops e conjugações são [discutidos](#conjugations) mais tarde neste artigo.
 
 Importante, `for` loops e `if` declarações podem ser usados em operações para as quais [as especializações](xref:microsoft.quantum.guide.operationsfunctions) são geradas automaticamente. Nesse cenário, o adjacente de um `for` loop inverte a direção e toma o adjacente de cada iteração.
 Esta ação segue o princípio "sapatos e meias": se quiser desfazer calçar meias e depois sapatos, deve desfazer calçar sapatos e depois desfazer as meias. 
 
 ## <a name="if-else-if-else"></a>Se, Else-if, Else Else
 
-A `if` declaração apoia a execução condicional.
+A `if` declaração suporta o processamento condicional.
 Consiste na palavra-chave, `if` uma expressão booleana em parênteses, e um bloco de declaração (o _bloco então)._
 Opcionalmente, qualquer número de outras cláusulas podem seguir- cada uma delas consiste na `elif` palavra-chave , uma expressão booleana em parênteses, e um bloco de declaração (o _bloco de outras partes)._
 Finalmente, a declaração pode, opcionalmente, terminar com outra cláusula, que consiste na palavra-chave `else` seguida por outro bloco de declaração (o _outro_ bloco).
@@ -68,14 +69,14 @@ if (i == 1) {
 }
 ```
 
-## <a name="for-loop"></a>Para loop
+## <a name="for-loop"></a>Ciclos For
 
 A `for` declaração suporta a iteração sobre um intervalo inteiro ou uma matriz.
 A afirmação consiste na palavra-chave `for` , seguida de um símbolo ou tuple de símbolo, a palavra-chave , e uma expressão de tipo ou `in` `Range` matriz, tudo em parênteses, e um bloco de declaração.
 
 O bloco de declaração (o corpo do laço) funciona repetidamente, com o símbolo definido (a variável loop) ligado a cada valor na gama ou matriz.
 Note que se a expressão de alcance avalia para um alcance ou matriz vazio, o corpo não funciona de todo.
-A expressão é totalmente avaliada antes de entrar no loop, e não muda enquanto o loop está a ser executado.
+A expressão é totalmente avaliada antes de entrar no loop, e não muda enquanto o loop está em funcionamento.
 
 A variável do loop está ligada em cada entrada do corpo em loop, e é desacompida na extremidade do corpo.
 A variável loop não é ligada após o loop for for complete.
@@ -129,7 +130,7 @@ O corpo do loop corre, e então a condição é avaliada.
 Se a condição for verdadeira, então a declaração é completada; caso contrário, a correção corre, e a declaração corre novamente, começando com o corpo do laço.
 
 Todas as três porções de um laço RUS (o corpo, o teste e a fixação) são tratadas como uma única margem *para cada repetição,* pelo que os símbolos que estão ligados ao corpo estão disponíveis tanto no teste como na fixação.
-No entanto, a conclusão da execução da correção termina o âmbito da declaração, de modo a que as ligações de símbolos efetuadas durante o corpo ou a correção não estejam disponíveis em repetições subsequentes.
+No entanto, completar o funcionamento da correção termina o âmbito da declaração, de modo que as ligações de símbolos efetuadas durante o corpo ou a correção não estejam disponíveis em repetições subsequentes.
 
 Além disso, a `fixup` declaração é muitas vezes útil, mas nem sempre necessária.
 Nos casos em que não é necessário, a construção
@@ -148,11 +149,12 @@ Para mais exemplos e detalhes, consulte [exemplos de repetição até ao sucesso
 > [!TIP]   
 > Evite utilizar laços de repetição até ao sucesso no interior das funções. Utilize *enquanto* os loops fornecem as funções correspondentes no interior. 
 
-## <a name="while-loop"></a>Enquanto loop
+## <a name="while-loop"></a>Ciclo While
 
 Os padrões de repetição até ao sucesso têm uma conotação muito quântica específica. São amplamente utilizados em determinadas classes de algoritmos quânticos - daí a construção dedicada da linguagem em Q# . No entanto, os laços que quebram com base numa condição e cujo comprimento de execução é, portanto, desconhecido no tempo de compilação, são tratados com especial cuidado num tempo de execução quântica. No entanto, a sua utilização dentro das funções não é problemática, uma vez que estes loops contêm apenas código que funciona em hardware convencional (não quântico). 
 
-Q#, portanto, suporta a utilização de loops apenas dentro de funções. Uma `while` declaração consiste na palavra-chave , uma expressão `while` booleana em parênteses, e um bloco de declaração.
+Q#, portanto, suporta a utilização de loops apenas dentro de funções.
+Uma `while` declaração consiste na palavra-chave , uma expressão `while` booleana em parênteses, e um bloco de declaração.
 O bloco de declaração (o corpo do laço) é executado desde que a condição avalie para `true` .
 
 ```qsharp
@@ -163,6 +165,45 @@ while (index < Length(arr) && item < 0) {
     set index += 1;
 }
 ```
+
+## <a name="conjugations"></a>Conjugações
+
+Em contraste com os bits clássicos, a libertação da memória quântica é um pouco mais envolvida, uma vez que os qubits de reposição cega podem ter efeitos indesejáveis na computação restante se os qubits ainda estiverem emaranhados. Estes efeitos podem ser evitados "desfazendo" os cálculos realizados corretamente antes de libertar a memória. Um padrão comum na computação quântica é, por conseguinte, o seguinte: 
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    outerOperation(target);
+    innerOperation(target);
+    Adjoint outerOperation(target);
+}
+```
+
+Q# apoia uma declaração de conjugação que implementa a transformação anterior. Utilizando esta declaração, a operação `ApplyWith` pode ser implementada da seguinte forma:
+
+```qsharp
+operation ApplyWith<'T>(
+    outerOperation : ('T => Unit is Adj), 
+    innerOperation : ('T => Unit), 
+    target : 'T) 
+: Unit {
+
+    within{ 
+        outerOperation(target);
+    }
+    apply {
+        innerOperation(target);
+    }
+}
+```
+Tal declaração de conjugação torna-se útil se as transformações exteriores e interiores não estiverem prontamente disponíveis como operações, mas são mais convenientes para descrever por um bloco composto por várias declarações. 
+
+A transformação inversa para as declarações definidas no bloco interior é gerada automaticamente pelo compilador e executada após o fim do bloco de aplicação.
+Uma vez que quaisquer variáveis mutáveis utilizadas como parte do bloco interior não podem ser recuperadas no bloco de aplicação, a transformação gerada é garantidamente o adjacente do cálculo no bloco interior. 
 
 ## <a name="return-statement"></a>Declaração de Devolução
 
@@ -248,7 +289,7 @@ fixup {
 }
 ```
 
-### <a name="rus-without-fixup"></a>RUS sem`fixup`
+### <a name="rus-without-fixup"></a>RUS sem `fixup`
 
 Este exemplo mostra um loop RUS sem o passo de fixação. O código é um circuito probabilístico que implementa um importante portão de rotação $V_3 = (\boldone + 2 i Z) / \sqrt {5} $ usando o `H` e `T` portões.
 O loop termina em repetições de $\frac$ {8} {5} em média.
@@ -330,7 +371,7 @@ operation PrepareStateUsingRUS(target : Qubit) : Unit {
 }
 ```
 
-Para obter mais informações, consulte [a amostra de teste de unidade fornecida com a biblioteca padrão:](https://github.com/microsoft/Quantum/blob/master/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)
+Para obter mais informações, consulte [a amostra de teste de unidade fornecida com a biblioteca padrão:](https://github.com/microsoft/Quantum/blob/main/samples/diagnostics/unit-testing/RepeatUntilSuccessCircuits.qs)
 
 ## <a name="next-steps"></a>Passos seguintes
 

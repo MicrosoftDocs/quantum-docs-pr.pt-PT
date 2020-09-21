@@ -2,19 +2,19 @@
 title: Teste e depuração
 description: Aprenda a usar testes unitários, factos e afirmações, e despeje funções para testar e depurar programas quânticos.
 author: tcNickolas
-ms.author: mamykhai@microsoft.com
+ms.author: mamykhai
 ms.date: 06/01/2020
 ms.topic: article
 uid: microsoft.quantum.guide.testingdebugging
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2b5276da594ba263177d435c1153f6d96e29c4e8
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 2f2181d388a59c1c6c5a0f13c9aa49d5fa1e51ae
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867918"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833177"
 ---
 # <a name="testing-and-debugging"></a>Teste e depuração
 
@@ -127,7 +127,7 @@ A função intrínseca <xref:microsoft.quantum.intrinsic.message> tem o tipo e p
 
 #### <a name="visual-studio-2019"></a>[Visual Studio 2019](#tab/tabid-vs2019)
 
-Depois de realizar um teste no Test Explorer e clicar no teste, um painel apresenta informações sobre a execução do teste: Estado de passagem/falha, tempo decorrido e uma ligação à saída. Clique em **Saída** para abrir a saída do teste numa nova janela.
+Depois de realizar um teste no Test Explorer e clicar no teste, um painel apresenta informações sobre o teste: Estado de passagem/falha, tempo decorrido e uma ligação à saída. Clique em **Saída** para abrir a saída do teste numa nova janela.
 
 ![saída de teste](~/media/unit-test-output.png)
 
@@ -177,7 +177,7 @@ operation AssertQubitsAreAvailable() : Unit
 ```
 
 Aqui, estamos a usar a operação <xref:microsoft.quantum.environment.getqubitsavailabletouse> para devolver o número de qubits disponíveis para usar.
-Como isto depende do estado global do programa e do seu ambiente de execução, a nossa definição `AssertQubitsAreAvailable` deve ser também uma operação.
+Como isso depende do estado global do programa e do seu ambiente de funcionamento, a nossa definição deve `AssertQubitsAreAvailable` ser também uma operação.
 No entanto, podemos usar esse estado global para produzir um valor simples `Bool` como entrada para a `Fact` função.
 
 [O prelúdio](xref:microsoft.quantum.libraries.standard.prelude), baseado nestas ideias, oferece duas afirmações especialmente úteis, <xref:microsoft.quantum.diagnostics.assertmeasurement> e ambas <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> modeladas como operações `()` em. Estas afirmações cada uma delas leva um operador Pauli descrevendo uma determinada medição de interesse, um registo quântico no qual é realizada uma medição, e um resultado hipotético.
@@ -314,7 +314,7 @@ Os seguintes exemplos mostram `DumpMachine` alguns Estados comuns:
 
 ***
 
-Uma <xref:microsoft.quantum.diagnostics.dumpmachine> vez que faz parte do espaço de <xref:microsoft.quantum.diagnostics> nomes, deve adicionar uma `open` declaração para aceder a ele:
+Uma <xref:microsoft.quantum.diagnostics.dumpmachine> vez que faz parte do espaço de  <xref:microsoft.quantum.diagnostics> nomes, deve adicionar uma `open` declaração para aceder a ele:
 
 ```qsharp
 namespace Samples {
@@ -333,7 +333,7 @@ namespace Samples {
 
 ### <a name="dumpregister"></a>DumpRegister
 
-<xref:microsoft.quantum.diagnostics.dumpregister>funciona como <xref:microsoft.quantum.diagnostics.dumpmachine> , exceto que também é preciso uma matriz de qubits para limitar a quantidade de informação apenas à relevante para os qubits correspondentes.
+<xref:microsoft.quantum.diagnostics.dumpregister> funciona como <xref:microsoft.quantum.diagnostics.dumpmachine> , exceto que também é preciso uma matriz de qubits para limitar a quantidade de informação apenas à relevante para os qubits correspondentes.
 
 Tal como <xref:microsoft.quantum.diagnostics.dumpmachine> acontece, a informação gerada depende <xref:microsoft.quantum.diagnostics.dumpregister> da máquina-alvo. Para o simulador quântico de estado completo, escreve no ficheiro a função de onda até uma fase global do subsistil quântico gerado pelos qubits fornecidos no mesmo formato que <xref:microsoft.quantum.diagnostics.dumpmachine> .  Por exemplo, tomar novamente uma máquina com apenas dois qubits atribuídos e no estado quântico $$ \start{align} \ket{\psi} = \frac {1} {\sqrt {2} } \ket {00} - \frac{(1 + i)} {2} \ket {10} = - e^{-i\pi/4} (\frac {1} {\sqrt {2} } \ket {0} - \frac{(1 + i)} {2} {1} \ket ) \otimes \otimes \frac{-(1 + i)}{\sqrt {2} } \ket {0} ) , \end{align} $} chamando <xref:microsoft.quantum.diagnostics.dumpregister> para gerar esta `qubit[0]` saída:
 
@@ -384,6 +384,6 @@ namespace app
 
 ## <a name="debugging"></a>Depurar
 
-Além de `Assert` `Dump` funções e operações, Q# suporta um subconjunto de capacidades padrão de depuração do Estúdio Visual: [definir pontos](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)de rutura de linha, [passar pelo código usando F10,](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)e [inspecionar valores de variáveis clássicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) são todos possíveis durante a execução de código no simulador.
+Além de `Assert` `Dump` funções e operações, Q# suporta um subconjunto de capacidades padrão de depuração do Estúdio Visual: [definir pontos](https://docs.microsoft.com/visualstudio/debugger/using-breakpoints)de rutura de linha, [passar pelo código usando F10,](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)e [inspecionar valores de variáveis clássicas](https://docs.microsoft.com/visualstudio/debugger/autos-and-locals-windows) são todos possíveis ao executar o seu código no simulador.
 
 Depurar em Visual Studio Code aproveita as capacidades de depuração fornecidas pela extensão C# para Código de Estúdio Visual alimentada pela OmniSharp e requer a instalação da [versão mais recente](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp). 

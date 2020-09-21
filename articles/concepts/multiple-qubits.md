@@ -1,6 +1,6 @@
 ---
 título: Descrição de múltiplos qubits: Aprenda a realizar operações em dois ou mais qubits.
-autor: QuantumWriter uid: microsoft.quantum.concepts.multiple-qubits ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: bradben uid: microsoft.quantum.concepts.multiple-qubits ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -97,7 +97,7 @@ Estas ferramentas são absolutamente necessárias para entender os conjuntos de 
 
 ## <a name="representing-two-qubits"></a>Representando Dois Qubits
 A principal diferença entre estados de um e dois qubits é que os estados de dois qubits são quatro dimensões em vez de bidimensionais.
-Isto porque a base computacional para estados de dois qubits é formada pelos produtos tensores de estados de um qubit.  Por exemplo, temos\begin{align}
+Isto porque a base computacional para estados de dois qubits é formada pelos produtos tensores de estados de um qubit.  Por exemplo, temos \begin{align}
 00 \equiv \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ \end{bmatrix} & = \begin{bmatrix} 0 1 \\\\ 0 \\\\ \\\\ 0 0 \end{bmatrix} , \qquad 01 \equiv \begin{bmatrix} \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 0 1 0 1 \end{bmatrix} = \begin{bmatrix} \\\\ 0 1 \\\\ 0 0 \\\\ 0 0 \end{bmatrix} ,\\\\
 10 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ \end{bmatrix} & = \begin{bmatrix} 0 \\\\ 0 \\\\ 1 \\\\ 0 \end{bmatrix} 10 , \qquad 11 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 0 1 \end{bmatrix} = \begin{bmatrix} \\\\ 0 0 \\\\ 0 \\\\ 0 1 \end{bmatrix} .
 \end{align}
@@ -122,7 +122,7 @@ Por exemplo, não há estados $ \psi = \begin{bmatrix} \alpha \\\\ \beta \end{bm
 
 $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt { 2 } \end{bmatrix} .$$ 
 
-Um estado de dois qubits, que não pode ser escrito como o produto de tensor de estados de um único qubit, é chamado de "estado emaranhado"; dizem que os dois qubits estão [*emaranhados.*](https://en.wikipedia.org/wiki/Quantum_entanglement)  Em termos frouxos, porque o estado quântico não pode ser considerado como um produto tensor de estados de qubit único, a informação que o Estado detém não se limita a nenhum dos qubits individualmente.  Pelo contrário, a informação é armazenada não localmente nas correlações entre os dois estados.  Esta não localidade da informação é uma das principais características distintivas da computação quântica sobre a computação clássica e é essencial para uma série de protocolos quânticos, incluindo [teletransporte quântica](https://github.com/microsoft/Quantum/tree/master/samples/getting-started/teleportation) e [correção de erros quânticos.](xref:microsoft.quantum.libraries.error-correction)
+Um estado de dois qubits, que não pode ser escrito como o produto de tensor de estados de um único qubit, é chamado de "estado emaranhado"; dizem que os dois qubits estão [*emaranhados.*](https://en.wikipedia.org/wiki/Quantum_entanglement)  Em termos frouxos, porque o estado quântico não pode ser considerado como um produto tensor de estados de qubit único, a informação que o Estado detém não se limita a nenhum dos qubits individualmente.  Pelo contrário, a informação é armazenada não localmente nas correlações entre os dois estados.  Esta não localidade da informação é uma das principais características distintivas da computação quântica sobre a computação clássica e é essencial para uma série de protocolos quânticos, incluindo [teletransporte quântica](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) e [correção de erros quânticos.](xref:microsoft.quantum.libraries.error-correction)
 
 ## <a name="measuring-two-qubit-states"></a>Medindo estados de dois qubits ##
 Medir estados de dois qubits é muito semelhante às medições de um único qubit. Medir o estado
@@ -137,29 +137,29 @@ $$
 produz $ 00 $ com probabilidade $ | \alpha _ { 00 } | ^2 , $ $ 01 $ com probabilidade $ | \alpha _ { 01 } | ^2 $ , $ 10 $ com probabilidade $ | \alpha _ { 10^2 , e } | $ $ 11 $ com probabilidade $ | \alpha _ { 11 } | ^2 $ . As variáveis $ \alpha _ { } 00, \alpha _ { 01, } \alpha _ { 10 } $ e $ \alpha _ { 11 } $ foram deliberadamente nomeadas para tornar esta ligação clara. Após a medição, se o resultado for $ 00, $ então o estado quântico do sistema de dois qubits entrou em colapso e é agora
 
 $$
-    00\equiv
+    00 \equiv
     \begin{bmatrix}
-        1\\\\ 
-        0\\\\ 
-        0\\\\ 
+        1 \\\\ 
+        0 \\\\ 
+        0 \\\\ 
         0 \end{bmatrix} .
 $$
 
 Também é possível medir apenas um qubit de um estado quântico de dois qubits. Nos casos em que se mede apenas um dos qubits, o impacto da medição é subtilmente diferente porque todo o Estado não é colapsado para um estado de base computacional, pelo contrário, é colapsado para apenas um subsiste.  Por outras palavras, nestes casos, medir apenas um qubit colapsa apenas um dos subsistemas, mas não todos.  
 
-Para ver este considerar medir o primeiro qubit do seguinte estado, que é formado pela aplicação da transformação Hadamard $ H $ em dois qubits inicialmente definidos para o estado "0":$$
+Para ver este considerar medir o primeiro qubit do seguinte estado, que é formado pela aplicação da transformação Hadamard $ H $ em dois qubits inicialmente definidos para o estado "0": $$
 H^ { \otimes 2 } \left ( \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} \right ) = \frac { 1 } { 2 } \begin{bmatrix} 1 & & 1 & \\\\ 1 & & 1 1 1 & -1 \\\\ & 1 1 1 1 & & -1 \\\\ & -1 & -1 -1 & \end{bmatrix} \begin{bmatrix} 1 1 \\\\ 1 1 1 1 \\\\ 0 \\\\ \end{bmatrix} = \frac { 0 0 } { } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \mapsto \begin{cases} \text { } = & \frac { } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ \\\\ \end{bmatrix} \\\\ \text { } = & \frac { } { \sqrt { } } \begin{bmatrix} \\\\ \\\\ 0 \\\\ 11 1 \end{bmatrix} \\\\ \end{cases} .  
 $$
 Ambos os resultados têm 50% de probabilidade de ocorrer.  O resultado sendo 50% de probabilidade para ambos pode ser intuido pelo facto de que o vetor de estado quântico inicial é invariante sob a troca $ de 0 $ com $ 1 no primeiro $ qubit.
 
-A regra matemática para medir o primeiro ou segundo qubit é simples.  Se deixarmos $ e_k $ ser o $ vetor de base computacional k^ { \rm } $ e deixar S ser o conjunto $ de todos os e_k de tal forma que o $ $ $ qubit em questão leva o valor $ 1 para esse valor de k $ $ $ .  Por exemplo, se estivermos interessados em medir o primeiro qubit, $ S $ consistirá em $ e_1 \equiv 10 $ e e_3 $ \equiv 11 $ .  Da mesma forma, se estivermos interessados no segundo qubit $ S $ consistiria em $ e_2 \equiv 01 $ e e_3 $ \equiv 11 $ .  Em seguida, a probabilidade de medir o qubit escolhido para ser $ 1 $ é para o vetor de estado$\psi$
+A regra matemática para medir o primeiro ou segundo qubit é simples.  Se deixarmos $ e_k $ ser o $ vetor de base computacional k^ { \rm } $ e deixar S ser o conjunto $ de todos os e_k de tal forma que o $ $ $ qubit em questão leva o valor $ 1 para esse valor de k $ $ $ .  Por exemplo, se estivermos interessados em medir o primeiro qubit, $ S $ consistirá em $ e_1 \equiv 10 $ e e_3 $ \equiv 11 $ .  Da mesma forma, se estivermos interessados no segundo qubit $ S $ consistiria em $ e_2 \equiv 01 $ e e_3 $ \equiv 11 $ .  Em seguida, a probabilidade de medir o qubit escolhido para ser $ 1 $ é para o vetor de estado $\psi$
 
 $$
 P( \text { resultado } = 1) = \sum _ e_k no conjunto { S \text { } } \psi ^ \dagger e_k e_k^ \dagger \psi .
 $$
 
 > [!NOTE]
->Neste documento estamos a usar o formato pouco endiano para rotular a base computacional. Em formato pequeno endiano, os pedaços menos significativos vêm em primeiro lugar. Por exemplo, o número quatro em formato pequeno-endiano é representado pela cadeia de bits 001.
+> Neste documento estamos a usar o formato pouco endiano para rotular a base computacional. Em formato pequeno endiano, os pedaços menos significativos vêm em primeiro lugar. Por exemplo, o número quatro em formato pequeno-endiano é representado pela cadeia de bits 001.
 
 Uma vez que cada medida de qubit só pode produzir $ 0 $ ou $ $ 1, a probabilidade de medir $ 0 é simplesmente $ $ 1-P( \text { resultado } = 1) $ .  É por isso que apenas explicitamente damos uma fórmula para a probabilidade de medir $ 1 $ .
 
@@ -198,37 +198,37 @@ Como no caso de um único qubit, qualquer transformação unitária é uma opera
 Por exemplo, o portão CNOT (CONTROLLED-NOT) é um portão de dois qubits comumente utilizado e é representado pela seguinte matriz unitária:
 
 $$
-\operatorname{CNOT } = \begin{bmatrix} 1\ 0\ 0\ \\\\ 0\ 1\ 0\ \\\\ 0\ 0\ 0\ 0\ 0\ 0\ 1 \\\\ 0\ 0\ 1\ 0\ 0\end{bmatrix}
+\operatorname{CNOT } = \begin{bmatrix} 1\ 0\ 0\  \\\\  0\ 1\ 0\ \\\\  0\ 0\ 0\ 0\ 0\ 0\ 1 \\\\  0\ 0\ 1\ 0\ 0 \end{bmatrix}
 $$
 
 Também podemos formar portões de dois qubits aplicando portas de um único qubit em ambos os qubits. Por exemplo, se aplicarmos os portões 
 
 $$
 \begin{bmatrix}
-a\ b \\\\ c\ d\end{bmatrix}
+a\ b \\\\ c\ d \end{bmatrix}
 $$
 
 e
 
 $$\begin{bmatrix}
-e\ f \\\\ g\ h\end{bmatrix}
+e\ f \\\\ g\ h \end{bmatrix}
 $$
 
-aos primeiros e segundos qubits, respectivamente, isto equivale à aplicação do unitário de dois qubits dado pelo seu produto tensor:$$\begin{bmatrix}
-a\ b \\\\ c\ d\end{bmatrix}
+aos primeiros e segundos qubits, respectivamente, isto equivale à aplicação do unitário de dois qubits dado pelo seu produto tensor: $$\begin{bmatrix}
+a\ b \\\\ c\ d \end{bmatrix}
 \otimes 
 \begin{bmatrix}
-e\ f \\\\ g\ h\end{bmatrix}=
+e\ f \\\\ g\ h \end{bmatrix}=
     \begin{bmatrix}
-    ae\ af\ ser\ bf\\\\
-    ag\ ah\ bg\ bh\\\\
-    ce\ cf\ de\ df\\\\
+    ae\ af\ ser\ bf \\\\
+    ag\ ah\ bg\ bh \\\\
+    ce\ cf\ de\ df \\\\
     cg\ ch\ dg\ dh \end{bmatrix} .$$
 Assim, podemos formar portões de dois qubits tomando o produto tensor de alguns portões de um único qubit conhecido. Alguns exemplos de portões de dois qubits incluem $ H \otimes $ $ \otimes \boldone $ H, X, e $ X Z \otimes $ .
 
 Note que, embora dois portões de um único qubit definam um portão de dois qubits tomando o seu produto tensor, o inverso não é verdade. Nem todos os portões de dois qubits podem ser escritos como o produto de tensor de portas de um único qubit.  Tal portão é chamado de portão *de enredar.* Um exemplo de um portão de enredar é o portão CNOT.
 
-A intuição por trás de um portão não controlado pode ser generalizada a portões arbitrários.  Um portão controlado em geral é um portão que age como identidade (ou seja, não tem ação) a menos que um qubit específico seja $ 1 $ .  Denotamos um unitário controlado, controlado neste caso no qubit rotulado $ $ x, com um $ \Lambda \_ x(U) $ .  Como exemplo $ \Lambda _0(U) e \_ { 1 } \otimes { \psi } = e \_ { 1 } \otimes U { \psi } $ e $ \Lambda \_ 0(U) e \_ { 0 } \otimes { \psi } = e \_ { 0 } \otimes { \psi } $ , onde $ e \_ 0 $ e $ \_ 1 são os $ vetores de base computacional para um único qubit correspondente aos valores $ 0 e $ $ 1 $ .  Por exemplo, considere o seguinte $ portão controlado-Z, $ em seguida, podemos expressar isto como$$
+A intuição por trás de um portão não controlado pode ser generalizada a portões arbitrários.  Um portão controlado em geral é um portão que age como identidade (ou seja, não tem ação) a menos que um qubit específico seja $ 1 $ .  Denotamos um unitário controlado, controlado neste caso no qubit rotulado $ $ x, com um $ \Lambda \_ x(U) $ .  Como exemplo $ \Lambda _0(U) e \_ { 1 } \otimes { \psi } = e \_ { 1 } \otimes U { \psi } $ e $ \Lambda \_ 0(U) e \_ { 0 } \otimes { \psi } = e \_ { 0 } \otimes { \psi } $ , onde $ e \_ 0 $ e $ \_ 1 são os $ vetores de base computacional para um único qubit correspondente aos valores $ 0 e $ $ 1 $ .  Por exemplo, considere o seguinte $ portão controlado-Z, $ em seguida, podemos expressar isto como $$
 \Lambda\_0(Z) = \begin{bmatrix} 1 & 0 & & 0 \\\\ & 0 1 & 0 & \\\\ 0 & & 0 0 & \\\\ 0 & 0 & 0 0 0 & -1 \end{bmatrix} = \boldone \otimes (H) \operatorname { CNOT } \boldone \otimes (H).
 $$
 
@@ -251,7 +251,7 @@ Os portões quânticos funcionam exatamente da mesma forma.  Por exemplo, se qui
 
 \begin{align}
 &(X \otimes \operatorname { CNOT } _ { 12 } \otimes \boldone \otimes \boldone \otimes \boldone \otimes \boldone ) \begin{bmatrix} \\\\ 0 1 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 1 0 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 1 \end{bmatrix} \otimes \begin{bmatrix} \\\\ 0 1 \end{bmatrix} \otimes \begin{bmatrix} 1 \\\\ \end{bmatrix} \otimes \begin{bmatrix} 1 0 1 \\\\ \end{bmatrix} \otimes \begin{bmatrix} 0 0 0 \\\\ 1 0 1\end{bmatrix}\\\\
-&\qquad\qquad\equiv0011001.\end{align}
+&\qquad\qquad\equiv 0011001. \end{align}
 
 Em muitos sistemas qubits, há muitas vezes a necessidade de alocar e translocar qubits que servem de memória temporária para o computador quântico.  Tal qubit é chamado de ancilla.  Por defeito, assumimos que o estado qubit é inicializado para $ e_0 $ após a atribuição.  Assumimos ainda que é devolvida de novo a $ e_0 $ antes da negociação.  Esta suposição é importante porque se um qubit de ancilla ficar enredado com outro registo qubit quando se torna transatado, então o processo de transação prejudicará a ancilla.  Por esta razão, assumimos sempre que tais qubits são revertidos para o seu estado inicial antes de serem libertados.
 
