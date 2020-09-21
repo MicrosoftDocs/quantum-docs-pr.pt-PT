@@ -3,18 +3,18 @@ title: Estruturas de dados nas Q# bibliotecas padrão
 description: Conheça as estruturas de dados, oráculos e geradores dinâmicos nas Q# bibliotecas padrão da Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 222fa7d0d33d4ac6c15e9ee9e6e97f380867a145
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868528"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835592"
 ---
 # <a name="data-structures-and-modeling"></a>Estruturas de Dados e Modelação #
 
@@ -160,8 +160,8 @@ Este unitário é habitualmente descrito por um de dois tipos de oráculos.
 
 > [!TIP]
 > Ambos os tipos de oráculo descritos abaixo estão cobertos nas amostras.
-> Para saber mais sobre oráculos de consulta contínua, consulte a amostra [ **phaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/characterization/phase-estimation).
-> Para saber mais sobre oráculos de consulta discreta, consulte a amostra [ **isingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> Para saber mais sobre oráculos de consulta contínua, consulte a amostra [ **phaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Para saber mais sobre oráculos de consulta discreta, consulte a amostra [ **isingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 O primeiro tipo de oráculo, a que chamamos um oráculo de consulta discreta e que representa com o tipo definido pelo <xref:microsoft.quantum.oracles.discreteoracle> utilizador, envolve simplesmente uma matriz unitária.
 Se $U$ é o unitário cujos valores eigen valorizamos, então o oráculo para $U$ é simplesmente um substituto para uma sub-rotina que implementa $U$.
@@ -211,8 +211,8 @@ onde o inteiro $r > 0$ controla o erro de aproximação.
 A biblioteca de modelação de geradores dinâmicos fornece uma estrutura para codificar sistematicamente geradores complicados em termos de geradores mais simples. Tal descrição pode então ser passada para, digamos, a biblioteca de simulação para implementar a evolução do tempo através de um algoritmo de simulação de escolha, com muitos detalhes automaticamente tratados.
 
 > [!TIP]
-> A biblioteca dinâmica do gerador descrita abaixo está coberta nas amostras. Para um exemplo baseado no modelo Ising, consulte a amostra [ **isingGenerators** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/generators).
-> Para um exemplo baseado em hidrogénio molecular, consulte as [**amostras H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) e [**H2SimulationGUI.**](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/gui)
+> A biblioteca dinâmica do gerador descrita abaixo está coberta nas amostras. Para um exemplo baseado no modelo Ising, consulte a amostra [ **isingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> Para um exemplo baseado em hidrogénio molecular, consulte as [**amostras H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) e [**H2SimulationGUI.**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui)
 
 ### <a name="complete-description-of-a-generator"></a>Descrição completa de um gerador ###
 

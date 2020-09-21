@@ -1,24 +1,24 @@
 ---
-title: Variáveis emQ#
-description: preencher descrição
+title: Variáveis em Q#
+description: Aprenda a trabalhar com diferentes variáveis em Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 00af0989cd5a1f9ccc7d9f2545acd0d256bc7eb9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867850"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835881"
 ---
-# <a name="variables-in-no-locq"></a>Variáveis emQ#
+# <a name="variables-in-no-locq"></a>Variáveis em Q#
 
-Q#distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas*a expressões.
+Q# distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas*a expressões.
 Em geral, o uso de símbolos imutáveis é encorajado porque permite que o compilador execute mais otimizações.
 
 O lado esquerdo de uma ligação consiste de um tuple de símbolo e do lado direito de uma expressão.

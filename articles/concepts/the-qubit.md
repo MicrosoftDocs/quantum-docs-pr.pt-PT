@@ -1,6 +1,6 @@
 ---
 título: O qubit na descrição da computação quântica: Saiba mais sobre qubits, a unidade fundamental de informação na computação quântica.
-autor: QuantumWriter uid: microsoft.quantum.concepts.qubit ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: QuantumWriter uid: microsoft.quantum.concepts.qubit ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -100,7 +100,7 @@ Os vetores de estado quântico $ \begin{bmatrix} \\\\ 10 \end{bmatrix} $ e $ \be
 
 Levamos estes dois estados quânticos para corresponder aos dois estados de um bit clássico, nomeadamente $ 0 $ e $ 1 $ . A convenção padrão é escolher
 
-$$0 \equiv \begin{bmatrix} \\\\ 10 , \end{bmatrix} \qquad 1 \equiv \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} ,$$
+$$0 \equiv \begin{bmatrix} \\\\  10 , \end{bmatrix} \qquad 1 \equiv \begin{bmatrix} 0 \\\\  1 \end{bmatrix} ,$$
 
 embora a escolha oposta poderia igualmente ser tomada. Assim, do número infinito de possíveis vetores de estado quântico de um único qubit, apenas dois correspondem a estados de bits clássicos; todos os outros estados quânticos não.
 
@@ -120,7 +120,7 @@ Os qubits também podem ser retratados em $ 3 $ D usando a representação da [*
 ![Esfera de Bloch](~/media/concepts_bloch.png)
 
 As setas deste diagrama mostram a direção em que o vetor de estado quântico está apontando e cada transformação da seta pode ser considerada como uma rotação sobre um dos eixos cardeais.
-Ao pensar numa computação quântica como uma sequência de rotações é uma intuição poderosa, é um desafio usar esta intuição para desenhar e descrever algoritmos. Q#alivia esta questão fornecendo uma linguagem para descrever tais rotações.
+Ao pensar numa computação quântica como uma sequência de rotações é uma intuição poderosa, é um desafio usar esta intuição para desenhar e descrever algoritmos. Q# alivia esta questão fornecendo uma linguagem para descrever tais rotações.
 
 ## <a name="single-qubit-operations"></a>Operações single-Qubit
 
@@ -128,7 +128,7 @@ Os computadores quânticos processam dados aplicando um conjunto universal de po
 Esta noção de universalidade é semelhante à noção de universalidade para a computação tradicional (ou seja, clássica) onde um conjunto de portão é considerado universal se cada transformação dos bits de entrada pode ser realizada usando um circuito de comprimento finito.
 Na computação quântica, as transformações válidas que nos são permitidas num qubit são transformações unitárias e medição.
 A *operação adjacente* ou a transposição complexa do conjugado é de importância crucial para a computação quântica porque é necessária para inverter as transformações quânticas.
-Q#reflete-o fornecendo métodos para compilar automaticamente as sequências do portão para o seu adjacente, o que evita que o programador tenha de entregar códigos adjacentes em muitos casos. Um exemplo disso é mostrado abaixo:
+Q# reflete-o fornecendo métodos para compilar automaticamente as sequências do portão para o seu adjacente, o que evita que o programador tenha de entregar códigos adjacentes em muitos casos. Um exemplo disso é mostrado abaixo:
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
@@ -145,7 +145,7 @@ Para a universalidade, exigimos que um computador quântico apenas *se aproxime*
 Por outras palavras, um conjunto de portões é um conjunto de portão universal se qualquer transformação unitária pode ser escrita aproximadamente como um produto de portões deste conjunto. Exigimos que para qualquer erro prescrito ligado, existam portões $ G_ { } 1, G_ { 2 } ,\ldots, G_N $ do portão definido de tal forma que
 
 $$
-G_N G_ { N-1 } \cdots G_2 G_1 \aprox.$$
+G_N G_ { N-1 } \cdots G_2 G_1 \aprox. $$
 
 Note-se que porque a convenção para a multiplicação da matriz é multiplicar da direita para a esquerda a primeira operação do portão nesta sequência, $ G_N , é na verdade a última aplicada ao $ vetor de estado quântico. Mais formalmente, dizemos que tal conjunto de porta é universal se para cada tolerância de erro $ \epsilon > 0 $ existe $ G_1,\ldots, G_N $ tal que a distância entre $ G_N\ldots G_1 $ e U é no máximo $ $ $ \epsilon $ . Idealmente, o valor de $ N necessário para atingir esta distância de $ $ \epsilon $ deve escalar poli-logaritmicamente com $ 1/\epsilon $ .
 

@@ -2,19 +2,19 @@
 title: Operações e funções em Q#
 description: Como definir e chamar operações e funções, bem como as especializações de operação controladas e adjacentes.
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.operationsfunctions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c2ce999ea2a0fe7204f402fedb4cd3a3c15bd44b
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: e9a84de2753bc3293f441e66ee53e78559263e5c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759429"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833489"
 ---
 # <a name="operations-and-functions-in-no-locq"></a>Operações e Funções em Q#
 
@@ -73,9 +73,7 @@ operation DecodeSuperdense(here : Qubit, there : Qubit) : (Result, Result) {
 
 Se uma operação implementar uma transformação unitária, como é o caso de muitas operações em Q# , então é possível definir como a operação age quando *contígua* ou *controlada*. Uma especialização *adjacente* de uma operação especifica como o "inverso" da operação atua, enquanto uma especialização *controlada* especifica como uma operação age quando a sua aplicação está condicionada ao estado de um determinado registo quântico.
 
-Os contíguos das operações quânticas são cruciais para muitos aspetos da computação quântica. Para um exemplo de uma dessas situações discutidas ao lado de uma técnica de Q# programação útil, consulte [Conjugações](#conjugations) neste artigo. 
-
-A versão controlada de uma operação é uma nova operação que aplica efetivamente a operação base apenas se todos os qubits de controlo estiverem num estado especificado.
+Os contíguos das operações quânticas são cruciais para muitos aspetos da computação quântica. Para um exemplo de uma dessas situações discutidas ao lado de uma técnica de Q# programação útil, ver [Control Flow: Conjugações](xref:microsoft.quantum.guide.controlflow#conjugations). A versão controlada de uma operação é uma nova operação que aplica efetivamente a operação base apenas se todos os qubits de controlo estiverem num estado especificado.
 Se os qubits de controlo estiverem em sobreposição, então a operação de base é aplicada de forma coerente à parte apropriada da sobreposição.
 Assim, as operações controladas são frequentemente usadas para gerar emaranhados.
 
@@ -364,46 +362,6 @@ function ConjugateUnitaryWith(
 
 Os tipos definidos pelo utilizador são tratados como uma versão embrulhada do tipo subjacente, em vez de como um subtipo.
 Isto significa que um valor de um tipo definido pelo utilizador não é utilizável onde se espera que seja um valor do tipo subjacente.
-
-
-### <a name="conjugations"></a>Conjugações
-
-Em contraste com os bits clássicos, a libertação da memória quântica é um pouco mais envolvida, uma vez que os qubits de reposição cega podem ter efeitos indesejáveis na computação restante se os qubits ainda estiverem emaranhados. Estes efeitos podem ser evitados "desfazendo" os cálculos realizados corretamente antes de libertar a memória. Um padrão comum na computação quântica é, por conseguinte, o seguinte: 
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    outerOperation(target);
-    innerOperation(target);
-    Adjoint outerOperation(target);
-}
-```
-
-Começando com o nosso lançamento 0.9, Q# apoia uma declaração de conjugação que implementa a transformação anterior. Utilizando esta declaração, a operação `ApplyWith` pode ser implementada da seguinte forma:
-
-```qsharp
-operation ApplyWith<'T>(
-    outerOperation : ('T => Unit is Adj), 
-    innerOperation : ('T => Unit), 
-    target : 'T) 
-: Unit {
-
-    within{ 
-        outerOperation(target);
-    }
-    apply {
-        innerOperation(target);
-    }
-}
-```
-Tal declaração de conjugação torna-se muito mais útil se as transformações exteriores e interiores não estiverem prontamente disponíveis como operações, mas são mais convenientes para descrever por um bloco composto por várias declarações. 
-
-A transformação inversa para as declarações definidas no bloco interior é gerada automaticamente pelo compilador e executada após o fim do bloco de aplicação.
-Uma vez que quaisquer variáveis mutáveis utilizadas como parte do bloco interior não podem ser recuperadas no bloco de aplicação, a transformação gerada é garantidamente o adjacente do cálculo no bloco interior. 
 
 
 ## <a name="defining-new-functions"></a>Definição de Novas Funções

@@ -1,6 +1,6 @@
 ---
 título: Descrição da notação dirac: Saiba como usar a notação dirac para representar estados quânticos e simular operações quânticas.
-autor: QuantumWriter uid: microsoft.quantum.concepts.dirac ms.author: nawiebe@microsoft.com ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: QuantumWriter uid: microsoft.quantum.concepts.dirac ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -230,5 +230,5 @@ Este conceito de representar o Estado como uma matriz, em vez de um vetor, é mu
 Os operadores gerais do Estado quântico, em vez de vetores, são omnipresentes em algumas áreas da computação quântica, mas não são necessários para entender os fundamentos do campo.
 Para o leitor interessado, recomendamos a leitura de um dos livros de referência fornecidos para [mais informações.](xref:microsoft.quantum.more-information)
 
-## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q#sequências de portão equivalentes a estados quânticos
+## <a name="no-locq-gate-sequences-equivalent-to-quantum-states"></a>Q# sequências de portão equivalentes a estados quânticos
 Um último ponto que vale a pena levantar sobre a notação quântica e Q# a linguagem de programação: no início deste documento mencionamos que o estado quântico é o objeto fundamental da informação na computação quântica.  Pode então ser uma surpresa que Q# não haja noção de estado quântico.  Em vez disso, todos os Estados são descritos apenas pelas operações usadas para os preparar.  O exemplo anterior é uma excelente ilustração disto.  Em vez de expressar uma sobreposição uniforme sobre cada corda quântica num registo, podemos representar o resultado como $ H^ { \otimes n } \ket { 0 } $ .  Esta descrição exponencialmente mais curta do estado não só tem a vantagem de que podemos raciocinar clássicamente sobre ele, mas também define concisamente as operações necessárias para ser propagada através da pilha de software para implementar o algoritmo.  Por esta razão, Q# é projetado para emitir sequências de portão em vez de estados quânticos; no entanto, a um nível teórico as duas perspetivas são equivalentes.

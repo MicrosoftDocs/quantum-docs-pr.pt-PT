@@ -3,17 +3,17 @@ title: Conversões de tipo nas Q# bibliotecas padrão
 description: Saiba mais sobre funções comuns e definidas pelo utilizador nas Q# bibliotecas padrão.
 author: cgranade
 uid: microsoft.quantum.libraries.convert
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2319bf453f5fbf6bd068859ea65562423d3ff4d0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: aa8a1ad624067906998d2735c7a95174a163ce97
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868523"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835609"
 ---
 # <a name="type-conversions"></a>Conversões de tipo #
 

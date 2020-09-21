@@ -3,18 +3,18 @@ title: Correção de erros nas Q# bibliotecas padrão
 description: Aprenda a usar códigos de correção de erros nos seus Q# programas enquanto protege o estado dos qubits.
 author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8b1f008793281121bc547d1a6ac3b960feb082ab
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868496"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835558"
 ---
 # <a name="error-correction"></a>Correção de Erros #
 
@@ -78,7 +78,7 @@ Nesta secção, descrevemos este quadro e a sua aplicação a alguns simples có
 > Uma introdução completa ao formalismo estabilizador está fora do âmbito desta secção.
 > Referimos leitores interessados em aprender mais com [Gottesman 2009.](https://arxiv.org/abs/0904.2557)
 
-## <a name="representing-error-correcting-codes-in-no-locq"></a>Representando códigos de correção de erros emQ# ##
+## <a name="representing-error-correcting-codes-in-no-locq"></a>Representando códigos de correção de erros em Q# ##
 
 Para ajudar a especificar códigos de correção de erros, o Q# cânone fornece vários tipos distintos definidos pelo utilizador:
 
@@ -120,6 +120,6 @@ using (scratch = Qubit[nScratch]) {
 }
 ```
 
-Exploramos isto mais detalhadamente na amostra de [código bit flip.](https://github.com/microsoft/Quantum/tree/master/samples/error-correction/bit-flip-code)
+Exploramos isto mais detalhadamente na amostra de [código bit flip.](https://github.com/microsoft/Quantum/tree/main/samples/error-correction/bit-flip-code)
 
 Além do código bit-flip, o Q# cânone é fornecido com implementações do [código perfeito de cinco qubits](https://arxiv.org/abs/quant-ph/9602019), e o código de sete [qubits](https://arxiv.org/abs/quant-ph/9705052), ambos podem corrigir um erro arbitar de um único qubit.

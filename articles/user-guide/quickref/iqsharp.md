@@ -2,18 +2,18 @@
 title: I Q# Comandos Mágicos
 description: Página de referência rápida para Q# i comandos mágicos com Q# Cadernos Jupyter
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 03/05/2020
 uid: microsoft.quantum.guide.quickref.iqsharp
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1d2d092588e1a5c69d12e5d50377e3e26412c094
-ms.sourcegitcommit: 75c4edc7c410cc63dc8352e2a5bef44b433ed188
+ms.openlocfilehash: 75a1e1820e5ca16268c9b11322eb5653094b1a3c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88863701"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833564"
 ---
 # <a name="ino-locq-magic-commands"></a>I Q# Comandos Mágicos
 
@@ -34,12 +34,12 @@ ms.locfileid: "88863701"
 ### <a name="azure-quantum-integration"></a>Integração quântica Azure
 
 - [`%azure.connect`](xref:microsoft.quantum.iqsharp.magic-ref.azure.connect): Liga-se a um espaço de trabalho Azure Quantum ou apresenta o estado atual da ligação.
-- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Executa um trabalho num espaço de trabalho Azure Quantum.
+- [`%azure.execute`](xref:microsoft.quantum.iqsharp.magic-ref.azure.execute): Gere um emprego num espaço de trabalho Azure Quantum.
 - [`%azure.jobs`](xref:microsoft.quantum.iqsharp.magic-ref.azure.jobs): Apresenta uma lista de postos de trabalho no atual espaço de trabalho Azure Quantum.
 - [`%azure.output`](xref:microsoft.quantum.iqsharp.magic-ref.azure.output): Apresenta resultados para um trabalho no atual espaço de trabalho Azure Quantum.
 - [`%azure.status`](xref:microsoft.quantum.iqsharp.magic-ref.azure.status): Apresenta o estado de um trabalho no atual espaço de trabalho Azure Quantum.
 - [`%azure.submit`](xref:microsoft.quantum.iqsharp.magic-ref.azure.submit): Submete um emprego a um espaço de trabalho Azure Quantum.
-- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Define ou apresenta o alvo de execução ativo para Q# a submissão de emprego num espaço de trabalho Azure Quantum.
+- [`%azure.target`](xref:microsoft.quantum.iqsharp.magic-ref.azure.target): Define ou exibe o alvo de execução ativo para Q# a submissão de emprego num espaço de trabalho Azure Quantum.
 
 ### <a name="chemistry-from-microsoftquantumchemistry-package"></a>Chemistry (do pacote Microsoft.Quantum.Chemistry)
 

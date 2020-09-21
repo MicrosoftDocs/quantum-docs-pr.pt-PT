@@ -2,19 +2,19 @@
 title: Estimador de recursos quânticos - Kit de Desenvolvimento Quântico
 description: Conheça o estimador de recursos da Microsoft QDK, que estima os recursos necessários para executar uma determinada instância de uma Q# operação num computador quântico.
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1892431c3e332385a5bcefa357eb64a9fac3f381
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 6138c098a4efe2797c7d7360573ddcb9cb70a6c1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992246"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835932"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimativa de recursos do Kit de Desenvolvimento Quântico (QDK)
 
@@ -131,7 +131,7 @@ O estimador de recursos acompanha as seguintes métricas:
 |__R__    |A contagem de quaisquer rotações de um único qubit, `T` excluindo, operações Clifford e Pauli.  |
 |__T__    |A contagem de `T` operações e seus conjugatos, incluindo as `T` operações, T_x = H.T.H, e T_y = Hy.T.Hy.  |
 |__Profundidade__|O limite inferior para a profundidade do circuito quântico executado pela Q# operação. Por predefinição, a métrica de profundidade apenas conta `T` portões. Para mais detalhes, consulte [o Contador de Profundidade.](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)   |
-|__Width__    |O limite inferior para o número máximo de qubits atribuídos durante o Q# funcionamento. Pode não ser possível atingir simultaneamente os limites mais baixos de __profundidade__ e __largura.__  |
+|__Largura__    |O limite inferior para o número máximo de qubits atribuídos durante o Q# funcionamento. Pode não ser possível atingir simultaneamente os limites mais baixos de __profundidade__ e __largura.__  |
 |__Largura emprestada__    |O número máximo de qubits emprestados dentro da Q# operação.  |
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Fornecer a probabilidade de resultados de medições

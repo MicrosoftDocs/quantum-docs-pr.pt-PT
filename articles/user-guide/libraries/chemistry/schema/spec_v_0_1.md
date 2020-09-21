@@ -2,19 +2,19 @@
 title: Especificação de esquema de Broombridge (ver 0.1)
 description: Detalha as especificações do esquema de química quântica de Broombridge v0.1 para a biblioteca de química quântica da Microsoft.
 author: cgranade
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.date: 10/17/2018
 ms.topic: article
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: abbc63b8801c774e6ba06cff99b7382d64424b2c
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869142"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835745"
 ---
 # <a name="broombridge-specification-v01"></a>Especificação de Broombridge v0.1 #
 
@@ -133,7 +133,7 @@ O valor de `metadata` MAIO é o objeto JSON vazio (isto é, ) ou MAY contém pro
 
 ### <a name="hamiltonian-section"></a>Secção Hamiltoniana ###
 
-#### <a name="overview"></a>Descrição geral ####
+#### <a name="overview"></a>Descrição Geral ####
 
 Esta secção é informativa.
 

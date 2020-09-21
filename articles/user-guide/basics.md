@@ -1,22 +1,22 @@
 ---
-title: Q#Básico
-description: Conceitos básicos deQ#
+title: Q# Básico
+description: Conceitos básicos de Q#
 author: gillenhaalb
-ms.author: a-gibec@microsoft.com
+ms.author: a-gibec
 ms.date: 02/28/2020
 ms.topic: article
 uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4f4a75cdaaa070fd763d7f75429b7c39357d25a5
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869652"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835524"
 ---
-# <a name="no-locq-basics"></a>Q#Básico
+# <a name="no-locq-basics"></a>Q# Básico
 
 Este artigo apresenta uma breve introdução aos blocos básicos de construção de Q# .
 
@@ -39,7 +39,7 @@ using (qubit = Qubit()) {
 ```
 Para obter mais informações sobre a inicialização, ou *a atribuição,* qubits, consulte [Trabalhar com qubits.](xref:microsoft.quantum.guide.qubits)
 
-## <a name="quantum-states-in-no-locq"></a>Estados quânticos emQ#
+## <a name="quantum-states-in-no-locq"></a>Estados quânticos em Q#
 
 Importante, o programa anterior não se refere explicitamente ao estado interior, mas descreveu como o Q# nosso programa *transformou* o Estado.
 Com esta abordagem, você pode ser inteiramente agnóstico sobre o que *é* um estado quântico mesmo em cada máquina alvo, que pode ter diferentes interpretações dependendo da máquina. 
@@ -53,7 +53,7 @@ Mas olhando para o futuro, quando a máquina-alvo é um verdadeiro computador qu
 Um Q# programa recombina estas operações tal como definido por uma máquina-alvo para criar novas operações de alto nível para expressar a computação quântica.
 Desta forma, Q# torna-se fácil expressar a lógica subjacente aos algoritmos quânticos e híbridos quânticos-clássicos, ao mesmo tempo que é geral no que diz respeito à estrutura de uma máquina-alvo ou simulador.
 
-## <a name="no-locq-operations-and-functions"></a>Q#operações e funções
+## <a name="no-locq-operations-and-functions"></a>Q# operações e funções
 
 Concretamente, um Q# programa compreende *operações,* *funções*e quaisquer tipos definidos pelo utilizador. 
 
@@ -65,13 +65,13 @@ Neste caso, `Measure` é uma *operação* que instrui a máquina-alvo a efetuar 
 Juntos, as operações e funções são conhecidas como *callables*. A sua estrutura e comportamento subjacentes são introduzidos e detalhados em [Operações e Q# Funções em ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
-## <a name="no-locq-syntax-overview"></a>Q#visão geral da sintaxe
+## <a name="no-locq-syntax-overview"></a>Q# visão geral da sintaxe
 
 A sintaxe de uma linguagem descreve as diferentes combinações de símbolos que formam um programa sintáticamente correto.
 Em Q# , elementos de sintaxe são classificados em três grupos diferentes: tipos, expressões e declarações.
 
 ### <a name="types"></a>Tipos
-Q#é uma linguagem fortemente dactilografada, de modo que o uso cuidadoso de tipos pode ajudar o compilador a fornecer fortes garantias sobre Q# programas no tempo de compilação.
+Q# é uma linguagem fortemente dactilografada, de modo que o uso cuidadoso de tipos pode ajudar o compilador a fornecer fortes garantias sobre Q# programas no tempo de compilação.
 Para além dos tipos primitivos integrados standard e específicos quânticos, por exemplo, `Int` `Bool` , `Qubit` `Result` Q# e, fornece suporte para tipos definidos pelo utilizador.
 
 Para descrições de todos os tipos primitivos, detalhes para tipos de matriz e tuple, e passos para definir novos tipos dentro de um Q# ficheiro, consulte [Tipos Q# em ](xref:microsoft.quantum.guide.types).
@@ -87,7 +87,7 @@ Por exemplo, outra `Int` expressão que avalia é `5` `2+3` .
 Para obter mais informações sobre expressões e operadores compatíveis Q# em , consulte [Expressões tipo Q# em ](xref:microsoft.quantum.guide.expressions). 
 
 ### <a name="statements"></a>Instruções 
-Uma declaração é uma unidade sintática de uma linguagem de programação imperativa que expressa alguma ação a realizar. As declarações contrastam com expressões em que as declarações não devolvem resultados e são executadas apenas pelos seus efeitos secundários. As expressões, no entanto, devolvem sempre um resultado e muitas vezes não têm efeitos colaterais. Em suma, Q# as declarações são executadas, enquanto as expressões são avaliadas.
+Uma declaração é uma unidade sintática de uma linguagem de programação imperativa que expressa alguma ação a realizar. As declarações contrastam com expressões em que as declarações não devolvem resultados e são executadas apenas pelos seus efeitos secundários. As expressões, no entanto, devolvem sempre um resultado e muitas vezes não têm quaisquer efeitos colaterais. Em suma, Q# as declarações são executadas, enquanto as expressões são avaliadas.
 
 Um simples exemplo de uma declaração Q# é atribuir um símbolo a uma expressão:
 ```qsharp

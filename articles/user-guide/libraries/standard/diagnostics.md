@@ -3,17 +3,17 @@ title: Diagnósticos nas Q# bibliotecas padrão
 description: Conheça as funções e operações de diagnóstico nas Q# bibliotecas padrão usadas para apanhar erros ou erros em programas quânticos.
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
-ms.author: chgranad@microsoft.com
+ms.author: chgranad
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4a98795b2459adaa4e47c888751121fffdc70971
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 11ce1bc86db0c5aa0f81ba7d0f2d6ec3463b178c
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868547"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835575"
 ---
 # <a name="diagnostics"></a>Diagnóstico #
 
@@ -33,7 +33,7 @@ Message($"About to rotate by an angle of {angle}...");
 ```
 
 > [!NOTE]
-> `Message`tem assinatura `(String -> Unit)` , mais uma vez representando que a emissão de uma mensagem de registo de depurado não pode ser observada a partir de dentro Q# .
+> `Message` tem assinatura `(String -> Unit)` , mais uma vez representando que a emissão de uma mensagem de registo de depurado não pode ser observada a partir de dentro Q# .
 
 Os <xref:microsoft.quantum.diagnostics.dumpmachine> e <xref:microsoft.quantum.diagnostics.dumpregister> os callables instruem as máquinas-alvo a fornecer informações de diagnóstico sobre todos os qubits atualmente atribuídos ou sobre um registo específico de qubits, respectivamente.
 Cada máquina-alvo varia em que informações de diagnóstico são fornecidas em resposta a uma instrução de despejo.
@@ -67,16 +67,16 @@ Assim, podemos testar operações individuais num simulador clássico antes de i
 Nas máquinas-alvo que não permitem a avaliação de afirmações, as chamadas <xref:microsoft.quantum.diagnostics.assertmeasurement> podem ser ignoradas com segurança.
 
 De uma forma mais geral, a <xref:microsoft.quantum.diagnostics.assertmeasurement> operação afirma que a medição dos qubits dados na base pauli dada terá sempre o resultado dado.
-Se a afirmação falhar, a execução termina ligando `fail` com a mensagem dada.
+Se a afirmação falhar, a corrida termina ligando `fail` com a mensagem dada.
 Por predefinição, esta operação não é implementada; os simuladores que podem apoiá-lo devem fornecer uma implementação que executa a verificação do tempo de execução.
-`AssertMeasurement`tem assinatura `((Pauli[], Qubit[], Result, String) -> ())` .
+`AssertMeasurement` tem assinatura `((Pauli[], Qubit[], Result, String) -> ())` .
 Uma vez `AssertMeasurement` que é uma função com um tuple vazio como seu tipo de saída, nenhum efeito de ter chamado `AssertMeasurement` são observáveis dentro de um Q# programa.
 
 A <xref:microsoft.quantum.diagnostics.assertmeasurementprobability> função de operação afirma que a medição dos qubits dados na dada base Pauli terá o resultado dado com a probabilidade dada, dentro de alguma tolerância.
-A tolerância é aditivo (por `abs(expected-actual) < tol` exemplo).
-Se a afirmação falhar, a execução termina ligando `fail` com a mensagem dada.
+A tolerância é aditivo (por exemplo, `abs(expected-actual) < tol` ).
+Se a afirmação falhar, a corrida termina ligando `fail` com a mensagem dada.
 Por predefinição, esta operação não é implementada; os simuladores que podem apoiá-lo devem fornecer uma implementação que executa a verificação do tempo de execução.
-`AssertMeasurementProbability`tem assinatura `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . O primeiro dos `Double` parâmetros dá a probabilidade desejada do resultado, e o segundo a tolerância.
+`AssertMeasurementProbability` tem assinatura `((Pauli[], Qubit[], Result, Double, String, Double) -> Unit)` . O primeiro dos `Double` parâmetros dá a probabilidade desejada do resultado, e o segundo a tolerância.
 
 Podemos fazer mais do que afirmar uma única medição, usando que a informação clássica utilizada por um simulador para representar o estado interno de um qubit é passível de copiar, de modo que não precisamos realmente de realizar uma medição para testar a nossa afirmação.
 Em particular, isto permite-nos raciocinar sobre medições *incompatíveis* que seriam impossíveis em hardware real.

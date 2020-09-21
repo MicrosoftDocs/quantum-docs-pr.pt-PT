@@ -1,6 +1,6 @@
 ---
 título: Descrição glossária da computação quântica: Um glossário de termos, ações e objetos comuns utilizados na computação quântica.
-autor: QuantumWriter ms.author: Alan.Geller@microsoft.com ms.date: 12/11/2017 ms.topic: article uid: microsoft.quantum.glossary no-loc:
+autor: bradben ms.author: v-benbra ms.date: 9/1/2020 ms.topic: article uid: microsoft.quantum.glossary no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -170,7 +170,7 @@ Uma etiqueta para uma coleção de nomes relacionados (isto é, [operações,](x
 
 ## <a name="operation"></a>Operação
 
-A unidade básica da execução quântica em Q# . É aproximadamente equivalente a uma função em C, C++ ou Python, ou um método estático em C# ou Java. Para mais informações, consulte [Operações e funções.](xref:microsoft.quantum.guide.operationsfunctions)
+A unidade básica da computação quântica em Q# . É aproximadamente equivalente a uma função em C, C++ ou Python, ou um método estático em C# ou Java. Para mais informações, consulte [Operações e funções.](xref:microsoft.quantum.guide.operationsfunctions)
 
 ## <a name="operator-application"></a>Aplicação do operador
 

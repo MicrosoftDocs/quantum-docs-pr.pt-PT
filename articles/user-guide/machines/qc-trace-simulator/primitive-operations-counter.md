@@ -1,24 +1,24 @@
 ---
 title: Contador de operação primitiva - Kit de Desenvolvimento Quântico
-description: Saiba mais sobre o contador de operações primitivos microsoft QDK, que usa o simulador de traços quânticos para rastrear execuções primitivas usadas por operações num Q# programa.
+description: Saiba mais sobre o contador de operações primitivos microsoft QDK, que usa o simulador de traços quânticos para rastrear processos primitivos usados por operações num Q# programa.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.primitive-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ceb70cef6dc0a4530b992b5a529248a8b283c17f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8ee9ce25e680112e2f3c68d82ae9267c1b0fb355
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868241"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835983"
 ---
 # <a name="quantum-trace-simulator-primitive-operations-counter"></a>Simulador de vestígios quânticos: contador de operações primitivas
 
-O contador de operações primitiva faz parte do simulador de [traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do Kit de Desenvolvimento Quântico. Conta o número de execuções primitivas usadas por todas as operações invocadas num programa quântico. 
+O contador de operações primitiva faz parte do simulador de [traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do Kit de Desenvolvimento Quântico. Conta o número de processos primitivos usados por cada operação invocada num programa quântico. 
 
 Todas as <xref:microsoft.quantum.intrinsic> operações são expressas em termos de rotações de um único qubit, operações T, operações de Clifford de um único qubit, operações CNOT e medições de observáveis Pauli multi-qubit. O Contador de Operações Primitiva agrega e recolhe estatísticas sobre todas as bordas do gráfico de chamada da [operação](https://en.wikipedia.org/wiki/Call_graph).
 

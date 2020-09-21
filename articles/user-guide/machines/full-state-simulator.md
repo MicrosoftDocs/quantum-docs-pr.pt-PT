@@ -2,19 +2,19 @@
 title: Simulador quântico de estado completo - Kit de Desenvolvimento Quântico
 description: Aprenda a executar os seus Q# programas no simulador completo do Microsoft Quantum Development Kit.
 author: anpaz-msft
-ms.author: anpaz@microsoft.com
+ms.author: anpaz
 ms.date: 06/26/2020
 ms.topic: article
 uid: microsoft.quantum.machines.full-state-simulator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a27cece9858d62814b9d80c47e61c5d7d3b8c885
-ms.sourcegitcommit: 11bd357baeb6ab53a402882979e75964d0869b57
+ms.openlocfilehash: 632af681c5818ab7246c0f5849a8b8e716b570cb
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88992228"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833373"
 ---
 # <a name="quantum-development-kit-qdk-full-state-simulator"></a>Kit de Desenvolvimento Quântico (QDK) simulador de estado completo
 

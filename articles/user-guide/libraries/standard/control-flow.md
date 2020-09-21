@@ -3,18 +3,18 @@ title: Controlos de fluxo nos Q# libarries padrão
 description: Saiba mais sobre as operações e funções de controlo de fluxo na biblioteca padrão da Q# Microsoft.
 author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
-ms.author: martinro@microsoft.com
+ms.author: martinro
 ms.date: 12/11/2017
 ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: a440f1ef2b901b18593816ca27aeadf7ab827104
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 1cfef50cf2bbecd2043972a662edd8120c5570ec
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868581"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835626"
 ---
 # <a name="higher-order-control-flow"></a>Fluxo de controlo de ordem superior #
 
@@ -86,7 +86,7 @@ Isto significa, nomeadamente, que as chamadas `ApplyToEachCA` podem aparecer em 
 Da mesma forma, <xref:microsoft.quantum.canon.applytoeachindex> é útil para representar padrões do formulário , e oferece `U(0, targets[0]); U(1, targets[1]); ...` versões para cada combinação de funtores suportados pela sua entrada.
 
 > [!TIP]
-> `ApplyToEach`é de tipo parametrizado de modo a que possa ser utilizado com operações que tomem entradas diferentes `Qubit` de .
+> `ApplyToEach` é de tipo parametrizado de modo a que possa ser utilizado com operações que tomem entradas diferentes `Qubit` de .
 > Por exemplo, suponha que `codeBlocks` esta é uma variedade de <xref:microsoft.quantum.errorcorrection.logicalregister> valores que precisam de ser recuperados.
 > Em seguida, `ApplyToEach(Recover(code, recoveryFn, _), codeBlocks)` aplicará o código de correção de `code` erros e a função de recuperação `recoveryFn` a cada bloco de forma independente.
 > Isto mantém-se mesmo para entradas clássicas: `ApplyToEach(R(_, _, qubit), [(PauliX, PI() / 2.0); (PauliY(), PI() / 3.0]))` aplicará uma rotação de $\pi / 2$ cerca de $X$ seguido de uma rotação de $pi / 3$ cerca de $Y$.
@@ -120,7 +120,7 @@ Uma vez que as operações de controlo podem ser dispendiosas em geral, a utiliz
 
 > [!NOTE]
 > Uma outra consequência de considerar $U$ é que nem precisamos de saber como aplicar o `Controlled` functor a `U` .
-> `ApplyWithCA`por conseguinte, tem uma assinatura mais fraca do que seria de esperar:
+> `ApplyWithCA` por conseguinte, tem uma assinatura mais fraca do que seria de esperar:
 > ```qsharp
 > ApplyWithCA<'T> : (('T => Unit is Adj),
 >     ('T => Unit is Adj + Ctl), 'T) => Unit

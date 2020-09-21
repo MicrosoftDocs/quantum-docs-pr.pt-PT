@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4caacaad127f8a4d3b6f77efe35ebe7d3b97cacf
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: a3380627aa196a749dd9487ad603aad29f34ae29
+ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868768"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90759933"
 ---
 # <a name="applications"></a>Aplicações #
 
@@ -52,9 +52,9 @@ No caso especial em que o Hamiltonian se decompõe numa soma de partes hermitian
 
 > [!TIP]
 > As aplicações do algoritmo de simulação Trotter-Suzuki estão cobertas nas amostras.
-> Para o modelo Ising utilizando apenas as operações intrínsecas fornecidas por cada máquina-alvo, consulte a amostra [ **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/master/samples/simulation/ising/simple).
-> Para o modelo Ising utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **isingTrotter** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/trotter-evolution).
-> Para hidrogénio molecular utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **de simulação H2** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line).
+> Para o modelo Ising utilizando apenas as operações intrínsecas fornecidas por cada máquina-alvo, consulte a amostra [ **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
+> Para o modelo Ising utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **isingTrotter** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
+> Para hidrogénio molecular utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **de simulação H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 Em muitos casos, gostaríamos de implementar o algoritmo de simulação, mas não estamos interessados nos detalhes da sua implementação. Por exemplo, o integrador de segunda ordem aproxima -$ \start{align} U(t) & = \esquerda (e^{-iH \_ 0 t / 2r} e^{-iH \_ 1 t / 2r} \cdots e^{-iH \_ {d-1} t / 2r} e^{-iH \_ {d-1} t / 2r} \cdots e^{-iH \_ 1 t / 2r} e^{-iH \_ 0 t / 2r} \right)^{r} + \mathcal{O}(d^3 \max_j \\ / H \_ j \\ [^3 t^3/r^2), \end{align} $$ usando um produto de termos de $2º$ Encomendas maiores envolverão ainda mais termos e variantes otimizadas podem exigir encomendas altamente não triviais nos exponencials. Outros algoritmos avançados também podem envolver o uso de qubits de ancilla em passos intermédios. Assim, embalamos algoritmos de simulação no cânone como o tipo definido pelo utilizador
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> As aplicações da biblioteca de simulação estão cobertas nas amostras. Para uma estimativa de fase no modelo Ising `SimulationAlgorithm` utilizando, consulte a amostra [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
-> Para preparar o estado adiabático no modelo Ising `TimeDependentSimulationAlgorithm` utilizando, consulte a amostra [ **de AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
+> As aplicações da biblioteca de simulação estão cobertas nas amostras. Para uma estimativa de fase no modelo Ising `SimulationAlgorithm` utilizando, consulte a amostra [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> Para preparar o estado adiabático no modelo Ising `TimeDependentSimulationAlgorithm` utilizando, consulte a amostra [ **de AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Preparação do Estado Adiabático & estimativa da fase ###
@@ -129,14 +129,14 @@ operation EstimateAdiabaticStateEnergy(
 }
 ```
 
-`nQubits`é o número de qubits usados para codificar o estado quântico inicial. `statePrepUnitary`prepara o estado de partida a partir da base computacional $\ket{0\cdots 0}$. `adiabaticUnitary`é a operação unitária que implementa a preparação do estado adiabático, tal como produzido pela `InterpolatedEvolution` função. `qpeUnitary`é a operação unitária que é usada para realizar a estimativa de fase no estado quântico resultante. `phaseEstAlgorithm`é a nossa escolha de algoritmo de estimativa de fase.
+`nQubits` é o número de qubits usados para codificar o estado quântico inicial. `statePrepUnitary` prepara o estado de partida a partir da base computacional $\ket{0\cdots 0}$. `adiabaticUnitary` é a operação unitária que implementa a preparação do estado adiabático, tal como produzido pela  `InterpolatedEvolution` função. `qpeUnitary` é a operação unitária que é usada para realizar a estimativa de fase no estado quântico resultante. `phaseEstAlgorithm` é a nossa escolha de algoritmo de estimativa de fase.
 
 > [!TIP]
-> As aplicações de preparação do estado adiabático são abrangidas pelas amostras. Para o modelo Ising utilizando uma implementação manual da preparação do estado adiabático versus utilização da `AdiabaticEvolution` função, consulte a amostra [ **de AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/adiabatic).
-> Para a estimativa de fase e preparação do estado adiabático no modelo Ising, consulte a amostra [ **isingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/master/samples/simulation/ising/phase-estimation).
+> As aplicações de preparação do estado adiabático são abrangidas pelas amostras. Para o modelo Ising utilizando uma implementação manual da preparação do estado adiabático versus utilização da `AdiabaticEvolution` função, consulte a amostra [ **de AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
+> Para a estimativa de fase e preparação do estado adiabático no modelo Ising, consulte a amostra [ **isingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
-> A [simulação do hidrogénio molecular](https://github.com/microsoft/Quantum/tree/master/samples/simulation/h2/command-line) é uma amostra interessante e breve. O modelo e os resultados experimentais reportados em [O'Malley et al.](https://arxiv.org/abs/1512.06860) apenas requer matrizes Pauli e toma o formulário $\hat H = g \_ {0} I \_ 0I \_ 1+g \_ 1{Z \_ 0}+g \_ 2{Z \_ 1}+g \_ 3{Z \_ 0}z \_ 1}+g \_ 4{Y \_ 0}{Y \_ 1}+g \_ 5{X \_ 0}{X \_ 1}.. Este é um Hamiltonian eficaz que requer apenas 2 qubits, onde as constantes $g$ são calculadas à distância $R$ entre os dois átomos de Hidrogénio. Utilizando funções canónicas, os Paulis são convertidos em unitários e depois evoluíram ao longo de curtos períodos de tempo usando a decomposição Trotter-Suzuki. Uma boa aproximação ao estado terrestre de $H_2$ pode ser criada sem a utilização de preparação do estado adiabático, pelo que a energia do estado do solo pode ser encontrada diretamente utilizando a estimativa de fase do cânone.
+> A [simulação do hidrogénio molecular](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) é uma amostra interessante e breve. O modelo e os resultados experimentais reportados em [O'Malley et al.](https://arxiv.org/abs/1512.06860) apenas requer matrizes Pauli e toma o formulário $\hat H = g \_ {0} I \_ 0I \_ 1+g \_ 1{Z \_ 0}+g \_ 2{Z \_ 1}+g \_ 3{Z \_ 0}z \_ 1}+g \_ 4{Y \_ 0}{Y \_ 1}+g \_ 5{X \_ 0}{X \_ 1}.. Este é um Hamiltonian eficaz que requer apenas 2 qubits, onde as constantes $g$ são calculadas à distância $R$ entre os dois átomos de Hidrogénio. Utilizando funções canónicas, os Paulis são convertidos em unitários e depois evoluíram ao longo de curtos períodos de tempo usando a decomposição Trotter-Suzuki. Uma boa aproximação ao estado terrestre de $H_2$ pode ser criada sem a utilização de preparação do estado adiabático, pelo que a energia do estado do solo pode ser encontrada diretamente utilizando a estimativa de fase do cânone.
 
 ## <a name="shors-algorithm"></a>Algoritmo de Shor ##
 O algoritmo de Shor continua a ser um dos desenvolvimentos mais significativos na computação quântica porque mostrou que os computadores quânticos poderiam ser usados para resolver problemas importantes, atualmente clássicos, intrigantes.
