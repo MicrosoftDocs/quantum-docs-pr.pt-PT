@@ -2,19 +2,19 @@
 title: Simulador de rastreio quântico - Quantum Development kit
 description: Aprenda a utilizar o simulador de rastreio de computador quântico da Microsoft para depurar código clássico e para calcular os requisitos de recursos de um programa Q#.
 author: vadym-kl
-ms.author: vadym@microsoft.com
+ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5d5efef037ff236bd040dfd88e94f7f3dd331aef
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 54a1f63461cfcc8146f7dc4d18d321238d77454d
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868224"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90833359"
 ---
 # <a name="microsoft-quantum-development-kit-qdk-quantum-trace-simulator"></a>Simulador de rastreio quântico do Microsoft Quantum Development kit (QDK)
 
@@ -86,7 +86,7 @@ O QDK inclui cinco ferramentas que pode utilizar com o simulador de rastreio qu�
 |-----| -----|
 |[Verificador de entradas distintas](xref:microsoft.quantum.machines.qc-trace-simulator.distinct-inputs) |Verifica potenciais conflitos com qubits partilhados |
 |[Verificador de utilização de qubits invalidados](xref:microsoft.quantum.machines.qc-trace-simulator.invalidated-qubits)  |Verifica se o programa aplica uma operação a um qubit que já foi lançado |
-|[Contador de operações primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Conta o número de execuções primitivas que todas as operações invocadas num programa quântico utilizaram  |
+|[Contador de operações primitivas](xref:microsoft.quantum.machines.qc-trace-simulator.primitive-counter)  | Conta o número de processos primitivos utilizados por todas as operações invocadas num programa quântico  |
 |[Contador de profundidade](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)  |Recolhe contagens que representam o limite inferior da profundidade de todas as operações invocadas num programa quântico   |
 |[Contador de largura](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter)  |Conta o número de qubits alocados e emprestados por cada operação num programa quântico |
 
