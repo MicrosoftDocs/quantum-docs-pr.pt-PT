@@ -2,19 +2,19 @@
 title: Introdução à computação quântica
 description: Saiba o que é a computação quântica, o que os computadores quânticos fazem e como pode aprender a trabalhar com a computação quântica.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 05/05/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.introduction
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 59cb595ac207d6e84358fc6ba742e0e0019c76f9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: c3374e9fae07cc38761e404be7819e7cf699ce2b
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866983"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834521"
 ---
 # <a name="introduction-to-quantum-computing-and-the-quantum-development-kit"></a>Introdução à computação quântica e ao Quantum Development kit
 
