@@ -1,0 +1,47 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.excluding
+name: Excluding
+type: function
+namespace: microsoft.quantum.arrays
+summary: Devolve uma matriz contendo os elementos de outra matriz, excluindo elementos numa determinada lista de índices.
+examples: >-
+  ```qsharp
+
+  let array = [10, 11, 12, 13, 14, 15];
+
+  // The following line returns [10, 12, 15].
+
+  let subarray = Excluding([1, 3, 4], array);
+
+  ```
+syntax: "function Excluding (remove : Int[], array : 'T[]) : 'T[]"
+input:
+  content: "(remove : Int[], array : 'T[])"
+  types:
+  - name: remove
+    summary: Um conjunto de índices que denotam quais os elementos que devem ser excluídos da saída.
+    isArray: true
+    isPrimitive: true
+    uid: Int
+  - name: array
+    summary: Matriz dos quais são tomados os valores na matriz de saída.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Um conjunto `output` tal que é o primeiro elemento de cujo índice não aparece em , tal que `output[0]` é o segundo `array` `remove` `output[1]` elemento, e assim por diante.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: O tipo de elementos de matriz.
+metadata:
+  ms.openlocfilehash: 4d11c4578b91eac6d59574900887dcb265f66898
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494694"
