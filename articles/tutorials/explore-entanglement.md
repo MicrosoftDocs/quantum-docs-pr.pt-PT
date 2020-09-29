@@ -9,12 +9,12 @@ uid: microsoft.quantum.write-program
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6fd7494d341a83a1354d23a283d21a7ae535e49f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ac9c060c157ba5ee3bc66852c42298ac8adcb3b3
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834028"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91492341"
 ---
 # <a name="tutorial-explore-entanglement-with-q"></a>Tutorial: Explorar o entrelaçamento com Q\#
 
@@ -83,7 +83,7 @@ O nosso objetivo é preparar dois qubits num estado quântico específico, demon
 
 ### <a name="initialize-qubit-using-measurement"></a>Inicialize o qubit usando a medição
 
-No primeiro código abaixo, mostramos-lhe como trabalhar com qubits em Q# .  Vamos introduzir duas operações, [`M`](xref:microsoft.quantum.intrinsic.m) e [`X`](xref:microsoft.quantum.intrinsic.x) que transformam o estado de um qubit. Neste fragmento de código, é definida uma operação `SetQubitState`, que utiliza um qubit como parâmetro e outro parâmetro, `desired`, que representa o estado em que queremos que o qubit esteja.  A operação `SetQubitState` executa uma medição no qubit através da operação `M`.  Em Q# , uma medição de qubit sempre retorna ou `Zero` . `One` .  Se a medição devolver um valor não igual ao valor pretendido, `SetQubitState` "inverte" o qubit; ou seja, executa uma `X` operação, que altera o estado qubit para um novo estado em que as probabilidades de uma medição regressam `Zero` e são `One` invertidas. Desta forma, `SetQubitState` coloca sempre o qubit alvo no estado desejado.
+No primeiro corte de código abaixo, mostramos-lhe como trabalhar com qubits em Q# .  Vamos introduzir duas operações, [`M`](xref:microsoft.quantum.intrinsic.m) e [`X`](xref:microsoft.quantum.intrinsic.x) que transformam o estado de um qubit. Neste fragmento de código, é definida uma operação `SetQubitState`, que utiliza um qubit como parâmetro e outro parâmetro, `desired`, que representa o estado em que queremos que o qubit esteja.  A operação `SetQubitState` executa uma medição no qubit através da operação `M`.  Em Q# , uma medição de qubit sempre retorna ou `Zero` . `One` .  Se a medição devolver um valor não igual ao valor pretendido, `SetQubitState` "inverte" o qubit; ou seja, executa uma `X` operação, que altera o estado qubit para um novo estado em que as probabilidades de uma medição regressam `Zero` e são `One` invertidas. Desta forma, `SetQubitState` coloca sempre o qubit alvo no estado desejado.
 
 Substitua o conteúdo do `Program.qs` seguinte código:
 
@@ -112,7 +112,7 @@ Uma Q# operação é uma sub-rotina quântica. Ou seja, é uma rotina callable q
 
 Os argumentos para uma operação são especificados como uma cadeia de identificação, entre parênteses.
 
-O tipo de retorno da operação é especificado após os dois pontos. Neste caso, a operação `SetQubitState` não tem retorno, pelo qual é marcada como `Unit` de retorno. Este é o Q# equivalente `unit` a em F#, que é aproximadamente análogo a `void` em C#, e um tuple vazio em Python `()` (, representado pelo tipo de sugestão). `Tuple[()]`
+O tipo de retorno da operação é especificado após os dois pontos. Neste caso, a `SetQubitState` operação não tem tipo de retorno, pelo que está marcada como devolução `Unit` . Este é o Q# equivalente `unit` a em F#, que é aproximadamente análogo a `void` em C#, e um tuple vazio em Python `()` (, representado pelo tipo de sugestão). `Tuple[()]`
 
 Usaste duas operações quânticas na tua primeira Q# operação:
 
@@ -159,7 +159,7 @@ Esta operação (`TestBellState`) vai gerar um ciclo de `count` iterações, def
 
 Por predefinição, as variáveis Q# são imutáveis; o seu valor não pode ser alterado após o seu limite. A palavra-chave `let` é utilizada para indicar a vinculação de uma variável imutável. Os argumentos da operação são sempre imutáveis.
 
-Se precisar de uma variável cujo valor pode ser alterado, como `numOnes`, poderá declarar a variável com a palavra-chave `mutable`. Um valor de variável mutável pode ser alterado com uma instrução `setQubitState`.
+Se precisar de uma variável cujo valor pode ser alterado, como `numOnes`, poderá declarar a variável com a palavra-chave `mutable`. Um valor de variável mutável pode ser alterado com uma instrução `set`.
 
 Em ambos os casos, o tipo de variável é inferido pelo compilador. Q# não requer qualquer tipo de anotação para variáveis.
 
@@ -169,7 +169,7 @@ A `using` declaração também é especial para Q# . É utilizada para alocar qu
 
 ## <a name="run-the-code-from-the-command-prompt"></a>Executar o código a partir da solicitação de comando
 
-Para executar o código, precisamos de especificar o compilador *que* pode ser executado quando fornenciamos o `dotnet run` comando. Isto é feito com uma simples alteração no Q# ficheiro, adicionando uma linha com `@EntryPoint()` a ligação diretamente anterior à chamada: a `TestBellState` operação neste caso. O código completo deve ser:
+Para executar o código, precisamos dizer ao compilador *que* pode ser executado quando fornenciamos o `dotnet run` comando. Isto é feito com uma simples alteração no Q# ficheiro, adicionando uma linha com `@EntryPoint()` a ligação diretamente anterior à chamada: a `TestBellState` operação neste caso. O código completo deve ser:
 
 ```qsharp
 namespace Bell {
@@ -237,7 +237,7 @@ Agora vamos ver como Q# expressa formas de colocar qubits em superposição.  Le
 
 ### <a name="x-flips-qubit-state"></a>`X` flips qubit estado
 
-Primeiro, vamos tentar inverter o qubit (se este estiver num estado `Zero`, será invertido para `One` e vice-versa). Esta inversão pode ser feita ao realizar uma operação `X` antes de o medir em `TestBellState`:
+Primeiro vamos tentar virar o qubit (se o qubit estiver no `Zero` estado, vai virar para `One` e vice-versa). Esta inversão pode ser feita ao realizar uma operação `X` antes de o medir em `TestBellState`:
 
 ```qsharp
 X(qubit);
@@ -413,7 +413,7 @@ Test results (# of 0s, # of 1s, # of agreements)
 
 Conforme mencionado na descrição geral, as nossas estatísticas para o primeiro qubit não foram alteradas (uma probabilidade de 50-50 de um 0 ou de um 1), mas quando medirmos o segundo qubit, este será __sempre__ igual ao que medimos para o primeiro qubit, uma vez que estão entrelaçados!
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 A [pesquisa do](xref:microsoft.quantum.quickstarts.search) tutorial Grover mostra-lhe como construir e executar a pesquisa grover, um dos algoritmos de computação quântica mais populares e oferece um bom exemplo de um Q# programa que pode ser usado para resolver problemas reais com computação quântica.  
 
