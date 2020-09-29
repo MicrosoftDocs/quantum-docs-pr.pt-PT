@@ -85,16 +85,16 @@ operations:
     Prepara o qubit dado no estado $\boldone / 2$ aplicando o canal despolarizante $$ \start{align} \Omega(\rho) \mathrel{:=} {1} {4} \frac \sum_{\mu \in \{ 0, 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu}{\\dagger}, \end{align} $$ where $\sigma \_ i$ é o operador de pauli $i$th, e onde $\rho$ é um operador de densidade que representa um estado misto.
 - uid: microsoft.quantum.preparation.prepareuniformsuperposition
   summary: >-
-    Cria uma superposição uniforme sobre estados que codificam 0 a `nIndices` .
+    Cria uma superposição uniforme sobre estados que codificam 0 a `nIndices - 1` .
 
 
     Ou seja, este $U$ unitário cria uma superposição uniforme sobre todos os estados numerais $0$ a $M-1$, dado um estado de entrada $\ket{0\cdots 0}$. Por outras palavras, $$ \begin{align} U\ket {0} =\frac {1} {\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}.
 
     \end{align} $$.
 metadata:
-  ms.openlocfilehash: 46bed785972355044c9ef9765ab957ca6d31e5f1
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 35645ba3566dbe0b8e9efa76fa4c3316ce7d5e47
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89339886"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464322"
