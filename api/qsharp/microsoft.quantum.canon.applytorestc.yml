@@ -1,23 +1,24 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applytoelementc
-name: ApplyToElementC
+uid: microsoft.quantum.canon.applytorestc
+name: ApplyToRestC
 type: operation
 namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma operação a um determinado elemento de uma matriz.
+  Aplica uma operação a todos menos ao primeiro elemento de uma matriz.
 
 
-  Dada a `op` operação, `index` `targets` aplica-se um índice , e uma série de alvos `op(targets[index])` .
-syntax: "operation ApplyToElementC (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit"
+  Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Rest(targets))` .
+syntax: "operation ApplyToRestC (op : ('T[] => Unit is Ctl), targets : 'T[]) : Unit"
 input:
-  content: "(op : ('T => Unit is Ctl), index : Int, targets : 'T[])"
+  content: "(op : ('T[] => Unit is Ctl), targets : 'T[])"
   types:
   - name: op
     summary: Uma operação a ser aplicada.
     isOperation: true
     input:
       types:
-      - uid: "'T"
+      - isArray: true
+        uid: "'T"
         isLocal: true
     output:
       types:
@@ -25,10 +26,6 @@ input:
         uid: Unit
     functors:
     - Controlled
-  - name: index
-    summary: Um índice na matriz de alvos.
-    isPrimitive: true
-    uid: Int
   - name: targets
     isArray: true
     uid: "'T"
@@ -44,13 +41,13 @@ typeParameters:
 functors:
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.applytoelement
-- microsoft.quantum.canon.applytoelementa
-- microsoft.quantum.canon.applytoelementca
+- microsoft.quantum.canon.applytorest
+- microsoft.quantum.canon.applytoresta
+- microsoft.quantum.canon.applytorestca
 metadata:
-  ms.openlocfilehash: 5cf1045bf5e7f77ff7854021e0ad150abef22fff
+  ms.openlocfilehash: 47c9d975fb505013fde47b26db3beb93221cc7c5
   ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
   ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91468554"
+  ms.locfileid: "91494395"
