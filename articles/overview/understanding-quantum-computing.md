@@ -2,23 +2,23 @@
 title: Compreender a computação quântica
 description: O que são computadores quânticos e como utilizam os princípios da mecânica quântica?
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 214fe809aaeba759005fa76ba3615f376d402bc9
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866966"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834997"
 ---
 # <a name="understanding-quantum-computing"></a>Compreender a computação quântica
 
-A computação quântica utiliza os princípios da mecânica quântica para processar informações. Por esse motivo, exige uma abordagem diferente relativamente à computação clássica.  Um exemplo dessa diferença é o processador utilizado nos computadores quânticos.  Ao passo que os computadores clássicos utilizam os familiares chips de silício, os computadores quânticos utilizam materiais quânticos, como átomos, iões, fotões ou eletrões.  
+A computação quântica utiliza os princípios da mecânica quântica para processar informações. Por esse motivo, exige uma abordagem diferente relativamente à computação clássica. Um exemplo dessa diferença é o processador utilizado nos computadores quânticos. Ao passo que os computadores clássicos utilizam os familiares chips de silício, os computadores quânticos utilizam sistemas quânticos, como átomos, iões, fotões ou eletrões. Utilizam as respetivas propriedades quânticas para representar os bits que podem ser preparados nas diferentes sobreposições quânticas de 1 e 0.  
 
 O material quântico comporta-se de acordo com as leis da mecânica quântica, recorrendo a conceitos como computação probabilística, sobreposição e entrelaçamento. Estes conceitos são a base dos algoritmos quânticos que tiram partido do poder da computação quântica para resolver problemas complexos. Este artigo descreve alguns dos conceitos essenciais da mecânica quântica subjacentes à computação quântica.
 

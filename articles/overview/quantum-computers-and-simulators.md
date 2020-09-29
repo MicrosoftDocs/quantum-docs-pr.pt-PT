@@ -2,19 +2,19 @@
 title: Computadores e simuladores quânticos
 description: Saiba mais sobre hardware quântico, simuladores quânticos e como as operações quânticas funcionam.
 author: bradben
-ms.author: bradben
+ms.author: v-benbra
 ms.date: 5/5/2020
 ms.topic: overview
 uid: microsoft.quantum.overview.simulators
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 299baea75865a4f0ece6b490cef3301dd2a672ac
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 8691838b2d6c54baa40042245eee8c901a7ca965
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87867714"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90835014"
 ---
 # <a name="quantum-computers-and-quantum-simulators"></a>Computadores e simuladores quânticos
 
@@ -33,7 +33,7 @@ Os computadores quânticos enfrentam uma multiplicidade de desafios para funcion
 
 ## <a name="quantum-simulators"></a>Simuladores quânticos
 
-Os simuladores quânticos que são executados em computadores clássicos permitem-lhe simular a execução de algoritmos quânticos num sistema quântico.  O Microsoft Quantum Development Kit (QDK) inclui um simulador de vetor de estado completo, juntamente com outros simuladores quânticos especializados.
+Os simuladores quânticos que são executados em computadores clássicos permitem-lhe simular o cálculo de algoritmos quânticos num sistema quântico.  O Microsoft Quantum Development Kit (QDK) inclui um simulador de vetor de estado completo, juntamente com outros simuladores quânticos especializados.
 
 ## <a name="topological-qubit"></a>Qubit topológico
 

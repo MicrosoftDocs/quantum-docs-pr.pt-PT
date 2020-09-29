@@ -1,29 +1,27 @@
 ---
 title: Programar com o Q# Jupyter Notebook
+description: Saiba como criar uma aplicação Q# com o Jupyter Notebook.
 author: bradben
-ms.author: bradben
-ms.date: 5/30/2020
+ms.author: v-benbra
+ms.date: 8/20/2020
 ms.topic: article
 ms.custom: how-to
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 10b1faafa70c87a99ea09916e2c386b32f9a570f
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 51de510907ea087d1f23d3ff65d268d6d455a493
+ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87866813"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90834317"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Programar com o Q# Jupyter Notebook
 
 Instale o QDK para desenvolver operações Q# no Q# Jupyter Notebook.
 
-O Jupyter Notebook permitem executar código no local juntamente com instruções, notas e outros conteúdos. Este ambiente é ideal para escrever código Q# com explicações incorporadas ou tutoriais interativos de computação quântica. Eis o que tem de fazer para começar a criar os seus próprios blocos de notas em Q#.
-
-> [!NOTE]
-> * No Q# Jupyter Notebook, só pode executar código Q# e as operações não podem ser chamadas a partir de programas anfitriões externos (por exemplo, ficheiros Python ou C#). Se o seu objetivo for combinar um programa anfitrião clássico externo com o programa quântico, este ambiente não é o indicado.
+O Jupyter Notebook permite o cálculo de código no local juntamente com instruções, notas e outros conteúdos. Este ambiente é ideal para escrever código Q# com explicações incorporadas ou tutoriais interativos de computação quântica. Eis o que tem de fazer para começar a criar os seus próprios blocos de notas em Q#.
 
 ## <a name="install-the-ino-locq-jupyter-kernel"></a>Instale o kernel do IQ# Jupyter
 
@@ -62,14 +60,14 @@ IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyt
     dotnet iqsharp install
     ```
 
-    > [!NOTE]
-    > Se receber um erro durante o passo `dotnet iqsharp install`, abra uma janela de terminal nova e tente novamente.
-    > Se continuar a não funcionar, tente localizar a ferramenta `dotnet-iqsharp` instalada (no Windows, `dotnet-iqsharp.exe`) e executar:
-    > ```
-    > /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
-    > ```
-    > em que `/path/to/dotnet-iqsharp` deve ser substituído pelo caminho absoluto para a ferramenta `dotnet-iqsharp` no sistema de ficheiros.
-    > Geralmente, estará em `.dotnet/tools` na pasta de perfil de utilizador.
+> [!NOTE]
+> Se receber um erro durante o passo `dotnet iqsharp install`, abra uma janela de terminal nova e tente novamente.
+> Se continuar a não funcionar, tente localizar a ferramenta `dotnet-iqsharp` instalada (no Windows, `dotnet-iqsharp.exe`) e executar:
+> ```
+> /path/to/dotnet-iqsharp install --user --path-to-tool="/path/to/dotnet-iqsharp"
+> ```
+> em que `/path/to/dotnet-iqsharp` deve ser substituído pelo caminho absoluto para a ferramenta `dotnet-iqsharp` no sistema de ficheiros.
+> Geralmente, estará em `.dotnet/tools` na pasta de perfil de utilizador.
     
 ***
 
@@ -87,7 +85,7 @@ Agora, está preparado para verificar a instalação do Q# Jupyter Notebook ao e
 
     - Se o Jupyter Notebook não abrir automaticamente no browser, copie e cole o URL fornecido pela linha de comandos no browser.
 
-1. Escolha "Novo" → "Q#" para criar um Jupyter Notebook com um kernel do Q# e adicione o seguinte código à primeira célula do bloco de notas:
+1. Escolha **Novo → Q#** para criar um Jupyter Notebook com um kernel do Q# e adicione o seguinte código à primeira célula do bloco de notas:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 
