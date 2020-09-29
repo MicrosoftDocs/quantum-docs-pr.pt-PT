@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b27d084bbe2cda878efa6250c52c0ae628637850
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
+ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834895"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91489770"
 ---
 # <a name="contributing-code"></a>Contribuir no Código
 
@@ -82,6 +82,10 @@ Localmente, os testes de unidade podem ser executados usando o Visual Studio Tes
 
 ### Citations and References ### -->
 
+## <a name="pull-requests"></a>Pedidos Pull
+
+Quando estiver pronto para contribuir com o seu trabalho, envie um Pedido de Puxar via GitHub para o repositório correspondente.
+A equipa irá analisar e fornecer feedback. Todos os comentários devem ser respondidos e resolvidos e todos os controlos têm de ser aprovados antes da fusão do código com a `main` sucursal.
 
 ## <a name="when-well-reject-a-pull-request"></a>Quando rejeitarmos um pedido de retirada
 
@@ -102,7 +106,7 @@ Finalmente, não podemos aceitar contribuições que causem danos à comunidade 
 Queremos assegurar que as contribuições sirvam toda a comunidade da computação quântica, tanto na sua maravilhosa diversidade atual, como no futuro, à medida que se torna ainda mais inclusiva.
 Agradecemos a sua ajuda na concretização deste objetivo.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Obrigado por ajudar a fazer do Kit de Desenvolvimento Quântico um grande recurso para toda a comunidade de programação quântica!
 Para saber mais, continue com o seguinte guia sobre Q# estilo.
