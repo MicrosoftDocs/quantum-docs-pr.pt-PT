@@ -45,6 +45,8 @@ functions:
   summary: Retorna verdadeira se e somente se um número for inferior ou igual a outro número.
 - uid: microsoft.quantum.logical.lessthanorequall
   summary: Retorna verdadeira se e somente se um número for inferior ou igual a outro número.
+- uid: microsoft.quantum.logical.lexographiccomparison
+  summary: Dada uma função de comparação, devolve uma nova função que lexograficamente compara duas matrizes.
 - uid: microsoft.quantum.logical.nearlyequald
   summary: Retorna verdadeira se e somente se duas entradas forem quase iguais (isto é, dentro de uma tolerância de 1e-12).
 - uid: microsoft.quantum.logical.not
@@ -70,9 +72,9 @@ functions:
 - uid: microsoft.quantum.logical.xor
   summary: Devolve a disjunção exclusiva booleana de dois valores.
 metadata:
-  ms.openlocfilehash: 0ab7077bc2cdf9bc76f3da701a88869f8bb9bf85
-  ms.sourcegitcommit: d6ac6f4345be0dd68f1bcd944f44b08e7a3cf346
+  ms.openlocfilehash: 006100b659daedbcca30fe443756a185a965ee1e
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89340107"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91464339"
