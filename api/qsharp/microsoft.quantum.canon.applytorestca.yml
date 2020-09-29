@@ -1,34 +1,32 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applytoelementc
-name: ApplyToElementC
+uid: microsoft.quantum.canon.applytorestca
+name: ApplyToRestCA
 type: operation
 namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma operação a um determinado elemento de uma matriz.
+  Aplica uma operação a todos menos ao primeiro elemento de uma matriz.
 
 
-  Dada a `op` operação, `index` `targets` aplica-se um índice , e uma série de alvos `op(targets[index])` .
-syntax: "operation ApplyToElementC (op : ('T => Unit is Ctl), index : Int, targets : 'T[]) : Unit"
+  Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Rest(targets))` .
+syntax: "operation ApplyToRestCA (op : ('T[] => Unit is Adj + Ctl), targets : 'T[]) : Unit"
 input:
-  content: "(op : ('T => Unit is Ctl), index : Int, targets : 'T[])"
+  content: "(op : ('T[] => Unit is Adj + Ctl), targets : 'T[])"
   types:
   - name: op
     summary: Uma operação a ser aplicada.
     isOperation: true
     input:
       types:
-      - uid: "'T"
+      - isArray: true
+        uid: "'T"
         isLocal: true
     output:
       types:
       - isPrimitive: true
         uid: Unit
     functors:
+    - Adjoint
     - Controlled
-  - name: index
-    summary: Um índice na matriz de alvos.
-    isPrimitive: true
-    uid: Int
   - name: targets
     isArray: true
     uid: "'T"
@@ -42,15 +40,16 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de entrada da operação a aplicar.
 functors:
+- Adjoint
 - Controlled
 seeAlso:
-- microsoft.quantum.canon.applytoelement
-- microsoft.quantum.canon.applytoelementa
-- microsoft.quantum.canon.applytoelementca
+- microsoft.quantum.canon.applytorest
+- microsoft.quantum.canon.applytoresta
+- microsoft.quantum.canon.applytorestc
 metadata:
-  ms.openlocfilehash: 5cf1045bf5e7f77ff7854021e0ad150abef22fff
+  ms.openlocfilehash: 9bffb10b700a84b2c1d42468ad5ca969ae0c5ef5
   ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
   ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91468554"
+  ms.locfileid: "91494394"

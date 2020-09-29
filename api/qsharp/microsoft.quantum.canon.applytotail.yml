@@ -1,16 +1,27 @@
 ### YamlMime:QSharpType
-uid: microsoft.quantum.canon.applytoelement
-name: ApplyToElement
+uid: microsoft.quantum.canon.applytotail
+name: ApplyToTail
 type: operation
 namespace: microsoft.quantum.canon
 summary: >-
-  Aplica uma operação a um determinado elemento de uma matriz.
+  Aplica uma operação ao último elemento de uma matriz.
 
 
-  Dada a `op` operação, `index` `targets` aplica-se um índice , e uma série de alvos `op(targets[index])` .
-syntax: "operation ApplyToElement (op : ('T => Unit), index : Int, targets : 'T[]) : Unit"
+  Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Tail(targets))` .
+examples: >-
+  Os seguintes cortes Q# são equivalentes:
+
+
+  ```Q#
+
+  ApplyToTail(H, register);
+
+  H(Tail(register));
+
+  ```
+syntax: "operation ApplyToTail (op : ('T => Unit), targets : 'T[]) : Unit"
 input:
-  content: "(op : ('T => Unit), index : Int, targets : 'T[])"
+  content: "(op : ('T => Unit), targets : 'T[])"
   types:
   - name: op
     summary: Uma operação a ser aplicada.
@@ -23,10 +34,6 @@ input:
       types:
       - isPrimitive: true
         uid: Unit
-  - name: index
-    summary: Um índice na matriz de alvos.
-    isPrimitive: true
-    uid: Int
   - name: targets
     isArray: true
     uid: "'T"
@@ -40,13 +47,13 @@ typeParameters:
 - uid: "'T"
   summary: O tipo de entrada da operação a aplicar.
 seeAlso:
-- microsoft.quantum.canon.applytoelementc
-- microsoft.quantum.canon.applytoelementa
-- microsoft.quantum.canon.applytoelementca
+- microsoft.quantum.canon.applytotaila
+- microsoft.quantum.canon.applytotailc
+- microsoft.quantum.canon.applytotailca
 metadata:
-  ms.openlocfilehash: b7bb8bedfa708439434f7f011adb9ed4c85f997e
+  ms.openlocfilehash: 04d0163247095dea71958c5586edbd9b7ae1850b
   ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
   ms.translationtype: MT
   ms.contentlocale: pt-PT
   ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91468656"
+  ms.locfileid: "91494384"
