@@ -1,0 +1,56 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.flatmapped
+name: FlatMapped
+type: function
+namespace: microsoft.quantum.arrays
+summary: Dada uma matriz e uma função que mapeiam um elemento de matriz para alguma matriz de saída, devolve as matrizes de saída concatenated para cada elemento de matriz.
+examples: >-
+  ```Q#
+
+  let Numbers = SequenceI(1, _); // generates numbers starting from 1
+
+  let values = FlatMapped(Numbers, [1, 2, 3]);
+
+  // values = [1, 1, 2, 1, 2, 3]
+
+  ```
+syntax: "function FlatMapped (mapper : ('TInput -> 'TOutput[]), array : 'TInput[]) : 'TOutput[]"
+input:
+  content: "(mapper : ('TInput -> 'TOutput[]), array : 'TInput[])"
+  types:
+  - name: mapper
+    summary: Uma função disso `'TInput` `'TOutput[]` é usada para mapear elementos de matriz.
+    isFunction: true
+    input:
+      types:
+      - uid: "'TInput"
+        isLocal: true
+    output:
+      types:
+      - isArray: true
+        uid: "'TOutput"
+        isLocal: true
+  - name: array
+    summary: Uma variedade de elementos.
+    isArray: true
+    uid: "'TInput"
+    isLocal: true
+output:
+  content: "'TOutput[]"
+  types:
+  - summary: Uma matriz da `'TOutput[]` qual é a concatenação de todas as matrizes geradas pela função de mapeamento.
+    isArray: true
+    uid: "'TOutput"
+    isLocal: true
+typeParameters:
+- uid: "'TInput"
+  summary: O tipo de `array` elementos.
+- uid: "'TOutput"
+  summary: A `mapper` função retorna os conjuntos deste tipo.
+metadata:
+  ms.openlocfilehash: 358e45ce25825b333def906411ff3b27607b1195
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494684"

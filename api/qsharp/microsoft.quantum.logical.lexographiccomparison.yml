@@ -1,0 +1,59 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.logical.lexographiccomparison
+name: LexographicComparison
+type: function
+namespace: microsoft.quantum.logical
+summary: Dada uma função de comparação, devolve uma nova função que lexograficamente compara duas matrizes.
+remarks: >-
+  A comparação lexográfica entre duas matrizes `xs` e é definida pelo seguinte `ys` procedimento. Dizemos que dois elementos `x` e `y` são equivalentes se e ambos `elementComparison(x, y)` são `elementComparison(y, x)` verdadeiros.
+
+
+  - Ambas as matrizes são comparadas elemento a elemento até ao primeiro par de elementos que não são equivalentes. A matriz que contém o elemento que ocorre primeiro de acordo com `elementComparison` o que ocorre primeiro na ordem lexográfica.
+
+  - Se não forem encontrados elementos inequivalentes, e uma matriz for maior que a outra, diz-se que a matriz mais curta ocorre primeiro.
+syntax: "function LexographicComparison (elementComparison : (('T, 'T) -> Bool)) : (('T[], 'T[]) -> Bool)"
+input:
+  content: "(elementComparison : (('T, 'T) -> Bool))"
+  types:
+  - name: elementComparison
+    summary: Uma função que compara dois elementos `x` `y` e retorna se `x` for inferior ou igual a `y` .
+    isFunction: true
+    input:
+      types:
+      - uid: "'T"
+        isLocal: true
+      - uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+output:
+  content: (('T[], 'T[]) -> Bool)
+  types:
+  - summary: Uma função que compara duas matrizes `xs` `ys` e retorna se `xs` ocorrer antes ou igual a uma encomenda `ys` lexográfica.
+    isFunction: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Bool
+typeParameters:
+- uid: "'T"
+  summary: O tipo de elementos das matrizes sendo comparados.
+seeAlso:
+- microsoft.quantum.arrays.sorted
+metadata:
+  ms.openlocfilehash: c7b1ec454d7a87c344b0297007dff32fb6ee07a6
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494783"
