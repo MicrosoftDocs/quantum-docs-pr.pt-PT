@@ -1,0 +1,53 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.canon.applytoresta
+name: ApplyToRestA
+type: operation
+namespace: microsoft.quantum.canon
+summary: >-
+  Aplica uma operação a todos menos ao primeiro elemento de uma matriz.
+
+
+  Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Rest(targets))` .
+syntax: "operation ApplyToRestA (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit"
+input:
+  content: "(op : ('T[] => Unit is Adj), targets : 'T[])"
+  types:
+  - name: op
+    summary: Uma operação a ser aplicada.
+    isOperation: true
+    input:
+      types:
+      - isArray: true
+        uid: "'T"
+        isLocal: true
+    output:
+      types:
+      - isPrimitive: true
+        uid: Unit
+    functors:
+    - Adjoint
+  - name: targets
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: Unit
+  types:
+  - isPrimitive: true
+    uid: Unit
+typeParameters:
+- uid: "'T"
+  summary: O tipo de entrada da operação a aplicar.
+functors:
+- Adjoint
+seeAlso:
+- microsoft.quantum.canon.applytorest
+- microsoft.quantum.canon.applytorestc
+- microsoft.quantum.canon.applytorestca
+metadata:
+  ms.openlocfilehash: c4cd4dd70123740270dddb159bd9ad733e6047e0
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494405"

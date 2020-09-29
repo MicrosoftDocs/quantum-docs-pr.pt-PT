@@ -1,0 +1,57 @@
+### YamlMime:QSharpType
+uid: microsoft.quantum.arrays.interleaved
+name: Interleaved
+type: function
+namespace: microsoft.quantum.arrays
+summary: >-
+  Entrelaça duas matrizes de (quase) mesmo tamanho.
+
+
+  Esta função devolve a interleaving de duas matrizes, começando com o primeiro elemento da primeira matriz, em seguida, o primeiro elemento da segunda matriz, e assim por diante.
+
+
+  A primeira matriz deve ter o mesmo comprimento que a segunda, ou pode ter mais um elemento.
+examples: >-
+  ```Q#
+
+  // same as int1 = [1, -1, 2, -2, 3, -3]
+
+  let int1 = Interleaved([1, 2, 3], [-1, -2, -3])
+
+
+  // same as int2 = [false, true, false, true, false]
+
+  let int2 = Interleaved(ConstantArray(3, false), ConstantArray(2, true));
+
+  ```
+syntax: "function Interleaved (first : 'T[], second : 'T[]) : 'T[]"
+input:
+  content: "(first : 'T[], second : 'T[])"
+  types:
+  - name: first
+    summary: A primeira matriz a ser intercalada.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+  - name: second
+    summary: A segunda matriz a ser intercalada.
+    isArray: true
+    uid: "'T"
+    isLocal: true
+output:
+  content: "'T[]"
+  types:
+  - summary: Matriz intercalada
+    isArray: true
+    uid: "'T"
+    isLocal: true
+typeParameters:
+- uid: "'T"
+  summary: O tipo de cada elemento de `first` e `second` .
+metadata:
+  ms.openlocfilehash: 4decfb4189f8e7fd320c5fdb67fbeab73109fd66
+  ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91494655"
