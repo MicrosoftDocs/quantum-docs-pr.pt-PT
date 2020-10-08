@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 6a2a4bb829301f9db9bd14f3240556a403b9a54f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: f40c63eed60379aa46a0cd9cfdd7d8de8c22c079
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833431"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771303"
 ---
 # <a name="quantum-simulators"></a>Simuladores quânticos
 
@@ -24,7 +24,7 @@ Os simuladores quânticos são programas de software que funcionam em computador
 
 ## <a name="the-quantum-development-kit-qdk-quantum-simulators"></a>Os simuladores do Quantum Development kit (QDK)
 
-O simulador quântico é responsável por fornecer implementações de primitivos quânticos para um algoritmo. Essas implementações incluem operações primitivas como `H`, `CNOT` e `Measure`, bem como gestão e monitorização de qubits. O QDK inclui diferentes classes de simuladores quânticos que representam modelos de execução distintos para o mesmo algoritmo quântico. 
+O simulador quântico é responsável por fornecer implementações de primitivos quânticos para um algoritmo. Essas implementações incluem operações primitivas como `H`, `CNOT` e `Measure`, bem como gestão e monitorização de qubits. O QDK inclui diferentes classes de simuladores quânticos que representam formas de execução distintas para o mesmo algoritmo quântico. 
 
 
 Cada tipo de simulador quântico pode fornecer diferentes implementações desses primitivos. Por exemplo, o [simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator) executa o algoritmo quântico ao simular na íntegra o [vetor de estado quântico](xref:microsoft.quantum.glossary#quantum-state), ao passo que o [simulador de rastreio de computador quântico](xref:microsoft.quantum.machines.qc-trace-simulator.intro) não tem minimamente em conta o estado quântico atual. Em vez disso, rastreia a porta, o qubit e outras utilizações dos recursos para o algoritmo.

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f0680e773c8233d6c4f1acb742b3cc38dbc069d5
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
+ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834759"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91771372"
 ---
 # <a name="the-no-locq-user-guide"></a>Guia do Utilizador Q#
 
@@ -55,7 +55,7 @@ Nos diferentes tópicos deste guia, apresentamos em detalhe os conceitos fundame
 
 ### <a name="quantum-simulators-and-resource-estimators"></a>Simuladores Quânticos e Avaliadores de Recursos
 
-- [Simuladores quânticos e aplicações anfitriãs](xref:microsoft.quantum.machines): uma descrição geral dos diferentes simuladores disponíveis, bem como do modelo de execução geral entre programas anfitriões e computadores de destino.
+- [Simuladores quânticos e aplicações anfitriãs](xref:microsoft.quantum.machines): descrição geral dos diferentes simuladores disponíveis, bem como do funcionamento conjunto dos programas anfitriões e computadores de destino para execução de programas Q#.
 
 - [Simulador de estado completo](xref:microsoft.quantum.machines.full-state-simulator): o computador de destino que simula o estado quântico completo. Útil para executar ou depurar totalmente programas de menor escala (menos do que algumas dezenas de qubits)
 
