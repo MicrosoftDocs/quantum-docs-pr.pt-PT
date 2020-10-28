@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 115cd65621afd8272887b36163b066a4e6a554d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835660"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692172"
 ---
 # <a name="applications"></a>Aplicações #
 
@@ -52,9 +52,9 @@ No caso especial em que o Hamiltonian se decompõe numa soma de partes hermitian
 
 > [!TIP]
 > As aplicações do algoritmo de simulação Trotter-Suzuki estão cobertas nas amostras.
-> Para o modelo Ising utilizando apenas as operações intrínsecas fornecidas por cada máquina-alvo, consulte a amostra [ **SimpleIsing** ](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
-> Para o modelo Ising utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **isingTrotter** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
-> Para hidrogénio molecular utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **de simulação H2** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
+> Para o modelo Ising utilizando apenas as operações intrínsecas fornecidas por cada máquina-alvo, consulte a amostra [ **SimpleIsing**](https://github.com/microsoft/Quantum/blob/main/samples/simulation/ising/simple).
+> Para o modelo Ising utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **isingTrotter**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
+> Para hidrogénio molecular utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **de simulação H2**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
 Em muitos casos, gostaríamos de implementar o algoritmo de simulação, mas não estamos interessados nos detalhes da sua implementação. Por exemplo, o integrador de segunda ordem aproxima -$ \start{align} U(t) & = \esquerda (e^{-iH \_ 0 t / 2r} e^{-iH \_ 1 t / 2r} \cdots e^{-iH \_ {d-1} t / 2r} e^{-iH \_ {d-1} t / 2r} \cdots e^{-iH \_ 1 t / 2r} e^{-iH \_ 0 t / 2r} \right)^{r} + \mathcal{O}(d^3 \max_j \\ / H \_ j \\ [^3 t^3/r^2), \end{align} $$ usando um produto de termos de $2º$ Encomendas maiores envolverão ainda mais termos e variantes otimizadas podem exigir encomendas altamente não triviais nos exponencials. Outros algoritmos avançados também podem envolver o uso de qubits de ancilla em passos intermédios. Assim, embalamos algoritmos de simulação no cânone como o tipo definido pelo utilizador
 
@@ -87,8 +87,8 @@ function TimeDependentTrotterSimulationAlgorithm(
 ```
 
 > [!TIP]
-> As aplicações da biblioteca de simulação estão cobertas nas amostras. Para uma estimativa de fase no modelo Ising `SimulationAlgorithm` utilizando, consulte a amostra [ **IsingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
-> Para preparar o estado adiabático no modelo Ising `TimeDependentSimulationAlgorithm` utilizando, consulte a amostra [ **de AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
+> As aplicações da biblioteca de simulação estão cobertas nas amostras. Para uma estimativa de fase no modelo Ising `SimulationAlgorithm` utilizando, consulte a amostra [ **IsingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> Para preparar o estado adiabático no modelo Ising `TimeDependentSimulationAlgorithm` utilizando, consulte a amostra [ **de AdiabaticIsing**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
 
 
 ### <a name="adiabatic-state-preparation--phase-estimation"></a>Preparação do Estado Adiabático & estimativa da fase ###
@@ -132,15 +132,15 @@ operation EstimateAdiabaticStateEnergy(
 `nQubits` é o número de qubits usados para codificar o estado quântico inicial. `statePrepUnitary` prepara o estado de partida a partir da base computacional $\ket{0\cdots 0}$. `adiabaticUnitary` é a operação unitária que implementa a preparação do estado adiabático, tal como produzido pela  `InterpolatedEvolution` função. `qpeUnitary` é a operação unitária que é usada para realizar a estimativa de fase no estado quântico resultante. `phaseEstAlgorithm` é a nossa escolha de algoritmo de estimativa de fase.
 
 > [!TIP]
-> As aplicações de preparação do estado adiabático são abrangidas pelas amostras. Para o modelo Ising utilizando uma implementação manual da preparação do estado adiabático versus utilização da `AdiabaticEvolution` função, consulte a amostra [ **de AdiabaticIsing** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
-> Para a estimativa de fase e preparação do estado adiabático no modelo Ising, consulte a amostra [ **isingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> As aplicações de preparação do estado adiabático são abrangidas pelas amostras. Para o modelo Ising utilizando uma implementação manual da preparação do estado adiabático versus utilização da `AdiabaticEvolution` função, consulte a amostra [ **de AdiabaticIsing**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/adiabatic).
+> Para a estimativa de fase e preparação do estado adiabático no modelo Ising, consulte a amostra [ **isingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
 > [!TIP]
 > A [simulação do hidrogénio molecular](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) é uma amostra interessante e breve. O modelo e os resultados experimentais reportados em [O'Malley et al.](https://arxiv.org/abs/1512.06860) apenas requer matrizes Pauli e toma o formulário $\hat H = g \_ {0} I \_ 0I \_ 1+g \_ 1{Z \_ 0}+g \_ 2{Z \_ 1}+g \_ 3{Z \_ 0}z \_ 1}+g \_ 4{Y \_ 0}{Y \_ 1}+g \_ 5{X \_ 0}{X \_ 1}.. Este é um Hamiltonian eficaz que requer apenas 2 qubits, onde as constantes $g$ são calculadas à distância $R$ entre os dois átomos de Hidrogénio. Utilizando funções canónicas, os Paulis são convertidos em unitários e depois evoluíram ao longo de curtos períodos de tempo usando a decomposição Trotter-Suzuki. Uma boa aproximação ao estado terrestre de $H_2$ pode ser criada sem a utilização de preparação do estado adiabático, pelo que a energia do estado do solo pode ser encontrada diretamente utilizando a estimativa de fase do cânone.
 
 ## <a name="shors-algorithm"></a>Algoritmo de Shor ##
 O algoritmo de Shor continua a ser um dos desenvolvimentos mais significativos na computação quântica porque mostrou que os computadores quânticos poderiam ser usados para resolver problemas importantes, atualmente clássicos, intrigantes.
-O algoritmo de Shor fornece uma forma rápida de factorar grandes números usando um computador quântico, um problema chamado *factoring*.
+O algoritmo de Shor fornece uma forma rápida de factorar grandes números usando um computador quântico, um problema chamado *factoring* .
 A segurança de muitos criptosistemas atuais baseia-se no pressuposto de que não existe algoritmo rápido para factoring.
 Assim, o algoritmo de Shor teve um profundo impacto na forma como pensamos sobre a segurança num mundo pós-quântico.
 
@@ -151,7 +151,7 @@ Revemos estes dois passos abaixo.
 
 ### <a name="period-finding"></a>Constatação do período ###
 
-Tendo visto como o quantum Fourier transforma e o trabalho de estimativa de fase (ver [algoritmos quânticos), podemos](xref:microsoft.quantum.libraries.standard.algorithms)usar estas ferramentas para resolver um problema computacional clássico chamado *period finding*.  Na secção seguinte, veremos como aplicar o período de visão ao factoring.
+Tendo visto como o quantum Fourier transforma e o trabalho de estimativa de fase (ver [algoritmos quânticos), podemos](xref:microsoft.quantum.libraries.standard.algorithms)usar estas ferramentas para resolver um problema computacional clássico chamado *period finding* .  Na secção seguinte, veremos como aplicar o período de visão ao factoring.
 
 Tendo em conta dois inteiros $a$ e $N$, onde $a<N$, o objetivo da descoberta do período, também chamado de descoberta de encomendas, é encontrar a _encomenda_ $r$ de $a$ modulo $N$, onde $r$ é definido como o número inteiro menos positivo, tal que $a^r \equiv 1 \equiv 1 \text} mod }  
 
@@ -178,8 +178,8 @@ O portão controlado $U_a$ mapeia $\ket{x}$ para $\ket{(ax)\text} mod} {1}
 Para obter $(a^nx)\text{ mod} N$, podemos simplesmente aplicar $U_{a^n}$, onde calculamos $a^n \text} mod } N$ clássicamente para ligar ao circuito quântico.  
 Os circuitos para alcançar tal aritmética modular foram descritos na [documentação aritmética quântica](./algorithms.md#arithmetic), especificamente exigimos um circuito de exponenciação modular para implementar as operações de $U controlada \_ {a^i}$ .
 
-Embora o circuito acima corresponda à [Estimativa da Fase Quântica](xref:microsoft.quantum.characterization.quantumphaseestimation) e permita explicitamente a descoberta da ordem, podemos reduzir o número de qubits necessários. Podemos seguir o método de descoberta de encomendas de Beauregard, conforme descrito [na página 8 do arXiv:quant-ph/0205095v3,](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)ou usar uma das rotinas de estimativa de fase disponíveis na Microsoft.Quantum.Characterization. Por exemplo, [a Estimativa de Fase Robusta](xref:microsoft.quantum.characterization.robustphaseestimation) também usa um qubit extra.
- 
+Embora o circuito acima corresponda à [Estimativa da Fase Quântica](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) e permita explicitamente a descoberta da ordem, podemos reduzir o número de qubits necessários. Podemos seguir o método de descoberta de encomendas de Beauregard, conforme descrito [na página 8 do arXiv:quant-ph/0205095v3,](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)ou usar uma das rotinas de estimativa de fase disponíveis na Microsoft.Quantum.Characterization. Por exemplo, [a Estimativa de Fase Robusta](xref:microsoft.quantum.characterization.robustphaseestimation) também usa um qubit extra.
+
 ### <a name="factoring"></a>Factoring ###
 O objetivo do factoring é determinar os dois fatores primos do inteiro $N$, onde $N$ é um número de $n$-bit.  
 O factoring consiste nos passos descritos abaixo. Os passos são divididos em três partes: uma rotina clássica de pré-processamento (1-4); uma rotina de computação quântica para encontrar a ordem de $a \text{ mod } N$ (5); e uma rotina clássica de pós-processamento para derivar os fatores primos da ordem (6-9).

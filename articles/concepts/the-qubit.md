@@ -108,7 +108,7 @@ embora a escolha oposta poderia igualmente ser tomada. Assim, do número infinit
 
 Agora que sabemos representar um qubit, podemos ganhar alguma intuição para o que estes Estados representam, discutindo o conceito de [*medição.*](https://en.wikipedia.org/wiki/Measurement_in_quantum_mechanics) Uma medição corresponde à ideia informal de "olhar" para um qubit, que imediatamente colapsa o estado quântico a um dos dois estados clássicos $ \begin{bmatrix} \\\\ 10 \end{bmatrix} $ ou $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ . Quando um qubit dado pelo vetor de estado quântico $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ é medido, obtemos o resultado $ 0 $ com probabilidade $ | \alpha | ^2 $ e o resultado $ 1 com probabilidade $ $ | \beta | ^2 $ .   No resultado $ 0 $ , o estado novo do qubit é $ \begin{bmatrix} \\\\ 10; \end{bmatrix} $ no resultado $ 1 $ o seu estado é $ \begin{bmatrix} 0 \\\\ 1 \end{bmatrix} $ . Note que estas probabilidades resumem até $ 1 $ devido à condição de normalização $ | \alpha | ^2 + | \beta | ^2 = 1 $ .
 
-As propriedades da medição também significam que o sinal geral do vetor do estado quântico é irrelevante. Negar um vetor é equivalente a $ \alpha \right seta \alpha $ e $ \beta \right seta - \beta $ . Como a probabilidade de medir $ 0 $ e $ 1 $ depende da magnitude ao quadrado dos termos, inserir tais sinais não altera as probabilidades. Tais fases são geralmente chamadas [ `` *fases globais*''](https://en.wikipedia.org/wiki/Phase_factor) e, de um modo geral, podem ser da forma $ e^ { i em vez de \phi } $ apenas $ \pm 1 $ .
+As propriedades da medição também significam que o sinal geral do vetor do estado quântico é irrelevante. Negar um vetor é equivalente a $ \alpha \right seta \alpha $ e $ \beta \right seta - \beta $ . Como a probabilidade de medir $ 0 $ e $ 1 $ depende da magnitude ao quadrado dos termos, inserir tais sinais não altera as probabilidades. Tais fases são geralmente chamadas [ `` *fases globais* ''](https://en.wikipedia.org/wiki/Phase_factor) e, de um modo geral, podem ser da forma $ e^ { i em vez de \phi } $ apenas $ \pm 1 $ .
 
 Uma propriedade importante final da medição é que não danifica necessariamente todos os vetores do estado quântico. Se começarmos com um qubit no estado $ \begin{bmatrix} \\\\ 10 , que corresponde ao estado clássico \end{bmatrix} $ $ 0 , medir este estado $ sempre produzirá o resultado $ 0 e deixará o estado $ quântico inalterado. Neste sentido, se tivermos apenas bits clássicos (isto é, qubits que são $ \begin{bmatrix} \\\\ 10 \end{bmatrix} $ ou $ \begin{bmatrix} 0 \\\\ 1 ) \end{bmatrix} $ então a medição não danifica o sistema. Isto significa que podemos replicar dados clássicos e manipulá-lo num computador quântico, tal como se poderia fazer num computador clássico. A capacidade, no entanto, de armazenar informação em ambos os Estados ao mesmo tempo é o que eleva a computação quântica para além do que é possível clássicamente e rouba ainda mais computadores quânticos da capacidade de copiar dados quânticos indiscriminadamente, ver também [o teorema de não clonagem.](https://en.wikipedia.org/wiki/No-cloning_theorem)
 
@@ -122,7 +122,7 @@ Os qubits também podem ser retratados em $ 3 $ D usando a representação da [*
 As setas deste diagrama mostram a direção em que o vetor de estado quântico está apontando e cada transformação da seta pode ser considerada como uma rotação sobre um dos eixos cardeais.
 Ao pensar numa computação quântica como uma sequência de rotações é uma intuição poderosa, é um desafio usar esta intuição para desenhar e descrever algoritmos. Q# alivia esta questão fornecendo uma linguagem para descrever tais rotações.
 
-## <a name="single-qubit-operations"></a>Operações single-Qubit
+## <a name="single-qubit-operations"></a>Operações Single-Qubit
 
 Os computadores quânticos processam dados aplicando um conjunto universal de portões quânticos que podem imitar qualquer rotação do vetor do estado quântico.
 Esta noção de universalidade é semelhante à noção de universalidade para a computação tradicional (ou seja, clássica) onde um conjunto de portão é considerado universal se cada transformação dos bits de entrada pode ser realizada usando um circuito de comprimento finito.
@@ -137,7 +137,7 @@ is Adj { // Auto-generate the adjoint of the operation
 }
 ```
 
-Embora este seja um exemplo trivial (como a < operação xref:microsoft.quantum.intrínseco > é auto-adjacente), você pode ver como isso se torna inestimável para operações de qubit mais complicadas.
+Embora este seja um exemplo trivial (como a < operação xref:Microsoft.Quantum.Intrínseco.H > é auto-adjacente), você pode ver como isso se torna inestimável para operações de qubit mais complicadas.
 Para mais informações, consulte [Operações e Funções.](xref:microsoft.quantum.guide.operationsfunctions)
 
 Há apenas quatro funções que mapeiam um pouco a um bit num computador clássico. Em contraste, há um número infinito de transformações unitárias num único qubit num computador quântico. Portanto, nenhum conjunto finito de operações quânticas primitivas, [*chamados portões,*](https://en.wikipedia.org/wiki/Quantum_logic_gate)pode exatamente replicar o conjunto infinito de transformações unitárias permitidas na computação quântica. Isto significa que, ao contrário da computação clássica, é impossível para um computador quântico implementar todos os programas quânticos possíveis exatamente usando um número finito de portões. Assim, os computadores quânticos não podem ser universais no mesmo sentido dos computadores clássicos. Como resultado, quando dizemos que um conjunto de portas é *universal* para a computação quântica, na verdade, significamos algo ligeiramente mais fraco do que queremos dizer com a computação clássica.
@@ -176,7 +176,7 @@ Embora os anteriores constituam os portões primitivos mais populares para descr
 
 O mais simples tão primitivo é a única rotação qubit. São normalmente consideradas três rotações de um único qubit: $ $ R_x, $ R_y e $ R_z $ $ . Para visualizar a ação da rotação $ R_x(\theta) $ , por exemplo, imagine apontar o polegar direito ao longo da direção do $ eixo x da esfera $ Bloch e rodar o vetor com a mão através de um ângulo de $ \theta/2 $ radians. Este fator confuso de $ 2 $ decorre do facto de que os vetores ortogonais estão $ separados a 180^\circ $ quando traçados na esfera bloch, mas na verdade estão $ a 90^\circ $ graus separados geometricamente. As matrizes unitárias correspondentes são:
 
-\begin{alinhar* } 
+\begin{alinhar *} 
  & R_z(\theta) = e^ { -i\theta Z/2 } = \begin{bmatrix} e^ { -i\theta/2 } & \\\\ 0 0 & { e^i\theta/2 } \end{bmatrix} , \\\\ 
  & R_x(\theta) = { e^-i\theta X/2 } = HR_z(\theta)H = \begin{bmatrix} \cos(\theta/2) & -i\sin(\theta/2) \\\\ -i\\\\\\\\\sin(\theta/2) & \cos(\theta/2) \end{bmatrix} , \\\\ 
  & R_y(\theta) = e^ { -i\theta Y/2 } = SHR_z(\theta)HS^ \dagger = \begin{bmatrix} \cos(\theta/2) & -\sin(\theta/2) \\\\ \sin(\theta/2) & \cos(\theta/2) \end{bmatrix} . \end { alinhar*}
