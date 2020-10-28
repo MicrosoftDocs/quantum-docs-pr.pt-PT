@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Converte um termo Hamiltonian em `HTerm` formato de dados para um GeneratorIndex.
+  uid: Microsoft.Quantum.Chemistry.HTermToGenIdx
+- summary: Converte um índice para um termo Hamiltonian em `HTerm[]` formato de dados para um GeneratorIndex.
+  uid: Microsoft.Quantum.Chemistry.HTermsToGenIdx
+- summary: Converte um Hamiltonian em `HTerm[]` formato de dados para um GeneratorSystem.
+  uid: Microsoft.Quantum.Chemistry.HTermsToGenSys
+- summary: Verifica se um `Double` número não é aproximadamente zero.
+  uid: Microsoft.Quantum.Chemistry.IsNotZero
+name: Microsoft.Quantum.Chemistry
+newtypes:
+- summary: Formato de dados passados de C# a Q# para representar um termo do Hamiltonian. O significado dos dados representados é determinado pelo algoritmo que os recebe.
+  uid: Microsoft.Quantum.Chemistry.HTerm
+operations: []
+summary: ''
+uid: Microsoft.Quantum.Chemistry
+metadata:
+  ms.openlocfilehash: d5473c1264e7eae53b18c3fc0b2686e947772a88
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92714097"
