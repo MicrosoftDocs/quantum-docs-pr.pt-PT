@@ -128,7 +128,7 @@ Estas medições são dadas abaixo para conveniência.
 |$ $ X | $H               $                    |
 |$Y $ | $HS^               {\dagger}$         |
 
-Ou seja, usando esta linguagem, "medida $ $ Y" é equivalente a aplicar $ HS^ \dagger $ e, em seguida, medir na base computacional, onde [`S`](xref:microsoft.quantum.intrinsic.s) é uma operação quântica intrínseca às vezes chamada de "portão de fase", e pode ser simulada pela matriz unitária
+Ou seja, usando esta linguagem, "medida $ $ Y" é equivalente a aplicar $ HS^ \dagger $ e, em seguida, medir na base computacional, onde [`S`](xref:Microsoft.Quantum.Intrinsic.S) é uma operação quântica intrínseca às vezes chamada de "portão de fase", e pode ser simulada pela matriz unitária
 
 $$
 \begin{align}
@@ -194,7 +194,7 @@ Semelhante ao caso de um qubit, todas as medições de pauli de dois qubits pode
 >         0 & & 10 & 0 \\\\
 >0 & 0 & 0 & 0 1 > \end { } \right matriz) >     \end{align}
 > $$
->utilizado para simular a operação intrínseca. [`SWAP`](xref:microsoft.quantum.intrinsic)
+>utilizado para simular a operação intrínseca. [`SWAP`](xref:Microsoft.Quantum.Intrinsic)
 
 |Transformação unitária de medição de Pauli ||
 |----------------------|------------------------|
@@ -214,7 +214,7 @@ Semelhante ao caso de um qubit, todas as medições de pauli de dois qubits pode
 |$X \otimes Y $ | $ \operatorname { CNOT } \_ { 10 } (H \otimes HS^ \dagger ) $|
 |$Y \otimes Y $ | $ \operatorname { CNOT } \_ { 10 } (HS^ \dagger \otimes HS^ \dagger ) $|
 
-Aqui, a [`CNOT`](xref:microsoft.quantum.intrinsic.cnot) operação aparece pelo seguinte motivo.
+Aqui, a [`CNOT`](xref:Microsoft.Quantum.Intrinsic.CNOT) operação aparece pelo seguinte motivo.
 Cada medição de Pauli que não inclua a $ \boldone $ matriz equivale a um unitário a $ Z Z pelo raciocínio \otimes $ acima.
 Os valores de eigenvalues de $ Z \otimes Z dependem $ apenas da paridade dos qubits que compõem cada vetor de base computacional, e as operações não controladas servem para calcular esta paridade e armazená-la na primeira parte.
 Depois, uma vez medida a primeira parte, podemos recuperar a identidade do meio-espaço resultante, o que equivale a medir o operador Pauli.
@@ -240,16 +240,16 @@ Em Q# , tais medições $ devolvem j se a $ medição render um resultado no eig
 Ter as medidas Pauli como uma característica incorporada Q# é útil porque a medição de tais operadores requer longas cadeias de portões NÃO controlados e transformações de base para descrever o portão U diagonalizado necessário para expressar a $ $ operação como um produto tensor de $ Z e . $ $ \id $ .
 Ao ser capaz de especificar que deseja fazer uma destas medições pré-definidas, não precisa de se preocupar em como transformar a sua base de modo a que uma medição de base computacional forneça as informações necessárias.
 Q# lida com todas as transformações de base necessárias para si automaticamente.
-Para mais informações, consulte as [`Measure`](xref:microsoft.quantum.intrinsic.measure) [`MeasurePaulis`](xref:microsoft.quantum.measurement.measurepaulis) operações e operações.
+Para mais informações, consulte as [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) [`MeasurePaulis`](xref:Microsoft.Quantum.Measurement.MeasurePaulis) operações e operações.
 
-## <a name="the-no-cloning-theorem"></a>O Teorema da Não Clonagem
+## <a name="the-no-cloning-theorem"></a>O Teorema No-Cloning
 
 A informação quântica é poderosa.
 Permite-nos fazer coisas incríveis, como números de fatores exponencialmente mais rápidos do que os algoritmos clássicos mais conhecidos, ou simular eficientemente sistemas de eletrões correlacionados que clássicamente requerem custos exponenais para simular com precisão.
 No entanto, existem limitações ao poder da computação quântica.
 Uma dessas limitações é dada pelo Teorema da *Não Clonagem.*
 
-O teorema de não clonagem tem o nome apropriado.
+O teorema No-Cloning tem o nome apropriado.
 Não permite a clonagem de estados quânticos genéricos por um computador quântico.
 A prova do teorema é notavelmente simples.
 Embora uma prova completa do teorema da não clonagem seja um pouco técnica demais para a nossa discussão aqui, a prova no caso de não haver qubits auxiliares adicionais está dentro do nosso âmbito (qubits auxiliares são qubits usados para o espaço de risco durante um cálculo e são facilmente utilizados e Q# geridos em, ver [qubits emprestados).](xref:microsoft.quantum.guide.qubits#borrowed-qubits)
@@ -273,15 +273,15 @@ $$
 \end{align}
 $$
 
-Isto fornece a intuição fundamental por trás do Teorema da Não Clonagem: qualquer dispositivo que copie um estado quântico desconhecido deve induzir erros em pelo menos alguns dos estados que copia.
+Isto fornece a intuição fundamental por trás do teorema No-Cloning: qualquer dispositivo que copie um estado quântico desconhecido deve induzir erros em pelo menos alguns dos estados que copia.
 Embora o pressuposto-chave de que o cloner age linearmente sobre o estado de entrada pode ser violado através da adição e medição de qubits auxiliares, tais interações também vazam informações sobre o sistema através das estatísticas de medição e impedem a clonagem exata em tais casos também.
-Para obter uma prova mais completa do teorema de não clonagem consulte [para mais informações](xref:microsoft.quantum.more-information).
+Para obter uma prova mais completa do No-Cloning Theorem consulte [para mais informações.](xref:microsoft.quantum.more-information)
 
-O teorema da não clonagem é importante para a compreensão qualitativa da computação quântica, porque se pudéssemos clonar estados quânticos de forma barata, então seria-lhe concedida uma capacidade quase mágica de aprender com os estados quânticos.
+O teorema No-Cloning é importante para a compreensão qualitativa da computação quântica, porque se pudéssemos clonar estados quânticos de forma barata, então seria-lhe concedida uma capacidade quase mágica de aprender com os estados quânticos.
 Na verdade, pode violar o princípio vago de Heisenberg.
 Em alternativa, você poderia usar um clone ideal para tirar uma única amostra de uma distribuição quântica complexa e aprender tudo o que você poderia aprender sobre essa distribuição a partir de apenas uma amostra.
 Seria como se lançasses uma moeda e observasses as cabeças e depois contasses a um amigo sobre o resultado, respondendo "Ah, a distribuição dessa moeda deve ser Bernoulli com $ p = 0.512643\ldots!" $  Tal declaração não seria sensata porque uma parte da informação (o resultado das cabeças) simplesmente não pode fornecer as muitas informações necessárias para codificar a distribuição sem informações prévias substanciais.
 Da mesma forma, sem informação prévia não podemos perfeitamente clonar um estado quântico, assim como não podemos preparar um conjunto de tais moedas sem saber $ p $ .
 
 A informação não é gratuita na computação quântica.
-Cada qubit medido dá um único pedaço de informação, e o Teorema de Não Clonagem mostra que não há uma porta traseira que possa ser explorada para contornar a troca fundamental entre a informação obtida sobre o sistema e a perturbação invocada sobre ele.
+Cada qubit medido dá um único pedaço de informação, e o No-Cloning Teorema mostra que não há uma porta traseira que possa ser explorada para contornar a troca fundamental entre a informação obtida sobre o sistema e a perturbação invocada sobre ele.
