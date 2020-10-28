@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dad0db4d2aab27e5ae46d4df10ee050f785d8bb8
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835558"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692042"
 ---
 # <a name="error-correction"></a>Correção de Erros #
 
@@ -61,7 +61,7 @@ Denotamos os resultados de cada medição pelo sinal do valor eigen que é obser
 | $X_2$ | $\ket {001} $ | $\ket {110} $ | $+$ | $-$ |
 
 Assim, os resultados das duas medições determinam exclusivamente qual o erro bit-flip ocorrido, mas sem revelar qualquer informação sobre o estado que codificamos.
-Chamamos a estes resultados uma *síndrome,* e referimo-nos ao processo de mapear uma síndrome de volta ao erro que a causou como *recuperação*.
+Chamamos a estes resultados uma *síndrome,* e referimo-nos ao processo de mapear uma síndrome de volta ao erro que a causou como *recuperação* .
 Em particular, salientamos que a recuperação é um procedimento de inferência *clássica* que toma como entrada a síndrome que ocorreu, e devolve uma receita para como corrigir quaisquer erros que possam ter ocorrido.
 
 > [!NOTE]
@@ -82,14 +82,14 @@ Nesta secção, descrevemos este quadro e a sua aplicação a alguns simples có
 
 Para ajudar a especificar códigos de correção de erros, o Q# cânone fornece vários tipos distintos definidos pelo utilizador:
 
-- <xref:microsoft.quantum.errorcorrection.logicalregister>`= Qubit[]`: Denota que um registo de qubits deve ser interpretado como o bloco de código de um código de correção de erros.
-- <xref:microsoft.quantum.errorcorrection.syndrome>`= Result[]`: Denota que uma série de resultados de medição deve ser interpretada como a síndrome medida num bloco de código.
-- <xref:microsoft.quantum.errorcorrection.recoveryfn>`= (Syndrome -> Pauli[])`: Denota que uma função *clássica* deve ser usada para interpretar uma síndrome e devolver uma correção que deve ser aplicada.
-- <xref:microsoft.quantum.errorcorrection.encodeop>`= ((Qubit[], Qubit[]) => LogicalRegister)`: Denota que uma operação requer qubits que representam dados juntamente com novos qubits de ancilla, a fim de produzir um bloco de código de um código de correção de erros.
-- <xref:microsoft.quantum.errorcorrection.decodeop>`= (LogicalRegister => (Qubit[], Qubit[]))`: Denota que uma operação decompõe um bloco de código de um código de correção de erros nos qubits de dados e nos qubits de ancilla utilizados para representar informações de síndrome.
-- <xref:microsoft.quantum.errorcorrection.syndromemeasop>`= (LogicalRegister => Syndrome)`: Denota uma operação que deve ser utilizada para extrair informações de síndrome de um bloco de código, sem perturbar o estado protegido pelo código.
+- <xref:Microsoft.Quantum.ErrorCorrection.LogicalRegister>`= Qubit[]`: Denota que um registo de qubits deve ser interpretado como o bloco de código de um código de correção de erros.
+- <xref:Microsoft.Quantum.ErrorCorrection.Syndrome>`= Result[]`: Denota que uma série de resultados de medição deve ser interpretada como a síndrome medida num bloco de código.
+- <xref:Microsoft.Quantum.ErrorCorrection.RecoveryFn>`= (Syndrome -> Pauli[])`: Denota que uma função *clássica* deve ser usada para interpretar uma síndrome e devolver uma correção que deve ser aplicada.
+- <xref:Microsoft.Quantum.ErrorCorrection.EncodeOp>`= ((Qubit[], Qubit[]) => LogicalRegister)`: Denota que uma operação requer qubits que representam dados juntamente com novos qubits de ancilla, a fim de produzir um bloco de código de um código de correção de erros.
+- <xref:Microsoft.Quantum.ErrorCorrection.DecodeOp>`= (LogicalRegister => (Qubit[], Qubit[]))`: Denota que uma operação decompõe um bloco de código de um código de correção de erros nos qubits de dados e nos qubits de ancilla utilizados para representar informações de síndrome.
+- <xref:Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp>`= (LogicalRegister => Syndrome)`: Denota uma operação que deve ser utilizada para extrair informações de síndrome de um bloco de código, sem perturbar o estado protegido pelo código.
 
-Finalmente, o cânone fornece o <xref:microsoft.quantum.errorcorrection.qecc> tipo de recolha dos outros tipos necessários para definir um código de correção de erros quânticos. Associado a cada código quântico estabilizador está o comprimento do código $n$, o número $k$ de qubits lógicos, e a distância mínima $d$, muitas vezes convenientemente agrupados na notação ⟦$n$, $k$, $d$⟧. Por exemplo, a <xref:microsoft.quantum.errorcorrection.bitflipcode> função define o código flip ⟦3, 1, 1⟧ bit:
+Finalmente, o cânone fornece o <xref:Microsoft.Quantum.ErrorCorrection.QECC> tipo de recolha dos outros tipos necessários para definir um código de correção de erros quânticos. Associado a cada código quântico estabilizador está o comprimento do código $n$, o número $k$ de qubits lógicos, e a distância mínima $d$, muitas vezes convenientemente agrupados na notação ⟦$n$, $k$, $d$⟧. Por exemplo, a <xref:Microsoft.Quantum.ErrorCorrection.BitFlipCode> função define o código flip ⟦3, 1, 1⟧ bit:
 
 ```qsharp
 let encodeOp = EncodeOp(BitFlipEncoder);
@@ -104,7 +104,7 @@ let code = QECC(encodeOp, decodeOp, syndMeasOp);
 Note que o `QECC` tipo *não* inclui uma função de recuperação.
 Isto permite-nos alterar a função de recuperação que é utilizada na correção de erros sem alterar a definição do próprio código; esta capacidade é particularmente útil ao incorporar feedback das medições de caracterização no modelo assumido pela recuperação.
 
-Uma vez que um código é definido desta forma, podemos usar a <xref:microsoft.quantum.errorcorrection.recover> operação para recuperar de erros:
+Uma vez que um código é definido desta forma, podemos usar a <xref:Microsoft.Quantum.ErrorCorrection.Recover> operação para recuperar de erros:
 
 ```qsharp
 let code = BitFlipCode();
