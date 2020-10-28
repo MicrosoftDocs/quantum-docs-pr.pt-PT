@@ -1,0 +1,58 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Converte um grande número de inteiros para uma variedade de Booleans. O elemento 0 da matriz é a parte menos significativa do grande número inteiro.
+  uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
+- summary: Converte uma certa variedade de Booleans para um número inteiro equivalente. O elemento 0 da matriz é a parte menos significativa do grande número inteiro.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
+- summary: Produz um inteiro positivo de uma série de bits em pequeno formato endiano.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsInt
+- summary: Dado um pouco de corda, devolve um operador pauli multi-qubit representado como uma variedade de operadores pauli de um único qubit.
+  uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
+- summary: Converte um `Bool[]` tipo para um `Result[]` tipo, onde é `true` mapeado `One` e `false` mapeado para `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolArrayAsResultArray
+- summary: Converte um `Bool` tipo para um `Result` tipo, onde é `true` mapeado `One` e `false` mapeado para `Zero` .
+  uid: Microsoft.Quantum.Convert.BoolAsResult
+- summary: Converte um valor de boolean para uma representação de cordas equivalente.
+  uid: Microsoft.Quantum.Convert.BoolAsString
+- summary: Converte um dado número de ponto flutuante de dupla precisão para uma representação de corda equivalente.
+  uid: Microsoft.Quantum.Convert.DoubleAsString
+- summary: Converte um dado número de ponto flutuante de dupla precisão para uma representação de corda equivalente, utilizando o formato dado.
+  uid: Microsoft.Quantum.Convert.DoubleAsStringWithFormat
+- summary: Converte funções em operações.
+  uid: Microsoft.Quantum.Convert.FunctionAsOperation
+- summary: Converte um dado inteiro para um grande inteiro equivalente.
+  uid: Microsoft.Quantum.Convert.IntAsBigInt
+- summary: Produz uma representação binária de um inteiro positivo, usando a representação pouco-endiana para a matriz devolvida.
+  uid: Microsoft.Quantum.Convert.IntAsBoolArray
+- summary: Converte um número inteiro num dado inteiro para um número equivalente de ponto flutuante de dupla precisão.
+  uid: Microsoft.Quantum.Convert.IntAsDouble
+- summary: Converte um número inteiro para uma representação de corda equivalente.
+  uid: Microsoft.Quantum.Convert.IntAsString
+- summary: Converte um número inteiro dado para uma representação de corda equivalente, utilizando o formato dado.
+  uid: Microsoft.Quantum.Convert.IntAsStringWithFormat
+- summary: Converte um dado grande inteiro para um inteiro equivalente, se possível. A função devolve um par do inteiro resultante e uma bandeira booleana que é verdade, se e somente se a conversão for possível.
+  uid: Microsoft.Quantum.Convert.MaybeBigIntAsInt
+- summary: Codifica um operador pauli multi-qubit representado como uma matriz de operadores pauli de um único qubit em um inteiro.
+  uid: Microsoft.Quantum.Convert.PauliArrayAsInt
+- summary: Cria uma série `arr` de inteiros enumerados pelo início. passo. fim.
+  uid: Microsoft.Quantum.Convert.RangeAsIntArray
+- summary: Converte um `Result[]` tipo para um `Bool[]` tipo, onde é `One` mapeado `true` e `Zero` mapeado para `false` .
+  uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
+- summary: Produz um inteiro positivo de uma série de resultados em pequeno formato endiano.
+  uid: Microsoft.Quantum.Convert.ResultArrayAsInt
+- summary: Converte um `Result` tipo para um `Bool` tipo, onde é `One` mapeado `true` e `Zero` mapeado para `false` .
+  uid: Microsoft.Quantum.Convert.ResultAsBool
+name: Microsoft.Quantum.Convert
+newtypes: []
+operations:
+- summary: Chama uma função com uma dada entrada.
+  uid: Microsoft.Quantum.Convert.Call
+summary: Este espaço de nome contém funções para conversão entre vários tipos de dados Q#.
+uid: Microsoft.Quantum.Convert
+metadata:
+  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92713817"
