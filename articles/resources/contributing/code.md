@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.code
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7a258a915a807b8e1ee7c2c9c062017d90f6a454
-ms.sourcegitcommit: 685a8ab16d7e6a25e63a168d6e7c385fa6e876cc
+ms.openlocfilehash: 47845c4f3520e8c50cf8aefd9bf9e8f086c42842
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91489770"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691802"
 ---
 # <a name="contributing-code"></a>Contribuir no Código
 
@@ -36,7 +36,7 @@ Quando um novo pedido de puxar é aberto, por exemplo, a nossa configuração [A
 
 Com a versão mais Q# recente, os testes unitários são definidos usando o `@Test("QuantumSimulator")` atributo. O argumento pode ser "QuantumSimulator", "ToffoliSimulator", "TraceSimulator", ou qualquer nome totalmente qualificado especificando o alvo de execução. Vários atributos que definem diferentes alvos de execução podem ser ligados à mesma chamada. Alguns dos nossos testes ainda usam o pacote deprecado [Microsoft.Quantum.Xunit](https://www.nuget.org/packages/Microsoft.Quantum.Xunit/) que expõe todas as Q# funções e operações que terminam no `Test` quadro [xUnit.](https://xunit.github.io/) Este pacote já não é necessário para definir os testes unitários. 
 
-A função seguinte é utilizada para garantir que <xref:microsoft.quantum.canon.fst> as e <xref:microsoft.quantum.canon.snd> as funções retornam as saídas certas num exemplo representativo.
+A função seguinte é utilizada para garantir que <xref:Microsoft.Quantum.Canon.Fst> as e <xref:Microsoft.Quantum.Canon.Snd> as funções retornam as saídas certas num exemplo representativo.
 Se a saída de `Fst` ou `Snd` estiver incorreta, a declaração é utilizada `fail` para fazer com que o teste falhe.
 
 ```qsharp
@@ -57,7 +57,7 @@ function PairTest () : Unit {
 ```
 
 Condições mais complicadas podem ser verificadas utilizando as técnicas na secção de [testes](xref:microsoft.quantum.libraries.diagnostics) do guia de bibliotecas padrão.
-Por exemplo, os seguintes testes verificam `H(q); X(q); H(q);` que, tal como chamado <xref:microsoft.quantum.canon.applywith> por, faz o mesmo que `Z(q)` .
+Por exemplo, os seguintes testes verificam `H(q); X(q); H(q);` que, tal como chamado <xref:Microsoft.Quantum.Canon.ApplyWith> por, faz o mesmo que `Z(q)` .
 
 ```Q#
 @Test("QuantumSimulator")
@@ -106,7 +106,7 @@ Finalmente, não podemos aceitar contribuições que causem danos à comunidade 
 Queremos assegurar que as contribuições sirvam toda a comunidade da computação quântica, tanto na sua maravilhosa diversidade atual, como no futuro, à medida que se torna ainda mais inclusiva.
 Agradecemos a sua ajuda na concretização deste objetivo.
 
-## <a name="next-steps"></a>Próximos passos
+## <a name="next-steps"></a>Passos seguintes
 
 Obrigado por ajudar a fazer do Kit de Desenvolvimento Quântico um grande recurso para toda a comunidade de programação quântica!
 Para saber mais, continue com o seguinte guia sobre Q# estilo.

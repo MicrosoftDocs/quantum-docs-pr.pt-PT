@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 86f6538cf383f4e7c14255b38cfb1c141c8f991b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: b3bc0841eabeac5d3968776f9dab3a02b1a1eef9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835524"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691626"
 ---
 # <a name="no-locq-basics"></a>Q# Básico
 
@@ -28,7 +28,7 @@ Do ponto de vista técnico, um programa quântico é um conjunto particular de s
 Uma consequência importante dessa visão é que um Q# programa não modela diretamente os qubits, mas descreve como um computador controlado clássicamente interage com esses qubits.
 Por design, Q# não define estados quânticos ou outras propriedades da mecânica quântica diretamente.
 Por exemplo, considere o estado $\ket{+} = \left {0} (\ket + \ket {1} \right) / \sqrt {2} $ discutido no guia quantum [Computing Concepts.](xref:microsoft.quantum.concepts.intro)
-Para preparar este estado em Q# , comece com os fatos de que os qubits são inicializados no estado $\ket$ e que {0} $\ket{+} = H\ket {0} $, onde $H$ é a [transformação Hadamard,](xref:microsoft.quantum.glossary#hadamard)implementada pela [ `H` operação](xref:microsoft.quantum.intrinsic.h). O código básico Q# para inicializar e transformar um qubit, então, é assim:
+Para preparar este estado em Q# , comece com os fatos de que os qubits são inicializados no estado $\ket$ e que {0} $\ket{+} = H\ket {0} $, onde $H$ é a [transformação Hadamard,](xref:microsoft.quantum.glossary#hadamard)implementada pela [ `H` operação](xref:Microsoft.Quantum.Intrinsic.H). O código básico Q# para inicializar e transformar um qubit, então, é assim:
 
 ```qsharp
 using (qubit = Qubit()) {
@@ -45,7 +45,7 @@ Importante, o programa anterior não se refere explicitamente ao estado interior
 Com esta abordagem, você pode ser inteiramente agnóstico sobre o que *é* um estado quântico mesmo em cada máquina alvo, que pode ter diferentes interpretações dependendo da máquina. 
 
 Um Q# programa não pode introspeção no estado de um qubit.
-Em vez disso, um programa pode chamar operações como [`Measure`](xref:microsoft.quantum.intrinsic.measure) aprender informações de um qubit, e ligar operações como [`X`](xref:microsoft.quantum.intrinsic.x) e agir sobre o estado de um [`H`](xref:microsoft.quantum.intrinsic.h) qubit.
+Em vez disso, um programa pode chamar operações como [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) aprender informações de um qubit, e ligar operações como [`X`](xref:Microsoft.Quantum.Intrinsic.X) e agir sobre o estado de um [`H`](xref:Microsoft.Quantum.Intrinsic.H) qubit.
 O que estas operações realmente *fazem* é apenas feito concreto pela máquina-alvo usada para executar o Q# programa particular.
 Por exemplo, se executar o programa no nosso [simulador de estado completo,](xref:microsoft.quantum.machines.full-state-simulator)o simulador executa as operações matemáticas correspondentes ao sistema quântico simulado.
 Mas olhando para o futuro, quando a máquina-alvo é um verdadeiro computador quântico, chamando tais operações em Q# direcione o computador quântico para realizar as operações *reais* correspondentes no sistema quântico *real,* por exemplo, impulsos laser precisamente cronometrado).
@@ -55,14 +55,14 @@ Desta forma, Q# torna-se fácil expressar a lógica subjacente aos algoritmos qu
 
 ## <a name="no-locq-operations-and-functions"></a>Q# operações e funções
 
-Concretamente, um Q# programa compreende *operações,* *funções*e quaisquer tipos definidos pelo utilizador. 
+Concretamente, um Q# programa compreende *operações,* *funções* e quaisquer tipos definidos pelo utilizador. 
 
 As operações são usadas para descrever as transformações dos sistemas quânticos e são o bloco de construção mais fundamental dos Q# programas. Cada operação definida Q# pode então chamar qualquer número de outras operações.
 
 Ao contrário das operações, as funções são usadas para descrever comportamentos clássicos puramente *deterministas* e não têm quaisquer efeitos além de calcular valores clássicos. Por exemplo, suponha que queira medir os qubits no final de um programa e adicione os resultados da medição a uma matriz.
 Neste caso, `Measure` é uma *operação* que instrui a máquina-alvo a efetuar uma medição nos qubits (reais ou simulados). Ao mesmo tempo, as *funções* lidam com o processo clássico de adicionar os resultados devolvidos a uma matriz.
 
-Juntos, as operações e funções são conhecidas como *callables*. A sua estrutura e comportamento subjacentes são introduzidos e detalhados em [Operações e Q# Funções em ](xref:microsoft.quantum.guide.operationsfunctions).
+Juntos, as operações e funções são conhecidas como *callables* . A sua estrutura e comportamento subjacentes são introduzidos e detalhados em [Operações e Q# Funções em ](xref:microsoft.quantum.guide.operationsfunctions).
 
 
 ## <a name="no-locq-syntax-overview"></a>Q# visão geral da sintaxe

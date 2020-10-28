@@ -107,7 +107,7 @@ Uma [operação](xref:microsoft.quantum.glossary#operation) ou [função](xref:m
 
 ## <a name="clifford-group"></a>Grupo Clifford
 
-O conjunto de operações que ocupam os octantes da [esfera bloch](xref:microsoft.quantum.glossary#bloch-sphere) e efeitos permutações dos [operadores Pauli.](xref:microsoft.quantum.glossary#pauli-operators) Estes incluem as operações [ $ X, $ ](xref:microsoft.quantum.intrinsic.x) [ $ Y, $ ](xref:microsoft.quantum.intrinsic.y) [ $ Z, $ ](xref:microsoft.quantum.intrinsic.z) [ $ H $ ](xref:microsoft.quantum.intrinsic.h) e [ $ S. $ ](xref:microsoft.quantum.intrinsic.s)
+O conjunto de operações que ocupam os octantes da [esfera bloch](xref:microsoft.quantum.glossary#bloch-sphere) e efeitos permutações dos [operadores Pauli.](xref:microsoft.quantum.glossary#pauli-operators) Estes incluem as operações [ $ X, $ ](xref:Microsoft.Quantum.Intrinsic.X) [ $ Y, $ ](xref:Microsoft.Quantum.Intrinsic.Y) [ $ Z, $ ](xref:Microsoft.Quantum.Intrinsic.Z) [ $ H $ ](xref:Microsoft.Quantum.Intrinsic.H) e [ $ S. $ ](xref:Microsoft.Quantum.Intrinsic.S)
 
 ## <a name="controlled"></a>Controlado
 
@@ -150,7 +150,7 @@ Quando dois [estados](xref:microsoft.quantum.glossary#quantum-state) são idênt
 
 ## <a name="hadamard"></a>Hadamard
 
-A operação Hadamard (também designada por portão Hadamard ou transformação) atua num único [qubit](xref:microsoft.quantum.glossary#qubit) e coloca-a numa [superposição](xref:microsoft.quantum.glossary#superposition) uniforme de $ \ket { 0 } $ ou $ \ket { 1 } $ se o qubit estiver inicialmente no $ \ket { estado 0. } $ Em Q# , esta operação é aplicada pela [`H`](xref:microsoft.quantum.intrinsic.h) operação pré-definida.
+A operação Hadamard (também designada por portão Hadamard ou transformação) atua num único [qubit](xref:microsoft.quantum.glossary#qubit) e coloca-a numa [superposição](xref:microsoft.quantum.glossary#superposition) uniforme de $ \ket { 0 } $ ou $ \ket { 1 } $ se o qubit estiver inicialmente no $ \ket { estado 0. } $ Em Q# , esta operação é aplicada pela [`H`](xref:Microsoft.Quantum.Intrinsic.H) operação pré-definida.
 
 ## <a name="immutable"></a>Imutável
 
@@ -182,7 +182,7 @@ Uma sub-rotina que fornece informações dependentes de dados a um algoritmo qu�
 
 ## <a name="partial-application"></a>Aplicação parcial
 
-Convocar uma [função](xref:microsoft.quantum.glossary#function) ou [funcionamento](xref:microsoft.quantum.glossary#operation) sem todas as entradas necessárias. Isto devolve uma nova [chamada](xref:microsoft.quantum.glossary#callable) que só necessita dos parâmetros em falta (indicados por um sublinhado) a serem fornecidos durante uma futura aplicação. Por exemplo, dada a função `MyFunc(x : int, y : int) : int {return x + y;}` pode aplicá-la parcialmente a uma nova função `let NewFunc = MyFunc(_, 3)` . Em seguida, pode ligar para a nova função mais tarde com o parâmetro em falta `NewFunc(2)` que devolve o valor *5*.  Para mais informações, consulte [aplicação parcial.](xref:microsoft.quantum.guide.operationsfunctions#partial-application)
+Convocar uma [função](xref:microsoft.quantum.glossary#function) ou [funcionamento](xref:microsoft.quantum.glossary#operation) sem todas as entradas necessárias. Isto devolve uma nova [chamada](xref:microsoft.quantum.glossary#callable) que só necessita dos parâmetros em falta (indicados por um sublinhado) a serem fornecidos durante uma futura aplicação. Por exemplo, dada a função `MyFunc(x : int, y : int) : int {return x + y;}` pode aplicá-la parcialmente a uma nova função `let NewFunc = MyFunc(_, 3)` . Em seguida, pode ligar para a nova função mais tarde com o parâmetro em falta `NewFunc(2)` que devolve o valor *5* .  Para mais informações, consulte [aplicação parcial.](xref:microsoft.quantum.guide.operationsfunctions#partial-application)
 
 ## <a name="pauli-operators"></a>Operadores Pauli
 

@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.expressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9bf28e3854eae1892692d7ca840e1860de2e2934
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e95a7cb9b74136ef9a6f51b4bbc32d1d93c43a0d
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835847"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691595"
 ---
 # <a name="expressions-in-no-locq"></a>Expressões em Q#
 
@@ -40,7 +40,7 @@ let bigOne = bigZero + 1L;
 Podem ser escritos com ou sem ponto decimal, `.` ou uma parte exponencial indicada com 'e' ou 'E' (após o qual apenas são válidos um possível sinal negativo e dígitos decimais).
 Seguem-se `Double` literais válidos: `0.0` . . . `1.2e5` `1e-5` .
 
-Dada a expressão de matriz de qualquer tipo de elemento, pode formar uma `Int` expressão utilizando a [`Length`](xref:microsoft.quantum.core.length) função incorporada, com a expressão de matriz fechada em parênteses.
+Dada a expressão de matriz de qualquer tipo de elemento, pode formar uma `Int` expressão utilizando a [`Length`](xref:Microsoft.Quantum.Core.Length) função incorporada, com a expressão de matriz fechada em parênteses.
 Por exemplo, se `a` estiver ligado a uma matriz, então é uma expressão `Length(a)` inteiro.
 Se `b` for uma matriz de inteiros, `Int[][]` então é o número de `Length(b)` sub-matrizes em `b` , e é o número de `Length(b[1])` inteiros na segunda sub-matriz em `b` .
 
@@ -111,7 +111,7 @@ Dada qualquer expressão booleana, o `not` operador unary pode ser usado para co
 
 ## <a name="string-expressions"></a>Expressões de cadeia
 
-Q# permite que as cordas sejam utilizadas na `fail` declaração (explicada no [Fluxo de Controlo)](xref:microsoft.quantum.guide.controlflow#fail-statement)e na [`Message`](xref:microsoft.quantum.intrinsic.message) função padrão. O comportamento específico deste último depende do simulador utilizado, mas normalmente escreve uma mensagem para a consola anfitriã quando é chamado durante um Q# programa.
+Q# permite que as cordas sejam utilizadas na `fail` declaração (explicada no [Fluxo de Controlo)](xref:microsoft.quantum.guide.controlflow#fail-statement)e na [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) função padrão. O comportamento específico deste último depende do simulador utilizado, mas normalmente escreve uma mensagem para a consola anfitriã quando é chamado durante um Q# programa.
 
 As cordas Q# são literais ou cordas interpoladas.
 
@@ -128,7 +128,7 @@ A Q# sintaxe para interpolações de cordas é um subconjunto da sintaxe C#. Seg
 
 * Para identificar uma corda literal como uma corda interpolada, prepare-a com o `$` símbolo. Não pode haver espaço branco entre o `$` e o que começa uma corda `"` literal.
 
-* O seguinte é um exemplo básico usando a [`Message`](xref:microsoft.quantum.intrinsic.message) função para escrever o resultado de uma medição para a consola, ao lado de Q# outras expressões.
+* O seguinte é um exemplo básico usando a [`Message`](xref:Microsoft.Quantum.Intrinsic.Message) função para escrever o resultado de uma medição para a consola, ao lado de Q# outras expressões.
 
 ```qsharp
     let num = 8;       // some Q# expression
@@ -189,7 +189,7 @@ Por exemplo, `(1, One)` é uma `(Int, Result)` expressão.
 
 Além das literais, as únicas expressões de tuple são símbolos que são obrigados a tuple valores, elementos de matrizes de tuple, e invocações callable que devolvem tuples.
 
-## <a name="user-defined-type-expressions"></a>Expressões de tipo definido pelo utilizador
+## <a name="user-defined-type-expressions"></a>Expressões User-Defined tipo
 
 Um literal de um tipo definido pelo utilizador consiste no nome do tipo seguido de um tuple literal do tipo de tuple base do tipo.
 Por exemplo, se `IntPair` for um tipo definido pelo utilizador baseado em , `(Int, Int)` então é um literal válido desse `IntPair(2, 3)` tipo.
@@ -237,7 +237,7 @@ Na maioria dos casos, esta é uma variação de zero.
 
 Para qubits e callables, que são referências a entidades, não existe um valor padrão razoável.
 Assim, para estes tipos, o padrão é uma referência inválida que não pode utilizar sem causar um erro de tempo de execução, semelhante a uma referência nula em idiomas como C# ou Java.
-Os conjuntos que contenham qubits ou calcáveis devem ser rubricados com valores não predefinidos antes de poder utilizar os seus elementos com segurança. Para rotinas de inicialização adequadas, consulte <xref:microsoft.quantum.arrays> .
+Os conjuntos que contenham qubits ou calcáveis devem ser rubricados com valores não predefinidos antes de poder utilizar os seus elementos com segurança. Para rotinas de inicialização adequadas, consulte <xref:Microsoft.Quantum.Arrays> .
 
 Os valores predefinidos para cada tipo são:
 

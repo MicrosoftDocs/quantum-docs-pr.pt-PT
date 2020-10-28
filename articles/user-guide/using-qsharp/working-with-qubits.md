@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.qubits
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: aa942a61280553ae4e51cd5ddcc85c0df935dab1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 9a3d7e03016332a04ac9d1610428b6fcd546d1f6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835864"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691585"
 ---
 # <a name="working-with-qubits"></a>Trabalhar com qubits
 
@@ -29,14 +29,14 @@ Este artigo explora como usar e trabalhar com qubits num Q# programa.
 
 Como os qubits físicos são um recurso precioso num computador quântico, parte do trabalho do compilador é garantir que estão a ser usados o mais eficientemente possível.
 Como tal, tem de dizer Q# para *alocar* qubits para utilização dentro de um determinado bloco de declaração.
-Você pode alocar qubits como um único qubit, ou como uma variedade de qubits, conhecido como um *registo*. 
+Você pode alocar qubits como um único qubit, ou como uma variedade de qubits, conhecido como um *registo* . 
 
 ### <a name="clean-qubits"></a>Qubits limpos
 
 Utilize a `using` declaração para alocar novos qubits para utilização durante um bloco de declaração.
 
 A declaração consiste na `using` palavra-chave, seguida de uma ligação em parênteses e do bloco de declaração dentro do qual os `( )` qubits estão disponíveis.
-A ligação segue o mesmo padrão que `let` as declarações: ou um único símbolo ou um tuple de símbolos, seguido de um sinal de iguais `=` , e um único valor ou um tuple de *inicializadores correspondentes*.
+A ligação segue o mesmo padrão que `let` as declarações: ou um único símbolo ou um tuple de símbolos, seguido de um sinal de iguais `=` , e um único valor ou um tuple de *inicializadores correspondentes* .
 
 Os inicializadores estão disponíveis para um único qubit, indicado como `Qubit()` , ou uma matriz de qubits, onde é uma `Qubit[n]` `n` `Int` expressão.
 Por exemplo,
@@ -95,7 +95,7 @@ Em certo sentido, isto é tudo o que um Q# programa pode fazer com um qubit, uma
 Este artigo discute algumas operações úteis Q# que pode usar para interagir com qubits.
 Para obter mais detalhes sobre estes e outros, consulte [Operações e Funções Intrínsecas.](xref:microsoft.quantum.libraries.standard.prelude) 
 
-Em primeiro lugar, os operadores de Pauli de um único qubit $X$, $Y$, e $Z$ são representados Q# pelas operações intrínsecas, [`X`](xref:microsoft.quantum.intrinsic.x) e , cada uma delas tem tipo [`Y`](xref:microsoft.quantum.intrinsic.y) [`Z`](xref:microsoft.quantum.intrinsic.z) `(Qubit => Unit is Adj + Ctl)` .
+Em primeiro lugar, os operadores de Pauli de um único qubit $X$, $Y$, e $Z$ são representados Q# pelas operações intrínsecas, [`X`](xref:Microsoft.Quantum.Intrinsic.X) e , cada uma delas tem tipo [`Y`](xref:Microsoft.Quantum.Intrinsic.Y) [`Z`](xref:Microsoft.Quantum.Intrinsic.Z) `(Qubit => Unit is Adj + Ctl)` .
 
 Como descrito em [Operações e Funções Intrínsecas,](xref:microsoft.quantum.libraries.standard.prelude)pense em $X$ e, portanto, `X` como uma operação de inversão de marcha ou portão NÃO.
 Você pode usar a `X` operação para preparar estados do formulário $\ket{s_0 s_1 \dots s_n}$ para algum fio de bit clássico $s$:
@@ -127,7 +127,7 @@ operation RunExample() : Unit {
 > [!TIP]
 > Mais tarde, verá formas mais compactas de escrever esta operação que não requerem fluxo manual de controlo.
 
-Também pode preparar estados como $\ket{+} = \left(\ket {0} + \ket {1} \ket \right) / \sqrt {2} $ e $\ket {-} = \left(\ket {0} \ket {1} \right) / \sqrt {2} $ usando a transformação Hadamard $H$, que é representada Q# pela operação intrínseca [`H`](xref:microsoft.quantum.intrinsic.h) (também do tipo (Qubit => Unidade é Aj + Ctl)):)):
+Também pode preparar estados como $\ket{+} = \left(\ket {0} + \ket {1} \ket \right) / \sqrt {2} $ e $\ket {-} = \left(\ket {0} \ket {1} \right) / \sqrt {2} $ usando a transformação Hadamard $H$, que é representada Q# pela operação intrínseca [`H`](xref:Microsoft.Quantum.Intrinsic.H) (também do tipo (Qubit => Unidade é Aj + Ctl)):)):
 
 ```qsharp
 operation PreparePlusMinusState(bitstring : Bool[], register : Qubit[]) : Unit {
@@ -149,7 +149,7 @@ A *base computacional* refere-se à `PauliZ` base, e é a base mais comum utiliz
 
 ### <a name="measure-a-single-qubit-in-the-pauliz-basis"></a>Meça um único qubit na `PauliZ` base
 
-Utilize a [`M`](xref:microsoft.quantum.intrinsic.m) operação, que é uma operação não unitária incorporada, para medir um único qubit na `PauliZ` base e atribuir um valor clássico ao resultado.
+Utilize a [`M`](xref:Microsoft.Quantum.Intrinsic.M) operação, que é uma operação não unitária incorporada, para medir um único qubit na `PauliZ` base e atribuir um valor clássico ao resultado.
 `M` tem um tipo de retorno reservado, `Result` que só pode tomar valores ou corresponder aos `Zero` `One` estados medidos $\ket {0} $ ou $\ket {1} $ - indicando que o resultado já não é um estado quântico.
 
 Um exemplo simples é a seguinte operação, que atribui um qubit no estado $\ket {0} $, em seguida, aplica uma operação Hadamard `H` a ele e mede o resultado na `PauliZ` base.
@@ -175,7 +175,7 @@ operation MeasureOneQubit() : Result {
 
 ### <a name="measure-one-or-more-qubits-in-specific-bases"></a>Medir um ou mais qubits em bases específicas
 
-Para medir um conjunto de um ou mais qubits em bases específicas, pode utilizar a [`Measure`](xref:microsoft.quantum.intrinsic.measure) operação.
+Para medir um conjunto de um ou mais qubits em bases específicas, pode utilizar a [`Measure`](xref:Microsoft.Quantum.Intrinsic.Measure) operação.
 
 As entradas `Measure` são uma matriz de `Pauli` tipos (por exemplo, `[PauliX, PauliZ, PauliZ]` ) e uma matriz de qubits.
 

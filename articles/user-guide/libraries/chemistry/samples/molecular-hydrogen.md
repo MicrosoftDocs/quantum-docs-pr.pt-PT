@@ -9,12 +9,12 @@ uid: microsoft.quantum.chemistry.examples.energyestimate
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 05506f4099de754cd02d81fbd9200f2de091e37e
-ms.sourcegitcommit: 8256ff463eb9319f1933820a36c0838cf1e024e8
+ms.openlocfilehash: 81fba0c52c854d61f9143659795fb4d3c3cee8b9
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90759737"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691539"
 ---
 # <a name="obtaining-energy-level-estimates"></a>Obter estimativas do nível de energia
 Estimar os valores dos níveis de energia é uma das principais aplicações da química quântica. Este artigo descreve como pode fazer isto para o exemplo canónico do hidrogénio molecular. A amostra referenciada nesta secção está [`MolecularHydrogen`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogen) no repositório de amostras de química. Um exemplo mais visual que traça a saída é a [`MolecularHydrogenGUI`](https://github.com/microsoft/Quantum/tree/main/samples/chemistry/MolecularHydrogenGUI) demonstração.
@@ -83,7 +83,7 @@ let integratorOrder = 4;
 let (nQubits, (rescale, oracle)) =  TrotterStepOracle (qSharpData, stepSize, integratorOrder);
 ```
 
-Neste ponto, você pode usar os [algoritmos](xref:microsoft.quantum.libraries.characterization) de estimativa de fase da biblioteca padrão para aprender a energia do estado do solo usando a simulação anterior. Isto requer a preparação de uma boa aproximação ao estado quântico. No esquema são fornecidas sugestões para tais [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) aproximações. No entanto, sem estas sugestões, a abordagem padrão adiciona uma série de `hamiltonian.NElectrons` eletrões para minimizar gananciosamente as energias diagonais de um eletrão. As funções e operações de estimativa de fase são fornecidas na notação DocFX no espaço de nomes [Microsoft.Quantum.Characterization.](xref:microsoft.quantum.characterization)
+Neste ponto, você pode usar os [algoritmos](xref:microsoft.quantum.libraries.characterization) de estimativa de fase da biblioteca padrão para aprender a energia do estado do solo usando a simulação anterior. Isto requer a preparação de uma boa aproximação ao estado quântico. No esquema são fornecidas sugestões para tais [`Broombridge`](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) aproximações. No entanto, sem estas sugestões, a abordagem padrão adiciona uma série de `hamiltonian.NElectrons` eletrões para minimizar gananciosamente as energias diagonais de um eletrão. As funções e operações de estimativa de fase são fornecidas na notação DocFX no espaço de nomes [Microsoft.Quantum.Characterization.](xref:Microsoft.Quantum.Characterization)
 
 O seguinte corte mostra como a evolução em tempo real da biblioteca de simulação de química se integra com a estimativa da fase quântica.
 

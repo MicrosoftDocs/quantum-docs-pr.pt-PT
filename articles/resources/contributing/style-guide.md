@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fef3cea1c11e4fef49ddbf63adb34e07675049d2
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834198"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691741"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guia de estilo #
 ## <a name="general-conventions"></a>Convenções Gerais ##
@@ -68,7 +68,7 @@ Outros verbos podem ser úteis também neste caso, como em `IterateThroughCartes
 | Aplicar | Uma operação fornecida como entrada é chamada |
 | Declarar | Uma hipótese sobre o resultado de uma possível medição quântica é verificada por um simulador |
 | Obter estimativa | Um valor clássico é devolvido, representando uma estimativa extraída de uma ou mais medições |
-| Medir | Uma medição quântica é realizada, e o seu resultado é devolvido ao utilizador |
+| Medida | Uma medição quântica é realizada, e o seu resultado é devolvido ao utilizador |
 | Preparação | Um dado registo de qubits é inicializado num determinado estado |
 | Sample | Um valor clássico é devolvido aleatoriamente de alguma distribuição |
 
@@ -113,7 +113,7 @@ Sugerimos:
 
 ### <a name="entry-points"></a>Pontos de Entrada
 
-Ao definir um ponto de entrada num Q# programa, o Q# compilador reconhece o [ `@EntryPoint()` atributo](xref:microsoft.quantum.core.entrypoint) exigindo que os pontos de entrada tenham um nome específico (por exemplo: `main` , ou `Main` `__main__` ).
+Ao definir um ponto de entrada num Q# programa, o Q# compilador reconhece o [ `@EntryPoint()` atributo](xref:Microsoft.Quantum.Core.EntryPoint) exigindo que os pontos de entrada tenham um nome específico (por exemplo: `main` , ou `Main` `__main__` ).
 Ou seja, do ponto de vista de um desenvolvedor, os pontos de Q# entrada são operações ordinárias anotadas com `@EntryPoint()` .
 Além disso, Q# os pontos de entrada podem ser pontos de entrada para toda uma aplicação (por exemplo, em Q# programas executáveis autónomos), ou podem ser uma interface entre um Q# programa e o programa anfitrião para uma aplicação (ou seja, quando se utiliza Q# com Python ou .NET), de modo que o nome "principal" pode ser enganador quando aplicado a um Q# ponto de entrada.
 
@@ -134,7 +134,7 @@ Sugerimos:
 | ☑ | `@EntryPoint() operation RunSimulation` | Comunica claramente o propósito do ponto de entrada através do nome de operação. |
 | ☒ | <s>`@EntryPoint() operation Main`</s> | O uso não `Main` comunica claramente o propósito do ponto de entrada, e é redundante com `@EntryPoint()` atributo. |
 
-***
+**_
 
 ### <a name="shorthand-and-abbreviations"></a>Abreviaturas e Abreviaturas ###
 
@@ -181,7 +181,7 @@ Sugerimos:
 
 
 
-***
+_*_
 
 
 ### <a name="proper-nouns-in-names"></a>Substantivos adequados em nomes ###
@@ -208,7 +208,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-***
+_*_
 
 ### <a name="type-conversions"></a>Conversões de tipo ###
 
@@ -235,7 +235,7 @@ Sugerimos:
 | ☒ | <s>`PauliArrFromBoolArr`</s> | Os tipos de entrada e saída aparecem na ordem errada. |
 | ☑ | `ResultArrAsBoolArr` | Tanto os tipos de entrada como os tipos de saída são claros. |
 
-***
+_*_
 
 ### <a name="private-or-internal-names"></a>Nomes Privados ou Internos ###
 
@@ -256,7 +256,7 @@ Sugerimos:
 | ☒ | <s>`operation _ApplyDecomposedOperation`</s> | Não utilize um sublinhado `_` que indique que esta operação é apenas para uso interno. |
 | ☑ | `internal operation ApplyDecomposedOperation` | A `internal` palavra-chave no início indica claramente que esta operação é apenas para uso interno. |
 
-***
+_*_
 ### <a name="variants"></a>Variantes ###
 
 Embora esta limitação possa não persistir em futuras versões de Q# , é atualmente o caso de existirem frequentemente grupos de operações ou funções relacionadas que se distinguem pelo qual os funtores suportam os seus inputs, ou pelos tipos concretos dos seus argumentos.
@@ -280,7 +280,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-***
+_*_
 
 ### <a name="arguments-and-variables"></a>Argumentos e Variáveis ###
 
@@ -305,9 +305,9 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-***
+_*_
 
-### <a name="user-defined-type-named-items"></a>Itens nomeados para o tipo definido pelo utilizador ###
+### <a name="user-defined-type-named-items"></a>User-Defined tipo de itens nomeados ###
 
 Os itens nomeados em tipos definidos pelo utilizador devem ser nomeados como `CamelCase` , mesmo na entrada para os construtores UDT.
 Isto ajuda a separar claramente os itens nomeados de referências a variáveis de âmbito local quando se utilizam notações acessórias (por exemplo: `callable::Apply` ) ou notação de cópia e atualização ( `set arr w/= Data <- newData` ).
@@ -329,7 +329,7 @@ Sugerimos:
 | ☒ | <s>`newtype Oracle = (apply : Qubit[] => Unit is Adj + Ctl) `</s> | Os itens nomeados devem começar com uma letra maiúscula inicial. |
 | ☒ | <s>`newtype Collection = (Length : Int, Get : Int -> (Qubit => Unit)) `</s> | Os itens nomeados que se resolvem para funções devem ser nomeados como frases substantivos, e não como frases verbos. |
 
-***
+_*_
 
 ## <a name="input-conventions"></a>Convenções de Entrada ##
 
@@ -340,7 +340,7 @@ Embora o rico suporte IDE possa mitigar isso em grande medida, o bom design e a 
 Sempre que possível, pode ser útil reduzir o número de entradas esperadas por uma operação ou função, de modo que o papel de cada entrada seja mais imediatamente óbvio tanto para os desenvolvedores que ligam para essa operação ou função, como para os desenvolvedores lerem esse código mais tarde.
 Especialmente quando não é possível ou razoável reduzir o número de argumentos para uma operação ou função, é importante ter uma ordem consistente que minimize a surpresa que um utilizador enfrenta ao prever a ordem de entradas.
 
-Recomendamos uma convenção de pedido de entrada que deriva em grande parte do pensamento da aplicação parcial como uma generalização do currying f(x, y) ≡ f(x)(y).
+Recomendamos uma convenção de pedido de entrada que deriva em grande parte da ideia de aplicação parcial como uma generalização do currying f(x, y) ≡ f(x)(y).
 Assim, a aplicação parcial dos primeiros argumentos deverá resultar numa chamada que seja útil por si só sempre que isso seja razoável.
 Seguindo este princípio, considere a utilização da seguinte ordem de argumentos:
 
@@ -379,7 +379,7 @@ Sugerimos:
 
 # <a name="examples"></a>[Exemplos](#tab/examples)
 
-***
+_*_
 
 ## <a name="documentation-conventions"></a>Convenções de Documentação ##
 
@@ -451,7 +451,7 @@ is Adj + Ctl {
 }
 ```
 
-***
+_*_
 
 ## <a name="formatting-conventions"></a>Convenções de Formatação ##
 
@@ -486,4 +486,4 @@ Sugerimos:
 | ☑ | `Example(a, b, c)` | Os itens na entrada são corretamente espaçados para a legibilidade. |
 | ☒ | <s>`Example (a, b, c)`</s> | Os espaços devem ser suprimidos após a função, o funcionamento ou os nomes de UDT. |
 
-***
+_**

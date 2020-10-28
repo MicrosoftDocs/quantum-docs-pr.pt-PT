@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.types
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c4a3e6563b8cabee87d1db6b9cb1c1f1c1a7131b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 349138984387cc564cca18ea09c7bf161524b0b6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835830"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691624"
 ---
 # <a name="types-in-no-locq"></a>Tipos em Q#
 
@@ -22,7 +22,7 @@ Este artigo descreve o Q# modelo de tipo e a sintaxe para especificar e trabalha
 
 Notamos que Q# é uma linguagem *fortemente dactilografada,* de modo que o uso cuidadoso destes tipos pode ajudar o compilador a fornecer garantias fortes sobre programas em tempo de Q# compilação.
 Para fornecer as garantias mais fortes possíveis, as conversões entre os tipos Q# dentro devem ser explícitas usando chamadas para funções que expressem essa conversão. 
-Q# fornece uma variedade de tais funções como parte do espaço de <xref:microsoft.quantum.convert> nome.
+Q# fornece uma variedade de tais funções como parte do espaço de <xref:Microsoft.Quantum.Convert> nome.
 As upcasts para tipos compatíveis, por outro lado, acontecem implicitamente. 
 
 Q# fornece ambos os tipos primitivos, que são usados diretamente, e uma variedade de maneiras de produzir novos tipos de outros tipos.
@@ -129,7 +129,7 @@ Isto significa, em particular, que pode ver uma operação ou função cujo tipo
 Referimo-nos a esta propriedade como _equivalência de tuple singleton._
 
 
-## <a name="user-defined-types"></a>Tipos definidos pelo utilizador
+## <a name="user-defined-types"></a>User-Defined Tipos
 
 Uma declaração de tipo definido pelo utilizador consiste na `newtype` palavra-chave, seguida do nome do tipo definido pelo utilizador, `=` uma especificação de tipo válido e um ponto de terminação.
 
@@ -282,13 +282,13 @@ Por exemplo, se o funcionamento da operação depende do estado de outros qubits
 Para necessitar de suporte para o `Controlled` e/ou `Adjoint` functor num tipo de operação, é necessário adicionar uma anotação que indique as características correspondentes.
 A anotação `is Ctl` (por `(Qubit => Unit is Ctl)` exemplo,) indica que a operação é controlável. Ou seja, a sua execução depende do estado de outro qubit ou qubits. Da mesma forma, a anotação `is Adj` indica que a operação tem um adjacente, ou seja, pode ser "invertida" de tal forma que aplicar sucessivamente uma operação e, em seguida, o seu contíguo a um estado deixa o estado inalterado. 
 
-Se quiser exigir que uma operação deste tipo suporte tanto o `Adjoint` `Controlled` functor como o functor, pode expressar isto como `(Qubit => Unit is Adj + Ctl)` . Por exemplo, a operação Pauli incorporada <xref:microsoft.quantum.intrinsic.x> tem tipo `(Qubit => Unit is Adj + Ctl)` . 
+Se quiser exigir que uma operação deste tipo suporte tanto o `Adjoint` `Controlled` functor como o functor, pode expressar isto como `(Qubit => Unit is Adj + Ctl)` . Por exemplo, a operação Pauli incorporada <xref:Microsoft.Quantum.Intrinsic.X> tem tipo `(Qubit => Unit is Adj + Ctl)` . 
 
 Um tipo de operação que não suporta nenhum functor é especificado apenas pelo seu tipo de entrada e saída, sem anotação adicional.
 
-### <a name="type-parameterized-functions-and-operations"></a>Funções e operações por tipo-parametrizadas
+### <a name="type-parameterized-functions-and-operations"></a>Type-Parameterized Funções e Operações
 
-Os tipos de caloisos podem conter *parâmetros de tipo*.
+Os tipos de caloisos podem conter *parâmetros de tipo* .
 Utilizar um símbolo prefixado por uma única citação para indicar um parâmetro do tipo; por exemplo, `'A` é um parâmetro de tipo legal.
 Para obter mais informações e detalhes sobre como definir as chamadas por parâmetros do tipo, consulte [Operações e Q# Funções em ](xref:microsoft.quantum.guide.operationsfunctions#generic-type-parameterized-callables).
 

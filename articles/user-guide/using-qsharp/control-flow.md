@@ -9,12 +9,12 @@ uid: microsoft.quantum.guide.controlflow
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 547c57cab67443e8b487bf817eb79fc922b43cdc
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: eca37202e5fe9b48dcfdec4eeb4ba6cafaac8723
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833510"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691097"
 ---
 # <a name="control-flow-in-no-locq"></a>Fluxo de controlo em Q#
 
@@ -324,7 +324,7 @@ As notáveis características programáticas mostradas nesta operação são:
 * Uma parte mais complexa `fixup` do ciclo, que envolve operações quânticas. 
 * O uso de `AssertMeasurementProbability` declarações para determinar a probabilidade de medir o estado quântico em certos pontos especificados no programa.
 
-Para obter mais informações sobre o [`AssertMeasurement`](xref:microsoft.quantum.diagnostics.assertmeasurement) e [`AssertMeasurementProbability`](xref:microsoft.quantum.diagnostics.assertmeasurementprobability) operações, consulte [Testes e depuragem.](xref:microsoft.quantum.guide.testingdebugging)
+Para obter mais informações sobre o [`AssertMeasurement`](xref:Microsoft.Quantum.Diagnostics.assertmeasurement) e [`AssertMeasurementProbability`](xref:Microsoft.Quantum.Diagnostics.assertmeasurementprobability) operações, consulte [Testes e depuragem.](xref:microsoft.quantum.guide.testingdebugging)
 
 ```qsharp
 operation PrepareStateUsingRUS(target : Qubit) : Unit {

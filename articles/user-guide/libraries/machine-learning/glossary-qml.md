@@ -9,12 +9,12 @@ uid: microsoft.quantum.libraries.machine-learning.training
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 39974af0121a5167f1965e508cd595535178548b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 476e93e3737dee6ad8f3a97e8ffbcfb9b0012ee1
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833913"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691517"
 ---
 # <a name="quantum-machine-learning-glossary"></a>Glossário de aprendizagem de máquina quântica
 
@@ -56,9 +56,10 @@ A função de probabilidade que é a utilidade de treino para o classificador é
 
 #### <a name="how-to-modify-the-hyperparameters"></a>Como modificar os hiperparímetros
 
-Na biblioteca QML, a melhor forma de modificar os hiperparmetros é sobrevam os valores predefinidos da UDT [`TrainingOptions`](xref:microsoft.quantum.machinelearning.trainingoptions) . Para isso chamamos-lhe com a função [`DefaultTrainingOptions`](xref:microsoft.quantum.machinelearning.defaulttrainingoptions) e aplicamos o operador `w/` para anular os valores predefinidos. Por exemplo, utilizar 100.000 medições e uma taxa de aprendizagem de 0,01:
- ```qsharp
+Na biblioteca QML, a melhor forma de modificar os hiperparmetros é sobrevam os valores predefinidos da UDT [`TrainingOptions`](xref:Microsoft.Quantum.MachineLearning.TrainingOptions) . Para isso chamamos-lhe com a função [`DefaultTrainingOptions`](xref:Microsoft.Quantum.MachineLearning.DefaultTrainingOptions) e aplicamos o operador `w/` para anular os valores predefinidos. Por exemplo, utilizar 100.000 medições e uma taxa de aprendizagem de 0,01:
+
+```qsharp
 let options = DefaultTrainingOptions()
 w/ LearningRate <- 0.01
 w/ NMeasurements <- 100000;
- ```
+```

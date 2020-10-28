@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.api-design
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8714d3290e4099f901dab20a9ee9334699c4ad81
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b196cf1be584a3157c7a9eb8cf497fe1121dd7a
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834915"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691818"
 ---
 # <a name="no-locq-api-design-principles"></a>Q# Princípios de design da API
 
@@ -125,7 +125,7 @@ Este artigo enumera estes princípios e dá exemplos para ajudar a orientar a ap
       funcionaria de forma mais consistente com aplicação parcial.
   - Tipicamente, esta orientação significa colocar todos os dados clássicos antes de todos os qubits em tuples de entrada, mas use bom senso e examine como a sua API é chamada na prática.
 
-## <a name="user-defined-types"></a>Tipos definidos pelo utilizador
+## <a name="user-defined-types"></a>User-Defined Tipos
 
 **Princípio-chave:** utilize tipos definidos pelo utilizador para ajudar a tornar as APIs mais expressivas e convenientes de usar.
 
@@ -224,9 +224,9 @@ Este artigo enumera estes princípios e dá exemplos para ajudar a orientar a ap
 
   - **Verbos:**
 
-    - **Afirmação**: Verifique se se mantém uma suposição sobre o estado de uma máquina-alvo e os seus qubits, possivelmente utilizando recursos não físicos. As operações que utilizam este verbo devem ser sempre removíveis com segurança sem afetar a funcionalidade das bibliotecas e dos programas executáveis. Note-se que, ao contrário dos factos, as afirmações podem, em geral, depender do estado externo, como o estado de um registo de qubits, o ambiente de execução ou assim por diante. Como a dependência do estado externo é uma espécie de efeito colateral, as afirmações devem ser expostas como operações e não como funções.
+    - **Afirmação** : Verifique se se mantém uma suposição sobre o estado de uma máquina-alvo e os seus qubits, possivelmente utilizando recursos não físicos. As operações que utilizam este verbo devem ser sempre removíveis com segurança sem afetar a funcionalidade das bibliotecas e dos programas executáveis. Note-se que, ao contrário dos factos, as afirmações podem, em geral, depender do estado externo, como o estado de um registo de qubits, o ambiente de execução ou assim por diante. Como a dependência do estado externo é uma espécie de efeito colateral, as afirmações devem ser expostas como operações e não como funções.
 
-    - **Estimativa**: Utilizando uma ou mais medições possíveis repetidas, calcule uma quantidade clássica dos resultados da medição.
+    - **Estimativa** : Utilizando uma ou mais medições possíveis repetidas, calcule uma quantidade clássica dos resultados da medição.
 
       *Exemplos:*
       - @"microsoft.quantum.characterization.estimatefrequency"
@@ -238,10 +238,10 @@ Este artigo enumera estes princípios e dá exemplos para ajudar a orientar a ap
       - @"microsoft.quantum.preparation.preparearbitrarystate"
       - @"microsoft.quantum.preparation.prepareuniformsuperposition"
 
-    - **Medida**: Aplicar uma operação quântica ou sequência de operações a um ou mais qubits, lendo os dados clássicos de volta.
+    - **Medida** : Aplicar uma operação quântica ou sequência de operações a um ou mais qubits, lendo os dados clássicos de volta.
 
       *Exemplos:*
-      - @"microsoft.quantum.intrinsic.measure"
+      - @"Microsoft.Quantum.Intrinsic.Measure"
       - @"microsoft.quantum.arithmetic.measurefxp"
       - @"microsoft.quantum.arithmetic.measureinteger"
 
@@ -249,7 +249,7 @@ Este artigo enumera estes princípios e dá exemplos para ajudar a orientar a ap
 
   - **Substantivos:**
 
-    - **Facto**: Uma condição booleana que depende apenas das suas entradas e não do estado de uma máquina-alvo, do seu ambiente ou do estado dos qubits da máquina. Em contraste com uma afirmação, um facto só é sensível aos *valores* fornecidos a esse facto. Por exemplo:
+    - **Facto** : Uma condição booleana que depende apenas das suas entradas e não do estado de uma máquina-alvo, do seu ambiente ou do estado dos qubits da máquina. Em contraste com uma afirmação, um facto só é sensível aos *valores* fornecidos a esse facto. Por exemplo:
 
       *Exemplos:*
       - @"microsoft.quantum.diagnostics.equalityfacti": representa um facto de igualdade sobre duas entradas completas; ou os inteiros fornecidos como entrada são iguais uns aos outros, ou não são, independentes de qualquer outro estado do programa.
@@ -261,7 +261,7 @@ Este artigo enumera estes princípios e dá exemplos para ajudar a orientar a ap
 
   - **Adjetivos:**
 
-    - ⛔️ **Novo**: Este adjetivo **NÃO DEVE** ser utilizado, de modo a evitar confusão com a sua utilização como verbo em muitas línguas de programação (por exemplo: C++, C#, Java, TypeScript, PowerShell).
+    - ⛔️ **Novo** : Este adjetivo **NÃO DEVE** ser utilizado, de modo a evitar confusão com a sua utilização como verbo em muitas línguas de programação (por exemplo: C++, C#, Java, TypeScript, PowerShell).
 
   - **Preposições:** Em alguns casos, as preposições podem ser usadas para desambiguar ou clarificar as funções de substantivos e verbos em nomes de funções e de funcionamento. No entanto, há que ter o cuidado de o fazer com moderação e de forma consistente.
 

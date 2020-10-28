@@ -9,12 +9,12 @@ uid: microsoft.quantum.overview.katas
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 097d7f70088b6ee84a1e91ee99be59149dd9e15b
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 6b2eff2a457b809bd168b9b59ab013b7fc7541e6
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834827"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691652"
 ---
 # <a name="learn-quantum-computing-with-the-quantum-katas"></a>Aprender computação quântica com os Quantum Katas
 
@@ -55,7 +55,7 @@ Explore os fundamentos e fundamentos da computação quântica ou mergulhe mais 
 |[Reconhecer portas quânticas](https://github.com/microsoft/QuantumKatas/tree/main/BasicGates)|Uma série de exercícios concebidos para o familiarizar com os portões quânticos básicos em Q# . Inclui exercícios para portões básicos de um único qubit e multi-qubit, portões adjacentes e controlados, e como usar portões para modificar o estado de um qubit.|
 |[Criar sobreposição quântica](https://github.com/microsoft/QuantumKatas/tree/main/Superposition)|Utilize estes exercícios para se familiarizar com o conceito de superposição e programação em Q# . Inclui exercícios para portões básicos de um único qubit e multi-qubit, superposição e controlo de fluxo e recursão em Q# .|
 |[Distinguir estados quânticos com medições](https://github.com/microsoft/QuantumKatas/tree/main/Measurements)|Resolva estes exercícios enquanto aprende sobre a medição quântica e estados orthogonais e não orthogonais. |
-|[Associar medições](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Saiba mais sobre as medições de paridade conjunta e como utilizar a operação [medida](xref:microsoft.quantum.intrinsic.measure) para distinguir estados quânticos.|
+|[Associar medições](https://github.com/microsoft/QuantumKatas/tree/main/JointMeasurements)|Saiba mais sobre as medições de paridade conjunta e como utilizar a operação [medida](xref:Microsoft.Quantum.Intrinsic.Measure) para distinguir estados quânticos.|
 
 ### <a name="algorithms"></a>Algoritmos
 

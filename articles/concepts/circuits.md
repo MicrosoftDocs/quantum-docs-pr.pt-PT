@@ -109,7 +109,7 @@ Por exemplo, o símbolo
 <!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: ->
 ![Símbolo para uma operação Hadamard agindo num registo de um único qubit](~/media/2.svg)
 
-é uma operação [Hadamard](xref:microsoft.quantum.intrinsic.h) agindo num registo de um único qubit.
+é uma operação [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) agindo num registo de um único qubit.
 
 Os portões quânticos são ordenados por ordem cronológica com o portão mais à esquerda, como o portão aplicado pela primeira vez aos qubits.
 Por outras palavras, se imaginarmos os fios como segurando o estado quântico, os fios trazem o estado quântico através de cada um dos portões do diagrama da esquerda para a direita.
@@ -150,7 +150,7 @@ Em geral, descrevemos tais operações controladas em diagramas de circuitos com
 ![Diagrama de circuito de um portão controlado por singly](~/media/5.svg)
 
 Aqui o círculo preto denota a bit quântica sobre a qual o portão é controlado e um fio vertical denota o unitário que é aplicado quando o qubit de controlo toma o valor $ 1 $ .
-Para os casos especiais em $ que G X e G Z = $ $ = $ introduzimos a seguinte notação para descrever a versão controlada dos portões (note que o portão controlado-X é o [ $ $ portão CNOT):](xref:microsoft.quantum.intrinsic.cnot)
+Para os casos especiais em $ que G X e G Z = $ $ = $ introduzimos a seguinte notação para descrever a versão controlada dos portões (note que o portão controlado-X é o [ $ $ portão CNOT):](xref:Microsoft.Quantum.Intrinsic.CNOT)
 
 <!--- ![](.\media\6.svg) --->
 <!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: ->
@@ -175,7 +175,7 @@ Especificamente, tal subcircito parece:
 <!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: ->
 ![Símbolo que representa uma operação de medição](~/media/7.svg)
 
-Q# implementa um [operador de medida](xref:microsoft.quantum.intrinsic.measure) para o efeito.
+Q# implementa um [operador de medida](xref:Microsoft.Quantum.Intrinsic.Measure) para o efeito.
 Consulte a [secção de medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.
 
 Da mesma forma, o subcircito

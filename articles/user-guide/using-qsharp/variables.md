@@ -9,16 +9,16 @@ uid: microsoft.quantum.guide.variables
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bb87f36d3c9b7df195f64e85151e833d494ea945
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835881"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92690932"
 ---
 # <a name="variables-in-no-locq"></a>Variáveis em Q#
 
-Q# distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas*a expressões.
+Q# distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas* a expressões.
 Em geral, o uso de símbolos imutáveis é encorajado porque permite que o compilador execute mais otimizações.
 
 O lado esquerdo de uma ligação consiste de um tuple de símbolo e do lado direito de uma expressão.
@@ -92,7 +92,7 @@ for (q in qubits) {
 #### <a name="update-and-reassign-statements"></a>Atualizações e reatribuições
 
 Existe uma concatenação semelhante para [expressões de cópia e atualização](xref:microsoft.quantum.guide.expressions#copy-and-update-expressions) no lado direito.
-Consequentemente, existem declarações *de atualização e reatribuição* para *itens nomeados* em tipos definidos pelo utilizador, bem como para *itens de matriz*.  
+Consequentemente, existem declarações *de atualização e reatribuição* para *itens nomeados* em tipos definidos pelo utilizador, bem como para *itens de matriz* .  
 
 ```qsharp
 newtype Complex = (Re : Double, Im : Double);
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-No caso das matrizes, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) na Q# biblioteca padrão fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matrizes, ajudando assim a evitar ter de atualizar os itens de matriz em primeiro lugar. 
+No caso das matrizes, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) na Q# biblioteca padrão fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matrizes, ajudando assim a evitar ter de atualizar os itens de matriz em primeiro lugar. 
 
 As declarações de atualização e reatribuição fornecem uma alternativa, se necessário:
 
@@ -135,7 +135,7 @@ operation SampleUniformDistrbution(nSamples : Int, nSteps : Int) : Double[] {
 
 ```
 
-Utilizando as ferramentas da biblioteca para matrizes fornecidas, [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) pode, por exemplo, definir facilmente uma função que devolve uma série de `Pauli` tipos onde o elemento no índice tem um determinado `i` `Pauli` valor, e todas as outras entradas são a identidade ( `PauliI` ).
+Utilizando as ferramentas da biblioteca para matrizes fornecidas, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) pode, por exemplo, definir facilmente uma função que devolve uma série de `Pauli` tipos onde o elemento no índice tem um determinado `i` `Pauli` valor, e todas as outras entradas são a identidade ( `PauliI` ).
 
 Aqui estão duas definições de tal função, com a segunda a tirar partido das ferramentas à nossa disposição.
 
@@ -150,7 +150,7 @@ function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {
 }
 ```
 
-Em vez de iterar sobre cada índice na matriz, e defini-lo condicionalmente para `PauliI` ou o `pauli` dado, você pode em vez de `ConstantArray` criar uma variedade de [`Microsoft.Quantum.Arrays`](xref:microsoft.quantum.arrays) `PauliI` tipos, e em seguida, simplesmente devolver uma expressão de cópia e atualização em que você alterou o valor específico no índice `location` :
+Em vez de iterar sobre cada índice na matriz, e defini-lo condicionalmente para `PauliI` ou o `pauli` dado, você pode em vez de `ConstantArray` criar uma variedade de [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) `PauliI` tipos, e em seguida, simplesmente devolver uma expressão de cópia e atualização em que você alterou o valor específico no índice `location` :
 
 ```qsharp
 function PauliEmbedding(pauli : Pauli, length : Int, location : Int) : Pauli[] {

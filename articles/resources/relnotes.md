@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 27038a86dc4854c397458d95529aca463d493fd6
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: fae603a81f8edc23ab8dc14277c5e3c4699f2cee
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771332"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92691690"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de Versão do Microsoft Quantum Development Kit
 
@@ -23,6 +23,16 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter as instruções de instalação, veja o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter as instruções de atualização, veja o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-01320102604"></a>Versão 0.13.20102604
+
+*Data de lançamento: 27 de outubro de 2020*
+
+Esta versão contém o seguinte:
+
+- A estimativa de recursos emite agora estimativas de profundidade e largura simultaneamente alcançáveis, para além da contagem de qubits. Consulte [aqui](xref:microsoft.quantum.machines.resources-estimator#metrics-reported) para mais detalhes.
+
+Consulte a lista completa de PRs fechados para [bibliotecas,](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) [compilador,](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) [tempo de execução,](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) [amostras,](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) [I Q# ](https://github.com/microsoft/iqsharp/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22) e [Katas.](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+closed%3A2020-09-25..2020-10-22)
 
 ## <a name="version-01220100504"></a>Versão 0.12.20100504
 
@@ -54,8 +64,8 @@ Consulte a lista completa de PRs fechados para [bibliotecas,](https://github.com
 
 Esta versão contém o seguinte:
 
-- Novo [espaço de nome Microsoft.Quantum.Random,](xref:microsoft.quantum.random)fornecendo uma forma mais conveniente de provar valores aleatórios dentro dos Q# programas. ([QuantumLibraries#311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime#328](https://github.com/microsoft/qsharp-runtime/pull/328))
-- Melhor espaço de [nome Microsoft.Quantum.Diagnostics](xref:microsoft.quantum.diagnostics) com nova [ `DumpOperation` operação,](xref:microsoft.quantum.diagnostics.dumpoperation)e novas operações para restringir a atribuição de qubits e chamadas oráculos. ([QuantumLibraries#302)](https://github.com/microsoft/QuantumLibraries/pull/302)
+- Novo [espaço de nome Microsoft.Quantum.Random,](xref:Microsoft.Quantum.Random)fornecendo uma forma mais conveniente de provar valores aleatórios dentro dos Q# programas. ([QuantumLibraries#311](https://github.com/microsoft/QuantumLibraries/pull/311), [qsharp-runtime#328](https://github.com/microsoft/qsharp-runtime/pull/328))
+- Melhor espaço de [nome Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics) com nova [ `DumpOperation` operação,](xref:Microsoft.Quantum.Diagnostics.DumpOperation)e novas operações para restringir a atribuição de qubits e chamadas oráculos. ([QuantumLibraries#302)](https://github.com/microsoft/QuantumLibraries/pull/302)
 - Novo [ `%project` comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.project) em I Q# e [ `qsharp.projects` API](https://docs.microsoft.com/python/qsharp-core/qsharp.projects.projects) em Python para apoiar referências a Q# projetos fora da atual pasta do espaço de trabalho. Consulte [o iqsharp #277](https://github.com/microsoft/iqsharp/issues/277) para as limitações atuais desta funcionalidade. 
 - Suporte para carregar automaticamente `.csproj` ficheiros para Q# anfitriões I/Python, que permite que referências de projeto ou pacote externos sejam carregadas no momento da inicialização. Consulte o guia para usar [ Q# com os Cadernos Python e Jupyter](xref:microsoft.quantum.guide.host-programs) para mais detalhes.
 - Amostra de Correção de Erro adicionada.Síndrome.
@@ -83,7 +93,7 @@ Consulte a lista completa de PRs fechados para [bibliotecas,](https://github.com
 Esta versão contém o seguinte:
 
 - Nova `qdk-chem` ferramenta para converter formatos de serialização de problemas de estrutura electrónica legacy (por exemplo: FCIDUMP) para [Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge)
-- Novas funções e operações no espaço de [`Microsoft.Quantum.Synthesis`](xref:microsoft.quantum.synthesis) nome para aplicar coerentemente oráculos clássicos usando algoritmos de síntese baseados na transformação e decomposição.
+- Novas funções e operações no espaço de [`Microsoft.Quantum.Synthesis`](xref:Microsoft.Quantum.Synthesis) nome para aplicar coerentemente oráculos clássicos usando algoritmos de síntese baseados na transformação e decomposição.
 - Agora Q# permito argumentos para os `%simulate` comandos `%estimate` mágicos e outros. Consulte a referência do [ `%simulate` comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.simulate) para mais detalhes.
 - Novas opções de visualização de fase em I Q# . Consulte a referência do [ `%config` comando mágico](xref:microsoft.quantum.iqsharp.magic-ref.config) para mais detalhes.
 - Eu Q# e o pacote Python somos agora fornecidos através de `qsharp` pacotes conda[(qsharp](https://anaconda.org/quantum-engineering/qsharp) e [iqsharp](https://anaconda.org/quantum-engineering/iqsharp)) para simplificar a instalação local da Q# funcionalidade Jupyter e Python para um ambiente conda. Consulte os [ Q# Cadernos Jupyter](xref:microsoft.quantum.install.jupyter) e com guias de instalação [ Q# Python](xref:microsoft.quantum.install.python) para mais detalhes.
@@ -130,7 +140,7 @@ Esta versão contém o seguinte:
 - Melhorias de desempenho nas imagens I Q# Docker
 
 > [!NOTE]
-> Q# As aplicações que utilizam o novo [`@EntryPoint()`](xref:microsoft.quantum.core.entrypoint) atributo não podem ser chamadas atualmente a partir de programas de anfitrião Python ou .NET.
+> Q# As aplicações que utilizam o novo [`@EntryPoint()`](xref:Microsoft.Quantum.Core.EntryPoint) atributo não podem ser chamadas atualmente a partir de programas de anfitrião Python ou .NET.
 > Veja os guias sobre a interoperabilidade do [Python](xref:microsoft.quantum.install.python) e [.NET](xref:microsoft.quantum.install.cs) para obter mais informações.
 
 ## <a name="version-01120033107"></a>Versão 0.11.2003.3107
@@ -183,7 +193,7 @@ Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Micros
 
 Esta versão contém o seguinte:
 
-- Novo atributo de teste para Q# testes de unidade, consulte [a](https://docs.microsoft.com/qsharp/api/qsharp/microsoft.quantum.diagnostics.test) documentação atualizada da API aqui e testes atualizados & guia de depuração [aqui](xref:microsoft.quantum.guide.testingdebugging)
+- Novo atributo de teste para Q# testes de unidade, consulte [a](xref:Microsoft.Quantum.Diagnostics.Test) documentação atualizada da API aqui e testes atualizados & guia de depuração [aqui](xref:microsoft.quantum.guide.testingdebugging)
 - Vestígios de pilha adicionados no caso de um Q# erro de execução do programa
 - Suporte para pontos de interrupção no Visual Studio Code devido a uma atualização na [extensão OmniSharp C# Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -224,7 +234,7 @@ Esta versão contém o seguinte:
 
 Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed), [compilador](https://github.com/microsoft/qsharp-compiler/pulls?q=is%3Apr+is%3Aclosed), [runtime](https://github.com/microsoft/qsharp-runtime/pulls?q=is%3Apr+is%3Aclosed), [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed) e [Katas](https://github.com/microsoft/QuantumKatas/pulls?q=is%3Apr+is%3Aclosed).  
 
-## <a name="version-09-packagereference-0919082902"></a>Versão 0.9 (*PackageReference 0.9.1908.2902*)
+## <a name="version-09-packagereference-0919082902"></a>Versão 0.9 ( *PackageReference 0.9.1908.2902* )
 
 *Data da versão: 29 de agosto de 2019*
 
@@ -233,7 +243,7 @@ Esta versão contém o seguinte:
 - Novo apoio às [declarações de conjugação](xref:microsoft.quantum.guide.operationsfunctions#conjugations) em Q#
 - Novas ações de código no compilador, como: “substituir por”, “adicionar documentação” e uma atualização simples de item de matriz
 - Foi adicionado um modelo de instalação e novos comandos de projeto à extensão do Visual Studio Code
-- Foram adicionadas novas variantes do combinador ApplyIf, como [Microsoft.Quantum.Canon.ApplyIfOne](xref:microsoft.quantum.canon.applyifone)
+- Foram adicionadas novas variantes do combinador ApplyIf, como [Microsoft.Quantum.Canon.ApplyIfOne](xref:Microsoft.Quantum.Canon.ApplyIfOne)
 - [Quantum Katas](https://github.com/Microsoft/QuantumKatas) adicionais convertidos em Jupyter Notebooks
 - A Extensão do Visual Studio agora requer o Visual Studio 2019
 
@@ -241,7 +251,7 @@ Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Micros
 
 As alterações estão resumidas aqui, bem como as instruções para atualizar os programas existentes.  Leia mais sobre estas alterações no [ Q# blog dev.](https://devblogs.microsoft.com/qsharp)
 
-## <a name="version-08-packagereference-0819071701"></a>Versão 0.8 (*PackageReference 0.8.1907.1701*)
+## <a name="version-08-packagereference-0819071701"></a>Versão 0.8 ( *PackageReference 0.8.1907.1701* )
 
 *Data da versão: 12 de julho de 2019*
 
@@ -253,7 +263,7 @@ Esta versão contém o seguinte:
 
 Veja a lista completa de PRs fechados de [bibliotecas](https://github.com/Microsoft/QuantumLibraries/pulls?q=is%3Apr+is%3Aclosed) e [amostras](https://github.com/Microsoft/Quantum/pulls?q=is%3Apr+is%3Aclosed).  
 
-## <a name="version-07-packagereference-0719053109"></a>Versão 0.7 (*PackageReference 0.7.1905.3109*)
+## <a name="version-07-packagereference-0719053109"></a>Versão 0.7 ( *PackageReference 0.7.1905.3109* )
 
 *Data da versão: 31 de maio de 2019*
 
@@ -320,7 +330,7 @@ Com esta alteração, poderão ocorrer erros de compilação nos programas que i
 
 * Vários espaços de nomes foram preteridos porque as operações no seu interior foram reorganizadas para outros espaços de nomes. Os programas que utilizam estes espaços de nomes vão continuar a funcionar e um aviso de tempo de compilação denotará o espaço de nomes onde é definida a operação.  
 
-* O espaço de nomes Microsoft.Quantum.Arithmetic foi normalizado para utilizar o tipo definido pelo utilizador <xref:microsoft.quantum.arithmetic.littleendian>. Utilize a função [BigEndianAsLittleEndian](xref:microsoft.quantum.arithmetic.bigendianaslittleendian), quando necessário, para converter para little endian.  
+* O espaço de nomes Microsoft.Quantum.Arithmetic foi normalizado para utilizar o tipo definido pelo utilizador <xref:Microsoft.Quantum.Arithmetic.LittleEndian>. Utilize a função [BigEndianAsLittleEndian](xref:Microsoft.Quantum.Arithmetic.BigEndianAsLittleEndian), quando necessário, para converter para little endian.  
 
 * Os nomes de várias chamadas (funções e operações) foram alterados de acordo com o [ Q# Guia de Estilo.](xref:microsoft.quantum.contributing.style)  Os antigos nomes disponíveis foram preteridos.  Os programas que utilizam os antigos nomes disponíveis continuarão a funcionar com um aviso de tempo de compilação. 
 
@@ -516,7 +526,7 @@ Esta atualização inclui melhorias significativas no desempenho para a simulaç
 Esta atualização adiciona a nova funcionalidade de depuração:
 * Foram adicionadas duas novas operações, @"microsoft.quantum.extensions.diagnostics.dumpmachine" e @"microsoft.quantum.extensions.diagnostics.dumpregister", que geram informações de função de onda sobre o computador quântico num determinado momento.  
 * No Visual Studio, a probabilidade de medir um $\ket{1}$ num único qubit é agora mostrada automaticamente na janela de depuração do computador de destino QuantumSimulator.
-* No Visual Studio, foi melhorada a apresentação das propriedades variáveis nas janelas de depuração **Automóveis** e **Locais**. 
+* No Visual Studio, foi melhorada a apresentação das propriedades variáveis nas janelas de depuração **Automóveis** e **Locais** . 
 
 Saiba mais sobre [Teste e Depuração](xref:microsoft.quantum.guide.testingdebugging).
 
