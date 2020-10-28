@@ -1,0 +1,56 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.HeadMeasurement
+name: Microsoft.Quantum.Characterization
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplyHadamardTestOnSingleRegister
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTest
+- summary: ''
+  uid: Microsoft.Quantum.Characterization.ApplySwapTestOnSingleRegister
+- summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativo (controlado clássicamente) usando poderes reais arbitrários de um oráculo unitário.
+  uid: Microsoft.Quantum.Characterization.ContinuousPhaseEstimationIteration
+- summary: Executa uma única iteração de um algoritmo de estimativa de fase iterativo (controlado clássicamente) usando poderes inteiros de um oráculo unitário.
+  uid: Microsoft.Quantum.Characterization.DiscretePhaseEstimationIteration
+- summary: Dada a preparação e medição, estima a frequência com que essa medição sucede (devoluções) `Zero` através da realização de um determinado número de ensaios.
+  uid: Microsoft.Quantum.Characterization.EstimateFrequency
+- summary: Dada uma preparação que é adjacente e medição, estima a frequência com que essa medição sucede (devoluções) `Zero` através da realização de um determinado número de ensaios.
+  uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
+- summary: Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a parte imaginária da sobreposição entre os Estados preparados por cada operação.
+  uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
+- summary: Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a sobreposição quadrada entre os Estados preparados por cada operação.
+  uid: Microsoft.Quantum.Characterization.EstimateOverlapBetweenStates
+- summary: Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a parte real da sobreposição entre os Estados preparados por cada operação.
+  uid: Microsoft.Quantum.Characterization.EstimateRealOverlapBetweenStates
+- summary: >+
+    > [!WARNING]
+
+    > MeasureAllZ foi depreciada. Por favor, use <xref:Microsoft.Quantum.Measurement.MeasureAllZ> em vez disso.
+
+    >
+
+    > Utilize @"microsoft.quantum.measurement.measureAllZ".
+
+  uid: Microsoft.Quantum.Characterization.MeasureAllZ
+- summary: Mede o operador de identidade num registo de qubits.
+  uid: Microsoft.Quantum.Characterization.MeasureIdentity
+- summary: Executa o algoritmo de estimativa da fase quântica para um dado oráculo `U` `targetState` e, lendo a fase num registo quântico de grande ponta.
+  uid: Microsoft.Quantum.Characterization.QuantumPhaseEstimation
+- summary: Executa o robusto algoritmo de estimativa de fase quântica não iterativa para um dado oráculo `U` e eigenstate, e fornece uma única estimativa real da fase com escala de variação no limite de Heisenberg.
+  uid: Microsoft.Quantum.Characterization.RobustPhaseEstimation
+- summary: Realiza uma medição de tomografia de processo de um único qubit na base Pauli, dado um determinado canal de interesse.
+  uid: Microsoft.Quantum.Characterization.SingleQubitProcessTomographyMeasurement
+summary: Este espaço de nome contém funções e operações para a aprendizagem de propriedades de estados e processos quânticos, incluindo tomografia e estimativa de fase.
+uid: Microsoft.Quantum.Characterization
+metadata:
+  ms.openlocfilehash: a1d4837f03b6dff637c82d2c5b14823029bd2787
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92715665"

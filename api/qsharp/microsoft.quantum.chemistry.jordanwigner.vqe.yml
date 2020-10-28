@@ -1,0 +1,24 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Expande a representação compacta dos coeficientes Jordan-Wigner de forma a obter um mapeamento um-para-um entre estes e os termos Pauli.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.ExpandedCoefficients
+- summary: Calcula todos os operadores de medição necessários para calcular a expectativa de um termo Jordan-Wigner.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.MeasurementOperators
+name: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+newtypes: []
+operations:
+- summary: Estima a energia da molécula somando a energia contribuida pelo indivíduo Jordan-Wigner termos.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateEnergy
+- summary: Calcula a energia associada a um dado termo Jordan-Wigner Hamiltonian
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateTermExpectation
+- summary: Invólucro privado em torno do PrepareTrialState para torná-lo compatível com EstimateFrequencyA definindo um adjacente. Estima-se Quea tem uma característica de emulação incorporada ao visar o QuantumSimulator, que acelera a sua execução.
+  uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE._prepareTrialStateWrapper
+summary: ''
+uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE
+metadata:
+  ms.openlocfilehash: 6c99da452067d5e8902e05e53cabd70ca910cd60
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92714111"
