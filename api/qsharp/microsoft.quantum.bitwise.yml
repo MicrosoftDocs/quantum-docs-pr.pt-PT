@@ -1,0 +1,36 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Devolve o bitwise E de dois inteiros. Isto executa a mesma computação que o `&&&` operador incorporado.
+  uid: Microsoft.Quantum.Bitwise.And
+- summary: Muda a representação de um número deixado por um determinado número de bits.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedI
+- summary: Muda a representação de um número deixado por um determinado número de bits.
+  uid: Microsoft.Quantum.Bitwise.LeftShiftedL
+- summary: Devolve o bitwise NÃO de um inteiro. Isto executa a mesma computação que o `~~~` operador incorporado.
+  uid: Microsoft.Quantum.Bitwise.Not
+- summary: Devolve o bitwise OR de dois inteiros. Isto executa a mesma computação que o `|||` operador incorporado.
+  uid: Microsoft.Quantum.Bitwise.Or
+- summary: Devolve a paridade bitwise de um inteiro (1 se a sua representação binária contiver um número ímpar de ums e 0 de outra forma).
+  uid: Microsoft.Quantum.Bitwise.Parity
+- summary: Muda a representação de um número direito por um determinado número de bits.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedI
+- summary: Muda a representação de um número direito por um determinado número de bits.
+  uid: Microsoft.Quantum.Bitwise.RightShiftedL
+- summary: Devolve um inteiro que representa os X bits de uma série de operadores Pauli.
+  uid: Microsoft.Quantum.Bitwise.XBits
+- summary: Devolve o bitwise exclusivo OR (XOR) de dois inteiros. Isto executa a mesma computação que o `^^^` operador incorporado.
+  uid: Microsoft.Quantum.Bitwise.Xor
+- summary: Devolve um inteiro que representa os bits Z de uma série de operadores Pauli.
+  uid: Microsoft.Quantum.Bitwise.ZBits
+name: Microsoft.Quantum.Bitwise
+newtypes: []
+operations: []
+summary: Este espaço de nome contém funções para agir sobre a representação bitwise de tipos de dados clássicos.
+uid: Microsoft.Quantum.Bitwise
+metadata:
+  ms.openlocfilehash: 6730a0350f56c2356b9c0851b37de1cd277da90f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92719218"
