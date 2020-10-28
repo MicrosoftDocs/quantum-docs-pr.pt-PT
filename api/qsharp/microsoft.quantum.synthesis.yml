@@ -1,0 +1,71 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Decompõe-se uma permutação numa variável
+  uid: Microsoft.Quantum.Synthesis.DecomposedOn
+- summary: Codificar a tabela da verdade na {1,-1} codificação
+  uid: Microsoft.Quantum.Synthesis.Encoded
+- summary: Estende um espectro por coeficientes invertidos
+  uid: Microsoft.Quantum.Synthesis.Extended
+- summary: Computes Hadamard transformar uma função Boolean na {-1,1} codificação usando o método de Yates
+  uid: Microsoft.Quantum.Synthesis.FastHadamardTransformed
+- summary: Constrói um tipo MCMTMask como uma matriz singleton se os alvos não forem 0, caso contrário, devolve uma matriz vazia.
+  uid: Microsoft.Quantum.Synthesis.GateMask
+- summary: Calcula até duas máscaras MCMT para transformar y a x.
+  uid: Microsoft.Quantum.Synthesis.GateMasksForAssignment
+- summary: Devolve todas as posições em que os pedaços de um inteiro são definidos.
+  uid: Microsoft.Quantum.Synthesis.IntegerBits
+- summary: Transforme a máscara de controlo e os bits-alvo para um par de qubits de controlo e qubits alvo
+  uid: Microsoft.Quantum.Synthesis.MaskToQubitsPair
+- summary: '{-1,1} codificação de um valor da verdade Boolean'
+  uid: Microsoft.Quantum.Synthesis.RMEncoding
+- summary: Ajusta a tabela da verdade a partir da matriz de Booleans de acordo com o número de variáveis Uma nova matriz é devolvida de `2^numVars` comprimento, possivelmente exigindo estender `table` o tamanho com entradas ou `false` truncar-lo a `2^numVars` elementos.
+  uid: Microsoft.Quantum.Synthesis.SizeAdjustedTruthTable
+- summary: Calcular máscaras de portão para sintetizar permutação.
+  uid: Microsoft.Quantum.Synthesis.TBSMain
+- summary: Computa as máscaras do portão para transformar o perm[x] em x e atualiza a permutação atual.
+  uid: Microsoft.Quantum.Synthesis.TBSStep
+- summary: Recolher todas as funções para portões controlados dobrando todos os índices variáveis
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutation
+- summary: Lógica de decomposição para um único índice variável
+  uid: Microsoft.Quantum.Synthesis.TruthTablesFromPermutationFolder
+- summary: Atualize um padrão de saída de acordo com a máscara do portal.
+  uid: Microsoft.Quantum.Synthesis.UpdatedOutputPattern
+- summary: Atualização permutação baseada em de acordo com a máscara do portão.
+  uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
+- summary: Insira um 0-bit num inteiro
+  uid: Microsoft.Quantum.Synthesis.WithZeroInsertedAt
+name: Microsoft.Quantum.Synthesis
+newtypes:
+- summary: Estado durante a decomposição com base em índices variáveis
+  uid: Microsoft.Quantum.Synthesis.DecompositionState
+- summary: >-
+    Um tipo que representa um portão Toffoli de múltiplos alvos controlados por vários alvos.
+
+    O primeiro inteiro é uma pequena máscara para linhas de controlo.  Os índices de bits que são definidos correspondem aos índices da linha de controlo.
+
+    O segundo inteiro é uma pequena máscara para as linhas de alvo.  Os índices de bits que são definidos correspondem aos índices da linha-alvo.
+
+    Os índices de bits de ambos os inteiros devem ser desarticulantes.
+  uid: Microsoft.Quantum.Synthesis.MCMTMask
+operations:
+- summary: Permuta as amplitudes num estado quântico dada uma permutação usando a síntese baseada na decomposição.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
+- summary: Permuta as amplitudes num estado quântico dada uma permutação usando a síntese baseada na decomposição.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecompositionWithVariableOrder
+- summary: Permuta as amplitudes num estado quântico dada uma permutação usando a síntese baseada na transformação.
+  uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingTransformation
+- summary: ''
+  uid: Microsoft.Quantum.Synthesis.ApplyTransposition
+- summary: Aplica a @"microsoft.quantum.intrinsic.x" operação em `target` , se a função Boolean `func` avaliar a verdade para a atribuição clássica em `controlRegister` .
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTable
+- summary: Aplica a @"microsoft.quantum.intrinsic.x" operação em `target` , se a função Boolean `func` avaliar a verdade para a atribuição clássica em `controlRegister` .
+  uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget
+summary: Este espaço de nome contém funções e operações para sintetizar operações quânticas baseadas em permutações e funções booleanas.
+uid: Microsoft.Quantum.Synthesis
+metadata:
+  ms.openlocfilehash: 2f92f4662252148ff0e093f5392f5f00f26b661f
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92725721"
