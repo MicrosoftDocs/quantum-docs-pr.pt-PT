@@ -1,0 +1,54 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Devolve uma distribuição categórica discreta, na qual a probabilidade de cada uma das listas finitas de determinados resultados é explicitamente especificada.
+  uid: Microsoft.Quantum.Random.CategoricalDistribution
+- summary: Devolve uma distribuição uniforme sobre um determinado intervalo inclusivo.
+  uid: Microsoft.Quantum.Random.ContinuousUniformDistribution
+- summary: Devolve uma distribuição uniforme sobre uma determinada gama inclusiva.
+  uid: Microsoft.Quantum.Random.DiscreteUniformDistribution
+- summary: Devolve uma distribuição normal com uma média e variação.
+  uid: Microsoft.Quantum.Random.NormalDistribution
+- summary: Devolve uma distribuição normal com a média 0 e a variação 1.
+  uid: Microsoft.Quantum.Random.StandardNormalDistribution
+- summary: ''
+  uid: Microsoft.Quantum.Random.StandardTransformation
+- summary: Dada uma distribuição contínua, devolve uma nova distribuição que transforma o original por uma determinada função.
+  uid: Microsoft.Quantum.Random.TransformedContinuousDistribution
+name: Microsoft.Quantum.Random
+newtypes:
+- summary: Representa uma distribuição de probabilidade univariada sobre inteiros de tamanho arbitrário.
+  uid: Microsoft.Quantum.Random.BigDiscreteDistribution
+- summary: Representa uma distribuição de probabilidades univariada sobre números complexos.
+  uid: Microsoft.Quantum.Random.ComplexDistribution
+- summary: Representa uma distribuição de probabilidades univariada sobre números reais.
+  uid: Microsoft.Quantum.Random.ContinuousDistribution
+- summary: Representa uma distribuição de probabilidades univariada sobre os inteiros.
+  uid: Microsoft.Quantum.Random.DiscreteDistribution
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Random.Delay
+- summary: Extrai uma amostra aleatória de uma distribuição categórica especificada por uma lista de probablidades.
+  uid: Microsoft.Quantum.Random.DrawCategorical
+- summary: Dada a probabilidade de sucesso, devolve um único ensaio de Bernoulli que é verdade com a probabilidade dada.
+  uid: Microsoft.Quantum.Random.DrawRandomBool
+- summary: Desenha um número real aleatório num determinado intervalo inclusivo.
+  uid: Microsoft.Quantum.Random.DrawRandomDouble
+- summary: Desenha um inteiro aleatório numa determinada gama inclusiva.
+  uid: Microsoft.Quantum.Random.DrawRandomInt
+- summary: Desenha um valor Pauli aleatório.
+  uid: Microsoft.Quantum.Random.DrawRandomPauli
+- summary: ''
+  uid: Microsoft.Quantum.Random.DrawStandardNormalVariate
+- summary: Dada uma série de dados e uma distribuição sobre os seus índices, tenta escolher um elemento ao acaso.
+  uid: Microsoft.Quantum.Random.MaybeChooseElement
+- summary: Operação interna apenas para amostragem a partir de distribuição transformada. Só deve ser utilizado através de uma aplicação parcial.
+  uid: Microsoft.Quantum.Random.SampleTransformedContinuousDistribution
+summary: ''
+uid: Microsoft.Quantum.Random
+metadata:
+  ms.openlocfilehash: 1504b9ae9ffc21a7684a45b58f56f138068beb67
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92711493"
