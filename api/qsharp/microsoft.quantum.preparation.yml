@@ -1,0 +1,107 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: >-
+    Calcula as coordenadas da esfera Bloch para um estado de um único qubit.
+
+    Dado dois números complexos $a 0, a1$ que representam o estado qubit, calcula as coordenadas na esfera bloch de tal forma que $a 0 \ket {0} + a1 \ket {1} = r e^{it}(e^{-i \phi /2}\cos{(\theta/2)}\ket {0} +e^{i \phi /2}\infry(\theta/2}).ket {1}
+  uid: Microsoft.Quantum.Preparation.BlochSphereCoordinates
+- summary: >-
+    Usa a técnica de ROM quântica para representar uma determinada matriz de densidade.
+
+    Dada a lista de coeficientes de $N$ $\alpha_j$, isto devolve uma $U$ unitária que usa a técnica Quantum-ROM para preparar uma aproximação $\tilde\rho\rho\rho\sum_{j=0}{N-1}p_j\ket{j}bra{j}$ da purificação da matriz de densidade $\rho=\sum_{j=0}{N-1 alpha_j} {\sum_k [\alpha_k]} \ket{j}\bra{j}$. Nesta aproximação, o erro $\epsilon$ é tal que $/p_j-\frac{[alpha_j]. {\sum_k [\alpha_k]. \le \epsilon / N$ e $ \| \tilde\rho - \rho \| \le \epsilon$. Por outras palavras, $$ \start{align} U\ket {0} ^{\lceil\log_2 N\rceil}\ket {0} ^{m}={sum_ j=0}^{N-1}\sqrt{p_j} \ket{j}ket{ket{\ket{\text{garbage}_j}. \end{align} $$
+  uid: Microsoft.Quantum.Preparation.QuantumROM
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.QuantumROMBitStringWriterByIndex
+- summary: Devolve o número total de qubits que devem ser atribuídos à operação devolvido por `QuantumROM` .
+  uid: Microsoft.Quantum.Preparation.QuantumROMQubitCount
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RangeLength
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.RoundedDiscretizationCoefficients
+- summary: >-
+    Devolve uma operação que prepara um estado quântico específico.
+
+    A operação devolvida $U$ prepara um estado quântico arbitrário $\ket{\psi}$ com coeficientes complexos $r_j e^{i t_j}$ do estado de base computacional $n$-qubit $\ket{0...0}$...$.$.$.$.$.$$.$$$$$$$$$-qubit base de base computacional estado $\ket{0...$$....$.$...
+
+    A ação de U num registo recém-atribuído é dada por $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{{{r_j sum_{{{{2}}. \end{align} $$
+  uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
+- summary: >-
+    Devolve uma operação que prepara o estado quântico.
+
+    A operação devolvida $U$ prepara um estado quântico arbitrário $\ket{\psi}$ com coeficientes positivos $\alpha_j\ge 0$ do estado de base computacional $n$-qubit $\ket{0...0}$..$.$.$.$$$$$-00}$.$$$$-qubit basis basis state $\ket{0...$$.$.$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$.$$$$$$$$$$$$$$$$$$$00}$.$$$$$$$-qubit basis basis state $\ket{0...0}$.
+
+    A ação de U num registo recém-atribuído é dada por $$ \start{align} U \ket{0\cdots 0} = \ket{\psi} = \frac{\sum_{j=0}^^^{2^n-1}\alpha_j \ket{j}}{{\sqrt{\sum_{j=0}^{2^n-1}[\alpha_j^2}}} \end{align} $$
+  uid: Microsoft.Quantum.Preparation.StatePreparationPositiveCoefficients
+- summary: Passo de implementação do procedimento arbitrário de preparação do Estado.
+  uid: Microsoft.Quantum.Preparation._ApproximatelyUnprepareArbitraryStatePlan
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._CompileApproximateArbitraryStatePreparation
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMDiscretization
+- summary: ''
+  uid: Microsoft.Quantum.Preparation._QuantumROMQubitManager
+- summary: Passo de implementação do procedimento arbitrário de preparação do Estado.
+  uid: Microsoft.Quantum.Preparation._StatePreparationSBMComputeCoefficients
+name: Microsoft.Quantum.Preparation
+newtypes: []
+operations:
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyGlobalRotationStep
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.ApplyMultiplexStep
+- summary: Aplica uma operação aos qubits subjacentes que compõem um pequeno registo endiano. Esta operação é marcada como interna, uma vez que um registo de pequenas extremidades pretende ser "opaco", de tal forma que se trata apenas de um detalhe de implementação.
+  uid: Microsoft.Quantum.Preparation.ApplyToLittleEndian
+- summary: Dado um conjunto de coeficientes e um registo quântico codificado pouco endiano, prepara um estado nesse registo descrito pelos coeficientes dados, até uma certa tolerância de aproximação.
+  uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
+- summary: Dado um conjunto de coeficientes e um pequeno registo quântico codificado, prepara um estado nesse registo descrito pelos coeficientes.
+  uid: Microsoft.Quantum.Preparation.PrepareArbitraryState
+- summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação em dados registos de referência e alvo.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiState
+- summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação com uma variante adjacente a dados registos de referência e alvo.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateA
+- summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação com uma variante controlada em determinados registos de referência e alvo.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateC
+- summary: Prepara o estado Choi-Jamiłkowski para uma determinada operação com variantes controladas e adjacentes em registos de referência e alvo.
+  uid: Microsoft.Quantum.Preparation.PrepareChoiStateCA
+- summary: >-
+    Em pares envolve dois registos qubit.
+
+    Ou seja, tendo em conta dois registos, prepara o estado máximo emaranhado $\frac {1} {\sqrt {2} } \left(\ket {00} + \ket {11} \right)$ entre cada par de qubits nos respetivos registos, assumindo que cada registo começa no estado $\ket{0\cdots 0}$
+  uid: Microsoft.Quantum.Preparation.PrepareEntangledState
+- summary: >-
+    Dado um registo, prepara-se o registo no estado máximo misto.
+
+    O registo é preparado no estado $\boldone / 2^N$ aplicando o canal de despolarizante completo em cada qubit, onde $N$ é o comprimento do registo.
+  uid: Microsoft.Quantum.Preparation.PrepareIdentity
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.PrepareQuantumROMState
+- summary: >-
+    Prepara um qubit no estado `Zero` +1 ( ) do operador Pauli. Se o operador de identidade for dado, então o qubit é preparado no estado máximo misturado.
+
+    Se o qubit estava inicialmente no estado $\ket$ {0} , esta operação prepara o qubit no estado de $+1$ de um determinado operador Pauli, ou, `PauliI` para, no estado maximamente misturado (ver <xref:microsoft.quantum.preparation.preparesinglequbitidentity> ).
+
+    Se o qubit estava num estado diferente de $\ket {0} $, esta operação aplica os seguintes portões: $H$ para `PauliX` , $HS$ para `PauliY` , $I$ para e para `PauliZ` <xref:microsoft.quantum.preparation.preparesinglequbitidentity> `PauliI` .
+  uid: Microsoft.Quantum.Preparation.PrepareQubit
+- summary: >-
+    Prepara um qubit no estado máximo misturado.
+
+    Prepara o qubit dado no estado $\boldone / 2$ aplicando o canal despolarizante $$ \start{align} \Omega(\rho) \mathrel{:=} {1} {4} \frac \sum_{\mu \in \{ 0, 1, 2, 3 \} } \sigma \_ {\mu} \rho \sigma \_ {\mu}{\\dagger}, \end{align} $$ where $\sigma \_ i$ é o operador de pauli $i$th, e onde $\rho$ é um operador de densidade que representa um estado misto.
+  uid: Microsoft.Quantum.Preparation.PrepareSingleQubitIdentity
+- summary: >-
+    Cria uma superposição uniforme sobre estados que codificam 0 a `nIndices - 1` .
+
+    Ou seja, este $U$ unitário cria uma superposição uniforme sobre todos os estados numerais $0$ a $M-1$, dado um estado de entrada $\ket{0\cdots 0}$. Por outras palavras, $$ \begin{align} U\ket {0} =\frac {1} {\sqrt{M}}\sum_{j=0}^{M-1}\ket{j}. \end{align} $$.
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition
+- summary: Passo de implementação <xref:microsoft.quantum.canon.prepareuniformsuperposition>
+  uid: Microsoft.Quantum.Preparation.PrepareUniformSuperposition_
+- summary: ''
+  uid: Microsoft.Quantum.Preparation.WriteQuantumROMBitString
+summary: Este espaço de nome contém funções e operações para preparar qubits em estados iniciais arbitrários.
+uid: Microsoft.Quantum.Preparation
+metadata:
+  ms.openlocfilehash: f8dc07d5fe1073f626eea41e6291d8cc919d93b6
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92723352"
