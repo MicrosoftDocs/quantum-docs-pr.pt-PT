@@ -9,21 +9,21 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51eb52d0b8ace972f6a425edba400ca9a8916d2e
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835592"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692235"
 ---
 # <a name="data-structures-and-modeling"></a>Estruturas de Dados e Modelação #
 
 ## <a name="classical-data-structures"></a>Estruturas clássicas de dados ##
 
 Juntamente com tipos definidos pelo utilizador para representar conceitos quânticos, o cânone também fornece operações, funções e tipos para trabalhar com dados clássicos utilizados no controlo de sistemas quânticos.
-Por exemplo, a <xref:microsoft.quantum.arrays.reversed> função toma uma matriz como entrada e devolve a mesma matriz em ordem inversa.
+Por exemplo, a <xref:Microsoft.Quantum.Arrays.Reversed> função toma uma matriz como entrada e devolve a mesma matriz em ordem inversa.
 Isto pode então ser usado numa matriz de tipo para evitar ter de `Qubit[]` aplicar portões desnecessários de $\operatorname{SWAP}$ ao converter entre representações quânticas de inteiros.
-Da mesma forma, vimos na secção anterior que os tipos do formulário `(Int, Int -> T)` podem ser úteis para representar coleções de acesso aleatório, pelo que a <xref:microsoft.quantum.arrays.lookupfunction> função fornece uma maneira conveniente de construir tais tipos a partir de tipos de matrizes.
+Da mesma forma, vimos na secção anterior que os tipos do formulário `(Int, Int -> T)` podem ser úteis para representar coleções de acesso aleatório, pelo que a <xref:Microsoft.Quantum.Arrays.LookupFunction> função fornece uma maneira conveniente de construir tais tipos a partir de tipos de matrizes.
 
 ### <a name="pairs"></a>Pares ###
 
@@ -38,7 +38,7 @@ ApplyToEach(H, Snd(pair)); // No need to deconstruct to access the register.
 
 O cânone fornece várias funções para manipular matrizes.
 Estas funções são de tipo parametrizado, e assim podem ser usadas com matrizes de qualquer Q# tipo.
-Por exemplo, a <xref:microsoft.quantum.arrays.reversed> função devolve uma nova matriz cujos elementos estão em ordem inversa a partir da sua entrada.
+Por exemplo, a <xref:Microsoft.Quantum.Arrays.Reversed> função devolve uma nova matriz cujos elementos estão em ordem inversa a partir da sua entrada.
 Isto pode ser usado para alterar a forma como um registo quântico é representado ao chamar operações:
 
 ```qsharp
@@ -49,14 +49,14 @@ QFT(BigEndian(Reversed(leRegister!)));
 QFT(LittleEndianAsBigEndian(leRegister));
 ```
 
-Da mesma forma, a <xref:microsoft.quantum.arrays.subarray> função pode ser usada para reencomendar ou tomar subconjuntos dos elementos de uma matriz:
+Da mesma forma, a <xref:Microsoft.Quantum.Arrays.Subarray> função pode ser usada para reencomendar ou tomar subconjuntos dos elementos de uma matriz:
 
 ```qsharp
 // Applies H to qubits 2 and 5.
 ApplyToEach(H, Subarray([2, 5], register));
 ```
 
-Quando combinado com o controlo de fluxo, funções de manipulação de matrizes tais como <xref:microsoft.quantum.arrays.zip> podem fornecer uma forma poderosa de expressar programas quânticos:
+Quando combinado com o controlo de fluxo, funções de manipulação de matrizes tais como <xref:Microsoft.Quantum.Arrays.Zipped> podem fornecer uma forma poderosa de expressar programas quânticos:
 
 ```qsharp
 // Applies X₃ Y₁ Z₇ to a register of any size.
@@ -64,7 +64,7 @@ ApplyToEach(
     ApplyPauli(_, register),
     Map(
         EmbedPauli(_, _, Length(register)),
-        Zip([PauliX, PauliY, PauliZ], [3, 1, 7])
+        Zipped([PauliX, PauliY, PauliZ], [3, 1, 7])
     )
 );
 ```
@@ -127,8 +127,8 @@ is Adj + Ctl {
 }
 ```
 
-Este oráculo é então um caso especial da <xref:microsoft.quantum.canon.rall1> operação, que permite rodar por uma fase arbitrária em vez do caso de reflexão $\phi = \pi$.
-Neste caso, `RAll1` é semelhante à operação do <xref:microsoft.quantum.intrinsic.r1> prelúdio, na medida em que gira cerca de $\ket{11\cdots1}$ em vez do estado de um único qubit $\ket {1} $.
+Este oráculo é então um caso especial da <xref:Microsoft.Quantum.Canon.RAll1> operação, que permite rodar por uma fase arbitrária em vez do caso de reflexão $\phi = \pi$.
+Neste caso, `RAll1` é semelhante à operação do <xref:Microsoft.Quantum.Intrinsic.R1> prelúdio, na medida em que gira cerca de $\ket{11\cdots1}$ em vez do estado de um único qubit $\ket {1} $.
 
 O oráculo que marca o subespaço inicial pode ser construído da mesma forma.
 Em pseudocódigo:
@@ -139,7 +139,7 @@ Em pseudocódigo:
 4. Aplique $X de portais a cada qubit.
 5. Aplique $H de portas a cada qubit.
 
-Desta vez, demonstramos também a utilização <xref:microsoft.quantum.canon.applywith> em conjunto com a <xref:microsoft.quantum.canon.rall1> operação acima discutida:
+Desta vez, demonstramos também a utilização <xref:Microsoft.Quantum.Canon.ApplyWith> em conjunto com a <xref:Microsoft.Quantum.Canon.RAll1> operação acima discutida:
 
 ```qsharp
 operation ReflectAboutInitial(register : Qubit[]) : Unit
@@ -160,10 +160,10 @@ Este unitário é habitualmente descrito por um de dois tipos de oráculos.
 
 > [!TIP]
 > Ambos os tipos de oráculo descritos abaixo estão cobertos nas amostras.
-> Para saber mais sobre oráculos de consulta contínua, consulte a amostra [ **phaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
-> Para saber mais sobre oráculos de consulta discreta, consulte a amostra [ **isingPhaseEstimation** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
+> Para saber mais sobre oráculos de consulta contínua, consulte a amostra [ **phaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/characterization/phase-estimation).
+> Para saber mais sobre oráculos de consulta discreta, consulte a amostra [ **isingPhaseEstimation**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/phase-estimation).
 
-O primeiro tipo de oráculo, a que chamamos um oráculo de consulta discreta e que representa com o tipo definido pelo <xref:microsoft.quantum.oracles.discreteoracle> utilizador, envolve simplesmente uma matriz unitária.
+O primeiro tipo de oráculo, a que chamamos um oráculo de consulta discreta e que representa com o tipo definido pelo <xref:Microsoft.Quantum.Oracles.DiscreteOracle> utilizador, envolve simplesmente uma matriz unitária.
 Se $U$ é o unitário cujos valores eigen valorizamos, então o oráculo para $U$ é simplesmente um substituto para uma sub-rotina que implementa $U$.
 Por exemplo, pode-se levar $U$ para ser o oráculo $Q$ definido acima para estimação de amplitude.
 Os valores eigenvalues desta matriz podem ser usados para estimar a sobreposição entre os estados iniciais e alvo, $\sin^2(\theta)$, usando quadráticamente menos amostras do que seria necessário de outra forma.
@@ -173,7 +173,7 @@ Por outras palavras, queremos estimar $\theta$ para um portão de rotação desc
 Nesses casos, a sub-rotina com a qual interagiríamos para aprender este valor fixo de $\theta$ para o portão é $$ \start{align} U & = R_z(\theta) \\ \\ & = \begin{bmatrix} e^{{-i \theta / 2} & \\ \\ 0 0 & e^{i\ita/2 \end{bmat}}
 \end{align} $$
 
-O segundo tipo de oráculo utilizado na estimativa de fase é o oráculo de consulta contínua, representado pelo <xref:microsoft.quantum.oracles.continuousoracle> tipo.
+O segundo tipo de oráculo utilizado na estimativa de fase é o oráculo de consulta contínua, representado pelo <xref:Microsoft.Quantum.Oracles.ContinuousOracle> tipo.
 Um oráculo de consulta contínua para estimativa de fase toma a forma $U(t)$ onde $t$ é um número real clássico conhecido.
 Se deixarmos $U$ ser um unitário fixo, então o oráculo de consulta contínua toma a forma $U(t) = U^t$.
 Isto permite-nos consultar matrizes como $\sqrt{U}$, que não poderia ser implementada diretamente no modelo de consulta discreta.
@@ -211,7 +211,7 @@ onde o inteiro $r > 0$ controla o erro de aproximação.
 A biblioteca de modelação de geradores dinâmicos fornece uma estrutura para codificar sistematicamente geradores complicados em termos de geradores mais simples. Tal descrição pode então ser passada para, digamos, a biblioteca de simulação para implementar a evolução do tempo através de um algoritmo de simulação de escolha, com muitos detalhes automaticamente tratados.
 
 > [!TIP]
-> A biblioteca dinâmica do gerador descrita abaixo está coberta nas amostras. Para um exemplo baseado no modelo Ising, consulte a amostra [ **isingGenerators** ](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
+> A biblioteca dinâmica do gerador descrita abaixo está coberta nas amostras. Para um exemplo baseado no modelo Ising, consulte a amostra [ **isingGenerators**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/generators).
 > Para um exemplo baseado em hidrogénio molecular, consulte as [**amostras H2SimulationCmdLine**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line) e [**H2SimulationGUI.**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/gui)
 
 ### <a name="complete-description-of-a-generator"></a>Descrição completa de um gerador ###
@@ -261,7 +261,7 @@ newtype EvolutionUnitary = ((Double, Qubit[]) => Unit is Adj + Ctl);
 
 O primeiro parâmetro representa uma duração temporal, que será multiplicada pelo coeficiente na `GeneratorIndex` evolução unitária. O segundo parâmetro é o registo qubit em que os atos unitários. 
 
-### <a name="time-dependent-generators"></a>Geradores dependentes do tempo ###
+### <a name="time-dependent-generators"></a>Geradores Time-Dependent ###
 
 Em muitos casos, também estamos interessados em modelar geradores dependentes do tempo, como pode ocorrer na equação schrödinger $$ \start{{d\ket{\psi(t)}}{d t} & = \hat H(t) \ket{\psi(t)}, \end{align} $$ onde o gerador $\hat H(t)$ é agora dependente do tempo. A extensão dos geradores independentes do tempo acima para este caso é simples. Em vez de termos uma descrição fixa `GeneratorSystem` do Hamiltonian para sempre $t$, em vez disso temos o `GeneratorSystemTimeDependent` tipo definido pelo utilizador.
 
