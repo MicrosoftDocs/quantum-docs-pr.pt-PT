@@ -1,0 +1,70 @@
+### YamlMime:QSharpNamespace
+functions:
+- summary: Converte um oráculo de tipo `StateOracle` para `DeterministicStateOracle` .
+  uid: Microsoft.Quantum.Oracles.DeterministicStateOracleFromStateOracle
+- summary: Combina os oráculos `DeterministicStateOracle` `ObliviousOracle` e.
+  uid: Microsoft.Quantum.Oracles.ObliviousOracleFromDeterministicStateOracle
+- summary: Dada uma operação que representa um oráculo "black-box", devolve um oráculo de tempo discreto que representa o oráculo "caixa preta" repetido várias vezes.
+  uid: Microsoft.Quantum.Oracles.OracleToDiscrete
+- summary: Constrói reflexão sobre um dado estado a partir de um oráculo.
+  uid: Microsoft.Quantum.Oracles.ReflectionOracleFromDeterministicStateOracle
+- summary: Converte um oráculo de tipo `DeterministicStateOracle` para `StateOracle` .
+  uid: Microsoft.Quantum.Oracles.StateOracleFromDeterministicStateOracle
+name: Microsoft.Quantum.Oracles
+newtypes:
+- summary: >-
+    Representa um oráculo contínuo.
+
+    Este é um oráculo que implementa $U(\delta t) : \ket{\psi(t)} \mapsto \ket{\psi (t + \delta t)}} para todos os tempos $t$, onde $U$ é uma operação fixa, e onde $\delta t$ é um número real não negativo.
+  uid: Microsoft.Quantum.Oracles.ContinuousOracle
+- summary: >-
+    Representa um oráculo para a preparação determinística do Estado.
+
+    A entrada para o oráculo $O$ é:
+
+    - O registo que irá armazenar o estado quântico desejado $\ket{\psi} \_ s$.
+  uid: Microsoft.Quantum.Oracles.DeterministicStateOracle
+- summary: >-
+    Representa um oráculo discreto.
+
+    Este é um oráculo que implementa $U^m$ para uma operação fixa $U$ e um inteiro não negativo $m$.
+  uid: Microsoft.Quantum.Oracles.DiscreteOracle
+- summary: >-
+    Representa um oráculo para amplificação de amplitude alheia.
+
+    As entradas para o oráculo $O$ são:
+
+    - O registo da Ancilla $a dólares em que $O$ atua. - O registo do sistema $s$ em que é aplicado o $U$ unitário desejado, pós-seleccionado no registo $a$ estando no estado $\ket{t} \_ a$.
+  uid: Microsoft.Quantum.Oracles.ObliviousOracle
+- summary: >-
+    Representa um oráculo de reflexão.
+
+    Um oráculo de reflexão, $O$, tem entradas:
+
+    - A fase $\phi$ para rodar o subespaço refletido. - O registo qubit sobre o qual se realizará a reflexão dada.
+  uid: Microsoft.Quantum.Oracles.ReflectionOracle
+- summary: >-
+    Representa um oráculo para a preparação do estado.
+
+    As entradas para o oráculo $O$ são:
+
+    - Um inteiro a indexar o qubit da bandeira $f$. - O registo do sistema $s$ que armazenará o estado quântico desejado $\ket{\psi} \_ s$.
+  uid: Microsoft.Quantum.Oracles.StateOracle
+operations:
+- summary: Implementação de <xref:microsoft.quantum.canon.deterministicstateoraclefromstateoracle> .
+  uid: Microsoft.Quantum.Oracles.ApplyDeterministicStateOracleFromStateOracle
+- summary: Implementação de <xref:microsoft.quantum.canon.obliviousoraclefromdeterministicstateoracle> .
+  uid: Microsoft.Quantum.Oracles.ApplyObliviousOracleFromDeterministicStateOracle
+- summary: Implementação de <xref:microsoft.quantum.canon.stateoraclefromdeterministicstateoracle> .
+  uid: Microsoft.Quantum.Oracles.ApplyStateOracleFromDeterministicStateOracle
+- summary: Implementação de <xref:microsoft.quantum.canon.reflectionoraclefromdeterministicstateoracle> .
+  uid: Microsoft.Quantum.Oracles._ReflectionOracleFromDeterministicStateOracle
+summary: Este espaço de nome fornece tipos definidos pelo utilizador para decorar vários tipos de oráculos pelo seu uso pretendido em algoritmos quânticos, tais como estimativa de fase e amplificação de amplitude.
+uid: Microsoft.Quantum.Oracles
+metadata:
+  ms.openlocfilehash: 2a06057030f99eba20b84f493f4bfb40d5b6a7e4
+  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.translationtype: MT
+  ms.contentlocale: pt-PT
+  ms.lasthandoff: 10/27/2020
+  ms.locfileid: "92724951"
