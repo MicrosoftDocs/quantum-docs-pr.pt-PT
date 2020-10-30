@@ -9,18 +9,18 @@ uid: microsoft.quantum.overview.algebra
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: bff1da475f87278bc9e769805b3fe0fe8704d47a
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 3e6700acc09adf9e2e771f6289c73ad51aa2cb90
+ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835133"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92692256"
 ---
 # <a name="linear-algebra-for-quantum-computing"></a>Álgebra linear para computação quântica
 
 A álgebra linear é a linguagem da computação quântica. Embora não a tenha de dominar para implementar ou escrever programas quânticos, esta linguagem é amplamente utiliza para descrever estados de qubits, operações quânticas, e para prever o que um computador quântico fará como resposta a uma sequência de instruções.
 
-Da mesma forma que conhecer os [conceitos básicos da física quântica](xref:microsoft.quantum.overview.understanding) pode ajudar a compreender a computação quântica, também saber um mínimo de álgebra linear pode esclarecer o modo de funcionamento dos algoritmos quânticos. Deverá, pelo menos, familiarizar-se com os **vetores** e a **multiplicação de matrizes**. Se precisar de rever os seus conhecimentos destes conceitos de álgebra, pode ver estes tutoriais, que abordam as noções básicas:
+Da mesma forma que conhecer os [conceitos básicos da física quântica](xref:microsoft.quantum.overview.understanding) pode ajudar a compreender a computação quântica, também saber um mínimo de álgebra linear pode esclarecer o modo de funcionamento dos algoritmos quânticos. Deverá, pelo menos, familiarizar-se com os **vetores** e a **multiplicação de matrizes** . Se precisar de rever os seus conhecimentos destes conceitos de álgebra, pode ver estes tutoriais, que abordam as noções básicas:
 
 - [Tutorial do Jupyter Notebook sobre álgebra linear](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/LinearAlgebra)
 - [Tutorial do Jupyter Notebook sobre aritmética complexa](https://github.com/microsoft/QuantumKatas/tree/main/tutorials/ComplexArithmetic)
@@ -41,7 +41,7 @@ Em [Computadores quânticos e simuladores quânticos](xref:microsoft.quantum.ove
 Abaixo estão duas operações quânticas comuns, representadas com a multiplicação de matriz.
 
 
-A [operação `X`](xref:microsoft.quantum.intrinsic.x) é representada pela matriz de Pauli $X$,
+A [operação `X`](xref:Microsoft.Quantum.Intrinsic.X) é representada pela matriz de Pauli $X$,
 
 $$X = \begin{bmatrix} 0 & 1 \\\\ 1 & 0 \end{bmatrix},$$
     
@@ -49,7 +49,7 @@ e é utilizado para mudar o estado de um qubit de 0 para 1 (ou vice-versa); por 
 
 $$\begin{bmatrix}0 &1\\\\ 1 &0\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix} = \begin{bmatrix} 0 \\\\  1 \end{bmatrix}.$$
 
-A [operação "H"](xref:microsoft.quantum.intrinsic.h) é representada pela transformação de Hadamard $H$,
+A [operação "H"](xref:Microsoft.Quantum.Intrinsic.H) é representada pela transformação de Hadamard $H$,
 
 $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
@@ -57,13 +57,13 @@ $$H = \dfrac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix},$$
 
 $$\frac{1}{\sqrt{2}}\begin{bmatrix}1 &1\\\\ 1 &-1\end{bmatrix}\begin{bmatrix} 1 \\\\  0 \end{bmatrix}=\frac{1}{\sqrt{2}}\begin{bmatrix} 1 \\\\  1 \end{bmatrix}=\left(\frac{1}{\sqrt{2}}\right)^2=\frac{1}{2}.$$
 
-Uma matriz que represente uma operação quântica tem um requisito, tem de ser uma matriz **unitária**. Uma matriz é unitária se o seu **inverso** for igual ao seu **transposto conjugado**.
+Uma matriz que represente uma operação quântica tem um requisito, tem de ser uma matriz **unitária** . Uma matriz é unitária se o seu **inverso** for igual ao seu **transposto conjugado** .
 
 ## <a name="representing-two-qubit-states"></a>Representar estados de dois qubits
 
 Nos exemplos anteriores, o estado de um qubit foi descrito com uma matriz de coluna única $\begin{bmatrix} a \\\\  b \end{bmatrix}$ e a aplicação de uma operação ao mesmo foi descrita ao multiplicar as duas matrizes. No entanto, os computadores quânticos utilizam mais de um qubit. Então, como é que descrevemos o estado combinado de dois qubits? 
 
-Lembre-se de que cada qubit é um espaço de vetor, pelo que não podem ser simplesmente multiplicados. Em vez disso, vai utilizar um **produto tensorial**, que é uma operação associada que cria um espaço de vetor novo a partir de espaços de vetores individuais e é representado pelo símbolo $\otimes$. Por exemplo, o produto tensorial do estado de dois qubits $\begin{bmatrix} a \\\\  b \end{bmatrix}$ e $\begin{bmatrix} c \\\\  d \end{bmatrix}$ é calculado
+Lembre-se de que cada qubit é um espaço de vetor, pelo que não podem ser simplesmente multiplicados. Em vez disso, vai utilizar um **produto tensorial** , que é uma operação associada que cria um espaço de vetor novo a partir de espaços de vetores individuais e é representado pelo símbolo $\otimes$. Por exemplo, o produto tensorial do estado de dois qubits $\begin{bmatrix} a \\\\  b \end{bmatrix}$ e $\begin{bmatrix} c \\\\  d \end{bmatrix}$ é calculado
 
 $$ \begin{bmatrix} a \\\\  b \end{bmatrix} \otimes \begin{bmatrix} c \\\\  d \end{bmatrix} =\begin{bmatrix} a \begin{bmatrix} c \\\\  d \end{bmatrix} \\\\ b \begin{bmatrix}c \\\\  d \end{bmatrix} \end{bmatrix} = \begin{bmatrix} ac \\\\  ad \\\\  bc \\\\  bd \end{bmatrix}. $$
 
