@@ -1,14 +1,14 @@
 ---
 title: Contador de largura - Kit de Desenvolvimento Quântico
-description: 'Saiba mais sobre o contador de largura do Microsoft QDK, que utiliza o simulador de traços Quânticos para contar o número de qubits atribuídos e emprestados por operações num :::no-loc(Q#)::: programa.'
+description: 'Saiba mais sobre o contador de largura do Microsoft QDK, que utiliza o simulador de traços Quânticos para contar o número de qubits atribuídos e emprestados por operações num Q# programa.'
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
 ms.topic: article
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -18,7 +18,7 @@ ms.locfileid: "92691123"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a><span data-ttu-id="be66b-103">Simulador de vestígios quânticos: contador de largura</span><span class="sxs-lookup"><span data-stu-id="be66b-103">Quantum trace simulator: width counter</span></span>
 
-<span data-ttu-id="be66b-104">O contador de largura faz parte do simulador de [traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do Kit de Desenvolvimento Quântico.</span><span class="sxs-lookup"><span data-stu-id="be66b-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="be66b-105">Pode usá-lo para contar o número de qubits atribuídos e emprestados por cada operação num :::no-loc(Q#)::: programa.</span><span class="sxs-lookup"><span data-stu-id="be66b-105">You can use it to count the number of qubits allocated and borrowed by each operation in a :::no-loc(Q#)::: program.</span></span> <span data-ttu-id="be66b-106">Algumas operações primitivas podem alocar qubits extra, por exemplo, multiplicar operações controladas `X` ou `T` operações controladas.</span><span class="sxs-lookup"><span data-stu-id="be66b-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
+<span data-ttu-id="be66b-104">O contador de largura faz parte do simulador de [traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro)do Kit de Desenvolvimento Quântico.</span><span class="sxs-lookup"><span data-stu-id="be66b-104">The width counter is a part of the Quantum Development Kit [Quantum trace simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro).</span></span> <span data-ttu-id="be66b-105">Pode usá-lo para contar o número de qubits atribuídos e emprestados por cada operação num Q# programa.</span><span class="sxs-lookup"><span data-stu-id="be66b-105">You can use it to count the number of qubits allocated and borrowed by each operation in a Q# program.</span></span> <span data-ttu-id="be66b-106">Algumas operações primitivas podem alocar qubits extra, por exemplo, multiplicar operações controladas `X` ou `T` operações controladas.</span><span class="sxs-lookup"><span data-stu-id="be66b-106">Some primitive operations can allocate extra qubits, for example, multiply controlled `X` operations or controlled `T` operations.</span></span>
 
 ## <a name="invoking-the-width-counter"></a><span data-ttu-id="be66b-107">Invocando o contador de largura</span><span class="sxs-lookup"><span data-stu-id="be66b-107">Invoking the width counter</span></span>
 
@@ -32,7 +32,7 @@ var sim = new QCTraceSimulator(config);
 
 ## <a name="using-the-width-counter-in-a-c-host-program"></a><span data-ttu-id="be66b-109">Usando o contador de largura num programa de anfitrião C#</span><span class="sxs-lookup"><span data-stu-id="be66b-109">Using the width counter in a C# host program</span></span>
 
-<span data-ttu-id="be66b-110">O exemplo C# que se segue nesta secção calcula o número de qubits extra atribuídos pela implementação de uma operação controlada por <xref:Microsoft.Quantum.Intrinsic.X> multiplicação, com base no seguinte código de :::no-loc(Q#)::: amostra:</span><span class="sxs-lookup"><span data-stu-id="be66b-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following :::no-loc(Q#)::: sample code:</span></span>
+<span data-ttu-id="be66b-110">O exemplo C# que se segue nesta secção calcula o número de qubits extra atribuídos pela implementação de uma operação controlada por <xref:Microsoft.Quantum.Intrinsic.X> multiplicação, com base no seguinte código de Q# amostra:</span><span class="sxs-lookup"><span data-stu-id="be66b-110">The C# example that follows in this section computes the number of extra qubits allocated by the implementation of a multiply controlled <xref:Microsoft.Quantum.Intrinsic.X> operation, based on the following Q# sample code:</span></span>
 
 ```qsharp
 open Microsoft.Quantum.Intrinsic;

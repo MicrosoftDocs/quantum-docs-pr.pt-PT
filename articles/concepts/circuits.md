@@ -1,113 +1,113 @@
 ---
 <span data-ttu-id="2e1de-101">título: Descrição dos circuitos quânticos: Aprenda a representar visualmente operações quânticas simples e complexas com diagramas de circuito quântico.</span><span class="sxs-lookup"><span data-stu-id="2e1de-101">title: Quantum circuits description: Learn how to visually represent simple and complex quantum operations with quantum circuit diagrams.</span></span>
 <span data-ttu-id="2e1de-102">autor: QuantumWriter uid: microsoft.quantum.concepts.circuits ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:</span><span class="sxs-lookup"><span data-stu-id="2e1de-102">author: QuantumWriter uid: microsoft.quantum.concepts.circuits ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:</span></span>
-- <span data-ttu-id="2e1de-103">":::no-loc(Q#):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-103">":::no-loc(Q#):::"</span></span>
-- <span data-ttu-id="2e1de-104">":::no-loc($$v):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-104">":::no-loc($$v):::"</span></span>
-- <span data-ttu-id="2e1de-105">":::no-loc($$):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-105">":::no-loc($$):::"</span></span>
-- <span data-ttu-id="2e1de-106">":::no-loc($$):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-106">":::no-loc($$):::"</span></span>
-- <span data-ttu-id="2e1de-107">":::no-loc($):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-107">":::no-loc($):::"</span></span>
-- <span data-ttu-id="2e1de-108">":::no-loc($):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-108">":::no-loc($):::"</span></span>
-- <span data-ttu-id="2e1de-109">":::no-loc($):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-109">":::no-loc($):::"</span></span>
-- <span data-ttu-id="2e1de-110">":::no-loc($$):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-110">":::no-loc($$):::"</span></span>
-- <span data-ttu-id="2e1de-111">":::no-loc(\cdots):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-111">":::no-loc(\cdots):::"</span></span>
-- <span data-ttu-id="2e1de-112">":::no-loc(bmatrix):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-112">":::no-loc(bmatrix):::"</span></span>
-- <span data-ttu-id="2e1de-113">":::no-loc(\ddots):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-113">":::no-loc(\ddots):::"</span></span>
-- <span data-ttu-id="2e1de-114">":::no-loc(\equiv):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-114">":::no-loc(\equiv):::"</span></span>
-- <span data-ttu-id="2e1de-115">":::no-loc(\sum):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-115">":::no-loc(\sum):::"</span></span>
-- <span data-ttu-id="2e1de-116">":::no-loc(\begin):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-116">":::no-loc(\begin):::"</span></span>
-- <span data-ttu-id="2e1de-117">":::no-loc(\end):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-117">":::no-loc(\end):::"</span></span>
-- <span data-ttu-id="2e1de-118">":::no-loc(\sqrt):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-118">":::no-loc(\sqrt):::"</span></span>
-- <span data-ttu-id="2e1de-119">":::no-loc(\otimes):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-119">":::no-loc(\otimes):::"</span></span>
-- <span data-ttu-id="2e1de-120">":::no-loc({):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-120">":::no-loc({):::"</span></span>
-- <span data-ttu-id="2e1de-121">":::no-loc(}):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-121">":::no-loc(}):::"</span></span>
-- <span data-ttu-id="2e1de-122">":::no-loc(\text):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-122">":::no-loc(\text):::"</span></span>
-- <span data-ttu-id="2e1de-123">":::no-loc(\phi):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-123">":::no-loc(\phi):::"</span></span>
-- <span data-ttu-id="2e1de-124">":::no-loc(\kappa):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-124">":::no-loc(\kappa):::"</span></span>
-- <span data-ttu-id="2e1de-125">":::no-loc(\psi):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-125">":::no-loc(\psi):::"</span></span>
-- <span data-ttu-id="2e1de-126">":::no-loc(\alpha):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-126">":::no-loc(\alpha):::"</span></span>
-- <span data-ttu-id="2e1de-127">":::no-loc(\beta):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-127">":::no-loc(\beta):::"</span></span>
-- <span data-ttu-id="2e1de-128">":::no-loc(\gamma):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-128">":::no-loc(\gamma):::"</span></span>
-- <span data-ttu-id="2e1de-129">":::no-loc(\delta):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-129">":::no-loc(\delta):::"</span></span>
-- <span data-ttu-id="2e1de-130">":::no-loc(\omega):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-130">":::no-loc(\omega):::"</span></span>
-- <span data-ttu-id="2e1de-131">":::no-loc(\bra):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-131">":::no-loc(\bra):::"</span></span>
-- <span data-ttu-id="2e1de-132">":::no-loc(\ket):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-132">":::no-loc(\ket):::"</span></span>
-- <span data-ttu-id="2e1de-133">":::no-loc(\boldone):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-133">":::no-loc(\boldone):::"</span></span>
-- <span data-ttu-id="2e1de-134">":::no-loc(\\\\):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-134">":::no-loc(\\\\):::"</span></span>
-- <span data-ttu-id="2e1de-135">":::no-loc(\\):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-135">":::no-loc(\\):::"</span></span>
-- <span data-ttu-id="2e1de-136">":::no-loc(=):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-136">":::no-loc(=):::"</span></span>
-- <span data-ttu-id="2e1de-137">":::no-loc(\frac):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-137">":::no-loc(\frac):::"</span></span>
-- <span data-ttu-id="2e1de-138">":::no-loc(\text):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-138">":::no-loc(\text):::"</span></span>
-- <span data-ttu-id="2e1de-139">":::no-loc(\mapsto):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-139">":::no-loc(\mapsto):::"</span></span>
-- <span data-ttu-id="2e1de-140">":::no-loc(\dagger):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-140">":::no-loc(\dagger):::"</span></span>
-- <span data-ttu-id="2e1de-141">":::no-loc(\to):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-141">":::no-loc(\to):::"</span></span>
-- <span data-ttu-id="2e1de-142">":::no-loc(\begin{cases}):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-142">":::no-loc(\begin{cases}):::"</span></span>
-- <span data-ttu-id="2e1de-143">":::no-loc(\end{cases}):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-143">":::no-loc(\end{cases}):::"</span></span>
-- <span data-ttu-id="2e1de-144">":::no-loc(\operatorname):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-144">":::no-loc(\operatorname):::"</span></span>
-- <span data-ttu-id="2e1de-145">":::no-loc(\braket):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-145">":::no-loc(\braket):::"</span></span>
-- <span data-ttu-id="2e1de-146">":::no-loc(\id):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-146">":::no-loc(\id):::"</span></span>
-- <span data-ttu-id="2e1de-147">":::no-loc(\expect):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-147">":::no-loc(\expect):::"</span></span>
-- <span data-ttu-id="2e1de-148">":::no-loc(\defeq):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-148">":::no-loc(\defeq):::"</span></span>
-- <span data-ttu-id="2e1de-149">":::no-loc(\variance):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-149">":::no-loc(\variance):::"</span></span>
-- <span data-ttu-id="2e1de-150">":::no-loc(\dd):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-150">":::no-loc(\dd):::"</span></span>
-- <span data-ttu-id="2e1de-151">":::no-loc(&):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-151">":::no-loc(&):::"</span></span>
-- <span data-ttu-id="2e1de-152">":::no-loc(\begin{align}):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-152">":::no-loc(\begin{align}):::"</span></span>
-- <span data-ttu-id="2e1de-153">":::no-loc(\end{align}):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-153">":::no-loc(\end{align}):::"</span></span>
-- <span data-ttu-id="2e1de-154">":::no-loc(\Lambda):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-154">":::no-loc(\Lambda):::"</span></span>
-- <span data-ttu-id="2e1de-155">":::no-loc(\lambda):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-155">":::no-loc(\lambda):::"</span></span>
-- <span data-ttu-id="2e1de-156">":::no-loc(\Omega):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-156">":::no-loc(\Omega):::"</span></span>
-- <span data-ttu-id="2e1de-157">":::no-loc(\mathrm):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-157">":::no-loc(\mathrm):::"</span></span>
-- <span data-ttu-id="2e1de-158">":::no-loc(\left):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-158">":::no-loc(\left):::"</span></span>
-- <span data-ttu-id="2e1de-159">":::no-loc(\right):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-159">":::no-loc(\right):::"</span></span>
-- <span data-ttu-id="2e1de-160">":::no-loc(\qquad):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-160">":::no-loc(\qquad):::"</span></span>
-- <span data-ttu-id="2e1de-161">":::no-loc(\times):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-161">":::no-loc(\times):::"</span></span>
-- <span data-ttu-id="2e1de-162">":::no-loc(\big):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-162">":::no-loc(\big):::"</span></span>
-- <span data-ttu-id="2e1de-163">":::no-loc(\langle):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-163">":::no-loc(\langle):::"</span></span>
-- <span data-ttu-id="2e1de-164">":::no-loc(\rangle):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-164">":::no-loc(\rangle):::"</span></span>
-- <span data-ttu-id="2e1de-165">":::no-loc(\bigg):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-165">":::no-loc(\bigg):::"</span></span>
-- <span data-ttu-id="2e1de-166">":::no-loc(\Big):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-166">":::no-loc(\Big):::"</span></span>
-- <span data-ttu-id="2e1de-167">":::no-loc(|):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-167">":::no-loc(|):::"</span></span>
-- <span data-ttu-id="2e1de-168">":::no-loc(\mathbb):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-168">":::no-loc(\mathbb):::"</span></span>
-- <span data-ttu-id="2e1de-169">":::no-loc(\vec):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-169">":::no-loc(\vec):::"</span></span>
-- <span data-ttu-id="2e1de-170">":::no-loc(\in):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-170">":::no-loc(\in):::"</span></span>
-- <span data-ttu-id="2e1de-171">":::no-loc(\texttt):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-171">":::no-loc(\texttt):::"</span></span>
-- <span data-ttu-id="2e1de-172">":::no-loc(\ne):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-172">":::no-loc(\ne):::"</span></span>
-- <span data-ttu-id="2e1de-173">":::no-loc(<):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-173">":::no-loc(<):::"</span></span>
-- <span data-ttu-id="2e1de-174">":::no-loc(>):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-174">":::no-loc(>):::"</span></span>
-- <span data-ttu-id="2e1de-175">":::no-loc(\leq):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-175">":::no-loc(\leq):::"</span></span>
-- <span data-ttu-id="2e1de-176">":::no-loc(\geq):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-176">":::no-loc(\geq):::"</span></span>
-- <span data-ttu-id="2e1de-177">":::no-loc(~~):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-177">":::no-loc(~~):::"</span></span>
-- <span data-ttu-id="2e1de-178">":::no-loc(~):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-178">":::no-loc(~):::"</span></span>
-- <span data-ttu-id="2e1de-179">":::no-loc(\begin{bmatrix}):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-179">":::no-loc(\begin{bmatrix}):::"</span></span>
-- <span data-ttu-id="2e1de-180">":::no-loc(\end{bmatrix}):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-180">":::no-loc(\end{bmatrix}):::"</span></span>
-- <span data-ttu-id="2e1de-181">":::no-loc(\_):::"</span><span class="sxs-lookup"><span data-stu-id="2e1de-181">":::no-loc(\_):::"</span></span>
+- <span data-ttu-id="2e1de-103">"Q#"</span><span class="sxs-lookup"><span data-stu-id="2e1de-103">"Q#"</span></span>
+- <span data-ttu-id="2e1de-104">"$$v"</span><span class="sxs-lookup"><span data-stu-id="2e1de-104">"$$v"</span></span>
+- <span data-ttu-id="2e1de-105">"$$"</span><span class="sxs-lookup"><span data-stu-id="2e1de-105">"$$"</span></span>
+- <span data-ttu-id="2e1de-106">"$$"</span><span class="sxs-lookup"><span data-stu-id="2e1de-106">"$$"</span></span>
+- <span data-ttu-id="2e1de-107">"$"</span><span class="sxs-lookup"><span data-stu-id="2e1de-107">"$"</span></span>
+- <span data-ttu-id="2e1de-108">"$"</span><span class="sxs-lookup"><span data-stu-id="2e1de-108">"$"</span></span>
+- <span data-ttu-id="2e1de-109">"$"</span><span class="sxs-lookup"><span data-stu-id="2e1de-109">"$"</span></span>
+- <span data-ttu-id="2e1de-110">"$$"</span><span class="sxs-lookup"><span data-stu-id="2e1de-110">"$$"</span></span>
+- <span data-ttu-id="2e1de-111">"\cdots"</span><span class="sxs-lookup"><span data-stu-id="2e1de-111">"\cdots"</span></span>
+- <span data-ttu-id="2e1de-112">"bmatrix"</span><span class="sxs-lookup"><span data-stu-id="2e1de-112">"bmatrix"</span></span>
+- <span data-ttu-id="2e1de-113">"\ddots"</span><span class="sxs-lookup"><span data-stu-id="2e1de-113">"\ddots"</span></span>
+- <span data-ttu-id="2e1de-114">"\equiv"</span><span class="sxs-lookup"><span data-stu-id="2e1de-114">"\equiv"</span></span>
+- <span data-ttu-id="2e1de-115">"\sum"</span><span class="sxs-lookup"><span data-stu-id="2e1de-115">"\sum"</span></span>
+- <span data-ttu-id="2e1de-116">"\begin"</span><span class="sxs-lookup"><span data-stu-id="2e1de-116">"\begin"</span></span>
+- <span data-ttu-id="2e1de-117">"\end"</span><span class="sxs-lookup"><span data-stu-id="2e1de-117">"\end"</span></span>
+- <span data-ttu-id="2e1de-118">"\sqrt"</span><span class="sxs-lookup"><span data-stu-id="2e1de-118">"\sqrt"</span></span>
+- <span data-ttu-id="2e1de-119">"\otimes"</span><span class="sxs-lookup"><span data-stu-id="2e1de-119">"\otimes"</span></span>
+- <span data-ttu-id="2e1de-120">"{"</span><span class="sxs-lookup"><span data-stu-id="2e1de-120">"{"</span></span>
+- <span data-ttu-id="2e1de-121">"}"</span><span class="sxs-lookup"><span data-stu-id="2e1de-121">"}"</span></span>
+- <span data-ttu-id="2e1de-122">"\text"</span><span class="sxs-lookup"><span data-stu-id="2e1de-122">"\text"</span></span>
+- <span data-ttu-id="2e1de-123">"\phi"</span><span class="sxs-lookup"><span data-stu-id="2e1de-123">"\phi"</span></span>
+- <span data-ttu-id="2e1de-124">"\kappa"</span><span class="sxs-lookup"><span data-stu-id="2e1de-124">"\kappa"</span></span>
+- <span data-ttu-id="2e1de-125">"\psi"</span><span class="sxs-lookup"><span data-stu-id="2e1de-125">"\psi"</span></span>
+- <span data-ttu-id="2e1de-126">"\alpha"</span><span class="sxs-lookup"><span data-stu-id="2e1de-126">"\alpha"</span></span>
+- <span data-ttu-id="2e1de-127">"\beta"</span><span class="sxs-lookup"><span data-stu-id="2e1de-127">"\beta"</span></span>
+- <span data-ttu-id="2e1de-128">"\gamma"</span><span class="sxs-lookup"><span data-stu-id="2e1de-128">"\gamma"</span></span>
+- <span data-ttu-id="2e1de-129">"\delta"</span><span class="sxs-lookup"><span data-stu-id="2e1de-129">"\delta"</span></span>
+- <span data-ttu-id="2e1de-130">"\omega"</span><span class="sxs-lookup"><span data-stu-id="2e1de-130">"\omega"</span></span>
+- <span data-ttu-id="2e1de-131">"\bra"</span><span class="sxs-lookup"><span data-stu-id="2e1de-131">"\bra"</span></span>
+- <span data-ttu-id="2e1de-132">"\ket"</span><span class="sxs-lookup"><span data-stu-id="2e1de-132">"\ket"</span></span>
+- <span data-ttu-id="2e1de-133">"\boldone"</span><span class="sxs-lookup"><span data-stu-id="2e1de-133">"\boldone"</span></span>
+- <span data-ttu-id="2e1de-134">"\\\\"</span><span class="sxs-lookup"><span data-stu-id="2e1de-134">"\\\\"</span></span>
+- <span data-ttu-id="2e1de-135">"\\"</span><span class="sxs-lookup"><span data-stu-id="2e1de-135">"\\"</span></span>
+- <span data-ttu-id="2e1de-136">"="</span><span class="sxs-lookup"><span data-stu-id="2e1de-136">"="</span></span>
+- <span data-ttu-id="2e1de-137">"\frac"</span><span class="sxs-lookup"><span data-stu-id="2e1de-137">"\frac"</span></span>
+- <span data-ttu-id="2e1de-138">"\text"</span><span class="sxs-lookup"><span data-stu-id="2e1de-138">"\text"</span></span>
+- <span data-ttu-id="2e1de-139">"\mapsto"</span><span class="sxs-lookup"><span data-stu-id="2e1de-139">"\mapsto"</span></span>
+- <span data-ttu-id="2e1de-140">"\dagger"</span><span class="sxs-lookup"><span data-stu-id="2e1de-140">"\dagger"</span></span>
+- <span data-ttu-id="2e1de-141">"\to"</span><span class="sxs-lookup"><span data-stu-id="2e1de-141">"\to"</span></span>
+- <span data-ttu-id="2e1de-142">"\begin{cases}"</span><span class="sxs-lookup"><span data-stu-id="2e1de-142">"\begin{cases}"</span></span>
+- <span data-ttu-id="2e1de-143">"\end{cases}"</span><span class="sxs-lookup"><span data-stu-id="2e1de-143">"\end{cases}"</span></span>
+- <span data-ttu-id="2e1de-144">"\operatorname"</span><span class="sxs-lookup"><span data-stu-id="2e1de-144">"\operatorname"</span></span>
+- <span data-ttu-id="2e1de-145">"\braket"</span><span class="sxs-lookup"><span data-stu-id="2e1de-145">"\braket"</span></span>
+- <span data-ttu-id="2e1de-146">"\id"</span><span class="sxs-lookup"><span data-stu-id="2e1de-146">"\id"</span></span>
+- <span data-ttu-id="2e1de-147">"\expect"</span><span class="sxs-lookup"><span data-stu-id="2e1de-147">"\expect"</span></span>
+- <span data-ttu-id="2e1de-148">"\defeq"</span><span class="sxs-lookup"><span data-stu-id="2e1de-148">"\defeq"</span></span>
+- <span data-ttu-id="2e1de-149">"\variance"</span><span class="sxs-lookup"><span data-stu-id="2e1de-149">"\variance"</span></span>
+- <span data-ttu-id="2e1de-150">"\dd"</span><span class="sxs-lookup"><span data-stu-id="2e1de-150">"\dd"</span></span>
+- <span data-ttu-id="2e1de-151">"&"</span><span class="sxs-lookup"><span data-stu-id="2e1de-151">"&"</span></span>
+- <span data-ttu-id="2e1de-152">"\begin{align}"</span><span class="sxs-lookup"><span data-stu-id="2e1de-152">"\begin{align}"</span></span>
+- <span data-ttu-id="2e1de-153">"\end{align}"</span><span class="sxs-lookup"><span data-stu-id="2e1de-153">"\end{align}"</span></span>
+- <span data-ttu-id="2e1de-154">"\Lambda"</span><span class="sxs-lookup"><span data-stu-id="2e1de-154">"\Lambda"</span></span>
+- <span data-ttu-id="2e1de-155">"\lambda"</span><span class="sxs-lookup"><span data-stu-id="2e1de-155">"\lambda"</span></span>
+- <span data-ttu-id="2e1de-156">"\Omega"</span><span class="sxs-lookup"><span data-stu-id="2e1de-156">"\Omega"</span></span>
+- <span data-ttu-id="2e1de-157">"\mathrm"</span><span class="sxs-lookup"><span data-stu-id="2e1de-157">"\mathrm"</span></span>
+- <span data-ttu-id="2e1de-158">"\left"</span><span class="sxs-lookup"><span data-stu-id="2e1de-158">"\left"</span></span>
+- <span data-ttu-id="2e1de-159">"\right"</span><span class="sxs-lookup"><span data-stu-id="2e1de-159">"\right"</span></span>
+- <span data-ttu-id="2e1de-160">"\qquad"</span><span class="sxs-lookup"><span data-stu-id="2e1de-160">"\qquad"</span></span>
+- <span data-ttu-id="2e1de-161">"\times"</span><span class="sxs-lookup"><span data-stu-id="2e1de-161">"\times"</span></span>
+- <span data-ttu-id="2e1de-162">"\big"</span><span class="sxs-lookup"><span data-stu-id="2e1de-162">"\big"</span></span>
+- <span data-ttu-id="2e1de-163">"\langle"</span><span class="sxs-lookup"><span data-stu-id="2e1de-163">"\langle"</span></span>
+- <span data-ttu-id="2e1de-164">"\rangle"</span><span class="sxs-lookup"><span data-stu-id="2e1de-164">"\rangle"</span></span>
+- <span data-ttu-id="2e1de-165">"\bigg"</span><span class="sxs-lookup"><span data-stu-id="2e1de-165">"\bigg"</span></span>
+- <span data-ttu-id="2e1de-166">"\Big"</span><span class="sxs-lookup"><span data-stu-id="2e1de-166">"\Big"</span></span>
+- <span data-ttu-id="2e1de-167">"|"</span><span class="sxs-lookup"><span data-stu-id="2e1de-167">"|"</span></span>
+- <span data-ttu-id="2e1de-168">"\mathbb"</span><span class="sxs-lookup"><span data-stu-id="2e1de-168">"\mathbb"</span></span>
+- <span data-ttu-id="2e1de-169">"\vec"</span><span class="sxs-lookup"><span data-stu-id="2e1de-169">"\vec"</span></span>
+- <span data-ttu-id="2e1de-170">"\in"</span><span class="sxs-lookup"><span data-stu-id="2e1de-170">"\in"</span></span>
+- <span data-ttu-id="2e1de-171">"\texttt"</span><span class="sxs-lookup"><span data-stu-id="2e1de-171">"\texttt"</span></span>
+- <span data-ttu-id="2e1de-172">"\ne"</span><span class="sxs-lookup"><span data-stu-id="2e1de-172">"\ne"</span></span>
+- <span data-ttu-id="2e1de-173">"<"</span><span class="sxs-lookup"><span data-stu-id="2e1de-173">"<"</span></span>
+- <span data-ttu-id="2e1de-174">">"</span><span class="sxs-lookup"><span data-stu-id="2e1de-174">">"</span></span>
+- <span data-ttu-id="2e1de-175">"\leq"</span><span class="sxs-lookup"><span data-stu-id="2e1de-175">"\leq"</span></span>
+- <span data-ttu-id="2e1de-176">"\geq"</span><span class="sxs-lookup"><span data-stu-id="2e1de-176">"\geq"</span></span>
+- <span data-ttu-id="2e1de-177">"~~"</span><span class="sxs-lookup"><span data-stu-id="2e1de-177">"~~"</span></span>
+- <span data-ttu-id="2e1de-178">"~"</span><span class="sxs-lookup"><span data-stu-id="2e1de-178">"~"</span></span>
+- <span data-ttu-id="2e1de-179">"\begin{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="2e1de-179">"\begin{bmatrix}"</span></span>
+- <span data-ttu-id="2e1de-180">"\end{bmatrix}"</span><span class="sxs-lookup"><span data-stu-id="2e1de-180">"\end{bmatrix}"</span></span>
+- <span data-ttu-id="2e1de-181">"\_"</span><span class="sxs-lookup"><span data-stu-id="2e1de-181">"\_"</span></span>
 
 ---
 
 # <a name="quantum-circuits"></a><span data-ttu-id="2e1de-182">Circuitos Quânticos</span><span class="sxs-lookup"><span data-stu-id="2e1de-182">Quantum Circuits</span></span>
-<span data-ttu-id="2e1de-183">Considere por um momento a transformação unitária :::no-loc($)::: :::no-loc(\text)::: :::no-loc({)::: CNOT :::no-loc(})::: _ :::no-loc({)::: 01 :::no-loc(})::: (H :::no-loc(\otimes)::: 1) :::no-loc($)::: .</span><span class="sxs-lookup"><span data-stu-id="2e1de-183">Consider for a moment the unitary transformation :::no-loc($)::::::no-loc(\text)::::::no-loc({)::: CNOT:::no-loc(}):::_:::no-loc({):::01:::no-loc(}):::(H:::no-loc(\otimes)::: 1):::no-loc($):::.</span></span>
+<span data-ttu-id="2e1de-183">Considere por um momento a transformação unitária $ \text { CNOT } _ { 01 } (H \otimes 1) $ .</span><span class="sxs-lookup"><span data-stu-id="2e1de-183">Consider for a moment the unitary transformation $\text{ CNOT}_{01}(H\otimes 1)$.</span></span>
 <span data-ttu-id="2e1de-184">Esta sequência de portão é de importância fundamental para a computação quântica porque cria um estado de dois qubits maximicamente emaranhado:</span><span class="sxs-lookup"><span data-stu-id="2e1de-184">This gate sequence is of fundamental significance to quantum computing because it creates a maximally entangled two-qubit state:</span></span>
 
-<span data-ttu-id="2e1de-185">:::no-loc($$)::::::no-loc(\mathrm)::::::no-loc({):::CNOT :::no-loc(})::: _ :::no-loc({)::: 01 :::no-loc(})::: (H :::no-loc(\otimes)::: 1) :::no-loc(\ket)::: :::no-loc({)::: 00 :::no-loc(})::: :::no-loc(=)::: :::no-loc(\frac)::: :::no-loc({)::: 1 :::no-loc(})::: :::no-loc({)::: :::no-loc(\sqrt)::: :::no-loc({)::: 2 :::no-loc(})::: :::no-loc(})::: :::no-loc(\left)::: ( :::no-loc(\ket)::: :::no-loc({)::: 00 :::no-loc(}):::  +  :::no-loc(\ket)::: :::no-loc({)::: 11 :::no-loc(})::: :::no-loc(\right)::: ),:::no-loc($$):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-185">:::no-loc($$)::::::no-loc(\mathrm)::::::no-loc({):::CNOT:::no-loc(}):::_:::no-loc({):::01:::no-loc(}):::(H:::no-loc(\otimes)::: 1):::no-loc(\ket)::::::no-loc({):::00:::no-loc(})::: :::no-loc(=)::: :::no-loc(\frac)::::::no-loc({):::1:::no-loc(})::::::no-loc({)::::::no-loc(\sqrt)::::::no-loc({):::2:::no-loc(})::::::no-loc(})::: :::no-loc(\left):::(:::no-loc(\ket)::::::no-loc({):::00:::no-loc(})::: + :::no-loc(\ket)::::::no-loc({):::11:::no-loc(})::: :::no-loc(\right):::),:::no-loc($$):::</span></span>
+<span data-ttu-id="2e1de-185">$$\mathrm{CNOT } _ { 01 } (H \otimes 1) \ket { 00 } = \frac { 1 } { \sqrt { 2 } } \left ( \ket { 00 }  +  \ket { 11 } \right ),$$</span><span class="sxs-lookup"><span data-stu-id="2e1de-185">$$\mathrm{CNOT}_{01}(H\otimes 1)\ket{00} = \frac{1}{\sqrt{2}} \left(\ket{00} + \ket{11} \right),$$</span></span>
 
 <span data-ttu-id="2e1de-186">As operações com esta ou maior complexidade são ubíquas em algoritmos quânticos e correção de erros quânticos, por isso deve ser um grande alívio que exista um método simples para a sua visualização chamado *diagrama de circuito quântico.*</span><span class="sxs-lookup"><span data-stu-id="2e1de-186">Operations with this or greater complexity are ubiquitous in quantum algorithms and quantum error correction, so it should come as a great relief that there is a simple method for their visualization called a *quantum circuit diagram* .</span></span>
 <span data-ttu-id="2e1de-187">O diagrama do circuito para preparar este estado quântico máximo emaranhado é:</span><span class="sxs-lookup"><span data-stu-id="2e1de-187">The circuit diagram for preparing this maximally entangled quantum state is:</span></span>
 
-<span data-ttu-id="2e1de-188">:::no-loc(<):::!--- ![](.\media\1.svg) ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-188">:::no-loc(<):::!--- ![](.\media\1.svg) ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-189">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-189">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-190">![Diagrama de circuito para um estado máximo emaranhado de dois qubits](:::no-loc(~):::/media/1.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-190">![Circuit diagram for a maximally entangled two-qubit state](:::no-loc(~):::/media/1.svg)</span></span>
+<span data-ttu-id="2e1de-188"><!--- ![](.\media\1.svg) ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-188"><!--- ![](.\media\1.svg) ---></span></span>
+<span data-ttu-id="2e1de-189"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-189"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-190">![Diagrama de circuito para um estado máximo emaranhado de dois qubits](~/media/1.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-190">![Circuit diagram for a maximally entangled two-qubit state](~/media/1.svg)</span></span>
 
 ## <a name="quantum-circuit-diagram-conventions"></a><span data-ttu-id="2e1de-191">Convenções de diagrama de circuito quântico</span><span class="sxs-lookup"><span data-stu-id="2e1de-191">Quantum circuit diagram conventions</span></span>
 <span data-ttu-id="2e1de-192">Esta linguagem visual para operações quânticas pode ser mais facilmente digerível do que escrever a sua matriz equivalente uma vez que você entende as convenções para expressar um circuito quântico.</span><span class="sxs-lookup"><span data-stu-id="2e1de-192">This visual language for quantum operations can be more readily digestible than writing down its equivalent matrix once you understand the conventions for expressing a quantum circuit.</span></span>
 <span data-ttu-id="2e1de-193">Revemos estas convenções abaixo.</span><span class="sxs-lookup"><span data-stu-id="2e1de-193">We review these conventions below.</span></span>
 
 <span data-ttu-id="2e1de-194">Num diagrama de circuito, cada linha sólida representa um qubit ou, mais geralmente, um registo qubit.</span><span class="sxs-lookup"><span data-stu-id="2e1de-194">In a circuit diagram, each solid line depicts a qubit or more generally a qubit register.</span></span>
-<span data-ttu-id="2e1de-195">Por convenção, a linha de cima é o qubit register :::no-loc($)::: 0 :::no-loc($)::: e o restante é rotulado sequencialmente.</span><span class="sxs-lookup"><span data-stu-id="2e1de-195">By convention, the top line is qubit register :::no-loc($):::0:::no-loc($)::: and the remainder are labeled sequentially.</span></span> <span data-ttu-id="2e1de-196">O circuito de exemplo acima é descrito como agindo em dois qubits (ou equivalentemente dois registos constituídos por um qubit).</span><span class="sxs-lookup"><span data-stu-id="2e1de-196">The above example circuit is depicted as acting on two qubits (or equivalently two registers consisting of one qubit).</span></span>
+<span data-ttu-id="2e1de-195">Por convenção, a linha de cima é o qubit register $ 0 $ e o restante é rotulado sequencialmente.</span><span class="sxs-lookup"><span data-stu-id="2e1de-195">By convention, the top line is qubit register $0$ and the remainder are labeled sequentially.</span></span> <span data-ttu-id="2e1de-196">O circuito de exemplo acima é descrito como agindo em dois qubits (ou equivalentemente dois registos constituídos por um qubit).</span><span class="sxs-lookup"><span data-stu-id="2e1de-196">The above example circuit is depicted as acting on two qubits (or equivalently two registers consisting of one qubit).</span></span>
 <span data-ttu-id="2e1de-197">Os portões que atuam em um ou mais registos qubit são denotados como uma caixa.</span><span class="sxs-lookup"><span data-stu-id="2e1de-197">Gates acting on one or more qubit registers are denoted as a box.</span></span>
 <span data-ttu-id="2e1de-198">Por exemplo, o símbolo</span><span class="sxs-lookup"><span data-stu-id="2e1de-198">For example, the symbol</span></span>
 
-<span data-ttu-id="2e1de-199">:::no-loc(<):::!--- ![](.\media\2.svg) ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-199">:::no-loc(<):::!--- ![](.\media\2.svg) ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-200">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-200">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-201">![Símbolo para uma operação Hadamard agindo num registo de um único qubit](:::no-loc(~):::/media/2.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-201">![Symbol for a Hadamard operation acting on a single-qubit register](:::no-loc(~):::/media/2.svg)</span></span>
+<span data-ttu-id="2e1de-199"><!--- ![](.\media\2.svg) ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-199"><!--- ![](.\media\2.svg) ---></span></span>
+<span data-ttu-id="2e1de-200"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-200"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-201">![Símbolo para uma operação Hadamard agindo num registo de um único qubit](~/media/2.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-201">![Symbol for a Hadamard operation acting on a single-qubit register](~/media/2.svg)</span></span>
 
 <span data-ttu-id="2e1de-202">é uma operação [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) agindo num registo de um único qubit.</span><span class="sxs-lookup"><span data-stu-id="2e1de-202">is a [Hadamard](xref:Microsoft.Quantum.Intrinsic.H) operation acting on a single-qubit register.</span></span>
 
@@ -115,11 +115,11 @@
 <span data-ttu-id="2e1de-204">Por outras palavras, se imaginarmos os fios como segurando o estado quântico, os fios trazem o estado quântico através de cada um dos portões do diagrama da esquerda para a direita.</span><span class="sxs-lookup"><span data-stu-id="2e1de-204">In other words, if you picture the wires as holding the quantum state, the wires bring the quantum state through each of the gates in the diagram from left to right.</span></span>
 <span data-ttu-id="2e1de-205">Ou seja,</span><span class="sxs-lookup"><span data-stu-id="2e1de-205">That is to say</span></span> 
 
-<span data-ttu-id="2e1de-206">:::no-loc(<):::!--- ![](.\media\3.svg) ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-206">:::no-loc(<):::!--- ![](.\media\3.svg) ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-207">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-207">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-208">![Diagrama de portões quânticos sendo aplicado da esquerda para a direita](:::no-loc(~):::/media/3.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-208">![Diagram of quantum gates being applied left-to-right](:::no-loc(~):::/media/3.svg)</span></span>
+<span data-ttu-id="2e1de-206"><!--- ![](.\media\3.svg) ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-206"><!--- ![](.\media\3.svg) ---></span></span>
+<span data-ttu-id="2e1de-207"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-207"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-208">![Diagrama de portões quânticos sendo aplicado da esquerda para a direita](~/media/3.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-208">![Diagram of quantum gates being applied left-to-right](~/media/3.svg)</span></span>
 
-<span data-ttu-id="2e1de-209">é a matriz unitária :::no-loc($)::: CBA :::no-loc($)::: .</span><span class="sxs-lookup"><span data-stu-id="2e1de-209">is the unitary matrix :::no-loc($):::CBA:::no-loc($):::.</span></span>
+<span data-ttu-id="2e1de-209">é a matriz unitária $ CBA $ .</span><span class="sxs-lookup"><span data-stu-id="2e1de-209">is the unitary matrix $CBA$.</span></span>
 <span data-ttu-id="2e1de-210">A multiplicação da matriz obedece à convenção oposta: a matriz mais direita é aplicada primeiro.</span><span class="sxs-lookup"><span data-stu-id="2e1de-210">Matrix multiplication obeys the opposite convention: the right-most matrix is applied first.</span></span> <span data-ttu-id="2e1de-211">Nos diagramas do circuito quântico, no entanto, o portão mais à esquerda é aplicado primeiro.</span><span class="sxs-lookup"><span data-stu-id="2e1de-211">In quantum circuit diagrams, however, the left-most gate is applied first.</span></span>
 <span data-ttu-id="2e1de-212">Esta diferença pode, por vezes, conduzir à confusão, pelo que é importante notar esta diferença significativa entre a notação algébrica linear e os diagramas do circuito quântico.</span><span class="sxs-lookup"><span data-stu-id="2e1de-212">This difference can at times lead to confusion, so it is important to note this significant difference between the linear algebraic notation and quantum circuit diagrams.</span></span>
 
@@ -131,38 +131,38 @@
 <span data-ttu-id="2e1de-218">Por esta razão, qualquer caixa desenhada num diagrama de circuito deve ter precisamente o mesmo número de fios que a entram na saída.</span><span class="sxs-lookup"><span data-stu-id="2e1de-218">For this reason any box drawn in a circuit diagram must have precisely the same number of wires entering it as exiting it.</span></span>
 
 <span data-ttu-id="2e1de-219">Os diagramas de circuitos multi-qubit seguem convenções semelhantes às de um único qubit.</span><span class="sxs-lookup"><span data-stu-id="2e1de-219">Multi-qubit circuit diagrams follow similar conventions to single-qubit ones.</span></span>
-<span data-ttu-id="2e1de-220">Como exemplo esclarecedor, podemos definir uma operação unitária de dois :::no-loc($)::: qubits B para ser :::no-loc($)::: :::no-loc($)::: (H S :::no-loc(\otimes)::: X) e expressar o circuito de :::no-loc($)::: forma equivalente a</span><span class="sxs-lookup"><span data-stu-id="2e1de-220">As a clarifying example, we can define a two-qubit unitary operation :::no-loc($):::B:::no-loc($)::: to be :::no-loc($):::(H S:::no-loc(\otimes)::: X):::no-loc($)::: and express the circuit equivalently as</span></span>
+<span data-ttu-id="2e1de-220">Como exemplo esclarecedor, podemos definir uma operação unitária de dois $ qubits B para ser $ $ (H S \otimes X) e expressar o circuito de $ forma equivalente a</span><span class="sxs-lookup"><span data-stu-id="2e1de-220">As a clarifying example, we can define a two-qubit unitary operation $B$ to be $(H S\otimes X)$ and express the circuit equivalently as</span></span>
 
-<span data-ttu-id="2e1de-221">:::no-loc(<):::!--- ![](.\media\4.svg) ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-221">:::no-loc(<):::!--- ![](.\media\4.svg) ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-222">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-222">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-223">![Diagrama de circuito de uma operação unitária de dois qubits](:::no-loc(~):::/media/4.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-223">![Circuit diagram of a two-qubit unitary operation](:::no-loc(~):::/media/4.svg)</span></span>
+<span data-ttu-id="2e1de-221"><!--- ![](.\media\4.svg) ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-221"><!--- ![](.\media\4.svg) ---></span></span>
+<span data-ttu-id="2e1de-222"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-222"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-223">![Diagrama de circuito de uma operação unitária de dois qubits](~/media/4.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-223">![Circuit diagram of a two-qubit unitary operation](~/media/4.svg)</span></span>
 
-<span data-ttu-id="2e1de-224">Também podemos ver :::no-loc($)::: B como tendo uma :::no-loc($)::: ação num único registo de dois qubits em vez de dois registos de um qubit, dependendo do contexto em que o circuito é utilizado.</span><span class="sxs-lookup"><span data-stu-id="2e1de-224">We can also view :::no-loc($):::B:::no-loc($)::: as having an action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used.</span></span> <span data-ttu-id="2e1de-225">Talvez a propriedade mais útil de tais diagramas de circuito abstrato é que permitem que algoritmos quânticos complicados sejam descritos a um nível elevado sem ter que compilá-los até portões fundamentais.</span><span class="sxs-lookup"><span data-stu-id="2e1de-225">Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.</span></span>
+<span data-ttu-id="2e1de-224">Também podemos ver $ B como tendo uma $ ação num único registo de dois qubits em vez de dois registos de um qubit, dependendo do contexto em que o circuito é utilizado.</span><span class="sxs-lookup"><span data-stu-id="2e1de-224">We can also view $B$ as having an action on a single two-qubit register rather than two one-qubit registers depending on the context in which the circuit is used.</span></span> <span data-ttu-id="2e1de-225">Talvez a propriedade mais útil de tais diagramas de circuito abstrato é que permitem que algoritmos quânticos complicados sejam descritos a um nível elevado sem ter que compilá-los até portões fundamentais.</span><span class="sxs-lookup"><span data-stu-id="2e1de-225">Perhaps the most useful property of such abstract circuit diagrams is that they allow complicated quantum algorithms to be described at a high level without having to compile them down to fundamental gates.</span></span>
 <span data-ttu-id="2e1de-226">Isto significa que você pode obter uma intuição sobre o fluxo de dados para um grande algoritmo quântico sem precisar de entender todos os detalhes de como cada um dos subrotinas dentro do algoritmo funciona.</span><span class="sxs-lookup"><span data-stu-id="2e1de-226">This means that you can get an intuition about the data flow for a large quantum algorithm without needing to understand all the details of how each of the subroutines within the algorithm work.</span></span>
 
 ## <a name="controlled-gates"></a><span data-ttu-id="2e1de-227">Portões controlados</span><span class="sxs-lookup"><span data-stu-id="2e1de-227">Controlled gates</span></span>
 <span data-ttu-id="2e1de-228">A outra construção que é incorporada em diagramas de circuito quântico multi-qubit é o controlo.</span><span class="sxs-lookup"><span data-stu-id="2e1de-228">The other construct that is built into multi-qubit quantum circuit diagrams is control.</span></span>
-<span data-ttu-id="2e1de-229">A ação de um portão quântico controlado por singingly, denotado :::no-loc($)::: :::no-loc(\Lambda)::: (G) :::no-loc($)::: , onde um único qubit controla a aplicação de G , pode ser entendida o seguinte exemplo de uma entrada do estado do produto :::no-loc($)::: :::no-loc($)::: :::no-loc($)::: :::no-loc(\Lambda)::: (G) :::no-loc(\alpha)::: :::no-loc(\ket)::: :::no-loc({)::: (0 :::no-loc(}):::  +  :::no-loc(\beta)::: :::no-loc(\ket)::: :::no-loc({)::: 1 ) :::no-loc(})::: :::no-loc(\ket)::: :::no-loc({)::: :::no-loc(\psi)::: :::no-loc(})::: :::no-loc(=)::: :::no-loc(\alpha)::: :::no-loc(\ket)::: :::no-loc({)::: :::no-loc(})::: :::no-loc(\ket)::: :::no-loc({)::: :::no-loc(\psi)::: :::no-loc(}):::  +  :::no-loc(\beta)::: :::no-loc(\ket)::: :::no-loc({)::: 0 1 G :::no-loc(})::: :::no-loc(\ket)::: :::no-loc({)::: :::no-loc(\psi)::: :::no-loc(})::: :::no-loc($)::: . Ou seja, o portão controlado :::no-loc($)::: aplica-se G :::no-loc($)::: ao registo contendo se e :::no-loc($)::: :::no-loc(\psi)::: :::no-loc($)::: somente se o qubit de controlo tomar o valor :::no-loc($)::: 1 :::no-loc($)::: .</span><span class="sxs-lookup"><span data-stu-id="2e1de-229">The action of a quantum singly controlled gate, denoted :::no-loc($)::::::no-loc(\Lambda):::(G):::no-loc($):::, where a single qubit's value controls the application of :::no-loc($):::G:::no-loc($):::, can be understood by looking at the following example of a product state input :::no-loc($)::::::no-loc(\Lambda):::(G) (:::no-loc(\alpha)::: :::no-loc(\ket)::::::no-loc({):::0:::no-loc(})::: + :::no-loc(\beta)::: :::no-loc(\ket)::::::no-loc({):::1:::no-loc(}):::) :::no-loc(\ket)::::::no-loc({)::::::no-loc(\psi)::::::no-loc(})::: :::no-loc(=)::: :::no-loc(\alpha)::: :::no-loc(\ket)::::::no-loc({):::0:::no-loc(})::: :::no-loc(\ket)::::::no-loc({)::::::no-loc(\psi)::::::no-loc(})::: + :::no-loc(\beta)::: :::no-loc(\ket)::::::no-loc({):::1:::no-loc(})::: G:::no-loc(\ket)::::::no-loc({)::::::no-loc(\psi)::::::no-loc(})::::::no-loc($):::. That is to say, the controlled gate applies :::no-loc($):::G:::no-loc($)::: to the register containing :::no-loc($)::::::no-loc(\psi)::::::no-loc($)::: if and only if the control qubit takes the value :::no-loc($):::1:::no-loc($):::.</span></span>
+<span data-ttu-id="2e1de-229">A ação de um portão quântico controlado por singingly, denotado $ \Lambda (G) $ , onde um único qubit controla a aplicação de G , pode ser entendida o seguinte exemplo de uma entrada do estado do produto $ $ $ \Lambda (G) \alpha \ket { (0 }  +  \beta \ket { 1 ) } \ket { \psi } = \alpha \ket { } \ket { \psi }  +  \beta \ket { 0 1 G } \ket { \psi } $ . Ou seja, o portão controlado $ aplica-se G $ ao registo contendo se e $ \psi $ somente se o qubit de controlo tomar o valor $ 1 $ .</span><span class="sxs-lookup"><span data-stu-id="2e1de-229">The action of a quantum singly controlled gate, denoted $\Lambda(G)$, where a single qubit's value controls the application of $G$, can be understood by looking at the following example of a product state input $\Lambda(G) (\alpha \ket{0} + \beta \ket{1}) \ket{\psi} = \alpha \ket{0} \ket{\psi} + \beta \ket{1} G\ket{\psi}$. That is to say, the controlled gate applies $G$ to the register containing $\psi$ if and only if the control qubit takes the value $1$.</span></span>
 <span data-ttu-id="2e1de-230">Em geral, descrevemos tais operações controladas em diagramas de circuitos como</span><span class="sxs-lookup"><span data-stu-id="2e1de-230">In general, we describe such controlled operations in circuit diagrams as</span></span>
 
-<span data-ttu-id="2e1de-231">:::no-loc(<):::!--- ![](.\media\5.svg) ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-231">:::no-loc(<):::!--- ![](.\media\5.svg) ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-232">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-232">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-233">![Diagrama de circuito de um portão controlado por singly](:::no-loc(~):::/media/5.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-233">![Circuit diagram of a singly controlled gate](:::no-loc(~):::/media/5.svg)</span></span>
+<span data-ttu-id="2e1de-231"><!--- ![](.\media\5.svg) ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-231"><!--- ![](.\media\5.svg) ---></span></span>
+<span data-ttu-id="2e1de-232"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-232"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-233">![Diagrama de circuito de um portão controlado por singly](~/media/5.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-233">![Circuit diagram of a singly controlled gate](~/media/5.svg)</span></span>
 
-<span data-ttu-id="2e1de-234">Aqui o círculo preto denota a bit quântica sobre a qual o portão é controlado e um fio vertical denota o unitário que é aplicado quando o qubit de controlo toma o valor :::no-loc($)::: 1 :::no-loc($)::: .</span><span class="sxs-lookup"><span data-stu-id="2e1de-234">Here the black circle denotes the quantum bit on which the gate is controlled and a vertical wire denotes the unitary that is applied when the control qubit takes the value :::no-loc($):::1:::no-loc($):::.</span></span>
-<span data-ttu-id="2e1de-235">Para os casos especiais em :::no-loc($)::: que G X e G Z :::no-loc(=)::: :::no-loc($)::: :::no-loc($)::: :::no-loc(=)::: :::no-loc($)::: introduzimos a seguinte notação para descrever a versão controlada dos portões (note que o portão controlado-X é o [ :::no-loc($)::: :::no-loc($)::: portão CNOT):](xref:Microsoft.Quantum.Intrinsic.CNOT)</span><span class="sxs-lookup"><span data-stu-id="2e1de-235">For the special cases where :::no-loc($):::G:::no-loc(=):::X:::no-loc($)::: and :::no-loc($):::G:::no-loc(=):::Z:::no-loc($)::: we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the [:::no-loc($):::CNOT:::no-loc($)::: gate](xref:Microsoft.Quantum.Intrinsic.CNOT)):</span></span>
+<span data-ttu-id="2e1de-234">Aqui o círculo preto denota a bit quântica sobre a qual o portão é controlado e um fio vertical denota o unitário que é aplicado quando o qubit de controlo toma o valor $ 1 $ .</span><span class="sxs-lookup"><span data-stu-id="2e1de-234">Here the black circle denotes the quantum bit on which the gate is controlled and a vertical wire denotes the unitary that is applied when the control qubit takes the value $1$.</span></span>
+<span data-ttu-id="2e1de-235">Para os casos especiais em $ que G X e G Z = $ $ = $ introduzimos a seguinte notação para descrever a versão controlada dos portões (note que o portão controlado-X é o [ $ $ portão CNOT):](xref:Microsoft.Quantum.Intrinsic.CNOT)</span><span class="sxs-lookup"><span data-stu-id="2e1de-235">For the special cases where $G=X$ and $G=Z$ we introduce the following notation to describe the controlled version of the gates (note that the controlled-X gate is the [$CNOT$ gate](xref:Microsoft.Quantum.Intrinsic.CNOT)):</span></span>
 
-<span data-ttu-id="2e1de-236">:::no-loc(<):::!--- ![](.\media\6.svg) ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-236">:::no-loc(<):::!--- ![](.\media\6.svg) ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-237">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-237">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-238">![Diagrama de circuito para casos especiais de portões controlados](:::no-loc(~):::/media/6.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-238">![Circuit diagram for special cases of controlled gates](:::no-loc(~):::/media/6.svg)</span></span>
+<span data-ttu-id="2e1de-236"><!--- ![](.\media\6.svg) ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-236"><!--- ![](.\media\6.svg) ---></span></span>
+<span data-ttu-id="2e1de-237"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-237"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-238">![Diagrama de circuito para casos especiais de portões controlados](~/media/6.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-238">![Circuit diagram for special cases of controlled gates](~/media/6.svg)</span></span>
 
-<span data-ttu-id="2e1de-239">:::no-loc(Q#)::: fornece métodos para gerar automaticamente a versão controlada de uma operação, o que evita que o programador tenha de codificar estas operações.</span><span class="sxs-lookup"><span data-stu-id="2e1de-239">:::no-loc(Q#)::: provides methods to automatically generate the controlled version of an operation, which saves the programmer from having to hand code these operations.</span></span> <span data-ttu-id="2e1de-240">Um exemplo disso é mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="2e1de-240">An example of this is shown below:</span></span>
+<span data-ttu-id="2e1de-239">Q# fornece métodos para gerar automaticamente a versão controlada de uma operação, o que evita que o programador tenha de codificar estas operações.</span><span class="sxs-lookup"><span data-stu-id="2e1de-239">Q# provides methods to automatically generate the controlled version of an operation, which saves the programmer from having to hand code these operations.</span></span> <span data-ttu-id="2e1de-240">Um exemplo disso é mostrado abaixo:</span><span class="sxs-lookup"><span data-stu-id="2e1de-240">An example of this is shown below:</span></span>
 
 ```qsharp
 operation PrepareSuperposition(qubit : Qubit) : Unit
-is Ctl :::no-loc({)::: // Auto-generate the controlled specialization of the operation
+is Ctl { // Auto-generate the controlled specialization of the operation
     H(qubit);
-:::no-loc(}):::
+}
 ```
 
 ## <a name="measurement-operator"></a><span data-ttu-id="2e1de-241">Operador de medição</span><span class="sxs-lookup"><span data-stu-id="2e1de-241">Measurement operator</span></span>
@@ -171,20 +171,20 @@ is Ctl :::no-loc({)::: // Auto-generate the controlled specialization of the ope
 <span data-ttu-id="2e1de-244">Uma operação de medição é denotada por um símbolo do medidor e toma sempre como entrada um registo qubit (denotado por uma linha sólida) e produz informações clássicas (denotadas por uma linha dupla).</span><span class="sxs-lookup"><span data-stu-id="2e1de-244">A measurement operation is denoted by a meter symbol and always takes as input a qubit register (denoted by a solid line) and outputs classical information (denoted by a double line).</span></span>
 <span data-ttu-id="2e1de-245">Especificamente, tal subcircito parece:</span><span class="sxs-lookup"><span data-stu-id="2e1de-245">Specifically, such a subcircuit looks like:</span></span>
 
-<span data-ttu-id="2e1de-246">:::no-loc(<):::!--- ![](.\media\7.svg) ----:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-246">:::no-loc(<):::!--- ![](.\media\7.svg) ----:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-247">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-247">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-248">![Símbolo que representa uma operação de medição](:::no-loc(~):::/media/7.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-248">![Symbol representing a measurement operation](:::no-loc(~):::/media/7.svg)</span></span>
+<span data-ttu-id="2e1de-246"><!--- ![](.\media\7.svg) ----></span><span class="sxs-lookup"><span data-stu-id="2e1de-246"><!--- ![](.\media\7.svg) ----></span></span>
+<span data-ttu-id="2e1de-247"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-247"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-248">![Símbolo que representa uma operação de medição](~/media/7.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-248">![Symbol representing a measurement operation](~/media/7.svg)</span></span>
 
-<span data-ttu-id="2e1de-249">:::no-loc(Q#)::: implementa um [operador de medida](xref:Microsoft.Quantum.Intrinsic.Measure) para o efeito.</span><span class="sxs-lookup"><span data-stu-id="2e1de-249">:::no-loc(Q#)::: implements a [Measure operator](xref:Microsoft.Quantum.Intrinsic.Measure) for this purpose.</span></span>
+<span data-ttu-id="2e1de-249">Q# implementa um [operador de medida](xref:Microsoft.Quantum.Intrinsic.Measure) para o efeito.</span><span class="sxs-lookup"><span data-stu-id="2e1de-249">Q# implements a [Measure operator](xref:Microsoft.Quantum.Intrinsic.Measure) for this purpose.</span></span>
 <span data-ttu-id="2e1de-250">Consulte a [secção de medições](xref:microsoft.quantum.libraries.standard.prelude#measurements) para obter mais informações.</span><span class="sxs-lookup"><span data-stu-id="2e1de-250">See the [section on measurements](xref:microsoft.quantum.libraries.standard.prelude#measurements) for more information.</span></span>
 
 <span data-ttu-id="2e1de-251">Da mesma forma, o subcircito</span><span class="sxs-lookup"><span data-stu-id="2e1de-251">Similarly, the subcircuit</span></span>
 
-<span data-ttu-id="2e1de-252">:::no-loc(<):::!--- ![](.\media\8.svg) ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-252">:::no-loc(<):::!--- ![](.\media\8.svg) ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-253">:::no-loc(<):::!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-253">:::no-loc(<):::!-- Can't find a way to easily center this... probably an extension needed:  --:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-254">![Diagrama de circuito que representa uma operação controlada](:::no-loc(~):::/media/8.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-254">![Circuit diagram representing a controlled operation](:::no-loc(~):::/media/8.svg)</span></span>
+<span data-ttu-id="2e1de-252"><!--- ![](.\media\8.svg) ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-252"><!--- ![](.\media\8.svg) ---></span></span>
+<span data-ttu-id="2e1de-253"><!-- não consigo encontrar uma maneira de centrar facilmente isto... provavelmente uma extensão necessária: -></span><span class="sxs-lookup"><span data-stu-id="2e1de-253"><!-- Can't find a way to easily center this... probably an extension needed:  --></span></span>
+<span data-ttu-id="2e1de-254">![Diagrama de circuito que representa uma operação controlada](~/media/8.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-254">![Circuit diagram representing a controlled operation](~/media/8.svg)</span></span>
 
-<span data-ttu-id="2e1de-255">dá um portão controlado clássicamente, onde :::no-loc($)::: G é aplicado condicionado no bit de controlo clássico sendo o valor :::no-loc($)::: :::no-loc($)::: 1 :::no-loc($)::: .</span><span class="sxs-lookup"><span data-stu-id="2e1de-255">gives a classically controlled gate, where :::no-loc($):::G:::no-loc($)::: is applied conditioned on the classical control bit being value :::no-loc($):::1:::no-loc($):::.</span></span>
+<span data-ttu-id="2e1de-255">dá um portão controlado clássicamente, onde $ G é aplicado condicionado no bit de controlo clássico sendo o valor $ $ 1 $ .</span><span class="sxs-lookup"><span data-stu-id="2e1de-255">gives a classically controlled gate, where $G$ is applied conditioned on the classical control bit being value $1$.</span></span>
 
 ## <a name="teleportation-circuit-diagram"></a><span data-ttu-id="2e1de-256">Diagrama do circuito de teletransporte</span><span class="sxs-lookup"><span data-stu-id="2e1de-256">Teleportation circuit diagram</span></span>
 <span data-ttu-id="2e1de-257">O teletransporte quântico é talvez o melhor algoritmo quântico para ilustrar estes componentes.</span><span class="sxs-lookup"><span data-stu-id="2e1de-257">Quantum teleportation is perhaps the best quantum algorithm for illustrating these components.</span></span>
@@ -193,5 +193,5 @@ is Ctl :::no-loc({)::: // Auto-generate the controlled specialization of the ope
 <span data-ttu-id="2e1de-260">Isto é necessário para que o protocolo funcione de acordo com as leis da mecânica quântica.</span><span class="sxs-lookup"><span data-stu-id="2e1de-260">This is necessary for the protocol to work according to the laws of quantum mechanics.</span></span>
 <span data-ttu-id="2e1de-261">O circuito de teletransporte quântico é dado abaixo; também fornecemos uma versão anotada do circuito para ilustrar como ler o circuito quântico.</span><span class="sxs-lookup"><span data-stu-id="2e1de-261">The quantum teleportation circuit is given below; we also provide an annotated version of the circuit to illustrate how to read the quantum circuit.</span></span>
 
-<span data-ttu-id="2e1de-262">:::no-loc(<):::!--- largura ![](.\media\tp2.svg) :::no-loc({)::: :::no-loc(=)::: 50%:::no-loc(})::: ---:::no-loc(>):::</span><span class="sxs-lookup"><span data-stu-id="2e1de-262">:::no-loc(<):::!--- ![](.\media\tp2.svg):::no-loc({)::: width:::no-loc(=):::50% :::no-loc(})::: ---:::no-loc(>):::</span></span>
-<span data-ttu-id="2e1de-263">![Circuito de teletransporte quântico](:::no-loc(~):::/media/tp2.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-263">![Quantum teleportation circuit](:::no-loc(~):::/media/tp2.svg)</span></span>
+<span data-ttu-id="2e1de-262"><!--- largura ![](.\media\tp2.svg) { = 50%} ---></span><span class="sxs-lookup"><span data-stu-id="2e1de-262"><!--- ![](.\media\tp2.svg){ width=50% } ---></span></span>
+<span data-ttu-id="2e1de-263">![Circuito de teletransporte quântico](~/media/tp2.svg)</span><span class="sxs-lookup"><span data-stu-id="2e1de-263">![Quantum teleportation circuit](~/media/tp2.svg)</span></span>

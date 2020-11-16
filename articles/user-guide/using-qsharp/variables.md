@@ -1,14 +1,14 @@
 ---
-title: 'Variáveis em :::no-loc(Q#):::'
-description: 'Aprenda a trabalhar com diferentes variáveis em :::no-loc(Q#):::'
+title: 'Variáveis em Q#'
+description: 'Aprenda a trabalhar com diferentes variáveis em Q#'
 author: gillenhaalb
 ms.author: a-gibec
 ms.date: 03/05/2020
 ms.topic: article
 uid: microsoft.quantum.guide.variables
 no-loc:
-- ':::no-loc(Q#):::'
-- ':::no-loc($$v):::'
+- 'Q#'
+- '$$v'
 ms.openlocfilehash: 67c71c09e004d77360902360fefc7a7752e4a829
 ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
 ms.translationtype: MT
@@ -16,16 +16,16 @@ ms.contentlocale: pt-PT
 ms.lasthandoff: 10/27/2020
 ms.locfileid: "92690932"
 ---
-# <a name="variables-in-no-locq"></a><span data-ttu-id="010c6-103">Variáveis em :::no-loc(Q#):::</span><span class="sxs-lookup"><span data-stu-id="010c6-103">Variables in :::no-loc(Q#):::</span></span>
+# <a name="variables-in-no-locq"></a><span data-ttu-id="010c6-103">Variáveis em Q#</span><span class="sxs-lookup"><span data-stu-id="010c6-103">Variables in Q#</span></span>
 
-<span data-ttu-id="010c6-104">:::no-loc(Q#)::: distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas* a expressões.</span><span class="sxs-lookup"><span data-stu-id="010c6-104">:::no-loc(Q#)::: distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
+<span data-ttu-id="010c6-104">Q# distingue entre símbolos mutáveis e imutáveis, ou variáveis, que estão *ligadas/atribuídas* a expressões.</span><span class="sxs-lookup"><span data-stu-id="010c6-104">Q# distinguishes between mutable and immutable symbols, or *variables* , which are bound/assigned to expressions.</span></span>
 <span data-ttu-id="010c6-105">Em geral, o uso de símbolos imutáveis é encorajado porque permite que o compilador execute mais otimizações.</span><span class="sxs-lookup"><span data-stu-id="010c6-105">In general, the use of immutable symbols is encouraged because it allows the compiler to perform more optimizations.</span></span>
 
 <span data-ttu-id="010c6-106">O lado esquerdo de uma ligação consiste de um tuple de símbolo e do lado direito de uma expressão.</span><span class="sxs-lookup"><span data-stu-id="010c6-106">The left-hand-side of a binding consists of a symbol tuple and the right-hand side of an expression.</span></span>
 
 ## <a name="immutable-variables"></a><span data-ttu-id="010c6-107">Variáveis Imutáveis</span><span class="sxs-lookup"><span data-stu-id="010c6-107">Immutable Variables</span></span>
 
-<span data-ttu-id="010c6-108">Pode atribuir um valor de qualquer tipo :::no-loc(Q#)::: a uma variável para reutilização dentro de uma operação ou função utilizando a `let` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="010c6-108">You can assign a value of any type in :::no-loc(Q#)::: to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
+<span data-ttu-id="010c6-108">Pode atribuir um valor de qualquer tipo Q# a uma variável para reutilização dentro de uma operação ou função utilizando a `let` palavra-chave.</span><span class="sxs-lookup"><span data-stu-id="010c6-108">You can assign a value of any type in Q# to a variable for reuse within an operation or function by using the `let` keyword.</span></span> 
 
 <span data-ttu-id="010c6-109">Uma ligação imutável consiste na palavra-chave, `let` seguida de um símbolo ou tuple de símbolo, um sinal `=` igual, uma expressão para ligar o símbolo(s) e um semicolon de terminante.</span><span class="sxs-lookup"><span data-stu-id="010c6-109">An immutable binding consists of the keyword `let`, followed by a symbol or symbol tuple, an equals sign `=`, an expression to bind the symbol(s) to, and a terminating semicolon.</span></span>
 
@@ -110,7 +110,7 @@ function ComplexSum(reals : Double[], ims : Double[]) : Complex[] {
 }
 ```
 
-<span data-ttu-id="010c6-134">No caso das matrizes, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) na :::no-loc(Q#)::: biblioteca padrão fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matrizes, ajudando assim a evitar ter de atualizar os itens de matriz em primeiro lugar.</span><span class="sxs-lookup"><span data-stu-id="010c6-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the :::no-loc(Q#)::: standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
+<span data-ttu-id="010c6-134">No caso das matrizes, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) na Q# biblioteca padrão fornece as ferramentas necessárias para muitas necessidades comuns de inicialização e manipulação de matrizes, ajudando assim a evitar ter de atualizar os itens de matriz em primeiro lugar.</span><span class="sxs-lookup"><span data-stu-id="010c6-134">In the case of arrays, [`Microsoft.Quantum.Arrays`](xref:Microsoft.Quantum.Arrays) in the Q# standard library provides the necessary tools for many common array initialization and manipulation needs, and thus helps avoid having to update array items in the first place.</span></span> 
 
 <span data-ttu-id="010c6-135">As declarações de atualização e reatribuição fornecem uma alternativa, se necessário:</span><span class="sxs-lookup"><span data-stu-id="010c6-135">Update-and-reassign statements provide an alternative if needed:</span></span>
 
@@ -239,4 +239,4 @@ if (a == b) {
 
 ## <a name="next-steps"></a><span data-ttu-id="010c6-158">Passos seguintes</span><span class="sxs-lookup"><span data-stu-id="010c6-158">Next steps</span></span>
 
-<span data-ttu-id="010c6-159">Saiba como [trabalhar com qubits](xref:microsoft.quantum.guide.qubits) em :::no-loc(Q#)::: .</span><span class="sxs-lookup"><span data-stu-id="010c6-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in :::no-loc(Q#):::.</span></span>
+<span data-ttu-id="010c6-159">Saiba como [trabalhar com qubits](xref:microsoft.quantum.guide.qubits) em Q# .</span><span class="sxs-lookup"><span data-stu-id="010c6-159">Learn about [Working With Qubits](xref:microsoft.quantum.guide.qubits) in Q#.</span></span>
