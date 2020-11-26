@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.DecomposedOn
 title: Função decompostaOn
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: DecomposedOn
 qsharp.summary: Decomposes a permutation on a variable
-ms.openlocfilehash: b033723a50fb85e77c9d4baec1f94231327e9b25
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 79f952e7bc7ba9f5337cf5e7a625e0d270a2e17a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725217"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96203234"
 ---
 # <a name="decomposedon-function"></a>Função decompostaOn
 
 Espaço de nome: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Decompõe-se uma permutação numa variável
@@ -28,7 +28,7 @@ function DecomposedOn (perm : Int[], index : Int) : ((Int[], Int[]), Int[])
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada uma permutação $\pi$ `perm` e um índice $i$ ( ), este método devolve três `index` permutações $(\pi_l, \pi_r), \pi')$ de tal forma que as imagens de $\pi_l$ e $\pi_r$ não mudam bits nos seus elementos em índices que não $i$ e imagens de $\pi'$ não mudam um pouco $i$ nos seus elementos.
 

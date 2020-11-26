@@ -81,6 +81,8 @@ functions:
   uid: Microsoft.Quantum.Canon.HammingWeightI
 - summary: Ignora a saída de uma operação ou função.
   uid: Microsoft.Quantum.Canon.Ignore
+- summary: Retorna verdadeira se e somente se o intervalo de entrada estiver vazio.
+  uid: Microsoft.Quantum.Canon.IsRangeEmpty
 - summary: Testes se um dado valor de Resultado for igual a `One` .
   uid: Microsoft.Quantum.Canon.IsResultOne
 - summary: Testes se um dado valor de Resultado for igual a `Zero` .
@@ -220,6 +222,8 @@ operations:
   uid: Microsoft.Quantum.Canon.AndLadder
 - summary: Inverte um determinado qubit de alvo se e somente se ambos os qubits de controlo estiverem no estado 1, utilizando a medição para efetuar a operação adjacente.
   uid: Microsoft.Quantum.Canon.ApplyAnd
+- summary: Calcula uma cadeia de portões E
+  uid: Microsoft.Quantum.Canon.ApplyAndChain
 - summary: ''
   uid: Microsoft.Quantum.Canon.ApplyBound
 - summary: ''
@@ -658,8 +662,6 @@ operations:
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianPower
 - summary: Aplica uma operação para cada índice no produto Cartesiano de várias gamas.
   uid: Microsoft.Quantum.Canon.IterateThroughCartesianProduct
-- summary: Calcula a lógica e de múltiplos qubits.
-  uid: Microsoft.Quantum.Canon.LogicalANDMeasAndFix
 - summary: >+
     > [!WARNING]
 
@@ -727,6 +729,8 @@ operations:
 
     $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
   uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
+- summary: Passo de implementação de `MultiplexOperationsFromGenerator` .
+  uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGeneratorImpl
 - summary: Passo de implementação de MultiplexOperations.
   uid: Microsoft.Quantum.Canon.MultiplexOperationsWithAuxRegister
 - summary: Aplica uma rotação Pauli condicionada a uma matriz de qubits.
@@ -767,14 +771,12 @@ operations:
   uid: Microsoft.Quantum.Canon.Trotter2ImplCA
 - summary: Implementação recursiva do integrador Trotter-Suzuki de encomenda.
   uid: Microsoft.Quantum.Canon.TrotterArbitraryImplCA
-- summary: Passo de implementação de `MultiplexOperationsFromGenerator` .
-  uid: Microsoft.Quantum.Canon._MultiplexOperationsFromGenerator
 summary: ''
 uid: Microsoft.Quantum.Canon
 metadata:
-  ms.openlocfilehash: 15dd183daa445cbde87b573386780d3da34beb86
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: c8bb0e87c5f22812587ed5eaefcddc4ad04b851b
+  ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92715984"
+  ms.lasthandoff: 11/26/2020
+  ms.locfileid: "96204492"
