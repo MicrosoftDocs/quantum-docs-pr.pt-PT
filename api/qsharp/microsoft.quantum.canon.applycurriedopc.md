@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCurriedOpC
 title: AplicarOperação Funcionar
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyCurriedOpC
 qsharp.summary: ''
-ms.openlocfilehash: 1a00fe91889e3100e4d3272d258877b4ec88618f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: faca9b3f6d9a132b591a532c9e2ce54af1f0b182
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718319"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218942"
 ---
 # <a name="applycurriedopc-operation"></a>AplicarOperação Funcionar
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 
 
 ```qsharp
-operation ApplyCurriedOpC<'T, 'U> (curriedOp : ('T -> ('U => Unit is Ctl)), first : 'T, second : 'U) : Unit
+operation ApplyCurriedOpC<'T, 'U> (curriedOp : ('T -> ('U => Unit is Ctl)), first : 'T, second : 'U) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="curriedop--t---u--unit-ctl"></a>curriedOp : 'T-> 'U = [unidade](xref:microsoft.quantum.lang-ref.unit)> Ctl
+### <a name="curriedop--t---u--unit--is-ctl"></a>curriedOp : 'T-> 'U = [unidade](xref:microsoft.quantum.lang-ref.unit) > é CTL
 
 
 

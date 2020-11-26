@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Windows
 title: Função do Windows
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Windows
 qsharp.summary: Returns all consecutive subarrays of length `size`.
-ms.openlocfilehash: 6071d1c3e5981855c57abd0e741b1de0201c30a3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f32a23aa4379744b84c3b8d9c8f565e61c3c64e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718750"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219894"
 ---
 # <a name="windows-function"></a>Função do Windows
 
 Espaço de nome: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve todos os subarrays consecutivos de comprimento `size` .
@@ -28,7 +28,7 @@ function Windows<'T> (size : Int, array : 'T[]) : 'T[][]
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Esta função devolve todos os `n - size + 1` subarrays de comprimento `size` em ordem, onde `n` é o comprimento de `arr` .
 Os primeiros subarrays são `arr[0..size - 1], arr[1..size], arr[2..size + 1]` até à última subarray. `arr[n - size..n - 1]`

@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseBCA
 title: Aplicação OperaçãoIfElseBCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseBCA
 qsharp.summary: Applies one of two unitary operations, depending on the value of a classical bit.
-ms.openlocfilehash: 0ebd086f4c8166a8d6b593200b0a3354c1420c6e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d36b16298ea177f16b7bbb260f069bfe35b9a72f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718196"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218636"
 ---
 # <a name="applyifelsebca-operation"></a>Aplicação OperaçãoIfElseBCA
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma de duas operações unitárias, dependendo do valor de uma parte clássica.
 
 ```qsharp
-operation ApplyIfElseBCA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit
+operation ApplyIfElseBCA<'T, 'U> (bit : Bool, (trueOp : ('T => Unit is Adj + Ctl), trueInput : 'T), (falseOp : ('U => Unit is Adj + Ctl), falseInput : 'U)) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dado um `bit` pouco, aplica a operação `trueOp` com a sua entrada quando é , e `trueInput` `bit` `true` `falseOp(falseInput)` aplica-se quando `bit` é `false` .
 
@@ -39,7 +39,7 @@ Dado um `bit` pouco, aplica a operação `trueOp` com a sua entrada quando é , 
 O valor booleano usado para determinar se `trueOp` é ou `falseOp` não aplicado.
 
 
-### <a name="trueop--t--unit-adj--ctl"></a>trueOp : 'T = [Unit](xref:microsoft.quantum.lang-ref.unit) unidade> Adj + Ctl
+### <a name="trueop--t--unit--is-adj--ctl"></a>trueOp : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 A operação unitária a aplicar quando `bit` é `true` .
 
@@ -49,7 +49,7 @@ A operação unitária a aplicar quando `bit` é `true` .
 A entrada a fornecer `trueOp` quando `bit` é `true` .
 
 
-### <a name="falseop--u--unit-adj--ctl"></a>falseOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="falseop--u--unit--is-adj--ctl"></a>falseOp : 'U = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 A operação unitária a aplicar quando `bit` é `false` .
 

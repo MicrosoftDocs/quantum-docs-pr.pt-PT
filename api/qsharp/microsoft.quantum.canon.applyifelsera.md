@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseRA
 title: Aplicação OperaçãoIfElseRA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseRA
 qsharp.summary: Applies one of two adjointable operations, depending on the value of a classical result.
-ms.openlocfilehash: d0181d98a9867f71d8a8f8dea4331e5a13f9e59c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3ebd09b1e5876ff397f3524ba828ba26a271e91e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718143"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218602"
 ---
 # <a name="applyifelsera-operation"></a>Aplicação OperaçãoIfElseRA
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma de duas operações contíguas, dependendo do valor de um resultado clássico.
 
 ```qsharp
-operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit
+operation ApplyIfElseRA<'T, 'U> (result : Result, (zeroOp : ('T => Unit is Adj), zeroInput : 'T), (oneOp : ('U => Unit is Adj), oneInput : 'U)) : Unit is Adj
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dado o `result` resultado, aplica a operação `zeroOp` com a sua entrada quando é igual a , e `zeroInput` `result` `Zero` aplica-se `oneOp(oneInput)` quando `result == One` .
 
@@ -39,7 +39,7 @@ Dado o `result` resultado, aplica a operação `zeroOp` com a sua entrada quando
 O resultado da medição utilizado para determinar se `zeroOp` ou `oneOp` é aplicado.
 
 
-### <a name="zeroop--t--unit-adj"></a>zeroOp : 'T = [Unit](xref:microsoft.quantum.lang-ref.unit) unidade> Adj
+### <a name="zeroop--t--unit--is-adj"></a>zeroOp : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj
 
 A operação contígua a aplicar quando `result == Zero` . .
 
@@ -49,7 +49,7 @@ A operação contígua a aplicar quando `result == Zero` . .
 A entrada a fornecer `zeroOp` quando `result == Zero` . .
 
 
-### <a name="oneop--u--unit-adj"></a>oneOp : 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="oneop--u--unit--is-adj"></a>oneOp : 'U = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj
 
 A operação contígua a aplicar quando `result == One` . .
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCurriedOp
 title: AplicarOperação Funcionar
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyCurriedOp
 qsharp.summary: ''
-ms.openlocfilehash: 22e2ace51175ed9df1c70bf75ce2b497f8449020
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ab652159fa64a95401d07998ed4aaae5c4dbb92e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718342"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219027"
 ---
 # <a name="applycurriedop-operation"></a>AplicarOperação Funcionar
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 

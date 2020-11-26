@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOneCA
 title: AplicarIfOneCA operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOneCA
 qsharp.summary: Applies a unitary operation conditioned on a classical result value being one.
-ms.openlocfilehash: 973dd3c5f9f3e9ad03c0626a38779f499b7ce657
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 29801ed0bec08d0ab818f237feb17c2a2a7af1e4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718070"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218585"
 ---
 # <a name="applyifoneca-operation"></a>AplicarIfOneCA operação
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação unitária condicionada a um valor de resultado clássico sendo um.
 
 ```qsharp
-operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit
+operation ApplyIfOneCA<'T> (result : Result, (op : ('T => Unit is Adj + Ctl), target : 'T)) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada a operação `op` e o valor do `result` resultado, aplica-se `op` ao se é `target` `result` `One` . Se, `Zero` nada acontecer ao `target` .
 O `CA` sufixo indica que a operação a aplicar é unitária (controlável e adjacente).
@@ -40,7 +40,7 @@ O `CA` sufixo indica que a operação a aplicar é unitária (controlável e adj
 Um resultado de medição que controla se a operação é aplicada ou não.
 
 
-### <a name="op--t--unit-adj--ctl"></a>op : 'T => [Unidade](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="op--t--unit--is-adj--ctl"></a>op : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 Uma operação a ser aplicada condicionalmente.
 

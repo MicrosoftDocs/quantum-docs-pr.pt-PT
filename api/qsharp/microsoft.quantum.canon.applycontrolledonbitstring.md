@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyControlledOnBitString
 title: Aplicar operação ControlledOnBitString
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyControlledOnBitString
 qsharp.summary: Applies a unitary operation on the target register, controlled on a a state specified by a given bit mask.
-ms.openlocfilehash: 7a054511bacff574e6f7e889ace048c78886cf91
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6947d2dbdec4cfbb592143024a7c8ccd53a32029
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718355"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219078"
 ---
 # <a name="applycontrolledonbitstring-operation"></a>Aplicar operação ControlledOnBitString
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação unitária no registo-alvo, controlada num estado especificado por uma determinada máscara de bit.
 
 ```qsharp
-operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit
+operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is Adj + Ctl), controlRegister : Qubit[], targetRegister : 'T) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyControlledOnBitString<'T> (bits : Bool[], oracle : ('T => Unit is
 O fio da broca para controlar a operação unitária dada.
 
 
-### <a name="oracle--t--unit-adj--ctl"></a>oráculo : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit)> Adj + Ctl
+### <a name="oracle--t--unit--is-adj--ctl"></a>oráculo : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 A operação unitária a aplicar no registo-alvo.
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.RightShiftedL
 title: Função RightShiftedL
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: RightShiftedL
 qsharp.summary: Shifts the bitwise representation of a number right by a given number of bits.
-ms.openlocfilehash: 2929ba58b636847257391930e1019769fd2c2580
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3d941e1a0bcd96fe54ab01019293d883f11547a1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718571"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219520"
 ---
 # <a name="rightshiftedl-function"></a>Função RightShiftedL
 
 Espaço de nome: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Muda a representação de um número direito por um determinado número de bits.

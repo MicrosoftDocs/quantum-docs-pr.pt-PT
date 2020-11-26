@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyFermionicSWAP
 title: AplicaçãoFermionicSWAP
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyFermionicSWAP
 qsharp.summary: Applies the Fermionic SWAP.
-ms.openlocfilehash: 25dd91b200700d1474cf27bf1d0fa71d57f2e09b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 0c470705843a6360df0a72374570d86571397e41
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718271"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218806"
 ---
 # <a name="applyfermionicswap-operation"></a>AplicaçãoFermionicSWAP
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica o Permuta Fermionic.
 
 ```qsharp
-operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit
+operation ApplyFermionicSWAP (qubit1 : Qubit, qubit2 : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Isto essencialmente troca os qubits ao aplicar uma fase global de -1 se ambos os qubits forem 1s. Preserva a anti-symmetrização dos orbitais.
 Consulte  para obter mais informações.
@@ -55,7 +55,7 @@ O segundo qubit a ser trocado.
 
 ## <a name="references"></a>Referências
 
-- [*Ryan Babbush, Nathan Wiebe, Jarrod McClean, James McClain, Hartmut Neven, Garnet Kin-Lic Chan* , arXiv:1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
+- [*Ryan Babbush, Nathan Wiebe, Jarrod McClean, James McClain, Hartmut Neven, Garnet Kin-Lic Chan*, arXiv:1706.00023](https://arxiv.org/pdf/1706.00023.pdf)
 
 ## <a name="see-also"></a>Consulte também
 

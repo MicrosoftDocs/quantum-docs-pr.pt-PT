@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Zipped
 title: Função com fecho
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Zipped
 qsharp.summary: Given two arrays, returns a new array of pairs such that each pair contains an element from each original array.
-ms.openlocfilehash: 67170fa005675f0e5d788c9c3b350fb9a961a597
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 56ed97d573bf29dddb7cdb1c3f360218bf97889a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718714"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96219758"
 ---
 # <a name="zipped-function"></a>Função com fecho
 
 Espaço de nome: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Tendo em conta duas matrizes, devolve uma nova matriz de pares de tal forma que cada par contém um elemento de cada matriz original.

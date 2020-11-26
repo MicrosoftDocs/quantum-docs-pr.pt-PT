@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIf
 title: Aplicação OperaçãoIf
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIf
 qsharp.summary: Applies an operation conditioned on a classical bit.
-ms.openlocfilehash: c8f6860a7a3b8af86b0edb048baccbf057dd245a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c5a1012328fa012ee02707aa59c94ac9c44b8e87
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718246"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218840"
 ---
 # <a name="applyif-operation"></a>Aplicação OperaçãoIf
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação condicionada a uma parte clássica.
@@ -28,7 +28,7 @@ operation ApplyIf<'T> (op : ('T => Unit), bit : Bool, target : 'T) : Unit
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada uma operação `op` e um pouco de `bit` valor, aplica-se `op` ao se é `target` `bit` `true` . Se, `false` nada acontecer ao `target` .
 

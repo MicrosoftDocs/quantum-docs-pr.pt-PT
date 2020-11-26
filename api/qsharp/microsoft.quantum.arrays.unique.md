@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.Unique
 title: Função única
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: Unique
 qsharp.summary: Returns a new array that has no equal adjacent elements.
-ms.openlocfilehash: c5d40bb82f2de640e9c78eef0c27e4766b477826
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7964d5d41eb68cb05f9414164d69496c1f76eb08
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718786"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96220013"
 ---
 # <a name="unique-function"></a>Função única
 
 Espaço de nome: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve uma nova matriz que não tem elementos adjacentes iguais.
@@ -28,7 +28,7 @@ function Unique<'T> (equal : (('T, 'T) -> Bool), array : 'T[]) : 'T[]
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada a variedade de elementos e uma função para testar a igualdade, esta função devolve uma nova matriz na qual a ordem relativa dos elementos é mantida, mas todos os elementos adjacentes que são iguais são filtrados a apenas um elemento.
 
