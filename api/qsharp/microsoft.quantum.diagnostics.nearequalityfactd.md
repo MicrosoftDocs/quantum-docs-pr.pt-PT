@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.NearEqualityFactD
 title: Função NearEqualityFactD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: NearEqualityFactD
 qsharp.summary: Asserts that a classical floating point value has the expected value up to a small tolerance of 1e-10.
-ms.openlocfilehash: 5b55f515b27667071218a3f604ef703a6a15206d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5acfe5043342fd88276910a9fd0347f7d2f6960f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712652"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96201517"
 ---
 # <a name="nearequalityfactd-function"></a>Função NearEqualityFactD
 
 Espaço de nome: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Afirma que um valor clássico do ponto flutuante tem o valor esperado até uma pequena tolerância de 1e-10.

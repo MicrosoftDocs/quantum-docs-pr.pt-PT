@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpMachine
 title: Função DumpMachine
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpMachine
 qsharp.summary: Dumps the current target machine's status.
-ms.openlocfilehash: c85cf6764bdc913a71448c525318f45743bf1df0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e7eb2dfce060b61e27deae31e3c1fc6dc3d7655c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92712876"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96202112"
 ---
 # <a name="dumpmachine-function"></a>Função DumpMachine
 
 Espaço de nome: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Despeja o estado atual da máquina alvo.
