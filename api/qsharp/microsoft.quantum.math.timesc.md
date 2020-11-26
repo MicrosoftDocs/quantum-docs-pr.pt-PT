@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.TimesC
 title: Função TimesC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: TimesC
 qsharp.summary: Returns the product of two inputs.
-ms.openlocfilehash: 9caa9a66d3f1bc77a6c931c60ad9cbac341ac227
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f15db0be3ea0b01786b0af093ecd505f60b2e862
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724332"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194377"
 ---
 # <a name="timesc-function"></a>Função TimesC
 
 Espaço de nome: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve o produto de duas entradas.

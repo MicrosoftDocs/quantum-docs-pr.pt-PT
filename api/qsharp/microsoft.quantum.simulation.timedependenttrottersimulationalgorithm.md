@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.TimeDependentTrotterSimulationAlgorithm
 title: Função TimeDependentTrotterSimulationAlgorithm
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: TimeDependentTrotterSimulationAlgorithm
 qsharp.summary: '`TimeDependentSimulationAlgorithm` function that uses a Trotter–Suzuki decomposition to approximate a unitary operator that solves the time-dependent Schrodinger equation.'
-ms.openlocfilehash: 6129d768276b5c9d96a1b1ed9cd5a6a22d28e286
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 94bc606fdc46d77e8beb1470c78102a63e6d4e81
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719867"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192779"
 ---
 # <a name="timedependenttrottersimulationalgorithm-function"></a>Função TimeDependentTrotterSimulationAlgorithm
 
 Espaço de nome: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 `TimeDependentSimulationAlgorithm` função que usa uma decomposição Trotter-Suzuki para aproximar um operador unitário que resolve a equação schrodinger dependente do tempo.

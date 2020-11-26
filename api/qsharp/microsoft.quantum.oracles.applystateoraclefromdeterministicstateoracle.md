@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Oracles.ApplyStateOracleFromDeterministicStateOracle
 title: AplicaStateOracleFromDeterministicStateOracle operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: ApplyStateOracleFromDeterministicStateOracle
 qsharp.summary: Implementation of <xref:microsoft.quantum.canon.stateoraclefromdeterministicstateoracle>.
-ms.openlocfilehash: 84ccd453185351416fa0b19394c71b5a2f3e0262
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ba87428936d8e57c1462f54ac7a86e13dfba7b62
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92724976"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96193969"
 ---
 # <a name="applystateoraclefromdeterministicstateoracle-operation"></a>AplicaStateOracleFromDeterministicStateOracle operação
 
 Espaço de nome: [Microsoft.Quantum.Oráculos](xref:Microsoft.Quantum.Oracles)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Implementação de <xref:microsoft.quantum.canon.stateoraclefromdeterministicstateoracle> .
 
 ```qsharp
-operation ApplyStateOracleFromDeterministicStateOracle (idxFlagQubit : Int, oracleStateDeterministic : Microsoft.Quantum.Oracles.DeterministicStateOracle, qubits : Qubit[]) : Unit
+operation ApplyStateOracleFromDeterministicStateOracle (idxFlagQubit : Int, oracleStateDeterministic : Microsoft.Quantum.Oracles.DeterministicStateOracle, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

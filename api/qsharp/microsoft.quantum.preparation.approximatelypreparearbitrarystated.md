@@ -1,39 +1,30 @@
 ---
-uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState
-title: Operação AproximadamentePrepareArbitraryState
+uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateD
+title: Operação AproximadamentePrepareArbitraryStateD
 ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
-qsharp.name: ApproximatelyPrepareArbitraryState
-qsharp.summary: >-
-  > [!WARNING]
-
-  > ApproximatelyPrepareArbitraryState has been deprecated. Please use <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> instead.
-
-
-  Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients, up to a given approximation tolerance.
-ms.openlocfilehash: 9e1b172258acd0cb09b824a773e7e79d44fec20c
+qsharp.name: ApproximatelyPrepareArbitraryStateD
+qsharp.summary: Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients, up to a given approximation tolerance.
+ms.openlocfilehash: 822efe08e66c43b7a3128d100e3e58a8c2ce3c2e
 ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
 ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193714"
+ms.locfileid: "96193595"
 ---
-# <a name="approximatelypreparearbitrarystate-operation"></a>Operação AproximadamentePrepareArbitraryState
+# <a name="approximatelypreparearbitrarystated-operation"></a>Operação AproximadamentePrepareArbitraryStateD
 
 Espaço de nome: [Microsoft.Quantum.Preparation](xref:Microsoft.Quantum.Preparation)
 
 Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-> [!WARNING]
-> AproximadamentePrepareArbitraryState foi depreciado. Por favor, use <xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP> em vez disso.
-
 Dado um conjunto de coeficientes e um registo quântico codificado pouco endiano, prepara um estado nesse registo descrito pelos coeficientes dados, até uma certa tolerância de aproximação.
 
 ```qsharp
-operation ApproximatelyPrepareArbitraryState (tolerance : Double, coefficients : Microsoft.Quantum.Math.ComplexPolar[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
+operation ApproximatelyPrepareArbitraryStateD (tolerance : Double, coefficients : Double[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
@@ -52,9 +43,9 @@ $$ \begin{align} U\ket{0...0} & = \ket{\psi} \\ \\ & = \frac{ \sum_{j=0}^{2^n-1}
 A tolerância de aproximação a utilizar na preparação do estado.
 
 
-### <a name="coefficients--complexpolar"></a>coeficientes : [ComplexPolar](xref:Microsoft.Quantum.Math.ComplexPolar)[]
+### <a name="coefficients--double"></a>coeficientes : [Duplo](xref:microsoft.quantum.lang-ref.double)[]
 
-Matriz de até $2^n$ coeficientes complexos representados pelo seu valor absoluto e fase $(r_j, t_j)$. O coeficiente de $j$th indexa o estado numérico $\ket{j}$ codificado em formato pequeno-endiano.
+Matriz de até $2^n$ coeficientes reais. O coeficiente de $j$th indexa o estado numérico $\ket{j}$ codificado em formato pequeno-endiano.
 
 
 ### <a name="qubits--littleendian"></a>qubits : [LittleEndian](xref:Microsoft.Quantum.Arithmetic.LittleEndian)
@@ -74,7 +65,3 @@ Coeficientes de entrada negativos $r_j < 0$ serão tratados como se positivos co
 ## <a name="references"></a>Referências
 
 - Síntese dos Circuitos Quânticos Da Lógica Vivek V. Shende, Stephen S. Bullock, Igor L. Markov https://arxiv.org/abs/quant-ph/0406176
-
-## <a name="see-also"></a>Consulte também
-
-- [Microsoft.Quantum.Preparation.ApproximatePrepareArbitraryState](xref:Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryState)
