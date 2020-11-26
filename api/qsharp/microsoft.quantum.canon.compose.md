@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Compose
 title: Função de composição
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Compose
 qsharp.summary: Returns the composition of two functions.
-ms.openlocfilehash: 02cff7eef4d55d27d5d72e6219a90b7d8f5beb3b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: f8c6ad36220b48be1723c2d91cbf7c0a4947af14
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716491"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216766"
 ---
 # <a name="compose-function"></a>Função de composição
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve a composição de duas funções.
@@ -28,7 +28,7 @@ function Compose<'T, 'U, 'V> (outer : ('U -> 'V), inner : ('T -> 'U)) : ('T -> '
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Tendo em conta duas funções $f$ e $g$, devolve uma nova função que representa $f \circ g$.
 

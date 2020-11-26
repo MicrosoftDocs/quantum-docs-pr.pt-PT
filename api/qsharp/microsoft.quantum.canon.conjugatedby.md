@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ConjugatedBy
 title: Função ConjugatedBy
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ConjugatedBy
 qsharp.summary: Given outer and inner operations, returns a new operation that conjugates the inner operation by the outer operation.
-ms.openlocfilehash: 37fbee9a7c11991645933a372f9f12c1fd696b66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ed5316d4603c31d7db2cd6b0d7e54b56fc750fcb
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716474"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216732"
 ---
 # <a name="conjugatedby-function"></a>Função ConjugatedBy
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Dadas as operações exteriores e interiores, devolve uma nova operação que conjuga a operação interna pela operação exterior.
@@ -30,7 +30,7 @@ function ConjugatedBy<'T> (outerOperation : ('T => Unit is Adj), innerOperation 
 
 ## <a name="input"></a>Entrada
 
-### <a name="outeroperation--t--unit-adj"></a>outerOperation : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="outeroperation--t--unit--is-adj"></a>outerOperation : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj
 
 A operação $U$ que deve ser usada para conjugar $V dólares. Note que a operação exterior $U$ tem de ser adjacente, mas não precisa de ser controlável.
 

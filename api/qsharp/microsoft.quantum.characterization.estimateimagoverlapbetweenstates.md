@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateImagOverlapBetweenStates
 title: EstimativaImagOverlapBetweenStates operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateImagOverlapBetweenStates
 qsharp.summary: Given two operations which each prepare copies of a state, estimates the imaginary part of the overlap between the states prepared by each operation.
-ms.openlocfilehash: 8b73115c3243c594897ac4b309ec52d5e9863d26
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b192abc4ba37d126bf46f94c66cb87fe3bbec4c8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715046"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216205"
 ---
 # <a name="estimateimagoverlapbetweenstates-operation"></a>EstimativaImagOverlapBetweenStates operação
 
 Espaço de nome: [Microsoft.Quantum.Characterization](xref:Microsoft.Quantum.Characterization)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Tendo em conta duas operações que cada uma prepara cópias de um Estado, estima a parte imaginária da sobreposição entre os Estados preparados por cada operação.
@@ -30,17 +30,17 @@ operation EstimateImagOverlapBetweenStates (commonPreparation : (Qubit[] => Unit
 
 ## <a name="input"></a>Entrada
 
-### <a name="commonpreparation--qubit--unit-adj"></a>comunsPreparação : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unidade](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="commonpreparation--qubit--unit--is-adj"></a>comunsPreparação : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj
 
 Uma operação que prepara um estado de entrada fixo.
 
 
-### <a name="preparation1--qubit--unit-adj--ctl"></a>preparação1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = unidade> [Adj](xref:microsoft.quantum.lang-ref.unit) + Ctl
+### <a name="preparation1--qubit--unit--is-adj--ctl"></a>preparação1 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 A primeira das duas operações de preparação do Estado a ser comparada.
 
 
-### <a name="preparation2--qubit--unit-adj--ctl"></a>preparação2 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [unidade](xref:microsoft.quantum.lang-ref.unit)> Adj + Ctl
+### <a name="preparation2--qubit--unit--is-adj--ctl"></a>preparação2 : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 A segunda das duas operações de preparação do Estado deve ser comparada.
 

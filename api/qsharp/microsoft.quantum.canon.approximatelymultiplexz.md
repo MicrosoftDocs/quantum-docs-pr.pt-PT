@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyMultiplexZ
 title: Operação AproximadamenteMultiplexZ
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyMultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: ac5195b8b3afaad4d41fe50d45652644e2397e1b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5e254c2b2d6cbf29b428f4d55aef0e61356e3480
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716796"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217106"
 ---
 # <a name="approximatelymultiplexz-operation"></a>Operação AproximadamenteMultiplexZ
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma rotação Pauli Z condicionada a uma matriz de qubits, truncando pequenos ângulos de rotação de acordo com uma dada tolerância.
 
 ```qsharp
-operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit
+operation ApproximatelyMultiplexZ (tolerance : Double, coefficients : Double[], control : Microsoft.Quantum.Arithmetic.LittleEndian, target : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Isto aplica a operação unitária controlada por multiplicação que executa rotações por ângulo $\theta_j$ sobre o operador pauli de um único qubit $Z$ quando controlado pelo estado do número de $n$-qubit $\ket{j}$.
 Em particular, esta operação pode ser representada pelo unitário

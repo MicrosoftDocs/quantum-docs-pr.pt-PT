@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.Delay
 title: Atrasar operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: Delay
 qsharp.summary: Applies a given operation with a delay.
-ms.openlocfilehash: f9f0e5c3120eb69bd7431d52d6cde5e846ffbe4d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4f45527faa49f79fccff3892e928fed09f9f0bc8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716320"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96216511"
 ---
 # <a name="delay-operation"></a>Atrasar operação
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma determinada operação com um atraso.
@@ -28,7 +28,7 @@ operation Delay<'T, 'U> (op : ('T => 'U), arg : 'T, aux : Unit) : 'U
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada a operação e uma entrada para essa operação, aplica a operação assim que for fornecida uma entrada adicional.
 Em particular, a expressão `Delay(op, arg, _)` é uma operação que se aplica `op` quando é `arg` chamada.

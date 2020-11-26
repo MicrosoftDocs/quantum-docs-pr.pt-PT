@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachIndex
 title: AplicaçãoToEachIndex operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachIndex
 qsharp.summary: Applies a single-qubit operation to each indexed element in a register.
-ms.openlocfilehash: 4ce184b34add9238e26f9b35b40ec0bddb23ccf9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 746bc19f7a137ef476a25abdabc4737ed6727ff2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717541"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217618"
 ---
 # <a name="applytoeachindex-operation"></a>AplicaçãoToEachIndex operação
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação de um único qubit a cada elemento indexado num registo.

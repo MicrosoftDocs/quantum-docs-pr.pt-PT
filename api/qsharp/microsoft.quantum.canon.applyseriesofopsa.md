@@ -1,36 +1,36 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplySeriesOfOpsA
 title: AplicaçãoSeriesOfOpsA operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplySeriesOfOpsA
 qsharp.summary: Applies a list of ops and their targets sequentially on an array. (Adjoint)
-ms.openlocfilehash: e2b928fa4c9446e16d2bf5e7b68a32d4bba3a528
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e5b3527507f79dcc77803ce01472856145df0e9f
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717653"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217973"
 ---
 # <a name="applyseriesofopsa-operation"></a>AplicaçãoSeriesOfOpsA operação
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma lista de operações e os seus alvos sequencialmente numa matriz. (Adjacente)
 
 ```qsharp
-operation ApplySeriesOfOpsA<'T> (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit
+operation ApplySeriesOfOpsA<'T> (listOfOps : ('T[] => Unit is Adj)[], targets : Int[][], register : 'T[]) : Unit is Adj
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="listofops--t--unit-adj"></a>listOfOps : 'T[] => [Unidade](xref:microsoft.quantum.lang-ref.unit) Adj[]
+### <a name="listofops--t--unit--is-adj"></a>listOfOps : 'T[] = [> Unidade](xref:microsoft.quantum.lang-ref.unit)  é Adj[]
 
 Lista de ops, cada um tomando uma matriz 'T, a ser aplicado. São aplicados sequencialmente, o índice mais baixo primeiro.
 Cada um deve ter um functor adjacente

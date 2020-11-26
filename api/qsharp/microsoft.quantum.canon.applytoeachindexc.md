@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachIndexC
 title: Aplicação Operação SeachIndexC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachIndexC
 qsharp.summary: Applies a single-qubit operation to each indexed element in a register. The modifier `C` indicates that the single-qubit operation is controllable.
-ms.openlocfilehash: 387d7ea24b9251386a71b42a1f51ce70933bf6fc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 38fa23c70965118f1787f156bd617d6e967aba05
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717527"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96217667"
 ---
 # <a name="applytoeachindexc-operation"></a>Aplicação Operação SeachIndexC
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação de um único qubit a cada elemento indexado num registo.
 O modificador `C` indica que a operação de um único qubit é controlável.
 
 ```qsharp
-operation ApplyToEachIndexC<'T> (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit
+operation ApplyToEachIndexC<'T> (singleElementOperation : ((Int, 'T) => Unit is Ctl), register : 'T[]) : Unit is Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="singleelementoperation--intt--unit-ctl"></a>singleElementOperation :[(Int](xref:microsoft.quantum.lang-ref.int),'T) => [Unidade](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="singleelementoperation--intt--unit--is-ctl"></a>singleElementOperation :[(Int](xref:microsoft.quantum.lang-ref.int),'T) = [> Unit](xref:microsoft.quantum.lang-ref.unit)  is Ctl
 
 Operação a aplicar a cada qubit.
 
