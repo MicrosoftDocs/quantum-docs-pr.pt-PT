@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.DivideI
 title: Operação DivideI
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: DivideI
 qsharp.summary: Divides two quantum integers.
-ms.openlocfilehash: 0cc16dddc27a000dbc30de6ae27976a01fd9f4ed
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4cff191e1f9d42659768b4059e477f1a07948ba1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223311"
 ---
 # <a name="dividei-operation"></a>Operação DivideI
 
 Espaço de nome: [Microsoft.Quantum.Aritmética](xref:Microsoft.Quantum.Arithmetic)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Nummerics](https://nuget.org/packages/Microsoft.Quantum.Numerics)
 
 
 Divide dois inteiros quânticos.
 
 ```qsharp
-operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation DivideI (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Microsoft.Quantum.Arithmetic.LittleEndian, result : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 `xs` irá segurar o restante `xs - floor(xs/ys) * ys` e `result` irá aguentar `floor(xs/ys)` .
 

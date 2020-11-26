@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Core.RangeStart
 title: Função RangeStart
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Core
 qsharp.name: RangeStart
 qsharp.summary: Returns the defined start value of the given range.
-ms.openlocfilehash: 3e4b0cebe34b4c98cb1d582a9cd11b46ff778517
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 44683b204ecd469f5f5412a7ec06e98ec8a4f37e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713170"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224008"
 ---
 # <a name="rangestart-function"></a>Função RangeStart
 
 Espaço de nome: [Microsoft.Quantum.Core](xref:Microsoft.Quantum.Core)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Devolve o valor de início definido da gama dada.

@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Diagnostics._flipToBasis
 title: operação _flipToBasis
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
@@ -12,18 +12,18 @@ qsharp.summary: >-
   The correspondence between value of `basis[k]` and $\ket{\psi_k}$ is the following:
 
   - `basis[k]=0` $\rightarrow \ket{0}$. - `basis[k]=1` $\rightarrow \ket{1}$. - `basis[k]=2` $\rightarrow \ket{+}$. - `basis[k]=3` $\rightarrow \ket{i}$ ( +1 eigenstate of Pauli Y ).
-ms.openlocfilehash: e074ed2ae259f6aef49a8d327ce518a9e2caebfa
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1581a1267902ceee81d6f01348f4ee718e49ee47
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713145"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96223991"
 ---
 # <a name="_fliptobasis-operation"></a>operação _flipToBasis
 
 Espaço de nome: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Aplica unidades que mapeiam $\ket {0} \otimes\cdots\ket {0} $ a $\ket{\psi_0} \otimes \ket{\psi_{n - 1}}$, onde $\ket{\psi_k}$ depende `basis[k]` de .
@@ -36,7 +36,7 @@ A correspondência entre o valor de `basis[k]` e $\ket{\psi_k}$ é o seguinte:
 - `basis[k]=3` $\rightarrow \ket{i}$ (+1 eigenstate de Pauli Y ).
 
 ```qsharp
-operation _flipToBasis (basis : Int[], qubits : Qubit[]) : Unit
+operation _flipToBasis (basis : Int[], qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

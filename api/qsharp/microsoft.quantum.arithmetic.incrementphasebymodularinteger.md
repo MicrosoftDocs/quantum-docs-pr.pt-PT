@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.IncrementPhaseByModularInteger
 title: IncrementPhaseByModularInteger
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: IncrementPhaseByModularInteger
 qsharp.summary: Performs a modular increment of a qubit register by an integer constant.
-ms.openlocfilehash: 52309c056a3eae25ffdfbfa848f94bf744c71132
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 6a39ce49dfa28c1f1cbe6b29e526144c3ac19e53
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721055"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222886"
 ---
 # <a name="incrementphasebymodularinteger-operation"></a>IncrementPhaseByModularInteger
 
 Espaço de nome: [Microsoft.Quantum.Aritmética](xref:Microsoft.Quantum.Arithmetic)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Executa um incremento modular de um registo qubit por uma constante de inteiro.
 
 ```qsharp
-operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit
+operation IncrementPhaseByModularInteger (increment : Int, modulus : Int, target : Microsoft.Quantum.Arithmetic.PhaseLittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Vamos denotar `increment` por $a$, `modulus` por $N$ e inteiro codificado `target` por $y$.
 Em seguida, a operação executa a seguinte transformação: \start{align} \ket{y} \mapsto \ket{(y + a) \operatorname{mod} N} \end{align} Os inteiros são codificados em formato pequeno-endiano na base QFT.
