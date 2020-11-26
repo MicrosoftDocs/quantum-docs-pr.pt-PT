@@ -1,59 +1,59 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyCurriedOpCA
 title: AplicarCorda OperaçãoOpCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyCurriedOpCA
 qsharp.summary: ''
-ms.openlocfilehash: 4e57772bc5440a473c28279ac125170caaa120f6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: df534a3156ac3f5411161c6faf4d39759e49fbed
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718318"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96218908"
 ---
-# <a name="applycurriedopca-operation"></a><span data-ttu-id="138a1-102">AplicarCorda OperaçãoOpCA</span><span class="sxs-lookup"><span data-stu-id="138a1-102">ApplyCurriedOpCA operation</span></span>
+# <a name="applycurriedopca-operation"></a><span data-ttu-id="fa030-102">AplicarCorda OperaçãoOpCA</span><span class="sxs-lookup"><span data-stu-id="fa030-102">ApplyCurriedOpCA operation</span></span>
 
-<span data-ttu-id="138a1-103">Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="138a1-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
+<span data-ttu-id="fa030-103">Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span><span class="sxs-lookup"><span data-stu-id="fa030-103">Namespace: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)</span></span>
 
-<span data-ttu-id="138a1-104">Pacote: [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="138a1-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="fa030-104">Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="fa030-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
 
 
 ```qsharp
-operation ApplyCurriedOpCA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Ctl + Adj)), first : 'T, second : 'U) : Unit
+operation ApplyCurriedOpCA<'T, 'U> (curriedOp : ('T -> ('U => Unit is Ctl + Adj)), first : 'T, second : 'U) : Unit is Adj + Ctl
 ```
 
 
-## <a name="input"></a><span data-ttu-id="138a1-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="138a1-105">Input</span></span>
+## <a name="input"></a><span data-ttu-id="fa030-105">Entrada</span><span class="sxs-lookup"><span data-stu-id="fa030-105">Input</span></span>
 
-### <a name="curriedop--t---u--unit-ctl--adj"></a><span data-ttu-id="138a1-106">curriedOp : 'T-> 'U = [unidade](xref:microsoft.quantum.lang-ref.unit)> Ctl + Adj</span><span class="sxs-lookup"><span data-stu-id="138a1-106">curriedOp : 'T -> 'U => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj</span></span>
-
-
-
-
-### <a name="first--t"></a><span data-ttu-id="138a1-107">primeiro : 'T</span><span class="sxs-lookup"><span data-stu-id="138a1-107">first : 'T</span></span>
+### <a name="curriedop--t---u--unit--is-adj--ctl"></a><span data-ttu-id="fa030-106">curriedOp : 'T-> 'U = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl</span><span class="sxs-lookup"><span data-stu-id="fa030-106">curriedOp : 'T -> 'U => [Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl</span></span>
 
 
 
 
-### <a name="second--u"></a><span data-ttu-id="138a1-108">segundo : 'U</span><span class="sxs-lookup"><span data-stu-id="138a1-108">second : 'U</span></span>
+### <a name="first--t"></a><span data-ttu-id="fa030-107">primeiro : 'T</span><span class="sxs-lookup"><span data-stu-id="fa030-107">first : 'T</span></span>
+
+
+
+
+### <a name="second--u"></a><span data-ttu-id="fa030-108">segundo : 'U</span><span class="sxs-lookup"><span data-stu-id="fa030-108">second : 'U</span></span>
 
 
 
 
 
-## <a name="output--unit"></a><span data-ttu-id="138a1-109">Saída : [Unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="138a1-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+## <a name="output--unit"></a><span data-ttu-id="fa030-109">Saída : [Unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="fa030-109">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
 
 
-## <a name="type-parameters"></a><span data-ttu-id="138a1-110">Parâmetros de Tipo Genérico</span><span class="sxs-lookup"><span data-stu-id="138a1-110">Type Parameters</span></span>
+## <a name="type-parameters"></a><span data-ttu-id="fa030-110">Parâmetros de Tipo Genérico</span><span class="sxs-lookup"><span data-stu-id="fa030-110">Type Parameters</span></span>
 
-### <a name="t"></a><span data-ttu-id="138a1-111">'T</span><span class="sxs-lookup"><span data-stu-id="138a1-111">'T</span></span>
+### <a name="t"></a><span data-ttu-id="fa030-111">'T</span><span class="sxs-lookup"><span data-stu-id="fa030-111">'T</span></span>
 
 
-### <a name="u"></a><span data-ttu-id="138a1-112">'U</span><span class="sxs-lookup"><span data-stu-id="138a1-112">'U</span></span>
+### <a name="u"></a><span data-ttu-id="fa030-112">'U</span><span class="sxs-lookup"><span data-stu-id="fa030-112">'U</span></span>
 
