@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.OperationPowCA
 title: Função OperationPowCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Raises an operation to a power. The modifier `A` indicates that the operation is controllable and adjointable.
 
   That is, given an operation representing a gate $U$, returns a new operation $U^m$ for a power $m$.
-ms.openlocfilehash: 753063452616747309e3e228ce8a702f4378c61f
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 32de77cbd54cc8eeb8c4a967fd046dca709cd9ea
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715676"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205648"
 ---
 # <a name="operationpowca-function"></a>Função OperationPowCA
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Eleva uma operação a uma potência.
@@ -36,7 +36,7 @@ function OperationPowCA<'T> (op : ('T => Unit is Ctl + Adj), power : Int) : ('T 
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--t--unit-ctl--adj"></a>op : 'T = unidade> [Ctl](xref:microsoft.quantum.lang-ref.unit) + Adj
+### <a name="op--t--unit--is-adj--ctl"></a>op : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 Uma operação $U$ representando o portão a ser repetido.
 
@@ -47,7 +47,7 @@ O número de vezes que $U$ deve ser repetido.
 
 
 
-## <a name="output--t--unit-ctl--adj"></a>Saída : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit)> Ctl + Adj
+## <a name="output--t--unit--is-adj--ctl"></a>Saída : 'T = [Unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 Uma nova operação que representa $U^m$, onde $m = \texttt{power}$.
 

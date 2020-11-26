@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexOperationsFromGenerator
 title: Operação MultiplexOperationsFromGenerator
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies a multiply-controlled unitary operation $U$ that applies a unitary $V_j$ when controlled by n-qubit number state $\ket{j}$.
 
   $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
-ms.openlocfilehash: 2fde0bf391568f39128e6dca4b535aa6b78407c2
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9fbbd9268d4a6b9f3d5fd203969f4bbeebe81b68
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92715802"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96205954"
 ---
 # <a name="multiplexoperationsfromgenerator-operation"></a>Operação MultiplexOperationsFromGenerator
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação unitária controlada por multiplicões $U$ que aplica uma $V_j$ unitária quando controlada pelo estado do número n-qubit $\ket{j}$.
@@ -29,13 +29,13 @@ Aplica uma operação unitária controlada por multiplicões $U$ que aplica uma 
 $U = \sum^{N-1}_{j=0}\ket{j}\bra{j}\otimes V_j$.
 
 ```qsharp
-operation MultiplexOperationsFromGenerator<'T> (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit
+operation MultiplexOperationsFromGenerator<'T> (unitaryGenerator : (Int, (Int -> ('T => Unit is Adj + Ctl))), index : Microsoft.Quantum.Arithmetic.LittleEndian, target : 'T) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="unitarygenerator--intint---t--unit-adj--ctl"></a>unitárioGenerator :[(Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int) -> 'T = [> Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl)
+### <a name="unitarygenerator--intint---t--unit--is-adj--ctl"></a>unitárioGenerator :[(Int](xref:microsoft.quantum.lang-ref.int),[Int](xref:microsoft.quantum.lang-ref.int) -> 'T = [> Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj + Ctl)
 
 Um tuple onde o primeiro elemento `Int` é o número de unitários $N$, e o segundo elemento é uma `(Int -> ('T => () is Adj + Ctl))` função que leva um inteiro $j$ em $[0,N-1]$ e produz a operação unitária $V_j$.
 
