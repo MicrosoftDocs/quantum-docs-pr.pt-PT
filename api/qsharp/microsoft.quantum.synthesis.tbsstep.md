@@ -1,45 +1,45 @@
 ---
 uid: Microsoft.Quantum.Synthesis.TBSStep
 title: Função TBSStep
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: TBSStep
 qsharp.summary: Computes gate masks to transform perm[x] to x and updates the current permutation.
-ms.openlocfilehash: b33269afc2ac14106a18a09e855a8d067b9c558b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 272ab3221e02127074fe6bfc65aee47c40eb88b5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725452"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231063"
 ---
-# <a name="tbsstep-function"></a><span data-ttu-id="c985b-102">Função TBSStep</span><span class="sxs-lookup"><span data-stu-id="c985b-102">TBSStep function</span></span>
+# <a name="tbsstep-function"></a><span data-ttu-id="785bd-102">Função TBSStep</span><span class="sxs-lookup"><span data-stu-id="785bd-102">TBSStep function</span></span>
 
-<span data-ttu-id="c985b-103">Espaço de nome: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)</span><span class="sxs-lookup"><span data-stu-id="c985b-103">Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)</span></span>
+<span data-ttu-id="785bd-103">Espaço de nome: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)</span><span class="sxs-lookup"><span data-stu-id="785bd-103">Namespace: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)</span></span>
 
-<span data-ttu-id="c985b-104">Pacote: [](https://nuget.org/packages/)</span><span class="sxs-lookup"><span data-stu-id="c985b-104">Package: [](https://nuget.org/packages/)</span></span>
+<span data-ttu-id="785bd-104">Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="785bd-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="c985b-105">Computa as máscaras do portão para transformar o perm[x] em x e atualiza a permutação atual.</span><span class="sxs-lookup"><span data-stu-id="c985b-105">Computes gate masks to transform perm[x] to x and updates the current permutation.</span></span>
+<span data-ttu-id="785bd-105">Computa as máscaras do portão para transformar o perm[x] em x e atualiza a permutação atual.</span><span class="sxs-lookup"><span data-stu-id="785bd-105">Computes gate masks to transform perm[x] to x and updates the current permutation.</span></span>
 
 ```qsharp
 function TBSStep (state : (Int[], Microsoft.Quantum.Synthesis.MCMTMask[]), x : Int) : (Int[], Microsoft.Quantum.Synthesis.MCMTMask[])
 ```
 
 
-## <a name="input"></a><span data-ttu-id="c985b-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="c985b-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="785bd-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="785bd-106">Input</span></span>
 
-### <a name="state--intmcmtmask"></a><span data-ttu-id="c985b-107">estado :[(Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span><span class="sxs-lookup"><span data-stu-id="c985b-107">state : ([Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span></span>
-
-
-
-
-### <a name="x--int"></a><span data-ttu-id="c985b-108">x : [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="c985b-108">x : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+### <a name="state--intmcmtmask"></a><span data-ttu-id="785bd-107">estado :[(Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span><span class="sxs-lookup"><span data-stu-id="785bd-107">state : ([Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span></span>
 
 
 
 
+### <a name="x--int"></a><span data-ttu-id="785bd-108">x : [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="785bd-108">x : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
-## <a name="output--intmcmtmask"></a><span data-ttu-id="c985b-109">Saída :[(Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span><span class="sxs-lookup"><span data-stu-id="c985b-109">Output : ([Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span></span>
+
+
+
+
+## <a name="output--intmcmtmask"></a><span data-ttu-id="785bd-109">Saída :[(Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span><span class="sxs-lookup"><span data-stu-id="785bd-109">Output : ([Int](xref:microsoft.quantum.lang-ref.int)[],[MCMTMask](xref:Microsoft.Quantum.Synthesis.MCMTMask)[])</span></span>
 
