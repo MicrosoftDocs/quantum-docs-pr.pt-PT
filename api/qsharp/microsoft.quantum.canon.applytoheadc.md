@@ -1,40 +1,40 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHeadC
 title: Aplicar operação ToHeadC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHeadC
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 3ff6c25837f1219dd456bf1739a2953ff72e2df9
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2b7321a6c385e2d98a0e91a8f58091ea8dc43ff4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717247"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208606"
 ---
 # <a name="applytoheadc-operation"></a>Aplicar operação ToHeadC
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação ao primeiro elemento de uma matriz.
 
 ```qsharp
-operation ApplyToHeadC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit
+operation ApplyToHeadC<'T> (op : ('T => Unit is Ctl), targets : 'T[]) : Unit is Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Head(targets))` .
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--t--unit-ctl"></a>op : 'T => [Unidade](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="op--t--unit--is-ctl"></a>op : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é CTL
 
 Uma operação a ser aplicada.
 

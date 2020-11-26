@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseB
 title: Aplicação OperaçãoIfElseB
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseB
 qsharp.summary: Applies one of two operations, depending on the value of a classical bit.
-ms.openlocfilehash: 68c06a5141b9ff423c2d18adc3a9e162eed939f6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 55ba3bc8c3efb87ef4d550cceeeecd8052e4d8c0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718222"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209592"
 ---
 # <a name="applyifelseb-operation"></a>Aplicação OperaçãoIfElseB
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma de duas operações, dependendo do valor de um pouco clássico.
@@ -28,7 +28,7 @@ operation ApplyIfElseB<'T, 'U> (bit : Bool, (trueOp : ('T => Unit), trueInput : 
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dado um `bit` pouco, aplica a operação `trueOp` com a sua entrada quando é , e `trueInput` `bit` `true` `falseOp(falseInput)` aplica-se quando `bit` é `false` .
 

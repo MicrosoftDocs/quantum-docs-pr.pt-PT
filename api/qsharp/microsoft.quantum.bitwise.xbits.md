@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Bitwise.XBits
 title: Função XBits
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: XBits
 qsharp.summary: Returns an integer representing the X bits of an array of Pauli operators.
-ms.openlocfilehash: 91619803c7efe56e617b16637f5302aa0b7978ec
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 969be01204bad497496ff24cb64213f5fe1f089b
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718559"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209762"
 ---
 # <a name="xbits-function"></a>Função XBits
 
 Espaço de nome: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Devolve um inteiro que representa os X bits de uma série de operadores Pauli.

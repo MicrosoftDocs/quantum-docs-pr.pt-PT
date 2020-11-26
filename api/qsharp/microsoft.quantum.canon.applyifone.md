@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfOne
 title: AplicarIfOne
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfOne
 qsharp.summary: Applies an operation conditioned on a classical result value being one.
-ms.openlocfilehash: 8c668423d126f02736bcb541e73e210a761c5719
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: b7c07e01ebcaf2d475283bea0695aa68dd10776e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92718101"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209405"
 ---
 # <a name="applyifone-operation"></a>AplicarIfOne
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação condicionada a um valor de resultado clássico sendo um.
@@ -28,7 +28,7 @@ operation ApplyIfOne<'T> (result : Result, (op : ('T => Unit), target : 'T)) : U
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada a operação `op` e o valor do `result` resultado, aplica-se `op` ao se é `target` `result` `One` . Se, `Zero` nada acontecer ao `target` .
 

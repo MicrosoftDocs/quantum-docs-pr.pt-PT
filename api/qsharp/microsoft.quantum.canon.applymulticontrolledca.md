@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyMultiControlledCA
 title: Aplicam a operação ApplyMultiControlledCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyMultiControlledCA
 qsharp.summary: Applies a multiply controlled version of a singly controlled operation. The modifier `CA` indicates that the single-qubit operation is controllable and adjointable.
-ms.openlocfilehash: 5662efe0dc6f665206b8773596bf885ce631413c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 28797583c23e21eb4bcae996a34c70ee06c6dbe8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717961"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96209286"
 ---
 # <a name="applymulticontrolledca-operation"></a>Aplicam a operação ApplyMultiControlledCA
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma versão controlada por multiplicação de uma operação controlada por singingly.
 O modificador `CA` indica que a operação de um único qubit é controlável e adjacente.
 
 ```qsharp
-operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit
+operation ApplyMultiControlledCA (singlyControlledOp : (Qubit[] => Unit is Adj), ccnot : Microsoft.Quantum.Canon.CCNOTop, controls : Qubit[], targets : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="singlycontrolledop--qubit--unit-adj"></a>singlyControlledOp : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="singlycontrolledop--qubit--unit--is-adj"></a>singlyControlledOp : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [> Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 Uma operação controlada num único qubit.
 O primeiro qubit no argumento da operação assumido como um controlo e os restantes são assumidos como qubits alvo.

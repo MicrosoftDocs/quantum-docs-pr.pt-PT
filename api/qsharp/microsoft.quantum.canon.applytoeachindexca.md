@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToEachIndexCA
 title: AplicaçãoToAchIndexCA operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToEachIndexCA
 qsharp.summary: Applies a single-qubit operation to each indexed element in a register. The modifier `CA` indicates that the single-qubit operation is adjointable and controllable.
-ms.openlocfilehash: c5bb61aadbdaab9c74a3dcd418088c532b495ff5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: abb616498a8ff9c3348df81cf0ca1a1669561eec
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717513"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208946"
 ---
 # <a name="applytoeachindexca-operation"></a>AplicaçãoToAchIndexCA operação
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação de um único qubit a cada elemento indexado num registo.
 O modificador `CA` indica que a operação de um único qubit é adjacente e controlável.
 
 ```qsharp
-operation ApplyToEachIndexCA<'T> (singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[]) : Unit
+operation ApplyToEachIndexCA<'T> (singleElementOperation : ((Int, 'T) => Unit is Adj + Ctl), register : 'T[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="singleelementoperation--intt--unit-adj--ctl"></a>singleElementOperation :[(Int](xref:microsoft.quantum.lang-ref.int),'T) => [Unidade](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="singleelementoperation--intt--unit--is-adj--ctl"></a>singleElementOperation :[(Int](xref:microsoft.quantum.lang-ref.int),'T) = [> Unit](xref:microsoft.quantum.lang-ref.unit)  é Adj + Ctl
 
 Operação a aplicar a cada qubit.
 

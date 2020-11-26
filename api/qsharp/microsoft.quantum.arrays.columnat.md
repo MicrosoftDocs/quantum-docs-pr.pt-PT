@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAt
 title: Função ColumnAt
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ColumnAt
 qsharp.summary: Extracts a column from a matrix.
-ms.openlocfilehash: ad09ada1a2253a54e70dddd6dba8aa243d2cd5a6
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 097b3fdd6fc1843ada27052fcf08ee80d894d25a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719458"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96210105"
 ---
 # <a name="columnat-function"></a>Função ColumnAt
 
 Espaço de nome: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Extrai uma coluna de uma matriz.
@@ -28,7 +28,7 @@ function ColumnAt<'T> (column : Int, matrix : 'T[][]) : 'T[]
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Esta função extrai uma coluna numa matriz em ordem de linha.
 Extrair uma linha de corrsponds para o acesso do elemento do primeiro índice e, portanto, não requer mais tratamento.

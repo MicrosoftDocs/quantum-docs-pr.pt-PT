@@ -1,37 +1,37 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToFirstTwoQubitsCA
 title: Aplicar operação FirstTwoQubitsCA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToFirstTwoQubitsCA
 qsharp.summary: Applies an operation to the first two qubits in the register. The modifier `CA` indicates that the operation is controllable and adjointable.
-ms.openlocfilehash: 0c5e29fbca8449f8122f2a9f988797e94e27da60
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a2281776b617d5c3f8cc706ea09d14995fce4a27
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92717261"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96208657"
 ---
 # <a name="applytofirsttwoqubitsca-operation"></a>Aplicar operação FirstTwoQubitsCA
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica uma operação aos dois primeiros qubits no registo.
 O modificador `CA` indica que a operação é controlável e adjacente.
 
 ```qsharp
-operation ApplyToFirstTwoQubitsCA (op : ((Qubit, Qubit) => Unit is Adj + Ctl), register : Qubit[]) : Unit
+operation ApplyToFirstTwoQubitsCA (op : ((Qubit, Qubit) => Unit is Adj + Ctl), register : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
 ## <a name="input"></a>Entrada
 
-### <a name="op--qubitqubit--unit-adj--ctl"></a>op :[(Qubit,](xref:microsoft.quantum.lang-ref.qubit)[Qubit)](xref:microsoft.quantum.lang-ref.qubit)=> [Unit](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+### <a name="op--qubitqubit--unit--is-adj--ctl"></a>op :[(Qubit,](xref:microsoft.quantum.lang-ref.qubit)[Qubit)](xref:microsoft.quantum.lang-ref.qubit)= [> Unit](xref:microsoft.quantum.lang-ref.unit) é Adj + Ctl
 
 Uma operação a ser aplicada aos dois primeiros qubits
 
