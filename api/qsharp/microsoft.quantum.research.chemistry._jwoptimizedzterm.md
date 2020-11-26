@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimizedZTerm
 title: operação _JWOptimizedZTerm
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _JWOptimizedZTerm
 qsharp.summary: Applies time-evolution by a Z term described by a `GeneratorIndex`.
-ms.openlocfilehash: 0b54bd7916ff8294501716365c11211b4654f5ad
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 7c2ab2e7bbe628748dd4b6c022c4c96ad37ac314
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722792"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225827"
 ---
 # <a name="_jwoptimizedzterm-operation"></a>operação _JWOptimizedZTerm
 
 Espaço de nome: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Aplica a evolução temporal por um termo Z descrito por um `GeneratorIndex` .
 
 ```qsharp
-operation _JWOptimizedZTerm (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimizedZTerm (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

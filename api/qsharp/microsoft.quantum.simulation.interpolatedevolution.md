@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.InterpolatedEvolution
 title: Função devolção interpolada
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: InterpolatedEvolution
 qsharp.summary: Interpolates between two generators with a uniform schedule, returning an operation that applies simulated evolution under the resulting time-dependent generator to a qubit register.
-ms.openlocfilehash: 18026b9872f6a3344a1e5c2122f55927975ccb59
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 2ad907c02a2412dd4bf95630f401b5f1db5c8a08
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710583"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96225113"
 ---
 # <a name="interpolatedevolution-function"></a>Função devolção interpolada
 
 Espaço de nome: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Interpola entre dois geradores com um horário uniforme, devolvendo uma operação que aplica a evolução simulada sob o gerador dependente do tempo resultante a um registo qubit.
@@ -51,7 +51,7 @@ Um algoritmo de simulação dependente do tempo que será usado para simular a e
 
 
 
-## <a name="output--qubit--unit-adj--ctl"></a>Saída : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [unidade](xref:microsoft.quantum.lang-ref.unit)> Adj + Ctl
+## <a name="output--qubit--unit--is-adj--ctl"></a>Saída : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 
 

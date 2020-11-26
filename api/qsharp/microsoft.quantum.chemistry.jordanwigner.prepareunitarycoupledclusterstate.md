@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.PrepareUnitaryCoupledClusterState
 title: Preparem-se a operação DoCluster
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: PrepareUnitaryCoupledClusterState
 qsharp.summary: Unitary coupled-cluster state preparation of trial state
-ms.openlocfilehash: 4db31e3e79d27f12178dbf121cd04727c2332c62
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9a2a07b1048f872ff8ff1e2dd68df73da5eb1fe0
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713828"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224756"
 ---
 # <a name="prepareunitarycoupledclusterstate-operation"></a>Preparem-se a operação DoCluster
 
 Espaço de nome: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Preparação unitária do estado de agrupamento de agrupamentos do estado experimental

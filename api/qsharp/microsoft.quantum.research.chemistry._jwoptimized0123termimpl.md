@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry._JWOptimized0123TermImpl
 title: operação _JWOptimized0123TermImpl
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: _JWOptimized0123TermImpl
 qsharp.summary: Implementation step of `JWOptimized0123Term_`;
-ms.openlocfilehash: f7ccce774cf247d4b35f37ba5be4929f18a8357d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: dcf6578eeaac6630bd9fdb970a47828ad33e63e4
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710821"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96226048"
 ---
 # <a name="_jwoptimized0123termimpl-operation"></a>operação _JWOptimized0123TermImpl
 
 Espaço de nome: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Passo de implementação `JWOptimized0123Term_` de;
 
 ```qsharp
-operation _JWOptimized0123TermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit
+operation _JWOptimized0123TermImpl (term : Microsoft.Quantum.Simulation.GeneratorIndex, stepSize : Double, parityQubit : Qubit, qubits : Qubit[]) : Unit is Adj + Ctl
 ```
 
 
