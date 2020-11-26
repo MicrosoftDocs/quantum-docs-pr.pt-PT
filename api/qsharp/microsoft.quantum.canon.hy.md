@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Canon.HY
 title: Operação HY
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
@@ -12,18 +12,18 @@ qsharp.summary: >-
   The Y Hadamard transformation $H_Y = S H$ on a single qubit is:
 
   \begin{align} H_Y \mathrel{:=} \frac{1}{\sqrt{2}} \begin{bmatrix} 1 & 1 \\\\ i & -i \end{bmatrix}. \end{align}
-ms.openlocfilehash: bc3417ff948b718be5b96513f30f3e2714b9e20c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ceca8eab8cb8f16333cd7a1e3c24e6cebe4ec8d7
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92716141"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96206838"
 ---
 # <a name="hy-operation"></a>Operação HY
 
 Espaço de nome: [Microsoft.Quantum.Canon](xref:Microsoft.Quantum.Canon)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Aplica o analógico y-base à transformação Hadamard que troca os eixos Z e Y.
@@ -34,7 +34,7 @@ A transformação Y Hadamard $H_Y = S H$ num único qubit é:
 \end{align}
 
 ```qsharp
-operation HY (target : Qubit) : Unit
+operation HY (target : Qubit) : Unit is Adj + Ctl
 ```
 
 
