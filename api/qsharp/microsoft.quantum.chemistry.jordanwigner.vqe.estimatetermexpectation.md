@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner.VQE.EstimateTermExpectation
 title: Operação EstimativaTermExpectation
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner.VQE
 qsharp.name: EstimateTermExpectation
 qsharp.summary: Computes the energy associated to a given Jordan-Wigner Hamiltonian term
-ms.openlocfilehash: ef689c55f966e63a2ab8bcdccf99d9cb5e6d3a4d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 3f0ff5037b1424abb6fb318bd49ffd89f545822d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713730"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96224654"
 ---
 # <a name="estimatetermexpectation-operation"></a>Operação EstimativaTermExpectation
 
 Espaço de nome: [Microsoft.Quantum.Chemistry.JordanWigner.VQE](xref:Microsoft.Quantum.Chemistry.JordanWigner.VQE)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 Calcula a energia associada a um dado termo Jordan-Wigner Hamiltonian
@@ -28,14 +28,14 @@ operation EstimateTermExpectation (inputStateUnitary : (Qubit[] => Unit is Adj),
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Esta operação estima o valor de expectativa associado a cada operador de medição e multiplica-o pelo coeficiente correspondente, utilizando a amostragem.
 Os resultados são agregados numa variável que contém a energia do termo Jordan-Wigner.
 
 ## <a name="input"></a>Entrada
 
-### <a name="inputstateunitary--qubit--unit-adj"></a>inputStateUnitary : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="inputstateunitary--qubit--unit--is-adj"></a>inputStateUnitary : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [> Unit](xref:microsoft.quantum.lang-ref.unit)  is Adj
 
 O unitário usado para a preparação do estado.
 
