@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.EqualA
 title: Função EqualA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: EqualA
 qsharp.summary: Given two arrays of the same type and a predicate that is defined for pairs of elements of the arrays, checks whether the arrays are equal.
-ms.openlocfilehash: 24fd76aaeb66081d6d8f1eaa3056117f54b5a5e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 176e15139a27d375fb047c07fa1ee778dc8cc2ce
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719290"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221373"
 ---
 # <a name="equala-function"></a>Função EqualA
 
 Espaço de nome: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Tendo em conta duas matrizes do mesmo tipo e um predicado que é definido para pares de elementos das matrizes, verifica se as matrizes são iguais.

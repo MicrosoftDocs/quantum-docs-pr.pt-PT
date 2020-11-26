@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.IndexOf
 title: Indexação da função
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: IndexOf
 qsharp.summary: Returns the first index of the first element in an array that satisfies a given predicate. If no such element exists, returns -1.
-ms.openlocfilehash: 7ff80f13f432a18f216b2dee4bd65b1e82034fa5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d63b204334611f8f2c3860f9ee1d756f637780e2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719171"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221016"
 ---
 # <a name="indexof-function"></a>Indexação da função
 
 Espaço de nome: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve o primeiro índice do primeiro elemento numa matriz que satisfaz um dado predicado. Se não existir tal elemento, de volta -1.

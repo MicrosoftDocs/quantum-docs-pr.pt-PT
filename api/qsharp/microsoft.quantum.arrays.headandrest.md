@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Arrays.HeadAndRest
 title: Função HeadAndRest
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: HeadAndRest
 qsharp.summary: Returns a tuple of first and all remaining elements of the array.
-ms.openlocfilehash: 9af4ba48a21d3cdf932b2f702051a70a6108db1b
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 1144e00227df1cd7d96bc76b118b0b556adbaa96
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719182"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96221084"
 ---
 # <a name="headandrest-function"></a>Função HeadAndRest
 
 Espaço de nome: [Microsoft.Quantum.Arrays](xref:Microsoft.Quantum.Arrays)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve uma tuple de primeiro e todos os elementos restantes da matriz.

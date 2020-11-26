@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.PhaseLittleEndian
 title: FaseLittleEndian tipo definido pelo utilizador
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.Arithmetic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Little-endian unsigned integers in QFT basis.
 
   For example, if $\ket{x}$ is the little-endian encoding of the integer $x$ in the computational basis, then $\operatorname{QFTLE} \ket{x}$ is the encoding of $x$ in the QFT basis.
-ms.openlocfilehash: f1f792d62004a2765d4e63870f5a41a4377b0d34
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 45b824a74d664df0d5707264a3c616fb27c477b3
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719734"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96222427"
 ---
 # <a name="phaselittleendian-user-defined-type"></a>FaseLittleEndian tipo definido pelo utilizador
 
 Espaço de nome: [Microsoft.Quantum.Aritmética](xref:Microsoft.Quantum.Arithmetic)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Pequenos inteiros não assinados na base QFT.
