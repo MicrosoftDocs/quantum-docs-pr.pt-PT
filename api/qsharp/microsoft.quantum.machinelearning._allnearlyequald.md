@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._AllNearlyEqualD
 title: função _AllNearlyEqualD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _AllNearlyEqualD
 qsharp.summary: ''
-ms.openlocfilehash: 04c9e966ff322e5519b4726ac17e58d4aef89568
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 9a7dffd220e04b1a4bad55cba41cd49a1ce64a7a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720718"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197029"
 ---
 # <a name="_allnearlyequald-function"></a>função _AllNearlyEqualD
 
 Espaço de nome: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning._UncontrolledSpanSequence
 title: função _UncontrolledSpanSequence
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: _UncontrolledSpanSequence
 qsharp.summary: ''
-ms.openlocfilehash: 851b49c4460c27ab4517df0cb8c93a87869c5994
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 461c7312e11227490728640c82d52a7f826d6990
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720598"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196689"
 ---
 # <a name="_uncontrolledspansequence-function"></a>função _UncontrolledSpanSequence
 
 Espaço de nome: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.NotNearlyEqualD
 title: Não SenlyEqualD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotNearlyEqualD
 qsharp.summary: Returns true if and only if two inputs are not nearly equal (that is, are not within a tolerance of 1e-12).
-ms.openlocfilehash: d9e4cc5b0cfba3989ae64e494d0daa52069718a4
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 23229b1630982eba4485330cc2290aed733c4d86
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720730"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96197148"
 ---
 # <a name="notnearlyequald-function"></a>Não SenlyEqualD
 
 Espaço de nome: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retornas verdadeiras se e somente se duas entradas não forem quase iguais (isto é, não estão dentro de uma tolerância de 1e-12).

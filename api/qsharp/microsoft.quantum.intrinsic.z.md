@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Z
 title: Operação Z
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,18 +10,18 @@ qsharp.summary: >-
   Applies the Pauli $Z$ gate.
 
   \begin{align} \sigma_z \mathrel{:=} \begin{bmatrix} 1 & 0 \\\\ 0 & -1 \end{bmatrix}. \end{align}
-ms.openlocfilehash: 618479eda56524a508b4af01517f1218b60df261
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5bfb435a1e7a7b90da807e7c6edb8358fb006e34
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720815"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198440"
 ---
 # <a name="z-operation"></a>Operação Z
 
 Espaço de nome: [Microsoft.Quantum.Intrínseco](xref:Microsoft.Quantum.Intrinsic)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Aplica o portão pauli $Z$.
@@ -30,7 +30,7 @@ Aplica o portão pauli $Z$.
 \end{align}
 
 ```qsharp
-operation Z (qubit : Qubit) : Unit
+operation Z (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 

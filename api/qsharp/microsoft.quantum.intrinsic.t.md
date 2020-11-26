@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.T
 title: Operação T
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: T
 qsharp.summary: Applies the T gate to a single qubit.
-ms.openlocfilehash: 868031386c95f65ae956b5e444c6d87d7ea0a697
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 352ef2c1b15a46dea85c420fc6f1cfab0382e73a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720851"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198406"
 ---
 # <a name="t-operation"></a>Operação T
 
 Espaço de nome: [Microsoft.Quantum.Intrínseco](xref:Microsoft.Quantum.Intrinsic)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Aplica o portão T a um único qubit.
 
 ```qsharp
-operation T (qubit : Qubit) : Unit
+operation T (qubit : Qubit) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Esta operação pode ser simulada pela matriz unitária \start{align} T \mathrel{:=} \start{bmatrix} 1 & \\ \\ 0 0 & e^{i \pi / 4} \end{bmatrix}.
 \end{align}

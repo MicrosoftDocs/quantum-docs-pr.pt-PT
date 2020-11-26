@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Logical.EqualD
 title: Função EqualD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: EqualD
 qsharp.summary: Returns true if and only if two inputs are equal.
-ms.openlocfilehash: 024ddee785a6a907b4a39d0eccc5990b4c5d5d83
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d6731b293ba402f5cd43591d3c2bcd258e8ebe32
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711395"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96198151"
 ---
 # <a name="equald-function"></a>Função EqualD
 
 Espaço de nome: [Microsoft.Quantum.Logical](xref:Microsoft.Quantum.Logical)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Retorna verdadeira se e somente se duas entradas forem iguais.
