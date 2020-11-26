@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Math.ModPowB
 title: Função ModPowB
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Math
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.math.modpowl".
-ms.openlocfilehash: 4cfe17272e0277ed0b538e342db2bef55bd34919
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a4d3bbfa1ff2024e5ba1ae84b867b6709d498d08
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710163"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96212805"
 ---
 # <a name="modpowb-function"></a>Função ModPowB
 
 Espaço de nome: [Microsoft.Quantum.Extensions.Math](xref:Microsoft.Quantum.Extensions.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]

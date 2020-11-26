@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Extensions.Bitwise.Or
 title: Ou função
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Extensions.Bitwise
@@ -14,18 +14,18 @@ qsharp.summary: >-
   >
 
   > Please use @"microsoft.quantum.bitwise.or".
-ms.openlocfilehash: 3042780b373fa088ec0c8072c4b0c9cddd697fa0
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 74aacdee975e5d6aff1a254ce13e6ca2963e1c26
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711969"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213587"
 ---
 # <a name="or-function"></a>Ou função
 
 Espaço de nome: [Microsoft.Quantum.Extensions.Bitwise](xref:Microsoft.Quantum.Extensions.Bitwise)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 > [!WARNING]
