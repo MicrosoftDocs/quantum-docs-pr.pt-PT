@@ -1,19 +1,19 @@
 ---
 uid: Microsoft.Quantum.Core
 title: Microsoft.Quantum.Core namespace
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: namespace
 qsharp.name: Microsoft.Quantum.Core
 qsharp.summary: This namespace includes Q# core functions and operations.
-ms.openlocfilehash: 678cb9251b3be8bf134bbc76569821a07bb6d46e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 634252c0fd358242d897d1eaedb3a624476b96cd
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713257"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96213876"
 ---
-# <a name="microsoftquantumcore-namespace"></a><span data-ttu-id="00d18-102">Microsoft.Quantum.Core namespace</span><span class="sxs-lookup"><span data-stu-id="00d18-102">Microsoft.Quantum.Core namespace</span></span>
+# <a name="microsoftquantumcore-namespace"></a><span data-ttu-id="e8f4c-102">Microsoft.Quantum.Core namespace</span><span class="sxs-lookup"><span data-stu-id="e8f4c-102">Microsoft.Quantum.Core namespace</span></span>
 
-<span data-ttu-id="00d18-103">Este espaço de nome inclui funções e operações do núcleo Q#.</span><span class="sxs-lookup"><span data-stu-id="00d18-103">This namespace includes Q# core functions and operations.</span></span>
+<span data-ttu-id="e8f4c-103">Este espaço de nome inclui funções e operações do núcleo Q#.</span><span class="sxs-lookup"><span data-stu-id="e8f4c-103">This namespace includes Q# core functions and operations.</span></span>
 
