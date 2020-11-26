@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorIndex
 title: função _JordanWignerClusterOperatorGeneratorIndex
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerClusterOperatorGeneratorIndex
 qsharp.summary: ''
-ms.openlocfilehash: 4317260507042dd41080388d625f513aaaed121d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 967ac4bd693910253a82c26623fc84140771e295
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714629"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215780"
 ---
 # <a name="_jordanwignerclusteroperatorgeneratorindex-function"></a>função _JordanWignerClusterOperatorGeneratorIndex
 
 Espaço de nome: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 

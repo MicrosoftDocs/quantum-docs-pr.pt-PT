@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.Call
 title: Operação de chamada
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: Call
 qsharp.summary: Calls a function with a given input.
-ms.openlocfilehash: 8630f846b4b9823ce1c1dfd61dc8ca81e468517d
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 92c159cef878fb587b0ed514fd6660dd19527cab
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713534"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214216"
 ---
 # <a name="call-operation"></a>Operação de chamada
 
 Espaço de nome: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Chama uma função com uma dada entrada.
@@ -28,7 +28,7 @@ operation Call<'Input, 'Output> (fn : ('Input -> 'Output), input : 'Input) : 'Ou
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Dada uma função e uma entrada para essa função, chama a função e devolve a sua saída.
 

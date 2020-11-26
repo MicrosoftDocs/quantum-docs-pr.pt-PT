@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._ToPauliBases
 title: operação _ToPauliBases
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _ToPauliBases
 qsharp.summary: ''
-ms.openlocfilehash: 7514be53f4fc2ceef43619798c205d46f82a496a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d718a2a44fff0d61f3254e48e4d6c57ba68872d1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92714223"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96215146"
 ---
 # <a name="_topaulibases-operation"></a>operação _ToPauliBases
 
 Espaço de nome: [Microsoft.Quantum.Chemistry.JordanWigner](xref:Microsoft.Quantum.Chemistry.JordanWigner)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Chemistry)
 
 
 
 
 ```qsharp
-operation _ToPauliBases (idx : Int, pauliBases : Qubit[]) : Unit
+operation _ToPauliBases (idx : Int, pauliBases : Qubit[]) : Unit is Adj + Ctl
 ```
 
 

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
 title: Função BoolArrayAsBigInt
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Convert
 qsharp.name: BoolArrayAsBigInt
 qsharp.summary: Converts a given array of Booleans to an equivalent big integer. The 0 element of the array is the least significant bit of the big integer.
-ms.openlocfilehash: 75656ba188a1b822eb42e98412365bf5873bf46e
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5a85fd9f81cec0f2de7e7807622aab9604a4db7c
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92713618"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96214318"
 ---
 # <a name="boolarrayasbigint-function"></a>Função BoolArrayAsBigInt
 
 Espaço de nome: [Microsoft.Quantum.Convert](xref:Microsoft.Quantum.Convert)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Converte uma certa variedade de Booleans para um número inteiro equivalente.
