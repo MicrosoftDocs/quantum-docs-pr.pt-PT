@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PlusI
 title: Função PlusI
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PlusI
 qsharp.summary: Returns the sum of two inputs.
-ms.openlocfilehash: 2ce5007854efdd010b0fb5202ca29888f2cfe838
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 4c3c6698f26e5d06a81245b9bfb9b7842b766fd5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711140"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194785"
 ---
 # <a name="plusi-function"></a>Função PlusI
 
 Espaço de nome: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve a soma de duas entradas.

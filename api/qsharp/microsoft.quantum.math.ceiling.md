@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Ceiling
 title: Função do teto
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Ceiling
 qsharp.summary: Returns the smallest integer greater than or equal to the specified number.
-ms.openlocfilehash: 816a3c5f9579cf64fd2e528b404b04920797c14c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d70527f302f118e6a1461abf7f3c4e3ba28fb239
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709684"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195669"
 ---
 # <a name="ceiling-function"></a>Função do teto
 
 Espaço de nome: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Devolve o número inteiro mais pequeno maior ou igual ao número especificado.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PowCP
 title: Função PowCP
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PowCP
 qsharp.summary: Returns a number raised to a given power.
-ms.openlocfilehash: 13f877c94ea30eba37f50ffae65119912e996df3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 185d40acff6027a775130faaff64582c58384a90
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711115"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96194649"
 ---
 # <a name="powcp-function"></a>Função PowCP
 
 Espaço de nome: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve um número elevado a um dado poder.

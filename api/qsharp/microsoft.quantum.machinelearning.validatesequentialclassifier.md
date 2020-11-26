@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.ValidateSequentialClassifier
 title: Validar operação DesequentialClassifier
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: ValidateSequentialClassifier
 qsharp.summary: Validates a given sequential classifier against a given set of pre-labeled samples.
-ms.openlocfilehash: 802f1045ea4086bd371d68018a481182cb75b209
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5174085edbfd846e8f6649f33e325fd1979ae6a2
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720443"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196111"
 ---
 # <a name="validatesequentialclassifier-operation"></a>Validar operação DesequentialClassifier
 
 Espaço de nome: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Valida um determinado classificador sequencial contra um determinado conjunto de amostras pré-etiquetadas.

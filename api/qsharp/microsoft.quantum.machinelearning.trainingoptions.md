@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: FormaçãoOptions tipo definido pelo utilizador
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainingOptions
 qsharp.summary: A collection of options to be used in training quantum classifiers.
-ms.openlocfilehash: 5ecc2b5175a4e8db78f72311ac1d5ff964bae811
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 280a3857aa7bc42f636a33f893d4f450e79b6a6a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92722375"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196128"
 ---
 # <a name="trainingoptions-user-defined-type"></a>FormaçãoOptions tipo definido pelo utilizador
 
 Espaço de nome: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Uma coleção de opções a serem usadas no treino de classificadores quânticos.

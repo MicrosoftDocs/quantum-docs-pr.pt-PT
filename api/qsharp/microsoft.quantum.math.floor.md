@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Floor
 title: Função do chão
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Floor
 qsharp.summary: Returns the largest integer less than or equal to the specified number.
-ms.openlocfilehash: 11f0d322e4317c8da4824df49f7e73ae6f15ebeb
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cc999ae8e1913fd77ad8a34ef76f160b445bcf18
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92723705"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96195550"
 ---
 # <a name="floor-function"></a>Função do chão
 
 Espaço de nome: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Devolve o maior número inteiro menos ou igual ao número especificado.

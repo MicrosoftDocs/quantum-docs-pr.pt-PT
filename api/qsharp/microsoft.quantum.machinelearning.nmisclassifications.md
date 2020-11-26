@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.NMisclassifications
 title: Função de classificações NMisclassificações
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: NMisclassifications
 qsharp.summary: Given a set of inferred labels and a set of correct labels, returns the number of indices at which each set of labels differ.
-ms.openlocfilehash: 9e356d68233519978e007e5a2999ca1be8cb7f83
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 30d049ba54630cd2f5f350280bad7f587599f459
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92709740"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96196315"
 ---
 # <a name="nmisclassifications-function"></a>Função de classificações NMisclassificações
 
 Espaço de nome: [Microsoft.Quantum.MachineLearning](xref:Microsoft.Quantum.MachineLearning)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.MachineLearning](https://nuget.org/packages/Microsoft.Quantum.MachineLearning)
 
 
 Tendo em conta um conjunto de rótulos inferidos e um conjunto de etiquetas corretas, o número de índices em que cada conjunto de rótulos difere.
