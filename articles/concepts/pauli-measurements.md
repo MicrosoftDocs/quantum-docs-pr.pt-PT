@@ -88,7 +88,7 @@ autor: bradben uid: microsoft.quantum.concepts.pauli ms.author: v-benbra ms.date
 Nas discussões anteriores, concentrámo-nos em medições computacionais.
 Na verdade, existem outras medições comuns que ocorrem na computação quântica que, do ponto de vista notacional, são convenientes de expressar em termos de medições de base computacional.
 À medida que Q# trabalha, o tipo de medições mais comum que irá encontrar provavelmente serão *as medições de Pauli,* que generalizam as medições de base computacional para incluir medições noutras bases, e de paridade entre diferentes qubits.
-Nestes casos, é comum discutir a medição de um operador Pauli, em geral um operador como $ X,Y,Z $ ou $ Z \otimes Z, X \otimes X, X \otimes $ Y, etc.
+Nestes casos, é comum discutir a medição de um operador Pauli, em geral um operador como $ X,Y,Z $ ou $ Z \otimes Z, X \otimes X, X \otimes $ Y, etc. 
 
 > [!TIP]
 > Em Q# , os operadores de Pauli multi-qubit são geralmente representados por matrizes do tipo `Pauli[]` .
@@ -252,7 +252,7 @@ Uma dessas limitações é dada pelo Teorema da *Não Clonagem.*
 O teorema No-Cloning tem o nome apropriado.
 Não permite a clonagem de estados quânticos genéricos por um computador quântico.
 A prova do teorema é notavelmente simples.
-Embora uma prova completa do teorema da não clonagem seja um pouco técnica demais para a nossa discussão aqui, a prova no caso de não haver qubits auxiliares adicionais está dentro do nosso âmbito (qubits auxiliares são qubits usados para o espaço de risco durante um cálculo e são facilmente utilizados e Q# geridos em, ver [qubits emprestados).](xref:microsoft.quantum.guide.qubits#borrowed-qubits)
+Embora uma prova completa do teorema da não clonagem seja demasiado técnica para a nossa discussão aqui, a prova, no caso de não haver qubits auxiliares adicionais, está dentro do nosso âmbito.
 
 Para tal computador quântico, a operação de clonagem deve ser descrita por uma matriz unitária.
 Não permitimos a medição, uma vez que iria corromper o estado quântico que estamos a tentar clonar.

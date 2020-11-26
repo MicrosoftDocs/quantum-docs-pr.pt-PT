@@ -9,12 +9,12 @@ uid: microsoft.quantum.contributing.style
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 7666974e255d537c8d611d0077b7f9b37a61f918
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: cfc201a16b1b42c82314220f77ae120076291759
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691741"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231660"
 ---
 # <a name="no-locq-style-guide"></a>Q# Guia de estilo #
 ## <a name="general-conventions"></a>Convenções Gerais ##
@@ -68,7 +68,7 @@ Outros verbos podem ser úteis também neste caso, como em `IterateThroughCartes
 | Aplicar | Uma operação fornecida como entrada é chamada |
 | Declarar | Uma hipótese sobre o resultado de uma possível medição quântica é verificada por um simulador |
 | Obter estimativa | Um valor clássico é devolvido, representando uma estimativa extraída de uma ou mais medições |
-| Medida | Uma medição quântica é realizada, e o seu resultado é devolvido ao utilizador |
+| Medir | Uma medição quântica é realizada, e o seu resultado é devolvido ao utilizador |
 | Preparação | Um dado registo de qubits é inicializado num determinado estado |
 | Sample | Um valor clássico é devolvido aleatoriamente de alguma distribuição |
 
@@ -390,7 +390,7 @@ Da mesma forma, o servidor de idiomas fornecido com o Kit de Desenvolvimento Qu�
 Fazer uso de comentários documentais pode, assim, ajudar os utilizadores a dar sentido ao código, fornecendo uma referência útil para detalhes que não são facilmente expressos usando as outras convenções neste documento.
 
 > [!div class="nextstepaction"]
-> [Referência de sintaxe de comentário de documentação](xref:microsoft.quantum.guide.filestructure#documentation-comments).
+> [Referência de sintaxe de comentário de documentação](xref:microsoft.quantum.qsharp.comments#documentation-comments).
 
 Para utilizar eficazmente esta funcionalidade para ajudar os utilizadores, recomendamos ter algumas coisas em mente enquanto escreve comentários de documentação.
 
