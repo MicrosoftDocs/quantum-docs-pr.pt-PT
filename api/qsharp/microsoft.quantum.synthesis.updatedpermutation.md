@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Synthesis.UpdatedPermutation
 title: Função de permutação atualizada
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: UpdatedPermutation
 qsharp.summary: Update permutation based according to gate mask.
-ms.openlocfilehash: 29dade246ab571d20f0c1a776db6edf6af8026c3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: a81a25290675ee50c820f783c54469434b137dce
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710524"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96190722"
 ---
 # <a name="updatedpermutation-function"></a>Função de permutação atualizada
 
 Espaço de nome: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Atualização permutação baseada em de acordo com a máscara do portão.

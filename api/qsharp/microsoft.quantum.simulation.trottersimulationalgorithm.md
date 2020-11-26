@@ -1,27 +1,27 @@
 ---
 uid: Microsoft.Quantum.Simulation.TrotterSimulationAlgorithm
 title: Função TrotterSimulationAlgorithm
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Simulation
 qsharp.name: TrotterSimulationAlgorithm
 qsharp.summary: '`SimulationAlgorithm` function that uses a Trotter–Suzuki decomposition to approximate the time-evolution operator _exp(-iHt)_.'
-ms.openlocfilehash: c52acf293e69c78e7a82b0cf5d94de52d0f5a293
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: aa8338ab359441765db72a12f84a3a51e5bee3ce
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92719866"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192541"
 ---
 # <a name="trottersimulationalgorithm-function"></a>Função TrotterSimulationAlgorithm
 
 Espaço de nome: [Microsoft.Quantum.Simulation](xref:Microsoft.Quantum.Simulation)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
-`SimulationAlgorithm` função que utiliza uma decomposição Trotter-Suzuki para aproximar o operador de evolução temporal _exp(-iHt)_ .
+`SimulationAlgorithm` função que utiliza uma decomposição Trotter-Suzuki para aproximar o operador de evolução temporal _exp(-iHt)_.
 
 ```qsharp
 function TrotterSimulationAlgorithm (trotterStepSize : Double, trotterOrder : Int) : Microsoft.Quantum.Simulation.SimulationAlgorithm

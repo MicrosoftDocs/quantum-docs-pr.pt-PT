@@ -1,34 +1,34 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: AplicaçãoPermutationSingDecomposition operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: 40b51807da155c57c3fa8d740eff28ceef0a0ffc
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 5b25ef3327bbca2dfdbe8fa876f3f797dddf77e8
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725315"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96192133"
 ---
 # <a name="applypermutationusingdecomposition-operation"></a>AplicaçãoPermutationSingDecomposition operação
 
 Espaço de nome: [Microsoft.Quantum.Synthesis](xref:Microsoft.Quantum.Synthesis)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Permuta as amplitudes num estado quântico dada uma permutação usando a síntese baseada na decomposição.
 
 ```qsharp
-operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit
+operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Quantum.Arithmetic.LittleEndian) : Unit is Adj + Ctl
 ```
 
 
-## <a name="description"></a>Descrição
+## <a name="description"></a>Description
 
 Este procedimento implementa a abordagem da síntese baseada na decomposição.  A entrada é uma permutação $\pi$ acima de $2^n$ elementos $ \{ 0, \dots, 2^n-1 \} $, o que representa uma função booleana reversível reversível $n$-variável.
 O algoritmo executa iterativamente os seguintes passos para cada índice variável $i$:
@@ -59,8 +59,8 @@ Uma lista de $n$ qubits aos quais a permutação é aplicada.
 
 ## <a name="references"></a>Referências
 
-- [*Alexis De Vos* , *Yvan Van Rentergem* , Adv. em Matemática.](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
-- [*Mathias Soeken* , *Laura Tague* , *Gerhard W. Dueck,* *Rolf Drechsler* , Journal of Symbolic Computation 73 (2016), pp. 1--26](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
+- [*Alexis De Vos*, *Yvan Van Rentergem*, Adv. em Matemática.](http://www.aimsciences.org/article/doi/10.3934/amc.2008.2.183)
+- [*Mathias Soeken*, *Laura Tague*, *Gerhard W. Dueck,* *Rolf Drechsler*, Journal of Symbolic Computation 73 (2016), pp. 1--26](https://www.sciencedirect.com/science/article/pii/S0747717115000188?via%3Dihub)
 
 ## <a name="see-also"></a>Consulte também
 

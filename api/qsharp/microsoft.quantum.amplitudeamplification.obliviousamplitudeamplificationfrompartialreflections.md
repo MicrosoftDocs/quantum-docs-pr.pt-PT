@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromPartialReflections
 title: Função De AntidesplitudeAmplificaçãoFromPartialReflections
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ObliviousAmplitudeAmplificationFromPartialReflections
 qsharp.summary: Returns a unitary that implements oblivious amplitude amplification by specifying for partial reflections.
-ms.openlocfilehash: 98f410e4c00e50d60d9b45b675e99396d79f955c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: c818fcd8d8b83d8b479b4f133497449d500ca70e
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721840"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191317"
 ---
 # <a name="obliviousamplitudeamplificationfrompartialreflections-function"></a>Função De AntidesplitudeAmplificaçãoFromPartialReflections
 
 Espaço de nome: [Microsoft.Quantum.AmplitudeAmplificação](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Devolve uma amplificação unitária que implementa amplificação de amplitude alheia especificando para reflexões parciais.
@@ -51,5 +51,5 @@ function ObliviousAmplitudeAmplificationFromPartialReflections (phases : Microso
 
 
 
-## <a name="output--qubitqubit--unit-adj--ctl"></a>Saída :[(Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unidade](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## <a name="output--qubitqubit--unit--is-adj--ctl"></a>Saída :[(Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) = [> Unit](xref:microsoft.quantum.lang-ref.unit)  é Adj + Ctl
 

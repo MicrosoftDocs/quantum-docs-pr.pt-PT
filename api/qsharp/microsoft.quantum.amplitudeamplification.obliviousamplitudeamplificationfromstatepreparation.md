@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
 title: Função de anulação da 20daplificação da 1.90da ção
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ObliviousAmplitudeAmplificationFromStatePreparation
 qsharp.summary: Oblivious amplitude amplification by oracles for partial reflections.
-ms.openlocfilehash: 9975d26af8f9beb2b91e409ad78159d6f04936e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 44bb394b0eb4ec98fd47fd1b156410b7a33903f1
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92721829"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96191300"
 ---
 # <a name="obliviousamplitudeamplificationfromstatepreparation-function"></a>Função de anulação da 20daplificação da 1.90da ção
 
 Espaço de nome: [Microsoft.Quantum.AmplitudeAmplificação](xref:Microsoft.Quantum.AmplitudeAmplification)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)
 
 
 Amplificação de amplitude alheia por oráculos para reflexões parciais.
@@ -51,7 +51,7 @@ Oráculo unitário $O$ do tipo `ObliviousOracle` que atua conjuntamente no regis
 
 
 
-## <a name="output--qubitqubit--unit-adj--ctl"></a>Saída :[(Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) => [Unidade](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl
+## <a name="output--qubitqubit--unit--is-adj--ctl"></a>Saída :[(Qubit](xref:microsoft.quantum.lang-ref.qubit)[],[Qubit](xref:microsoft.quantum.lang-ref.qubit)[]) = [> Unit](xref:microsoft.quantum.lang-ref.unit)  é Adj + Ctl
 
 Uma operação que implementa amplificação de amplitude alheia baseada em reflexos parciais.
 
