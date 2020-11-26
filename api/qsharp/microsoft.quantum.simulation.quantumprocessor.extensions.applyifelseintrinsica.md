@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseIntrinsicA
 title: Aplicação OperaçãoIfElseIntrinsicA
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseIntrinsicA
 qsharp.summary: ''
-ms.openlocfilehash: 68d9e02fd19df008f2d42b4f04b585a441b2408a
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 12144630d1ffe0210c5979db0a94dc5267f17d30
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720119"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230162"
 ---
 # <a name="applyifelseintrinsica-operation"></a>Aplicação OperaçãoIfElseIntrinsicA
 
 Espaço de nome: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfElseIntrinsicA (measurementResult : Result, onResultZeroOp : (Unit => Unit is Adj), onResultOneOp : (Unit => Unit is Adj)) : Unit
+operation ApplyIfElseIntrinsicA (measurementResult : Result, onResultZeroOp : (Unit => Unit is Adj), onResultOneOp : (Unit => Unit is Adj)) : Unit is Adj
 ```
 
 
@@ -35,12 +35,12 @@ operation ApplyIfElseIntrinsicA (measurementResult : Result, onResultZeroOp : (U
 
 
 
-### <a name="onresultzeroop--unit--unit-adj"></a>onResultZeroOp [Unit](xref:microsoft.quantum.lang-ref.unit) : => [Unidade Adj](xref:microsoft.quantum.lang-ref.unit)
+### <a name="onresultzeroop--unit--unit--is-adj"></a>onResultZeroOp [Unit](xref:microsoft.quantum.lang-ref.unit) : => [Unidade](xref:microsoft.quantum.lang-ref.unit) é Adj
 
 
 
 
-### <a name="onresultoneop--unit--unit-adj"></a>onResultOneOp [Unit](xref:microsoft.quantum.lang-ref.unit) : => [Unidade Unit](xref:microsoft.quantum.lang-ref.unit) Adj
+### <a name="onresultoneop--unit--unit--is-adj"></a>onResultOneOp [Unit](xref:microsoft.quantum.lang-ref.unit) : => [Unidade](xref:microsoft.quantum.lang-ref.unit) é Adj
 
 
 

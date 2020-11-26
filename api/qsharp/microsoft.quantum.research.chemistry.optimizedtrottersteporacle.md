@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Research.Chemistry.OptimizedTrotterStepOracle
 title: Função OptimizadaTrotterStepOracle
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Research.Chemistry
 qsharp.name: OptimizedTrotterStepOracle
 qsharp.summary: Returns optimized Trotter step operation and the parameters necessary to run it.
-ms.openlocfilehash: f78d80f7ab71f4fc759d8045c9a134d7178aaa15
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 04b1ea457277e0681596cb564fae3782a2d09db9
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92710751"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96229822"
 ---
 # <a name="optimizedtrottersteporacle-function"></a>Função OptimizadaTrotterStepOracle
 
 Espaço de nome: [Microsoft.Quantum.Research.Chemistry](xref:Microsoft.Quantum.Research.Chemistry)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.Research.Chemistry](https://nuget.org/packages/Microsoft.Quantum.Research.Chemistry)
 
 
 Devolve a operação de etapa de Trotter otimizada e os parâmetros necessários para executá-lo.
@@ -46,6 +46,6 @@ Ordem do integrador Trotter.
 
 
 
-## <a name="output--intdoublequbit--unit-adj--ctl"></a>Saída : ([Int](xref:microsoft.quantum.lang-ref.int)[(Duplo,](xref:microsoft.quantum.lang-ref.double)[Qubit](xref:microsoft.quantum.lang-ref.qubit)[] => [Unidade](xref:microsoft.quantum.lang-ref.unit) Adj + Ctl))
+## <a name="output--intdoublequbit--unit--is-adj--ctl"></a>Saída : ([Int (Duplo,](xref:microsoft.quantum.lang-ref.int)[Qubit](xref:microsoft.quantum.lang-ref.qubit)[] = [> Unidade](xref:microsoft.quantum.lang-ref.unit) é Adj + Ctl))[Double](xref:microsoft.quantum.lang-ref.double)
 
 Um tuple onde: `Int` é o número de qubits atribuídos, é , e a `Double` `1.0/trotterStepSize` operação é o passo Trotter.

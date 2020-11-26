@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfOneC
 title: Aplicar operaçãoIfOneC
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfOneC
 qsharp.summary: ''
-ms.openlocfilehash: 8456201d4ed137f3d84013f3b5170b52b27e66c5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d7c4e39ba26befeabad612e888da4abd00efaeb5
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725385"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230961"
 ---
 # <a name="applyifonec-operation"></a>Aplicar operaçãoIfOneC
 
 Espaço de nome: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfOneC<'T> (measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl), oneArg : 'T)) : Unit
+operation ApplyIfOneC<'T> (measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl), oneArg : 'T)) : Unit is Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyIfOneC<'T> (measurementResult : Result, (onResultOneOp : ('T => U
 
 
 
-### <a name="onresultoneop--t--unit-ctl"></a>onResultOneOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl
+### <a name="onresultoneop--t--unit--is-ctl"></a>onResultOneOp : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Ctl
 
 
 

@@ -1,30 +1,30 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfOneCA
 title: AplicarIfOneCA operação
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfOneCA
 qsharp.summary: ''
-ms.openlocfilehash: d8f388698c0c6d1557c7903ec68b317728986031
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e997cf4b20fdd2c52285191b732297ca99886c22
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92725693"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96230944"
 ---
 # <a name="applyifoneca-operation"></a>AplicarIfOneCA operação
 
 Espaço de nome: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
 
 ```qsharp
-operation ApplyIfOneCA<'T> (measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl + Adj), oneArg : 'T)) : Unit
+operation ApplyIfOneCA<'T> (measurementResult : Result, (onResultOneOp : ('T => Unit is Ctl + Adj), oneArg : 'T)) : Unit is Adj + Ctl
 ```
 
 
@@ -35,7 +35,7 @@ operation ApplyIfOneCA<'T> (measurementResult : Result, (onResultOneOp : ('T => 
 
 
 
-### <a name="onresultoneop--t--unit-ctl--adj"></a>onResultOneOp : 'T => [Unit](xref:microsoft.quantum.lang-ref.unit) Ctl + Adj
+### <a name="onresultoneop--t--unit--is-adj--ctl"></a>onResultOneOp : 'T = [unidade](xref:microsoft.quantum.lang-ref.unit) > é Adj + Ctl
 
 
 
