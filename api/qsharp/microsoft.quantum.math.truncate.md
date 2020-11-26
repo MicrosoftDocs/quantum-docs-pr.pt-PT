@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.Truncate
 title: Função truncato
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: Truncate
 qsharp.summary: Calculates the integral part of a number.
-ms.openlocfilehash: 0366293ff88066b556082eba0f3ab77b73e136c5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: ad29db72ef59f94b583a44a184ec77648558912a
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720358"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96227187"
 ---
 # <a name="truncate-function"></a>Função truncato
 
 Espaço de nome: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Calcula a parte integral de um número.

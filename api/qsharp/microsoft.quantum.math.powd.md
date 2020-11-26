@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Math.PowD
 title: Função PowD
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: PowD
 qsharp.summary: Returns the number x raised to the power y.
-ms.openlocfilehash: 1d4e4ded4b9c746204b8ad1789e57780b4d0a8a5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 26580499f09602fac1a4195d04a82299d287ed72
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92711112"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228360"
 ---
 # <a name="powd-function"></a>Função PowD
 
 Espaço de nome: [Microsoft.Quantum.Math](xref:Microsoft.Quantum.Math)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 Devolve o número x elevado ao poder y.

@@ -1,24 +1,24 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyConditionallyIntrinsic
 title: Aplicar operação Contraditionalintes
-ms.date: 10/26/2020 12:00:00 AM
+ms.date: 11/25/2020 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyConditionallyIntrinsic
 qsharp.summary: ''
-ms.openlocfilehash: 892e3140544d0b02c5fef085c89c3a4c8bafcde5
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 71233ce9c8d07da4748c3bb2197fbb78c8ee617d
+ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92720167"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96228989"
 ---
 # <a name="applyconditionallyintrinsic-operation"></a>Aplicar operação Contraditionalintes
 
 Espaço de nome: [Microsoft.Quantum.Simulation.QuantumProcessor.Extensions](xref:Microsoft.Quantum.Simulation.QuantumProcessor.Extensions)
 
-Pacote: [](https://nuget.org/packages/)
+Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
 
@@ -30,12 +30,12 @@ operation ApplyConditionallyIntrinsic (measurementResults : Result[], resultsVal
 
 ## <a name="input"></a>Entrada
 
-### <a name="measurementresults--__invalidresult__"></a>medidasResultos: __inválido <Result>__ []
+### <a name="measurementresults--__invalidresult__"></a>medidasResultos: __inválido <Result>__[]
 
 
 
 
-### <a name="resultsvalues--__invalidresult__"></a>resultados Valores: __inválido <Result>__ []
+### <a name="resultsvalues--__invalidresult__"></a>resultados Valores: __inválido <Result>__[]
 
 
 
