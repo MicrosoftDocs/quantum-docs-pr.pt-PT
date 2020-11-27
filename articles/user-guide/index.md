@@ -9,44 +9,26 @@ uid: microsoft.quantum.guide
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 81f31a531a1b50ead332bb578ccf392ddced9e8d
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
+ms.openlocfilehash: 979e468cc743bd9125eaba0b71f794977c914447
+ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
 ms.translationtype: HT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771372"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96231762"
 ---
 # <a name="the-no-locq-user-guide"></a>Guia do Utilizador Q#
 
 Bem-vindo ao Guia de Utilizador Q#! 
 
-Nos diferentes tópicos deste guia, apresentamos em detalhe os conceitos fundamentais da linguagem Q# e toda a informação de que precisa para escrever programas quânticos.
+Nos diferentes tópicos deste guia, apresentamos algumas das noções básicas de desenvolvimento de programas quânticos com Q#.
+
+Fazemos referência ao [guia da linguagem Q#](xref:microsoft.quantum.qsharp.index) para lhe dar uma especificação completa e documentação da linguagem de programação quântica Q#. 
 
 ## <a name="user-guide-contents"></a>Índice do Guia de Utilizador
 
-- [Noções básicas de Q#](xref:microsoft.quantum.guide.basics): descrição geral introdutória da finalidade e funcionalidade da linguagem de programação Q#. 
+- [Programas Q#](xref:microsoft.quantum.guide.programs): uma introdução rápida aos programas quânticos em Q#. 
 
 - [Formas de executar um programa Q#](xref:microsoft.quantum.guide.host-programs): descreve como um programa Q# é executado e fornece uma descrição geral das várias formas de chamar o programa: a partir da linha de comandos, no Jupyter Notebook Q# ou a partir de um programa anfitrião clássico escrito em Python ou numa linguagem .NET.
-
-### <a name="no-locq-language"></a>Linguagem Q#
-
-- [Tipos em Q#](xref:microsoft.quantum.guide.types): destaca o modelo de tipos em Q# e descreve a sintaxe para especificar e trabalhar com tipos.
-
-- [Expressões de Tipos](xref:microsoft.quantum.guide.expressions): detalha como especificar, referenciar, combinar e operar nos valores de cada tipo em Q#. 
-
-### <a name="using-no-locq"></a>Ao utilizar Q#
-
-- [Estrutura de Ficheiros Q#](xref:microsoft.quantum.guide.filestructure): descreve a estrutura e a sintaxe de um ficheiro Q# `*.qs`.
-
-- [Operações e Funções](xref:microsoft.quantum.guide.operationsfunctions): detalha os dois tipos chamáveis da linguagem Q#: as *operações*, que incluem ações em registos qubit, e as *funções*, que funcionam estritamente com informação clássica. 
-    Aqui, pode ver como defini-los e chamá-los, incluindo as versões conjuntas e controladas das operações quânticas.
-
-- [Variáveis](xref:microsoft.quantum.guide.variables): descreve a função das variáveis nos programas de Q# e como tirar partido das mesmas eficazmente. 
-    Por exemplo, pode encontrar informações sobre âmbitos de enlace, bem como a diferença entre variáveis imutáveis e mutáveis e como as atribuir ou reatribuir.
-
-- [Trabalhar com qubits](xref:microsoft.quantum.guide.qubits): descreve as funcionalidades de Q# que pode utilizar para trabalhar com qubits individuais e sistemas de qubits, em particular, para os alocar, realizar operações nos mesmos e para os medir. 
-
-- [Fluxo de Controlo](xref:microsoft.quantum.guide.controlflow): detalha os padrões do fluxo de controlo de programação disponíveis no Q#, o que inclui muitas técnicas padrão (tais como processamento condicional, ciclos *for*, ciclos *while*), bem como o padrão *Repeat-Until-Success* quântico específico.
 
 - [Teste e depuração](xref:microsoft.quantum.guide.testingdebugging): pormenoriza algumas técnicas para confirmar que o código está a fazer o que é suposto. 
     Devido à opacidade geral da informação quântica, a depuração de programas quânticos pode exigir técnicas especializadas. 

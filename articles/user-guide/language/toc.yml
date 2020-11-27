@@ -1,4 +1,12 @@
-- name: Tipos em Q#
-  href: types.md
+- name: Descrição geral
+  href: index.md
+- name: Estrutura de programa
+  href: programstructure/toc.yml
+- name: Instruções
+  href: statements/toc.yml
 - name: Expressões
-  href: expressions.md
+  href: expressions/toc.yml
+- name: Sistema de tipos
+  href: typesystem/toc.yml
+- name: Gramática
+  href: grammar.md
