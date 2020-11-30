@@ -9,12 +9,12 @@ uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e1ec01d85a141b9c8a7a5ba5589663a0773520e7
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 57f6602effd25fff353a8fee7f27acc529ce82af
+ms.sourcegitcommit: c3c892ef35eae6926d0c4339d9d26bfd8be77e9a
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691873"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96318495"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimativa de recursos do Kit de Desenvolvimento Quântico (QDK)
 
@@ -123,7 +123,7 @@ namespace Quantum.MyProgram
 
 O estimador de recursos acompanha as seguintes métricas:
 
-|Métrica|Descrição|
+|Metric|Descrição|
 |----|----|
 |__CNOT__    |A contagem de `CNOT` operações (também conhecida como operações controladas pauli X).|
 |__QubitClifford__ |A contagem de qualquer qubit de operações de Clifford e Pauli.|
@@ -131,7 +131,7 @@ O estimador de recursos acompanha as seguintes métricas:
 |__R__    |A contagem de quaisquer rotações de um único qubit, `T` excluindo, operações Clifford e Pauli.  |
 |__T__    |A contagem de `T` operações e seus conjugatos, incluindo as `T` operações, T_x = H.T.H, e T_y = Hy.T.Hy.  |
 |__Profundidade__|Profundidade do circuito quântico executado pela Q# operação (ver [abaixo](#depth-width-and-qubitcount)). Por predefinição, a métrica de profundidade apenas conta `T` portões. Para mais detalhes, consulte [o Contador de Profundidade.](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)   |
-|__Largura__|Largura do circuito quântico executado pela Q# operação (ver [abaixo](#depth-width-and-qubitcount)). Por predefinição, a métrica de profundidade apenas conta `T` portões. Para mais detalhes, consulte [o Contador de Profundidade.](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)   |
+|__Width__|Largura do circuito quântico executado pela Q# operação (ver [abaixo](#depth-width-and-qubitcount)). Por predefinição, a métrica de profundidade apenas conta `T` portões. Para mais detalhes, consulte [o Contador de Largura](xref:microsoft.quantum.machines.qc-trace-simulator.width-counter).   |
 |__QubitCount__    |O limite inferior para o número máximo de qubits atribuídos durante o Q# funcionamento. Esta métrica pode não ser compatível com __profundidade__ (ver abaixo).  |
 |__Largura emprestada__    |O número máximo de qubits emprestados dentro da Q# operação.  |
 
