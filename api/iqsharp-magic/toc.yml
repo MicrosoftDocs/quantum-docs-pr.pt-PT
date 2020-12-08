@@ -1,3 +1,5 @@
+- href: index.md
+  name: Comandos magic do IQ#
 - href: azure.connect.md
   name: Comando magic %azure.connect
 - href: azure.execute.md
