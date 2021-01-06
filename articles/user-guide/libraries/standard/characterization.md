@@ -9,12 +9,12 @@ ms.topic: article
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 51e7b3bcf4402a4d0ba5647643f284e9f10c3bb3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
+ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692147"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97940891"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização quântica e Estatística #
 
@@ -45,7 +45,7 @@ Concretamente, `U : DiscreteOracle` se, em seguida, `U(m)` implementar $U^m$ par
 Com esta definição em vigor, cada passo da estimativa de fase iterativa prossegue preparando um qubit auxiliar no estado de $\ket{+}, juntamente com o estado inicial $\ket{\phi}$ que assumimos ser um [eigenvector](xref:microsoft.quantum.concepts.matrix-advanced) de $U(m)$, i.e. $U(m)\ket{\phi}= e^{im\phi\phi}}  
 Em seguida, é utilizada uma aplicação controlada `U(m)` que prepara o estado $\left(R \_ 1(m\phi) \ket{+}\right)\ket{\phi}$.
 Tal como no caso quântico, o efeito de uma aplicação controlada do oráculo `U(m)` é precisamente o mesmo que o efeito da aplicação de $R_1$ para a fase desconhecida em $\ket{+}$,de modo que podemos descrever os efeitos de $U$ desta forma mais simples.
-Opcionalmente, o algoritmo roda então o qubit de controlo aplicando $R_1 (-m\theta)$ para obter um estado $\ket{\psi}=\left(R \_ 1 (m [\phi-\theta]) \ket{+}\right)\ket{\phi}$.$.$.$.$.\ket{\phi}$.$.$.$.\ket{\phi}$.$..\ket{\phi}$.$..\\$..\ket{\phi}$.$...\\ket{\phi}$.$.$..\\ket{\phi}$.$.$.\\ket{\phi}$.$.$.$.$.$.\ket{\phi}$.$.$..\ket{\phi}$.$.$..$.$.\ket{\phi}$.
+Opcionalmente, o algoritmo roda então o qubit de controlo aplicando $R_1 (-m\theta)$ para obter um estado $\ket{\psi}=\left(R \_ 1 (m [\phi-\theta]) \ket{+}\right)\ket{\phi}$.$..\ket{\phi}$.$..\\$..\ket{\phi}$.$...\\ket{\phi}$..\\ket{\phi}$.\\ket{\phi}$.$.\ket{\phi}$.$.$..\ket{\phi}$.$.$..$.$.\ket{\phi}$.
 O qubit auxiliar utilizado como controlo `U(m)` é então medido na base $X$ para obter um único clássico `Result` .
 
 Neste ponto, a reconstrução da fase a partir dos `Result` valores obtidos através da estimativa de fase iterativa é um problema clássico de inferência estatística.
@@ -56,11 +56,11 @@ Salientamos isto descrevendo brevemente a estimativa da fase iterativa a nível 
 
 Se for fornecido um estado de entrada que não seja um eigenstate, ou seja, se $U(m)\ket{\phi \_ j} = e^{im\phi \_ j}} então o processo de estimativa de fase não deterministicamente guia o estado quântico em direção a um único estado de eigenação energética.  O eigenstate a que, em última análise, converge é o eigenstate que é mais provável produzir o observado `Result` .
 
-Especificamente, um único passo de PE executa a seguinte transformação não unitária num estado \start{align} \sum_j \sqrt{\Pr(\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac{\sqrt{\Pr\\Pr\\\\mapesto \soma j\frac{\sqrt{\Pr\\Pr\\\mapesto \soma j\frac{\sqrt{\Pr\\Pr\\\mapsto \soma j\frac{\sqrt{\Pr\\Pr(\Pr\\mapas para \soma j\frac{\sqrt{\Pr\Pr(\Pr\Pr\\\mapas para \soma j\frac{\sqrt{\Pr\\\mapear \soma j\frac{\sqrt{\Pr\\Pr\\\mapsto \soma j\phi \_ j)}}\sqrt{\Pr(\text{Result}/\phi \_ j)}}}}}} \_ \_ \_ \_
+Especificamente, um único passo de PE executa a seguinte transformação não unitária num estado \start{align} \sum_j \sqrt{\Pr(\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac{\sqrt{\Pr\\Pr\\phi \_ j)}}\sqrt{\Pr(\text{Result}/\phi \_ j)}} \_ \_ \_ \_
 \end{align} À medida que este processo é iterado sobre `Result` vários valores, os estados eigenstates que não têm valores máximos de $\prod_k\Pr(\text{Result} \_ k/\phi \_ j)$ serão exponencialmente suprimidos.
 Como resultado, o processo de inferência tenderá a convergir para estados com um único eigenvalue se as experiências forem escolhidas corretamente.
 
-O teorema de Bayes sugere ainda que o estado que resulta da estimativa da fase seja escrito no formulário \start{align} \frac{\sqrt{\Pr(\phi \_ j)}}\sqrt{\Pr(\text{Result}/\phi \_ j)}\ket{\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\\phi\phi\\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi\phi \_ j}}{\sqrt{\Pr(\phi \_ j)\sum \_ j \Pr (\text{Result}/phi \_ j)}}}=}}}=}}=sum_j \_ \sqrt{\Pr\text{result}}} \ket{\phi j}} \ket{\phi \_ j}}
+O teorema de Bayes sugere ainda que o estado que resulta da estimativa da fase seja escrito no formulário \start{align} \frac{\sqrt{\Pr(\phi \_ j)}}\sqrt{\Pr(\text{Result}/\phi \_ j)}\ket{\phi\\phi\phi\\phi \_ j}}{\sqrt{\Pr(\phi \_ j)\sum \_ j \Pr (\text{Result}/phi \_ j)}=}=}}=sum_j \_ \sqrt{\Pr\text{result}}} \ket{\phi j}} \ket{\phi \_ j}}
 \end{align} Aqui $\Pr(\phi \_ j/\text{Result})$ pode ser interpretado como a probabilidade que se atribuiria a cada hipótese sobre os estados eigenados dado:
 
 1. conhecimento do estado quântico antes da medição,
@@ -93,7 +93,7 @@ Tendo observado uma `Result` função de probabilidade de estimativa de fase ite
 Concretamente, \start{equação} \Pr(\phi [ d) = \frac{\Pr(d \ \phi) \Pr(\phi)}}\\Pr\phi\ \Pr(\phi){\mathrm d}\phi} \Pr(\phi), \end{equação $d} \\ \texttt{One} \\ }$ é um `Result` , e onde $\Pr(\phi)$ descreve as nossas crenças anteriores sobre $\phi$.
 Isto torna então explícita a natureza iterativa da estimativa de fase iterativa, uma vez que a distribuição posterior $\Pr(\phi [ d)$ descreve as nossas crenças imediatamente antes da nossa observação do próximo `Result` .
 
-Em qualquer ponto durante este procedimento, podemos reportar a fase $\hat{\phi}$ inferida pelo controlador clássico como \start{equação} \hat{\phi} \mathrel{:=} \expect[\phi [ text{data}] = \int \\\\Pr\\\\text{text{data}) {\mathrm d\phi, \end{equation} where $\text{data}$ representa todo o registo de todos os `Result` valores obtidos.
+Em qualquer ponto durante este procedimento, podemos reportar a fase $\hat{\phi}$ inferida pelo controlador clássico como \start{equação} \hat{\phi} \mathrel{:=} \expect[\phi [ text{data}] = \int \\Pr\text{text{data}) {\mathrm d\phi, \end{equation} where $\text{data}$ representa todo o registo de todos os `Result` valores obtidos.
 
 A inferência bayesiana exata é, na prática, intratável.
 Para ver esta imagem, queremos aprender uma variável $n$-bit $x$.
