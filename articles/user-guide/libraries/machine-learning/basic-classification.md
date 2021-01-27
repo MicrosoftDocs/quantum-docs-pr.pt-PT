@@ -4,17 +4,17 @@ description: Aprenda a executar um classificador sequencial quântico escrito na
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.basics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5dc4614b9992e2c6b9f8ff4b839c0929ec8cab7c
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4fe686a87fbdc610badc0bbcbc0bf7b065e0bce9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833718"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854052"
 ---
 # <a name="basic-classification-classify-data-with-the-qdk"></a>Classificação básica: Classificar os dados com o QDK
 
@@ -92,6 +92,6 @@ As funções e operações mais importantes definidas no código acima são:
 - `TrainHalfMoonModel() : (Double[], Double)` : esta operação é a parte central do código e define a formação. Aqui carregamos as amostras do conjunto de dados incluído na biblioteca, definimos os hipermetrões e os parâmetros iniciais para o treino e começamos a formação chamando a operação `TrainSequentialClassifier` incluída na biblioteca. Produz os parâmetros e o enviesamento que determina o classificador.
 - `ValidateHalfMoonModel(parameters : Double[], bias : Double) : Int` : esta operação define o processo de validação para avaliar o modelo. Aqui carregamos as amostras para validação, o número de medições por amostra e a tolerância. Produz o número de classificações erradas no lote escolhido de amostras para validação.
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Primeiro, podes jogar com o código e tentar alterar alguns parâmetros para ver como isso afeta o treino. Em seguida, no próximo tutorial, [desenhe o seu próprio classificador,](xref:microsoft.quantum.libraries.machine-learning.design)aprenderá a definir a estrutura do classificador.

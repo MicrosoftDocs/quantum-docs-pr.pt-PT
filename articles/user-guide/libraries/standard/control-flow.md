@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.concepts.control-flow
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: ad107f5c65a4bf368d12d30e4a72786f2076205c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8f4b69250ed49bd56c3066d5cd40db4b8abfc9cb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690873"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858707"
 ---
 # <a name="higher-order-control-flow"></a>Fluxo de Controlo de Higher-Order #
 
@@ -113,7 +113,7 @@ Esta abstração também permite uma conformidade mais eficiente em circuitos, u
 Para ver isto, deixe $c(U)$ ser o representante unitário `Controlled U([control], target)` e deixar $c(V)$ ser definido da mesma forma.
 Em seguida, para um estado arbitrário $\ket{\psi}$, \start{align} c(U) c(U)^\\dagger \ket {1} \otimes \ket{\psi} & = \ket {1} \otimes (UVU ^{\dagger} \ket{\psi}) \\ \\ & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket {1} \otimes \ket{\psi}.
 \end{align} pela definição de `Controlled` .
-Por outro lado, \start{align} c(U) c(V) c(U)^\\dagger \ket {0} \otimes \ket{\psi} & = \ket {0} \otimes \ket{\psi} \\ \\ & = \ket \\ket \\\ket \\\ket \\ket \otimes \ket \ket{\psi} {0} otimes (UU^\dagger \ket{\psi}) \\ \\ & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket {0} \otimes \ket{\psi}.
+Por outro lado, \start{align} c(U) c(V) c(U)^\\dagger \ket {0} \otimes \ket{\psi} & = \ket {0} \otimes \ket{\psi} & = \ket \\ket \\ket \otimes \ket \ket{\psi} \\ \\ {0} otimes (UU^\dagger \ket{\psi}) \\ \\ & = (\boldone \otimes U) (c(V)) (\boldone \otimes U^\dagger) \ket {0} \otimes \ket{\psi}.
 \end{align} Por linearidade, podemos concluir que podemos fator $U$ desta forma para todos os estados de entrada.
 Ou seja, $c (UVU^\dagger) = U c(V) U^\dagger$.
 Uma vez que as operações de controlo podem ser dispendiosas em geral, a utilização de variantes controladas, como `WithC` e pode ajudar a reduzir o número de `WithCA` funtores de controlo que precisam de ser aplicados.
@@ -164,7 +164,7 @@ U(1, time / Float(nSteps), target);
 
 Neste momento, podemos agora raciocinar sobre a expansão Trotter-Suzuki *sem qualquer referência à mecânica quântica.*
 A expansão é efetivamente um padrão de iteração muito particular motivado por $\eqref{eq:trotter-suzuki-0}$.
-Este padrão de iteração é implementado <xref:Microsoft.Quantum.Canon.DecomposedIntoTimestepsCA> por:
+Este padrão de iteração é implementado <xref:Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA> por:
 
 ```qsharp
 // The 2 indicates how many terms we need to decompose,

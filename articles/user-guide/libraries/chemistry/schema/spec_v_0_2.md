@@ -4,17 +4,17 @@ description: Detalha as especificações do esquema de química quântica de Bro
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_2
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 851d10c0137deecf8e861aad30b5e08a9ae61754
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 8d26b56d88f365144510692466bfffc7feb71d88
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833762"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854068"
 ---
 # <a name="broombridge-specification-v02"></a>Especificação de Broombridge v0.2 #
 
@@ -133,7 +133,7 @@ O valor de `metadata` MAIO é o objeto JSON vazio (isto é, ) ou MAY contém pro
 
 ### <a name="hamiltonian-section"></a>Secção Hamiltoniana ###
 
-#### <a name="overview"></a>Descrição Geral ####
+#### <a name="overview"></a>Descrição geral ####
 
 Esta secção é informativa.
 
@@ -142,11 +142,11 @@ Os operadores hamiltonianos descritos por cada objeto de descrição de problema
 
 $$ H = \sum \_ \{ i,j \} \sum \_ {\sigma\in \\ {\uparrow,\downarrow \\ }} h \_ \{ ij \} \{ a^ \dagger \} \_ {i,\sigma} a \_ {j,\sigma} + \frac {1} {2} \frac \sum \_ \{ i,j,k,l \} \sum \_ {\sigma,\rho\in \\ {\uparrow,\downarrow \\ }} h \_ {ijkl} a^\dagger \_ {i,\sigma} a^\dagger \_ {k,\rho} a \_ {l,\rho} a \_ {j,\sigma}, $$
 
-aqui $h_{ijkl}= (ij/kl)$ na convenção de Mulliken.
+aqui $h_{ijkl}= (ij|kl)$ na convenção de Mulliken.
 
 Para clareza, o termo de um eletrão é
 
-$$ h_{ij} = \int {\mathrm d}x \psi^* \_ i(x) \esquerda \frac {1} {2} \nabla^2 + \soma \_ {A}frac{Z \_ A}{x-x \_ A[}  \direita) \psi \_ j(x), $$
+$$ h_{ij} = \int {\mathrm d}x \psi^* \_ i(x) \esquerda (\frac {1} {2} \nabla^2 + \soma \_ {A}frac{Z \_ A}{|x-x \_ A|}  \direita) \psi \_ j(x), $$
 
 e o termo de dois eletrões é
 
@@ -171,7 +171,7 @@ Cada objeto de descrição de problemas DEVE ter uma propriedade `coulomb_repuls
 Cada objeto de descrição de problemas DEVE ter uma propriedade `energy_offet` cujo valor é um objeto de quantidade simples.
 > [NOTA] Os valores `coulomb_repulsion` de e `energy_offet` juntos captam o termo de identidade do Hamiltonian.
 
-##### <a name="one-electron-integrals-object"></a>Objeto integral de um eletrão #####
+##### <a name="one-electron-integrals-object"></a>Objeto One-Electron Integrals #####
 
 Esta secção é normativa.
 
@@ -185,7 +185,7 @@ Todos os termos devem ter índices `[i, j]` onde `i >= j` .
 
 Esta secção é informativa.
 
-A quantidade de matriz escassa que se segue representa o Hamiltonian $$ H = \esquerda (-5,0 (a^ \{ \dagger \} \_ {1,\uparrow} a \_ {1,\uparrow}+a^ \{ \dagger \} \_ {1,\downarrow} a \_ {1,\downarrow}+ 0,17 (a^ \{ \agger \} \_ {2,uparrow arow a arow a arow a arow a a{1\uparrow arow a a{2,uparrow arow a arow a a{2,uparrow arow a arow a arow a*downrow a a{1,\downarrow} \_ {1,\uparrow}+ a^ \{ \dagger \} \_ {1,\uparrow} a \_ {2,\uparrow}+a^ \{ \dagger \} \_ {2,\downarrow} a \_ {1,\downarrow}+ a^ \{ \dagger \} \_ {1,\downarrow} a \_ {2,\downarrow})\right) \\ \mathrm{Ha}.
+A quantidade de matriz escassa que se segue representa o Hamiltonian $$ H = \esquerda (-5,0 (a^ \{ \dagger \} \_ {1,\uparrow} a \_ {1,\uparrow}+a^ \{ \dagger \} \_ {1,\downarrow} a \_ {1,\downarrow}+ 0,17 (a^ \{ \agger \} \_ {2,uparrow arow a a{1\uparrow arow a a{2,uparrow arow a arow a a{2,uparrow arow a*downrow a a{1,\downarrow} \_ {1,\uparrow}+ a^ \{ \dagger \} \_ {1,\uparrow} a \_ {2,\uparrow}+a^ \{ \dagger \} \_ {2,\downarrow} a \_ {1,\downarrow}+ a^ \{ \dagger \} \_ {1,\downarrow} a \_ {2,\downarrow})\right) \\ \mathrm{Ha}.
 $$
 
 ```yaml
@@ -201,7 +201,7 @@ one_electron_integrals:     # required
 > Broombridge usa indexação baseada em 1.
 
 
-##### <a name="two-electron-integrals-object"></a>Objeto integral de dois eletrões #####
+##### <a name="two-electron-integrals-object"></a>Objeto Two-Electron Integrals #####
 
 Esta secção é normativa.
 

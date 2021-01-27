@@ -4,17 +4,17 @@ description: Saiba mais sobre o contador de largura do Microsoft QDK, que utiliz
 author: vadym-kl
 ms.author: vadym
 ms.date: 06/25/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.qc-trace-simulator.width-counter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: e54e92cc4a76ce9f9c5aead84f2b64320d6b4f1c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9a526ee1440544aace922bd83c6ea39cb83c1ae
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691123"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858585"
 ---
 # <a name="quantum-trace-simulator-width-counter"></a>Simulador de vestígios quânticos: contador de largura
 
@@ -22,7 +22,7 @@ O contador de largura faz parte do simulador de [traços quânticos](xref:micros
 
 ## <a name="invoking-the-width-counter"></a>Invocando o contador de largura
 
-Para executar o simulador de traços quânticos com o contador de largura, você deve criar um <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> exemplo, definir a `UseWidthCounter` propriedade para **verdade** , e, em seguida, criar um novo caso com o como <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> o `QCTraceSimulatorConfiguration` parâmetro. 
+Para executar o simulador de traços quânticos com o contador de largura, você deve criar um <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulatorConfiguration> exemplo, definir a `UseWidthCounter` propriedade para **verdade**, e, em seguida, criar um novo caso com o como <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> o `QCTraceSimulatorConfiguration` parâmetro. 
 
 ```csharp
 var config = new QCTraceSimulatorConfiguration();
@@ -44,7 +44,7 @@ operation ApplyMultiControlledX( numberOfQubits : Int ) : Unit {
 }
 ```
 
-A operação controlada por multiplicação <xref:Microsoft.Quantum.Intrinsic.X> atua num total de cinco qubits, atribui dois [qubits auxiliares,](xref:microsoft.quantum.glossary#ancilla)e tem uma largura de entrada de **5** . Utilize o seguinte programa C# para verificar as contagens:
+A operação controlada por multiplicação <xref:Microsoft.Quantum.Intrinsic.X> atua num total de cinco qubits, atribui dois [qubits auxiliares,](xref:microsoft.quantum.glossary#ancilla)e tem uma largura de entrada de **5**. Utilize o seguinte programa C# para verificar as contagens:
 
 ```csharp 
 var config = new QCTraceSimulatorConfiguration();
@@ -71,7 +71,7 @@ Finalmente, pode descodutar todas as estatísticas recolhidas pelo contador de l
 string csvSummary = sim.ToCSV()[MetricsCountersNames.widthCounter];
 ```
 
-## <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Veja também
 
 - A visão geral do [simulador de traços quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro) do Kit de Desenvolvimento Quântico.
 - A <xref:Microsoft.Quantum.Simulation.Simulators.QCTraceSimulators.QCTraceSimulator> referência da API.

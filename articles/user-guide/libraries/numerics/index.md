@@ -4,17 +4,17 @@ description: Introdução à Biblioteca Numérica Quântica
 author: thomashaener
 ms.author: thhaner
 ms.date: 5/14/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.numerics.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: dc6407d9775ad8a401036912abd0b70033796144
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
-ms.translationtype: HT
+ms.openlocfilehash: 017fd075596e7b5fb7107d3bc5f149b77dc4e504
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87868785"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854014"
 ---
 # <a name="introduction-to-the-quantum-numerics-library"></a>Introdução à Biblioteca Numérica Quântica
 

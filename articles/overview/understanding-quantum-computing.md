@@ -9,16 +9,16 @@ uid: microsoft.quantum.overview.understanding
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 332afb4ea7de01da5d8f22fee6517032ed4f9fc1
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: c6c6249fd56c6fb65550c81ffee902eca555b0cd
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834997"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855098"
 ---
 # <a name="understanding-quantum-computing"></a>Compreender a computação quântica
 
-A computação quântica utiliza os princípios da mecânica quântica para processar informações. Por esse motivo, exige uma abordagem diferente relativamente à computação clássica. Um exemplo dessa diferença é o processador utilizado nos computadores quânticos. Ao passo que os computadores clássicos utilizam os familiares chips de silício, os computadores quânticos utilizam sistemas quânticos, como átomos, iões, fotões ou eletrões. Utilizam as respetivas propriedades quânticas para representar os bits que podem ser preparados nas diferentes sobreposições quânticas de 1 e 0.  
+A computação quântica utiliza os princípios da mecânica quântica para processar informações. Por esse motivo, exige uma abordagem diferente relativamente à computação clássica. Um exemplo dessa diferença é o processador utilizado nos computadores quânticos. Onde os computadores clássicos usam chips familiares baseados em silicone, os computadores quânticos usam sistemas quânticos (sistemas nos quais podemos controlar as propriedades e comportamentos únicos da mecânica quântica) tais como átomos, iões, fotões ou eletrões. Enquanto os computadores clássicos usam altos e baixos binários baseados na lógica, ou seja, 1 e 0, respectivamente, os computadores quânticos usam as suas propriedades quânticas para representar bits que podem ser preparados em diferentes superposições quânticas de 1 e 0.  
 
 O material quântico comporta-se de acordo com as leis da mecânica quântica, recorrendo a conceitos como computação probabilística, sobreposição e entrelaçamento. Estes conceitos são a base dos algoritmos quânticos que tiram partido do poder da computação quântica para resolver problemas complexos. Este artigo descreve alguns dos conceitos essenciais da mecânica quântica subjacentes à computação quântica.
 
@@ -52,7 +52,7 @@ Além desta interdependência, as partículas podem manter essa ligação mesmo 
 
 ### <a name="qubits-and-probability"></a>Qubits e probabilidade
 
-Os computadores clássicos armazenam e processam informações em bits, que podem ter o estado 1 ou 0, mas nunca ambos. O equivalente na computação quântica é o **qubit**, que representa o estado das partículas quânticas. Devido à sobreposição, os qubits podem ser 1 ou 0 ou qualquer valor entre ambos. Consoante a sua configuração, os qubits têm uma certa *probabilidade* de se colapsarem para 1 ou 0. A probabilidade de os qubits se colapsarem para um lado ou para o outro é determinada pela **interferência quântica**. 
+Os computadores clássicos armazenam e processam informações em bits, que podem ter o estado 1 ou 0, mas nunca ambos. O equivalente na computação quântica é o **qubit**, que representa o estado das partículas quânticas. Devido à sobreposição, os qubits podem ser 1 ou 0 ou qualquer valor entre ambos. Consoante a sua configuração, os qubits têm uma certa *probabilidade* de se colapsarem para 1 ou 0. A probabilidade de os qubits se colapsarem para um lado ou para o outro é determinada pela **interferência quântica**.
 
 Ainda se lembra do seu amigo que lhe queria tirar uma fotografia? Imagine que a máquina fotográfica dele tem filtros especiais, chamados filtros de *interferência*. Se ele selecionar o filtro *70/30* e começar a tirar fotografias, em 70% das mesmas apanhá-lo-ia virado para a esquerda e, em 30%, para a direita. O filtro interferiu com o estado normal da máquina fotográfica para influenciar a probabilidade do respetivo comportamento.
 

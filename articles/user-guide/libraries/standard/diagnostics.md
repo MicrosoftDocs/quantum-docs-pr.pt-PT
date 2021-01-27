@@ -4,16 +4,16 @@ description: Conheça as funções e operações de diagnóstico nas Q# bibliote
 author: cgranade
 uid: microsoft.quantum.libraries.diagnostics
 ms.author: chgranad
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 1ab9b77c7536a1860064110810371d3a68e95b40
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: d13122187a24893d297cfdbb3ad4db03eb22ded0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92690845"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858688"
 ---
 # <a name="diagnostics"></a>Diagnóstico #
 
@@ -27,7 +27,7 @@ Os diagnósticos sobre valores clássicos podem ser obtidos utilizando a <xref:M
 Por padrão, isto escreve a corda para a consola.
 Usado em conjunto com cordas interpoladas, <xref:Microsoft.Quantum.Intrinsic.Message> torna fácil relatar informações de diagnóstico sobre valores clássicos:
 
-```Q#
+```qsharp
 let angle = Microsoft.Quantum.Math.PI() * 2.0 / 3.0;
 Message($"About to rotate by an angle of {angle}...");
 ```
@@ -45,9 +45,9 @@ Em comparação, a máquina-alvo [do simulador Toffoli](xref:microsoft.quantum.m
 
 ## <a name="facts-and-assertions"></a>Factos e Afirmações ##
 
-Tal como discutido em [Testes e Depuragem](xref:microsoft.quantum.guide.testingdebugging), uma função ou operação com assinatura `Unit -> Unit` `Unit => Unit` ou, respectivamente, pode ser marcada como um *teste de unidade* .
+Tal como discutido em [Testes e Depuragem](xref:microsoft.quantum.guide.testingdebugging), uma função ou operação com assinatura `Unit -> Unit` `Unit => Unit` ou, respectivamente, pode ser marcada como um *teste de unidade*.
 Cada teste de unidade geralmente consiste num pequeno programa quântico, juntamente com uma ou mais condições que verificam a correção desse programa.
-Estas condições podem surgir sob a forma de qualquer um dos _factos_ , que verificam os valores das suas entradas, ou _afirmações_ , que verificam os estados de um ou mais qubits passados como entrada.
+Estas condições podem surgir sob a forma de qualquer um dos _factos_, que verificam os valores das suas entradas, ou _afirmações_, que verificam os estados de um ou mais qubits passados como entrada.
 
 Por exemplo, `EqualityFactI(1 + 1, 2, "1 + 1 != 2")` representa o facto matemático de que $1 + 1 = 2$, enquanto representa a condição de que a `AssertQubit(One, qubit)` medição `qubit` devolverá um com `One` certeza.
 No primeiro caso, podemos verificar a correção da condição dado apenas os seus valores, enquanto neste último, temos de saber algo sobre o estado do qubit para avaliar a afirmação.
@@ -84,7 +84,7 @@ Em particular, isto permite-nos raciocinar sobre medições *incompatíveis* que
 Suponha que `P : Qubit => Unit` seja uma operação destinada a preparar o estado $\ket{\psi}$ quando a sua entrada estiver no estado $\ket {0} $.
 Deixe $\ket{\psi'}$ ser o estado real preparado por `P` .
 Em seguida, $\ket{\psi} = \ket{\psi'}$ se e somente se medir $\ket{\psi}} no eixo descrito por $\ket{\psi}$ sempre regressa `Zero` .
-Ou seja, \start{align} \ket{\psi} = \ket{\psi}} \text{ if if } \braket{\psi \ \psi'} = 1.
+Ou seja, \start{align} \ket{\psi} = \ket{\psi}} \text{ if if } \braket{\psi | \psi'} = 1.
 \end{align} Utilizando as operações primitivas definidas no prelúdio, podemos efetuar diretamente uma medição que retorne `Zero` se $\ket{\psi}} for um eigenstate de um dos operadores pauli.
 
 
@@ -112,7 +112,7 @@ Devido à fase global, no entanto, podemos escolher $a \_ i = 0$, de modo que s�
 Assim, precisamos de especificar três afirmações que são independentes umas das outras para afirmar o estado que esperamos.
 Fazemos isso encontrando a probabilidade de observar `Zero` para cada medida Pauli dado $\alpha$ e $\beta$, e afirmando cada um de forma independente.
 Deixe $x$, $y$, e $z$ sejam `Result` valores para as medições de Pauli $X$, $Y$e $Z$ respectivamente.
-Em seguida, utilizando a função de probabilidade para medições quânticas, \begin{align} \Pr(x = \texttt{Zero} / \alpha, \beta) & = \frac12 + a \_ r b r + a i b i \_ \_ \_ \\ \\ \Pr(y = \texttt{Zero} / \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \alpha, \beta) & = \frac12 + a r b \_ i - a i b \_ \_ \_ \\ \\ \Pr(z = \texttt{Zero} ] \ alpha, \beta) & = \frac12\left( 1 + a \_ r^2 + a \_ i^2 + b \_ r^2 + b \_ i^2 \direita).
+Em seguida, utilizando a função de probabilidade para medições quânticas, \begin{align} \Pr(x = \texttt{Zero} | \alpha, \beta) & = \frac12 + a \_ r b r + a i b \_ \_ \_ \\ \\ \Pr(y = \texttt{Zero} | \alpha, \beta) & = \frac12 + a r b i - a i b \_ \_ \_ \_ \\ \\ \Pr(z = \texttt{Zero} | \alpha, \beta) & = \frac12\left( 1 + a \_ r^2 + a \_ i^2 + b \_ r^2 + b \_ i^2 \direita).
 \end{align}
 
 A <xref:Microsoft.Quantum.Diagnostics.AssertQubitIsInStateWithinTolerance> operação implementa estas afirmações dadas representações de $\alpha$ e $\beta$ como valores do tipo <xref:Microsoft.Quantum.Math.Complex> .
@@ -145,7 +145,7 @@ Nos casos em que uma operação implementa uma operação clássica reversível,
 
 No entanto, mais criticamente, as duas abordagens testam diferentes propriedades das operações em análise.
 Uma vez que a afirmação no local chama cada operação várias vezes, uma vez para cada estado de entrada, quaisquer escolhas aleatórias e resultados de medição podem mudar entre chamadas.
-Em contrapartida, a afirmação referenciada chama a cada operação exatamente uma vez, de modo a verificar se as operações são iguais *num único tiro* .
+Em contrapartida, a afirmação referenciada chama a cada operação exatamente uma vez, de modo a verificar se as operações são iguais *num único tiro*.
 Ambos os testes são úteis para garantir a correção dos programas quânticos.
 
 

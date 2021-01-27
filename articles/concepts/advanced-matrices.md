@@ -1,6 +1,6 @@
 ---
 título: Descrição de conceitos de matriz avançada: Saiba mais sobre eigenvectors, eigenvalues e exponencials da matriz, as ferramentas fundamentais usadas para descrever e simular algoritmos quânticos.
-autor: QuantumWriter uid: microsoft.quantum.concepts.matrix-advanced ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: QuantumWriter uid: microsoft.quantum.concepts.matrix-advanced ms.author: v-benbra ms.date: 12/11/2017 ms.topic: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"

@@ -1,6 +1,6 @@
 ---
 título: Descrição dos circuitos quânticos: Aprenda a representar visualmente operações quânticas simples e complexas com diagramas de circuito quântico.
-autor: QuantumWriter uid: microsoft.quantum.concepts.circuits ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: QuantumWriter uid: microsoft.quantum.concepts.circuits ms.author: v-benbra ms.date: 12/11/2017 ms.topic: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"

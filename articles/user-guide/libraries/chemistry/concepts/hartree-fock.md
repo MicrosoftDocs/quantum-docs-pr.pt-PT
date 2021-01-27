@@ -1,20 +1,20 @@
 ---
-title: Teoria hartree-Fock
+title: Teoria Hartree-Fock
 description: Conheça a teoria Hartree-Fock, uma forma simples de construir o estado inicial para sistemas quânticos.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.hartreefock
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 53d6e4342e5b58886528e89871591e57d8e70c82
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 48d6bc4face90046271dd8705188a92daafad98a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835354"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854097"
 ---
 # <a name="hartreefock-theory"></a>Teoria hartree-Fock
 
@@ -54,7 +54,7 @@ var wavefunctionInt = wavefunctionSpinOrbital.ToIndexing(IndexConvention.UpDown)
 A característica mais marcante sobre a teoria hartree-Fock é que produz um estado quântico que não tem qualquer emaranhamento entre os eletrões.
 Isto significa que muitas vezes fornece uma descrição qualitativa adequada das propriedades dos sistemas moleculares. 
 
-O estado de Hartree-Fock também pode ser reconstruído da `FermionHamiltonian`  seguinte forma.
+O estado Hartree-Fock também pode ser reconstruído da `FermionHamiltonian`  seguinte forma.
 ```csharp
 // We initialize a fermion Hamiltonian.
 var fermionHamiltonian = new FermionHamiltonian();

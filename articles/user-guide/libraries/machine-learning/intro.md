@@ -4,17 +4,17 @@ description: Saiba como é que a aprendizagem automática é usada em sistemas q
 author: alexeib2
 ms.author: alexeib
 ms.date: 11/22/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9f7f892fb2b76432942c86163497c22f0c73d51f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: e2f4a4a63eef40474856426b3b29652b5d3053b2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833806"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98854023"
 ---
 # <a name="introduction-to-quantum-machine-learning"></a>Introdução à Aprendizagem de Máquinas Quânticas
 
@@ -41,7 +41,7 @@ Assim, a solução é um analógico quântico de uma máquina vetorial de suport
 
 Um design de classificador quântico simples pode ser comparado com uma solução tradicional de vetor de suporte (SVM). A inferência para uma amostra de dados $x$ no caso de SVM é feita usando um núcleo ideal $\sum \alpha_j k (x_j,x)$ onde $k$ é uma determinada função de kernel.
 
-Em contraste, um classificador quântico usa o previsão $p(y│x,U(\theta))=〈U(\theta)x/ M. U(\theta)x〉$, que é semelhante em espírito, mas tecnicamente bastante diferente. Assim, quando é utilizada uma codificação simples de amplitude, $p(y│x,U(\theta)$ é uma forma quadrática nas amplitudes de $x$, mas os coeficientes desta forma já não são aprendidos de forma independente; são, em vez disso, agregados a partir dos elementos matricias do circuito $U(\theta)$, que normalmente tem significativamente menos parâmetros apreitáveis $\theta$ do que a dimensão do vetor $x$. O grau polinómico de $p(y│x,U(\theta)$ nas características originais pode ser aumentado para $2^l$ usando um produto quântico codificando $l$ cópias de $x$.
+Em contraste, um classificador quântico usa o preditor $p(y│x,U(\theta))=〈U(\theta)x|M|U(\theta)x〉$, que é semelhante em espírito, mas tecnicamente bastante diferente. Assim, quando é utilizada uma codificação simples de amplitude, $p(y│x,U(\theta)$ é uma forma quadrática nas amplitudes de $x$, mas os coeficientes desta forma já não são aprendidos de forma independente; são, em vez disso, agregados a partir dos elementos matricias do circuito $U(\theta)$, que normalmente tem significativamente menos parâmetros apreitáveis $\theta$ do que a dimensão do vetor $x$. O grau polinómico de $p(y│x,U(\theta)$ nas características originais pode ser aumentado para $2^l$ usando um produto quântico codificando $l$ cópias de $x$.
 
 A nossa arquitetura explora circuitos relativamente rasos, que, portanto, devem ser *rapidamente emaranhados* para capturar todas as correlações entre as características dos dados em todas as gamas. Um exemplo do componente de circuito de enredar rápido mais útil é mostrado na figura abaixo. Mesmo que um circuito com esta geometria consista em apenas $3 n+1$ portões, a matriz de peso unitário que calcula garante conversas cruzadas significativas entre as características de $2^n$ .
 
@@ -59,17 +59,17 @@ Aqui, preocupamo-nos apenas com a classificação de dois níveis, ou seja, o ca
 
 ### <a name="likelihood-as-the-training-goal"></a>Probabilidade como objetivo de treino
 
-Dado um circuito quântico apresuável $U(\theta)$, onde $\theta$ é um vetor de parâmetros, e denotando a medição final por $M$, a probabilidade média da inferência correta da etiqueta é $$ \start{L}} {1} \mathcal{L}}}(\mathcal{D}]} \left\{{D y_1}/* \left\ \sum_{(x,y_1)\in math\cal{D}} U(\theta) x) + \sum_{(x,y_2)\in\mathcal{D}} P(M=y_2/ U(\theta) x)\right) \end{align} $$ onde $P (M=y/z)$ é a probabilidade de medir $y$ em estado quântico $z$.
+Dado um circuito quântico apresuável $U(\theta)$, onde $\theta$ é um vetor de parâmetros, e denotando a medição final por $M$, a probabilidade média da inferência correta da etiqueta é $$ \start{l}y_1 {1} sum_ | |(mathcal{L}y_1|} U(\theta) x) + \sum_{(x,y_2)\in\mathcal{D}} P(M=y_2| U(\theta) x)\right) \end{align} $$ onde $P(M=y|z)$ é a probabilidade de medir $y$ em estado quântico $z$.
 Aqui, basta entender que a função de probabilidade $\mathcal{L}(\theta)$ é suave em $\theta$ e a sua derivada em qualquer $\theta_j$ pode ser calculada essencialmente pelo mesmo protocolo quântico usado para calcular a função de probabilidade em si. Isto permite otimizar o $\mathcal{L}(\theta)$ por descida de gradiente.
 
 ### <a name="classifier-bias-and-training-score"></a>Viés de classificado e pontuação de treino
 
 Tendo em conta alguns valores intermédios (ou finais) dos parâmetros em $\theta$, precisamos identificar um único valor real $b$ conhecido como *viés de classificador* para fazer a inferência. A regra da inferência do rótulo funciona da seguinte forma: 
-- Uma amostra $x$ é atribuída etiqueta $y_2$ se e somente se $P (M=y_2/ U(\theta) x) + b > 0,5$ (REGRA1) (caso contrário, é atribuída a etiqueta $y_1$)
+- Uma amostra $x$ é atribuída $y_2$ se e somente se $P (M=y_2| U(\theta) x) + b > 0,5$ (REGRA1) (caso contrário, é atribuída a etiqueta $y_1$)
 
 É evidente $b$ deve estar no intervalo $(-0,5,0,5)$ para ser significativo.
 
-Um caso de treino $(x,y) \in \mathcal{D}$ é considerado uma *classificação errada* dado o preconceito $b$ se o rótulo inferido por $x$ como por RULE1 é realmente diferente de $y$. O número total de classificações erradas é a *pontuação* de treino do classificador dado o preconceito $b$. O *viés de* classificador ideal $b$ minimiza a pontuação do treino. É fácil ver que, dadas as estimativas de probabilidade pré-computação $ \{ P(M=y_2/ U(\theta) x ! (x,*)\in\mathcal{D} \} $, o viés de classificador ideal pode ser encontrado através de pesquisa binária em intervalos $(-0,5,+0,5)$ fazendo no máximo $\log_2(\mathcal{D}]) Passos de $000.
+Um caso de treino $(x,y) \in \mathcal{D}$ é considerado uma *classificação errada* dado o preconceito $b$ se o rótulo inferido por $x$ como por RULE1 é realmente diferente de $y$. O número total de classificações erradas é a *pontuação* de treino do classificador dado o preconceito $b$. O *viés de* classificador ideal $b$ minimiza a pontuação do treino. É fácil ver que, dadas as estimativas de probabilidade pré-computação $ \{ P(M=y_2| U(\theta) x) | (x,*)\in\mathcal{D} \} $, o viés de classificação ideal pode ser encontrado através de uma pesquisa binária no intervalo $(-0,5,0,5)$ fazendo no máximo $\log_2(|\mathcal{D}|) Passos de $000.
 
 ### <a name="reference"></a>Referência
 
