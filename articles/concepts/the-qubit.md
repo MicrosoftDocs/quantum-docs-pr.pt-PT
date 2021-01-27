@@ -1,6 +1,6 @@
 ---
 título: O qubit na descrição da computação quântica: Saiba mais sobre qubits, a unidade fundamental de informação na computação quântica.
-autor: QuantumWriter uid: microsoft.quantum.concepts.qubit ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: QuantumWriter uid: microsoft.quantum.concepts.qubit ms.author: v-benbra ms.date: 12/11/2017 ms.topic: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -167,7 +167,7 @@ O mais simples tão primitivo é a única rotação qubit. São normalmente cons
 
 \begin{alinhar *} 
  & R_z(\theta) = e^ { -i\theta Z/2 } = \begin{bmatrix} e^ { -i\theta/2 } & \\\\ 0 0 & { e^i\theta/2 } \end{bmatrix} , \\\\ 
- & R_x(\theta) = { e^-i\theta X/2 } = HR_z(\theta)H = \begin{bmatrix} \cos(\theta/2) & -i\sin(\theta/2) \\\\ -i\\\\\\\\\sin(\theta/2) & \cos(\theta/2) \end{bmatrix} , \\\\ 
+ & R_x(\theta) = { e^-i\theta X/2 } = HR_z(\theta)H = \begin{bmatrix} \cos(\theta/2) & -i\sin(\theta/2) \\\\ -i\sin(\theta/2) & \cos(\theta/2) \end{bmatrix} , \\\\ 
  & R_y(\theta) = e^ { -i\theta Y/2 } = SHR_z(\theta)HS^ \dagger = \begin{bmatrix} \cos(\theta/2) & -\sin(\theta/2) \\\\ \sin(\theta/2) & \cos(\theta/2) \end{bmatrix} . \end { alinhar*}
 
 Assim como qualquer três rotações podem ser combinadas para realizar uma rotação arbitrária em três dimensões, pode ser visto a partir da representação da esfera bloch que qualquer matriz unitária pode ser escrita como uma sequência de três rotações também. Especificamente, para cada matriz unitária $ U $ $ \alpha \beta existe, \gamma tal como \delta $ U $ = e^ i { \alpha } \beta R_x, R_x \gamma R_z. \delta $ Assim, $ R_z(\theta) $ e H também $ $ formam um conjunto universal de portão, embora não seja um conjunto discreto porque $ \theta $ pode ter qualquer valor. Por esta razão, e devido a aplicações em simulação quântica, tais portões contínuos são cruciais para a computação quântica, especialmente ao nível do design do algoritmo quântico. Para conseguir a implementação de hardware tolerante a falhas, acabarão por ser compilados em sequências discretas de portão que se aproximam destas rotações.

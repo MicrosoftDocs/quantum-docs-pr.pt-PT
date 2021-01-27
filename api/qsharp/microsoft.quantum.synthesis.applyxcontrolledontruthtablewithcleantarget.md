@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyXControlledOnTruthTableWithCleanTarget
 title: AplicaXControlledOnTruthTableWithCleanTarget
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyXControlledOnTruthTableWithCleanTarget
 qsharp.summary: Applies the @"microsoft.quantum.intrinsic.x" operation on `target`, if the Boolean function `func` evaluates to true for the classical assignment in `controlRegister`.
-ms.openlocfilehash: 904ff7e2e7e81ee966846af120e9427f4e92301c
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: a54544cd026f26784bb0c41cb12187a8885ed9db
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96203268"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855540"
 ---
 # <a name="applyxcontrolledontruthtablewithcleantarget-operation"></a>AplicaXControlledOnTruthTableWithCleanTarget
 
@@ -28,7 +28,7 @@ operation ApplyXControlledOnTruthTableWithCleanTarget (func : BigInt, controlReg
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Esta operação implementa um caso especial @"microsoft.quantum.synthesis.applyxcontrolledontruthtable" de, no qual o qubit alvo é conhecido por estar no estado $\ket {0} $.
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.RippleCarryAdderCDKM
 title: Operação RippleCarryAdderCDKM
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: RippleCarryAdderCDKM
 qsharp.summary: Reversible, in-place ripple-carry addition of two integers.
-ms.openlocfilehash: b08d8823fd539263205aca1ee15ee69adcb163b7
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: df9b62b649af532a4202aacc3e8dd4613eb8665d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96222104"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846368"
 ---
 # <a name="ripplecarryaddercdkm-operation"></a>Operação RippleCarryAdderCDKM
 
@@ -28,7 +28,7 @@ operation RippleCarryAdderCDKM (xs : Microsoft.Quantum.Arithmetic.LittleEndian, 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Tendo em conta dois inteiros $n de $-bit codificados nos registos de LittleEndian `xs` e , e um transporte `ys` qubit, a operação calcula a soma dos dois inteiros onde os $n$ menos significativos do resultado são mantidos `ys` e a broca de execução é recortada ao qubit `carry` .
 

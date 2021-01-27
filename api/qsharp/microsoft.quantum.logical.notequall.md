@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.NotEqualL
 title: Função NotEqualL
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: NotEqualL
 qsharp.summary: Returns true if and only if two inputs are not equal.
-ms.openlocfilehash: e138a8def30bc77499662ffa6bc214d0c6a38893
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b19de2e4e8052c77118f341700357b212e20af53
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197233"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98849032"
 ---
 # <a name="notequall-function"></a>Função NotEqualL
 
@@ -49,7 +49,7 @@ O segundo valor a ser comparado.
 
 Os seguintes são equivalentes:
 
-```Q#
+```qsharp
 let cond = a != b;
 let cond = NotEqualL(a, b);
 ```

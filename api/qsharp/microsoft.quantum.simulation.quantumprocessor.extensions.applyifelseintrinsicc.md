@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions.ApplyIfElseIntrinsicC
 title: Aplicação OperaçãoIfElseIntrinsicC
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Simulation.QuantumProcessor.Extensions
 qsharp.name: ApplyIfElseIntrinsicC
 qsharp.summary: ''
-ms.openlocfilehash: 9cd58f2fd103237213ef386fc6af1451e48b7cec
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: dc5eba77babdf16c20f2b5b0e3a53a9ade4b0c61
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96228887"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98855703"
 ---
 # <a name="applyifelseintrinsicc-operation"></a>Aplicação OperaçãoIfElseIntrinsicC
 
@@ -35,12 +35,12 @@ operation ApplyIfElseIntrinsicC (measurementResult : Result, onResultZeroOp : (U
 
 
 
-### <a name="onresultzeroop--unit--unit--is-ctl"></a>onResultZeroOp [Unit](xref:microsoft.quantum.lang-ref.unit) : => [Unidade](xref:microsoft.quantum.lang-ref.unit) é CTL
+### <a name="onresultzeroop--unit--unit--is-ctl"></a>onResultZeroOp [](xref:microsoft.quantum.lang-ref.unit) : => [Unidade](xref:microsoft.quantum.lang-ref.unit) é CTL
 
 
 
 
-### <a name="onresultoneop--unit--unit--is-ctl"></a>onResultOneOp [Unit](xref:microsoft.quantum.lang-ref.unit) : => [Unidade](xref:microsoft.quantum.lang-ref.unit) é Ctl
+### <a name="onresultoneop--unit--unit--is-ctl"></a>onResultOneOp [](xref:microsoft.quantum.lang-ref.unit) : => [Unidade](xref:microsoft.quantum.lang-ref.unit) é Ctl
 
 
 

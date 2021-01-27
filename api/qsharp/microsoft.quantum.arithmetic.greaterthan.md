@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.GreaterThan
 title: Operação GreaterTh
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: GreaterThan
 qsharp.summary: Applies a greater-than comparison between two integers encoded into qubit registers, flipping a target qubit based on the result of the comparison.
-ms.openlocfilehash: 644d68affbdb508938f76de5025a1a463e7284e2
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 553efb0fc83f24235cb4a77933bd1d547bbd1fed
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223090"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846637"
 ---
 # <a name="greaterthan-operation"></a>Operação GreaterTh
 
@@ -28,7 +28,7 @@ operation GreaterThan (xs : Microsoft.Quantum.Arithmetic.LittleEndian, ys : Micr
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Realiza uma comparação estritamente maior do que a comparação de dois inteiros $x$ e $y$, codificados em qubit registers xs e ys. Se $x > y$, então o qubit do resultado será invertido, caso contrário o qubit de resultado manterá o seu estado.
 
