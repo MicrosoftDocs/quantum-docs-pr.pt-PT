@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.ColumnAt
 title: Função ColumnAt
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: ColumnAt
 qsharp.summary: Extracts a column from a matrix.
-ms.openlocfilehash: 097b3fdd6fc1843ada27052fcf08ee80d894d25a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 32dc814de9b04563c2798a768f121723a1a8252c
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210105"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98846263"
 ---
 # <a name="columnat-function"></a>Função ColumnAt
 
@@ -28,7 +28,7 @@ function ColumnAt<'T> (column : Int, matrix : 'T[][]) : 'T[]
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Esta função extrai uma coluna numa matriz em ordem de linha.
 Extrair uma linha de corrsponds para o acesso do elemento do primeiro índice e, portanto, não requer mais tratamento.
@@ -55,6 +55,14 @@ Matriz 2-dimensional em ordem em linha
 ### <a name="t"></a>'T
 
 O tipo de cada elemento de `matrix` .
+
+## <a name="example"></a>Exemplo
+
+```qsharp
+let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+let column = ColumnAt(0, matrix);
+// same as: column = [1, 4, 7]
+```
 
 ## <a name="see-also"></a>Consulte também
 

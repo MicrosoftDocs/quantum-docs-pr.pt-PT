@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Preparation.ApproximatelyPrepareArbitraryStateCP
 title: Operação AproximadamentePrepareArbitraryStateCP
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Preparation
 qsharp.name: ApproximatelyPrepareArbitraryStateCP
 qsharp.summary: Given a set of coefficients and a little-endian encoded quantum register, prepares an state on that register described by the given coefficients, up to a given approximation tolerance.
-ms.openlocfilehash: 44352a4d6325c128539351695fb14d3706ce842f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: fbabc320ff153dbceb4453bad95cd5f4c1776583
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96226541"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856975"
 ---
 # <a name="approximatelypreparearbitrarystatecp-operation"></a>Operação AproximadamentePrepareArbitraryStateCP
 
@@ -28,12 +28,12 @@ operation ApproximatelyPrepareArbitraryStateCP (tolerance : Double, coefficients
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Esta operação prepara um estado quântico arbitrário $\ket{\psi}$ com coeficientes complexos $r_j e^{i t_j}$ do estado de base computacional $n$-qubit $\ket{0 \cdots 0}$.
 Em particular, a ação desta operação pode ser simulada pela transformação unitária $U$ que atua no estado de todos os zeros como
 
-$$ \begin{align} U\ket{0...0} & = \ket{\psi} \\ \\ & = \frac{ \sum_{j=0}^{2^n-1} r_j e^{i t_j} \ket{j} }{{{j} \sqrt{\sum_{j=0}^{2^n-1} [r_j/^2} }.
+$$ \begin{align} U\ket{0...0} & = \ket{\psi} \\ \\ & = \frac{ \sum_{j=0}^{2^n-1} r_j e^{i t_j} \ket{j} }{{j} \{sqrt{\sum_{j=0}^{2^n-1} |r_j|^2} }.
 \end{align} $$
 
 ## <a name="input"></a>Entrada
@@ -60,7 +60,7 @@ O número de codificação do registo qubit está em formato pouco endiano. Espe
 
 ## <a name="remarks"></a>Observações
 
-Coeficientes de entrada negativos $r_j < 0$ serão tratados como se positivos com valor $/ r_j `coefficients` serão acolchoados com elementos $(r_j, t_j) = (0,0, 0,0)$ se forem especificados menos de $2^n$ .
+Coeficientes de entrada negativos $r_j < 0$ serão tratados como positivos com valor de $|r_j|$. `coefficients` serão acolchoados com elementos $(r_j, t_j) = (0,0, 0,0)$ se forem especificados menos de $2^n$ .
 
 ## <a name="references"></a>Referências
 

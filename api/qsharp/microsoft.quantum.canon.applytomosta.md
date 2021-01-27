@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToMostA
 title: Aplicação OperaçãoToMostA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToMostA
 qsharp.summary: Applies an operation to all but the last element of an array.
-ms.openlocfilehash: 7c226de9b2c99d124c467175dfe65a60a89d4332
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: eb793b3d6bc1f75a14e97420d36d0aea3038e0f5
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208504"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850578"
 ---
 # <a name="applytomosta-operation"></a>Aplicação OperaçãoToMostA
 
@@ -28,7 +28,7 @@ operation ApplyToMostA<'T> (op : ('T[] => Unit is Adj), targets : 'T[]) : Unit i
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Most(targets))` .
 

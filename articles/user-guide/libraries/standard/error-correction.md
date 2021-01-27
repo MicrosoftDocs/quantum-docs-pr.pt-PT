@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.error-correction
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 94251e185cea65c5fc08ed70d5fba9b7b19501e3
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: fc8e46aa22cb2575de42cfc3d4f57c43e5d3f7b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692042"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857200"
 ---
 # <a name="error-correction"></a>Correção de Erros #
 
@@ -29,7 +29,7 @@ Ou seja, o [teorema da não clonagem](xref:microsoft.quantum.concepts.pauli#the-
 
 No cenário quântico, veremos que a medição é problemática. Ainda podemos implementar a codificação acima.
 É útil fazê-lo para ver como podemos generalizar a correção de erros no caso quântico.
-Assim, deixe $\ket{\overline {0} } = \ket {000} = \ket {0} \otimes \ket {0} \otimes \ket \ket {0} \ket $, e let $\ket{\overline {1} } = \ket {111} $.
+Assim, deixe $\ket{\overline {0} } = \ket {000} = \ket {0} \otimes \ket {0} \otimes \ket {0} $, e let $\ket{\overline {1} } = \ket {111} $.
 Então, por linearidade, definimos o nosso código de repetição para todas as entradas; por exemplo, $\ket{\overline{+}} = (\ket{\overline {0} } + \ket{\overline {1} }) / \sqrt {2} = {000} (\ket + \ket) {111} / \sqrt {2} $.
 Em particular, deixando um erro de flip-flip $X_1$ agir no qubit médio, vemos que a correção necessária em ambos os ramos é precisamente $X_1$: $$ \start{align} X_1 \ket{\overline{+}} & = \frac {1} {\sqrt {2} } \X_1 \ket {000} + X_1 \ket {111} \ket \right) \\ \\ & = \frac {1} {sqrt {2} } \\ket {010} {101}
 \end{align} $$
@@ -61,7 +61,7 @@ Denotamos os resultados de cada medição pelo sinal do valor eigen que é obser
 | $X_2$ | $\ket {001} $ | $\ket {110} $ | $+$ | $-$ |
 
 Assim, os resultados das duas medições determinam exclusivamente qual o erro bit-flip ocorrido, mas sem revelar qualquer informação sobre o estado que codificamos.
-Chamamos a estes resultados uma *síndrome,* e referimo-nos ao processo de mapear uma síndrome de volta ao erro que a causou como *recuperação* .
+Chamamos a estes resultados uma *síndrome,* e referimo-nos ao processo de mapear uma síndrome de volta ao erro que a causou como *recuperação*.
 Em particular, salientamos que a recuperação é um procedimento de inferência *clássica* que toma como entrada a síndrome que ocorreu, e devolve uma receita para como corrigir quaisquer erros que possam ter ocorrido.
 
 > [!NOTE]

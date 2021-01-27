@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToRestC
 title: Aplicar operaçãoToRestC
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToRestC
 qsharp.summary: Applies an operation to all but the first element of an array.
-ms.openlocfilehash: 779c3831b2027a58f97dae9609e96d4d98247da7
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 1e533a9f0994b70054aeca2f9ddd97f4e200b03f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208198"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850500"
 ---
 # <a name="applytorestc-operation"></a>Aplicar operaçãoToRestC
 
@@ -28,7 +28,7 @@ operation ApplyToRestC<'T> (op : ('T[] => Unit is Ctl), targets : 'T[]) : Unit i
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Rest(targets))` .
 

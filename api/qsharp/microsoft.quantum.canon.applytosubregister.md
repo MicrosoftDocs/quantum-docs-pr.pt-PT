@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToSubregister
 title: Aplicação Operação Deubregister
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToSubregister
 qsharp.summary: Applies an operation to a subregister of a register, with qubits specified by an array of their indices.
-ms.openlocfilehash: d4589edaadf59bbfff432bf49be2ce14fcff6ed1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: be820c87ee19230713d6c3e5681bbe3678040e95
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96208113"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850476"
 ---
 # <a name="applytosubregister-operation"></a>Aplicação Operação Deubregister
 
@@ -49,6 +49,16 @@ Registe-se no qual a operação atua.
 ## <a name="output--unit"></a>Saída : [Unidade](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## <a name="example"></a>Exemplo
+
+Criar três qubit state $\frac {1} {\sqrt {2} }\ket {0} \_ 2(\ket {0} \_ 1\ket {0} _3+\ket {1} \_ 1\ket {1} _3)$:
+
+```qsharp
+    using (register = Qubit[3]) {
+        ApplyToSubregister(Exp([PauliX,PauliY],PI() / 4.0,_), [1,3], register);
+    }
+```
 
 ## <a name="see-also"></a>Consulte também
 
