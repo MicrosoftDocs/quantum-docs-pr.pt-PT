@@ -1,6 +1,6 @@
 ---
 título: "Iterações e loops em Q# " descrição: Saiba mais sobre a utilização de loops 'for' na Q# linguagem de programação.
-autor: bettinaheim ms.author: beheim ms.date: 10/07/2020 ms.topic: article uid: microsoft.quantum.qsharp.iterations no-loc:
+autor: bettinaheim ms.author: beheim ms.date: 10/07/2020 ms.topic: reference uid: microsoft.quantum.qsharp.iterations no-loc:
 - "Q#"
 - "$$v"
 

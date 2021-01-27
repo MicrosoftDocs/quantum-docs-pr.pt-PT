@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.applications
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 5a29dcc74c638cb8ecbeb1f924d0e50d40d19f66
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 214d584840f235868c66a1fb3ee24d0acab49630
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692172"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857249"
 ---
 # <a name="applications"></a>Aplicações #
 
@@ -24,10 +24,10 @@ A simulação dos sistemas quânticos é uma das aplicações mais excitantes da
 Num computador clássico, a dificuldade em simular mecânica quântica, em geral, escala com a dimensão $N$ da sua representação de vetores de estado.
 À medida que esta representação cresce exponencialmente com o número de qubits $n$ $N=2^n$, um traço conhecido também como a [maldição da dimensionalidade,](xref:microsoft.quantum.concepts.multiple-qubits)a simulação quântica no hardware clássico é intratável.
 
-No entanto, a situação pode ser muito diferente no hardware quântico. A variação mais comum da simulação quântica é chamada o problema de simulação hamiltoniana independente do tempo. Lá, um é fornecido com uma descrição do sistema Hamiltonian $H$, que é uma matriz hermitiana, e algum estado quântico inicial $\ket{\psi(0)}} que é codificado em alguma base em $n$ qubits em um computador quântico. À medida que os estados quânticos em sistemas fechados evoluem sob a equação de Schrödinger $\ \begin{align} i\frac{d \ket{\psi(t)}}}}}}}}}}}}}}}}d} & = H\ket{\psi(t)}, \end{align} $$ O objetivo é implementar o operador unitário de evolução do tempo $U(t)=e^{-iHt}$ em algum momento fixo $t$, onde $\ket{\psi(t)}=U(t)\ket{\psi(0)}} resolve a equação de Schrödinger.
+No entanto, a situação pode ser muito diferente no hardware quântico. A variação mais comum da simulação quântica é chamada o problema de simulação hamiltoniana independente do tempo. Lá, um é fornecido com uma descrição do sistema Hamiltonian $H$, que é uma matriz hermitiana, e algum estado quântico inicial $\ket{\psi(0)}} que é codificado em alguma base em $n$ qubits em um computador quântico. À medida que os estados quânticos em sistemas fechados evoluem sob a equação de Schrödinger $\ \begin{align} i\frac{d \ket{\psi(t)}d} & = H\ket{\psi(t)}, \end{align} $$ O objetivo é implementar o operador unitário de evolução do tempo $U(t)=e^{-iHt}$ em algum momento fixo $t$, onde $\ket{\psi(t)}=U(t)\ket{\psi(0)}} resolve a equação de Schrödinger.
 Análogamente, o problema de simulação hamiltoniano dependente do tempo resolve a mesma equação, mas com $H(t)$ agora uma função do tempo.
 
-A simulação hamiltoniana é um dos principais componentes de muitos outros problemas de simulação quântica, e as soluções para o problema de simulação hamiltoniana são algoritmos que descrevem uma sequência de portões quânticos primitivos para sintetizar uma aproximação unitária $\tilde{U}$ com erro $ \\ \\tilde{U} - U(t) \\ \ [spectral norm](xref:microsoft.quantum.concepts.matrix-advanced) A complexidade destes algoritmos depende muito fortemente de como uma descrição do interesse hamiltoniano é acessível por um computador quântico. Por exemplo, no pior dos casos, se $H$ agindo em $n$ qubits seriam fornecidos como uma lista de $2^n \times números de 2^n$ , um para cada elemento matricial, simplesmente ler os dados já exigiria tempo exponencial. Na melhor das hipóteses, pode-se assumir o acesso a uma caixa preta unitária que $O\ket{t}ket{\psi(0)}*ket{t}U(t)\ket{\psi(0)}} trivialmente resolve o problema. Nenhum destes modelos de entrada é particularmente interessante - o primeiro, uma vez que não é melhor do que abordagens clássicas, e este último como a caixa preta esconde a complexidade primitiva do portão da sua implementação, que poderia ser exponencial no número de qubits.
+A simulação hamiltoniana é um dos principais componentes de muitos outros problemas de simulação quântica, e as soluções para o problema de simulação hamiltoniana são algoritmos que descrevem uma sequência de portões quânticos primitivos para sintetizar uma unidade de aproximação $\tilde{U}$ com erro $ \\ |\tilde{U} - U(t) \\ | \le \epsilon® na [norma espectral](xref:microsoft.quantum.concepts.matrix-advanced). A complexidade destes algoritmos depende muito fortemente de como uma descrição do interesse hamiltoniano é acessível por um computador quântico. Por exemplo, no pior dos casos, se $H$ agindo em $n$ qubits seriam fornecidos como uma lista de $2^n \times números de 2^n$ , um para cada elemento matricial, simplesmente ler os dados já exigiria tempo exponencial. Na melhor das hipóteses, pode-se assumir o acesso a uma caixa preta unitária que $O\ket{t}ket{\psi(0)}*ket{t}U(t)\ket{\psi(0)}} trivialmente resolve o problema. Nenhum destes modelos de entrada é particularmente interessante - o primeiro, uma vez que não é melhor do que abordagens clássicas, e este último como a caixa preta esconde a complexidade primitiva do portão da sua implementação, que poderia ser exponencial no número de qubits.
 
 ### <a name="descriptions-of-hamiltonians"></a>Descrições de Hamiltonians ###
 
@@ -48,7 +48,7 @@ Na maioria das aplicações práticas a implementar num computador quântico, es
 
 Um algoritmo de simulação quântica converte uma descrição dada de um Hamiltonian numa sequência de portões quânticos primitivos que, no seu conjunto, aproximam a evolução do tempo por dito Hamiltonian.
 
-No caso especial em que o Hamiltonian se decompõe numa soma de partes hermitianas, a decomposição Trotter-Suzuki é um algoritmo particularmente simples e intuitivo para simular hamiltonianos que se decompõem numa soma de componentes eremitas. Por exemplo, um integrador de primeira ordem desta família aproxima -$ \start{align} U(t) & = \esquerda( e^{-iH \_ 0 t / r} e^{-iH \_ 1 t / r} \cdots e^{-iH \_ {d-1} t / r} \right)^{r} + \mathcal{O}(d^2 \max_j \\ H \_ j \\ [^2 t^2/r), \end{align} $$ usando um produto de $r d$ termos. 
+No caso especial em que o Hamiltonian se decompõe numa soma de partes hermitianas, a decomposição Trotter-Suzuki é um algoritmo particularmente simples e intuitivo para simular hamiltonianos que se decompõem numa soma de componentes eremitas. Por exemplo, um integrador de primeira ordem desta família aproxima -$ \start{align} U(t) & = \esquerda( e^{-iH \_ 0 t / r} e^{-iH \_ 1 t / r} \cdots e^{-iH \_ {d-1} t / r} \right)^{r} + \mathcal{O}(d^2 \max_j \\ | H \_ j \\ |^2 t^2/r), \end{align} $$ usando um produto de $r termos d$ . 
 
 > [!TIP]
 > As aplicações do algoritmo de simulação Trotter-Suzuki estão cobertas nas amostras.
@@ -56,7 +56,7 @@ No caso especial em que o Hamiltonian se decompõe numa soma de partes hermitian
 > Para o modelo Ising utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **isingTrotter**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/ising/trotter-evolution).
 > Para hidrogénio molecular utilizando a estrutura de controlo da biblioteca Trotter-Suzuki, consulte a amostra [ **de simulação H2**](https://github.com/microsoft/Quantum/tree/main/samples/simulation/h2/command-line).
 
-Em muitos casos, gostaríamos de implementar o algoritmo de simulação, mas não estamos interessados nos detalhes da sua implementação. Por exemplo, o integrador de segunda ordem aproxima -$ \start{align} U(t) & = \esquerda (e^{-iH \_ 0 t / 2r} e^{-iH \_ 1 t / 2r} \cdots e^{-iH \_ {d-1} t / 2r} e^{-iH \_ {d-1} t / 2r} \cdots e^{-iH \_ 1 t / 2r} e^{-iH \_ 0 t / 2r} \right)^{r} + \mathcal{O}(d^3 \max_j \\ / H \_ j \\ [^3 t^3/r^2), \end{align} $$ usando um produto de termos de $2º$ Encomendas maiores envolverão ainda mais termos e variantes otimizadas podem exigir encomendas altamente não triviais nos exponencials. Outros algoritmos avançados também podem envolver o uso de qubits de ancilla em passos intermédios. Assim, embalamos algoritmos de simulação no cânone como o tipo definido pelo utilizador
+Em muitos casos, gostaríamos de implementar o algoritmo de simulação, mas não estamos interessados nos detalhes da sua implementação. Por exemplo, o integrador de segunda ordem aproxima -$ \start{align} U(t) & = \esquerda (e^{-iH \_ 0 t / 2r} e^{-iH \_ 1 t / 2r} \cdots e^{-iH \_ {d-1} t / 2r} e^{-iH \_ {d-1} t / 2r} \cdots e^{-iH \_ 1 t / 2r} e^{-iH \_ 0 t / 2r} \right)^{r} + \mathcal{O}(d^3 \max_j \\ | H \_ j \\ |^3 t^3/r^2), \end{align} $$ usando um produto de $2º$ termos. Encomendas maiores envolverão ainda mais termos e variantes otimizadas podem exigir encomendas altamente não triviais nos exponencials. Outros algoritmos avançados também podem envolver o uso de qubits de ancilla em passos intermédios. Assim, embalamos algoritmos de simulação no cânone como o tipo definido pelo utilizador
 
 ```qsharp
 newtype SimulationAlgorithm = ((Double, EvolutionGenerator, Qubit[]) => Unit is Adj + Ctl);
@@ -140,7 +140,7 @@ operation EstimateAdiabaticStateEnergy(
 
 ## <a name="shors-algorithm"></a>Algoritmo de Shor ##
 O algoritmo de Shor continua a ser um dos desenvolvimentos mais significativos na computação quântica porque mostrou que os computadores quânticos poderiam ser usados para resolver problemas importantes, atualmente clássicos, intrigantes.
-O algoritmo de Shor fornece uma forma rápida de factorar grandes números usando um computador quântico, um problema chamado *factoring* .
+O algoritmo de Shor fornece uma forma rápida de factorar grandes números usando um computador quântico, um problema chamado *factoring*.
 A segurança de muitos criptosistemas atuais baseia-se no pressuposto de que não existe algoritmo rápido para factoring.
 Assim, o algoritmo de Shor teve um profundo impacto na forma como pensamos sobre a segurança num mundo pós-quântico.
 
@@ -151,11 +151,11 @@ Revemos estes dois passos abaixo.
 
 ### <a name="period-finding"></a>Constatação do período ###
 
-Tendo visto como o quantum Fourier transforma e o trabalho de estimativa de fase (ver [algoritmos quânticos), podemos](xref:microsoft.quantum.libraries.standard.algorithms)usar estas ferramentas para resolver um problema computacional clássico chamado *period finding* .  Na secção seguinte, veremos como aplicar o período de visão ao factoring.
+Tendo visto como o quantum Fourier transforma e o trabalho de estimativa de fase (ver [algoritmos quânticos), podemos](xref:microsoft.quantum.libraries.standard.algorithms)usar estas ferramentas para resolver um problema computacional clássico chamado *period finding*.  Na secção seguinte, veremos como aplicar o período de visão ao factoring.
 
 Tendo em conta dois inteiros $a$ e $N$, onde $a<N$, o objetivo da descoberta do período, também chamado de descoberta de encomendas, é encontrar a _encomenda_ $r$ de $a$ modulo $N$, onde $r$ é definido como o número inteiro menos positivo, tal que $a^r \equiv 1 \equiv 1 \text} mod }  
 
-Para encontrar a encomenda usando um computador quântico, podemos usar o algoritmo de estimativa de fase aplicado ao seguinte operador unitário $U_a$: $$ U_a\ket{x} \equiv \ket{(ax)\text} mod }N} .$$ Os eigenvectors de $U_a$ são para o integer $s$ e $0 $$\ket{x_s} \equiv 1 / \sqrt{r} \soma \_ {k=0}^{r-1} e^{\frac{-2\pi i sk}}} \ket{a^k\text{ mod},$$ são _eigenstates_ of $U_a$.
+Para encontrar a encomenda usando um computador quântico, podemos usar o algoritmo de estimativa de fase aplicado ao seguinte operador unitário $U_a$: $$ U_a\ket{x} \equiv \ket{(ax)\text} mod }N} .$$ Os eigenvectors de $U_a$ são para o integer $s$ e $0 $$\ket{x_s} \equiv 1 / \sqrt{r} \soma \_ {k=0}^{r-1} e^{\frac{-2\pi i sk} \ket{a^k\text{ mod},$$ são _eigenstates_ of $U_a$.
 Os valores eigenvalues de $U_a$ são $$ U \_ a \ket{x \_ s} = e^{2\pi i s / r} \ket{x \_ s} . $$
 
 A estimativa de fases assim produz os eigenvalues $e^{2\pi i s / r}$ a partir do qual $r$ pode ser aprendido eficientemente usando [frações contínuas](https://en.wikipedia.org/wiki/Continued_fraction) de $s /r$.
@@ -178,7 +178,7 @@ O portão controlado $U_a$ mapeia $\ket{x}$ para $\ket{(ax)\text} mod} {1}
 Para obter $(a^nx)\text{ mod} N$, podemos simplesmente aplicar $U_{a^n}$, onde calculamos $a^n \text} mod } N$ clássicamente para ligar ao circuito quântico.  
 Os circuitos para alcançar tal aritmética modular foram descritos na [documentação aritmética quântica](./algorithms.md#arithmetic), especificamente exigimos um circuito de exponenciação modular para implementar as operações de $U controlada \_ {a^i}$ .
 
-Embora o circuito acima corresponda à [Estimativa da Fase Quântica](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) e permita explicitamente a descoberta da ordem, podemos reduzir o número de qubits necessários. Podemos seguir o método de descoberta de encomendas de Beauregard, conforme descrito [na página 8 do arXiv:quant-ph/0205095v3,](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)ou usar uma das rotinas de estimativa de fase disponíveis na Microsoft.Quantum.Characterization. Por exemplo, [a Estimativa de Fase Robusta](xref:microsoft.quantum.characterization.robustphaseestimation) também usa um qubit extra.
+Embora o circuito acima corresponda à [Estimativa da Fase Quântica](xref:Microsoft.Quantum.Characterization.QuantumPhaseEstimation) e permita explicitamente a descoberta da ordem, podemos reduzir o número de qubits necessários. Podemos seguir o método de descoberta de encomendas de Beauregard, conforme descrito [na página 8 do arXiv:quant-ph/0205095v3,](https://arxiv.org/pdf/quant-ph/0205095v3.pdf#page=8)ou usar uma das rotinas de estimativa de fase disponíveis na Microsoft.Quantum.Characterization. Por exemplo, [a Estimativa de Fase Robusta](xref:Microsoft.Quantum.Characterization.RobustPhaseEstimation) também usa um qubit extra.
 
 ### <a name="factoring"></a>Factoring ###
 O objetivo do factoring é determinar os dois fatores primos do inteiro $N$, onde $N$ é um número de $n$-bit.  

@@ -5,16 +5,16 @@ author: bradben
 uid: microsoft.quantum.libraries.characterization
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 72af3f5517b272d6d8159b158103b5af91d266b5
-ms.sourcegitcommit: c48cdafccb3487bf93d67fa80cdc64768445b691
+ms.openlocfilehash: 989806eeb58a0a50a00e9338c7ea653e1e47d7f4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97940891"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857228"
 ---
 # <a name="quantum-characterization-and-statistics"></a>Caracterização quântica e Estatística #
 
@@ -56,12 +56,12 @@ Salientamos isto descrevendo brevemente a estimativa da fase iterativa a nível 
 
 Se for fornecido um estado de entrada que não seja um eigenstate, ou seja, se $U(m)\ket{\phi \_ j} = e^{im\phi \_ j}} então o processo de estimativa de fase não deterministicamente guia o estado quântico em direção a um único estado de eigenação energética.  O eigenstate a que, em última análise, converge é o eigenstate que é mais provável produzir o observado `Result` .
 
-Especificamente, um único passo de PE executa a seguinte transformação não unitária num estado \start{align} \sum_j \sqrt{\Pr(\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac{\sqrt{\Pr\\Pr\\phi \_ j)}}\sqrt{\Pr(\text{Result}/\phi \_ j)}} \_ \_ \_ \_
-\end{align} À medida que este processo é iterado sobre `Result` vários valores, os estados eigenstates que não têm valores máximos de $\prod_k\Pr(\text{Result} \_ k/\phi \_ j)$ serão exponencialmente suprimidos.
+Especificamente, um único passo de PE executa a seguinte transformação não unitária num estado \start{align} \sum_j \sqrt{\Pr(\phi \_ j)} \ket{\phi \_ j} \mapsto \sum \_ j\frac{\sqrt{\Pr\\phi)}\sqrt{\Pr(\text{Result}|\phi \_ \_ j)}\ket{\phi \_ j}}|} \_ \_ \_
+\end{align} À medida que este processo é iterado sobre `Result` vários valores, os estados eigen que não têm valores máximos de $\prod_k\Pr(\text{Result} \_ k|\phi \_ j)$ serão exponencialmente suprimidos.
 Como resultado, o processo de inferência tenderá a convergir para estados com um único eigenvalue se as experiências forem escolhidas corretamente.
 
-O teorema de Bayes sugere ainda que o estado que resulta da estimativa da fase seja escrito no formulário \start{align} \frac{\sqrt{\Pr(\phi \_ j)}}\sqrt{\Pr(\text{Result}/\phi \_ j)}\ket{\phi\\phi\phi\\phi \_ j}}{\sqrt{\Pr(\phi \_ j)\sum \_ j \Pr (\text{Result}/phi \_ j)}=}=}}=sum_j \_ \sqrt{\Pr\text{result}}} \ket{\phi j}} \ket{\phi \_ j}}
-\end{align} Aqui $\Pr(\phi \_ j/\text{Result})$ pode ser interpretado como a probabilidade que se atribuiria a cada hipótese sobre os estados eigenados dado:
+O teorema de Bayes sugere ainda que o estado que resulta da estimativa da fase seja escrito no formulário \begin{align} \frac{\sqrt{\Pr(\phi \_ j)}}\sqrt{\Pr(\text{Result}|\phi \_ j)}\ket{\phi \_ j}{\sqrt{\Pr(\phi \_ j)\sum \_ j \Pr (\text{Result}|\phi \_ j)}=}=sum_j \sqrt{\Pr(\phi \_ j|\text{Result}}} \ket{phi j}} \ket{phi \_ j}}
+\end{align} Aqui $\Pr(\phi \_ j|\text{Result})$ pode ser interpretado como a probabilidade que se atribuiria a cada hipótese sobre os estados eigenados dado:
 
 1. conhecimento do estado quântico antes da medição,
 2. conhecimento dos estados eigen de $U$ e,
@@ -84,16 +84,16 @@ O principal inconveniente dos métodos é que é computacionalmente exigente.
 
 Para entender como funciona este processo de inferência bayesiana, considere o caso do processamento de um único `Zero` resultado.
 Note que $X = \ket{+}\bra{+} - \ket {-} \bra {-} $, tal que $\ket{+}} é o único eigenstate positivo de $X$ correspondente a `Zero` .
-A probabilidade de observar `Zero` uma [ `PauliX` medição](xref:microsoft.quantum.concepts.pauli) no primeiro qubit dado um estado de entrada $\ket{\psi}\ket}\ket{\phi}$ é assim \start{equação} \Pr(\texttt{Zero} / \psi) = \braket{+ \ \psi} \right/2.
-\end{equation} No caso de estimativa de fase iterativa, temos que $\ket{\psi} = R_1(m [\phi-\theta]) \ket{+}$,, de modo que \start{align} \Pr(\texttt{Zero} / \phi; m,\theta) & = \/ \braket{+ R_1[m[\phi-\theta]) +} \direita/^2 \\ \\ & = \à esquerda \ frac12 \bra {0} + \bra {1} \bra \direita) \ket {0} + e^{i m [\phi-\theta]} \ket {1} \right) \right/2 \\ \\ & = \esquerda \ frac \ \frac {1 + e^{i m [\phi-\theta]}} {2} \direita /^2 \\ \\ & = \cos^2 (m [\phi-\theta] / 2) \tag{★} \label{eq:phase-est-probabilidade}.
+A probabilidade de observar `Zero` uma [ `PauliX` medição](xref:microsoft.quantum.concepts.pauli) no primeiro qubit dado um estado de entrada $\ket{\psi}\ket}\ket{\phi}$ é assim \begin{equation} \Pr(\texttt{Zero} | \psi) = \esquerda| \braket{+ | \psi} \direita|^2.
+\end{equation} No caso de estimativa de fase iterativa, temos que $\ket{\psi} = R_1(m [\phi-\theta]) \ket{+}$,,de modo que \start{align} \Pr(\texttt{Zero} | \phi; m,\theta) & = \left| \braket{+ | R_1 [m [\phi-\theta]) | +} \direita|^2 \\ \\ & = \esquerda| \frac12 \à esquerda\ \bra {0} + \bra {1} \bra \à esquerda; \ket {0} + e^{i m [\phi-\theta]} \ket {1} \right|^2 \\ \\ & = \left| frac{1 + e^{i [\phi-\theta]}} {2} \direita|^2 \\ \\ & = \cos^2 (m [\phi-\theta] / 2) \tag{{★} \label{eq:phase-est-provável}.
 \end{align} Isto é, a estimativa da fase iterativa consiste em aprender a frequência de oscilação de uma função sinusoidal, dada a capacidade de lançar uma moeda com um viés dado por esse sinusoid.
 Seguindo a terminologia clássica tradicional, chamamos $\eqref{eq:phase-est-probabilidade}$ a *função de probabilidade* para a estimativa da fase iterativa.
 
 Tendo observado uma `Result` função de probabilidade de estimativa de fase iterativa, podemos então usar a regra de Bayes para prescrever o que devemos acreditar que a fase está a seguir essa observação.
-Concretamente, \start{equação} \Pr(\phi [ d) = \frac{\Pr(d \ \phi) \Pr(\phi)}}\\Pr\phi\ \Pr(\phi){\mathrm d}\phi} \Pr(\phi), \end{equação $d} \\ \texttt{One} \\ }$ é um `Result` , e onde $\Pr(\phi)$ descreve as nossas crenças anteriores sobre $\phi$.
-Isto torna então explícita a natureza iterativa da estimativa de fase iterativa, uma vez que a distribuição posterior $\Pr(\phi [ d)$ descreve as nossas crenças imediatamente antes da nossa observação do próximo `Result` .
+Concretamente, \start{equação} \Pr(\phi | d) = \frac{\Pr(d | \phi) \Pr(\phi)}}{\int \Pr(d | \phi) \Pr(\phi){mathrm d}\phi} \Pr(\phi), \end \\ $d{\texttt{One} \\ }$ é um , `Result` e onde $\Pr(\phi)$ descreve as nossas crenças anteriores sobre $\phi$.
+Isto torna então explícita a natureza iterativa da estimativa da fase iterativa, uma vez que a distribuição posterior $\Pr(\phi | d)$ descreve as nossas crenças imediatamente antes da nossa observação do próximo `Result` .
 
-Em qualquer ponto durante este procedimento, podemos reportar a fase $\hat{\phi}$ inferida pelo controlador clássico como \start{equação} \hat{\phi} \mathrel{:=} \expect[\phi [ text{data}] = \int \\Pr\text{text{data}) {\mathrm d\phi, \end{equation} where $\text{data}$ representa todo o registo de todos os `Result` valores obtidos.
+Em qualquer ponto durante este procedimento, podemos reportar a fase $\hat{\phi}$ inferida pelo controlador clássico como \start{equação} \hat{\phi} \mathrel{:=} \expect[\phi | \text{data}] = \int \\Pr(\phi | \text{text} {\mathrm}, \end{equation} where $\text{data}$ representa todo o registo de todos os `Result` valores obtidos.
 
 A inferência bayesiana exata é, na prática, intratável.
 Para ver esta imagem, queremos aprender uma variável $n$-bit $x$.
@@ -107,7 +107,7 @@ Uma reconstrução *máxima a posteriori* bayesiana de uma estimativa de fase do
 
 Um desses exemplos com um passo clássico de pós-processamento eficiente é o robusto algoritmo de [estimativa de fase,](https://arxiv.org/abs/1502.02677)com a sua assinatura e entradas acima mencionadas. Assume que as caixas pretas unitárias de entrada $U$ são embaladas como `DiscreteOracle` tipo, e, portanto, apenas questiona os poderes inteiros de $U$. Se o estado de entrada no `Qubit[]` registo for um eigenstate $U\ket{\psi}=e^{i\phi}\ket{\psi}$, o algoritmo de estimativa de fase robusta devolve uma estimativa de $\hat{\phi}\in[\pi,\pi)$ de $\\phi$ como a `Double` .
 
-A característica mais importante da estimativa de fase robusta, que é partilhada com a maioria das outras variantes úteis, é que a qualidade de reconstrução de $\hat{\phi}$ é, de certa forma, limitada por Heisenberg. Isto significa que se o desvio de $\hat{\phi}$ do valor verdadeiro for $\sigma$, então as escalas de $\sigma$ inversamente proporcional ao número total de consultas $Q$ feitas para $U$, ou seja, $\sigma=\mathcal{O}(1/Q)$. Agora, a definição de desvio varia entre diferentes algoritmos de estimativa. Em alguns casos, pode significar que, com pelo menos $\mathcal{O}(1)$ probabilidade, o erro de estimativa $\hat{\phi}-\phi phi \_ \circ\le \sigma$ em alguma medida circular $\circ$. Para uma estimativa de fase robusta, o desvio é precisamente a variação $\sigma^2 = \mathbb{E} \_ \hat{\phi}[\mod \_ {2\pi}(\hat{\phi}-\\phi +\pi)-\pi)^2]$ se desembrulharmos as fases periódicas num único intervalo finito (-\pi,\pi]. Mais precisamente, o desvio padrão na estimativa de fase robusta satisfaz as desigualdades $\ \start{align} 2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10,7\pi / Q, \end{align} $$ onde o limite inferior é atingido no limite de $Q de tamanhos assinticamente grandes, e o limite superior é garantido até mesmo para pequenas amostras.  Note que $n$ selecionado pela `bitsPrecision` entrada, que define implicitamente $Q$.
+A característica mais importante da estimativa de fase robusta, que é partilhada com a maioria das outras variantes úteis, é que a qualidade de reconstrução de $\hat{\phi}$ é, de certa forma, limitada por Heisenberg. Isto significa que se o desvio de $\hat{\phi}$ do valor verdadeiro for $\sigma$, então as escalas de $\sigma$ inversamente proporcional ao número total de consultas $Q$ feitas para $U$, ou seja, $\sigma=\mathcal{O}(1/Q)$. Agora, a definição de desvio varia entre diferentes algoritmos de estimativa. Em alguns casos, pode significar que, com pelo menos $\mathcal{O}(1)$ probabilidade, o erro de estimativa $|\hat{\phi}-\phi| \_ \circ\le \sigma$ em alguma medida circular $\circ$. Para uma estimativa de fase robusta, o desvio é precisamente a variação $\sigma^2 = \mathbb{E} \_ \hat{\phi}[\mod \_ {2\pi}(\hat{\phi}-\\phi +\pi)-\pi)^2]$ se desembrulharmos as fases periódicas num único intervalo finito (-\pi,\pi]. Mais precisamente, o desvio padrão na estimativa de fase robusta satisfaz as desigualdades $\ \start{align} 2.0 \pi / Q \le \sigma \le 2\pi / 2^{n} \le 10,7\pi / Q, \end{align} $$ onde o limite inferior é atingido no limite de $Q de tamanhos assinticamente grandes, e o limite superior é garantido até mesmo para pequenas amostras.  Note que $n$ selecionado pela `bitsPrecision` entrada, que define implicitamente $Q$.
 
 Outros detalhes relevantes incluem, digamos, a pequena sobrecarga de espaço de apenas $1$ ancilla qubit, ou que o procedimento não é adaptável, o que significa que a sequência necessária de experiências quânticas é independente dos resultados da medição intermédia. Neste e nos próximos exemplos em que a escolha do algoritmo de estimativa de fase é importante, deve-se consultar a documentação como @"microsoft.quantum.characterization.robustphaseestimation" e as publicações referenciadas nelas para mais informações e para a sua implementação.
 
@@ -124,7 +124,7 @@ By [Stone's teorema](https://en.wikipedia.org/wiki/Stone%27s_theorem_on_one-para
 Um eigenstate $\ket{\phi}$ de $H$ tal que $H \ket{\phi} = \phi \phi\ket{\phi}$ é então também um eigenstate de $U(t)$ para todos os $t$, \start{equação} U(t) \ket{\phi} = e^{i phi}
 \end{equação}
 
-A mesma análise discutida para [a estimativa da fase bayesiana](#bayesian-phase-estimation) pode ser aplicada, e a função de probabilidade é precisamente a mesma para este modelo oráculo mais geral: $$ \Pr(\texttt{Zero} / \phi; t,\theta)=\cos^2\esquerda(\frac{t[\phi -\theta]} {2} \direita).
+A mesma análise discutida para [a estimativa da fase bayesiana](#bayesian-phase-estimation) pode ser aplicada, e a função de probabilidade é precisamente a mesma para este modelo oráculo mais geral: $$ \Pr(\texttt{Zero} | \phi; t,\theta)=\cos^2\esquerda(\frac{t[\phi -\theta]} {2} \direita).
 Além disso, se $U$ é uma simulação de um gerador dinâmico, como é o caso da [simulação hamiltoniana,](xref:microsoft.quantum.libraries.applications#hamiltonian-simulation)interpretamos $\phi$ como uma energia.
 Assim, a estimativa de fase com consultas contínuas permite-nos aprender o espectro energético simulado [de moléculas,](https://arxiv.org/abs/quant-ph/0604193) [materiais](https://arxiv.org/abs/1510.03859) ou [teorias de campo](https://arxiv.org/abs/1111.3633v2) sem ter de comprometer a nossa escolha de experiências exigindo $t$ para ser um inteiro.
 
