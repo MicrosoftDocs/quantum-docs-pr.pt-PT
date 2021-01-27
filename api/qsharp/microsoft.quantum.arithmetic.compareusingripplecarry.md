@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arithmetic.CompareUsingRippleCarry
 title: Comparar operação DerippleCarry
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Arithmetic
 qsharp.name: CompareUsingRippleCarry
 qsharp.summary: This operation tests if an integer represented by a register of qubits is greater than another integer, applying an XOR of the result onto an output qubit.
-ms.openlocfilehash: e2d6e5a663f8c4e101c7e2ab1346d10cade3f4e0
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ce2be140ecfed21dea6212651249b4a11d2542c8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96223464"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98843292"
 ---
 # <a name="compareusingripplecarry-operation"></a>Comparar operação DerippleCarry
 
@@ -28,7 +28,7 @@ operation CompareUsingRippleCarry (x : Microsoft.Quantum.Arithmetic.LittleEndian
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Tendo em conta dois inteiros `x` e `y` armazenados em registos qubit de tamanho igual, esta operação verifica se satisfaz `x > y` . Se for verdade, 1 é XORed em um qubit de saída. Caso contrário, 0 é XORed num qubit de saída.
 Por outras palavras, esta operação pode ser representada pelo unitário $$ \start{align} U\ket{x}ket{y}\ket{z} = \ket{x}ket{y}\ket{z\oplus (x>y)}}

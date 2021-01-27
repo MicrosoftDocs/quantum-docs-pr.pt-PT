@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.MachineLearning.TrainingOptions
 title: FormaçãoOptions tipo definido pelo utilizador
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.MachineLearning
 qsharp.name: TrainingOptions
 qsharp.summary: A collection of options to be used in training quantum classifiers.
-ms.openlocfilehash: 280a3857aa7bc42f636a33f893d4f450e79b6a6a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 762d6853910832c6d4cda522c0c5df706d1ed195
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96196128"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842768"
 ---
 # <a name="trainingoptions-user-defined-type"></a>FormaçãoOptions tipo definido pelo utilizador
 
@@ -57,7 +57,7 @@ A quantidade para redimensionar os modelos paralisados antes de voltar a tentar 
 
 O número de passos de gradiente a tomar entre pontos de pontuação.
 Para obter a melhor precisão, desa um.
-### <a name="verbosemessage--string---unit"></a>VerboseMessage : Unidade [de Cordas](xref:microsoft.quantum.lang-ref.string) -> [Unit](xref:microsoft.quantum.lang-ref.unit)
+### <a name="verbosemessage--string---unit"></a>VerboseMessage : Unidade [de Cordas](xref:microsoft.quantum.lang-ref.string) -> [](xref:microsoft.quantum.lang-ref.unit)
 
 Uma função que pode ser usada para fornecer feedback verboso.
 
@@ -67,7 +67,7 @@ Este UDT não deve ser criado diretamente, mas deve ser especificado ligando e, 
 
 Por exemplo, utilizar 100.000 medições e, no máximo, 8 épocas de treino:
 
-```Q#
+```qsharp
 let options = DefaultTrainingOptions()
               w/ NMeasurements <- 100000
               w/ MaxEpochs <- 8;
