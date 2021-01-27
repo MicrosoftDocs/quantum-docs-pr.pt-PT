@@ -1,20 +1,20 @@
 ---
-title: Recursos de aprendizagem da computação quântica Microsoft Docs
+title: Recursos de aprendizagem da computação quântica | Microsoft Docs
 description: Uma lista de referência com uma cobertura profunda de tópicos de computação quântica se quiser saber mais sobre a programação de computadores quânticos.
 author: bradben
 uid: microsoft.quantum.more-information
 ms.author: v-benbra
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 91b4c052fd7f20906433a4bb481f113acbe789ea
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 20dcc35f47de8563d4a42625cefccb891bc71fb7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90834181"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852743"
 ---
 # <a name="more-quantum-computing-learning-resources"></a>Mais recursos de aprendizagem da computação quântica
 
