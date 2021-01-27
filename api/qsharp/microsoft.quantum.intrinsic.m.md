@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.M
 title: Operação M
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
@@ -10,12 +10,12 @@ qsharp.summary: >-
   Performs a measurement of a single qubit in the Pauli $Z$ basis.
 
   The output result is given by the distribution \begin{align} \Pr(\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}. \end{align}
-ms.openlocfilehash: ced3a617a7299e169c7a58a1cd0f83f656b2f0b3
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 0037d7f5ad060857c6ca2c863b1d24aca3e338cf
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96212346"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98818880"
 ---
 # <a name="m-operation"></a>Operação M
 
@@ -26,7 +26,7 @@ Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Qua
 
 Executa uma medição de um único qubit na base Pauli $Z$.
 
-O resultado da saída é dado pela distribuição \start{align} \Pr (\texttt{Zero} / \ket{\psi}) = \braket{\psi [ travão{0] \braket{0 / \psi}.
+O resultado da saída é dado pela distribuição \start{align} \Pr (\texttt{Zero} | \ket{\psi}) = \braket{\psi | 0} \braket{0 | \psi}.
 \end{align}
 
 ```qsharp

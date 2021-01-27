@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Intrinsic.Reset
 title: Operação de reset
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Intrinsic
 qsharp.name: Reset
 qsharp.summary: Given a single qubit, measures it and ensures it is in the |0⟩ state such that it can be safely released.
-ms.openlocfilehash: 61b5e4ccdf009dcb6c639e3d8e23bc73a6e475b5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b4275796b966bfe7f55271f4e92866410a14e830
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96198678"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98818634"
 ---
 # <a name="reset-operation"></a>Operação de reset
 
@@ -21,7 +21,7 @@ Espaço de nome: [Microsoft.Quantum.Intrínseco](xref:Microsoft.Quantum.Intrinsi
 Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)
 
 
-Perante um único qubit, mede-o e garante que está no estado de [0⟩ de modo a poder ser libertado com segurança.
+Dado um único qubit, mede-o e assegura-o de que está no |0⟩ estado de modo a que possa ser libertado com segurança.
 
 ```qsharp
 operation Reset (target : Qubit) : Unit
