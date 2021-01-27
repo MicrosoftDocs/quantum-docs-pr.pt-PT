@@ -1,20 +1,20 @@
 ---
 title: Representação Jordan-Wigner
-description: Conheça a Representação Jordan-Wigner, que mapeia os operadores hamiltonianos para matrizes unitárias que podem ser mais facilmente implementadas num computador quântico.
+description: Conheça a representação Jordan-Wigner, que mapeia os operadores hamiltonianos para matrizes unitárias que podem ser mais facilmente implementadas num computador quântico.
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.jordanwigner
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 29abb4d2ef11239a58af45bc4eee3bd60d20a6c7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 738c8262ea66b8a02ea7541e402953237dc2ea48
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833858"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844142"
 ---
 # <a name="jordan-wigner-representation"></a>Representação Jordan-Wigner
 
@@ -22,9 +22,9 @@ Embora os segundos hamiltonianos quantificados sejam convenientemente representa
 Como resultado, se quisermos implementá-los num computador quântico, precisamos de mapear os operadores para matrizes unitárias que podem ser implementadas num computador quântico.
 A representação Jordan-Wigner dá um desses mapas.
 No entanto, outros, como a representação Bravyi-Kitaev, também existem e têm as suas vantagens e desvantagens relativas.
-A principal vantagem da representação jordan-wigner é a sua simplicidade.
+A principal vantagem da representação Jordan-Wigner é a sua simplicidade.
 
-A representação jordan-wigner é direta para derivar.
+A representação Jordan-Wigner é direta para a deriva.
 Lembre-se que um estado $\ket {0} _j$ implica que a rotação orbital $j$ está vazia e $\ket {1} _j$ implica que está ocupado.
 Isto significa que os qubits podem naturalmente armazenar a ocupação de um dado volume orbital de rotação.
 Temos então que $a^\dagger_j \ket {0} _j = \ket {1} _j$ e $a^\\dagger_j\ket _j {1} = 0$.
@@ -51,12 +51,12 @@ A construção completa é a seguinte:
 \start{align} a^\dagger_1 &= \left(\frac{X-iY} {2} \right)\otimes 1 \otimes 1 \otimes 1 \otimes \cdots \otimes 1, \\ \\ a^\dagger_2 &= Z\otimes\left(\frac{X-iY} {2} \direita)\otimes 1\otimes 1\otimes \cdots \otimes 1, \\ \\ a^\dagger_3 &= Z\otimes Z\otimes \left(\frac{X-iY} {2} \right)\otimes 1 \otimes \cdots \otimes 1, \\ \\ &\vdots \\ \\ a^\dagger_N &= Z\otimes Z\otimes Z\otimes Z \otimes \cdots \otimes Z\otimes \left(\frac{X-iY} {2} \direita). \label{eq:JW} \end{align}
 
 Também é conveniente expressar os operadores de números, $n_j$, em termos de operadores pauli.
-Felizmente, as cordas dos operadores de $Z$ (conhecidas como cordas Jordan-Wigner) cancelam depois de uma fazer esta substituição.
+Felizmente, as cordas dos operadores de $Z$ (conhecidas como Jordan-Wigner cordas) cancelam depois de uma fazer esta substituição.
 Depois de efetuar isto (e recordando que $X_jY_j=iZ_j$), temos \start{equation} n_j = a^\dagger_j a_j = \frac{(1-Z_j)} {2} .
 \end{equação}
 
 
-## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construção de Hamiltonians na Representação Jordan-Wigner
+## <a name="constructing-hamiltonians-in-jordan-wigner-representation"></a>Construção de Hamiltonians em representação Jordan-Wigner
 
 Uma vez invocada a representação Jordan-Wigner que traduz o Hamiltonian numa soma de operadores pauli é diretamente para a frente.
 Basta substituir cada um dos operadores de $a^\dagger$ e $a$ no Fermionic Hamiltonian pelas cordas dos operadores Pauli acima indicados.

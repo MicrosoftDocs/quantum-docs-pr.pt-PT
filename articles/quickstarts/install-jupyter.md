@@ -4,18 +4,17 @@ description: Saiba como criar uma aplicação Q# com o Jupyter Notebook.
 author: bradben
 ms.author: v-benbra
 ms.date: 8/20/2020
-ms.topic: article
-ms.custom: how-to
+ms.topic: quickstart
 uid: microsoft.quantum.install.jupyter
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b34d89ab33a4644c1dd4342949685f9bf84babd8
-ms.sourcegitcommit: d98190988ff03146d9ca2b0d325870cd717d729a
-ms.translationtype: HT
+ms.openlocfilehash: 4cef9b7252a2199b2ea995c4cf819a3582d9ca8f
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91771400"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844285"
 ---
 # <a name="develop-with-no-locq-jupyter-notebooks"></a>Programar com o Q# Jupyter Notebook
 
@@ -69,7 +68,7 @@ IQ# (pronunciado i-q-sharp) é uma extensão principalmente utilizada pelo Jupyt
 > em que `/path/to/dotnet-iqsharp` deve ser substituído pelo caminho absoluto para a ferramenta `dotnet-iqsharp` no sistema de ficheiros.
 > Geralmente, estará em `.dotnet/tools` na pasta de perfil de utilizador.
     
-***
+**_
 
 Já está! Tem agora o kernel do IQ# para Jupyter, que fornece a principal funcionalidade para compilar e executar operações Q# a partir do Q# Jupyter Notebook.
 
@@ -85,7 +84,7 @@ Agora, está preparado para verificar a instalação do Q# Jupyter Notebook ao e
 
     - Se o Jupyter Notebook não abrir automaticamente no browser, copie e cole o URL fornecido pela linha de comandos no browser.
 
-1. Escolha **Novo → Q#** para criar um Jupyter Notebook com um kernel do Q# e adicione o seguinte código à primeira célula do bloco de notas:
+1. Escolha _ *Nova → Q#** para criar um Caderno Jupyter com um Q# núcleo e adicione o seguinte código à primeira célula do portátil:
 
     :::code language="qsharp" source="~/quantum/samples/interoperability/qrng/Qrng.qs" range="6-13":::
 

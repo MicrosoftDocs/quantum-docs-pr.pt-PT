@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfCA
 title: Operação ApplyIfCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfCA
 qsharp.summary: Applies a unitary operation conditioned on a classical bit.
-ms.openlocfilehash: b0ac469d6dea51951e0d9b2cfceb54253d4b4c5d
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b9d5e2c6868dc7b876917abf28f68bb5d0d0f2f7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209626"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845006"
 ---
 # <a name="applyifca-operation"></a>Operação ApplyIfCA
 
@@ -28,7 +28,7 @@ operation ApplyIfCA<'T> (op : ('T => Unit is Ctl + Adj), bit : Bool, target : 'T
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Dada uma operação `op` e um pouco de `bit` valor, aplica-se `op` ao se é `target` `bit` `true` . Se, `false` nada acontecer ao `target` .
 O `CA` sufixo indica que a operação a aplicar é unitária (controlável e adjacente).
@@ -60,6 +60,19 @@ A entrada à qual a operação é aplicada.
 ### <a name="t"></a>'T
 
 O tipo de entrada da operação a aplicar condicionalmente.
+
+## <a name="example"></a>Exemplo
+
+O seguinte prepara um registo de qubits num estado de base computacional representado por uma corda clássica dada como uma matriz de `Bool` valores:
+
+```qsharp
+let bitstring = [true, false, true];
+using (register = Qubit(3)) {
+    ApplyToEach(ApplyIf(X, _, _), Zipped(bitstring, register));
+    // register should now be in the state |101⟩.
+    ...
+}
+```
 
 ## <a name="see-also"></a>Consulte também
 

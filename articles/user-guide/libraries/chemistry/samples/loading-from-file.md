@@ -4,20 +4,20 @@ description: Aprenda a gerar automaticamente um grande Hamiltonian usando o esqu
 author: guanghaolow
 ms.author: gulow
 ms.date: 10/23/2018
-ms.topic: article-type-from-white-list
+ms.topic: sample
 uid: microsoft.quantum.chemistry.examples.loadhamiltonian
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 57e25bf55009797b01695cef0f3d29b94662ccc0
-ms.sourcegitcommit: 6bf99d93590d6aa80490e88f2fd74dbbee8e0371
+ms.openlocfilehash: 4bd663ade7649be05058f07bee1acf541ec3e487
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87869244"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98844123"
 ---
 # <a name="loading-a-hamiltonian-from-file"></a>Carregar um Hamiltoniano do ficheiro
-Anteriormente, construímos hamiltonianos adicionando-lhe termos individuais. Embora isto seja bom para pequenos exemplos, a química quântica em escala requer hamiltonianos com milhões ou biliões de termos. Tais hamiltonianos, gerados por pacotes de química como o NWChem, são demasiado grandes para serem importados à mão. Nesta amostra, ilustramos como um `FermionHamiltonian` caso pode ser gerado automaticamente a partir de uma molécula representada pelo esquema de [Broombridge.](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) Para referência, pode-se inspecionar a amostra fornecida `LithiumHydrideGUI` ou a `RunSimulation` amostra. Está também disponível um suporte limitado para importação do formato consumido pela [LIQUi/>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
+Anteriormente, construímos hamiltonianos adicionando-lhe termos individuais. Embora isto seja bom para pequenos exemplos, a química quântica em escala requer hamiltonianos com milhões ou biliões de termos. Tais hamiltonianos, gerados por pacotes de química como o NWChem, são demasiado grandes para serem importados à mão. Nesta amostra, ilustramos como um `FermionHamiltonian` caso pode ser gerado automaticamente a partir de uma molécula representada pelo esquema de [Broombridge.](xref:microsoft.quantum.libraries.chemistry.schema.broombridge) Para referência, pode-se inspecionar a amostra fornecida `LithiumHydrideGUI` ou a `RunSimulation` amostra. Está também disponível um suporte limitado para a importação do formato consumido pela [LIQUi|>](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/).
 
 Consideremos o exemplo da molécula de azoto, que é fornecida na `IntegralData/YAML` pasta do repositório de amostras. O método para carregar o `Broombridge` esquema é simples.
 
@@ -75,7 +75,7 @@ var problem = broombridge.ProblemDescriptions.Single();
 var qSharpData = problem.ToQSharpFormat("|E1>");
 ```
 
-Também podemos carregar um Hamiltonian do LIQUi.> formato, utilizando uma sintaxe muito semelhante. 
+Também podemos carregar um Hamiltonian do LIQUi|> formato, utilizando uma sintaxe muito semelhante. 
 
 ```csharp
 // This is the name of the file we want to load
