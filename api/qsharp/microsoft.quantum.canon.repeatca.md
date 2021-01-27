@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.RepeatCA
 title: Operação RepeatCA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: RepeatCA
 qsharp.summary: Repeats an operation a given number of times.
-ms.openlocfilehash: 24606486b3d5703065a7c7f62d3bbc7e3d07615f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: af93220562d6be27b2f41e770bd953e5e808fcbf
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96205410"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852217"
 ---
 # <a name="repeatca-operation"></a>Operação RepeatCA
 
@@ -55,6 +55,15 @@ A entrada a passar para `op` .
 ### <a name="tinput"></a>'TInput
 
 
+
+## <a name="example"></a>Exemplo
+
+Os seguintes são equivalentes:
+
+```qsharp
+RepeatCA(U, 17, target);
+(BoundCA(ConstantArray(17, U)))(target);
+```
 
 ## <a name="see-also"></a>Consulte também
 

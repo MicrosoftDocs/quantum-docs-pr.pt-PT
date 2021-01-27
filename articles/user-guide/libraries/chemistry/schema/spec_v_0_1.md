@@ -4,17 +4,17 @@ description: Detalha as especificações do esquema de química quântica de Bro
 author: cgranade
 ms.author: chgranad
 ms.date: 10/17/2018
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.chemistry.schema.spec_v_0_1
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: b99c90c434958f7b04712580789b203766cd084d
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 0a306f59a823e76ba0518d023a41f1f9d5670e7a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835745"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858198"
 ---
 # <a name="broombridge-specification-v01"></a>Especificação de Broombridge v0.1 #
 
@@ -133,7 +133,7 @@ O valor de `metadata` MAIO é o objeto JSON vazio (isto é, ) ou MAY contém pro
 
 ### <a name="hamiltonian-section"></a>Secção Hamiltoniana ###
 
-#### <a name="overview"></a>Descrição Geral ####
+#### <a name="overview"></a>Descrição geral ####
 
 Esta secção é informativa.
 
@@ -142,11 +142,11 @@ Os operadores hamiltonianos descritos por cada objeto conjunto integral assumem 
 
 $$ H = \sum \_ \{ i,j \} \sum \_ {\sigma\in \\ {\uparrow,\downarrow \\ }} h \_ \{ ij \} \{ a^ \dagger \} \_ {i,\sigma} a \_ {j,\sigma} + \frac {1} {2} \frac \sum \_ \{ i,j,k,l \} \sum \_ {\sigma,\rho\in \\ {\uparrow,\downarrow \\ }} h \_ {ijkl} a^\dagger \_ {i,\sigma} a^\dagger \_ {k,\rho} a \_ {l,\rho} a \_ {j,\sigma}, $$
 
-aqui $h_{ijkl}= (ij/kl)$ na convenção de Mulliken.
+aqui $h_{ijkl}= (ij|kl)$ na convenção de Mulliken.
 
 Para clareza, o termo de um eletrão é
 
-$$ h_{ij} = \int {\mathrm d}x \psi^* \_ i(x) \esquerda \frac {1} {2} \nabla^2 + \soma \_ {A}frac{Z \_ A}{x-x \_ A[}  \direita) \psi \_ j(x), $$
+$$ h_{ij} = \int {\mathrm d}x \psi^* \_ i(x) \esquerda (\frac {1} {2} \nabla^2 + \soma \_ {A}frac{Z \_ A}{|x-x \_ A|}  \direita) \psi \_ j(x), $$
 
 e o termo de dois eletrões é
 
@@ -169,7 +169,7 @@ O valor da `hamiltonian` propriedade é conhecido como um objeto hamiltoniano, e
 Um objeto hamiltoniano pode também ter uma `particle_hole_representation` propriedade.
 Se estiver presente, o valor de `particle_hole_representation` MUST segue o formato descrito no restante desta secção.
 
-##### <a name="one-electron-integrals-object"></a>Objeto integral de um eletrão #####
+##### <a name="one-electron-integrals-object"></a>Objeto One-Electron Integrals #####
 
 Esta secção é normativa.
 
@@ -183,7 +183,7 @@ Todos os termos devem ter índices `[i, j]` onde `i >= j` .
 
 Esta secção é informativa.
 
-A quantidade de matriz escassa que se segue representa o Hamiltonian $$ H = \esquerda (-5,0 (a^ \{ \dagger \} \_ {1,\uparrow} a \_ {1,\uparrow}+a^ \{ \dagger \} \_ {1,\downarrow} a \_ {1,\downarrow}+ 0,17 (a^ \{ \agger \} \_ {2,uparrow arow a arow a arow a arow a a{1\uparrow arow a a{2,uparrow arow a arow a a{2,uparrow arow a arow a arow a*downrow a a{1,\downarrow} \_ {1,\uparrow}+ a^ \{ \dagger \} \_ {1,\uparrow} a \_ {2,\uparrow}+a^ \{ \dagger \} \_ {2,\downarrow} a \_ {1,\downarrow}+ a^ \{ \dagger \} \_ {1,\downarrow} a \_ {2,\downarrow})\right) \\ \mathrm{Ha}.
+A quantidade de matriz escassa que se segue representa o Hamiltonian $$ H = \esquerda (-5,0 (a^ \{ \dagger \} \_ {1,\uparrow} a \_ {1,\uparrow}+a^ \{ \dagger \} \_ {1,\downarrow} a \_ {1,\downarrow}+ 0,17 (a^ \{ \agger \} \_ {2,uparrow arow a a{1\uparrow arow a a{2,uparrow arow a arow a a{2,uparrow arow a*downrow a a{1,\downarrow} \_ {1,\uparrow}+ a^ \{ \dagger \} \_ {1,\uparrow} a \_ {2,\uparrow}+a^ \{ \dagger \} \_ {2,\downarrow} a \_ {1,\downarrow}+ a^ \{ \dagger \} \_ {1,\downarrow} a \_ {2,\downarrow})\right) \\ \mathrm{Ha}.
 $$
 
 ```yaml
@@ -199,7 +199,7 @@ one_electron_integrals:     # required
 > Broombridge usa indexação baseada em 1.
 
 
-##### <a name="two-electron-integrals-object"></a>Objeto integral de dois eletrões #####
+##### <a name="two-electron-integrals-object"></a>Objeto Two-Electron Integrals #####
 
 Esta secção é normativa.
 
@@ -273,7 +273,7 @@ O objeto initial_state_suggestion especifica estados quânticos iniciais de inte
 
 Cada estado representa uma superposição de orbitais ocupados. Cada objeto de estado DEVE ter uma `label` propriedade contendo uma corda. Cada objeto de estado DEVE ter uma `superposition` propriedade contendo uma variedade de estados de base e suas amplitudes não normalizadas.
 
-Por exemplo, os estados iniciais $$ \ket{G0}=\ket{G1}=\ket{G2}=(a^{\dagger} \_ {1,\uparrow}a^\dagger} \_ {2,\uparrow}}a^{\dagger} \_ {2,\downarrow})\ket {0} $$ $$ \ket{E}=\frac{0.1 (a^{\dagger} \_ {1,\uparrow}a^{\\da \_ {2,\uparrow}a^{\dagger} \_ {2,\downarrow}+0.2 (a^{\dagger} \_ {1,\uparrow}a^{\dagger} \_ {3,,,3,,3,,3,,3,,3,,3,,,I.,,\uparrow}a^{\dagger} \_ {2,\downarrow}}}{\sqrt{/0.1/0,2/0,2[2}}}\ket {0} $$ são representados por
+Por exemplo, os estados iniciais $$ \ket{G0}=\ket{G1}=\ket{G2}=(a^{\dagger} \_ {1,\uparrow}a^\dagger} \_ {2,\uparrow}a^{\dagger} \_ {2,\downarrow}\ket {0} $$ $$ \ket{E}=\frac{0.1 (a^{\dagger} \_ {1,\uparrow}a^{\dagger} \_ {2,\uparrow}a^{\dagger} \_ {2,\downarrow}+0.2 (a^{\dagger} \_ {1,\uparrow}a^{\dagger} \_ {3,\uparrow}a^a^{\dagger} \_ {2,\downarrow}{\sqrt{{{sqrt{|0.1|^2+|0,2|^2}\ket {0} $$
 ```yaml
 initial_state_suggestions: # optional. If not provided, spin-orbitals will be filled to minimize one-body diagonal term energies.
     - state:

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.MultiplexZ
 title: Operação MultiplexZ
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: MultiplexZ
 qsharp.summary: Applies a Pauli Z rotation conditioned on an array of qubits.
-ms.openlocfilehash: 364d23a0e57a2510f069b6db66b085368f20162e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: dccfe86104263e23794bce33279e8748f11f5a54
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96206073"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98852434"
 ---
 # <a name="multiplexz-operation"></a>Operação MultiplexZ
 
@@ -28,7 +28,7 @@ operation MultiplexZ (coefficients : Double[], control : Microsoft.Quantum.Arith
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Isto aplica a operação unitária controlada por multiplicação que executa rotações por ângulo $\theta_j$ sobre o operador pauli de um único qubit $Z$ quando controlado pelo estado do número de $n$-qubit $\ket{j}$.
 Em particular, esta operação pode ser representada pelo unitário

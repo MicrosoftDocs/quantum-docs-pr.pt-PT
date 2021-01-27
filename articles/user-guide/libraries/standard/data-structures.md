@@ -5,16 +5,16 @@ author: QuantumWriter
 uid: microsoft.quantum.libraries.data-structures
 ms.author: martinro
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: c3ce5d531618c269d15be3e4eb58ecbb597a022c
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: e9b593ba69ed41a9fb3c1298b5b945a4cbe43d5d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92692235"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858337"
 ---
 # <a name="data-structures-and-modeling"></a>Estruturas de Dados e Modelação #
 
@@ -72,7 +72,7 @@ ApplyToEach(
 ## <a name="oracles"></a>Oráculos ##
 
 Na [fase de estimativa](https://en.wikipedia.org/wiki/Quantum_phase_estimation_algorithm) e [amplificação](https://en.wikipedia.org/wiki/Amplitude_amplification) da literatura o conceito de um oráculo aparece frequentemente.
-Aqui o termo oráculo refere-se a uma blackbox subbroutina quântica que age sobre um conjunto de qubits e devolve a resposta como uma fase.
+Aqui o termo oráculo refere-se a uma sub-rotina quântica que atua sobre um conjunto de qubits e devolve a resposta como uma fase.
 Esta sub-rotina pode muitas vezes ser considerada como uma entrada para um algoritmo quântico que aceita o oráculo, além de alguns outros parâmetros, e aplica uma série de operações quânticas e tratando uma chamada para esta subbroutina quântica como se fosse um portão fundamental.
 Obviamente, para implementar o algoritmo maior, deve ser fornecida uma decomposição concreta do oráculo em portões fundamentais, mas tal decomposição não é necessária para entender o algoritmo que chama o oráculo.
 Em Q# , esta abstração é representada por usar que as operações são valores de primeira classe, de modo que as operações podem ser passadas para implementações de algoritmos quânticos de forma de caixa preta.
@@ -204,7 +204,7 @@ $$ \begin{align} H & = \sum^{d-1}_{j=0} H_j, \end{align} $$
 
 onde a evolução do tempo por cada termo por si só é fácil de implementar num computador quântico. Por exemplo, se $H_j$ for um operador Pauli $X_1X_2$ agindo nos 1º e 2º elementos do registo qubit, a `qubits` evolução temporal por ele $t pode ser implementada simplesmente chamando a operação `Exp([PauliX,PauliX], t, qubits[1..2])` , que tem assinatura `((Pauli[], Double, Qubit[]) => Unit is Adj + Ctl)` . Como discutido mais tarde na Simulação hamiltoniana, uma solução então é aproximar a evolução do tempo por $H$ com uma sequência de operações mais simples
 
-$$ \begin{align} U(t) & = \esquerda( e^{-iH \_ 0 t / r} e^{-iH \_ 1 t / r} \cdots e^{-iH \_ {d-1} t / r} \right){r} + \mathcal{O}(d^2\max_j \\ # H \_ j \\ [^2 t^2/r), \end{align} $$
+$$ \begin{align} U(t) & = \left( e^{-iH \_ 0 t / r} e^{-iH \_ 1 t / r} \cdots e^{-iH \_ {d-1} t / r} \right){r} + \mathcal{O}(d^2\max_j \\ | H \_ j \\ |^2 t^2/r), \end{align} $$
 
 onde o inteiro $r > 0$ controla o erro de aproximação.
 

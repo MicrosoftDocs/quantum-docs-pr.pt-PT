@@ -4,17 +4,17 @@ description: Saiba mais sobre diferentes formas de chamar operadores e funções
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.callstatements
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 132b3c628a2462e7a8cf5129a38af56ef5cc4026
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: f19f5a4975527a228875a9507e0297a0814c1ef4
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233759"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858215"
 ---
 <!---
 # Call statements in Q#
