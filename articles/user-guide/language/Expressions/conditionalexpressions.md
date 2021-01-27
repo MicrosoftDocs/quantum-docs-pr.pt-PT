@@ -4,17 +4,17 @@ description: Saiba mais sobre expressões condicionais na Q# linguagem de progra
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.conditionalexpressions
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: f771fcb9cdffaaf381c5f3066bdd24ff766fc5cb
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: 7cbce1bc526fa413f0705c2cd74de54bc39dc895
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233692"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856547"
 ---
 <!---
 # Conditional expressions in Q#
