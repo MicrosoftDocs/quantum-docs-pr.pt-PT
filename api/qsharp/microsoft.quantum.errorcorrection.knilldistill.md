@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.KnillDistill
 title: Operação KnillDistill
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: KnillDistill
 qsharp.summary: Implements the Knill magic state distillation algorithm.
-ms.openlocfilehash: df00c7572d909a67ec658bc8dccaf0e338afe5c5
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4eff99eebb1e271d240513f827c6e93973ef79a6
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96200752"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853109"
 ---
 # <a name="knilldistill-operation"></a>Operação KnillDistill
 
@@ -28,7 +28,7 @@ operation KnillDistill (roughMagic : Qubit[]) : Bool
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Tendo em conta 15 cópias aproximadas de um estado mágico $\ \start{align} \cos\frac{\pi} {8} \ket {0} + \sin \frac{\pi} {8} \ket {1} \end{align}, $$ rende uma cópia de maior qualidade.
 
