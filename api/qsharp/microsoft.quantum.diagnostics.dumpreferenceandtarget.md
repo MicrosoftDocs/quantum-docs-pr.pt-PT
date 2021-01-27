@@ -1,45 +1,45 @@
 ---
 uid: Microsoft.Quantum.Diagnostics.DumpReferenceAndTarget
 title: Operação DumpReferenceAndTarget
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Diagnostics
 qsharp.name: DumpReferenceAndTarget
 qsharp.summary: Uses DumpRegister to provide diagnostics on the state of a reference and target register. Written as separate operation to allow overriding and interpreting as separate registers, rather than as a single combined register.
-ms.openlocfilehash: ef7e59b1561be04cba5839ebc397702b6c1df5bc
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7f66af8a1f6f9ab83740fbf5dcfaf55776d74eb9
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96202044"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98853398"
 ---
-# <a name="dumpreferenceandtarget-operation"></a><span data-ttu-id="27042-102">Operação DumpReferenceAndTarget</span><span class="sxs-lookup"><span data-stu-id="27042-102">DumpReferenceAndTarget operation</span></span>
+# <a name="dumpreferenceandtarget-operation"></a><span data-ttu-id="7707b-102">Operação DumpReferenceAndTarget</span><span class="sxs-lookup"><span data-stu-id="7707b-102">DumpReferenceAndTarget operation</span></span>
 
-<span data-ttu-id="27042-103">Espaço de nome: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="27042-103">Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span></span>
+<span data-ttu-id="7707b-103">Espaço de nome: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span><span class="sxs-lookup"><span data-stu-id="7707b-103">Namespace: [Microsoft.Quantum.Diagnostics](xref:Microsoft.Quantum.Diagnostics)</span></span>
 
-<span data-ttu-id="27042-104">Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="27042-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
+<span data-ttu-id="7707b-104">Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span><span class="sxs-lookup"><span data-stu-id="7707b-104">Package: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantum.Standard)</span></span>
 
 
-<span data-ttu-id="27042-105">Utiliza o DumpRegister para fornecer diagnósticos sobre o estado de referência e registo de alvos.</span><span class="sxs-lookup"><span data-stu-id="27042-105">Uses DumpRegister to provide diagnostics on the state of a reference and target register.</span></span> <span data-ttu-id="27042-106">Escrito como operação separada para permitir a sobredição e interpretação como registos separados, em vez de como um único registo combinado.</span><span class="sxs-lookup"><span data-stu-id="27042-106">Written as separate operation to allow overriding and interpreting as separate registers, rather than as a single combined register.</span></span>
+<span data-ttu-id="7707b-105">Utiliza o DumpRegister para fornecer diagnósticos sobre o estado de referência e registo de alvos.</span><span class="sxs-lookup"><span data-stu-id="7707b-105">Uses DumpRegister to provide diagnostics on the state of a reference and target register.</span></span> <span data-ttu-id="7707b-106">Escrito como operação separada para permitir a sobredição e interpretação como registos separados, em vez de como um único registo combinado.</span><span class="sxs-lookup"><span data-stu-id="7707b-106">Written as separate operation to allow overriding and interpreting as separate registers, rather than as a single combined register.</span></span>
 
 ```qsharp
 operation DumpReferenceAndTarget (reference : Qubit[], target : Qubit[]) : Unit
 ```
 
 
-## <a name="input"></a><span data-ttu-id="27042-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="27042-107">Input</span></span>
+## <a name="input"></a><span data-ttu-id="7707b-107">Entrada</span><span class="sxs-lookup"><span data-stu-id="7707b-107">Input</span></span>
 
-### <a name="reference--qubit"></a><span data-ttu-id="27042-108">referência: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="27042-108">reference : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
-
-
-
-
-### <a name="target--qubit"></a><span data-ttu-id="27042-109">alvo: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="27042-109">target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
+### <a name="reference--qubit"></a><span data-ttu-id="7707b-108">referência: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="7707b-108">reference : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
 
 
 
+### <a name="target--qubit"></a><span data-ttu-id="7707b-109">alvo: [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span><span class="sxs-lookup"><span data-stu-id="7707b-109">target : [Qubit](xref:microsoft.quantum.lang-ref.qubit)[]</span></span>
 
-## <a name="output--unit"></a><span data-ttu-id="27042-110">Saída : [Unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="27042-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
+
+
+
+
+## <a name="output--unit"></a><span data-ttu-id="7707b-110">Saída : [Unidade](xref:microsoft.quantum.lang-ref.unit)</span><span class="sxs-lookup"><span data-stu-id="7707b-110">Output : [Unit](xref:microsoft.quantum.lang-ref.unit)</span></span>
 
