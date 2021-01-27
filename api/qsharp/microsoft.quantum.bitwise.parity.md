@@ -1,40 +1,48 @@
 ---
 uid: Microsoft.Quantum.Bitwise.Parity
 title: Função de paridade
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: Parity
 qsharp.summary: Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).
-ms.openlocfilehash: 7a590fa05e8dc0d13bdf58412d928fcf7141c1b0
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b34ef36b0336ec1dea7fdbd878c6d695b38d623e
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96219554"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842133"
 ---
-# <a name="parity-function"></a><span data-ttu-id="ea4d2-102">Função de paridade</span><span class="sxs-lookup"><span data-stu-id="ea4d2-102">Parity function</span></span>
+# <a name="parity-function"></a><span data-ttu-id="77527-102">Função de paridade</span><span class="sxs-lookup"><span data-stu-id="77527-102">Parity function</span></span>
 
-<span data-ttu-id="ea4d2-103">Espaço de nome: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="ea4d2-103">Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)</span></span>
+<span data-ttu-id="77527-103">Espaço de nome: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)</span><span class="sxs-lookup"><span data-stu-id="77527-103">Namespace: [Microsoft.Quantum.Bitwise](xref:Microsoft.Quantum.Bitwise)</span></span>
 
-<span data-ttu-id="ea4d2-104">Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="ea4d2-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
+<span data-ttu-id="77527-104">Pacote: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span><span class="sxs-lookup"><span data-stu-id="77527-104">Package: [Microsoft.Quantum.QSharp.Core](https://nuget.org/packages/Microsoft.Quantum.QSharp.Core)</span></span>
 
 
-<span data-ttu-id="ea4d2-105">Devolve a paridade bitwise de um inteiro (1 se a sua representação binária contiver um número ímpar de ums e 0 de outra forma).</span><span class="sxs-lookup"><span data-stu-id="ea4d2-105">Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).</span></span>
+<span data-ttu-id="77527-105">Devolve a paridade bitwise de um inteiro (1 se a sua representação binária contiver um número ímpar de ums e 0 de outra forma).</span><span class="sxs-lookup"><span data-stu-id="77527-105">Returns the bitwise PARITY of an integer (1 if its binary representation contains odd number of ones and 0 otherwise).</span></span>
 
 ```qsharp
 function Parity (a : Int) : Int
 ```
 
 
-## <a name="input"></a><span data-ttu-id="ea4d2-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="ea4d2-106">Input</span></span>
+## <a name="input"></a><span data-ttu-id="77527-106">Entrada</span><span class="sxs-lookup"><span data-stu-id="77527-106">Input</span></span>
 
-### <a name="a--int"></a><span data-ttu-id="ea4d2-107">a : [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ea4d2-107">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
-
-
+### <a name="a--int"></a><span data-ttu-id="77527-107">a : [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="77527-107">a : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
 
 
-## <a name="output--int"></a><span data-ttu-id="ea4d2-108">Saída : [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="ea4d2-108">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
 
+
+## <a name="output--int"></a><span data-ttu-id="77527-108">Saída : [Int](xref:microsoft.quantum.lang-ref.int)</span><span class="sxs-lookup"><span data-stu-id="77527-108">Output : [Int](xref:microsoft.quantum.lang-ref.int)</span></span>
+
+
+
+## <a name="example"></a><span data-ttu-id="77527-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="77527-109">Example</span></span>
+
+```qsharp
+let a = 248;
+let x = Parity(a); // x : Int = 1.
+```
