@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Bitwise.LeftShiftedI
 title: Função LeftShiftedI
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Bitwise
 qsharp.name: LeftShiftedI
 qsharp.summary: Shifts the bitwise representation of a number left by a given number of bits.
-ms.openlocfilehash: 3a7220489bfa241e2337df14291bafb1d6e0e19e
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3f551bdba5c8e2a1456838769e4cee0660d0f969
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209864"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845313"
 ---
 # <a name="leftshiftedi-function"></a>Função LeftShiftedI
 
@@ -49,7 +49,7 @@ O valor `value` de, deslocado à esquerda por `amount` bocados.
 
 Os seguintes são equivalentes:
 
-```Q#
+```qsharp
 let c = a <<< b;
 let c = LeftShiftedI(a, b);
 ```

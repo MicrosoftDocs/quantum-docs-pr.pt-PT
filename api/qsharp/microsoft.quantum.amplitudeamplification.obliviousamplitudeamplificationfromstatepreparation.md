@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.ObliviousAmplitudeAmplificationFromStatePreparation
 title: Função de anulação da 20daplificação da 1.90da ção
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: ObliviousAmplitudeAmplificationFromStatePreparation
 qsharp.summary: Oblivious amplitude amplification by oracles for partial reflections.
-ms.openlocfilehash: 44bb394b0eb4ec98fd47fd1b156410b7a33903f1
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 873c436d4b8d8efc9dc61c2baba9b0e0f7f09fc2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191300"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98845812"
 ---
 # <a name="obliviousamplitudeamplificationfromstatepreparation-function"></a>Função de anulação da 20daplificação da 1.90da ção
 
@@ -60,4 +60,4 @@ Uma operação que implementa amplificação de amplitude alheia baseada em refl
 Isto impõe condições mais rigorosas sob a forma dos estados auxiliares de início e alvo do que em `AmpAmpObliviousByReflectionPhases` .
 Presume-se que $A\ket {0} \_ f\ket {0} \_ a= \ket{\text{start}} \_ {fa}$ prepara o estado de início auxiliar $\ket{\text{start}} \_ {fa}$ da base computacional $\ket {0} \_ f\ket {0} $.
 Presume-se que o estado-alvo é marcado por $\ket {1} \_ f$.
-Presume-se que \start{align} O\ket{\text{start}} \_ {fa}\ket{\psi} \_ s= \lambda\ket {1} \_ f\ket f\ket{\text{anything}} \_ a\ket{text{target}} \_ u\ket{\psi} \_ s + \sqrt{1-\\lambda/^2}ket\f\f\cdots, {0} \_ \end{align} para alguns $U unitários$.
+Presume-se que \start{align} O\ket{\text{start}} \_ {fa}\ket{\psi} \_ s= \lambda\ket {1} \_ f\ket f\ket{\text{anything}} \_ a\ket{text{target}} \_ u\ket\psi} \_ s + \sqrt{1-|\lambda|^2}ket {0} \_ \end{align} para alguns $U unitários$.
