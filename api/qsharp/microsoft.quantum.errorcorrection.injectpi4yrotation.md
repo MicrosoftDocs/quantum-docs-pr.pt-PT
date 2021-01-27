@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.InjectPi4YRotation
 title: Operação InjectPi4YRotation
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: InjectPi4YRotation
 qsharp.summary: Rotates a single qubit by π/4 about the Y-axis.
-ms.openlocfilehash: 4ff0abe67a6d18204e417a45f8d8f1d092d02b88
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 249c347c9e9729e719eda69e4e9a21847d9a46eb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96200803"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98825949"
 ---
 # <a name="injectpi4yrotation-operation"></a>Operação InjectPi4YRotation
 
@@ -28,7 +28,7 @@ operation InjectPi4YRotation (data : Qubit, magic : Qubit) : Unit is Adj
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Executa uma rotação de π/4 sobre `Y` .
 
