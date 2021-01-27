@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Chemistry.JordanWigner._JordanWignerClusterOperatorGeneratorIndex
 title: função _JordanWignerClusterOperatorGeneratorIndex
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Chemistry.JordanWigner
 qsharp.name: _JordanWignerClusterOperatorGeneratorIndex
 qsharp.summary: ''
-ms.openlocfilehash: 967ac4bd693910253a82c26623fc84140771e295
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: b6202ce071399a9639d1b609b792978c136a6cbb
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96215780"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98851670"
 ---
 # <a name="_jordanwignerclusteroperatorgeneratorindex-function"></a>função _JordanWignerClusterOperatorGeneratorIndex
 
