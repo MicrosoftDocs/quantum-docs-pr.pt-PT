@@ -4,17 +4,17 @@ description: Saiba como contribuir com conteúdo conceptual ou API para o conjun
 author: cgranade
 ms.author: chgranad
 ms.date: 10/12/2018
-ms.topic: article
+ms.topic: contributor-guide
 uid: microsoft.quantum.contributing.docs
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 2debef858c38b9a8f11264858130ed7cb41543ae
-ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+ms.openlocfilehash: 8602705d2dd071e822e2ff58a9a44cd0684f77f1
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92691786"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857365"
 ---
 # <a name="improving-documentation"></a>Melhorar a documentação
 
@@ -42,7 +42,7 @@ Descreveremos mais sobre pedidos de puxar abaixo, mas por enquanto há algumas c
 - Alguns leitores acharão as declarações e definições abstratas mais úteis, enquanto outros leitores trabalham melhor extrapolando a partir de exemplos concretos. Fornecer tanto o caso geral como exemplos específicos pode ajudar ambos os leitores a tirar o máximo partido da programação quântica.
 - Especialmente se também escreveu o código que está a ser documentado, as coisas podem ser óbvias para si que não são de todo óbvias para o seu leitor. Não há uma única maneira única de programar, por isso, por mais inteligente ou experiente que um leitor possa ser, eles não conseguem adivinhar quais os padrões de design que achou mais úteis para expressar as suas ideias em código. Ser claro sobre como um leitor pode esperar fazer uso do seu código pode ajudar a fornecer esse contexto.
 - Muitos membros da comunidade de programação quântica são investigadores académicos, e são reconhecidos principalmente através de citações pelas suas contribuições para a comunidade. Além de ajudar os leitores a encontrar materiais adicionais, certificar-se de citar corretamente saídas académicas como jornais, palestras, posts de blog e ferramentas de software pode ajudar os colaboradores académicos a continuarem a fazer o seu melhor trabalho para melhorar a comunidade.
-- A comunidade de programação quântica é uma comunidade ampla e maravilhosamente diversificada. O uso de pronomes de género em exemplos de terceira pessoa (por exemplo: "se um utilizador..., ele...") pode trabalhar para excluir em vez de incluir. Ser consciente dos nomes das pessoas em citações e ligações, e da correta inclusão de caracteres não ASCII pode servir a diversidade da comunidade mostrando respeito aos seus membros. Da mesma forma, muitas palavras na língua inglesa são frequentemente usadas de forma odiosa, de modo que a sua utilização em documentação técnica pode causar danos tanto aos leitores individuais como à comunidade em geral.
+- A comunidade de programação quântica é uma comunidade ampla e maravilhosamente diversificada. A utilização de pronomes de género em exemplos de terceira pessoa (por exemplo: "se um utilizador..., eles trabalharão...") pode trabalhar para excluir em vez de incluir. Ser consciente dos nomes das pessoas em citações e ligações, e da correta inclusão de caracteres não ASCII pode servir a diversidade da comunidade mostrando respeito aos seus membros. Da mesma forma, muitas palavras na língua inglesa são frequentemente usadas de forma odiosa, de modo que a sua utilização em documentação técnica pode causar danos tanto aos leitores individuais como à comunidade em geral.
 
 ### <a name="referencing-sample-code-from-conceptual-articles"></a>Referência do Código da Amostra a partir de artigos conceptuais
 
@@ -54,6 +54,19 @@ Se pretender incluir o código do [repositório de amostras,](https://github.com
 
 Este comando importará as linhas 4 a 8 [ `Game.qs` do ficheiro da `chsh-game` amostra,](https://github.com/microsoft/Quantum/blob/main/samples/algorithms/chsh-game/Game.qs)marcando-as como Q# código para efeitos de prostaxe.
 Utilizando este comando, pode evitar duplicar o código entre os artigos conceptuais e o repositório de amostras, de modo que o código de amostra na documentação esteja sempre o mais atualizado possível.
+
+### <a name="contributing-image-files"></a>Processos de imagem que contribuem
+
+**IMPORTANTE**: Para que as imagens se tornem corretamente em modo escuro, deve evitar transparências.
+
+- Para .jpg ficheiros. não precisa de fazer nada, uma vez que o formato .jpg não suporta elementos transparentes.
+- Para .png ficheiros, deve adicionar um fundo branco ou alterar o valor do canal alfa para **100**. A forma mais fácil de o fazer no Windows é abrir o ficheiro em **Paint** e guardá-lo, sobrepondo o ficheiro original.
+- Para .svg ficheiros, deve adicionar um retângulo branco na camada mais baixa. Pode fazê-lo com **o Inkscape:**
+  1. Abra o ficheiro .svg.
+  1. Selecione a ferramenta de máquina de fazer quadrados e desenhe um retângulo branco em cima da figura original.
+  1. Selecione a ferramenta **Selecione e transforme os objetos** clicando na seta escura ou pressionando **F1**.
+  1. Enquanto seleciona o retângulo, clique no elemento barra de **ferramentas Seleção inferior a baixo (Final)**.
+  1. Ajuste o retângulo com o rato ou as teclas de seta.
 
 ## <a name="contributing-to-the-api-references"></a>Contribuindo para as Referências da API
 

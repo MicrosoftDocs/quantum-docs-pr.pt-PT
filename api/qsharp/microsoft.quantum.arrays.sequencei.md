@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Arrays.SequenceI
 title: Função Sequênciai
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Arrays
 qsharp.name: SequenceI
 qsharp.summary: Get an array of integers in a given interval.
-ms.openlocfilehash: 5f03e5f2baff8077c1fa3fb5f1f079528ef0e215
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 3cf09e48cce1aeb1aac837465ee3a5e06adf5169
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96220302"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850996"
 ---
 # <a name="sequencei-function"></a>Função Sequênciai
 
@@ -44,3 +44,14 @@ Um índice final inclusivo do intervalo que não é menor que `from` .
 ## <a name="output--int"></a>Saída : [Int](xref:microsoft.quantum.lang-ref.int)[]
 
 Uma matriz contendo a sequência de `from` `from + 1` números, ... ..., `to` .
+
+## <a name="example"></a>Exemplo
+
+```qsharp
+let arr1 = SequenceI(0, 3); // [0, 1, 2, 3]
+let arr2 = SequenceI(23, 29); // [23, 24, 25, 26, 27, 28, 29]
+let arr3 = SequenceI(-5, -2); // [-5, -4, -3, -2]
+
+let numbers = SequenceI(0, _); // function to create sequence from 0 to `to`
+let naturals = SequenceI(1, _); // function to create sequence from 1 to `to`
+```

@@ -1,20 +1,20 @@
 ---
 title: Estimador de recursos quânticos - Kit de Desenvolvimento Quântico
 description: Conheça o estimador de recursos da Microsoft QDK, que estima os recursos necessários para executar uma determinada instância de uma Q# operação num computador quântico.
-author: anpaz-msft
+author: anpaz
 ms.author: anpaz
 ms.date: 06/26/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machines.resources-estimator
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: de425c2d91c6528b13c3bedd81acb4b4273ed711
-ms.sourcegitcommit: 7c687495a79d75ae9e029e5a41baec84d9e07bb0
+ms.openlocfilehash: c3aa94c8b34ad7247fbdeab4bf4dcb96ce746014
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96604648"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847469"
 ---
 # <a name="quantum-development-kit-qdk-resources-estimator"></a>Estimativa de recursos do Kit de Desenvolvimento Quântico (QDK)
 
@@ -123,11 +123,11 @@ namespace Quantum.MyProgram
 
 O estimador de recursos acompanha as seguintes métricas:
 
-|Métrica|Descrição|
+|Metric|Descrição|
 |----|----|
 |__CNOT__    |A contagem de `CNOT` operações (também conhecida como operações controladas pauli X).|
 |__QubitClifford__ |A contagem de qualquer qubit de operações de Clifford e Pauli.|
-|__Medida__    |A contagem de quaisquer medições.  |
+|__Medir__    |A contagem de quaisquer medições.  |
 |__R__    |A contagem de quaisquer rotações de um único qubit, `T` excluindo, operações Clifford e Pauli.  |
 |__T__    |A contagem de `T` operações e seus conjugatos, incluindo as `T` operações, T_x = H.T.H, e T_y = Hy.T.Hy.  |
 |__Profundidade__|Profundidade do circuito quântico executado pela Q# operação (ver [abaixo](#depth-width-and-qubitcount)). Por predefinição, a métrica de profundidade apenas conta `T` portões. Para mais detalhes, consulte [o Contador de Profundidade.](xref:microsoft.quantum.machines.qc-trace-simulator.depth-counter)   |
@@ -143,8 +143,8 @@ As estimativas reportadas de profundidade e largura são compatíveis entre si.
 
 São reportadas as seguintes métricas:
 
-__Profundidade:__ Para a operação raiz - o tempo leva para executá-lo assumindo tempos específicos do portão.
-Para operações chamadas ou operações subsequentes - diferença de tempo entre o tempo mais recente de disponibilidade de qubit no início e o fim da operação.
+__Profundidade:__ Para a operação raiz - o tempo leva para executá-lo assumindo os tempos de portão configurados.
+Para operações chamadas ou operações subsequentes - diferença de tempo entre o último tempo de disponibilidade de qubit no início e o final da operação.
 
 __Largura:__ Para a operação raiz - número de qubits realmente utilizados para executá-lo (e operação que chama).
 Para operações convocadas ou operações subsequentes - quantos mais qubits foram utilizados para além dos qubits já utilizados no início da operação.
@@ -157,15 +157,15 @@ Para operações chamadas ou operações subsequentes - número mínimo de qubit
 
 Dois modos de funcionamento são suportados. O modo é selecionado definindo QCTraceSimulatorConfiguration.OptimizeDepth.
 
-__OptimizeDepth=verdade:__ QubitManager é desencorajado de reutilização de qubit e atribui novo qubit cada vez que é solicitado um qubit. Para a operação raiz __A profundidade__ torna-se a profundidade mínima (limite inferior). A __largura__ compatível é reportada para esta profundidade (ambas podem ser alcançadas ao mesmo tempo). Note que esta largura provavelmente não será a melhor dada esta profundidade. __QubitCount__ pode ser inferior à largura para a operação da raiz porque assume a reutilização.
+__OptimizeDepth=falso:__ Este é o modo predefinido. QubitManager é encorajado a reutilizar qubits e reutilizar os qubits libertados antes de alocar novos. Para a operação raiz __A largura__ torna-se a largura mínima (limite inferior). É reportada __profundidade__ compatível na qual pode ser alcançado. __QubitCount__ será o mesmo __que width__ para a operação raiz assumindo que não há empréstimos.
 
-__OptimizeDepth=falso:__ QubitManager é encorajado a reutilizar qubits e reutilizar os qubits libertados antes de alocar novos. Para a operação raiz __A largura__ torna-se a largura mínima (limite inferior). É reportada __profundidade__ compatível na qual pode ser alcançado. __QubitCount__ será o mesmo __que width__ para a operação raiz assumindo que não há empréstimos.
+__OptimizeDepth=verdade:__ QubitManager é desencorajado da reutilização de qubits e a otimização baseada em heurística para a reutilização de qubits é realizada durante e após a execução. Para a operação raiz __A profundidade__ torna-se a profundidade mínima (limite inferior). A __largura__ compatível é reportada para esta profundidade (ambas podem ser alcançadas ao mesmo tempo). Para otimizar a largura, os portões encontrados mais tarde no programa podem ser agendados antes dos portões encontrados no início do programa, mas os qubits estão programados para serem reutilizados de forma a que a profundidade permaneça mínima. Uma vez que os qubits são reutilizados com base nos valores do tempo, recomenda-se que os tempos do portão sejam configurados para serem valores inteiros. __A largura__ não é garantida para ser o ideal. Mais informações podem ser encontradas no papel branco [Largura e Profundidade no Tracer](https://github.com/microsoft/qsharp-runtime/tree/main/src/Simulation/Simulators/QCTraceSimulator/Docs).
 
 ## <a name="providing-the-probability-of-measurement-outcomes"></a>Fornecer a probabilidade de resultados de medições
 
 Pode utilizar <xref:Microsoft.Quantum.Diagnostics.AssertMeasurementProbability> a partir do espaço de nome para fornecer <xref:Microsoft.Quantum.Diagnostics> informações sobre a probabilidade esperada de uma operação de medição. Para mais informações, consulte [Quantum Trace Simulator](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 
-## <a name="see-also"></a>Ver também
+## <a name="see-also"></a>Veja também
 
 - [Simulador de vestígios quânticos](xref:microsoft.quantum.machines.qc-trace-simulator.intro)
 - [Simulador Toffoli quântico](xref:microsoft.quantum.machines.toffoli-simulator)

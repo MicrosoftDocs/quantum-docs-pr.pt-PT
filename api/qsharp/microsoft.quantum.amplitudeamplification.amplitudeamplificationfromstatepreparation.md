@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.AmplitudeAmplification.AmplitudeAmplificationFromStatePreparation
 title: AmplitudeAmplificaçãoFromStatePreparation function
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.AmplitudeAmplification
 qsharp.name: AmplitudeAmplificationFromStatePreparation
 qsharp.summary: Amplitude amplification by oracles for partial reflections.
-ms.openlocfilehash: 30e1cf6e353b8a4491e13a9e2f588ec9cc103cb4
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e64ad5ad4e975483f20f92c0b070dd6788ef296b
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96191606"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98847443"
 ---
 # <a name="amplitudeamplificationfromstatepreparation-function"></a>AmplitudeAmplificaçãoFromStatePreparation function
 
@@ -54,4 +54,4 @@ Uma operação que implementa amplificação de amplitude por oráculos que são
 
 Isto impõe condições mais rigorosas na forma dos estados de partida e alvo do que em `AmpAmpByReflectionPhases` .
 Presume-se que o estado-alvo é marcado por $\ket {1} \_ f$.
-Presume-se que \start{align} A\ket {0} \_ {f}\ket {0} \_ s= \lambda\ket {1} \_ f\ket{\text{target}} \_ s + \sqrt{1-\\lambda/^2}\ket {0} \_ f\cdots, \end{align} Na maioria dos casos, `flagQubit` e são `auxiliaryRegister` inicializados no estado $\ket {0} \_ {f\}ket$. {0} \_
+Presume-se que \start{align} A\ket {0} \_ {f}\ket= {0} \_ \lambda\ket {1} \_ f\ket f\ket{\text{target}} \_ s + \sqrt{1-|\lambda|^2}\ket {0} \_ f\cdots, \end{align} Na maioria dos casos, `flagQubit` e são `auxiliaryRegister` inicializados no estado $\ket {0} \_ {f}ket {0} \_

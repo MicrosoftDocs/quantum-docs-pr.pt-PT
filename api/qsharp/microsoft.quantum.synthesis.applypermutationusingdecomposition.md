@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Synthesis.ApplyPermutationUsingDecomposition
 title: AplicaçãoPermutationSingDecomposition operação
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Synthesis
 qsharp.name: ApplyPermutationUsingDecomposition
 qsharp.summary: Permutes the amplitudes in a quantum state given a permutation using decomposition-based synthesis.
-ms.openlocfilehash: 5b25ef3327bbca2dfdbe8fa876f3f797dddf77e8
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 765b6d301363021f5b57a22f90e2ada38c9c09ec
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96192133"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98857400"
 ---
 # <a name="applypermutationusingdecomposition-operation"></a>AplicaçãoPermutationSingDecomposition operação
 
@@ -28,7 +28,7 @@ operation ApplyPermutationUsingDecomposition (perm : Int[], qubits : Microsoft.Q
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Este procedimento implementa a abordagem da síntese baseada na decomposição.  A entrada é uma permutação $\pi$ acima de $2^n$ elementos $ \{ 0, \dots, 2^n-1 \} $, o que representa uma função booleana reversível reversível $n$-variável.
 O algoritmo executa iterativamente os seguintes passos para cada índice variável $i$:
@@ -56,6 +56,16 @@ Uma lista de $n$ qubits aos quais a permutação é aplicada.
 ## <a name="output--unit"></a>Saída : [Unidade](xref:microsoft.quantum.lang-ref.unit)
 
 
+
+## <a name="example"></a>Exemplo
+
+Para sintetizar uma `SWAP` operação:
+
+```qsharp
+using (qubits = Qubit[2]) {
+  ApplyPermutationUsingDecomposition([0, 2, 1, 3], LittleEndian(qubits));
+}
+```
 
 ## <a name="references"></a>Referências
 

@@ -1,6 +1,6 @@
 ---
 título: Descrição de múltiplos qubits: Aprenda a realizar operações em dois ou mais qubits.
-autor: bradben uid: microsoft.quantum.concepts.multiple-qubits ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: bradben uid: microsoft.quantum.concepts.multiple-qubits ms.author: v-benbra ms.date: 12/11/2017 ms.topic: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -105,10 +105,10 @@ Isto porque a base computacional para estados de dois qubits é formada pelos pr
 É fácil ver que, de uma forma mais geral, o estado quântico de $ n $ qubits é representado por um vetor unitário de dimensão $ 2^n $ usando esta construção.  O vetor
 
 $$
-\begin{bmatrix}\alpha _ { } 00 \\\\ \alpha   _ { 01 } \\\\ \alpha _ { 10 } \\\\ 11 \alpha   _ { }  \end{bmatrix}
+\begin{bmatrix}\alpha _{ } 00 \\\\ \alpha_ { 01 } \\\\ \alpha _{ 10 } \\\\ 11 \alpha_ { }  \end{bmatrix}
 $$
 
-representa um estado quântico em dois qubits se $ | \alpha _ { 00 } | | \alpha ^2+_ { 01 } | ^2+ | \alpha _ { 10 } | ^2+ | \alpha _ { 11 } | ^2 = 1 $ . Assim como com os qubits individuais, o vetor de estado quântico de múltiplos qubits contém toda a informação necessária para descrever o comportamento do sistema.
+representa um estado quântico em dois qubits se $ | \alpha _{ 00 } | | \alpha ^2+_ { 01 } | ^2+ | \alpha _{ 10 } | ^2+ | \alpha_ { 11 } | ^2 = 1 $ . Assim como com os qubits individuais, o vetor de estado quântico de múltiplos qubits contém toda a informação necessária para descrever o comportamento do sistema.
 
 Se nos forem dados dois qubits separados, um no estado $ \begin{bmatrix} \alpha \\\\ \beta \end{bmatrix} $ e um segundo qubit no $ \begin{bmatrix} \gamma \\\\ \delta \end{bmatrix} $ estado, o estado de dois qubits correspondente é    
 
@@ -124,17 +124,17 @@ $$\psi\otimes\phi = \begin{bmatrix} 1/ \sqrt { 2 } \\\\ 0 \\\\ 0 \\\\ 1/ \sqrt {
 
 Um estado de dois qubits, que não pode ser escrito como o produto de tensor de estados de um único qubit, é chamado de "estado emaranhado"; dizem que os dois qubits estão [*emaranhados.*](https://en.wikipedia.org/wiki/Quantum_entanglement)  Em termos frouxos, porque o estado quântico não pode ser considerado como um produto tensor de estados de qubit único, a informação que o Estado detém não se limita a nenhum dos qubits individualmente.  Pelo contrário, a informação é armazenada não localmente nas correlações entre os dois estados.  Esta não localidade da informação é uma das principais características distintivas da computação quântica sobre a computação clássica e é essencial para uma série de protocolos quânticos, incluindo [teletransporte quântica](https://github.com/microsoft/Quantum/tree/main/samples/getting-started/teleportation) e [correção de erros quânticos.](xref:microsoft.quantum.libraries.error-correction)
 
-## <a name="measuring-two-qubit-states"></a>Medindo estados de dois qubits ##
+## <a name="measuring-two-qubit-states"></a>Medição de Estados-Two-Qubit ##
 Medir estados de dois qubits é muito semelhante às medições de um único qubit. Medir o estado
 
 $$
     \begin{bmatrix}
-        \alpha_ { } \\\\ 00 \alpha _ { 01 }\\\\ 
-        \alpha_ { } \\\\ 10 \alpha _ { 11}
+        \alpha_{ } \\\\ 00 \alpha_ { 01 }\\\\ 
+        \alpha_{ } \\\\ 10 \alpha_ { 11}
     \end{bmatrix}
 $$
 
-produz $ 00 $ com probabilidade $ | \alpha _ { 00 } | ^2 , $ $ 01 $ com probabilidade $ | \alpha _ { 01 } | ^2 $ , $ 10 $ com probabilidade $ | \alpha _ { 10^2 , e } | $ $ 11 $ com probabilidade $ | \alpha _ { 11 } | ^2 $ . As variáveis $ \alpha _ { } 00, \alpha _ { 01, } \alpha _ { 10 } $ e $ \alpha _ { 11 } $ foram deliberadamente nomeadas para tornar esta ligação clara. Após a medição, se o resultado for $ 00, $ então o estado quântico do sistema de dois qubits entrou em colapso e é agora
+produz $ 00 $ com probabilidade $ | \alpha _{ 00 } | ^2 , $ $ 01 $ com probabilidade $ | \alpha_ { 01 } | ^2 $ , $ 10 $ com probabilidade $ | \alpha _{ 10^2 , e } | $ $ 11 $ com probabilidade $ | \alpha_ { 11 } | ^2 $ . As variáveis $ \alpha _{ } 00, \alpha_ { 01, } \alpha _{ 10 } $ e $ \alpha_ { 11 } $ foram deliberadamente nomeadas para tornar esta ligação clara. Após a medição, se o resultado for $ 00, $ então o estado quântico do sistema de dois qubits entrou em colapso e é agora
 
 $$
     00 \equiv
@@ -193,7 +193,7 @@ $$
 
 novamente de acordo com a nossa intuição.
 
-## <a name="two-qubit-operations"></a>Operações de Dois Qubits
+## <a name="two-qubit-operations"></a>Operações Two-Qubit
 Como no caso de um único qubit, qualquer transformação unitária é uma operação válida em qubits. Em geral, uma transformação unitária em $ n $ qubits é uma matriz $ U de tamanho $ $ 2^n \times 2^n $ (de modo que atua em vetores de tamanho $ 2^n), $ tal que $ U^ { -1 } = U^ \dagger $ .
 Por exemplo, o portão CNOT (CONTROLLED-NOT) é um portão de dois qubits comumente utilizado e é representado pela seguinte matriz unitária:
 
@@ -240,7 +240,7 @@ Os portões também podem ser controlados usando informações clássicas.  Um n
 Tal como no caso de um único qubit, um conjunto de portão de dois qubits é universal se qualquer $ \times matriz unitária de 4 4 $ pode ser aproximadada por um produto de portões deste conjunto para precisão arbitrária.
 Um exemplo de um portão universal é o portão Hadamard, o portão T e o portão CNOT. Tomando produtos destes portões, podemos aproximar qualquer matriz unitária em dois qubits.
 
-## <a name="many-qubit-systems"></a>Sistemas Muitos Qubit
+## <a name="many-qubit-systems"></a>Sistemas Many-Qubit
 Seguimos exatamente os mesmos padrões explorados no caso dos dois qubits para construir estados quânticos de muitos qubits a partir de sistemas mais pequenos.  Estes Estados são construídos através da formação de produtos de tensor de estados mais pequenos.  Por exemplo, considere codificar a corda $ bit 1011001 $ num computador quântico.  Podemos codificar isto como
 
 $$
