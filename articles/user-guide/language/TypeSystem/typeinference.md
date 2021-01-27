@@ -4,19 +4,19 @@ description: Saiba mais sobre a inferência do tipo na Q# linguagem de programa�
 author: bettinaheim
 ms.author: beheim
 ms.date: 10/07/2020
-ms.topic: article
+ms.topic: reference
 uid: microsoft.quantum.qsharp.typeinference
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 13fb4ebc1ea61001a6a2fe01d5c1aeea6b54aaec
-ms.sourcegitcommit: b930bb59a1ba8f41d2edc9ed98197109aa8c7f1b
+ms.openlocfilehash: ddd47f5b726a4f4a88b73229aa0c170f597321b0
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96233522"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858934"
 ---
-# <a name="type-inference-in-no-locq"></a><span data-ttu-id="0d65f-103">Tipo de inferência em Q#</span><span class="sxs-lookup"><span data-stu-id="0d65f-103">Type inference in Q#</span></span>
+# <a name="type-inference-in-no-locq"></a><span data-ttu-id="9747e-103">Tipo de inferência em Q#</span><span class="sxs-lookup"><span data-stu-id="9747e-103">Type inference in Q#</span></span>
 
 [!INCLUDE [source link](~/includes/qsharp-language/Specifications/Language/4_TypeSystem/TypeInference.md)]
 
