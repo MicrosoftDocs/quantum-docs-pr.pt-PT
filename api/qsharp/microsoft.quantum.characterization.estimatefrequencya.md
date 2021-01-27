@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Characterization.EstimateFrequencyA
 title: Estimativa OperaçãoFrequencyA
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Characterization
 qsharp.name: EstimateFrequencyA
 qsharp.summary: Given a preparation that is adjointable and measurement, estimates the frequency with which that measurement succeeds (returns `Zero`) by performing a given number of trials.
-ms.openlocfilehash: f12fc150de5bcea3d53ce88003c71976d8f2467f
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 6cca8dff70283e0d69441db8a5b31fb5bfb3082a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96204356"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98839920"
 ---
 # <a name="estimatefrequencya-operation"></a>Estimativa OperaçãoFrequencyA
 
@@ -53,7 +53,7 @@ O número de vezes que a medição deve ser efetuada para estimar a frequência 
 
 ## <a name="output--double"></a>Saída : [Duplo](xref:microsoft.quantum.lang-ref.double)
 
-Uma estimativa $\hat{p}$ da frequência com a qual $M(P(\ket{00 \cdots 0}\bra{00 \cdots 0})$ `Zero` devoluções, obtidas usando o estimador binomial imparcial $\hat{p} = \_ n{\uparrow} / \_ {{text{s}}}}}}}}}}}} onde $n \_ {\uparrow}$ é o número de `Zero` resultados observados.
+Uma estimativa $\hat{p}$ da frequência com a qual $M(P(\ket{00 \cdots 0}\bra{00 \cdots 0})$ `Zero` devoluções, obtidas usando o estimador binomial imparcial $\hat{p} = \_ n{\uparrow} / \_ {{text{s}} onde $n \_ {\uparrow}$ é o número de `Zero` resultados observados.
 
 ## <a name="remarks"></a>Observações
 
