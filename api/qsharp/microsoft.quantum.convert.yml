@@ -4,7 +4,7 @@ functions:
   uid: Microsoft.Quantum.Convert.BigIntAsBoolArray
 - summary: Converte uma certa variedade de Booleans para um número inteiro equivalente. O elemento 0 da matriz é a parte menos significativa do grande número inteiro.
   uid: Microsoft.Quantum.Convert.BoolArrayAsBigInt
-- summary: Produz um inteiro positivo de uma série de bits em pequeno formato endiano.
+- summary: Produz um número inteiro não negativo a partir de uma série de bits em pequeno formato endiano.
   uid: Microsoft.Quantum.Convert.BoolArrayAsInt
 - summary: Dado um pouco de corda, devolve um operador pauli multi-qubit representado como uma variedade de operadores pauli de um único qubit.
   uid: Microsoft.Quantum.Convert.BoolArrayAsPauli
@@ -22,7 +22,7 @@ functions:
   uid: Microsoft.Quantum.Convert.FunctionAsOperation
 - summary: Converte um dado inteiro para um grande inteiro equivalente.
   uid: Microsoft.Quantum.Convert.IntAsBigInt
-- summary: Produz uma representação binária de um inteiro positivo, usando a representação pouco-endiana para a matriz devolvida.
+- summary: Produz uma representação binária de um número inteiro não negativo, usando a representação pouco-endiana para a matriz devolvida.
   uid: Microsoft.Quantum.Convert.IntAsBoolArray
 - summary: Converte um número inteiro num dado inteiro para um número equivalente de ponto flutuante de dupla precisão.
   uid: Microsoft.Quantum.Convert.IntAsDouble
@@ -38,7 +38,7 @@ functions:
   uid: Microsoft.Quantum.Convert.RangeAsIntArray
 - summary: Converte um `Result[]` tipo para um `Bool[]` tipo, onde é `One` mapeado `true` e `Zero` mapeado para `false` .
   uid: Microsoft.Quantum.Convert.ResultArrayAsBoolArray
-- summary: Produz um inteiro positivo de uma série de resultados em pequeno formato endiano.
+- summary: Produz um número inteiro não negativo a partir de uma série de Resultados em pequeno formato endiano.
   uid: Microsoft.Quantum.Convert.ResultArrayAsInt
 - summary: Converte um `Result` tipo para um `Bool` tipo, onde é `One` mapeado `true` e `Zero` mapeado para `false` .
   uid: Microsoft.Quantum.Convert.ResultAsBool
@@ -50,9 +50,9 @@ operations:
 summary: Este espaço de nome contém funções para conversão entre vários tipos de dados Q#.
 uid: Microsoft.Quantum.Convert
 metadata:
-  ms.openlocfilehash: d22f0735b800d2e9a34f8c7ce58353850a4cdded
-  ms.sourcegitcommit: 29e0d88a30e4166fa580132124b0eb57e1f0e986
+  ms.openlocfilehash: 18cef8a797a4657f1b846a5b2d2ba2a673378f9a
+  ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
   ms.translationtype: MT
   ms.contentlocale: pt-PT
-  ms.lasthandoff: 10/27/2020
-  ms.locfileid: "92713817"
+  ms.lasthandoff: 01/26/2021
+  ms.locfileid: "98850071"

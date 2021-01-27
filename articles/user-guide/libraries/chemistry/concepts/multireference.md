@@ -4,17 +4,17 @@ description: Saiba mais sobre correlações dinâmicas e não dinâmicas em fun�
 author: guanghaolow
 ms.author: gulow
 ms.date: 05/28/2019
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.multireference
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 420fc8e108852f6548e2147693e089f5ce970aa9
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: ab3d90d79c7c14a1ef5b3aa833df49be186f3dd7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835490"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856280"
 ---
 # <a name="correlated-wavefunctions"></a>Funções de onda correlacionadas
 
@@ -27,9 +27,9 @@ Isto requer uma superposição de determinantes e é um exemplo de uma função 
 A biblioteca de química fornece uma maneira de especificar uma função de onda de ordem zero para o problema multireferência como uma superposição de determinantes. Esta abordagem, a que chamamos funções de onda multireferência escassas, é eficaz quando apenas alguns componentes são suficientes para especificar a superposição. A biblioteca também fornece um método para incluir correlações dinâmicas em cima de uma referência determinante única através do ansatz de agrupamento unitário generalizado. Além disso, também constrói circuitos quânticos que geram estes estados num computador quântico. Estes estados podem ser especificados no [esquema de Broombridge](xref:microsoft.quantum.libraries.chemistry.schema.broombridge), e também fornecemos a funcionalidade para especificar manualmente estes estados através da biblioteca de química.
 
 ## <a name="sparse-multi-reference-wavefunction"></a>Função de onda multi-referência escassa
-Um estado de multi-referências $\ket{\psi_{\rm {MCSCF}}}} pode ser especificado explicitamente como uma combinação linear de determinantes $N$-eletrões Slater.
-\start{align} \ket{\psi_{\rm {\rm {MCSCF}}} \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1,i_2,\cdots,i_N} a^\dagger_{i_1}a^\dagger_{i_2}\cdots a^\dagger_{i_N}\ket {0} .
-\end{align} Por exemplo, o estado $\propto (0,1 a^\dagger_1a^\\\dagger_2a^\dagger_6 - 0,2 a^\dagger_2a^\\dagger_1a^\\dagger_5)\ket {0} $ pode ser especificado na biblioteca de química da seguinte forma.
+Um estado de multi-referências $\ket{\psi_{\rm {MCSCF} pode ser especificado explicitamente como uma combinação linear de determinantes $N$-eletrões Slater.
+\start{align} \ket{\psi_{\rm {\rm {MCSCF} \propto \sum_{i_1 < i_2 < \cdots < i_N} \lambda_{i_1,i_2,\cdots,i_N} a^\dagger_{i_1}a^\dagger_{i_2}\cdots a^\dagger_{i_N}\ket {0} .
+\end{align} Por exemplo, o estado $\propto (0,1 a^\dagger_1a^\dagger_2a^\dagger_6 - 0,2 a^\dagger_2a^\\dagger_1a^\\dagger_5)\ket {0} $ pode ser especificado na biblioteca de química da seguinte forma.
 ```csharp
 // Create a list of tuples where the first item of each 
 // tuple are indices to the creation operators acting on the
@@ -45,8 +45,8 @@ var wavefunction = new FermionWavefunction<int>(superposition);
 Esta representação explícita dos componentes da superposição é eficaz quando apenas alguns componentes precisam de ser especificados. Deve-se evitar a utilização desta representação quando são necessários muitos componentes para capturar com precisão o estado pretendido. A razão para isso é o custo do portão do circuito quântico que prepara este estado num computador quântico, que escala pelo menos linearmente com o número de componentes de superposição, e no máximo quadraticamente com a norma única das amplitudes de superposição.
 
 ## <a name="unitary-coupled-cluster-wavefunction"></a>Função unitária de ondas de aglomerados
-Também é possível especificar uma função unitária de acoplar-cluster de ondas $\ket{\psi_{\rm {{\rm {UCC}}}} usando a biblioteca de farmácia. Nesta situação, temos um estado de referência único determinante, por exemplo, $\ket{\psi_{\rm{SCF}}}}$. Os componentes da função unitária de ondas acopladas são então especificados implicitamente através de um operador unitário que atua num estado de referência.
-Este operador unitário é comumente escrito como $e^{T-T^\dagger}$, onde $T-T^\dagger$ é o operador de cluster anti-hermitiano. Assim\ \start{align} \ket{\psi_{\rm {{rm {UCC}}} = e^{T^\dagger}\ket{\psi_{\rm{SCF}}}
+Também é possível especificar uma função unitária de acoplar-cluster de ondas $\ket{\psi_{\rm {{\rm {UCC} usando a biblioteca de farmácia. Nesta situação, temos um estado de referência único determinante, por exemplo, $\ket{\psi_{\rm{SCF}$. Os componentes da função unitária de ondas acopladas são então especificados implicitamente através de um operador unitário que atua num estado de referência.
+Este operador unitário é comumente escrito como $e^{T-T^\dagger}$, onde $T-T^\dagger$ é o operador de cluster anti-hermitiano. Assim\ \start{align} \ket{\psi_{\rm {{rm {UCC}}} = e^{T^\dagger}\ket{\psi_{\rm{SCF}
 \end{align}
 
 Também é comum dividir o operador de cluster $T = T_1 + T_2 + \cdots$ em partes, onde cada parte $T_j$ contém termos de $j$-body. Na teoria do cluster acoplado generalizado, o operador de cluster de um corpo (singles) é da forma \start{align} T_1 = \sum_{pq}t^{p}_{q} a^\dagger_p a_q, \end{align}
@@ -80,7 +80,7 @@ var clusterOperator = new[]
 var wavefunction = new FermionWavefunction<int>(reference, clusterOperator);
 ```
 
-A convervação de centrifugação pode ser explicitada especificando `SpinOrbital` índices em vez de índices inteiros. Por exemplo, deixe $\ket{\psi_{\rm{SCF}}} = a^\dagger_{1,\uparrow} a^\dagger_{2, \downarrow}\ket {0} $, e deixe $T= 0,123 a^\dagger_{0, \uparrow} a_{1, \uparrow} + 0,456 a^\dagger_{0, \uparrow} a^\dagger_{3, \downarrow} a_{1, \uparrow} a_{2, \downarrow} - 0,789 a^\dagger_{3,\uparrow} a^\dagger_{2,\uparrow} a_{1,\uparrow} a_{0, \uparrow}$ ser conservação de rotação. Então este estado é instantâneo na biblioteca de química da seguinte forma.
+A convervação de centrifugação pode ser explicitada especificando `SpinOrbital` índices em vez de índices inteiros. Por exemplo, deixe $\ket{\psi_{\rm{SCF} = a^\dagger_{1,\uparrow} a^\dagger_{2, \downarrow}\ket {0} $, e deixe $T= 0,123 a^\dagger_{0, \uparrow} a_{1, \uparrow} + 0,456 a^\dagger_{0, \uparrow} a^\dagger_{3, \downarrow} a_{1, \uparrow} a_{2, \downarrow} - 0,789 a^\dagger_{3,\uparrow} a^\dagger_{2,\uparrow} a_{1,\uparrow} a_{0, \uparrow}$ ser conservação de rotação. Então este estado é instantâneo na biblioteca de química da seguinte forma.
 ```csharp
 // Create a list of indices of the creation operators
 // for the single-reference state

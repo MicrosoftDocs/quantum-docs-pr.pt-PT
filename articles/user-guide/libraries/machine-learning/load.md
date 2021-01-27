@@ -4,17 +4,17 @@ description: Aprenda a carregar o seu próprio conjunto de dados para treinar um
 author: geduardo
 ms.author: v-edsanc
 ms.date: 02/16/2020
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.libraries.machine-learning.load
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: cd6fdb6bb33a65ee02ac8c43f40df9abeff9c841
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 7ebfe085e50d4647fdb1027250cf3134f8d8f8c2
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833697"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856464"
 ---
 # <a name="load-and-classify-your-own-datasets"></a>Carregar e classificar os seus próprios conjuntos de dados
 
@@ -158,6 +158,6 @@ A plataforma .NET Core fornece o [ `System.Text.Json` pacote](https://www.nuget.
 
 ***
 
-## <a name="next-steps"></a>Passos seguintes
+## <a name="next-steps"></a>Próximos passos
 
 Agora está pronto para começar a fazer as suas próprias experiências com os seus próprios conjuntos de dados. Experimente diferentes classificadores e conjunto de dados e contribua para que a comunidade partilhe os seus resultados!

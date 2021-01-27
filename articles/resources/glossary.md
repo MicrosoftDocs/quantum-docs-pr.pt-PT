@@ -1,6 +1,6 @@
 ---
 título: Descrição glossária da computação quântica: Um glossário de termos, ações e objetos comuns utilizados na computação quântica.
-autor: bradben ms.author: v-benbra ms.date: 9/1/2020 ms.topic: article uid: microsoft.quantum.glossary no-loc:
+autor: bradben ms.author: v-benbra ms.date: 9/1/2020 ms.topic: reference uid: microsoft.quantum.glossary no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -99,7 +99,7 @@ Um dos quatro [estados quânticos](xref:microsoft.quantum.glossary#quantum-state
 
 ## <a name="bloch-sphere"></a>Esfera de Bloch
 
-Uma representação gráfica de um [único estado qubit qubit qubit quádrico](xref:microsoft.quantum.glossary#quantum-state) como um ponto numa esfera de unidade tridimensional.[qubit](xref:microsoft.quantum.glossary#qubit) Para obter mais informações, consulte [a visualização de Qubits e Transformações utilizando a Esfera bloch.](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)
+Uma representação gráfica de um [único estado qubit quádrico](xref:microsoft.quantum.glossary#quantum-state) como um ponto numa esfera de unidade tridimensional.[](xref:microsoft.quantum.glossary#qubit) Para obter mais informações, consulte [a visualização de Qubits e Transformações utilizando a Esfera bloch.](xref:microsoft.quantum.concepts.qubit#visualizing-qubits-and-transformations-using-the-bloch-sphere)
 
 ## <a name="callable"></a>Callable
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApproximatelyApplyDiagonalUnitary
 title: Operação aproximadamenteApplyDiagonalUnitary
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApproximatelyApplyDiagonalUnitary
 qsharp.summary: Applies an array of complex phases to numeric basis states of a register of qubits, truncating small rotation angles according to a given tolerance.
-ms.openlocfilehash: 0a05b8a5891977a08ee2ae6a996657c6a8f3d792
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 5d8f6646c124f4296b9cd2abd71e73de5a530e55
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217123"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850338"
 ---
 # <a name="approximatelyapplydiagonalunitary-operation"></a>Operação aproximadamenteApplyDiagonalUnitary
 
@@ -28,7 +28,7 @@ operation ApproximatelyApplyDiagonalUnitary (tolerance : Double, coefficients : 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Esta operação implementa uma diagonal unitária que aplica uma fase complexa $e^{i \theta_j}$ no estado do número de $n$-qubit $\ket{j}$.
 Em particular, esta operação pode ser representada pelo unitário

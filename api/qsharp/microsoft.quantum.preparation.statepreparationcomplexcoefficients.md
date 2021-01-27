@@ -1,7 +1,7 @@
 ---
 uid: Microsoft.Quantum.Preparation.StatePreparationComplexCoefficients
 title: Função de Prescrição DePreparaçõesComplexCoficientes
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Preparation
@@ -17,12 +17,12 @@ qsharp.summary: >-
   The returned operation $U$ prepares an arbitrary quantum state $\ket{\psi}$ with complex coefficients $r_j e^{i t_j}$ from the $n$-qubit computational basis state $\ket{0...0}$.
 
   The action of U on a newly-allocated register is given by $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{\sqrt{\sum_{j=0}^{2^n-1}|r_j|^2}}. \end{align} $$
-ms.openlocfilehash: 1d0efa7b83d2e8e75c4b293866f3929f357ec44b
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c16df0fe075b15cff745a6b7d5b79aac39c14d09
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96210374"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856140"
 ---
 # <a name="statepreparationcomplexcoefficients-function"></a>Função de Prescrição DePreparaçõesComplexCoficientes
 
@@ -36,9 +36,9 @@ Pacote: [Microsoft.Quantum.Standard](https://nuget.org/packages/Microsoft.Quantu
 
 Devolve uma operação que prepara um estado quântico específico.
 
-A operação devolvida $U$ prepara um estado quântico arbitrário $\ket{\psi}$ com coeficientes complexos $r_j e^{i t_j}$ do estado de base computacional $n$-qubit $\ket{0...0}$...$.$.$.$.$.$$.$$$$$$$$$-qubit base de base computacional estado $\ket{0...$$....$.$...
+A operação devolvida $U$ prepara um estado quântico arbitrário $\ket{\psi}$ com coeficientes complexos $r_j e^{i t_j}$ do estado de base computacional $n$-qubit $\ket{0...0}$...$$.$-qubit base de base computacional estado $\ket{0...$$...
 
-A ação de U num registo recém-atribuído é dada por $$ \begin{align} U\ket{0...0}=\ket{\psi}=\frac{sum_{j=0}^{2^n-1}r_j e^{i t_j}\ket{j}}{{{r_j sum_{{{{2}}.
+A ação de U num registo recém-atribuído é dada por $$ \start{align} U\ket{0...0}=\ket{\psi}=\frac{\sum_{j=0}^{2^2^2^0^2^0^2^0^2^0^2^0 n-1}r_j e^{i t_j}\ket{j}}{|r_j| sum_{{}2}}
 \end{align} $$
 
 ```qsharp
@@ -58,6 +58,24 @@ Matriz de até $2^n$ coeficientes complexos representados pelo seu valor absolut
 
 Uma operação unitária de preparação do estado $U$.
 
+## <a name="example"></a>Exemplo
+
+O seguinte corte prepara o estado quântico $\ket{\psi}=e^{i 0.1}\sqrt{1/8}\ket {0} +\sqrt{7/8}\ket {2} $ in the qubit register `qubitsLE` .
+
+```qsharp
+let amplitudes = [Sqrt(0.125), 0.0, Sqrt(0.875), 0.0];
+let phases = [0.1, 0.0, 0.0, 0.0];
+mutable complexNumbers = new ComplexPolar[4];
+for (idx in 0..3) {
+    set complexNumbers[idx] = ComplexPolar(amplitudes[idx], phases[idx]);
+}
+let op = StatePreparationComplexCoefficients(complexNumbers);
+using (qubits = Qubit[2]) {
+    let qubitsLE = LittleEndian(qubits);
+    op(qubitsLE);
+}
+```
+
 ## <a name="remarks"></a>Observações
 
-Coeficientes de entrada negativos $r_j < 0$ serão tratados como se positivos com valor $/ r_j `coefficients` serão acolchoados com elementos $(r_j, t_j) = (0,0, 0,0)$ se forem especificados menos de $2^n$ .
+Coeficientes de entrada negativos $r_j < 0$ serão tratados como positivos com valor de $|r_j|$. `coefficients` serão acolchoados com elementos $(r_j, t_j) = (0,0, 0,0)$ se forem especificados menos de $2^n$ .

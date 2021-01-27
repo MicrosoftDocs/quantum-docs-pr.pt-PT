@@ -4,22 +4,22 @@ description: Saiba como os sistemas eletrónicos moleculares são simulados usan
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantummodels
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 4ff3d11bfd4dae5489fc4b7efe4da4ccda00882f
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: c12ab277f06bed61991a26af96953ccdbf72b642
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833926"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856227"
 ---
 # <a name="quantum-models-for-electronic-systems"></a>Modelos Quânticos para Sistemas Eletrónicos
 
 Para simular os sistemas eletrónicos, temos de começar por especificar o Hamiltonian, que pode ser encontrado pelo procedimento de quantificação canónica acima descrito.
-Especificamente, para $N_e$ eletrões com momenta $p_i$ (em três dimensões) e $m_e$ e vetores de posição $x_i$ juntamente com núcleos com encargos $Z_k e$ em posições $y_k$, o operador hamiltoniano lê \begin{equação} \hat{H}= \soma \_ {i=1}^{N \_ e} \frac{\hat{p} \_ i^2}{2m \_ e} + \frac {1} {2} \sum \_ {i\ne j} \frac{e^2}{/hat{x} \_ i - \hat{x} \_ j_ \_ \_ \_ \_ +\frac {1} {2} \sum_{k\ne k'} \frac{Z \_ kZ \_ {k'}e^2}{/y \_ k - y \_ k'_}. \label{eq:Ham} \end{equation} Os operadores momenta $\hat{p} \_ i^2$ podem ser vistos no espaço real como operadores laplacianos, ou seja, $\hat{p} \_ i^2 = -\parcial \_ {x \_ i}^2 - \parcial \_ {y \_ i}^2 - \parcial \_ {z \_ i}2$.
+Especificamente, para $N_e$ eletrões com momenta $p_i$ (em três dimensões) e $m_e$ e vetores de posição $x_i$ juntamente com núcleos com encargos $Z_k e$ em posições $y_k$, o operador hamiltoniano lê \begin{equação} \hat{H}= \soma \_ {i=1}^{N \_ e} \frac{\hat{p} \_ i^2}{2m \_ e} + \frac {1} {2} \frac \sum \_ {i\ne j} \frac{e^02}{|\hat{x} \_ i - \hat{x} \_ j|} -\sum \_ {i,k} \frac{Z \_ ke^2}{|\hat{x} \_ i - {y} \_ k|} +\frac {1} {2} \sum_{k\ne k'} \frac{Z \_ kZ \_ {k'}e^2}{|y \_ k - y \_ k'|}. \label{eq:Ham} \end{equation} Os operadores momenta $\hat{p} \_ i^2$ podem ser vistos no espaço real como operadores laplacianos, ou seja, $\hat{p} \_ i^2 = -\parcial \_ {x \_ i}^2 - \parcial \_ {y \_ i}^2 - \parcial \_ {z \_ i}2$.
 Aqui fizemos a suposição simplificadora de que os núcleos estão em repouso para a molécula.
 Isto é conhecido como a aproximação Born-Oppenheimer e tende a ser válido para o espectro de energia de baixa energia de $\hat{H}$ uma vez que a massa de eletrões é de cerca de $1/1836$ a massa de um protão.
 Este operador hamiltoniano pode ser facilmente encontrado escrevendo a energia para um sistema de \_ eletrões e$ $N e aplicando o processo de quantificação canónica descrito na [Quantum Dynamics](xref:microsoft.quantum.chemistry.concepts.quantumdynamics).
@@ -28,7 +28,7 @@ Para construir a representação da matriz unitária para $e^{-i\hat{H} t}$ prec
 Para isso, temos de escolher um sistema de coordenadas ou uma base para representar o problema.
 Por exemplo, se $\psi_j$ são um conjunto de funções de base ortogonal para os eletrões $N_e$ então podemos definir a matriz
 
-\start{equação} H \_ {i,j} = \int \_ {-\\infty}\\int{\int \_ {-\int {-\infty}\\\infty \* \psi^1 \_ \_ \_ \_ \_ \_
+\start{equação} H \_ {i,j} = \int \_ {-\\infty}\\int{\int \_ {-\int {-\infty}\infty \* \psi^1 \_ \_ \_ \_ \_ \_
 
 Enquanto, em princípio, o operador $\hat{H}$ não é ilimitado e não atua num espaço dimensional finito, a matriz com elementos $H \_ \{ i,j$ \} acima.
 Isto significa que os erros são incorridos ao escolher um conjunto de bases demasiado pequeno; no entanto, escolher uma grande base pode tornar a simulação da dinâmica química impraticável.
@@ -36,7 +36,7 @@ Por esta razão, escolher uma base que possa representar concisamente o problema
 
 Existem muitas bases apropriadas que podem ser usadas e a escolha de uma boa base para se adaptar ao problema é grande parte da arte da química quântica.
 Talvez os conjuntos de base mais simples sejam os Slater-Type-Orbitals (STO) que são soluções (ortogonalizadas) para a equação de Schrödinger (ou seja, eigenfunções de $\hat{H}$) para átomos semelhantes a hidrogénio.
-Outros conjuntos de bases, como ondas de planos ou orbitais do espaço real, podem ser usados e para mais detalhes remetemos o leitor curioso para o texto padrão ['Molecular Electronic-Structure Theory'](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) de Helgaker.
+Outros conjuntos de bases, como ondas de plano ou orbitais do espaço real, podem ser usados e para mais detalhes remetemos o leitor curioso para o texto padrão ['Teoria Electronic-Structure Molecular'](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119019572) de Helgaker.
 
 Embora os estados utilizados no modelo acima possam parecer arbitrários, a mecânica quântica coloca restrições aos estados que podem ser encontrados na natureza.
 Em especial, todos os estados quânticos eletrónicos válidos devem ser antissimétricos sob troca de rótulos de eletrões.

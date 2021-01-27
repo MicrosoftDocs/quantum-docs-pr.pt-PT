@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.ErrorCorrection.SyndromeMeasOp
 title: Tipo definido pelo utilizador SyndromeMeasOp
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: udt
 qsharp.namespace: Microsoft.Quantum.ErrorCorrection
 qsharp.name: SyndromeMeasOp
 qsharp.summary: Represents an operation that is used to measure the syndrome of an error-correcting code block.
-ms.openlocfilehash: 65e47d82546b1df0beec2c00f435d3e7a28e6ae6
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 36336f9e47e5f360cf5e19ffb6e15b4af88b2580
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96200259"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850042"
 ---
 # <a name="syndromemeasop-user-defined-type"></a>Tipo definido pelo utilizador SyndromeMeasOp
 
@@ -29,6 +29,17 @@ newtype SyndromeMeasOp = ((Microsoft.Quantum.ErrorCorrection.LogicalRegister => 
 ```
 
 
+
+## <a name="example"></a>Exemplo
+
+Medir as síndromes para o código bit-flip $S = \langle ZZI, IZZ \rangle$ usando qubits de risco de forma tolerante sem falhas:
+
+```qsharp
+    let syndMeasOp = SyndromeMeasOp(MeasureStabilizerGenerators([
+            [PauliZ, PauliZ, PauliI],
+            [PauliI, PauliZ, PauliZ]
+        ], _, MeasureWithScratch));
+```
 
 ## <a name="remarks"></a>Observações
 

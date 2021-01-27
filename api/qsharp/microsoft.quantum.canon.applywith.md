@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyWith
 title: Aplicar Com operação
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyWith
 qsharp.summary: Given two operations, applies one as conjugated with the other.
-ms.openlocfilehash: fd46f84e30e72672967b90d92f507d2a5c438dba
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 7127df047a260b18d75efb092e8e090e2d0b207a
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217310"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98850415"
 ---
 # <a name="applywith-operation"></a>Aplicar Com operação
 
@@ -28,7 +28,7 @@ operation ApplyWith<'T> (outerOperation : ('T => Unit is Adj), innerOperation : 
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Tendo em conta duas operações, respectivamente descritas pelos operadores unitários $U$ e $V$, aplica-as na sequência $U^{\dagger} V U$. Ou seja, esta operação implementa o operador unitário dado por $V$ conjugado com $U$.
 

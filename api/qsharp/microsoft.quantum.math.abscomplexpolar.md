@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Math.AbsComplexPolar
 title: Função AbsComplexPolar
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Math
 qsharp.name: AbsComplexPolar
 qsharp.summary: Returns the absolute value of a complex number of type `ComplexPolar`.
-ms.openlocfilehash: 01845556cbabde768f9c7c47c733453048df9416
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c2b60cbdf69723dfc1470535dbc5beb060e68b86
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96195992"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856402"
 ---
 # <a name="abscomplexpolar-function"></a>Função AbsComplexPolar
 
@@ -38,4 +38,4 @@ Número complexo $c = r e^{i t}$.
 
 ## <a name="output--double"></a>Saída : [Duplo](xref:microsoft.quantum.lang-ref.double)
 
-Valor absoluto $c. = r$.
+Valor absoluto $|c| = r$.

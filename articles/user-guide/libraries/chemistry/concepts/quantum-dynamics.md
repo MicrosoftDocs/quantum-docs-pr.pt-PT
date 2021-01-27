@@ -4,17 +4,17 @@ description: Aprenda as semelhanças e diferenças entre a dinâmica quântica e
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.quantumdynamics
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: fb54416ecdc38ea90999f33cb673c2c9e4c5f8d7
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 4dec0ed7346cde579e5692fcf13519d4ce05cb00
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833872"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98856247"
 ---
 # <a name="quantum-dynamics"></a>Dinâmica Quântica
 
@@ -25,7 +25,7 @@ Antes de continuar a explicar a dinâmica quântica, é útil dar um passo atrá
 Na dinâmica clássica, sabemos pela segunda lei de movimento de Newton que a posição de uma partícula evolui de acordo com $F(x,t)=ma=m\frac{\dd^2}dd t^2}{x},(t)$, onde $F(x,t)$ é a força,$m$ é a massa e $a$ é a aceleração.
 Então, dada a posição inicial $x(0)$, tempo de evolução $t$, e descrição das forças que atuam sobre a partícula, podemos então encontrar $x(t)$ resolvendo a equação diferencial dada pelas equações de Newton para $x(t)$.
 Especificar as forças desta forma é um pouco chato.
-Por isso, expressamos frequentemente as forças em termos da energia potencial do sistema, que nos dá $-\partial_x V(x,t) = m \frac{\dd^2}dd t^2}}}}}}x}(t)$.
+Por isso, expressamos frequentemente as forças em termos da energia potencial do sistema, que nos dá $-\partial_x V(x,t) = m \frac{\dd^2}dd t^2}}x}(t)$.
 Assim, para uma partícula, a dinâmica do sistema é especificada apenas pela potencial função energética, a massa de partículas e o tempo de evolução.
 
 Uma linguagem mais ampla é frequentemente introduzida para as dinâmicas clássicas que vão além $F=ma$.
