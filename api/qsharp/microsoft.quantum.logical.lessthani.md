@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Logical.LessThanI
 title: Função LessThanI
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Logical
 qsharp.name: LessThanI
 qsharp.summary: Returns true if and only if a number is less than another number.
-ms.openlocfilehash: 5d5b17c8481ccf58b8e4fc4bb958e0adbf6d8f00
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 69c3d7c414967b830c15189c895a2b34f409c7b3
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96197777"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98815825"
 ---
 # <a name="lessthani-function"></a>Função LessThanI
 
@@ -49,7 +49,7 @@ O segundo valor a ser comparado.
 
 Os seguintes são equivalentes:
 
-```Q#
+```qsharp
 let cond = a < b;
 let cond = LessThanI(a, b);
 ```
