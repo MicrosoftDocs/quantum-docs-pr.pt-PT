@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.DecomposedIntoTimeStepsCA
 title: Função DeintoTimeStepsCA decomposta
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: DecomposedIntoTimeStepsCA
 qsharp.summary: Returns an operation implementing the Trotter–Suzuki integrator for a given operation.
-ms.openlocfilehash: aa5f09f2e1fde878b523b4efc20b86c26ac738ff
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: e82df36d2e4f3767a152d5c92d7b1897c744a2ca
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96216545"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98840691"
 ---
 # <a name="decomposedintotimestepsca-function"></a>Função DeintoTimeStepsCA decomposta
 
@@ -59,9 +59,9 @@ O tipo que cada passo deve ser pisado; tipicamente, ou `Qubit[]` ou `Qubit` . .
 
 ## <a name="remarks"></a>Observações
 
-Quando chamado com `order` igual a , esta `1` função devolve uma operação que pode ser simulada pelo integrador Trotter-Suzuki de menor ordem $$ \start{align} S_1(\lambda) = \prod_{j = 1}^{m} e^{{{H_j \lambda}, \end{align}08139 e deixe $\lambda$ ser o tempo de evolução (representado pela primeira entrada da operação devolvida), e deixe $ H_j [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139) \{ \} _{j = 1}^{m}$ seja o conjunto de geradores dinâmicos (skew-Hermitian) sendo integrados de tal forma que `op(j, lambda, _)` é simulado pelo operador unitário $e^{{H_j \lambda$}
+Quando chamado com `order` igual a , esta `1` função devolve uma operação que pode ser simulada pelo integrador Trotter-Suzuki de menor ordem $$ \start{align} S_1(\lambda) = \prod_{j = 1}^{m} e^{{{H_j \lambda}, \end{align}08139 e deixe $\lambda$ ser o tempo de evolução (representado pela primeira entrada da operação devolvida), e deixe $ H_j [](https://arxiv.org/abs/quant-ph/0508139) \{ \} _{j = 1}^{m}$ seja o conjunto de geradores dinâmicos (skew-Hermitian) sendo integrados de tal forma que `op(j, lambda, _)` é simulado pelo operador unitário $e^{{H_j \lambda$}
 
-Da mesma forma, um `order` dos `2` retornos do integrador simétrico trotter-Suzuki de segunda ordem $$ \start{align} S_2(\lambda) = \prod_{j = 1}^{m} e^{{{H_k \lambda / 2} \prod_{j' = m}^ {1} e^{H_{j'}
+Da mesma forma, um `order` dos `2` retornos do integrador simétrico trotter-Suzuki de segunda ordem $$ \start{align} S_2(\lambda) = \prod_{j = 1}^{m} e^{H_k \lambda / 2} \prod_{j' = m}^ {1} e^{H_{j'}
 \end{align} $$
 
 Valores partivos mais `order` elevados são implementados utilizando a construção recursiva de [quant-ph/0508139](https://arxiv.org/abs/quant-ph/0508139).

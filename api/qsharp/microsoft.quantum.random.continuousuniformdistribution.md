@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Random.ContinuousUniformDistribution
 title: Função de distribuição contínua UniformDis
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Random
 qsharp.name: ContinuousUniformDistribution
 qsharp.summary: Returns a uniform distribution over a given inclusive interval.
-ms.openlocfilehash: a3911fe9962ce18daa239de0272c53d83344134a
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: c81eb433f50277c677756ee70d916f4856260c6d
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193085"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842325"
 ---
 # <a name="continuousuniformdistribution-function"></a>Função de distribuição contínua UniformDis
 
@@ -44,6 +44,15 @@ O maior número real a ser desenhado.
 ## <a name="output--continuousdistribution"></a>Saída : [Distribuição contínua](xref:Microsoft.Quantum.Random.ContinuousDistribution)
 
 Uma distribuição cujas variações aleatórias são números reais no intervalo inclusivo de `min` para `max` com probabilidade uniforme.
+
+## <a name="example"></a>Exemplo
+
+O seguinte corte Q# desenha aleatoriamente um ângulo entre $0$ e $2 \pi$:
+
+```qsharp
+let angleDistribution = ContinuousUniformDistribution(0.0, 2.0 * PI());
+let angle = angleDistribution::Sample();
+```
 
 ## <a name="remarks"></a>Observações
 

@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyToHead
 title: Aplicar operação ToHead
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyToHead
 qsharp.summary: Applies an operation to the first element of an array.
-ms.openlocfilehash: 35f19cbb1090e974e18f338239764c9c8b854116
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 4e627b467e9354e774c2ead8b89ddd3ff3a42ef7
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96217344"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841326"
 ---
 # <a name="applytohead-operation"></a>Aplicar operação ToHead
 
@@ -28,7 +28,7 @@ operation ApplyToHead<'T> (op : ('T => Unit), targets : 'T[]) : Unit
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Dada a operação `op` e uma série de alvos, `targets` aplica-se `op(Head(targets))` .
 
@@ -54,6 +54,15 @@ Uma série de alvos, dos quais o primeiro será aplicado `op` .
 ### <a name="t"></a>'T
 
 O tipo de entrada da operação a aplicar.
+
+## <a name="example"></a>Exemplo
+
+Os seguintes cortes Q# são equivalentes:
+
+```qsharp
+ApplyToHead(H, register);
+H(Head(register));
+```
 
 ## <a name="see-also"></a>Consulte também
 

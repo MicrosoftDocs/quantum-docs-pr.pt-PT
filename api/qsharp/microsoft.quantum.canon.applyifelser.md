@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Canon.ApplyIfElseR
 title: Aplicação OperaçãoIfElseR
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: operation
 qsharp.namespace: Microsoft.Quantum.Canon
 qsharp.name: ApplyIfElseR
 qsharp.summary: Applies one of two operations, depending on the value of a classical result.
-ms.openlocfilehash: 874dae2ba5e842066e9c1582af431a73520e4ccd
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: 0d7cc9f67f9dd0c69a9256f007a3aeab3e457907
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96209541"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98841799"
 ---
 # <a name="applyifelser-operation"></a>Aplicação OperaçãoIfElseR
 
@@ -28,7 +28,7 @@ operation ApplyIfElseR<'T, 'U> (result : Result, (zeroOp : ('T => Unit), zeroInp
 ```
 
 
-## <a name="description"></a>Description
+## <a name="description"></a>Descrição
 
 Dado o `result` resultado, aplica a operação `zeroOp` com a sua entrada quando é igual a , e `zeroInput` `result` `Zero` aplica-se `oneOp(oneInput)` quando `result == One` .
 

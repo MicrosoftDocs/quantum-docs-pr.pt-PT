@@ -1,18 +1,18 @@
 ---
 uid: Microsoft.Quantum.Oracles.OracleToDiscrete
 title: Função OracleToDiscrete
-ms.date: 11/25/2020 12:00:00 AM
+ms.date: 1/23/2021 12:00:00 AM
 ms.topic: article
 qsharp.kind: function
 qsharp.namespace: Microsoft.Quantum.Oracles
 qsharp.name: OracleToDiscrete
 qsharp.summary: Given an operation representing a "black-box" oracle, returns a discrete-time oracle which represents the "black-box" oracle repeated multiple times.
-ms.openlocfilehash: 158a90bbd0c68406e0a8507ae99fc08fad3b6d19
-ms.sourcegitcommit: a87c1aa8e7453360025e47ba614f25b02ea84ec3
+ms.openlocfilehash: ab59cdf0ab05092a9d4e7856b7808b13df655571
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96193850"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98842543"
 ---
 # <a name="oracletodiscrete-function"></a>Função OracleToDiscrete
 
@@ -39,3 +39,7 @@ A operação a ser exponencial.
 ## <a name="output--discreteoracle"></a>Saída : [DiscreteOracle](xref:Microsoft.Quantum.Oracles.DiscreteOracle)
 
 Uma operação parcialmente aplicada sobre o oráculo "black-box" representando o oráculo de tempo discreto
+
+## <a name="example"></a>Exemplo
+
+`OracleToDiscrete(U)(3, target)` é equivalente a `U(target)` repetido três vezes.
