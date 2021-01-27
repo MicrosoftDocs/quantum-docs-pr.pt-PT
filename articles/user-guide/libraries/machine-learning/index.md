@@ -4,17 +4,17 @@ description: Introdução ao Pacote de Machine Learning Quântico
 author: QuantumWriter
 ms.author: alexeib
 ms.date: 12/5/2019
-ms.topic: article
+ms.topic: conceptual
 uid: microsoft.quantum.machine-learning.concepts.intro
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 321901a7976e4633a672495827c27c5f1645ad30
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
-ms.translationtype: HT
+ms.openlocfilehash: 1e36948a216a06d76b99cd451bbfac6f5defd7c8
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90835694"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858782"
 ---
 # <a name="introduction-to-the-quantum-machine-learning-library"></a>Introdução à Biblioteca de Machine Learning Quântico
 

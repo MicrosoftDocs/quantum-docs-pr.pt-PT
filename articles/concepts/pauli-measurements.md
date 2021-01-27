@@ -1,6 +1,6 @@
 ---
 título: Descrição das medições Pauli: Aprenda a trabalhar com operações de medição de Pauli de um só e multi-qubit.
-autor: bradben uid: microsoft.quantum.concepts.pauli ms.author: v-benbra ms.date: 12/11/2017 ms.topic: article no-loc:
+autor: bradben uid: microsoft.quantum.concepts.pauli ms.author: v-benbra ms.date: 12/11/2017 ms.topic: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -139,7 +139,7 @@ $$
 
 É também equivalente a aplicar $ HS^ \dagger $ ao vetor de estado quântico e, em seguida, medir $ $ Z, de modo que a seguinte operação é equivalente `Measure([PauliY], [q])` a:
 
-```Q#
+```qsharp
 operation MeasureY(qubit : Qubit) : Result {
     mutable result = Zero;
     within {

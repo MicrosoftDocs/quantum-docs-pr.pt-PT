@@ -1,6 +1,6 @@
 ---
 título: Descrição dos oráculos quânticos: Aprenda a trabalhar e a definir oráculos quânticos, operações de caixa preta que são usadas como entrada para outro algoritmo.
-autor: cgranade uid: microsoft.quantum.concepts.oracles ms.author: chgranad ms.date: 07/11/2018 ms.topic: article no-loc:
+autor: cgranade uid: microsoft.quantum.concepts.oracles ms.author: chgranad ms.date: 07/11/2018 ms.topic: conceptual no-loc:
 - "Q#"
 - "$$v"
 - "$$"
@@ -134,7 +134,7 @@ onde: $ \alpha \\ { 0, 1 \\ } ^n \times \\ { 0, 1 \\ } ^m \to \mathbb { C } $ re
 
 $$
 \begin{align}
-O \ket { \psi } & = O O \sum _ { X \in \\ { 0, 1 \\ } ^n, \in \\ { \\ } } \alpha \ket { } \ket { y 0, 1 ^m (x, y) x 0, 1 ^n, y 0, 1 ^m (x, y) O x y } \\\\ & = \sum _ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { } \ket { }\\\\
+O \ket { \psi } & = O O \sum _{ X \in \\ { 0, 1 \\ } ^n, \in \\ { \\ } } \alpha \ket { } \ket { y 0, 1 ^m (x, y) x 0, 1 ^n, y 0, 1 ^m (x, y) O x y } \\\\ & = \sum_ { \in \\ { \\ } \in \\ { \\ } } \alpha \ket { } \ket { }\\\\
              &= \sum _ { x \in \\ { 0, \\ 1^n, } y \in \\ { 0, 1 \\ } ^m } \alpha (x, y) \ket { x } \ket { y \oplus f(x) } .
 \end{align}
 $$
@@ -157,6 +157,9 @@ Então, $$
         &=(-1)^ { f(0) } { Z^f(0) - f(1) } \ket { + } .
 \end{align}
 $$
+
+> [!NOTE]
+>Note-se que $ Z^ { -1 } = Z^ { \dagger } = Z $ e, portanto, $ { Z^f(0)-f(1) } = { Z^f(1)-f(0) } .$
 
 De uma forma mais geral, ambas as vistas dos oráculos podem ser alargadas para representar funções clássicas que devolvem números reais em vez de apenas um bit.
 

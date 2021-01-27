@@ -4,25 +4,25 @@ description: Aprenda a usar o Q# tipo OrbitalIntegral para enumerar as assimetri
 author: bradben
 ms.author: v-benbra
 ms.date: 10/09/2017
-ms.topic: article-type-from-white-list
+ms.topic: conceptual
 uid: microsoft.quantum.chemistry.concepts.symmetries
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 9ebb8e9bda06967d3cfa002a7d074933d9135ada
-ms.sourcegitcommit: 9b0d1ffc8752334bd6145457a826505cc31fa27a
+ms.openlocfilehash: 2622285fd95eddf0d70402ae99dd18bfd8c38087
+ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90833818"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98858830"
 ---
 # <a name="symmetries-of-molecular-integrals"></a>Assimetrias de Integrales Moleculares
 
 A simetria inerente do Coulomb Hamiltonian, que é o Hamiltonian dado em [Modelos Quânticos para Sistemas Eletrónicos,](xref:microsoft.quantum.chemistry.concepts.quantummodels)que descreve eletrões que interagem electricamente entre si e com os núcleos, leva a uma série de simetrias que podem ser exploradas para comprimir os termos no Hamiltonian.
 Em geral, se não forem feitas mais suposições sobre as funções de base $\psi_j$ então só temos que \start{equation} h_{pqrs}= h_{qpsr},\tag{★}\label{eq:hpqrs} \end{equation} que pode ser imediatamente visto a partir das integrais em [Modelos Quânticos de Sistemas Eletrónicos](xref:microsoft.quantum.chemistry.concepts.quantummodels) ao notar que os seus valores permanecem idênticos se $p,q$ e $r,s$ forem trocados por anti-comutação.
 
-Se assumirmos que os spin-orbitals são de valor real (como são para bases orbitais gaussianas) então temos ainda que \start{equação} h_{pqrs} = h_{qpsr} = h_{srqp} = h_{rspq}=h_{rqps}=h_{{{{{{{{{{{{{{psrq}=h_{spqr}=h_{qrsp}.\tag{{★}\label{eq:hpqrsreal} \end{equation} Dado que tais pressupostos se mantêm, podemos usar as simetrias acima para reduzir os dados necessários para armazenar os elementos matricias do Hamiltonian por um fator de $8$; embora o faça, torna a importação de dados de uma forma consistentemente mais desafiante.
-Felizmente, a biblioteca de simulação Hamiltonian tem sub-rotinas que podem ser usadas para importar ficheiros integrais de [LIQUI$\rangle$](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) ou diretamente da [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
+Se assumirmos que os spin-orbitals são de valor real (como são para bases orbitais gaussianas) então temos ainda que \start{equação} h_{pqrs} = h_{qpsr} = h_{srqp} = h_{rspq}=h_{rqps}=h_{psrq}=h_{spqr}=h_{qrsp}.\tag{{★}\label{eq:hpqrsreal} \end{equation} Dado que tais pressupostos se mantêm, podemos usar as simetrias acima para reduzir os dados necessários para armazenar os elementos matricias do Hamiltonian por um fator de $8$; embora o faça, torna a importação de dados de uma forma consistentemente mais desafiante.
+Felizmente, a biblioteca de simulação Hamiltonian tem sub-rotinas que podem ser usadas para importar ficheiros integrais de [LIQUI$|\rangle$](https://www.microsoft.com/en-us/research/project/language-integrated-quantum-operations-liqui/) ou diretamente da [NWChem](http://www.nwchem-sw.org/index.php/Main_Page).
 
 As integrais moleculares orbitais (ou seja, os $h \_ {pq}$ e $h \_ {pqrs}$ termos) como estes são representados usando o `OrbitalIntegral` tipo, que fornece uma série de funções úteis para expressar esta simetria.
 ```csharp
