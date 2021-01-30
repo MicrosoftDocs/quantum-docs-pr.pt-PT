@@ -9,12 +9,12 @@ uid: microsoft.quantum.relnotes
 no-loc:
 - Q#
 - $$v
-ms.openlocfilehash: 8aa6072e9b495db6e127cac350d5bfaec1b090ce
-ms.sourcegitcommit: 71605ea9cc630e84e7ef29027e1f0ea06299747e
+ms.openlocfilehash: dd37581dff2a512a29eb7729ecbf81412917b8f8
+ms.sourcegitcommit: e915baf3b84ee3a562004c5b31d157d21533d450
 ms.translationtype: MT
 ms.contentlocale: pt-PT
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98856664"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99101463"
 ---
 # <a name="microsoft-quantum-development-kit-release-notes"></a>Notas de Versão do Microsoft Quantum Development Kit
 
@@ -23,6 +23,15 @@ Este artigo contém informações sobre cada versão do Quantum Development Kit.
 Para obter as instruções de instalação, veja o [guia de instalação](xref:microsoft.quantum.install).
 
 Para obter as instruções de atualização, veja o [guia de atualização](xref:microsoft.quantum.update).
+
+## <a name="version-0152101126807"></a>Versão 0.15.2101.126807
+
+*Data de lançamento: 29 de janeiro de 2021*
+
+- Modelos de projeto adicionados ao Q# compilador para executáveis direcionados para os fornecedores de IonQ e Honeywell
+- Atualização I Q# masel sintaxe realçando para incluir alterações à Q# sintaxe introduzidas na versão [0.15.21011125897](#version-0152101125897)
+- Bugfix para suportar matrizes de passagem como argumentos de entrada para Q# programas submetidos a Azure Quantum via `%azure.execute` , ver [edição #401](https://github.com/microsoft/iqsharp/issues/401)
+- Corrija o erro "Permissão negada" encontrado usando `az` dentro das imagens do `iqsharp-base` Docker, ver problema [#404](https://github.com/microsoft/iqsharp/issues/404)
 
 ## <a name="version-0152101125897"></a>Versão 0.15.2101125897
 
@@ -34,6 +43,7 @@ Para obter as instruções de atualização, veja o [guia de atualização](xref
 - Estimativas de largura melhoradas para uma profundidade ótima, [ver detalhes](https://github.com/MicrosoftDocs/quantum-docs-pr/pull/1159).
 - Aplicar a operação unitária fornecida como matriz explícita utilizando `ApplyUnitary` [(QuantumLibraries#391](https://github.com/microsoft/QuantumLibraries/pull/391), contribuição externa por Dmytro Fedoriaka)
 - Corrigido https://github.com/microsoft/iqsharp/issues/387 atenuando o impacto de desempenho na startup I Q# kernel.
+
 ## <a name="version-0142011120240"></a>Versão 0.14.2011120240
 
 *Data de lançamento: 25 de novembro de 2020*
